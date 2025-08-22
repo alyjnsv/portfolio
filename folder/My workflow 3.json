@@ -1,0 +1,89 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-07-22T20:55:58.745Z",
+  "id": "FVUypX3O6gE25jVU",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "id": "34439708-84b9-4042-89fe-b60bad164fbb",
+      "name": "Schedule Trigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "expression": "0 9,12,23 * * *",
+              "field": "cronExpression"
+            }
+          ]
+        }
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "FhLKj0zW8cpt8tAh",
+          "name": "test"
+        }
+      },
+      "id": "0511eef4-665f-4121-9b74-785c789e404d",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "751365965",
+        "text": "Тест"
+      },
+      "position": [
+        220,
+        0
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c83ea5bc-7ac9-4dd6-8c9d-21445bc9ee72"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-07-22T20:55:58.748Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-07-22T20:55:58.748Z",
+      "workflowId": "FVUypX3O6gE25jVU"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-07-28T06:57:40.000Z",
+  "versionId": "59e4fd26-2cd9-438f-ae28-99322e6b4daa"
+}
