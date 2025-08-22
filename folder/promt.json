@@ -1,0 +1,299 @@
+{
+  "active": false,
+  "connections": {
+    "Generating Images": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request16",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generating Images4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request15",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Generating Images",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request15": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Image Download4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request16": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Image Download",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Generating Images4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Image Download4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request5",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-18T05:36:54.934Z",
+  "id": "I0d8NsXF4LX3JYWH",
+  "isArchived": false,
+  "meta": null,
+  "name": "promt",
+  "nodes": [
+    {
+      "id": "ecf8d290-1999-4700-a3f7-2f41515e1b4f",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -208,
+        256
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "53cb4901-180c-4d03-9e49-ba1802b54731",
+      "name": "Generating Images4",
+      "parameters": {
+        "amount": 3,
+        "unit": "minutes"
+      },
+      "position": [
+        160,
+        256
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "f0b1b91b-da65-4e55-8b7f-b0b64d54ad18"
+    },
+    {
+      "id": "4188ffd8-4f4a-4e5c-9104-cca9445d5857",
+      "name": "Image Download4",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        480,
+        256
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "db434e5f-d7eb-4e3b-950c-589aa7b20e77",
+      "name": "HTTP Request5",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n     \"prompt\": \"A hyper-realistic 3D cinematic render of two anthropomorphic characters: a punk cat with a vivid, bright pink mohawk, expressive face, highly detailed lifelike fur, outfitted in a torn leather jacket and spiked bracelets; beside him, an energetic anthropomorphic weasel in a skull-patterned black t-shirt and bandana, crouching as he tweaks vintage sound equipment. Both display emotional excitement and rebellion in a dim, graffiti-covered subway corridor. Soft cinematic lighting, moody shadows, ultra-detailed textures, shallow depth of field. Cinematic medium shot, urban realism. --ar 9:16\",\n     \"seed\": \"42\"\n   }",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
+      },
+      "position": [
+        0,
+        256
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "eb26edd4-d06e-4767-8719-72349d0911aa",
+      "name": "HTTP Request15",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request5').item.json.request_id }}"
+      },
+      "position": [
+        320,
+        256
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "8fb187fa-936a-46a2-8207-afbe068c8a73",
+      "name": "Generating Images",
+      "parameters": {
+        "amount": 3,
+        "unit": "minutes"
+      },
+      "position": [
+        816,
+        240
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "f0b1b91b-da65-4e55-8b7f-b0b64d54ad18"
+    },
+    {
+      "id": "2adab9ae-a913-4b27-b039-89902b94eceb",
+      "name": "Image Download",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        1136,
+        240
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "5c9c0eae-5733-488b-bc18-b9215e846f92",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n     \"prompt\": \"A hyper-realistic 3D cinematic render of two anthropomorphic characters: a punk cat with a vivid, bright pink mohawk, expressive face, highly detailed lifelike fur, outfitted in a torn leather jacket and spiked bracelets; beside him, an energetic anthropomorphic weasel in a skull-patterned black t-shirt and bandana, crouching as he tweaks vintage sound equipment. Both display emotional excitement and rebellion in a dim, graffiti-covered subway corridor. Soft cinematic lighting, moody shadows, ultra-detailed textures, shallow depth of field. Cinematic medium shot, urban realism. --ar 9:16\",\n     \"seed\": \"42\"\n   }",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
+      },
+      "position": [
+        656,
+        240
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "e556753c-e914-4f2f-93c6-2667fc7c0c45",
+      "name": "HTTP Request16",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request').item.json.request_id }}"
+      },
+      "position": [
+        976,
+        240
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-18T05:36:54.939Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-18T05:36:54.939Z",
+      "workflowId": "I0d8NsXF4LX3JYWH"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-19T14:29:20.000Z",
+  "versionId": "9e5d772e-80ef-43e3-87b1-a0d780c7dc78"
+}
