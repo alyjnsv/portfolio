@@ -1,0 +1,49 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2025-08-22T14:29:36.020Z",
+  "id": "UjbYyJckNLKJMrrT",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 10",
+  "nodes": [
+    {
+      "id": "b66b51c6-3ad5-47d3-ab10-5e7e8b0e512b",
+      "name": "RSS Feed Trigger",
+      "parameters": {
+        "feedUrl": "https://store.steampowered.com/feeds/news.xml",
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        }
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-22T14:29:36.024Z",
+      "projectId": "HlOhvv2DiuercTrp",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-22T14:29:36.024Z",
+      "workflowId": "UjbYyJckNLKJMrrT"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-22T14:29:36.020Z",
+  "versionId": "a5fc1ee5-38a8-4357-8135-9a82c44fac27"
+}
