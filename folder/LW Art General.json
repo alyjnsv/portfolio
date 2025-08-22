@@ -1,0 +1,1581 @@
+{
+  "active": false,
+  "connections": {
+    ">": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    ">70": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    ">71": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Analyze",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message12",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append row in sheet",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "LW Art General": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": ">",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": ">70",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": ">71",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message1": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message2": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message3": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message4": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message5": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message8": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message11",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Top Characters",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Top Icons",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message3",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Top Vehicle",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message4",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Top Building",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Top Props",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Top Building": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Top Characters": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Top Icons": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Top Props": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Top Vehicle": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated2",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-06T10:42:28.976Z",
+  "id": "fAs2vxUM5ijDvNuT",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "LW Art General",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "658b26e0-4173-425d-824b-35b42c3473f7",
+      "name": "LW Art General",
+      "parameters": {
+        "additionalFields": {
+          "download": true,
+          "imageSize": "large"
+        },
+        "updates": [
+          "message",
+          "callback_query"
+        ]
+      },
+      "position": [
+        -1136,
+        16
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "f8dc406e-5a14-492f-836b-9729159fb61d"
+    },
+    {
+      "id": "6db73a6f-b844-4562-b570-7529af68e5d0",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "51778a2f-908a-4e74-b66d-44a32ca2fb24",
+                    "leftValue": "={{ $('LW Art General').item.json.message.caption.toLowerCase() === \"персонаж\" }}",
+                    "operator": {
+                      "operation": "true",
+                      "singleValue": true,
+                      "type": "boolean"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Персонаж",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0cd7c9f9-665a-4507-8734-a3b7a12a5345",
+                    "leftValue": "={{ $('LW Art General').item.json.message.caption.toLowerCase() === \"иконка\" }}",
+                    "operator": {
+                      "operation": "true",
+                      "singleValue": true,
+                      "type": "boolean"
+                    },
+                    "rightValue": "Иконка"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Иконка",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0edf7b25-4d09-44ac-a09a-b9bbc2e362d2",
+                    "leftValue": "={{ $('LW Art General').item.json.message.caption.toLowerCase() === \"транспорт\" }}",
+                    "operator": {
+                      "operation": "true",
+                      "singleValue": true,
+                      "type": "boolean"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Транспорт",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "b5817077-0e13-4acf-8ed4-f114574a5307",
+                    "leftValue": "={{ $('LW Art General').item.json.message.caption.toLowerCase() === \"здание\" }}",
+                    "operator": {
+                      "operation": "true",
+                      "singleValue": true,
+                      "type": "boolean"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Здание",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "577db608-b442-471b-ba34-bdbb92674d54",
+                    "leftValue": "={{ $('LW Art General').item.json.message.caption.toLowerCase() === \"пропс\" }}",
+                    "operator": {
+                      "operation": "true",
+                      "singleValue": true,
+                      "type": "boolean"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Пропс",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        256,
+        -48
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "disabled": true,
+      "id": "3732e4ae-2592-4068-baca-b44c6e309b7c",
+      "name": "Rated1",
+      "parameters": {
+        "binaryPropertyName": "data1, data",
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-pro",
+          "mode": "list",
+          "value": "models/gemini-2.5-pro"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты эксперт по анализу игровых персонажей. Ты получил два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) персонажей, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 нового персонажа, сгенерированного нейросетью, которого необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать нового персонажа (второй файл) в сравнении с якорными персонажами (первый файл) и оценить его соответствие по следующим критериям:\n\n1. **Стилистическая совместимость** (0-100 баллов)\n   - Соответствие общему стилю и визуальному языку\n   - Единство художественного исполнения\n   - Гармоничность всех элементов между собой\n\n2. **Цветовая палитра** (0-100 баллов)\n   - Гармоничность цветовой схемы\n   - Соответствие цветов общему стилю\n   - Отсутствие перегруза и режущих глаз контрастов\n\n3. **Характер и вайб** (0-100 баллов)\n   - Выразительность образа\n   - Передача характера через позу и взгляд\n   - Запоминаемость персонажа\n\n4. **Тип/Класс персонажа** (0-100 баллов)\n   - Четкость определения роли персонажа\n   - Соответствие элементов одежды и гаджетов классу\n   - Логичность образа\n\n5. **Форма и силуэт** (0-100 баллов)\n   - Узнаваемость силуэта\n   - Четкость и запоминаемость формы\n   - Легкость идентификации на иконке\n\n6. **Анимационная совместимость** (0-100 баллов)\n   - Готовность к анимации\n   - Динамичность позы\n   - Логичность точек сгиба элементов\n\n7. **Уникальность** (0-100 баллов)\n   - Оригинальность дизайна\n   - Отсутствие клишированности\n   - Выделение среди аналогов\n\n8. **Коммерческий потенциал** (0-100 баллов)\n   - Привлекательность для целевой аудитории\n   - Соответствие современным трендам\n   - Востребованность для коммерческих проектов\n\n9. **Нарративная логика** (0-100 баллов)\n    - Связность всех элементов образа\n    - Понятность роли с первого взгляда\n    - Соответствие игровому миру\n\nДля каждого критерия дай краткий комментарий (2-3 предложения) и оценку в баллах (выдай оценку в виде целого числа). В конце выведи итоговую среднюю оценку в формате: **ИТОГОВАЯ ОЦЕНКА: X/100**\n\nНе пиши дополнительных комментариев, допускаются только комментарии для критериев по пунктам.\n\nПомни: ты анализируешь нового персонажа (второй файл) в контексте соответствия стилю и качеству якорных персонажей (первый файл)."
+      },
+      "position": [
+        1120,
+        -128
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "ce3d0dd4-e878-4fc1-8f94-2519b1bde443",
+      "name": "Rated4",
+      "parameters": {
+        "binaryPropertyName": "data1, data",
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-pro",
+          "mode": "list",
+          "value": "models/gemini-2.5-pro"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты эксперт по анализу игровых персонажей. Ты получил два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) персонажей, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 нового персонажа, сгенерированного нейросетью, которого необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать нового персонажа (второй файл) в сравнении с якорными персонажами (первый файл) и оценить его соответствие по следующим критериям:\n\n1. **Стилистическая совместимость** (0-100 баллов)\n   - Соответствие общему стилю и визуальному языку\n   - Единство художественного исполнения\n   - Гармоничность всех элементов между собой\n\n2. **Цветовая палитра** (0-100 баллов)\n   - Гармоничность цветовой схемы\n   - Соответствие цветов общему стилю\n   - Отсутствие перегруза и режущих глаз контрастов\n\n3. **Характер и вайб** (0-100 баллов)\n   - Выразительность образа\n   - Передача характера через позу и взгляд\n   - Запоминаемость персонажа\n\n4. **Тип/Класс персонажа** (0-100 баллов)\n   - Четкость определения роли персонажа\n   - Соответствие элементов одежды и гаджетов классу\n   - Логичность образа\n\n5. **Форма и силуэт** (0-100 баллов)\n   - Узнаваемость силуэта\n   - Четкость и запоминаемость формы\n   - Легкость идентификации на иконке\n\n6. **Анимационная совместимость** (0-100 баллов)\n   - Готовность к анимации\n   - Динамичность позы\n   - Логичность точек сгиба элементов\n\n7. **Уникальность** (0-100 баллов)\n   - Оригинальность дизайна\n   - Отсутствие клишированности\n   - Выделение среди аналогов\n\n8. **Коммерческий потенциал** (0-100 баллов)\n   - Привлекательность для целевой аудитории\n   - Соответствие современным трендам\n   - Востребованность для коммерческих проектов\n\n9. **Нарративная логика** (0-100 баллов)\n    - Связность всех элементов образа\n    - Понятность роли с первого взгляда\n    - Соответствие игровому миру\n\nДля каждого критерия дай краткий комментарий (2-3 предложения) и оценку в баллах (выдай оценку в виде целого числа). В конце выведи итоговую среднюю оценку в формате: **ИТОГОВАЯ ОЦЕНКА: X/100**\n\nНе пиши дополнительных комментариев, допускаются только комментарии для критериев по пунктам.\n\nПомни: ты анализируешь нового персонажа (второй файл) в контексте соответствия стилю и качеству якорных персонажей (первый файл)."
+      },
+      "position": [
+        1120,
+        880
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "5d7e54dc-3b62-4749-996c-e7f7815dc0df",
+      "name": "Top Icons",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "cachedResultName": "All_Icons.png",
+          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
+          "mode": "list",
+          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+        },
+        "operation": "download",
+        "options": {
+          "binaryPropertyName": "data1"
+        }
+      },
+      "position": [
+        912,
+        -128
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "b91d74b3-4128-4881-a178-bde4020ce0c6",
+      "name": "Top Characters",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "cachedResultName": "All_Character.png",
+          "cachedResultUrl": "https://drive.google.com/file/d/12Pjm7kLhqUz7KQ3VkOY-1H4MoWDP-ZeJ/view?usp=drivesdk",
+          "mode": "list",
+          "value": "12Pjm7kLhqUz7KQ3VkOY-1H4MoWDP-ZeJ"
+        },
+        "operation": "download",
+        "options": {
+          "binaryPropertyName": "data1"
+        }
+      },
+      "position": [
+        912,
+        -464
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "a3c78715-b96e-42ca-90d4-079b70b0ce8a",
+      "name": "Top Vehicle",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/1l6rPcW611pNNd8g7DPwOJAlt1kk8tN4z/view"
+        },
+        "operation": "download",
+        "options": {
+          "binaryPropertyName": "data1"
+        }
+      },
+      "position": [
+        912,
+        208
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "b27d33c1-83ee-4da5-92bc-c0aef05e7949",
+      "name": "Top Building",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "cachedResultName": "All_Buildings.png",
+          "cachedResultUrl": "https://drive.google.com/file/d/1W8nJQGGfpsfhNEPTxSo8K1XHAjQPaEoI/view?usp=drivesdk",
+          "mode": "list",
+          "value": "1W8nJQGGfpsfhNEPTxSo8K1XHAjQPaEoI"
+        },
+        "operation": "download",
+        "options": {
+          "binaryPropertyName": "data1"
+        }
+      },
+      "position": [
+        912,
+        560
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "disabled": true,
+      "id": "c18f71a1-66d4-42ad-b919-27308607ec25",
+      "name": "Top Props",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "cachedResultName": "All_Character.png",
+          "cachedResultUrl": "https://drive.google.com/file/d/12Pjm7kLhqUz7KQ3VkOY-1H4MoWDP-ZeJ/view?usp=drivesdk",
+          "mode": "list",
+          "value": "12Pjm7kLhqUz7KQ3VkOY-1H4MoWDP-ZeJ"
+        },
+        "operation": "download",
+        "options": {
+          "binaryPropertyName": "data1"
+        }
+      },
+      "position": [
+        912,
+        880
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "555618bd-62b5-4599-b317-a0fc6a811966",
+      "name": "Send a text message",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "=\n{{ $json.content.parts[0].text }}"
+      },
+      "position": [
+        1408,
+        -464
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "0cf7b452-8812-4c65-ad7f-e807330704ec",
+      "name": "Send a text message1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "🔄 Оцениванию персонажа"
+      },
+      "position": [
+        912,
+        -624
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "c50110c0-cf9f-46d6-92dd-33ac10027bb0",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "🔄 Оцениванию иконку (flow не готов)"
+      },
+      "position": [
+        912,
+        -288
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "1fd443a6-f1d3-40d6-8d6d-f2fa7e342ffe",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "🔄 Оцениванию транспорт (flow не готов)"
+      },
+      "position": [
+        912,
+        48
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "d9b95442-3484-423b-9b7e-25d948663275",
+      "name": "Send a text message4",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "🔄 Оцениванию здание"
+      },
+      "position": [
+        912,
+        400
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "f967b058-6a39-4e73-ac6f-33d146f02d27",
+      "name": "Send a text message5",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "🔄 Оцениванию пропс (flow не готов)"
+      },
+      "position": [
+        912,
+        720
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "disabled": true,
+      "id": "108e0790-5cc6-4eee-85f9-6e6a81c97aca",
+      "name": "Send a text message6",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "={{ $json.content.parts[0].text }}"
+      },
+      "position": [
+        1408,
+        -128
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "ec98c015-314c-4e1a-b829-2b245f2e5950",
+      "name": "Send a text message7",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "={{ $json.content.parts[0].text }}"
+      },
+      "position": [
+        1408,
+        208
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "f9e62b08-ca4d-4717-a96f-382de788031c",
+      "name": "Send a text message8",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "={{ $json.content.parts[0].text }}"
+      },
+      "position": [
+        1408,
+        560
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "977d0f3c-9af6-42a5-9ad4-6551bbceeac4",
+      "name": "Send a text message9",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "={{ $json.content.parts[0].text }}"
+      },
+      "position": [
+        1408,
+        880
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "id": "9684a720-b37e-4214-aaa1-401c68fb212f",
+      "name": "Extract from File",
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "position": [
+        976,
+        1264
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "abaa04ca-5805-4f74-9cfd-c7605b6f4df4",
+      "name": "Analyze",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"Проанализируй предоставленный документ. Действуй как тимлид 3D-художников, который ставит задачи своей команде. Твоя цель — для КАЖДОЙ строки в таблице создать отдельное, четкое техническое задание (ТЗ). После каждого готового ТЗ ставь разделитель в виде трех дефисов (---). ЭТАП 1: ИЗВЛЕЧЕНИЕ ДАННЫХ ИЗ ТАБЛИЦЫ. Для каждой строки таблицы найди данные по следующим правилам: 1. НАЗВАНИЕ ОБЪЕКТА: Извлеки название ассета из столбца ('Название файла арта'). После извлечения, очисти название от файловых расширений (например, удали .png, .fbx и т.п.). 2. ТИП ОБЪЕКТА: Определи тип из столбца 'Тип сущности' (например, 'Props', 'icon', 'ico'). Используй синонимы, чтобы определить правильный тип на русском языке (например, 'Иконка'). СПИСОК СИНОНИМОВ (не строгий): Иконка: icon, icons, иконка, ico; Пропс: props, prop, пропс; UI: ui, интерфейс; Персонаж: персонаж, герой, герои; Транспорт: транспорт, vehicle; Здание: здание, building; Flat Иконка: flat иконка. 3. ИЗОБРАЖЕНИЕ И ЕГО ФУНКЦИОНАЛЬНЫЙ КОНТЕКСТ: Найди в столбце 'Референс из LW'(или 'Референс', 'Реф') изображение. Собери ключевую информацию о ТЗ В столбце 'Информация', изучи дополнительный текст в поле 'Цель', 'Назначение' и 'Контекст'. ОБРАТИ ВНИМАНИЕ: При анализе таблицы названия могут быть одинаковыми для нескольких разных объектов. Ты должен составить ТЗ для каждого объекта из таблицы. ЭТАП 2: СОСТАВЛЕНИЕ ТЗ. ОБЩИЕ ТРЕБОВАНИЯ: 1. АНАЛИЗ АРХЕТИПА И ФУНКЦИИ: Внимательно изучи референс-изображение и сопроводительный текст в 'Цель', 'Назначение' и 'Контекст'. Твоя первая задача — определить АРХЕТИП и ЧИСТУЮ ФУНКЦИЮ объекта, полностью абстрагируясь от его внешнего вида на предложенном референсе. Например, если на референсе плоскогубцы, их архетип — 'инструмент', а функция — 'маркер крестового задания'. Если на референсе автобус, его архетип — 'транспорт', а функция — 'препятствие с уровнем, нельзя обойти'. 2. УНИКАЛИЗАЦИЯ (ГЛАВНАЯ ЗАДАЧА): Основываясь на архетипе и функции, придумай и спроектируй с нуля уникальную визуальную концепцию, которая соответствует ОБЩЕЙ СТИЛИСТИКЕ ПРОЕКТА. Ты должен полностью переосмыслить объект. Не описывай референс, создавай новое. Мысленно ответь на вопросы: Принадлежность: Этот объект относится к высокотехнологичной базе игрока (чистые формы, яркий неон, голограммы) или к разрушенному миру (обломки, ржавчина, сбоящий неон)? Материалы и Формы: Это полированный металл и стекло или обломки старой техники? Формы гладкие и функциональные или хаотичные и поврежденные? Технологический элемент: Как используется неон? Это ровные энергетические линии или мерцающие, сбоящие провода? Принцип Действия: Как его функция ('барьер', 'маркер') реализуется через технологии? Барьер — это голографическое поле или стена из дроидов? Маркер — это технологичный, светящийся артефакт? 3. КЛЮЧЕВЫЕ ПРАВИЛА УНИКАЛИЗАЦИИ: ЗАПРЕЩЕНО: Упоминать в итоговом ТЗ конкретный предмет с референса, если он не вписывается в sci-fi стилистику (Не писать 'плоскогубцы', а писать 'инструмент' или 'техноустройство'). ТРЕБУЕТСЯ: Мыслить как концепт-дизайнер. Переводить бытовые понятия в технологические. 'Обычный автобус' должен стать 'бронированным городским транспортом на антигравитационной подушке'. 4. ОФОРМЛЕНИЕ: Пиши только на русском языке. Не используй комментарии: На изображении, Видно, Согласно запросу, Добавить. Весь творческий, визуальный и функциональный разбор размещай только в разделе 'Описание и адаптация'. ОБЩАЯ СТИЛИСТИКА ПРОЕКТА (контекст для генерации): Проект строится на ярком визуальном контрасте между технологической базой игрока (порядок, прогресс: чистые формы, неоновые акценты, стекло, металл, энергия, голограммы) и постапокалиптическим миром (порядок, прогресс: чистые формы, неоновые акценты, стекло, металл, энергия, голограммы, разрушенный техно-ландшафт, обломки). Стиль: семи-реализм и казуальность, с упором на 3D-отображение объектов. Цветовая палитра: сочная и контрастная, доминируют яркие неоновые акценты (бирюзовый, розовый, фиолетовый, лаймовый) на чистом белом фоне. СПЕЦИФИКА ПО ТИПАМ В ОПИСАНИЕ И АДАПТАЦИЯ: Для UI: Композиция и структура: Описание компоновки элемента, его составных частей (фон, рамка, иконка, текст) и их выравнивания. Описание состояний (активное, неактивное, заблокированное). Цвет и типографика: Основная цветовая схема и как она меняется в разных состояниях. Указание шрифтов, их размера и цвета. Интерактивность и анимация: Реакция на действия пользователя. Описание анимаций (появление, пульсация, свечение). Функциональное назначение: Какую задачу выполняет элемент в интерфейсе. Для персонажа: Жанр и стиль: Стилизованный 3D в духе hero-shooter'ов (Fortnite/Overwatch эстетика). Яркий, читаемый дизайн с четкими силуэтами. Пропорции и анатомия: Мужчины — героические пропорции, массивное телосложение, широкие плечи, мускулистые руки и ноги. Женщины — утрированные формы, тонкая талия, длинные ноги, выраженная грудь, изящные пропорции. Лицо и выражение: Читаемая мимика с уверенным или задумчивым выражением. Элементы sci-fi: кибернетические импланты, светящиеся пирсинги, неоновая подводка глаз. Маски и визоры с glowing-эффектами. Цвет и материалы: Насыщенная контрастная палитра. Неоновые акценты в cyan, magenta, orange, red, blue. Glow-эффекты на швах, линиях и символах. Материалы: глянцевый пластик, матовый металл, синтетические ткани, голографические элементы. Дизайн костюма и экипировки: Асимметричные элементы для динамичности. Модульная броня с читаемой функциональностью (танк, разведка, инженер, хакер). Многослойность: базовый костюм + накладная броня + аксессуары. Технологические детали: Светящиеся схемы и панели на броне. Голографические элементы и проекторы. Энергетические ядра в груди или на конечностях. Кибернетические усиления рук и ног. Светящиеся волокна в волосах. Аксессуары и снаряжение: Перчатки без пальцев с голографическими браслетами. Высокотехнологичная обувь с подсветкой подошв и бустерами. Энергетические наручи и поясные модули. Плащи и капюшоны с усиленными пластинами. Позы и презентация: Динамичные уверенные позы (руки на бедрах, скрещенные руки, задумчивые жесты). Стойки подчеркивающие роль персонажа. Полный рост в позе 3/4. Освещение и рендер: Яркое спекулярное освещение с контрастными тенями. Четкие блики на глянцевых поверхностях. Мягкое свечение от неоновых элементов. Чистый белый фон для максимальной читаемости. Для транспорта: Форма и композиция: 3D стилизация, sci-fi геометрия с чистыми формами. Аэродинамичный или функциональный силуэт с гладкими панелями и мягкими краями. Компактное или массивное тело в зависимости от назначения. Асимметрия модулей для динамичности. Материалы и поверхности: Корпус из матовых композитных материалов или обработанного металла с тонким металлическим блеском. Бесшовные панели без текстур. Никакой грязи, повреждений или ржавчины - только чистые гладкие поверхности. Неоновые акценты: Яркие светящиеся линии и полосы в насыщенных цветах (оранжевый, розовый, фиолетовый, бирюзовый, лаймовый). Подсветка двигателей, контуров, узлов, датчиков. Интегрированные glow-элементы в виде геометрических паттернов. Технологические детали: Антигравитационные платформы или турбины вместо колес. Голографические дисплеи в кабине. Эргономичные элементы управления с подсветкой. Модульные крепления для оборудования. Функциональные элементы: Видимые системы подвески, усиленное шасси, выхлопные системы - все чистое и целенаправленное. Встроенное вооружение или утилитарные инструменты как часть дизайна. Общее впечатление: Мощная, тщательно спроектированная и ухоженная машина выживания или боевая единица. Читаемый модульный sci-fi дизайн с мягкими тенями. Для здания: Форма и композиция: Строгая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа с закругленными углами и cyan-подсветкой краев. Ступенчатая или пирамидальная компоновка с сужающимся силуэтом. Уникальные верхушки для узнаваемости (антенны, дисплеи, специализированные элементы). Цвет и материалы: Основа из матовых белых и темно-серых панелей. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском. Неоновые акценты в cyan, зеленом, пурпурном для энергетических элементов. Яркость только от glow-элементов и встроенной подсветки. Архитектурные детали: Слоистые панели с встроенными светящимися швами. Вентиляционные отверстия и технические вставки. Голографические дисплеи и светящиеся символы на фасадах. Цилиндрические модули, изогнутые стеклянные панели. Неоновые кондуиты и световые полосы как структурные элементы. Функциональные элементы: Специализированные компоненты в зависимости от назначения (медицинские кресты, антенны связи, промышленные трубы, торговые дисплеи). Платформы и возвышения для ключевых элементов. Светящиеся кнопки и интерактивные панели. Ключевые элементы стиля: Модульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка для динамичности. Мягкое освещение с глубокими тенями. Изоляция на белом фоне. Для пропса: Форма и композиция: Строгая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа или встроенное крепление. Читаемый силуэт с уникальными деталями для узнаваемости функции. Функциональные особенности: Четко определенное назначение (препятствие которое нельзя обойти, декорация, интерактивный элемент, источник ресурсов). Способ использования или взаимодействия (статичный, вращающийся, наносит урон, активируется игроком). Визуальные индикаторы состояния и функциональности. Цвет и материалы: Основа из матовых темно-серых и металлических панелей. Техно-поверхности без бликов и грязи. Неоновые акценты в cyan, зеленом, оранжевом для энергетических элементов и индикаторов состояния. Яркость только от glow-элементов и встроенной подсветки. Архитектурные детали: Слоистые панели с встроенными светящимися швами. Технические вставки и соединения. Голографические индикаторы и светящиеся символы функций. Цилиндрические модули, угловатые геометрические формы. Неоновые кондуиты и световые полосы как структурные элементы. Специализированные элементы: Компоненты в зависимости от функции (энергетические ядра, защитные барьеры, сенсорные панели, механические части). Светящиеся кнопки и интерактивные зоны. Анимируемые части для динамичности. Ключевые элементы стиля: Модульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Функциональная эстетика. Мягкое освещение с глубокими тенями. Изоляция на белом фоне. Для иконки: Форма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном. Материалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от желтого к оранжевому или других насыщенных цветов. Освещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы. Светящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах. Видимое световое кровотечение и отражения на темных поверхностях. Детализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы. Общий стиль: Яркий казуальный игровой арт-стиль. UI элемент высокой детализации. Изолированный на чистом белом фоне. СТРУКТУРА ИТОГОВОГО ВЫВОДА: Весь сгенерированный текст должен быть без какого-либо форматирования. Структура должна быть следующей: Название: [текст] Тип объекта: [текст] Краткое описание: [текст] Роль/назначение: [текст] Описание и адаптация: [Подпункт]: [текст] [Подпункт]: [текст] Общая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром. Цветовая палитра: [Название цвета] (#HEXCODE) используется для [описание элемента]. Обязательно проанализируй каждую строчку таблицы (на каждой странице) и составь ТЗ для каждого типа сущности. Важно чтобы количество изображений в документе соответствовало количеству ТЗ. Необходимо составлять ТЗ соблюдая все этапы составления ТЗ для каждого типа сущности. Название ассета бери строго из столбца 'Название файла арта'. Не добавляй комментарии.\"\n        },\n        {\n          \"inline_data\": {\n            \"mime_type\": \"application/pdf\",\n            \"data\": \"{{ $json.data }}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n",
+        "method": "POST",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+      },
+      "position": [
+        1184,
+        1264
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "eb7acdc2-c132-4ead-955b-d6310cb6cc45",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "cc8aca81-0d7f-4c46-9889-ce1ca72ae4d4",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "BGWilly"
+            },
+            {
+              "id": "335d29a9-b434-431b-8e8e-9521e29be338",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Dan4cho"
+            },
+            {
+              "id": "bb7e03c3-51cc-47f6-ae09-9f495866750c",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Ne_Foxik"
+            },
+            {
+              "id": "8b2f1cc5-20bc-44ba-aa32-0d5bc70ba307",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Det_rin"
+            },
+            {
+              "id": "50ecbb5b-4020-4b9a-a728-34bf65ee8631",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "WunshPunshhh"
+            },
+            {
+              "id": "45cc4cbe-4acd-41be-9f01-588b94d63b06",
+              "leftValue": "={{ $('LW Art General').item.json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "SingularityArt"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -400,
+        16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "80cac58a-7b25-4f5f-bb88-2ff3bbc8b421",
+      "name": "Append row in sheet",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": true,
+              "display": true,
+              "displayName": "id",
+              "id": "id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Логин",
+              "id": "Логин",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Chat ID",
+              "id": "Chat ID",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Chat ID": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+            "id": "==ROW()-1",
+            "Логин": "={{ $('Telegram Trigger').item.json.message.chat.username }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "Telegram ID Chat",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4"
+        },
+        "operation": "append",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        -560,
+        -96
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "executeOnce": false,
+      "id": "b1d097a0-3eec-4003-aec4-d80b092d2ccd",
+      "name": "Get row(s) in sheet",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "Telegram ID Chat",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Chat ID",
+              "lookupValue": "={{ $json.message.from.id }}"
+            }
+          ]
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MN9WsKrxd956d3_DKZUf8X-7_d1nKkORSihE14etLz4/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        -896,
+        16
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6
+    },
+    {
+      "id": "be7967c8-2a32-456b-9389-bdba1b0074d1",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "6997d322-d512-4027-9161-902f96820d62",
+              "leftValue": "={{ $json['Chat ID'] }}",
+              "operator": {
+                "operation": "empty",
+                "singleValue": true,
+                "type": "number"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        -720,
+        16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "53dd6f6f-007e-437a-8d87-3b03d1324a85",
+      "name": "Send a text message10",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "=Произошла ошибка"
+      },
+      "position": [
+        1664,
+        -304
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "bc7988f3-8e5e-4447-ae43-7ab474aa9d45",
+      "name": "Send a text message11",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "=Произошла ошибка"
+      },
+      "position": [
+        1664,
+        640
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "Dmt6d2m3yGzejsFX",
+          "name": "@lw_art_general_bot"
+        }
+      },
+      "id": "e86834b5-2993-4315-8592-0b70e82a8a94",
+      "name": "Send a text message12",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('LW Art General').item.json.message.chat.id }}",
+        "text": "=Нет доступа"
+      },
+      "position": [
+        256,
+        224
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c094c3cf-3254-48f6-8257-8d29fc2da34e"
+    },
+    {
+      "executeOnce": true,
+      "id": "542afe69-d366-4948-acca-11eaa8aab33f",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        -16,
+        0
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "2a35a1ab-26a2-4084-935f-258132a11ed9",
+      "name": ">70",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
+              "leftValue": "={{ $json.content.parts[0].text.match(/ИТОГОВАЯ ОЦЕНКА:\\s*(\\d+)\\/100/)[1] }}",
+              "operator": {
+                "operation": "gte",
+                "type": "number"
+              },
+              "rightValue": 90
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        1232,
+        208
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "db5ad023-a1a9-4512-a13c-77a4cd7ec0c1",
+      "maxTries": 5,
+      "name": "Rated2",
+      "parameters": {
+        "binaryPropertyName": "data1, data",
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-flash",
+          "mode": "list",
+          "value": "models/gemini-2.5-flash"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты — эксперт по анализу игровой техники в sci-fi сеттинге. У тебя есть два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) единиц техники, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, задающие стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 новую единицу техники, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую технику (второй файл) в сравнении с якорными образцами (первый файл) и оценить её соответствие по следующим критериям:\n\n1. **Жанр и фракционная принадлежность** (0–100 баллов)\n\n   * Футуристичная 3D-техника с чётким отражением стиля своей фракции через цвет, формы и характерные детали.\n\n2. **Визуальная связь с персонажем** (0–100 баллов)\n\n   * Продолжает образ владельца, соответствует его палитре, формам и характеру.\n\n3. **Силуэт** (0–100 баллов)\n\n   * Объёмный, легко читаемый в любом масштабе, с характерными формами sci-fi техники.\n\n4. **Форма = Функция** (0–100 баллов)\n\n   * С первого взгляда понятно назначение — разведка, огневая поддержка, артиллерия и т.д.\n\n5. **Асимметрия и модули** (0–100 баллов)\n\n   * Используются при наличии логики — внешние турели, энергосекции, дроновые доки, усиленные платформы.\n\n6. **Инженерная убедительность** (0–100 баллов)\n\n   * Даже гипертрофированные формы выглядят конструктивно и технически правдоподобно.\n\n7. **Glow и энергия** (0–100 баллов)\n\n   * Подсветки и энергоблоки интегрированы в конструкцию и подчёркивают форму.\n\n8. **Читаемость в изометрии** (0–100 баллов)\n\n   * Конструкция не перегружена мелкими деталями, силуэт и формы хорошо читаются с изометрического угла.\n\n9. **Положение/подача** (0–100 баллов)\n\n   * Изображается в устойчивой позе с ощущением массы и инерции.\n\n10. **Готовность к анимации** (0–100 баллов)\n\n    * Конструкция продумана так, чтобы анимация движущихся частей была простой и логичной.\n\n11. ## **Палитра фракций** (0–100 баллов)\n\n    * *Военная корпорация*: чёрный, тёмно-серый, бронза, оранжевые акценты.\n    * *Банда улиц*: хаотичный стиль, простые граффити, кислотные акценты.\n    * *Техническая корпорация*: белый, чёрный, индиго, неоновые вставки (фиолетовый, бирюзовый).\n\n12. **Материалы** (0–100 баллов)\n\n    * Матовый металл, композитные панели, технопластик, светящиеся трубки, голографические дисплеи.\n\n13. **Детализация** (0–100 баллов)\n\n    * Средний уровень, акцент на функциональных элементах — оружие, сенсоры, двигатели.\n\n14. **Стилевое соответствие** (0–100 баллов)\n\n    * Поверхности чистые, технологичные, допускается аккуратное фракционное оформление.\n\n15. **Верхний вид** (0–100 баллов)\n\n    * Силуэт легко различим и узнаваем при взгляде сверху.\n\n16. **Интеграция оружия** (0–100 баллов)\n\n    * Вооружение встроено в конструкцию и визуально выделено как ключевой элемент.\n\n17. **Визуальная балансировка** (0–100 баллов)\n\n    * Пропорции корпуса и модулей сбалансированы для устойчивого и мощного вида.\n\n18. **Акцентные зоны** (0–100 баллов)\n\n    * Есть чётко выделенные визуальные центры — оружие, энергоблоки, сенсоры.\n\n19. **Чистота визуала** (0–100 баллов)\n\n    * Отсутствие визуального мусора и излишнего декора, который мешает восприятию формы и роли техники.\n\n20. **Контролируемое повреждение** (0–100 баллов)\n\n    * Износ и повреждения выполнены упорядоченно и технологично, а не хаотично.\n\n**Формат ответа:**\n\n* Для каждого критерия — 1 короткое предложение с комментарием и целое число баллов.\n* В конце — *ИТОГОВАЯ ОЦЕНКА: X/100*.\n\n**ВАЖНО:**\n\n* Если техника (включая все её элементы, модули и оружие) не помещается в кадр и хотя бы один её элемент обрезан, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям и *ИТОГОВАЯ ОЦЕНКА: 0/100*.\n* Если техника видна полностью, проведи оценку по всем пунктам."
+      },
+      "position": [
+        1104,
+        208
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "waitBetweenTries": 2000
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "1f584a61-bcf3-440b-9960-8b3a07b60a48",
+      "name": "Rated",
+      "parameters": {
+        "binaryPropertyName": "data1, data",
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-flash",
+          "mode": "list",
+          "value": "models/gemini-2.5-flash"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты эксперт по анализу игровых персонажей. Ты получил два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) персонажей, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 нового персонажа, сгенерированного нейросетью, которого необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать нового персонажа (второй файл) в сравнении с якорными персонажами (первый файл) и оценить его соответствие по следующим критериям:\n\n1. *Жанр* (0-100 баллов)\n   - Соответствие стилизованному 3D в духе hero-shooter'ов\n\n2. *Стилизация* (0-100 баллов)\n   - Смешение семи-реализма и стилизованной казуальности, с хорошим уровнем глубины и объема\n\n3. *Пропорции* (0-100 баллов)\n   - Героические пропорции, крупные плечи и массивные руки у мужчин. Утрированные формы, акцент на талию, бедра и длинные ноги у женщин\n\n4. *Лицо* (0-100 баллов)\n   - Читаемая мимика, выразительные черты и частые sci-fi элементы (импланты, линзы, светящиеся глаза)\n\n5. *Силуэт* (0-100 баллов)\n   - Легко узнаваемый, уникальный силуэт, который читается даже без цвета\n\n6. *Форма = Функция* (0-100 баллов)\n   - Визуально понятно, кто есть кто по функциям (тяжелая броня у танка, легкий костюм у скаута)\n\n7. *Асимметрия* (0-100 баллов)\n   - Использование асимметрии как частого приема, например, протез, усиленная броня или дополнительное устройство на одной стороне тела\n\n8. *Узнаваемость по роли* (0-100 баллов)\n   - Внешний вид персонажа должен четко считываться с первого взгляда, передавая его игровую роль\n\n9. *Цветовая палитра* (0-100 баллов)\n   - Насыщенная и контрастная, с доминированием ярких неоновых акцентов (бирюзовый, розовый, фиолетовый, лаймовый) на темных фонах\n\n10. *Glow* (0-100 баллов)\n    - Активное применение светящихся элементов на броне, глазах и гаджетах\n\n11. *Материалы* (0-100 баллов)\n    - Глянцевый пластик, полированный металл, синтетика и хайтек-ткани\n\n12. *Детализация* (0-100 баллов)\n    - Высокоуровневая, но контролируемая, без перегрузки визуала лишними элементами\n\n13. *Визуальное представление силы* (0-100 баллов)\n    - Дизайн должен наглядно демонстрировать силу и способности персонажа (например, мощная броня, необычные устройства)\n\n14. *Уникальность головы/шлема* (0-100 баллов)\n    - Дизайн головы или шлема должен быть уникальным и легко узнаваемым, даже если это не прическа\n\n15. *Характер* (0-100 баллов)\n    - Лицо и тело должны нести эмоциональный \"характер\" даже в статичном виде\n\n16. *Визуальная история* (0-100 баллов)\n    - Дизайн персонажа должен содержать элементы, намекающие на его прошлое или принадлежность к определенной фракции\n\n17. *Акцент на эмоциях* (0-100 баллов)\n    - Лицо персонажа должно передавать его эмоции и характер\n\n18. *Гармония аксессуаров* (0-100 баллов)\n    - Все аксессуары и гаджеты должны быть гармонично вписаны в общий дизайн персонажа\n\n19. *Целостность дизайна* (0-100 баллов)\n    - Все элементы дизайна должны выглядеть как часть единого целого, а не как разрозненный набор\n\n20. *Сбалансированная композиция* (0-100 баллов)\n    - Элементы дизайна должны быть сбалансированы по расположению и размеру, создавая гармоничный образ\n\nДля каждого критерия дай краткий комментарий (1 предложение, которое конкретно описывает твою оценку) и оценку в баллах (выдай оценку в виде целого числа). В конце выведи итоговую среднюю оценку в формате: *ИТОГОВАЯ ОЦЕНКА: X/100*\n\nНе пиши дополнительных комментариев, допускаются только комментарии для критериев по пунктам.\n\nПомни: ты анализируешь нового персонажа (второй файл) в контексте соответствия стилю и качеству якорных персонажей (первый файл).\n\nВАЖНО: \n- Если персонаж (включая все его части тела, одежду, оружие и снаряжение) не помещается в кадр и хотя бы один его элемент обрезан, дальнейший анализ не требуется. Выстави оценку *0 баллов* по всем критериям, а в качестве итоговой оценки укажи: *ИТОГОВАЯ ОЦЕНКА: 0/100*.\n- Если персонаж виден полностью, приступай к детальной оценке по критериям.\n"
+      },
+      "position": [
+        1088,
+        -464
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "3f766745-117a-4310-bdc4-7687121e3808",
+      "name": ">",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
+              "leftValue": "={{ $json.content.parts[0].text.match(/ИТОГОВАЯ ОЦЕНКА:\\s*(\\d+)\\/100/)[1] }}",
+              "operator": {
+                "operation": "gte",
+                "type": "number"
+              },
+              "rightValue": 90
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        1216,
+        -464
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "dcc5e85c-21ba-4d1c-961d-76436acfcf04",
+      "name": ">71",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
+              "leftValue": "={{ $json.content.parts[0].text.match(/ИТОГОВАЯ ОЦЕНКА:\\s*(\\d+)\\/100/)[1] }}",
+              "operator": {
+                "operation": "gte",
+                "type": "number"
+              },
+              "rightValue": 90
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        1232,
+        560
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "9abc09e1-548c-4310-a3b9-2fe9e8750468",
+      "maxTries": 5,
+      "name": "Rated3",
+      "parameters": {
+        "binaryPropertyName": "data1, data",
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-flash",
+          "mode": "list",
+          "value": "models/gemini-2.5-flash"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты эксперт по анализу игровой архитектуры. Ты получил два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) зданий, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 новое здание, сгенерированное нейросетью, которое необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новое здание (второй файл) в сравнении с якорными зданиями (первый файл) и оценить его соответствие по следующим критериям:\n\n1.  *Жанр и концепция* (0-100 баллов)\n    -   Соответствие стилизованной изометрии 2.5D в sci-fi сеттинге.\n\n2.  *Стиль* (0-100 баллов)\n    -   Олицетворение порядка и прогресса, чистые формы, неоновые акценты, стекло и металл.\n\n3.  *Перспектива* (0-100 баллов)\n    -   Строгая ортографическая изометрическая проекция под углом 30 градусов.\n\n4.  *Угол обзора* (0-100 баллов)\n    -   Вид под высоким углом сверху вниз под 45 градусов.\n\n5.  *Модульность* (0-100 баллов)\n    -   Здания должны быть вписаны в кратные модули (1x1, 2x2, 3x3) и выглядеть как части единой логической системы.\n\n6.  *Перспектива для читаемости* (0-100 баллов)\n    -   Хорошая различимость и читаемость с изометрического угла.\n\n7.  *Функциональность* (0-100 баллов)\n    -   Архитектура должна быть функциональной, симметричной и утопически чистой.\n\n8.  *Форма = Функция* (0-100 баллов)\n    -   Назначение здания должно считываться с первого взгляда (например, пульсирующее ядро у энергоблока).\n\n9.  *Основание* (0-100 баллов)\n    -   Наличие четкой платформы или базы, создающей визуальный фундамент.\n\n10. *Читаемость с расстояния* (0-100 баллов)\n    -   Здание должно сохранять свою узнаваемость и детали даже при уменьшении масштаба.\n\n11. *Цветовая палитра* (0-100 баллов)\n    -   Доминирование темных, графитовых, синих и темно-серых цветов, на фоне которых выделяются неоновые акценты.\n\n12. *Glow* (0-100 баллов)\n    -   Активное использование подсветки в виде полос, прожекторов и голограмм, встроенных в грани и швы, которые не заливают изображение, а подчеркивают структуру.\n\n13. *Материалы* (0-100 баллов)\n    -   Использование матовых техно-поверхностей (металл, стекло, композиты) без бликов, отражений и грязи.\n\n14. *Освещение* (0-100 баллов)\n    -   Глобальное, мягкое, без ярких источников света, выразительность достигается за счет неоновых линий.\n\n15. *Детализация* (0-100 баллов)\n    -   Средняя, с акцентом на читаемости конструкции и мелких элементах, таких как экраны, панели и трубы.\n\n16. *Отсутствие грязи* (0-100 баллов)\n    -   Даже постапокалипсис выглядит упорядоченным и инженерным.\n\n17. *Уникальность* (0-100 баллов)\n    -   Уникальные верхушки зданий, чтобы каждый модуль был легко узнаваем с высоты.\n\n18. *Разнообразие форм* (0-100 баллов)\n    -   Использование разнообразных геометрических форм, чтобы избежать монотонности.\n\n19. *Соответствие стилю* (0-100 баллов)\n    -   Полное соответствие общей стилистике проекта.\n\n20. *Контролируемое повреждение* (0-100 баллов)\n    -   Признаки износа или повреждений должны выглядеть упорядоченными и технологичными, а не хаотичными.\n\nДля каждого критерия дай краткий комментарий (1 предложение, которое конкретно описывает твою оценку) и оценку в баллах (выдай оценку в виде целого числа). В конце выведи итоговую среднюю оценку в формате: *ИТОГОВАЯ ОЦЕНКА: X/100*\n\nНе пиши дополнительных комментариев, допускаются только комментарии для критериев по пунктам.\n\nПомни: ты анализируешь новое здание (второй файл) в контексте соответствия стилю и качеству якорных зданий (первый файл)."
+      },
+      "position": [
+        1104,
+        560
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "waitBetweenTries": 2000
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-06T10:42:28.983Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-06T10:42:28.983Z",
+      "workflowId": "fAs2vxUM5ijDvNuT"
+    }
+  ],
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-07-14T08:26:20.798Z",
+      "id": "QEHbVhy6Fh3iNUlR",
+      "name": "LW",
+      "updatedAt": "2025-07-14T08:26:20.798Z"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-20T21:40:00.000Z",
+  "versionId": "c5bc4fa7-ccf6-4648-8613-60782a5f294b"
+}
