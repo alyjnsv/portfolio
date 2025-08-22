@@ -1,0 +1,89 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-18T05:37:16.732Z",
+  "id": "pb8wls3Hjr1vzBtt",
+  "isArchived": false,
+  "meta": null,
+  "name": "main",
+  "nodes": [
+    {
+      "id": "6d9ade1c-d51f-43ec-938d-81a7c8463f30",
+      "name": "When Executed by Another Workflow",
+      "parameters": {},
+      "position": [
+        -144,
+        0
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "b95e27b1-8f78-46cb-a452-5f27114bb039",
+      "name": "AI Agent",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "dc626503-775e-4a71-abd2-c6999915c550",
+      "name": "HTTP Request",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        288,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-18T05:37:16.736Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-18T05:37:16.736Z",
+      "workflowId": "pb8wls3Hjr1vzBtt"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-18T05:37:52.000Z",
+  "versionId": "7b2d9b81-91e8-425d-91b8-d3576e90ace4"
+}
