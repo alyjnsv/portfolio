@@ -1,0 +1,305 @@
+{
+  "active": false,
+  "connections": {
+    "Call Gemini API with Image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait1",
+            "type": "main"
+          }
+        ],
+        []
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Transform to base64 (image)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        []
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request1",
+            "type": "main"
+          }
+        ],
+        []
+      ]
+    },
+    "Tech Task": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Transform to base64 (image)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Call Gemini API with Image",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Tech Task",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-01T14:44:56.272Z",
+  "id": "NND65ByT1CjaPtwh",
+  "isArchived": true,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "LW Generation Vertex",
+  "nodes": [
+    {
+      "id": "ecd64d0c-63af-4d95-b142-95836a8a7e27",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n     \"prompt\": \"{{ $json.Task }}\"\n   }",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/imagen4/preview"
+      },
+      "position": [
+        144,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "dfa37375-092e-4fcd-a2b4-a6fef44f4a59",
+      "name": "Wait1",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        400,
+        192
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "099330b2-dd7d-4b75-99a5-101ecf304c11"
+    },
+    {
+      "id": "222b3102-57eb-4fd7-a099-82416096740b",
+      "name": "HTTP Request4",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request').item.json.request_id }}"
+      },
+      "position": [
+        608,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "8f06f12d-f555-4af9-8855-f78ad4ccb957",
+      "name": "HTTP Request1",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        832,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "2aaeb4c9-4c6e-4f37-91e7-33aa14c0b6de",
+      "name": "Call Gemini API with Image",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Strict orthographic isometric projection high angle view top down view three quarter classic strategy game angle without perspective distortion Detailed breakdown Projection Strict orthographic isometric projection Height and angle High angle view top down at 45 degrees Rotation Three quarter view classic game rotation View style Architectural model view strategy game asset style Negative prompt perspective view vanishing point eye-level shot low-angle shot camera distortion foreshortening two-point perspective tilted vertical lines photography\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}\n",
+        "method": "POST",
+        "options": {
+          "response": {
+            "response": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+      },
+      "position": [
+        1152,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "bfcd009d-8ec1-438a-a0ea-cc0b4b5275dc",
+      "name": "Transform to base64 (image)",
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "position": [
+        992,
+        192
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "704ae026-6460-42cd-ad0f-791e61dedaf9",
+      "name": "HTTP Request2",
+      "parameters": {
+        "options": {},
+        "url": "={{ $('HTTP Request1').item.json.images[0].url }}"
+      },
+      "position": [
+        1312,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "executeOnce": false,
+      "id": "b175cfa7-a7b8-4a9e-899e-406d152422fe",
+      "name": "Tech Task",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "575a61dd-05f1-4e02-a23d-c997e5f9179d",
+              "name": "Task",
+              "type": "string",
+              "value": "=A compact, formidable futuristic cyberpunk factory, 3D casual game asset. The building showcases an asymmetrical, brutalist-inspired, multi-tiered design with sharp angles and imposing slopes, primarily in deep black and stark white. Explosive, contrasting blood-red and electric yellow glowing panels are strategically placed on the facades, along with razor-sharp cyan linear light accents outlining key structural divisions. Harsh, focused light spills from wide, horizontal vents, and intermittent, blinding flashes of lime green light emanate from integrated power conduits. Above the main entrance, a small, semi-transparent, holographic gear icon shimmers with a vibrant, almost violent, magenta glow. A large, volumetric and semi-transparent neon blue hologram of a hard hat is positioned above the central, tallest section of the factory, its form subtly shifting with a cold, digital hum. Clean, readable design, no clutter. Isometric view, soft glowing lighting, isolated on a light, solid background. CGI render, casual game style."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -48,
+        192
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "862398e9-bedc-4df1-be0f-adbd40088360",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -256,
+        192
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-01T14:44:56.280Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-01T14:44:56.280Z",
+      "workflowId": "NND65ByT1CjaPtwh"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-05T22:19:17.000Z",
+  "versionId": "668ef763-3e67-4505-83ef-e007fe4df497"
+}
