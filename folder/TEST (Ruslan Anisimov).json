@@ -1,0 +1,176 @@
+{
+  "active": false,
+  "connections": {
+    "Analyze2": {
+      "main": [
+        []
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Analyze2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "initiateUpload2": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2025-07-29T09:44:12.305Z",
+  "id": "hDxyl4r1gpkjbkts",
+  "isArchived": true,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "TEST (Ruslan Anisimov)",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "sDFqRe7Aff5vEwek",
+          "name": "@lw_art_assistant_bot"
+        }
+      },
+      "id": "97e5451d-e582-43af-ae9e-21fd5e26b639",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {
+          "download": true,
+          "imageSize": "extraLarge"
+        },
+        "updates": [
+          "message",
+          "callback_query"
+        ]
+      },
+      "position": [
+        -400,
+        200
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "0a3e15c4-1b5c-4db9-91b8-6bf02b25bb01"
+    },
+    {
+      "id": "6422496e-7683-4e02-8550-b5f63821cacc",
+      "name": "initiateUpload2",
+      "parameters": {
+        "contentType": "binaryData",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "inputDataFieldName": "data",
+        "method": "POST",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        },
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyANLgi_v4CEJSHdH76-07j9_bP2-sSHQZs"
+            }
+          ]
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "sendQuery": true,
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files"
+      },
+      "position": [
+        200,
+        600
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini"
+        }
+      },
+      "id": "de642963-f031-400f-be1b-79ad49256a21",
+      "name": "Analyze2",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"Проанализируй этот PDF документ. Подробно опиши все изображения и текст на русском языке. Сохрани структуру документа при выводе. Нив коем случае не добавляй комментарии\"\n        },\n        {\n          \"inline_data\": {\n            \"mime_type\": \"application/pdf\",\n            \"data\": \"{{ $json.data }}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n",
+        "method": "POST",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+      },
+      "position": [
+        80,
+        200
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "c41289b2-8aab-4802-bbbf-2ce06af95f49",
+      "name": "Extract from File",
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "position": [
+        -180,
+        200
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "toD9OwDAspVcuK67",
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-07-29T09:44:12.310Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-07-29T09:44:12.310Z",
+      "workflowId": "hDxyl4r1gpkjbkts"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-01T22:33:50.000Z",
+  "versionId": "fb4ccc3e-28c2-4271-9b60-6b267016aa78"
+}
