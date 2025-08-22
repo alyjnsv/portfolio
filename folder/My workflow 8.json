@@ -1,0 +1,81 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-10T23:30:51.359Z",
+  "id": "jzCw4hJ8mF0zQi5W",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 8",
+  "nodes": [
+    {
+      "id": "f206c4b6-0c22-4c16-a261-650e7b5911dc",
+      "name": "Schedule Trigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 10
+            }
+          ]
+        }
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "ffcb8da0-7c90-49cb-8269-d43529d75f96",
+      "name": "HTTP Request",
+      "parameters": {
+        "options": {},
+        "url": "d"
+      },
+      "position": [
+        288,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "3mM0jvFQycOqYesd",
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-10T23:30:51.363Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-10T23:30:51.363Z",
+      "workflowId": "jzCw4hJ8mF0zQi5W"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-10T23:31:38.000Z",
+  "versionId": "bb13ff78-b00c-4130-b1ba-2ca7d755422f"
+}
