@@ -1,17 +1,119 @@
 {
-  "active": false,
-  "connections": {},
+  "active": true,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a photo message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append or update row in sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "RSS Feed Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a photo message": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append or update row in sheet1",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
   "createdAt": "2025-08-22T14:29:36.020Z",
   "id": "UjbYyJckNLKJMrrT",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "My workflow 10",
   "nodes": [
     {
       "id": "b66b51c6-3ad5-47d3-ab10-5e7e8b0e512b",
       "name": "RSS Feed Trigger",
       "parameters": {
-        "feedUrl": "https://store.steampowered.com/feeds/news.xml",
+        "feedUrl": "https://www.igromania.ru/rss/news.rss",
         "pollTimes": {
           "item": [
             {
@@ -21,15 +123,363 @@
         }
       },
       "position": [
-        0,
+        1600,
         0
       ],
       "type": "n8n-nodes-base.rssFeedReadTrigger",
       "typeVersion": 1
+    },
+    {
+      "id": "9ccc6cd4-2bf2-4b1f-b8cd-03d8e1cb2350",
+      "name": "AI Agent",
+      "parameters": {
+        "options": {
+          "systemMessage": "Ты бот который оформляет новостей текст по играм красиво в стиле телеграмм поста, чтобы все пользователям понравилось, без кода и до 1000 тысяч символов."
+        },
+        "promptType": "define",
+        "text": "=Возьми текст отсюда: {{ $('RSS Feed Trigger').item.json.content }} и найди продолжение отсюда: {{ $json.data }} после оформи текст, и в конце напиши что то прикольное, в виде шуточного комментария. Пиши только текст, без своих начанльных предложений."
+      },
+      "position": [
+        2320,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "I7lLealOUwgNCRyL",
+          "name": "OpenAi account 2"
+        }
+      },
+      "id": "95793705-e74d-48e0-bc39-f2a7eaffbf19",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        2320,
+        160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ry6y0YMQFNxoctJ7",
+          "name": "Google Sheets account"
+        }
+      },
+      "id": "f0c369bc-0bf8-476d-ae3b-43bd059815c9",
+      "name": "Get row(s) in sheet",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "steam news",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Новость",
+              "lookupValue": "={{ $json.content }}"
+            }
+          ]
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        1744,
+        0
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "4a2dc224-bffe-4260-b852-a99173e973ac",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "b549ae0e-7845-44d3-a203-6b846ce8b078",
+              "leftValue": "={{ $json['Игра'] }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "={{ $json['Игра'] }}"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1888,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ry6y0YMQFNxoctJ7",
+          "name": "Google Sheets account"
+        }
+      },
+      "id": "0e729a8a-82b5-4671-af3e-2b1ad4b6764c",
+      "name": "Append or update row in sheet",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Новость"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Игра",
+              "id": "Игра",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Новость",
+              "id": "Новость",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Изображение",
+              "id": "Изображение",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Было или не было",
+              "id": "Было или не было",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Было или не было": "=Взят",
+            "Игра": "={{ $('RSS Feed Trigger').item.json.title }}",
+            "Изображение": "={{ $('RSS Feed Trigger').item.json.enclosure.url }}",
+            "Новость": "={{ $('RSS Feed Trigger').item.json.content }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "steam news",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        2032,
+        0
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "e9f75e9d-410a-46cf-9173-cb2b7166e1bd",
+      "name": "HTTP Request",
+      "parameters": {
+        "options": {},
+        "url": "={{ $('RSS Feed Trigger').item.json.guid }}"
+      },
+      "position": [
+        2176,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "qs57sYShEBJJruLN",
+          "name": "Telegram account"
+        }
+      },
+      "id": "8632fa42-168d-4988-a1ac-690644729ab1",
+      "name": "Send a photo message",
+      "parameters": {
+        "additionalFields": {
+          "caption": "={{ $json.output }}"
+        },
+        "binaryData": true,
+        "chatId": "@gamenseveryday",
+        "operation": "sendPhoto"
+      },
+      "position": [
+        2752,
+        0
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "87f56199-37b2-4317-8608-59ed1ec13a1f"
+    },
+    {
+      "id": "cd156de7-2ea7-41d5-a780-4880871cd173",
+      "name": "HTTP Request1",
+      "parameters": {
+        "options": {},
+        "url": "={{ $('RSS Feed Trigger').item.json.enclosure.url }}"
+      },
+      "position": [
+        2592,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ry6y0YMQFNxoctJ7",
+          "name": "Google Sheets account"
+        }
+      },
+      "id": "4bc098d6-6469-4280-b698-36abb34293bf",
+      "name": "Append or update row in sheet1",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Новость"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Игра",
+              "id": "Игра",
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Новость",
+              "id": "Новость",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Изображение",
+              "id": "Изображение",
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Было или не было",
+              "id": "Было или не было",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Было или не было": "=Готовый",
+            "Новость": "={{ $('RSS Feed Trigger').item.json.content }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "steam news",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1X-u-E-uLWSnB__DKnGFPQmP9hUJicb467Pzws2psugI/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        2928,
+        0
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
     }
   ],
   "pinData": {},
   "settings": {
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "3mM0jvFQycOqYesd",
     "executionOrder": "v1"
   },
   "shared": [
@@ -41,9 +491,13 @@
       "workflowId": "UjbYyJckNLKJMrrT"
     }
   ],
-  "staticData": null,
+  "staticData": {
+    "node:RSS Feed Trigger": {
+      "lastItemDate": "2025-08-24T15:10:21.000Z"
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-08-22T14:29:36.020Z",
-  "versionId": "a5fc1ee5-38a8-4357-8135-9a82c44fac27"
+  "triggerCount": 1,
+  "updatedAt": "2025-08-24T19:22:21.000Z",
+  "versionId": "3600afea-e312-482d-8bc3-3efa4c9dcacf"
 }
