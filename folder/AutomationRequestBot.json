@@ -1,0 +1,242 @@
+{
+  "active": false,
+  "connections": {
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Message a model",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-25T11:35:01.461Z",
+  "id": "tW9vR1HABGzIRZDs",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "AutomationRequestBot",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "YVT4A65Ggrb7mqPx",
+          "name": "AutomationRequestBot"
+        }
+      },
+      "id": "c4dec910-4afc-4887-a755-9cd536a5edde",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "2d777027-93fc-4a85-bf10-2df255c354ae"
+    },
+    {
+      "id": "b4745e92-389a-4af7-918e-c3ee02a160d9",
+      "name": "Extract from File",
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "position": [
+        432,
+        0
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "YVT4A65Ggrb7mqPx",
+          "name": "AutomationRequestBot"
+        }
+      },
+      "id": "82ad2b8c-14bd-4f1b-b02e-9f15d4b014d8",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "63880f2e-dff1-4321-bf2b-32e93e9d0186"
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "10f907d9-2ecc-4d9c-a359-31567beaf2ef",
+      "name": "Message a model",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "Ты эксперт по анализу технических заданий и брифов.",
+              "role": "system"
+            },
+            {
+              "content": "У тебя есть 20 критериев оценки качества брифа:\n1.Ясность основной цели: Насколько четко и недвусмысленно сформулирована главная задача бота (сокращение времени на ожидание ответа).\n\n2.Измеримость критериев успеха: Определены ли конкретные, измеримые метрики для оценки успешности проекта (например, \"сократить время ответа на 25%\"), а не общие фразы.\n\n3.Четкость названия проекта: Соответствует ли название «GDD-ассистент» его функционалу и целям.\n\n4.Полнота общей информации: Указаны ли все необходимые административные данные (отдел, ответственный, контакты, даты).\n\n5.Определенность минимального функционала (MVP): Четко ли описан обязательный набор функций для первой версии (интеграции, шаблонные ответы).\n\n6.Конкретность формата ответа: Ясно ли описан желаемый результат работы бота (текст + ссылки + прикрепленные документы).\n\n7.Гибкость в выборе платформы: Указана ли готовность начать с более простой платформы (Telegram) для ускорения тестирования.\n\n8.Ясность платформы для взаимодействия: Конкретно ли указаны каналы коммуникации с ботом (корпоративный чат Element или Telegram).\n\n9.Доступность источников данных: Предоставлены ли прямые и рабочие ссылки на источники знаний (Confluence, Google Sheets).\n\n10.Требование к актуальности данных: Четко ли прописана необходимость постоянного обновления знаний бота на основе «живых» документов.\n\n11.Спецификация типов данных: Понятно ли, какие данные бот получает на вход (текстовый запрос) и откуда берет информацию для ответа.\n\n12.Определенность требований к интеграциям: Ясно ли, с какими именно системами бот должен быть интегрирован.\n\n13.Определение целевой аудитории: Четко ли указано, кто будет основными пользователями бота (разработчики, геймдизайнеры).\n\n14.Проработка сценария использования: Описан ли базовый сценарий взаимодействия пользователя с ботом от вопроса до ответа.\n\n15.Понятность решаемой проблемы: Ясно ли из брифа, какую конкретную «боль» пользователя решает бот.\n\n16.Наличие примеров запросов: Приведены ли в брифе 2-3 примера типичных вопросов, которые пользователи будут задавать боту, чтобы оценить сложность.\n\n17.Реалистичность сроков: Являются ли заявленные сроки (1 день) адекватными для поставленной задачи.\n\n18.Наличие ответственного лица: Указан ли конкретный человек для решения вопросов по проекту.\n\n19.Достаточность информации для старта: Содержит ли бриф всю необходимую информацию для того, чтобы команда разработки могла начать оценку и проектирование.\n\n20.Осознание рисков и ограничений: Отражены ли в брифе потенциальные сложности (например, неструктурированность данных в Confluence).",
+              "role": "assistant"
+            },
+            {
+              "content": "Необходимо:  \n1. Оценить бриф по сумме этих критериев и выдать итоговый балл от 0 до 100.  \n2. Согласно брифу определи приоритет\n3. В зависимости от результата:  \n   - Если итоговый балл ≥ 90:\n     Верни результат строго в формате JSON:\n     {\n       \"score\": <число от 0 до 100>,\n       \"priority': <приоритет>,\n       \"executor\": \"<ФИО или роль исполнителя>\",\n       \"title\": \"<название задачи>\",\n       \"deadline\": \"<срок выполнения в удобном формате>\",\n       \"department\": \"<название отдела>\"\n     }\n\n   - Если итоговый балл < 90:\n     Верни результат в формате JSON:\n     {\n       \"score\": <число от 0 до 100>,\n       \"problems\": [\n         \"<краткое описание первой проблемы>\",\n         \"<краткое описание второй проблемы>\",\n         ...\n       ]\n     }\n4. Оценка должна быть строго от 0 до 100 баллов. \n5. Строго соблюдай формат JSON описанный сверху! Не добавляй никаких пояснений или текста вне JSON. \n\nБриф для оценки:",
+              "role": "assistant"
+            },
+            {
+              "content": "={{ $json.text }}"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4O",
+          "mode": "list",
+          "value": "gpt-4o"
+        },
+        "options": {
+          "temperature": 0
+        }
+      },
+      "position": [
+        640,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "YVT4A65Ggrb7mqPx",
+          "name": "AutomationRequestBot"
+        }
+      },
+      "id": "e39173a2-64dd-478b-b26b-83f689d70290",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.message.content }}"
+      },
+      "position": [
+        1008,
+        -224
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "70a16c4e-2a46-4b11-bae1-bf392a993984"
+    },
+    {
+      "id": "a58899f4-9160-4f1c-97c7-1488321b34af",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "d28054b3-7515-4967-8a7d-b7102c640e0a",
+              "leftValue": "",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1008,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-25T11:35:01.465Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-25T11:35:01.465Z",
+      "workflowId": "tW9vR1HABGzIRZDs"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-25T11:35:01.461Z",
+  "versionId": "753f79b3-fbb0-4df1-9788-acc0924bea2a"
+}
