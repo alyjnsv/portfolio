@@ -1,0 +1,677 @@
+{
+  "active": false,
+  "connections": {
+    "3D-Generation1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET STATUS GENERATION2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET IMAGE CREATE STATUS3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET STATUS GENERATION2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "DOWNLOAD BINARY 3D MODEL1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a document1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GET 3D Generation1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "DOWNLOAD BINARY 3D MODEL1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GET IMAGE CREATE STATUS3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GET IMAGE URL": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GET STATUS GENERATION2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "IMAGE GENERATE": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET IMAGE CREATE STATUS3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET IMAGE URL",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Code4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET 3D Generation1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Code5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code7",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "IMAGE GENERATE",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "3D-Generation1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If6",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message4",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-25T09:00:50.087Z",
+  "id": "LFvFlshxvmmc2qDw",
+  "isArchived": false,
+  "meta": null,
+  "name": "Auto3DGenerationBot",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "lg7XldBHSyeCQnOZ",
+          "name": "Auto3DGenerationTGBOT"
+        }
+      },
+      "id": "1b763695-3d72-4a14-984a-656d6761757d",
+      "name": "Telegram Trigger1",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -96,
+        1840
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "5828d55d-5e8b-4122-9ed3-77ffb2893170"
+    },
+    {
+      "id": "dab1a917-3f5d-4949-9162-81642237e7a7",
+      "name": "If4",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9b4dd461-e950-4905-8e87-711e722f6348",
+              "leftValue": "={{ $json.status }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "COMPLETED"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1216,
+        1584
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "8d60c03c-1bd6-4606-b77e-30a6865b8d44",
+      "name": "Code4",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nimport time \n\ntime.sleep(1)\nreturn _input.all()"
+      },
+      "position": [
+        1120,
+        1728
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "f4c62f2b-2aeb-4374-88bd-60f355891dfa",
+      "name": "IMAGE GENERATE",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization ",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"prompt\": {{ JSON.stringify($('Telegram Trigger1').item.json.message.text)}}\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/imagen4/preview"
+      },
+      "position": [
+        1104,
+        1392
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "4a693937-b855-4841-9d52-a705332dd20e",
+      "name": "GET IMAGE CREATE STATUS3",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "={{ $json.status_url }}"
+      },
+      "position": [
+        1008,
+        1584
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "57ce381a-3f79-42c5-b8e3-da7fc7ebc94c",
+      "name": "3D-Generation1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"input_image_url\": {{ JSON.stringify($('Code6').item.json.file_path) }}\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/hunyuan3d-v21"
+      },
+      "position": [
+        2512,
+        1584
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "59b7543c-662e-470b-9d7a-8708ea778868",
+      "name": "GET 3D Generation1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "={{ $json.response_url }}"
+      },
+      "position": [
+        3040,
+        1456
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "c2c8a9e3-692a-48d6-ba9c-e85bb808dad3",
+      "name": "Send a document1",
+      "parameters": {
+        "additionalFields": {
+          "caption": ""
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        3328,
+        1456
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "6e3bd3d3-0d7c-4ab7-a20e-b1c8c46aebdb"
+    },
+    {
+      "id": "e9b25d06-5913-4339-9f2e-172bc70e5b66",
+      "name": "DOWNLOAD BINARY 3D MODEL1",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.model_mesh.url }}"
+      },
+      "position": [
+        3184,
+        1456
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "110fceb3-6984-474e-b78f-1049ac15f07c",
+      "name": "If5",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3d82e70e-f92a-42bf-8356-3357da3c313f",
+              "leftValue": "={{ $json.status }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "COMPLETED"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2832,
+        1584
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "53f96eeb-b673-4638-ac1a-1be42dfa15dd",
+      "name": "Code5",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nimport time \ntime.sleep(1)\n\nreturn _input.all()"
+      },
+      "position": [
+        2768,
+        1728
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "f0c491b8-9de3-4c44-b4e8-3d16991b1692",
+      "name": "GET IMAGE URL",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "={{ $json.response_url }}"
+      },
+      "position": [
+        1408,
+        1584
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "b3348834-143b-4925-9a6b-06d2ee1cf1d4",
+      "name": "GET STATUS GENERATION2",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "={{ $json.status_url }}"
+      },
+      "position": [
+        2688,
+        1584
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "87563099-4996-47af-93ee-353cd8f4da5b",
+      "name": "If6",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "43c2b06e-7cb3-4171-99c5-36162d42803a",
+              "leftValue": "={{ $json.message.photo }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "array"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        464,
+        1984
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "lg7XldBHSyeCQnOZ",
+          "name": "Auto3DGenerationTGBOT"
+        }
+      },
+      "id": "66c6bb56-9edf-41dd-8955-0565cfe8ea46",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.photo.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        1168,
+        2064
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8b7a9b2d-8b7d-4f49-9fc0-081cc2219b90"
+    },
+    {
+      "id": "22120ebd-806a-4657-a3a5-af99e4dda01d",
+      "name": "Code6",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\ntry:\n  image_path = f'https://api.telegram.org/file/bot8239561434:AAH62eZ7e8DNeBoDx7WmghcpqL_IX6Mp5Us/{_input.item.json.result.file_path}'\nexcept:\n  image_path = _input.item.json.images[0].url\nreturn {\"file_path\": image_path}"
+      },
+      "position": [
+        1792,
+        1760
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "74e44871-ef18-483a-9559-94a1c83d7976",
+      "name": "Code7",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nnum_photo = len(_input.item.json)\nreturn {'photo': _input.item.json.message.photo[num_photo]}"
+      },
+      "position": [
+        848,
+        2144
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "lg7XldBHSyeCQnOZ",
+          "name": "Auto3DGenerationTGBOT"
+        }
+      },
+      "id": "16b760f3-5fd6-4c32-ba49-fe0eb8b61a6b",
+      "name": "Send a text message4",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $json.message.chat.id }}",
+        "text": "Запрос принят и обрабатывается..."
+      },
+      "position": [
+        240,
+        1712
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "ddcebe2a-ec7a-475d-a6ef-629d4a0999a9"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "lg7XldBHSyeCQnOZ",
+          "name": "Auto3DGenerationTGBOT"
+        }
+      },
+      "id": "bf803ad5-3998-4a51-9ad9-ae152ec94cdb",
+      "name": "Send a text message5",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "text": "3д модель генерируется..."
+      },
+      "position": [
+        2000,
+        1760
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "19df31e5-3915-4d73-aa41-67f93963702c"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-25T09:00:50.092Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-25T09:00:50.092Z",
+      "workflowId": "LFvFlshxvmmc2qDw"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-25T09:00:50.087Z",
+  "versionId": "6791570f-8dc0-4526-9fe9-b1b1894f02ad"
+}
