@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "OpenAI Chat Model": {
       "ai_languageModel": [
@@ -93,7 +93,7 @@
               "id": "fee506dd-116e-430c-8576-b4692a2d5923",
               "name": "document_id",
               "type": "string",
-              "value": "59227725"
+              "value": "={{ $json.body.page_id }}"
             },
             {
               "id": "c348b92d-514d-4ef9-8679-d9cbdb6e98d0",
@@ -239,6 +239,7 @@
       "id": "a12c189b-6701-47b2-ab95-ef752534b78d",
       "name": "Webhook",
       "parameters": {
+        "httpMethod": "POST",
         "options": {},
         "path": "confluence/prompt/hook"
       },
@@ -251,7 +252,42 @@
       "webhookId": "c8399b08-3951-4835-967c-0eaec82d782c"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "body": {
+            "page_id": "66881989"
+          },
+          "executionMode": "production",
+          "headers": {
+            "accept": "application/json, application/javascript, text/javascript",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "65.21.167.174",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "FI",
+            "cf-ray": "974b90cb923baa14-ARN",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-length": "22",
+            "content-type": "application/json",
+            "host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-for": "65.21.167.174, 104.23.221.26",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-fl5g2",
+            "x-is-trusted": "yes",
+            "x-real-ip": "65.21.167.174"
+          },
+          "params": {},
+          "query": {},
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/confluence/prompt/hook"
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -266,7 +302,7 @@
   ],
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-08-22T09:53:56.000Z",
-  "versionId": "eacbbc8c-e822-4ad7-969a-78762ace848d"
+  "triggerCount": 1,
+  "updatedAt": "2025-08-25T14:00:19.000Z",
+  "versionId": "bb5e6ac9-9caf-4ff1-8168-f9dd6fefa753"
 }
