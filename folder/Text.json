@@ -1,0 +1,1572 @@
+{
+  "active": false,
+  "connections": {
+    "Bot Log": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Telegram",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "CREATE meals": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "OK",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "CREATE profile": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "start",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Escape": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Bot Log",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GET profile": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "IF NO",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "IF 2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "parseJSON",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ERROR",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "IF NO": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "CREATE profile",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "start",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "YES DIGEST",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "NO DIGEST",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "NO DIGEST": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "nutrion 2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "nutrion 2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "SUPA digest": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GET profile",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "extract",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "User Log",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Save Bot Msg",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "User Log": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Save User Msg",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "SUPA digest",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "YES DIGEST": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "nutrion 2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "extract": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "parser",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "get_week_meals": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "nutrion 2",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "nutrion": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "CREATE meals",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "nutrion 2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Escape",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "parseJSON": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "nutrion",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "parser": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "IF 2",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-25T11:43:02.458Z",
+  "id": "cySyvf3eK8gJSteD",
+  "isArchived": false,
+  "meta": null,
+  "name": "Text",
+  "nodes": [
+    {
+      "id": "a186ec22-76e8-4adf-a064-be938060622e",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0a73cab2-d78a-4354-a626-2fa054d2426a",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "/start"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "start",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c83a3bbf-a07a-4547-aa5f-24d1641dc2fe",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "/v"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "main",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "fa47404d-c110-4d4a-8310-126eb004bd75",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "notStartsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "/"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "chat",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -5104,
+        1008
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "80f00eb9-43c5-41d0-af09-e441a18d287c",
+      "name": "parseJSON",
+      "parameters": {
+        "jsCode": "const chatId = $items('extract')[0].json.chat_id;\nconst src    = JSON.parse($json.message.content);          // {\"dish\":..,\"grams\":..[, \"time\":\"HH:MM\"]}\n\n// ── московская «сегодня»\nconst now = new Date(new Date().toLocaleString('en-US',{ timeZone:'Europe/Moscow' }));\n\n// берём HH:MM из src.time или текущее\nlet [hh, mm] =\n  src.time?.match(/^(\\d{2}):(\\d{2})$/)?.slice(1) ||\n  [now.getHours(), now.getMinutes()].map(n => String(n).padStart(2,'0'));\n\n// собираем ISO-строку в МСК (+03:00) — без перевода в UTC\nconst pad = n => String(n).padStart(2,'0');\nconst eatenAt = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}` +\n                `T${hh}:${mm}:00+03:00`;\n\nreturn [{\n  json: {\n    chat_id : chatId,\n    dish    : src.dish,\n    grams   : src.grams,\n    eaten_at: eatenAt\n  }\n}];\n"
+      },
+      "position": [
+        -4000,
+        448
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "64bfb967-f16e-415b-b750-916008255629",
+      "name": "When Executed by Another Workflow",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -5408,
+        1008
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "ce85f34e-513c-415e-8aae-61856474486f",
+      "name": "extract",
+      "parameters": {
+        "jsCode": "const text = $json.message.text.replace(/^\\/v\\s+/i, '');\nreturn [{ json: { chat_id: $json.message.chat.id, raw: text } }];\n"
+      },
+      "position": [
+        -4768,
+        528
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "a623781c-166e-4f95-a65f-9681d5a2d265",
+      "name": "nutrion",
+      "parameters": {
+        "jsonOutput": true,
+        "messages": {
+          "values": [
+            {
+              "content": "=Ты нутри-калькулятор.\nНа вход одна строка «dish, grams».\nВерни ТОЛЬКО одну строку JSON:\n{\"dish\":\"…\",\"kcal\":число,\"prot\":число,\"fat\":число,\"carb\":число}\nБез ``` и без пояснений.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.dish }}, {{ $json.grams }}"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4O-MINI",
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "position": [
+        -3776,
+        448
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "d7501e11-bdf1-4a11-8491-b022f70f5f59",
+      "name": "parser",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "Ты нутри-парсер.\n\nПолучаешь одну строку с описанием еды, которую ел человек и время употребления.\n\n- Если можешь разумно оценить порцию и массу (число граммов) — даже по словам типа «1 шт», «половина», «два куска» — верни ОДНУ строку JSON:\n\n{\"dish\":\"…\",\"grams\":число[, \"time\":\"HH:MM\"]}\n\n- time указывай, только если нашёл в тексте, без даты.\n\n- Если оценить порцию или время нельзя — верни ТЕКСТ-подсказку:\n*Не распознал* 🤔\n\n*Формат:* /v блюдо граммы [HH:MM]\n*Пример:* /v яблоко 100г 18:00",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.raw }}"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4O-MINI",
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "position": [
+        -4560,
+        528
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "id": "90ba6857-8eb6-4c26-a99c-12caa3f3d744",
+      "name": "Sticky Note4",
+      "parameters": {
+        "color": 4,
+        "content": "# /v РУЧНОЙ ВВОД\n\n\n\n\n",
+        "height": 432,
+        "width": 1858
+      },
+      "position": [
+        -4848,
+        384
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "174b6b1f-7955-4d36-81dc-84cc09d4d100",
+      "name": "Sticky Note",
+      "parameters": {
+        "color": 6,
+        "content": "# ОБЩЕНИЕ С НУТРИЦИОЛОГОМ\n\n\n\n",
+        "height": 472,
+        "width": 1858
+      },
+      "position": [
+        -4848,
+        848
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "420d5d68-d65d-4777-bbe2-0b8f81ffa0ae",
+      "name": "Sticky Note1",
+      "parameters": {
+        "color": 7,
+        "content": "# /start  И СОЗДАНИЕ ПРОФИЛЯ\n\n\n\n",
+        "height": 312,
+        "width": 858
+      },
+      "position": [
+        -4848,
+        48
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "462a1899-47bd-4f2e-b84f-05c8a750b204",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "*"
+        ]
+      },
+      "position": [
+        -5680,
+        2080
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "e4d6b058-dc8c-4130-9abd-41243518e824"
+    },
+    {
+      "disabled": true,
+      "id": "e17e647d-b0e7-4a2f-8608-060afb8c2dc7",
+      "name": "Switch1",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "52493568-0b68-46b8-b18a-894cf77bcac1",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "manual_"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "manual",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5eeb9b3f-d4ce-45f6-bb62-32244fd9a99a",
+                    "leftValue": "={{ $json.message.photo[0] }}",
+                    "operator": {
+                      "operation": "exists",
+                      "singleValue": true,
+                      "type": "object"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "image",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "2f1495ad-2eb2-4729-af5a-23c949adce8c",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "dish_yes_"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "dish_yes",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c9ead52e-1b81-453a-bd9b-1d18dcbd82bb",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "dish_no_"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "dish_no",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "646db5d3-3518-4edf-9374-cef371fa7ba9",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "alt_"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "alt",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "1bcf1e75-3e73-465b-8bbb-2665b845e7e9",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "operator": {
+                      "operation": "startsWith",
+                      "type": "string"
+                    },
+                    "rightValue": "weight_"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "weight",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "6166763a-38e9-494a-aea0-20bdc9626314",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "exists",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": "/"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "text_cmd",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -5456,
+        2000
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "0250f910-9b98-414e-a136-ee2bdec91ea9",
+      "name": "CREATE profile",
+      "parameters": {
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "telegram_id",
+              "fieldValue": "={{ $('Switch').item.json.message.from.id }}"
+            },
+            {
+              "fieldId": "first_name",
+              "fieldValue": "={{ $('Switch').item.json.message.from.first_name }}"
+            },
+            {
+              "fieldId": "username",
+              "fieldValue": "={{ $('Switch').item.json.message.from.username }}"
+            },
+            {
+              "fieldId": "locale",
+              "fieldValue": "={{ $('Switch').item.json.message.from.language_code }}"
+            },
+            {
+              "fieldId": "created_at",
+              "fieldValue": "={{ new Date().toISOString() }}"
+            }
+          ]
+        },
+        "tableId": "profiles"
+      },
+      "position": [
+        -4384,
+        128
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "bb20b552-beae-4c17-ac4f-a3dfdf37a5e1",
+      "name": "CREATE meals",
+      "parameters": {
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "chat_id",
+              "fieldValue": "={{ $('parseJSON').item.json.chat_id }}"
+            },
+            {
+              "fieldId": "dish",
+              "fieldValue": "={{ $json.message.content.dish }}"
+            },
+            {
+              "fieldId": "grams",
+              "fieldValue": "={{ $('parseJSON').item.json.grams }}"
+            },
+            {
+              "fieldId": "kcal",
+              "fieldValue": "={{ $json.message.content.kcal }}"
+            },
+            {
+              "fieldId": "prot",
+              "fieldValue": "={{ $json.message.content.prot }}"
+            },
+            {
+              "fieldId": "fat",
+              "fieldValue": "={{ $json.message.content.fat }}"
+            },
+            {
+              "fieldId": "carb",
+              "fieldValue": "={{ $json.message.content.carb }}"
+            },
+            {
+              "fieldId": "eaten_at",
+              "fieldValue": "={{ $('parseJSON').item.json.eaten_at }}"
+            }
+          ]
+        },
+        "tableId": "meals"
+      },
+      "position": [
+        -3376,
+        448
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "id": "4a86d2d9-a1a5-4ad6-93ea-1bf9054404ec",
+      "name": "IF 2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "11bc0d87-40a0-4a39-b576-9fbb5f7535e8",
+              "leftValue": "={{ $json.message.content }}",
+              "operator": {
+                "operation": "startsWith",
+                "type": "string"
+              },
+              "rightValue": "{"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -4224,
+        528
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "JWvkJ9QLZPwnWE5R",
+          "name": "Dietologo"
+        }
+      },
+      "id": "64ce88c1-ffa1-4a9b-a500-adb1f0ef3714",
+      "name": "start",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('Switch').item.json.message.from.id }}",
+        "text": "=*Привет, {{ $('Switch').item.json.message.from.first_name }}!*\n\nЯ помогу тебе отслеживать рацион, считать КБЖУ и подсказывать, как питаться лучше.\n\n🧾 *Как начать:*\n📸 Просто *отправь фото еды* — я распознаю блюдо и рассчитаю КБЖУ.  \n🧠 Каждое блюдо *сохраняется в твоём дневнике* — можно вернуться, пересмотреть и задать вопросы.  \n📬 *Каждый вечер* я присылаю краткий отчёт и даю рекомендации на завтра.\n\n📝 *Можно вводить вручную:*  \nПример: _/v омлет 2 яйца 09:00_\n\n⚖️ Если не знаешь вес — опиши на глаз, я прикину сам.\n\nГотов? Тогда начинаем — *просто пришли фото!*"
+      },
+      "position": [
+        -4176,
+        160
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "da4a8d3c-0d67-480c-a25d-4844309807d2"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "JWvkJ9QLZPwnWE5R",
+          "name": "Dietologo"
+        }
+      },
+      "id": "9d99f19f-a1bc-4507-a5b1-fd3818271cb0",
+      "name": "ERROR",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('extract').item.json.chat_id }}",
+        "text": "={{ $json.message.content }}"
+      },
+      "position": [
+        -4000,
+        624
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "da4a8d3c-0d67-480c-a25d-4844309807d2"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "JWvkJ9QLZPwnWE5R",
+          "name": "Dietologo"
+        }
+      },
+      "id": "136f56b5-4eab-44a3-9d02-2dfefb29e98c",
+      "name": "OK",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $('parseJSON').item.json.chat_id }}",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "additionalFields": {
+                      "callback_data": "=cancel_{{ $json.id }}"
+                    },
+                    "text": "🚫 не сохранять"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "replyMarkup": "inlineKeyboard",
+        "text": "=*{{ $json.dish }} – {{ $json.grams }} г*\n\n*Калорий:* {{ $json.kcal }}\n*Б:* {{ $json.prot }} *Ж:* {{ $json.fat }} *У:* {{ $json.carb }}\n\n✔️ _сохранил в память_"
+      },
+      "position": [
+        -3200,
+        448
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "da4a8d3c-0d67-480c-a25d-4844309807d2"
+    },
+    {
+      "id": "9f637f82-8da0-4f4a-9197-2e8a5c9ac591",
+      "name": "Sticky Note2",
+      "parameters": {
+        "color": 5,
+        "content": "## [включать только для настройки]\n\n",
+        "height": 432,
+        "width": 598
+      },
+      "position": [
+        -5760,
+        1920
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "7731bf7d-21da-4705-bcfc-46e246ad3c17",
+      "name": "GET profile",
+      "parameters": {
+        "filters": {
+          "conditions": [
+            {
+              "condition": "eq",
+              "keyName": "telegram_id",
+              "keyValue": "={{ $json.message.from.id }}"
+            }
+          ]
+        },
+        "operation": "getAll",
+        "returnAll": true,
+        "tableId": "profiles"
+      },
+      "position": [
+        -4768,
+        144
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "id": "b6d42ccc-9a77-4f7c-812e-d9e05cede7b1",
+      "name": "IF NO",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "dbd664b4-20b3-4d51-8000-20892b93782d",
+              "leftValue": "={{ Object.keys($items(\"GET profile\")[0].json || {}).length }}",
+              "operator": {
+                "operation": "equals",
+                "type": "number"
+              },
+              "rightValue": 0
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        -4576,
+        144
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "0986e659-1863-4841-86e1-ce09fda15fb1",
+      "name": "OpenAI",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -4000,
+        1088
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "JWvkJ9QLZPwnWE5R",
+          "name": "Dietologo"
+        }
+      },
+      "id": "fa895250-0aae-4ed5-9033-4858091986ca",
+      "name": "Telegram",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "MarkdownV2"
+        },
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ $json.content }}"
+      },
+      "position": [
+        -3344,
+        944
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "ce8565f7-fca8-4e4e-b9ba-109e833298a3"
+    },
+    {
+      "id": "856b6c3f-3b61-4ebc-a86e-48b5d08ceb79",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "336d64ed-3993-434e-9bbd-abb9f3c777f3",
+              "leftValue": "={{ $json.summary_md }}",
+              "operator": {
+                "operation": "exists",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -4448,
+        1120
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "9o52VSQAvN1ZZjpi",
+          "name": "Header Auth account"
+        }
+      },
+      "executeOnce": false,
+      "id": "66246cce-4b33-416d-9ed6-41701379ee9c",
+      "name": "SUPA digest",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "_chat_id",
+              "value": "={{ $json.chat_id }}"
+            }
+          ]
+        },
+        "genericAuthType": "httpHeaderAuth",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2enlsaW1pb3VxYXV2dmdzeGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYxMTc1NjcsImV4cCI6MjA3MTY5MzU2N30.f6cD25K2pNZVTNbH4I4V490pj8AI37jgK9Gx8GeTm74"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "url": "https://rvzylimiouqauvvgsxer.supabase.co/rest/v1/rpc/get_current_summary"
+      },
+      "position": [
+        -4624,
+        1120
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "91f458e5-ca9a-4fa3-bdc5-8c8fbcf41646",
+      "name": "NO DIGEST",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "64fb8515-cda5-462c-afcf-2c9865a3631d",
+              "name": "hasDigest",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        -4208,
+        1104
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "baac3012-c59f-4799-ae24-b1ca8973a70f",
+      "name": "YES DIGEST",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "08b17997-5514-4157-9518-365744b2a556",
+              "name": "hasDigest",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        -4208,
+        944
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "fd4223db-a088-407e-b691-685b49805b13",
+      "name": "get_week_meals",
+      "parameters": {
+        "filters": {
+          "conditions": [
+            {
+              "condition": "eq",
+              "keyName": "chat_id",
+              "keyValue": "={{ $('Switch').item.json.message.from.id }}"
+            },
+            {
+              "condition": "gte",
+              "keyName": "eaten_at",
+              "keyValue": "={{ (() => {\n     // «сейчас» в Москве\n     const now = new Date(new Date()\n                 .toLocaleString('en-US', { timeZone: 'Europe/Moscow' }));\n\n     // минус 7 суток\n     now.setDate(now.getDate() - 7);\n\n     // ставим начало дня и возвращаем ISO +03:00\n     now.setHours(0,0,0,0);\n     return now.toISOString().replace('Z','+03:00');\n})() }}\n"
+            },
+            {
+              "condition": "lte",
+              "keyName": "eaten_at",
+              "keyValue": "={{ (() => {\n     const now = new Date(new Date()\n                 .toLocaleString('en-US', { timeZone: 'Europe/Moscow' }));\n     return now.toISOString().replace('Z','+03:00');\n})() }}\n"
+            },
+            {
+              "condition": "is",
+              "keyName": "deleted",
+              "keyValue": "false"
+            }
+          ]
+        },
+        "matchType": "allFilters",
+        "operation": "getAll",
+        "tableId": "meals"
+      },
+      "position": [
+        -3840,
+        1088
+      ],
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "75fa281c-ce97-4f77-baa2-10a755d09d9c",
+      "name": "Sticky Note3",
+      "parameters": {
+        "content": "## [основной триггер]\n\n",
+        "height": 272,
+        "width": 298
+      },
+      "position": [
+        -5504,
+        944
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "18955715-50a3-4a80-a275-c5857284299b",
+      "name": "Escape",
+      "parameters": {
+        "jsCode": "const escapeMdV2 = s =>\n  s.replace(/[_*[\\]()~`>#+\\-=|{}.!]/g, '\\\\$&');\n\nif (item.json.output) {\n  item.json.output = escapeMdV2(item.json.output);\n}\nreturn item;\n",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -3680,
+        944
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6b5fb3fd-5c16-4d7f-a481-352ca0f015cc",
+      "name": "User Log",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "442870a4-1075-4f7c-bdce-f6011d4c93da",
+              "name": "chat_id",
+              "type": "string",
+              "value": "={{ $json.message.chat.id }}"
+            },
+            {
+              "id": "d38f3a89-b513-46c0-b960-ba64a754bd58",
+              "name": "session_id",
+              "type": "string",
+              "value": "={{ 'user_' + $json.message.chat.id }}"
+            },
+            {
+              "id": "8d169f91-297e-494d-8260-224ef6f88cba",
+              "name": "role",
+              "type": "string",
+              "value": "user"
+            },
+            {
+              "id": "011e9af4-a978-4985-bf28-dbafcb4fa2e9",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.message.text }}"
+            },
+            {
+              "id": "3ad625a1-0bdd-48cf-901b-d1306d890628",
+              "name": "username",
+              "type": "string",
+              "value": "={{ $json.message.from.username }}"
+            },
+            {
+              "id": "c4c0ac19-2cdd-451b-b0f0-7829e06bd7b6",
+              "name": "first_name",
+              "type": "string",
+              "value": "={{ $json.message.from.first_name }}"
+            },
+            {
+              "id": "c270f762-1398-45d2-a58c-883b5f512bd3",
+              "name": "metadata",
+              "type": "string",
+              "value": "={{ JSON.stringify($json) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -4800,
+        1024
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "e11b4dd2-c8b0-4583-9221-3833dd2b4d38",
+      "name": "Save User Msg",
+      "parameters": {
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "chat_id",
+              "fieldValue": "={{ $json.chat_id }}"
+            },
+            {
+              "fieldId": "session_id",
+              "fieldValue": "={{ $json.session_id }}"
+            },
+            {
+              "fieldId": "role",
+              "fieldValue": "={{ $json.role }}"
+            },
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $json.content }}"
+            },
+            {
+              "fieldId": "username",
+              "fieldValue": "={{ $json.username }}"
+            },
+            {
+              "fieldId": "first_name",
+              "fieldValue": "={{ $json.first_name }}"
+            },
+            {
+              "fieldId": "metadata",
+              "fieldValue": "={{ $json.metadata }}"
+            }
+          ]
+        },
+        "tableId": "chat_logs"
+      },
+      "position": [
+        -4624,
+        944
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "B3KQMj7sO9dIDJE1",
+          "name": "Supabase account"
+        }
+      },
+      "id": "1d5ab140-fb98-48cd-82c4-83181f744fef",
+      "name": "Save Bot Msg",
+      "parameters": {
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "chat_id",
+              "fieldValue": "={{ $('Bot Log').item.json.chat_id }}"
+            },
+            {
+              "fieldId": "session_id",
+              "fieldValue": "={{ $('Bot Log').item.json.session_id }}"
+            },
+            {
+              "fieldId": "role",
+              "fieldValue": "={{ $('Bot Log').item.json.role }}"
+            },
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $('Bot Log').item.json.content }}"
+            },
+            {
+              "fieldId": "metadata",
+              "fieldValue": "={{ $('Bot Log').item.json.metadata }}"
+            }
+          ]
+        },
+        "tableId": "chat_logs"
+      },
+      "position": [
+        -3184,
+        944
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "id": "bbfa37de-7e1c-4aa0-9a69-c4e7e4553469",
+      "name": "Bot Log",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "03bc3c9d-7d1b-4f70-999d-115edccd98dd",
+              "name": "chat_id",
+              "type": "string",
+              "value": "={{ $('User Log').item.json.chat_id }}"
+            },
+            {
+              "id": "9093739a-9c1b-4b54-8487-9a79272b6892",
+              "name": "session_id",
+              "type": "string",
+              "value": "={{ $('User Log').item.json.session_id }}"
+            },
+            {
+              "id": "4bc4cf2d-63c7-49f3-bae8-7d08160305ca",
+              "name": "role",
+              "type": "string",
+              "value": "assistant"
+            },
+            {
+              "id": "494392e4-828d-4fd6-a70b-af2c9e050558",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "id": "581ad272-fd98-4fa1-8bb1-b985f816079d",
+              "name": "metadata",
+              "type": "string",
+              "value": "={{ JSON.stringify($json) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -3504,
+        944
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a0b6df7d-a13f-49ce-a7d7-bc22915f9086",
+      "name": "nutrion 2",
+      "parameters": {
+        "options": {
+          "systemMessage": "=Ты дипломированный нутрициолог. Твоя задача отвечать на вопросы пользователя и консультировать его. Веди себя как профессионал, но старайся общаться достаточно естественно, так как беседа ведется в мессенджере.\n\nНа вход получаешь:\n1. Отчет по питанию для клиента за прошедший день: {{ $json.summary_md }}\n2. kcal за день: {{ $json.kcal }}\n3. fat: {{ $json.fat }}\n4. carb: {{ $json.carb }}\n5. prot: {{ $json.prot }}\n6. hasDigest: {{ $json.hasDigest }}\n\n• Если отчет за день есть, а hasDigest = true → используй этот отчет в качестве основного источника данных при осставлении рекомендаций для человека и ответа на его вопросы. \n• Если инфы нет, а hasDigest = false → значит просто не учитывай эту информацию (не обязательно уведомлять человека) и общайся, стараясь быть ценным для собеседника\n• У тебя есть доступ к инструменту \"get_today_meals\" который дает доступ к полному рациону питания человека за последние две недели, используй его при необходимости.\n\n- Формат сообщения должен быть Markdown для телеграм, для жирного шрифта используй одну * в начале и в конце, а для курсива _ вместо ** (ПРИМЕР: *жирный*, _курсив_).\n- Разрешается использовать тематические эмоджи где уместно.\n- Используй жирный *только для целых слов или фраз*, курсив — тоже для целых слов.\n- Не вставляй * внутри markdown-заголовков и списков.\n"
+        },
+        "promptType": "define",
+        "text": "={{ $('Switch').item.json.message.text }}"
+      },
+      "position": [
+        -4000,
+        944
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-25T11:43:02.465Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-25T11:43:02.465Z",
+      "workflowId": "cySyvf3eK8gJSteD"
+    }
+  ],
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-08-25T09:57:58.008Z",
+      "id": "XR4AgC1bCFyERpg2",
+      "name": "Dietolog",
+      "updatedAt": "2025-08-25T11:21:41.849Z"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-25T11:45:31.000Z",
+  "versionId": "48e9fc93-26ab-42c5-bfed-c488e9eba091"
+}
