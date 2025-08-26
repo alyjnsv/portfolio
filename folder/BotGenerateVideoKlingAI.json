@@ -125,6 +125,17 @@
         ]
       ]
     },
+    "If3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Image Download": {
       "main": [
         []
@@ -241,6 +252,11 @@
           {
             "index": 0,
             "node": "If",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "If3",
             "type": "main"
           }
         ]
@@ -396,7 +412,7 @@
         "url": "https://api.klingai.com/v1/videos/image2video"
       },
       "position": [
-        1152,
+        1552,
         0
       ],
       "retryOnFail": true,
@@ -411,7 +427,7 @@
         "unit": "minutes"
       },
       "position": [
-        1488,
+        1888,
         0
       ],
       "type": "n8n-nodes-base.wait",
@@ -445,7 +461,7 @@
         "url": "=https://api.klingai.com/v1/videos/image2video/{{ $('Video 1').item.json.request_id }}"
       },
       "position": [
-        1648,
+        2048,
         0
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -459,7 +475,7 @@
         "url": "={{ $json.body.data.task_result.videos[0].url }}"
       },
       "position": [
-        2480,
+        2880,
         0
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -548,7 +564,7 @@
         "operation": "sendVideo"
       },
       "position": [
-        2656,
+        3056,
         0
       ],
       "type": "n8n-nodes-base.telegram",
@@ -578,7 +594,7 @@
         "options": {}
       },
       "position": [
-        336,
+        736,
         0
       ],
       "type": "n8n-nodes-base.set",
@@ -599,7 +615,7 @@
         "resource": "file"
       },
       "position": [
-        736,
+        1136,
         0
       ],
       "type": "n8n-nodes-base.telegram",
@@ -614,7 +630,7 @@
         "options": {}
       },
       "position": [
-        944,
+        1344,
         0
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -705,6 +721,26 @@
                 "type": "string"
               },
               "rightValue": "Det_rin"
+            },
+            {
+              "id": "79e354e5-7d21-4e88-8213-43cdc430c1e0",
+              "leftValue": "",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": ""
+            },
+            {
+              "id": "32cada54-6c41-45d9-959d-f717e2974fee",
+              "leftValue": "",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": ""
             }
           ],
           "options": {
@@ -740,7 +776,7 @@
         "text": "Ожидайте 10 минут после этого сообщения"
       },
       "position": [
-        1328,
+        1728,
         0
       ],
       "type": "n8n-nodes-base.telegram",
@@ -782,7 +818,7 @@
         "url": "https://api.klingai.com/v1/videos/text2video\t"
       },
       "position": [
-        960,
+        1360,
         176
       ],
       "retryOnFail": true,
@@ -797,7 +833,7 @@
         "unit": "minutes"
       },
       "position": [
-        1296,
+        1696,
         176
       ],
       "type": "n8n-nodes-base.wait",
@@ -831,7 +867,7 @@
         "url": "=https://api.klingai.com/v1/videos/text2video/{{ $('Video ').item.json.request_id }}"
       },
       "position": [
-        1456,
+        1856,
         176
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -845,7 +881,7 @@
         "url": "={{ $json.body.data.task_result.videos[0].url }}"
       },
       "position": [
-        1792,
+        2192,
         176
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -869,7 +905,7 @@
         "operation": "sendVideo"
       },
       "position": [
-        1968,
+        2368,
         176
       ],
       "type": "n8n-nodes-base.telegram",
@@ -893,7 +929,7 @@
         "text": "Ожидайте 10 минут после этого сообщения"
       },
       "position": [
-        1136,
+        1536,
         176
       ],
       "type": "n8n-nodes-base.telegram",
@@ -961,7 +997,7 @@
         }
       },
       "position": [
-        512,
+        912,
         0
       ],
       "type": "n8n-nodes-base.switch",
@@ -1004,7 +1040,7 @@
         "options": {}
       },
       "position": [
-        2240,
+        2640,
         0
       ],
       "type": "n8n-nodes-base.if",
@@ -1047,7 +1083,7 @@
         "options": {}
       },
       "position": [
-        1616,
+        2016,
         176
       ],
       "type": "n8n-nodes-base.if",
@@ -1162,7 +1198,7 @@
         }
       },
       "position": [
-        1856,
+        2256,
         -32
       ],
       "type": "n8n-nodes-base.switch",
@@ -1183,7 +1219,7 @@
         "text": "В процессе"
       },
       "position": [
-        2080,
+        2480,
         80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1205,7 +1241,7 @@
         "text": "Нарушение правил"
       },
       "position": [
-        2112,
+        2512,
         -160
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1227,7 +1263,7 @@
         "text": "Слишком маленькое разрешение изображения"
       },
       "position": [
-        1936,
+        2336,
         -224
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1249,12 +1285,85 @@
         "text": "Что-то пошло не так.\n1. Много запросов в Kling AI\n2. Ошибка со стороны Kling AI"
       },
       "position": [
-        1248,
+        1648,
         -144
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "f00c9480-f39b-4e7c-99b7-8051866c6f7e"
+    },
+    {
+      "id": "c77e6185-ece4-4579-a381-661a29afaa0d",
+      "name": "If3",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "cc8aca81-0d7f-4c46-9889-ce1ca72ae4d4",
+              "leftValue": "={{ $json.message.chat.username }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "lino_1452"
+            },
+            {
+              "id": "32cada54-6c41-45d9-959d-f717e2974fee",
+              "leftValue": "={{ $json.message.chat.username }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "racatoo"
+            },
+            {
+              "id": "5f881f46-ab61-449b-8671-bafd4e724f56",
+              "leftValue": "={{ $json.message.chat.username }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Tails93"
+            },
+            {
+              "id": "0efff2ea-c07c-49f4-93c7-4007531b8191",
+              "leftValue": "={{ $json.message.chat.username }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Net0rt"
+            },
+            {
+              "id": "9801180b-de54-4eb7-b427-ee145029d891",
+              "leftValue": "={{ $json.message.chat.username }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "kisundria"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        128,
+        144
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
     }
   ],
   "pinData": {
@@ -1351,6 +1460,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-22T12:04:08.000Z",
-  "versionId": "98b4ba64-569d-4b1c-8c5b-9914f7abd544"
+  "updatedAt": "2025-08-26T13:45:47.000Z",
+  "versionId": "71ef449d-56ed-4aa9-bfad-368608762df6"
 }
