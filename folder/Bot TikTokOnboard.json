@@ -1,0 +1,287 @@
+{
+  "active": false,
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-26T12:09:39.602Z",
+  "id": "BJASKiHNtH3d06bi",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Bot TikTokOnboard",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "IMap2DE3qelpEtF6",
+          "name": "TikTokOnboardBot"
+        }
+      },
+      "id": "15d4b726-7111-400f-858d-7cef2620e7e4",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "c9db0941-c637-4097-864a-9739f51a2db9"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "IMap2DE3qelpEtF6",
+          "name": "TikTokOnboardBot"
+        }
+      },
+      "id": "76b78b48-68a7-49d5-9866-82b28d51f5f7",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "3d9e880f-4adc-4e2e-a1e6-fa1c1d64fd2f"
+    },
+    {
+      "id": "f62aecfc-52f0-45c1-b2fe-5e063efb5619",
+      "name": "Code",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nimage_path = f'https://api.telegram.org/file/bot8239561434:AAH62eZ7e8DNeBoDx7WmghcpqL_IX6Mp5Us/{_input.item.json.result.file_path}'\nreturn {'file_path': image_path}"
+      },
+      "position": [
+        416,
+        0
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "2bf787f2-cce3-4d3c-9408-e8ce1cdafb01",
+      "name": "HTTP Request",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 5d5d8aff2d0d49c29e76955295185dd66ce445dea632809d1abbb569df90dbeab9985eff66803dccc012b6c485e0e47f"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"template_id\": \"5c6c7be2-66a0-4ac3-ab87-f7fc6c3b1922\",\n  \"modifications\": {\n    \"Video-DHM.source\": {{ JSON.stringify($json.file_path) }}\n  }\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.creatomate.com/v2/renders"
+      },
+      "position": [
+        624,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "5ade02b3-82ab-48bf-9dbb-b3b1457f1f94",
+      "name": "HTTP Request1",
+      "parameters": {
+        "options": {},
+        "url": "https://f002.backblazeb2.com/file/creatomate-c8xg3hsxdu/d57c42c4-b965-49d2-847f-257fa62cd42c.mp4"
+      },
+      "position": [
+        1312,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "3ea4a6f0-6b2c-42d0-8490-cc78035a7865",
+      "name": "HTTP Request2",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 5d5d8aff2d0d49c29e76955295185dd66ce445dea632809d1abbb569df90dbeab9985eff66803dccc012b6c485e0e47f"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://api.creatomate.com/v1/renders/{{ $json.id }}"
+      },
+      "position": [
+        832,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ac210630-51ef-4977-bb37-5017d77eda18",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "d98f252f-c035-4605-a1df-81c4e871592a",
+              "leftValue": "={{ $json.status }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "succeeded"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1040,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "89b6ed00-85b2-4916-9d60-ff3f75835bb0",
+      "name": "Code1",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nimport time \ntime.sleep(1)\nreturn _input.all()"
+      },
+      "position": [
+        960,
+        224
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-26T12:09:39.606Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-26T12:09:39.606Z",
+      "workflowId": "BJASKiHNtH3d06bi"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-26T13:58:08.000Z",
+  "versionId": "010a06b3-924b-4f8a-907c-8e59fe67d32e"
+}
