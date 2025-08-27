@@ -1,0 +1,116 @@
+{
+  "active": false,
+  "connections": {
+    "Create Time and Joke": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append Joke and Time to Google Sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Timer Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Time and Joke",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-27T09:21:27.477Z",
+  "id": "ehJb0je5eDf5I8iL",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 12",
+  "nodes": [
+    {
+      "id": "2db185a4-d360-4a3b-9314-5691307964a9",
+      "name": "Timer Trigger",
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "unit": "minutes",
+              "value": 5
+            }
+          ]
+        }
+      },
+      "position": [
+        -176,
+        0
+      ],
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "dc8747e6-c502-4093-93fb-3db257997cba",
+      "name": "Append Joke and Time to Google Sheet",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "position": [
+        400,
+        0
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4
+    },
+    {
+      "id": "3b75087f-0963-4527-ae0a-9b0290c843bc",
+      "name": "Create Time and Joke",
+      "parameters": {
+        "functionCode": "return [{ json: { time: new Date().toISOString(), joke: \"A random joke (placeholder)\" }}];"
+      },
+      "position": [
+        48,
+        0
+      ],
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-27T09:21:27.481Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-27T09:21:27.481Z",
+      "workflowId": "ehJb0je5eDf5I8iL"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-27T09:26:09.000Z",
+  "versionId": "2f75d013-04b6-4ac1-8450-cabce447b085"
+}
