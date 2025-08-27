@@ -1,0 +1,492 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        []
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-27T08:48:18.339Z",
+  "id": "8n8F2YqOSfdAAdcY",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "AutoCreateWorkflow",
+  "nodes": [
+    {
+      "id": "349d5a4d-fd4f-44a2-8af8-cd7649174ba7",
+      "name": "AI Agent",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are an expert in workflow automation with deep knowledge of n8n JSON workflow structure.\nI will provide you with a BPMN XML file that describes a process.\nYour task is to:\nParse the BPMN XML and extract its process flow, including tasks, events, and gateways.\nConvert the process into a valid n8n workflow JSON.\nEach BPMN task should be mapped to a corresponding n8n node.\nSequence flows should be mapped into connections between nodes.\nEnsure the resulting JSON strictly follows the n8n workflow schema (with nodes, connections, and required fields like id, name, type, parameters, position).\nIf the BPMN contains elements that do not directly map to n8n nodes, choose the closest equivalent and explain your choice.\nValidate the JSON so that it can be directly imported into n8n without errors.\nAlways return the final result only as a JSON workflow, without extra explanations, unless clarification is needed.\nIf something is missing or ambiguous in the BPMN XML, ask clarifying questions before generating the final JSON and send a separate flag NEED_MORE_INFORMATION."
+        },
+        "promptType": "define",
+        "text": "=Convert this xml file in bpmn format to a valid json file to create a workflow in n8n:\n{{ $('Telegram Trigger1').item.json.message.text }}\n\nPlease speak Russian.\n{{ $json.extra_info }}"
+      },
+      "position": [
+        576,
+        -720
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "5b804e96-4ec8-4cef-a99a-cb1686f297ed",
+      "name": "Simple Memory",
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=123qwe"
+      },
+      "position": [
+        656,
+        -528
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "44fa3326-9eca-4181-b8f5-63937749f53c",
+      "name": "Telegram Trigger1",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -160,
+        -720
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "9ae65633-0436-45ee-920d-3b598dfea125"
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "86bc54bf-d093-4dc3-ae5a-57694cfadfe0",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "text",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        544,
+        -528
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "e4493822-c9d9-4f63-b5ef-681dc88b52a9",
+      "name": "Send message and wait for response",
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "message": "={{ $json.output }}",
+        "operation": "sendAndWait",
+        "options": {},
+        "responseType": "freeText"
+      },
+      "position": [
+        1088,
+        -560
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "feddf02b-190e-4b98-8e58-5270d0af3de4"
+    },
+    {
+      "id": "6c6ffe5f-0dc1-45d9-a02a-90059da21faa",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1a6fa430-8307-44d3-8541-f07db9d63ad4",
+              "leftValue": "={{ $json.output }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "NEED_MORE_INFORMATION"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        912,
+        -720
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "disabled": true,
+      "id": "bde464c2-d690-4de0-a2f0-4dcbfab745ef",
+      "name": "Send message and wait for response1",
+      "parameters": {
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double",
+            "approveLabel": "✅ ВЕРНО",
+            "disapproveLabel": "❌ НЕВЕРНО"
+          }
+        },
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "message": "={{ $json.output }}",
+        "operation": "sendAndWait",
+        "options": {}
+      },
+      "position": [
+        992,
+        -1056
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8fc4ba83-05da-417b-b609-33fb2d46a0f6"
+    },
+    {
+      "disabled": true,
+      "id": "fcc7b6fc-1a4a-4008-b7e4-5809833e9bcf",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "527d7045-5edd-447f-9110-f0863b9d4ba3",
+              "leftValue": "={{ JSON.stringify($json.data.approved) }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "true"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1232,
+        -1040
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "db60d142-9444-4d0c-8614-be7d6cc9e88d",
+      "name": "AI Agent1",
+      "parameters": {
+        "options": {
+          "systemMessage": "You are an expert in workflow automation with deep knowledge of n8n JSON workflow structure.\nI will provide you with a BPMN XML file that describes a process.\nYour task is to:\nParse the BPMN XML and extract its process flow, including tasks, events, and gateways.\nConvert the process into a valid n8n workflow JSON.\nEach BPMN task should be mapped to a corresponding n8n node.\nSequence flows should be mapped into connections between nodes.\nEnsure the resulting JSON strictly follows the n8n workflow schema (with nodes, connections, and required fields like id, name, type, parameters, position).\nIf the BPMN contains elements that do not directly map to n8n nodes, choose the closest equivalent and explain your choice.\nValidate the JSON so that it can be directly imported into n8n without errors.\nAlways return the final result only as a JSON workflow, without extra explanations, unless clarification is needed.\nIf something is missing or ambiguous in the BPMN XML, ask clarifying questions before generating the final JSON."
+        },
+        "promptType": "define",
+        "text": "={{ $json.data.text }}{{ $('AI Agent').item.json.output }}"
+      },
+      "position": [
+        1664,
+        -752
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "599ec25c-a9bf-40c6-a599-1dfb0508987f",
+      "name": "OpenRouter Chat Model1",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "text",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        1600,
+        -560
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "aed7d201-93e9-46fd-8f69-cb509bdd847e",
+      "name": "Simple Memory1",
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=123qwe"
+      },
+      "position": [
+        1808,
+        -544
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "30c4886a-a4cd-4f58-a341-7ff2dcb08d24",
+      "name": "Send message and wait for response2",
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "message": "={{ $json.output }}",
+        "operation": "sendAndWait",
+        "options": {},
+        "responseType": "freeText"
+      },
+      "position": [
+        1280,
+        -768
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "feddf02b-190e-4b98-8e58-5270d0af3de4"
+    },
+    {
+      "disabled": true,
+      "id": "cd99333a-a154-479f-aa0a-ea71053262d0",
+      "name": "Code",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "prompt = '''Check again if you have correctly converted xml to json format to create workflow in n8n. There is some inaccuracy here'''\ntry:\n  prompt = prompt + _input.item.json.data.text\nexcept: ()\nreturn {'prompt': prompt}"
+      },
+      "position": [
+        1520,
+        -992
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "4acfd5c8-7a40-44b5-9d41-4ffa7b052589",
+      "name": "Code1",
+      "parameters": {
+        "language": "python",
+        "pythonCode": "try:\n  extra_info = _input.item.json.data.text\nexcept:\n  extra_info = ''\nreturn {'extra_info': extra_info}"
+      },
+      "position": [
+        304,
+        -720
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-27T08:48:18.343Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-27T08:48:18.343Z",
+      "workflowId": "8n8F2YqOSfdAAdcY"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-27T15:00:25.000Z",
+  "versionId": "a3ed9876-92d6-4313-b28c-6331705f8d1c"
+}
