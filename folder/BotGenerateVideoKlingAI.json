@@ -587,7 +587,7 @@
               "id": "0f9d2504-a188-481f-b61f-7940ff4eecff",
               "name": "Photo",
               "type": "string",
-              "value": "={{ $('Telegram Trigger').item.json.message.photo[3].file_id }}"
+              "value": "={{ $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}"
             }
           ]
         },
@@ -949,7 +949,7 @@
                 "conditions": [
                   {
                     "id": "10e68217-6704-4240-8a52-89a5da4d9a0f",
-                    "leftValue": "={{ $('Telegram Trigger').item.json.message.photo[3].file_id || $('Telegram Trigger').item.json.message.photo[2].file_id || $('Telegram Trigger').item.json.message.photo[4].file_id || $('Telegram Trigger').item.json.message.photo[1].file_id }}",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}",
                     "operator": {
                       "operation": "notEmpty",
                       "singleValue": true,
@@ -1371,76 +1371,50 @@
       {
         "json": {
           "message": {
-            "caption": "A futuristic cyberpunk female character with long neon gradient hair (pink, purple, yellow) in a glowing high-tech suit with cyan accents, headset and futuristic goggles. She is standing upright, body facing forward but head slightly turned to the right, calmly looking to the right side. Subtle idle animation: gentle breathing, slight natural movement of hair, minimal motion to keep realism. Semi-realistic 3D render, clean and vibrant, cinematic lighting, neutral background.",
+            "caption": "Epic cinematic animation of a futuristic armored warrior with glowing neon red accents and large bull-like horns. The character stands proudly, serious and victorious, exuding authority and dominance. He looks either directly at the viewer or slightly into the distance, with his head held high and posture confident. Optionally, his arms are placed behind his back in a commanding stance. The atmosphere conveys power, victory, and intimidation. Smooth, slow, dramatic camera movement, emphasizing his heroic silhouette and glowing armor.",
             "chat": {
-              "first_name": "✧フォクシク✧",
-              "id": 804687104,
+              "first_name": "Daria",
+              "id": 902232452,
+              "last_name": "Draav",
               "type": "private",
-              "username": "Ne_Foxik"
+              "username": "kisundria"
             },
-            "date": 1755863534,
-            "forward_date": 1755855016,
-            "forward_from": {
-              "first_name": "✧フォクシク✧",
-              "id": 804687104,
-              "is_bot": false,
-              "is_premium": true,
-              "language_code": "ru",
-              "username": "Ne_Foxik"
-            },
-            "forward_origin": {
-              "date": 1755855016,
-              "sender_user": {
-                "first_name": "✧フォクシク✧",
-                "id": 804687104,
-                "is_bot": false,
-                "is_premium": true,
-                "language_code": "ru",
-                "username": "Ne_Foxik"
-              },
-              "type": "user"
-            },
+            "date": 1756302002,
             "from": {
-              "first_name": "✧フォクシク✧",
-              "id": 804687104,
+              "first_name": "Daria",
+              "id": 902232452,
               "is_bot": false,
               "is_premium": true,
               "language_code": "ru",
-              "username": "Ne_Foxik"
+              "last_name": "Draav",
+              "username": "kisundria"
             },
-            "message_id": 719,
+            "message_id": 1038,
             "photo": [
               {
-                "file_id": "AgACAgIAAxkBAAICrmioN-0gvmIAAb5U1p5ICfTH0xSO1QACrPIxGzZkQEln8uKANSZ3gwEAAwIAA3MAAzYE",
-                "file_size": 1863,
-                "file_unique_id": "AQADrPIxGzZkQEl4",
-                "height": 84,
-                "width": 90
+                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADcwADNgQ",
+                "file_size": 1984,
+                "file_unique_id": "AQADf_cxG6L-eUl4",
+                "height": 90,
+                "width": 85
               },
               {
-                "file_id": "AgACAgIAAxkBAAICrmioN-0gvmIAAb5U1p5ICfTH0xSO1QACrPIxGzZkQEln8uKANSZ3gwEAAwIAA20AAzYE",
-                "file_size": 22119,
-                "file_unique_id": "AQADrPIxGzZkQEly",
-                "height": 299,
-                "width": 320
+                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADbQADNgQ",
+                "file_size": 25870,
+                "file_unique_id": "AQADf_cxG6L-eUly",
+                "height": 320,
+                "width": 302
               },
               {
-                "file_id": "AgACAgIAAxkBAAICrmioN-0gvmIAAb5U1p5ICfTH0xSO1QACrPIxGzZkQEln8uKANSZ3gwEAAwIAA3gAAzYE",
-                "file_size": 75667,
-                "file_unique_id": "AQADrPIxGzZkQEl9",
-                "height": 748,
-                "width": 800
-              },
-              {
-                "file_id": "AgACAgIAAxkBAAICrmioN-0gvmIAAb5U1p5ICfTH0xSO1QACrPIxGzZkQEln8uKANSZ3gwEAAwIAA3kAAzYE",
-                "file_size": 127504,
-                "file_unique_id": "AQADrPIxGzZkQEl-",
-                "height": 1197,
-                "width": 1280
+                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADeAADNgQ",
+                "file_size": 48945,
+                "file_unique_id": "AQADf_cxG6L-eUl9",
+                "height": 484,
+                "width": 457
               }
             ]
           },
-          "update_id": 626016178
+          "update_id": 626016232
         }
       }
     ]
@@ -1460,6 +1434,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-26T13:45:47.000Z",
-  "versionId": "71ef449d-56ed-4aa9-bfad-368608762df6"
+  "updatedAt": "2025-08-27T14:35:06.000Z",
+  "versionId": "0da7beb9-38ce-4e0b-9f1f-c8e989f9b856"
 }
