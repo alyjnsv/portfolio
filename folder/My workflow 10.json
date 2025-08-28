@@ -1,12 +1,12 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "AI Agent": {
       "main": [
         [
           {
             "index": 0,
-            "node": "HTTP Request1",
+            "node": "Есть изображение?",
             "type": "main"
           }
         ]
@@ -18,6 +18,17 @@
           {
             "index": 0,
             "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generate an image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a photo message",
             "type": "main"
           }
         ]
@@ -64,7 +75,8 @@
             "node": "Append or update row in sheet",
             "type": "main"
           }
-        ]
+        ],
+        []
       ]
     },
     "OpenAI Chat Model": {
@@ -99,6 +111,24 @@
           }
         ]
       ]
+    },
+    "Есть изображение?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Generate an image",
+            "type": "main"
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-08-22T14:29:36.020Z",
@@ -113,7 +143,7 @@
       "id": "b66b51c6-3ad5-47d3-ab10-5e7e8b0e512b",
       "name": "RSS Feed Trigger",
       "parameters": {
-        "feedUrl": "https://www.igromania.ru/rss/news.rss",
+        "feedUrl": "https://rss.stopgame.ru/rss_news.xml",
         "pollTimes": {
           "item": [
             {
@@ -134,7 +164,7 @@
       "name": "AI Agent",
       "parameters": {
         "options": {
-          "systemMessage": "Ты бот который оформляет новостей текст по играм красиво в стиле телеграмм поста, чтобы все пользователям понравилось, без кода и до 1000 тысяч символов."
+          "systemMessage": "Ты бот который оформляет новостей текст по играм красиво в стиле телеграмм поста, чтобы все пользователям понравилось, без кода и строго до 950  символов. Если текст на на английском, переведи его на Русский."
         },
         "promptType": "define",
         "text": "=Возьми текст отсюда: {{ $('RSS Feed Trigger').item.json.content }} и найди продолжение отсюда: {{ $json.data }} после оформи текст, и в конце напиши что то прикольное, в виде шуточного комментария. Пиши только текст, без своих начанльных предложений."
@@ -222,12 +252,12 @@
           "conditions": [
             {
               "id": "b549ae0e-7845-44d3-a203-6b846ce8b078",
-              "leftValue": "={{ $json['Игра'] }}",
+              "leftValue": "={{ $json['Новость'] }}",
               "operator": {
-                "operation": "notEquals",
+                "operation": "equals",
                 "type": "string"
               },
-              "rightValue": "={{ $json['Игра'] }}"
+              "rightValue": "={{ $json['Новость'] }}"
             }
           ],
           "options": {
@@ -367,7 +397,7 @@
         "operation": "sendPhoto"
       },
       "position": [
-        2752,
+        3024,
         0
       ],
       "type": "n8n-nodes-base.telegram",
@@ -382,7 +412,7 @@
         "url": "={{ $('RSS Feed Trigger').item.json.enclosure.url }}"
       },
       "position": [
-        2592,
+        2864,
         0
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -469,11 +499,101 @@
         }
       },
       "position": [
-        2928,
+        3200,
         0
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
+    },
+    {
+      "id": "06445e30-0f8c-4def-8d82-16474c95e26f",
+      "name": "Есть изображение?",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0133e9c0-f3b0-41be-82f2-a90c6a35e309",
+                    "leftValue": "Да",
+                    "operator": {
+                      "operation": "notEquals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $('RSS Feed Trigger').item.json.enclosure.url }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Да",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "24f0ea27-80dd-4f48-af67-f7f948923ce5",
+                    "leftValue": "Нет",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $('RSS Feed Trigger').item.json.enclosure.url }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Нет",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        2672,
+        0
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "I7lLealOUwgNCRyL",
+          "name": "OpenAi account 2"
+        }
+      },
+      "id": "c2c0af0a-6de4-440d-af0d-4b68b9ccc830",
+      "name": "Generate an image",
+      "parameters": {
+        "model": "gpt-image-1",
+        "options": {
+          "quality": "high",
+          "size": "1536x1024"
+        },
+        "prompt": "=Сгенерируй изображения для новостного поста по играм, {{ $json.output }}",
+        "resource": "image"
+      },
+      "position": [
+        2864,
+        160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
     }
   ],
   "pinData": {},
@@ -493,11 +613,11 @@
   ],
   "staticData": {
     "node:RSS Feed Trigger": {
-      "lastItemDate": "2025-08-24T15:10:21.000Z"
+      "lastItemDate": "2025-08-28T20:44:22.000Z"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-25T03:53:32.000Z",
-  "versionId": "3600afea-e312-482d-8bc3-3efa4c9dcacf"
+  "updatedAt": "2025-08-28T12:28:40.000Z",
+  "versionId": "ff666b19-391b-40cc-87dd-0e1ad6236ec6"
 }
