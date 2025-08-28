@@ -12,34 +12,12 @@
         ]
       ]
     },
-    "Extract from File": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Video 1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get a file": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Extract from File",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get video ": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Send a video1",
+            "node": "HTTP Request4",
             "type": "main"
           }
         ]
@@ -51,6 +29,35 @@
           {
             "index": 0,
             "node": "Send a video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch2",
             "type": "main"
           }
         ]
@@ -73,6 +80,39 @@
           {
             "index": 0,
             "node": "Image Download",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
             "type": "main"
           }
         ]
@@ -107,24 +147,6 @@
         ]
       ]
     },
-    "If2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get video ",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "If3": {
       "main": [
         [
@@ -143,6 +165,11 @@
     },
     "Request DATA ID": {
       "main": [
+        []
+      ]
+    },
+    "Request DATA ID2": {
+      "main": [
         [
           {
             "index": 0,
@@ -152,12 +179,12 @@
         ]
       ]
     },
-    "Request DATA ID1": {
+    "Request DATA ID3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "If2",
+            "node": "Send a video1",
             "type": "main"
           }
         ]
@@ -174,23 +201,23 @@
         ]
       ]
     },
-    "Send a text message1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Send a text message2": {
       "main": [
         [
           {
             "index": 0,
             "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -208,7 +235,7 @@
         [
           {
             "index": 0,
-            "node": "Video ",
+            "node": "HTTP Request2",
             "type": "main"
           }
         ]
@@ -246,6 +273,56 @@
         ]
       ]
     },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Request DATA ID2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Request DATA ID2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Request DATA ID3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Request DATA ID3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Telegram Trigger": {
       "main": [
         [
@@ -262,33 +339,10 @@
         ]
       ]
     },
-    "Video ": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Send a text message1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Video 1": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Send a text message",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message5",
-            "type": "main"
-          }
-        ]
+        [],
+        []
       ]
     },
     "Wait": {
@@ -296,18 +350,18 @@
         [
           {
             "index": 0,
-            "node": "Request DATA ID",
+            "node": "HTTP Request1",
             "type": "main"
           }
         ]
       ]
     },
-    "Wait1": {
+    "Wait2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Request DATA ID1",
+            "node": "HTTP Request3",
             "type": "main"
           }
         ]
@@ -412,8 +466,8 @@
         "url": "https://api.klingai.com/v1/videos/image2video"
       },
       "position": [
-        1552,
-        0
+        1216,
+        -272
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -461,8 +515,8 @@
         "url": "=https://api.klingai.com/v1/videos/image2video/{{ $('Video 1').item.json.request_id }}"
       },
       "position": [
-        2048,
-        0
+        1616,
+        -288
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -472,10 +526,10 @@
       "name": "Get video 1",
       "parameters": {
         "options": {},
-        "url": "={{ $json.body.data.task_result.videos[0].url }}"
+        "url": "={{ $('Request DATA ID2').item.json.video.url }}"
       },
       "position": [
-        2880,
+        3088,
         0
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -564,7 +618,7 @@
         "operation": "sendVideo"
       },
       "position": [
-        3056,
+        3264,
         0
       ],
       "type": "n8n-nodes-base.telegram",
@@ -611,7 +665,7 @@
       "name": "Get a file",
       "parameters": {
         "additionalFields": {},
-        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[2].file_id || $('Telegram Trigger').item.json.message.photo[3].file_id || $('Telegram Trigger').item.json.message.photo[1].file_id }}",
+        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}",
         "resource": "file"
       },
       "position": [
@@ -621,20 +675,6 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "bf64c459-83bb-46c6-9f01-c88f676e4392"
-    },
-    {
-      "id": "afa6435e-74ba-47bb-a5f1-9ba77861ceb1",
-      "name": "Extract from File",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        1344,
-        0
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
     },
     {
       "id": "6a3dfb4c-0027-4fee-8cf8-efb9c43962a3",
@@ -784,110 +824,6 @@
       "webhookId": "27146a84-cc00-40b9-ab20-b97a5f3bc2b3"
     },
     {
-      "executeOnce": false,
-      "id": "ca2336f9-1f9b-4c01-b5f0-605f76d73448",
-      "maxTries": 5,
-      "name": "Video ",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "model_name",
-              "value": "kling-v2-1-master"
-            },
-            {
-              "name": "prompt",
-              "value": "={{ $('Telegram Trigger').item.json.message.text }}"
-            },
-            {
-              "name": "mode",
-              "value": "pro"
-            },
-            {
-              "name": "duration\t",
-              "value": "10"
-            }
-          ]
-        },
-        "jsonHeaders": "={\n  \"Authorization\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzMGEyNzllZjA2ZDc0ZGE5YjM5ZTA4ZThkYzNlM2VhZCIsImV4cCI6MTc2OTQ5NDk4MSwibmJmIjoxNzUzOTQyOTc2fQ.-vM9v7IGIPyjuufDdrABzprsRikEJkjflsEzS7Olhs8\",\n  \"Content-Type\": \"application/json\"\n}",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyHeaders": "json",
-        "url": "https://api.klingai.com/v1/videos/text2video\t"
-      },
-      "position": [
-        1360,
-        176
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "5aee548f-ae20-42a3-8119-81ca4b066484",
-      "name": "Wait1",
-      "parameters": {
-        "amount": 1,
-        "unit": "minutes"
-      },
-      "position": [
-        1696,
-        176
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fd7e75d0-62cb-4544-8b1e-1a49d6a8e4b5"
-    },
-    {
-      "id": "92f263a6-6e48-4cda-a494-f8e93de3a039",
-      "name": "Request DATA ID1",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "task_id",
-              "value": "={{ $json.data.task_id }}"
-            }
-          ]
-        },
-        "jsonHeaders": "={\n  \"Authorization\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzMGEyNzllZjA2ZDc0ZGE5YjM5ZTA4ZThkYzNlM2VhZCIsImV4cCI6MTc2OTQ5NDk4MSwibmJmIjoxNzUzOTQyOTc2fQ.-vM9v7IGIPyjuufDdrABzprsRikEJkjflsEzS7Olhs8\",\n  \"Content-Type\": \"application/json\"\n}",
-        "options": {
-          "response": {
-            "response": {
-              "fullResponse": true,
-              "neverError": true
-            }
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyHeaders": "json",
-        "url": "=https://api.klingai.com/v1/videos/text2video/{{ $('Video ').item.json.request_id }}"
-      },
-      "position": [
-        1856,
-        176
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "955a3408-e53d-4e11-a327-5b5b10113bee",
-      "name": "Get video ",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.body.data.task_result.videos[0].url }}"
-      },
-      "position": [
-        2192,
-        176
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "HHX2ZzBdjGmyWCkp",
@@ -906,35 +842,11 @@
       },
       "position": [
         2368,
-        176
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "7d107656-b318-447d-ae3e-dd9ddef83e54"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "HHX2ZzBdjGmyWCkp",
-          "name": "KlingAIBot"
-        }
-      },
-      "id": "407706c1-9784-4ca8-ae30-fb92dccba445",
-      "name": "Send a text message1",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Ожидайте 10 минут после этого сообщения"
-      },
-      "position": [
-        1536,
-        176
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "27146a84-cc00-40b9-ab20-b97a5f3bc2b3"
     },
     {
       "id": "1652b8a8-f1eb-48a0-be06-9874f77f7968",
@@ -1040,169 +952,11 @@
         "options": {}
       },
       "position": [
-        2640,
+        2848,
         0
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
-    },
-    {
-      "id": "3fd6878f-153a-4cbc-b16d-149d18845d84",
-      "name": "If2",
-      "parameters": {
-        "conditions": {
-          "combinator": "or",
-          "conditions": [
-            {
-              "id": "c73a8f5f-84b2-443d-85ef-d784096bf903",
-              "leftValue": "={{ $json.body.data.task_status }}",
-              "operator": {
-                "operation": "notEquals",
-                "type": "string"
-              },
-              "rightValue": "processing"
-            },
-            {
-              "id": "16ebdc21-a9ab-426e-ae68-fcd9b028d43f",
-              "leftValue": "={{ $json.body.data.task_status }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "succeed"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        2016,
-        176
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "id": "27820f23-311b-43c9-94b3-20726bda3bc6",
-      "name": "Switch1",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "2c3df0c9-4b2f-4043-aedc-e48832d905e7",
-                    "leftValue": "={{ $json.body.data.task_status_msg }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "=Image pixel is invalid"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Слишком маленькое изображение",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "bcff99d5-8da6-474a-8e77-ed221943d495",
-                    "leftValue": "={{ $json.body.data.task_status_msg }}",
-                    "operator": {
-                      "operation": "contains",
-                      "type": "string"
-                    },
-                    "rightValue": "risk"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Risk",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "5388f5f7-07a4-4fc3-8d7b-18bb7490ac5d",
-                    "leftValue": "={{ $json.body.data.task_status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "succeed"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Ready",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "c64c36d3-3b15-4ece-9706-c870a178d9bf",
-                    "leftValue": "={{ $json.body.data.task_status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "processing"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "processing",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        2256,
-        -32
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
     },
     {
       "credentials": {
@@ -1219,7 +973,7 @@
         "text": "В процессе"
       },
       "position": [
-        2480,
+        2688,
         80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1241,7 +995,7 @@
         "text": "Нарушение правил"
       },
       "position": [
-        2512,
+        2720,
         -160
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1263,7 +1017,7 @@
         "text": "Слишком маленькое разрешение изображения"
       },
       "position": [
-        2336,
+        2544,
         -224
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1364,6 +1118,520 @@
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
+    },
+    {
+      "id": "b5e99657-eb8c-45da-a6b0-dee831f441c7",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/kling-video/v2.1/master/image-to-video"
+      },
+      "position": [
+        1520,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "e5869f95-2e85-4192-92b6-d78ad11fb1d9",
+      "name": "Request DATA ID2",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/kling-video/requests/{{ $json.request_id }}"
+      },
+      "position": [
+        2320,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "b665e16d-0284-4b2d-b22d-8d6a92775460",
+      "name": "HTTP Request1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/kling-video/requests/{{ $('HTTP Request').item.json.request_id }}/status"
+      },
+      "position": [
+        2000,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "27820f23-311b-43c9-94b3-20726bda3bc6",
+      "name": "Switch1",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "2c3df0c9-4b2f-4043-aedc-e48832d905e7",
+                    "leftValue": "={{ $json.body.data.task_status_msg }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "=Image pixel is invalid"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Слишком маленькое изображение",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bcff99d5-8da6-474a-8e77-ed221943d495",
+                    "leftValue": "={{ $json.body.data.task_status_msg }}",
+                    "operator": {
+                      "operation": "contains",
+                      "type": "string"
+                    },
+                    "rightValue": "risk"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Risk",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5388f5f7-07a4-4fc3-8d7b-18bb7490ac5d",
+                    "leftValue": "={{ $json.video.url }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.video.url }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Ready",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c64c36d3-3b15-4ece-9706-c870a178d9bf",
+                    "leftValue": "={{ $json.body.data.task_status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "processing"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "processing",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        2464,
+        -32
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "6372721f-f09c-4b3e-9416-d48c2f85f672",
+      "name": "Switch2",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "COMPLETED"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Ready",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "IN_PROGRESS"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Retry",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
+                    "leftValue": "",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Error",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        2176,
+        -16
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "78ea3b97-f884-4a51-82e2-52ae4cc17621",
+      "name": "Wait2",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        1792,
+        192
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fd7e75d0-62cb-4544-8b1e-1a49d6a8e4b5"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HHX2ZzBdjGmyWCkp",
+          "name": "KlingAIBot"
+        }
+      },
+      "id": "de197b13-23e9-483c-a19d-45780ef8aa87",
+      "name": "Send a text message6",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Ожидайте 10 минут после этого сообщения"
+      },
+      "position": [
+        1632,
+        192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "27146a84-cc00-40b9-ab20-b97a5f3bc2b3"
+    },
+    {
+      "id": "01b48bbb-4c1e-4c58-902c-edfc5620868f",
+      "name": "HTTP Request2",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.data }}\"\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/kling-video/v2.1/master/text-to-video"
+      },
+      "position": [
+        1424,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "e410edeb-a82b-4d5c-bbd6-6f7eef6186d6",
+      "name": "Request DATA ID3",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/kling-video/requests/{{ $json.response_url }}"
+      },
+      "position": [
+        2224,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "3550055e-c708-4dd0-9386-a78fe2747c03",
+      "name": "HTTP Request3",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 499e98f3-0697-4cde-a34a-e0f24d6d24fc:0f0e13ae98e3cdec5db08b544b41a307"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/kling-video/requests/{{ $('HTTP Request2').item.json.request_id }}/status"
+      },
+      "position": [
+        1904,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "d632149f-b67f-48d1-9c57-ef4d3511e289",
+      "name": "Switch3",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "COMPLETED"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Ready",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "IN_PROGRESS"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Retry",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
+                    "leftValue": "",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Error",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        2080,
+        176
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "ae8be299-16f9-4157-b48d-4594989748eb",
+      "name": "HTTP Request4",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "inputDataFieldName": "data",
+              "name": "file",
+              "parameterType": "formBinaryData"
+            },
+            {
+              "name": "upload_preset",
+              "value": "ml_default"
+            }
+          ]
+        },
+        "contentType": "multipart-form-data",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
+      },
+      "position": [
+        1312,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
     }
   ],
   "pinData": {
@@ -1371,50 +1639,54 @@
       {
         "json": {
           "message": {
-            "caption": "Epic cinematic animation of a futuristic armored warrior with glowing neon red accents and large bull-like horns. The character stands proudly, serious and victorious, exuding authority and dominance. He looks either directly at the viewer or slightly into the distance, with his head held high and posture confident. Optionally, his arms are placed behind his back in a commanding stance. The atmosphere conveys power, victory, and intimidation. Smooth, slow, dramatic camera movement, emphasizing his heroic silhouette and glowing armor.",
+            "caption": "Futuristic cyberpunk warrior in advanced armored suit with glowing neon red and cyan lines, holding his helmet in one hand. He stands tall and proud, looking directly into the camera with a victorious and confident expression, as if celebrating a great victory. Heroic cinematic lighting, bold silhouette, casual 3D game style, high detail, no extra characters, clean background.\"",
             "chat": {
-              "first_name": "Daria",
-              "id": 902232452,
-              "last_name": "Draav",
+              "first_name": "Lina",
+              "id": 7801590200,
               "type": "private",
-              "username": "kisundria"
+              "username": "lino_1452"
             },
-            "date": 1756302002,
+            "date": 1756373346,
             "from": {
-              "first_name": "Daria",
-              "id": 902232452,
+              "first_name": "Lina",
+              "id": 7801590200,
               "is_bot": false,
-              "is_premium": true,
               "language_code": "ru",
-              "last_name": "Draav",
-              "username": "kisundria"
+              "username": "lino_1452"
             },
-            "message_id": 1038,
+            "message_id": 1187,
             "photo": [
               {
-                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADcwADNgQ",
-                "file_size": 1984,
-                "file_unique_id": "AQADf_cxG6L-eUl4",
-                "height": 90,
-                "width": 85
+                "file_id": "AgACAgIAAxkBAAIElmiwIHL6vLQi0eC4ikHFc4iyqtraAAK28zEbuoiISdmPl7T8l_wQAQADAgADcwADNgQ",
+                "file_size": 1033,
+                "file_unique_id": "AQADtvMxG7qIiEl4",
+                "height": 52,
+                "width": 90
               },
               {
-                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADbQADNgQ",
-                "file_size": 25870,
-                "file_unique_id": "AQADf_cxG6L-eUly",
-                "height": 320,
-                "width": 302
+                "file_id": "AgACAgIAAxkBAAIElmiwIHL6vLQi0eC4ikHFc4iyqtraAAK28zEbuoiISdmPl7T8l_wQAQADAgADbQADNgQ",
+                "file_size": 11738,
+                "file_unique_id": "AQADtvMxG7qIiEly",
+                "height": 184,
+                "width": 320
               },
               {
-                "file_id": "AgACAgIAAxkBAAIEDmivCrIDOBL3a4HI58d_Hzy6wpt4AAJ_9zEbov55SS714leSxzwKAQADAgADeAADNgQ",
-                "file_size": 48945,
-                "file_unique_id": "AQADf_cxG6L-eUl9",
-                "height": 484,
-                "width": 457
+                "file_id": "AgACAgIAAxkBAAIElmiwIHL6vLQi0eC4ikHFc4iyqtraAAK28zEbuoiISdmPl7T8l_wQAQADAgADeAADNgQ",
+                "file_size": 49067,
+                "file_unique_id": "AQADtvMxG7qIiEl9",
+                "height": 460,
+                "width": 800
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIElmiwIHL6vLQi0eC4ikHFc4iyqtraAAK28zEbuoiISdmPl7T8l_wQAQADAgADeQADNgQ",
+                "file_size": 102145,
+                "file_unique_id": "AQADtvMxG7qIiEl-",
+                "height": 736,
+                "width": 1280
               }
             ]
           },
-          "update_id": 626016232
+          "update_id": 626016275
         }
       }
     ]
@@ -1434,6 +1706,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-27T14:35:06.000Z",
-  "versionId": "0da7beb9-38ce-4e0b-9f1f-c8e989f9b856"
+  "updatedAt": "2025-08-28T09:38:18.000Z",
+  "versionId": "9bff98e8-67ab-4e1e-9fe3-d136e8783352"
 }
