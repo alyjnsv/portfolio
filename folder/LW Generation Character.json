@@ -2055,26 +2055,9 @@
       "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "appendAttribution": false
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
         "replyMarkup": "inlineKeyboard",
         "text": "=✅    👤 *Ваши персонажи готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
       },
@@ -2838,26 +2821,9 @@
       "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "appendAttribution": false
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
         "replyMarkup": "inlineKeyboard",
         "text": "=🔄    👤 *Создаю персонажей!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
@@ -3059,6 +3025,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-11T11:45:00.000Z",
-  "versionId": "bcc19539-4339-460b-95bd-8c857a312ec2"
+  "updatedAt": "2025-08-28T07:30:17.000Z",
+  "versionId": "585e3509-1091-4739-aeb7-9e329f903383"
 }
