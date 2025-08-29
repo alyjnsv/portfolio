@@ -407,7 +407,7 @@
         "sendBody": true,
         "sendHeaders": true,
         "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview"
+        "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
         -1104,
@@ -434,7 +434,7 @@
         },
         "options": {},
         "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('Imagen 4').item.json.request_id }}"
+        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 4').item.json.request_id }}"
       },
       "position": [
         -704,
@@ -690,6 +690,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-05T02:06:44.000Z",
-  "versionId": "63b94e6b-bf81-4eaf-9e0f-9ba1fe5c78a0"
+  "updatedAt": "2025-08-29T11:46:32.000Z",
+  "versionId": "bb6ff96c-5497-45ae-9ee0-e55edabe492e"
 }
