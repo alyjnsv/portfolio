@@ -1,0 +1,80 @@
+{
+  "active": false,
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-29T14:29:58.896Z",
+  "id": "2AEeh3cGLiLJfqYD",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 13",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "xkb6htmzWpZo28OP",
+          "name": "CryptoCheckers"
+        }
+      },
+      "id": "5d05323d-9258-4bc9-835e-7c6ce77190ab",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -48,
+        -16
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "ac1623f4-adf3-4da7-8b9b-0b0977815eab"
+    },
+    {
+      "id": "26d763d4-03ef-4d9e-9aac-b2c4c0a726ee",
+      "name": "HTTP Request",
+      "parameters": {
+        "options": {},
+        "url": "curl -s 'https://api.coingecko.com/api/v3/simple/token_price/tron?contract_addresses=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t&vs_currencies=usd,rub'"
+      },
+      "position": [
+        192,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-29T14:29:58.900Z",
+      "projectId": "HlOhvv2DiuercTrp",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-29T14:29:58.900Z",
+      "workflowId": "2AEeh3cGLiLJfqYD"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-29T14:29:58.896Z",
+  "versionId": "1e4939af-4381-4258-9403-79bb761532a0"
+}
