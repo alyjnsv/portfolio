@@ -5353,7 +5353,7 @@
       "name": "YT Tags1",
       "parameters": {
         "options": {
-          "systemMessage": "=You will get the transcript of a Youtube video for which you should generate matching tags (YOU NEED TO separate it by comma).\n\nBased on the topic/transcript of the video generate YouTube tags. These tags should be very general about the topics. Give multiple matching YouTube Tags that improve SEO for the video. \n\nExample:\nif the video is about why gold is a good investment you will for example not use gold investments as a tag but rather just gold     \n\nThe tags (if appropriate) should be in ENGLISH as the channel content is in American.\n\nReturn just the tags one word by one separated via Comma. \n\n\nThis video is about the future price of gold and how it affects the adjusted returns of high-performing assets such as stocks and bonds.\n\nErwartetet output:\nGold price, future gold price, gold investments, asset returns, stocks and bonds, investment returns, adjusted returns, gold market, financial markets, gold price forecast, economic trends, investing in gold, stock market analysis, bond market, investment strategies, inflation and gold, gold vs. stocks, financial analysis, precious metals, portfolio, market, investment tips.\n\nUse only one word at a time."
+          "systemMessage": "=Ты бот который генерирует тэги для youtube отталкиваясь от сценария пользователя"
         },
         "promptType": "define",
         "text": "=Now comes the actual topic/transcript. Give me the Youtube tags for it: {{ $('Генерация промтов1').last().json.output }}\n\n"
@@ -5814,6 +5814,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-28T11:40:19.000Z",
-  "versionId": "722c0a47-6df8-4853-b29a-f9b55324457f"
+  "updatedAt": "2025-08-29T13:50:07.000Z",
+  "versionId": "fdee4425-867c-4272-a5dd-ac5930a0890f"
 }
