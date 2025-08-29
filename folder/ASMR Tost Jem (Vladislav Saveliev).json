@@ -1099,6 +1099,42 @@
         ]
       ]
     },
+    "Upload Video and Description to Instagram": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload Video and Description to Instagram1": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload Video and Description to Tiktok": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Upload file1": {
       "main": [
         [
@@ -1226,6 +1262,17 @@
           {
             "index": 0,
             "node": "Delete rows or columns from sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload Video and Description to Tiktok",
             "type": "main"
           }
         ]
@@ -1605,6 +1652,7 @@
       "name": "Upload Video and Description to Tiktok",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -1654,6 +1702,7 @@
       "name": "Upload Video and Description to Instagram",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -1707,6 +1756,7 @@
       "name": "Upload Video and Description to Instagram1",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -4387,7 +4437,7 @@
       "name": "YT Tags1",
       "parameters": {
         "options": {
-          "systemMessage": "=You will get the transcript of a Youtube video for which you should generate matching tags (YOU NEED TO separate it by comma).\n\nBased on the topic/transcript of the video generate YouTube tags. These tags should be very general about the topics. Give multiple matching YouTube Tags that improve SEO for the video. \n\nExample:\nif the video is about why gold is a good investment you will for example not use gold investments as a tag but rather just gold     \n\nThe tags (if appropriate) should be in ENGLISH as the channel content is in American.\n\nReturn just the tags one word by one separated via Comma. \n\n\nThis video is about the future price of gold and how it affects the adjusted returns of high-performing assets such as stocks and bonds.\n\nErwartetet output:\nGold price, future gold price, gold investments, asset returns, stocks and bonds, investment returns, adjusted returns, gold market, financial markets, gold price forecast, economic trends, investing in gold, stock market analysis, bond market, investment strategies, inflation and gold, gold vs. stocks, financial analysis, precious metals, portfolio, market, investment tips.\n\nUse only one word at a time."
+          "systemMessage": "=Ты бот который генерирует тэги для youtube отталкиваясь от сценария пользователя"
         },
         "promptType": "define",
         "text": "=Now comes the actual topic/transcript. Give me the Youtube tags for it: {{ $('Генерация промтов1').last().json.output }}\n\n"
@@ -4806,6 +4856,51 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "id": "4fdfdb8e-fd6f-4371-88e8-2ccd84a3b918",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        448,
+        1120
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "a33d101c-a4c1-4992-a1db-536eea6dd5da"
+    },
+    {
+      "id": "9bb2c952-a9af-4430-b797-2294583b24ba",
+      "name": "Wait8",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        448,
+        1312
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "a33d101c-a4c1-4992-a1db-536eea6dd5da"
+    },
+    {
+      "id": "a9501c9d-cdaf-4125-944a-0b039acae127",
+      "name": "Wait9",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        448,
+        1520
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "a33d101c-a4c1-4992-a1db-536eea6dd5da"
     }
   ],
   "pinData": {
@@ -4858,6 +4953,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-28T13:01:58.000Z",
-  "versionId": "02345f34-641f-4020-a4c8-d231358f4bc0"
+  "updatedAt": "2025-08-29T13:49:27.000Z",
+  "versionId": "cbbd7ac9-cb2a-4826-a7c0-fbc5a6d4e94b"
 }
