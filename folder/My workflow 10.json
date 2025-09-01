@@ -147,7 +147,9 @@
         "pollTimes": {
           "item": [
             {
-              "mode": "everyMinute"
+              "mode": "everyX",
+              "unit": "minutes",
+              "value": 1
             }
           ]
         }
@@ -254,7 +256,7 @@
               "id": "b549ae0e-7845-44d3-a203-6b846ce8b078",
               "leftValue": "={{ $json['Новость'] }}",
               "operator": {
-                "operation": "equals",
+                "operation": "notEquals",
                 "type": "string"
               },
               "rightValue": "={{ $json['Новость'] }}"
@@ -613,11 +615,11 @@
   ],
   "staticData": {
     "node:RSS Feed Trigger": {
-      "lastItemDate": "2025-08-30T20:58:30.000Z"
+      "lastItemDate": "2025-09-01T20:49:18.000Z"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-28T12:28:40.000Z",
-  "versionId": "ff666b19-391b-40cc-87dd-0e1ad6236ec6"
+  "updatedAt": "2025-08-31T17:52:18.000Z",
+  "versionId": "e7509e12-a03c-4067-b972-c21d612ffe82"
 }
