@@ -1295,6 +1295,42 @@
         ]
       ]
     },
+    "Upload Video and Description to Instagram": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload Video and Description to Instagram1": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload Video and Description to Tiktok": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait11",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Upload file": {
       "main": [
         [
@@ -1394,6 +1430,28 @@
         ]
       ]
     },
+    "Wait10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload Video and Description to Instagram",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait11": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload Video and Description to Tiktok",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Wait2": {
       "main": [
         [
@@ -1466,6 +1524,17 @@
           {
             "index": 0,
             "node": "Append or update row in sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload Video and Description to Instagram1",
             "type": "main"
           }
         ]
@@ -2028,6 +2097,7 @@
       "name": "Upload Video and Description to Tiktok",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -2077,6 +2147,7 @@
       "name": "Upload Video and Description to Instagram",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -2476,6 +2547,7 @@
       "name": "Upload Video and Description to Instagram1",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
+      "onError": "continueErrorOutput",
       "parameters": {
         "bodyParameters": {
           "parameters": [
@@ -2533,6 +2605,7 @@
         416,
         1696
       ],
+      "retryOnFail": false,
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
@@ -5762,23 +5835,68 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "cf60376b-c0fd-47b2-ad6c-18be0c1e5c0d"
+    },
+    {
+      "id": "1cde423a-42a0-4f5c-ab0c-2e02db86a09f",
+      "name": "Wait9",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        624,
+        1712
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "2aa8c72c-6d53-40dc-b26a-5b866a322d59"
+    },
+    {
+      "id": "a7711f51-c2df-454c-8661-1c96acee3faa",
+      "name": "Wait10",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        624,
+        1488
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "2aa8c72c-6d53-40dc-b26a-5b866a322d59"
+    },
+    {
+      "id": "1a549740-8079-437c-9290-66cda64f1989",
+      "name": "Wait11",
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "position": [
+        624,
+        1248
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "2aa8c72c-6d53-40dc-b26a-5b866a322d59"
     }
   ],
   "pinData": {
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "21",
-          "Day of week": "Thursday",
+          "Day of month": "02",
+          "Day of week": "Tuesday",
           "Hour": "14",
           "Minute": "00",
-          "Month": "August",
-          "Readable date": "August 21st 2025, 2:00:00 pm",
+          "Month": "September",
+          "Readable date": "September 2nd 2025, 2:00:00 pm",
           "Readable time": "2:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-08-21T14:00:00.007+02:00"
+          "timestamp": "2025-09-02T14:00:00.009+02:00"
         }
       }
     ]
@@ -5814,6 +5932,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T13:50:07.000Z",
-  "versionId": "fdee4425-867c-4272-a5dd-ac5930a0890f"
+  "updatedAt": "2025-09-02T13:51:46.000Z",
+  "versionId": "d5b9e15c-a240-4e76-8412-f64a004c4d5c"
 }
