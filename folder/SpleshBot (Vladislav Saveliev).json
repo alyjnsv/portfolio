@@ -218,7 +218,7 @@
         "text": "=Проанализируй изображение"
       },
       "position": [
-        1160,
+        1168,
         -80
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -310,7 +310,7 @@
         ]
       },
       "position": [
-        -180,
+        -176,
         -80
       ],
       "type": "n8n-nodes-base.telegramTrigger",
@@ -334,8 +334,8 @@
         "text": "Отправьте изображение и промт"
       },
       "position": [
-        900,
-        180
+        912,
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -357,8 +357,8 @@
         }
       },
       "position": [
-        1160,
-        100
+        1168,
+        112
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -382,7 +382,7 @@
         "options": {}
       },
       "position": [
-        520,
+        528,
         -80
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -416,7 +416,7 @@
         "resource": "fileFolder"
       },
       "position": [
-        300,
+        304,
         -80
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -492,7 +492,7 @@
         "options": {}
       },
       "position": [
-        1740,
+        1744,
         -80
       ],
       "type": "n8n-nodes-base.set",
@@ -534,8 +534,8 @@
         "options": {}
       },
       "position": [
-        2180,
-        140
+        2160,
+        128
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -559,7 +559,7 @@
         "responseType": "freeText"
       },
       "position": [
-        1960,
+        1968,
         -80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -573,7 +573,7 @@
         "amount": 120
       },
       "position": [
-        2840,
+        2848,
         -80
       ],
       "type": "n8n-nodes-base.wait",
@@ -598,7 +598,7 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
-        2980,
+        2992,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -625,7 +625,7 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        2500,
+        2512,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -648,7 +648,7 @@
         "text": "Wait..."
       },
       "position": [
-        2680,
+        2688,
         -80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -663,7 +663,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        3180,
+        3184,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -685,7 +685,7 @@
         "operation": "sendDocument"
       },
       "position": [
-        3340,
+        3344,
         -80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -693,64 +693,7 @@
       "webhookId": "535b20ba-3350-4b21-bfd1-7eee3744fa1d"
     }
   ],
-  "pinData": {
-    "Telegram Trigger": [
-      {
-        "json": {
-          "message": {
-            "chat": {
-              "first_name": "Даниил",
-              "id": 500448463,
-              "type": "private",
-              "username": "Dan4cho"
-            },
-            "date": 1753799969,
-            "from": {
-              "first_name": "Даниил",
-              "id": 500448463,
-              "is_bot": false,
-              "is_premium": true,
-              "language_code": "ru",
-              "username": "Dan4cho"
-            },
-            "media_group_id": "14030399757074490",
-            "message_id": 223,
-            "photo": [
-              {
-                "file_id": "AgACAgIAAxkBAAPZaIjb7vPNDH0BGWsGkZWYk5Nzb3YAAsf4MRv7sUhIJ4gZYdQxgqkBAAMCAANzAAM2BA",
-                "file_size": 1493,
-                "file_unique_id": "AQADx_gxG_uxSEh4",
-                "height": 90,
-                "width": 90
-              },
-              {
-                "file_id": "AgACAgIAAxkBAAPZaIjb7vPNDH0BGWsGkZWYk5Nzb3YAAsf4MRv7sUhIJ4gZYdQxgqkBAAMCAANtAAM2BA",
-                "file_size": 15318,
-                "file_unique_id": "AQADx_gxG_uxSEhy",
-                "height": 320,
-                "width": 320
-              },
-              {
-                "file_id": "AgACAgIAAxkBAAPZaIjb7vPNDH0BGWsGkZWYk5Nzb3YAAsf4MRv7sUhIJ4gZYdQxgqkBAAMCAAN4AAM2BA",
-                "file_size": 58398,
-                "file_unique_id": "AQADx_gxG_uxSEh9",
-                "height": 800,
-                "width": 800
-              },
-              {
-                "file_id": "AgACAgIAAxkBAAPZaIjb7vPNDH0BGWsGkZWYk5Nzb3YAAsf4MRv7sUhIJ4gZYdQxgqkBAAMCAAN5AAM2BA",
-                "file_size": 89421,
-                "file_unique_id": "AQADx_gxG_uxSEh-",
-                "height": 1280,
-                "width": 1280
-              }
-            ]
-          },
-          "update_id": 716704289
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
@@ -766,6 +709,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-15T13:38:47.000Z",
-  "versionId": "092cb643-83ed-4662-baee-058bbb7a6e18"
+  "updatedAt": "2025-09-03T10:10:44.000Z",
+  "versionId": "0a02906d-4850-484c-b298-fc48fcbb6245"
 }
