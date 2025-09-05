@@ -1,7 +1,7 @@
 {
   "active": false,
   "connections": {
-    "Analyze Video2": {
+    "Analyze Video": {
       "main": [
         [
           {
@@ -11,24 +11,13 @@
           },
           {
             "index": 0,
-            "node": "Extract Tasks3",
+            "node": "Extract Tasks",
             "type": "main"
           }
         ]
       ]
     },
-    "Analyze video": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Check Tasks2": {
+    "Check Tasks": {
       "main": [
         [
           {
@@ -40,57 +29,24 @@
         [
           {
             "index": 0,
-            "node": "No Tasks Report",
+            "node": "Merge Data1",
             "type": "main"
           }
         ]
       ]
     },
-    "Combine Data1": {
+    "Create Jira Task": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Final Report",
+            "node": "Merge Data1",
             "type": "main"
           }
         ]
       ]
     },
-    "Create Jira Task2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Combine Data1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Create task": {
-      "main": [
-        [
-          {
-            "index": 1,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract Tasks1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract Tasks3": {
+    "Extract Tasks": {
       "main": [
         [
           {
@@ -101,45 +57,23 @@
         ]
       ]
     },
-    "Final Report": {
+    "Format Report1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Send Report2",
+            "node": "Send Report",
             "type": "main"
           }
         ]
       ]
     },
-    "Get Video File2": {
+    "Get Video File": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Analyze Video2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get a file": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract from File",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "IMAGE GENERATE": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "GET IMAGE URL",
+            "node": "Analyze Video",
             "type": "main"
           }
         ]
@@ -150,35 +84,19 @@
         [
           {
             "index": 0,
-            "node": "Combine Data1",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "No Tasks Report",
+            "node": "Merge Data1",
             "type": "main"
           }
         ]
       ]
     },
-    "No Tasks Report": {
+    "Merge Data1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Final Report",
+            "node": "Format Report1",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "OpenRouter Chat Model3": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent3",
-            "type": "ai_languageModel"
           }
         ]
       ]
@@ -188,30 +106,8 @@
         [
           {
             "index": 0,
-            "node": "Check Tasks2",
+            "node": "Check Tasks",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "Schedule Trigger": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Date & Time",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Simple Memory2": {
-      "ai_memory": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent3",
-            "type": "ai_memory"
           }
         ]
       ]
@@ -221,29 +117,23 @@
         [
           {
             "index": 0,
-            "node": "Create Jira Task2",
+            "node": "Create Jira Task",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Merge Data1",
             "type": "main"
           }
         ]
       ]
     },
-    "Telegram Trigger1": {
+    "Telegram Trigger": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get a file",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram Trigger3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get Video File2",
+            "node": "Get Video File",
             "type": "main"
           }
         ]
@@ -261,13 +151,12 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "uahQsuRxqjcRQnFs",
-          "name": "AutoCreateN8NWorkflow"
+          "id": "oq6kY1cAa7L2rihN",
+          "name": "TestN8N_IA"
         }
       },
-      "disabled": true,
-      "id": "9458321c-d7ff-49fd-ae2e-26b74a6db6c7",
-      "name": "Telegram Trigger1",
+      "id": "e52b1b5b-5f31-4fd9-a365-7befa661ed0f",
+      "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {},
         "updates": [
@@ -275,122 +164,34 @@
         ]
       },
       "position": [
-        -3840,
-        -816
+        15408,
+        13840
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
-      "webhookId": "9ae65633-0436-45ee-920d-3b598dfea125"
+      "webhookId": "webhook-telegram-trigger"
     },
     {
       "credentials": {
         "telegramApi": {
-          "id": "uahQsuRxqjcRQnFs",
-          "name": "AutoCreateN8NWorkflow"
+          "id": "oq6kY1cAa7L2rihN",
+          "name": "TestN8N_IA"
         }
       },
-      "disabled": true,
-      "id": "29cf5b6a-b951-4545-af96-91ec9643a182",
-      "name": "Get a file",
+      "id": "1777cd2b-4623-4aef-893f-dac1421adb49",
+      "name": "Get Video File",
       "parameters": {
         "additionalFields": {},
         "fileId": "={{ $json.message.document.file_id }}",
         "resource": "file"
       },
       "position": [
-        -3600,
-        -816
+        15600,
+        13840
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
-      "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
-    },
-    {
-      "disabled": true,
-      "id": "9e6ac67a-fa04-45f6-8e4d-eaa8e7bcf72b",
-      "name": "Extract from File",
-      "parameters": {
-        "operation": "xml",
-        "options": {}
-      },
-      "position": [
-        -3360,
-        -816
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "206d7774-bdb7-4b16-8cd0-0abf25913d20",
-      "name": "AI Agent3",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Ты работаешь как помощник по интеграции BPMN в n8n. \nТвоя задача — проанализировать предоставленную диаграмму BPMN и определить, какие ноды нужно создать в n8n. \n\n⚠️ ВАЖНО:\n- Не генерируй финальный workflow JSON.\n- Верни только список нод.\n- Для каждой ноды укажи:\n  1. Название задачи из BPMN (\"bpmn_task_name\").\n  2. Соответствующий тип ноды в n8n (\"n8n_node_type\").\n  3. Список параметров, по типу api, credentials, уточненные у пользователя для определенных нод. Если пользователь решил не давать какие то данные по этому параметру, то вводи N/A, то есть везде, где требовались credentials, api, ссылки, не получен ответ, то нужно брать N/A.\n\nФормат ответа строго JSON.\n"
-        },
-        "promptType": "define",
-        "text": "={{ $json.output }}\n\nПример ответа: Пример:\n{\n  \"nodes_to_create\": [\n    {\n      \"bpmn_task_name\": \"Записать в Google Sheet\",\n      \"n8n_node_type\": \"n8n-nodes-base.googleSheets\",\n      \"info_needed\": [\"Sheet ID\", \"Cell Range\", \"Authentication\"]\n    }\n  ]\n}\n\nXML в виде BPMN:\n{{ $('Extract from File').item.json.data }}"
-      },
-      "position": [
-        -4272,
-        -816
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.2
-    },
-    {
-      "credentials": {
-        "openRouterApi": {
-          "id": "MxDmhTEDcHkODHH1",
-          "name": "OpenRouter account"
-        }
-      },
-      "disabled": true,
-      "id": "8d029a97-4338-4a23-a027-56bbc9405fc2",
-      "name": "OpenRouter Chat Model3",
-      "parameters": {
-        "model": "anthropic/claude-opus-4.1",
-        "options": {
-          "responseFormat": "text",
-          "temperature": 0,
-          "topP": 1
-        }
-      },
-      "position": [
-        -4304,
-        -656
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "9a897a3b-3fcc-4b03-bb5f-36cd223fc34e",
-      "name": "Simple Memory2",
-      "parameters": {
-        "sessionIdType": "customKey",
-        "sessionKey": "=123qwe"
-      },
-      "position": [
-        -4144,
-        -640
-      ],
-      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
-      "typeVersion": 1.3
-    },
-    {
-      "disabled": true,
-      "id": "2584250e-41b2-4e6f-97f0-40a2223cc9c3",
-      "name": "Code1",
-      "parameters": {
-        "jsCode": "let extra_info = '';\ntry {\n  const chatData = $node[\"Code2\"].json;\n\n  const extra_info = `Вопросы к xml: ${chatData.chatData}, ответы от пользователя ${chatData.answers}. Предыдущие ответы на вопросы ${chatData.prevData}`;\n  return { extra_info: extra_info }\n} catch (e) {\n  const extra_info = '';\n}\n\nreturn { extra_info: extra_info }"
-      },
-      "position": [
-        -3872,
-        -592
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
+      "webhookId": "1a0787ab-5c81-4c93-9fd4-c8b50fc4a756"
     },
     {
       "credentials": {
@@ -399,77 +200,112 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "disabled": true,
-      "id": "412db1fb-f093-455d-b704-e8c6fdd0651e",
-      "name": "Analyze video",
+      "id": "963dbdad-da67-47ce-8e88-f9b365cc6587",
+      "name": "Analyze Video",
       "parameters": {
         "inputType": "binary",
         "modelId": {
           "__rl": true,
-          "cachedResultName": "models/gemini-2.5-pro",
           "mode": "list",
-          "value": "models/gemini-2.5-pro"
+          "value": "models/gemini-2.0-flash-exp"
         },
         "operation": "analyze",
         "options": {},
         "resource": "video",
-        "text": "Проанализируй видеофайл строго по следующим инструкциям:\n**Транскрибация и диаризация**\n- Преобразуй всю речь в текст, сохраняя оригинальные имена участников БЕЗ ИЗМЕНЕНИЙ.\n- Если имя на английском — оставь на английском, если на русском — на русском.\n- Формат: [Оригинальное имя]: [Текст]. \n\n**Метаданные**\n- Точная длительность видео (HH:MM:SS) — это общее время созвона.\n- Тема встречи (1-2 предложения).\n\n**Анализ**\n- Рассчитай % времени речи каждого участника относительно общей длительности.\n- Пример: Danil Kalashnikov — 25%, Иван Петров — 30%.\n\n **Отчет**\\nФормат:\n\n## Диаризация\n[Текст с именами в оригинальном виде]\n\n### Хронометраж\n- Общее время: [HH:MM:SS]\n- Время участников:\n- [Оригинальное имя] — [XX%]\n- [Оригинальное имя] — [XX%]\n\n### Задачи\n[Список с датами из названия файла: {{ $('Google Drive4').first().json.name }}]\n### Проверка адекватности речи участников. Проанализируйте реплики каждого участника с точки зрения содержания и этики речи. Проверьте, нет ли в речи ненормативной лексики, оскорбительных выражений или явной неадекватности (бессвязная речь, отсутствие логики и структуры высказываний).Если подобные нарушения выявлены, обязательно укажите это в отчёте, отметив имя участника и пример выявленного нарушения. При отсутствии нарушений укажите, что все участники общались адекватно и корректно.\n**Полезность участников**\n[Оценки 1-10]\n\n**Аналитика для улучшения**\n[Рекомендации]\n"
+        "text": "Проанализируй видео и выполни следующие задачи:\n\n1. ТРАНСКРИБАЦИЯ С ДИАРИЗАЦИЕЙ:\n- Создай полную расшифровку видео\n- Определи всех участников встречи\n- Для каждой реплики укажи говорящего в формате: [Имя участника]: текст\n- Укажи время начала каждой реплики\n\n2. АНАЛИЗ УЧАСТНИКОВ:\n- Определи процент времени выступления каждого участника\n- Оцени активность и вовлеченность\n\n3. СТРУКТУРА ВСТРЕЧИ:\n- Определи основные темы обсуждения\n- Выдели ключевые моменты и решения\n\nВерни результат в формате JSON:\n{\n  \"transcription\": \"полная расшифровка с указанием участников\",\n  \"participants\": [{\"name\": \"имя\", \"speaking_time_percent\": число}],\n  \"duration\": \"длительность видео\",\n  \"topics\": [\"список тем\"],\n  \"key_points\": [\"ключевые моменты\"]\n}"
       },
       "position": [
-        -3632,
-        -592
+        15808,
+        13840
       ],
-      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
       "typeVersion": 1
     },
     {
-      "disabled": true,
-      "id": "4ef89b41-fd2a-4bf5-84a7-72dcc27b6cac",
-      "name": "Respond to Webhook",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "f9aafaf0-2e29-4f5d-90d4-0ec9846ded75",
+      "name": "Meeting Summary",
       "parameters": {
-        "options": {
-          "responseHeaders": {
-            "entries": [
-              {
-                "name": "Access-Control-Allow-Origin",
-                "value": "*"
-              },
-              {
-                "name": "Access-Control-Allow-Methods",
-                "value": "GET, POST, PUT, DELETE, OPTIONS"
-              },
-              {
-                "name": "Access-Control-Allow-Headers",
-                "value": "*"
-              },
-              {
-                "name": "Access-Control-Allow-Credentials",
-                "value": "true"
-              }
-            ]
-          }
+        "messages": {
+          "values": [
+            {
+              "content": "={{ 'На основе транскрипции встречи создай краткое резюме:\\n\\nТранскрипция:\\n' + $node[\"Analyze Video\"].json.content.parts[0].text.replace('```json', '').replace('```', '').trim() + '\\n\\nСоздай структурированное резюме встречи, включающее:\\n1. Основная тема и цель встречи\\n2. Ключевые обсуждаемые вопросы\\n3. Принятые решения\\n4. Важные выводы\\n\\nФормат ответа - краткий текст на русском языке.' }}"
+            }
+          ]
         },
-        "respondWith": "binary"
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "models/gemini-1.5-pro-latest"
+        },
+        "options": {}
       },
       "position": [
-        -3312,
-        -592
+        16016,
+        13648
       ],
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.4
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
     },
     {
-      "disabled": true,
-      "id": "a1ebd565-8a4f-4525-b58d-650694487fd3",
-      "name": "If",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "43276588-04fc-484f-b752-1d72c01d2f62",
+      "name": "Extract Tasks",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "={{ 'Проанализируй транскрипцию встречи и извлеки все задачи:\\n\\nТранскрипция:\\n' + $node[\"Analyze Video\"].json.content.parts[0].text.replace('```json', '').replace('```', '').trim() + '\\n\\nНайди и структурируй ВСЕ задачи, которые были обсуждены или назначены на встрече.\\n\\nДля каждой задачи определи:\\n- Описание задачи\\n- Ответственного (если указан)\\n- Срок выполнения (если указан)\\n- Приоритет (высокий/средний/низкий)\\n\\nВерни результат СТРОГО в формате JSON:\\n{\\n  \"has_tasks\": true/false,\\n  \"tasks\": [\\n    {\\n      \"title\": \"название задачи\",\\n      \"description\": \"описание\",\\n      \"assignee\": \"ответственный\",\\n      \"due_date\": \"срок\",\\n      \"priority\": \"приоритет\"\\n    }\\n  ]\\n}' }}"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "models/gemini-1.5-pro-latest"
+        },
+        "options": {}
+      },
+      "position": [
+        16032,
+        14000
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "d06f69ca-5dcc-4ec9-9857-294009e1814b",
+      "name": "Parse Tasks",
+      "parameters": {
+        "jsCode": "// Парсим результат извлечения задач\nlet tasksData;\ntry {\n  const rawText = $node[\"Extract Tasks\"].json.content.parts[0].text;\n  const jsonText = rawText.replace(/```json/g, '').replace(/```/g, '').trim();\n  tasksData = JSON.parse(jsonText);\n} catch (e) {\n  tasksData = { has_tasks: false, tasks: [] };\n}\n\nreturn tasksData;"
+      },
+      "position": [
+        16288,
+        14128
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ba6fb58c-ffdc-4d81-9cd4-fe85eb527416",
+      "name": "Check Tasks",
       "parameters": {
         "conditions": {
           "combinator": "and",
           "conditions": [
             {
-              "id": "d28054b3-7515-4967-8a7d-b7102c640e0a",
-              "leftValue": "={{ JSON.stringify($json.task_in_jira) }}",
+              "id": "condition1",
+              "leftValue": "={{ JSON.stringify($json.has_tasks) }}",
               "operator": {
                 "operation": "equals",
                 "type": "string"
@@ -487,653 +323,8 @@
         "options": {}
       },
       "position": [
-        -3888,
-        -368
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "cc725e3a-556c-4f5f-a1b1-3ecf485883e7",
-      "name": "Create task",
-      "parameters": {
-        "additionalFields": {},
-        "issueType": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        },
-        "project": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
-      },
-      "position": [
-        -3632,
-        -368
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "3a5034d7-5ee7-4673-9e65-61911f0403f9",
-      "name": "IMAGE GENERATE",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization ",
-              "value": "Key N/A"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"prompt\": {{ JSON.stringify($('Telegram Trigger1').item.json.message.text)}}\n}",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview"
-      },
-      "position": [
-        -3312,
-        -352
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "b60f24ae-f6de-4a60-9bd2-d77048f57bd2",
-      "name": "3D-Generation1",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"input_image_url\": {{ JSON.stringify($('Code6').item.json.file_path) }}\n}",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/hunyuan3d-v21"
-      },
-      "position": [
-        -3904,
-        -160
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "61ebcd9f-1ff3-4dde-b6ad-91eb5083381a",
-      "name": "GET IMAGE URL",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "={{ $json.response_url }}"
-      },
-      "position": [
-        -3104,
-        -352
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "92b46415-6b6b-4b91-a5eb-e41d4557f5ad",
-      "name": "Switch",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "fe7f701f-bff9-422a-8b37-fb232d783a8c",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "succeeded"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "succeeded",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "b707dd3a-073f-406a-aa38-7ca27d6703fd",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "failed"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "failed",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "88cd5155-794f-49be-a246-a705dbcf9809",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "planned"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "planned",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "64b99e8b-d95b-4bf4-9063-6d1768831098",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "being {{ $json.status }}"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "being processed",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        -3632,
-        -160
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "disabled": true,
-      "id": "15158475-d08d-4d84-a2e9-6c96af9076ab",
-      "name": "Extract Tasks1",
-      "parameters": {
-        "messages": {
-          "values": [
-            {
-              "content": "здесь промпт"
-            }
-          ]
-        },
-        "modelId": {
-          "__rl": true,
-          "cachedResultName": "models/gemini-1.5-pro-latest",
-          "mode": "list",
-          "value": "models/gemini-1.5-pro-latest"
-        },
-        "options": {}
-      },
-      "position": [
-        -3312,
-        -128
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "6bfd5dda-96d4-449d-a3f5-6a196d3fc977",
-      "name": "Schedule Trigger",
-      "parameters": {
-        "rule": {
-          "interval": [
-            {
-              "field": "minutes"
-            }
-          ]
-        }
-      },
-      "position": [
-        -3376,
-        112
-      ],
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2
-    },
-    {
-      "disabled": true,
-      "id": "64d18717-0f19-40c0-a3eb-519a520a9096",
-      "name": "Date & Time",
-      "parameters": {
-        "date": "={{ $now }}",
-        "format": "DD.MM.YYYY HH:mm:ss",
-        "operation": "formatDate",
-        "options": {}
-      },
-      "position": [
-        -3168,
-        112
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "gngoNLFSKF2sQUSt",
-          "name": "N8NTelegram"
-        }
-      },
-      "disabled": true,
-      "id": "4f79212e-422c-4ad8-9f63-871bbd333112",
-      "name": "Google Sheets",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "content",
-              "id": "content",
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "finishReason",
-              "id": "finishReason",
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "avgLogprobs",
-              "id": "avgLogprobs",
-              "removed": true,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "content": "={{ $json.content.parts[0].text }}",
-            "finishReason": "={{ $('Date & Time').item.json.formattedDate }}"
-          }
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1AwDAamKUciLIdSxzxNze-mgURCVqVLzxd3CdcjnrtKY"
-        },
-        "operation": "append",
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "gid=0"
-        }
-      },
-      "position": [
-        -2864,
-        -304
-      ],
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.5
-    },
-    {
-      "disabled": true,
-      "id": "8732e9f5-4eb5-4c22-a972-5b0accca59f5",
-      "name": "Code",
-      "parameters": {
-        "jsCode": "const f = $('Extract Tasks1').item.json.content.parts[0].text;\nreturn {f: f}"
-      },
-      "position": [
-        -3008,
-        -128
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "dd88d22c-38bc-4543-9314-862bb88c480c",
-      "name": "Logger2",
-      "parameters": {
-        "errorMessage": "=Ошибка получения документа ID {{ $json.document_id }}"
-      },
-      "position": [
-        -3104,
-        -512
-      ],
-      "type": "n8n-nodes-base.stopAndError",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "6b2a44e4-07fd-4fd6-bb99-880d761c69d3",
-      "name": "Merge",
-      "parameters": {
-        "advanced": true,
-        "mergeByFields": {
-          "values": [
-            {
-              "field1": "={{ json.output.id1 }}",
-              "field2": "={{ json.output.id2 }}"
-            }
-          ]
-        },
-        "mode": "combine",
-        "options": {}
-      },
-      "position": [
-        -3440,
-        -448
-      ],
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "id": "e62a67a2-81b5-4a8f-a0ea-7d8bb9119797",
-      "name": "Meeting Summary",
-      "parameters": {
-        "messages": {
-          "values": [
-            {
-              "content": "={{ 'На основе транскрибации сделай краткую выжимку по встрече:\\n\\n' + $node[\"Analyze Video2\"].json.content.parts[0].text + '\\n\\nФормат вывода:\\n## Резюме встречи\\n- Основная тема\\n- Ключевые обсуждаемые вопросы\\n- Принятые решения\\n- Важные моменты' }}"
-            }
-          ]
-        },
-        "modelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "models/gemini-2.0-flash-exp"
-        },
-        "options": {}
-      },
-      "position": [
-        10048,
-        9616
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
-      "id": "2e0cddf8-7bdf-4fa8-a364-f6577d3ff04c",
-      "name": "Parse Tasks",
-      "parameters": {
-        "jsCode": "const tasksResponse = $node[\"Extract Tasks3\"].json.content.parts[0].text;\nlet tasks = [];\n\ntry {\n  const parsed = JSON.parse(tasksResponse);\n  tasks = parsed.tasks || [];\n} catch (e) {\n  tasks = [];\n}\n\nreturn {\n  hasTasks: tasks.length > 0,\n  tasks: tasks,\n  tasksCount: tasks.length\n};"
-      },
-      "position": [
-        10448,
-        10208
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "00a21403-76fa-451f-955d-7aaa62a4e505",
-      "name": "Split Tasks",
-      "parameters": {
-        "fieldToSplitOut": "tasks",
-        "options": {}
-      },
-      "position": [
-        10704,
-        9696
-      ],
-      "type": "n8n-nodes-base.itemLists",
-      "typeVersion": 3.1
-    },
-    {
-      "id": "3cadda5a-45d1-43dc-b54a-b03a74ff05a9",
-      "name": "No Tasks Report",
-      "parameters": {
-        "jsCode": "// Получаем данные для случая без задач\nconst summary = $node[\"Meeting Summary\"].json.content.parts[0].text || \"Резюме недоступно\";\n\nconst report = `# 📊 Протокол встречи\\n\\n${summary}\\n\\n## 📋 Задачи\\nНа встрече не было выявлено конкретных задач.\\n\\n---\\n✅ *Отчет сформирован автоматически*`;\n\nreturn {\n  report: report,\n  chatId: $node[\"Telegram Trigger3\"].json.message.chat.id\n};"
-      },
-      "position": [
-        10832,
-        10416
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "c5fb3e00-1ed0-4444-b60e-3053f9ff822c",
-      "name": "Final Report",
-      "parameters": {
-        "jsCode": "// Объединяем данные из разных веток\nlet finalReport = \"\";\nlet chatId = \"\";\n\ntry {\n  // Пытаемся получить отчет с задачами\n  const withTasks = $node[\"Combine Data1\"].json;\n  finalReport = withTasks.report;\n  chatId = withTasks.chatId;\n} catch (e) {\n  // Если нет задач, берем отчет без задач\n  const noTasks = $node[\"No Tasks Report\"].json;\n  finalReport = noTasks.report;\n  chatId = noTasks.chatId;\n}\n\nreturn {\n  report: finalReport,\n  chatId: chatId\n};"
-      },
-      "position": [
-        11232,
-        9984
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "oq6kY1cAa7L2rihN",
-          "name": "TestN8N_IA"
-        }
-      },
-      "id": "6d5b02c5-07d8-41bc-a05d-876f07f86a0b",
-      "name": "Telegram Trigger3",
-      "parameters": {
-        "additionalFields": {},
-        "updates": [
-          "message"
-        ]
-      },
-      "position": [
-        9440,
-        9888
-      ],
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.2,
-      "webhookId": "webhook-telegram-trigger"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "oq6kY1cAa7L2rihN",
-          "name": "TestN8N_IA"
-        }
-      },
-      "id": "18bd9029-5820-4b40-97e8-c34f4c498b99",
-      "name": "Get Video File2",
-      "parameters": {
-        "additionalFields": {},
-        "fileId": "={{ $json.message.document.file_id }}",
-        "resource": "file"
-      },
-      "position": [
-        9632,
-        9888
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "7464e0a6-6b07-46e5-8531-97a207676c19"
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "id": "cc5c07c8-4783-4b84-8a43-e7d06a740f11",
-      "name": "Analyze Video2",
-      "parameters": {
-        "inputType": "binary",
-        "modelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "models/gemini-2.0-flash-exp"
-        },
-        "operation": "analyze",
-        "options": {},
-        "resource": "video",
-        "text": "Проанализируй видео и сделай полную транскрибацию с диаризацией говорящих. Определи кто и что говорил. Формат вывода:\n\n## Транскрибация\n[Имя участника]: [Текст речи]\n\n## Участники\n- Список всех участников встречи"
-      },
-      "position": [
-        9840,
-        9888
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "id": "d525b6d3-521b-4e72-a17f-e401afe1c62c",
-      "name": "Extract Tasks3",
-      "parameters": {
-        "messages": {
-          "values": [
-            {
-              "content": "={{ 'Проанализируй транскрибацию и выяви все задачи, сроки и ответственных:\\n\\n' + $node[\"Analyze Video2\"].json.content.parts[0].text + '\\n\\nВерни результат строго в JSON формате:\\n{\\n  \"tasks\": [\\n    {\\n      \"title\": \"Название задачи\",\\n      \"description\": \"Описание\",\\n      \"assignee\": \"Ответственный\",\\n      \"deadline\": \"Срок выполнения\"\\n    }\\n  ]\\n}' }}"
-            }
-          ]
-        },
-        "modelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "models/gemini-2.0-flash-exp"
-        },
-        "options": {}
-      },
-      "position": [
-        10032,
-        10320
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
-      "id": "fb91dcc9-01b3-4992-9c70-38c513e85d37",
-      "name": "Check Tasks2",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "condition-1",
-              "leftValue": "={{ $json.hasTasks }}",
-              "operator": {
-                "operation": "true",
-                "type": "boolean"
-              },
-              "rightValue": "true"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        10624,
-        10112
+        16400,
+        13936
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1145,46 +336,31 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "disabled": true,
-      "id": "d2a3c38c-5f18-4e36-b22d-ce6d63a6ef59",
-      "name": "Create Jira Task2",
+      "id": "51ed5776-25d1-46d2-8666-d880e9e4d32e",
+      "name": "Create Jira Task",
       "parameters": {
         "additionalFields": {
-          "assignee": "={{ $json.assignee }}",
-          "description": "={{ $json.description + '\\n\\nОтветственный: ' + $json.assignee + '\\nСрок: ' + $json.deadline }}"
+          "description": "={{ $json.description + '\\n\\nОтветственный: ' + $json.assignee + '\\nСрок: ' + $json.due_date + '\\nПриоритет: ' + $json.priority }}"
         },
         "issueType": {
           "__rl": true,
           "mode": "name",
-          "value": "Task"
+          "value": "Other"
         },
         "jiraVersion": "serverPat",
         "project": {
           "__rl": true,
           "mode": "name",
-          "value": "PDF"
+          "value": "CORE"
         },
-        "summary": "={{ $json.title }}"
+        "summary": "=СОЗДАНО ЧЕРЕЗ N8N {{ $json.title }}"
       },
       "position": [
-        10880,
-        9696
+        16672,
+        13568
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "id": "1d343f78-7803-4888-8506-14f14df852fb",
-      "name": "Combine Data1",
-      "parameters": {
-        "jsCode": "// Получаем данные из всех источников\nconst summary = $node[\"Meeting Summary\"].json.content.parts[0].text || \"Резюме недоступно\";\nconst tasksData = $node[\"Parse Tasks\"].json || {};\nconst hasTasks = tasksData.hasTasks || false;\n\nlet jiraLinks = [];\nlet tasksSection = \"\";\n\nif (hasTasks) {\n  try {\n    const jiraItems = $node[\"Create Jira Task2\"].all();\n    jiraLinks = jiraItems.map(item => {\n      return `- [${item.json.key}](https://ii.jira/browse/${item.json.key}): ${item.json.fields.summary}`;\n    });\n    \n    tasksSection = `\\n\\n## 📋 Созданные задачи в Jira\\n${jiraLinks.join('\\n')}`;\n  } catch (e) {\n    // Если задачи есть, но Jira не сработала\n    const tasks = tasksData.tasks || [];\n    const tasksList = tasks.map(t => `- **${t.title}** (${t.assignee}, до ${t.deadline})`);\n    tasksSection = `\\n\\n## 📋 Выявленные задачи\\n${tasksList.join('\\n')}\\n\\n⚠️ *Задачи не были созданы в Jira*`;\n  }\n} else {\n  tasksSection = \"\\n\\n## 📋 Задачи\\nНа встрече не было выявлено конкретных задач.\";\n}\n\n// Формируем итоговый отчет\nconst report = `# 📊 Протокол встречи\\n\\n${summary}${tasksSection}\\n\\n---\\n✅ *Отчет сформирован автоматически*`;\n\nreturn {\n  report: report,\n  chatId: $node[\"Telegram Trigger3\"].json.message.chat.id\n};"
-      },
-      "position": [
-        11024,
-        9952
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
     },
     {
       "credentials": {
@@ -1193,22 +369,61 @@
           "name": "TestN8N_IA"
         }
       },
-      "id": "748c69f5-8681-4c19-a4d5-d6a08948b1b7",
-      "name": "Send Report2",
+      "id": "96ef6ced-3c3e-4919-9735-d20094316f4c",
+      "name": "Send Report",
       "parameters": {
         "additionalFields": {
           "parse_mode": "Markdown"
         },
-        "chatId": "={{ $json.chatId }}",
+        "chatId": "={{ $node[\"Telegram Trigger\"].json.message.chat.id }}",
         "text": "={{ $json.report }}"
       },
       "position": [
-        11440,
-        9984
+        17200,
+        13936
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
-      "webhookId": "c6ea2d34-b758-486e-9400-b64585852349"
+      "webhookId": "e2805ba3-f7a5-4957-bbb1-a6a2f77dea93"
+    },
+    {
+      "id": "7e87d135-cb2c-4503-8e9b-2c33d038e95e",
+      "name": "Split Tasks",
+      "parameters": {
+        "jsCode": "// Разделяем задачи для обработки по одной\nconst tasks = $json.tasks || [];\nreturn tasks.map(task => ({ json: task }));"
+      },
+      "position": [
+        16512,
+        13728
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6872523d-61c0-4188-adda-9a9f23124d15",
+      "name": "Merge Data1",
+      "parameters": {
+        "jsCode": "// Собираем все данные для финального отчета\nlet summary = '';\nlet tasks = [];\nlet jiraLinks = [];\n\n// Получаем резюме встречи\ntry {\n  summary = $node[\"Meeting Summary\"].json.content.parts[0].text;\n} catch (e) {\n  summary = 'Резюме встречи недоступно';\n}\n\n// Получаем список задач\ntry {\n  const tasksData = $node[\"Parse Tasks\"].json;\n  if (tasksData.has_tasks && tasksData.tasks) {\n    tasks = tasksData.tasks;\n  }\n} catch (e) {\n  tasks = [];\n}\n\n// Получаем ссылки на Jira (если задачи были созданы)\ntry {\n  const jiraItems = $node[\"Create Jira Task\"].all();\n  jiraItems.forEach(item => {\n    if (item.json.key) {\n      jiraLinks.push({\n        key: item.json.key,\n        url: `https://jira.jira/browse/${item.json.key}`\n      });\n    }\n  });\n} catch (e) {\n  // Задачи в Jira не создавались\n}\n\nreturn {\n  summary: summary,\n  tasks: tasks,\n  jiraLinks: jiraLinks\n};"
+      },
+      "position": [
+        16800,
+        13936
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "a49f02cf-e4af-4d6c-98c1-e419e25d55c7",
+      "name": "Format Report1",
+      "parameters": {
+        "jsCode": "// Формируем финальный протокол встречи\nconst data = $json;\n\nlet report = '📋 **ПРОТОКОЛ ВСТРЕЧИ**\\n\\n';\nreport += '---\\n\\n';\n\n// Добавляем резюме\nreport += '📝 **РЕЗЮМЕ ВСТРЕЧИ:**\\n';\nreport += data.summary + '\\n\\n';\nreport += '---\\n\\n';\n\n// Добавляем задачи\nif (data.tasks && data.tasks.length > 0) {\n  report += '✅ **ЗАДАЧИ:**\\n\\n';\n  data.tasks.forEach((task, index) => {\n    report += `${index + 1}. **${task.title}**\\n`;\n    report += `   📌 Описание: ${task.description}\\n`;\n    report += `   👤 Ответственный: ${task.assignee}\\n`;\n    report += `   📅 Срок: ${task.due_date}\\n`;\n    report += `   ⚡ Приоритет: ${task.priority}\\n`;\n    \n    // Добавляем ссылку на Jira, если есть\n    if (data.jiraLinks && data.jiraLinks[index]) {\n      report += `   🔗 Jira: ${data.jiraLinks[index].url}\\n`;\n    }\n    report += '\\n';\n  });\n} else {\n  report += '✅ **ЗАДАЧИ:** Задачи не выявлены\\n\\n';\n}\n\nreport += '---\\n\\n';\nreport += '✨ Протокол сформирован автоматически системой VideoToTask Helper Bot';\n\nreturn { report: report };"
+      },
+      "position": [
+        17008,
+        13936
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
     }
   ],
   "pinData": {},
@@ -1234,6 +449,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-09-04T11:38:01.000Z",
-  "versionId": "73cf86b6-d4ee-4954-a132-bbba4fd2166f"
+  "updatedAt": "2025-09-05T14:15:21.000Z",
+  "versionId": "75de1620-bd0e-40ec-af8c-bbdf7c7499b1"
 }
