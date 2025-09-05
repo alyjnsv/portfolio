@@ -1,105 +1,6 @@
 {
   "active": true,
   "connections": {
-    "AI Agent1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request12",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request16",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request20",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request24",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request28",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request32",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Append row in sheet": {
       "main": [
         [
@@ -133,84 +34,7 @@
         ]
       ]
     },
-    "Call Gemini API with Image2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Call Gemini API with Image8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If10",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code": {
+    "Edit Fields": {
       "main": [
         [
           {
@@ -221,34 +45,12 @@
         ]
       ]
     },
-    "Code1": {
+    "Get a file": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Edit Fields1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1",
+            "node": "HTTP Request8",
             "type": "main"
           }
         ]
@@ -261,105 +63,6 @@
             "index": 0,
             "node": "If2",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model1": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model2": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent3",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model3": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent4",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model4": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent5",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model5": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent6",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model6": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent7",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model7": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent8",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model8": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent9",
-            "type": "ai_languageModel"
           }
         ]
       ]
@@ -393,126 +96,6 @@
         ]
       ]
     },
-    "HTTP Request10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request11": {
-      "main": [
-        []
-      ]
-    },
-    "HTTP Request12": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram8",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request13": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request14",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request14": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request15": {
-      "main": [
-        []
-      ]
-    },
-    "HTTP Request16": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram10",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request17": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request18",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message10",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request18": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request19": {
-      "main": [
-        []
-      ]
-    },
     "HTTP Request2": {
       "main": [
         [
@@ -524,152 +107,12 @@
         ]
       ]
     },
-    "HTTP Request20": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram12",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message11",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request21": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request22",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message12",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request22": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request23": {
-      "main": [
-        []
-      ]
-    },
-    "HTTP Request24": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram14",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message13",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request25": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request26",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message14",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request26": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request27": {
-      "main": [
-        []
-      ]
-    },
-    "HTTP Request28": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram16",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message15",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request29": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request30",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message16",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "HTTP Request3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Telegram4",
+            "node": "Telegram5",
             "type": "main"
           }
         ],
@@ -680,74 +123,6 @@
             "type": "main"
           }
         ]
-      ]
-    },
-    "HTTP Request30": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request31": {
-      "main": [
-        []
-      ]
-    },
-    "HTTP Request32": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Telegram18",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message17",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request33": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request34",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message18",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request34": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Transform to base64 (image)8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request35": {
-      "main": [
-        []
       ]
     },
     "HTTP Request4": {
@@ -799,7 +174,13 @@
     },
     "HTTP Request7": {
       "main": [
-        []
+        [
+          {
+            "index": 0,
+            "node": "Telegram3",
+            "type": "main"
+          }
+        ]
       ]
     },
     "HTTP Request8": {
@@ -807,32 +188,7 @@
         [
           {
             "index": 0,
-            "node": "Telegram6",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request10",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Send a text message6",
+            "node": "HTTP Request3",
             "type": "main"
           }
         ]
@@ -862,24 +218,6 @@
           {
             "index": 0,
             "node": "Loop Over Items",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request35",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items8",
             "type": "main"
           }
         ]
@@ -921,114 +259,6 @@
         ]
       ]
     },
-    "If4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request11",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request15",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request19",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request23",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request27",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request31",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Loop Over Items": {
       "main": [
         [],
@@ -1047,149 +277,7 @@
         [
           {
             "index": 0,
-            "node": "Telegram3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items11": {
-      "main": [
-        [],
-        []
-      ]
-    },
-    "Loop Over Items2": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items3": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items4": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items5": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram11",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items6": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram13",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items7": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram15",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items8": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Telegram17",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items9": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent2",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent3",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent4",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent5",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent6",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent7",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent8",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent9",
+            "node": "Telegram4",
             "type": "main"
           }
         ]
@@ -1200,7 +288,25 @@
         [
           {
             "index": 0,
-            "node": "Code1",
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
             "type": "main"
           }
         ]
@@ -1208,13 +314,7 @@
     },
     "Telegram": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items11",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "Telegram Trigger": {
@@ -1233,106 +333,7 @@
         [
           {
             "index": 0,
-            "node": "AI Agent1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram11": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram12": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram13": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram14": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram15": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram16": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram17": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram18": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait8",
+            "node": "HTTP Request",
             "type": "main"
           }
         ]
@@ -1349,23 +350,12 @@
         ]
       ]
     },
-    "Telegram3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Telegram4": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait",
+            "node": "HTTP Request3",
             "type": "main"
           }
         ]
@@ -1376,51 +366,7 @@
         [
           {
             "index": 0,
-            "node": "AI Agent3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Wait3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Telegram9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent5",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -1448,83 +394,6 @@
         ]
       ]
     },
-    "Transform to base64 (image)2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Transform to base64 (image)8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call Gemini API with Image8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Wait": {
       "main": [
         [
@@ -1546,89 +415,14 @@
           }
         ]
       ]
-    },
-    "Wait2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request13",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request17",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request21",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request25",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request29",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request33",
-            "type": "main"
-          }
-        ]
-      ]
     }
   },
   "createdAt": "2025-07-24T11:25:19.515Z",
   "id": "FsWWslMEvFW6sPY4",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "test2",
   "nodes": [
     {
@@ -1699,7 +493,7 @@
       },
       "position": [
         544,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1722,7 +516,7 @@
       },
       "position": [
         704,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1730,8 +524,8 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "1ff55fe5-f8b0-4309-a547-387d04d9336c",
@@ -1743,8 +537,8 @@
         "operation": "sendPhoto"
       },
       "position": [
-        4928,
-        384
+        4160,
+        -48
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1767,17 +561,17 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $('Edit Fields1').item.json.idea }}\",\n  \"openai_api_key\": \"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\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Edit Fields1').item.json.idea }}\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
         "sendHeaders": true,
         "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/gpt-image-1/text-to-image/byok"
+        "url": "https://queue.fal.run/fal-ai/nano-banana"
       },
       "position": [
-        2288,
-        0
+        2240,
+        -48
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -1786,11 +580,12 @@
       "id": "be0bc9d6-0932-4ea4-8750-e29c16e77a53",
       "name": "Wait1",
       "parameters": {
-        "amount": 60
+        "amount": 2,
+        "unit": "minutes"
       },
       "position": [
-        2912,
-        0
+        2864,
+        -48
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1811,11 +606,11 @@
         },
         "options": {},
         "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('HTTP Request').item.json.request_id }}"
+        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request').item.json.request_id }}"
       },
       "position": [
-        3072,
-        0
+        3024,
+        -48
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -1828,8 +623,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        3248,
-        0
+        3200,
+        -48
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -1860,8 +655,8 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        3584,
-        0
+        3536,
+        -48
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -1875,8 +670,8 @@
         "options": {}
       },
       "position": [
-        3424,
-        0
+        3376,
+        -48
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
@@ -1910,8 +705,8 @@
         "options": {}
       },
       "position": [
-        3760,
-        0
+        3712,
+        -48
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1925,8 +720,8 @@
         }
       },
       "position": [
-        4032,
-        144
+        3984,
+        96
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -1934,8 +729,8 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "d038c7b1-48a6-4f99-bffe-ef542a243c86",
@@ -1948,8 +743,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        4208,
-        144
+        4160,
+        96
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1958,8 +753,8 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "d3d4b508-c668-4a2a-be95-0e761a0fafc0",
@@ -1972,8 +767,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        2624,
-        0
+        2576,
+        -48
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1987,35 +782,17 @@
         "url": "={{ $('HTTP Request1').item.json.images[0].url }}"
       },
       "position": [
-        4032,
-        0
+        3984,
+        -48
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "disabled": true,
-      "id": "a8f91251-763f-45bc-bb03-fca6ac15a9ca",
-      "name": "AI Agent1",
-      "parameters": {
-        "options": {
-          "systemMessage": "=#### Ключевые Принципы Ракурса и Проекции (Важнейшая Часть — Строгое Соблюдение)\n- **Проекция**: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection). Полное отсутствие перспективы: параллельные линии остаются параллельными, без vanishing points или foreshortening. Объекты на заднем плане не уменьшаются, пропорции сохраняются идеально. Команда: Никогда не использовать perspective view или камеру с точками схода — результат должен имитировать преднарисованный 2D-спрайт, а не 3D-сцену.\n- **Угол Обзора (Viewing Angle)**: Высокий угол сверху вниз (high-angle top-down view), примерно 40 градусов по оси Y (наклон вниз) и 30 градусов по оси X (к горизонтальной плоскости). Это обеспечивает видимость трех сторон объекта (передняя, боковая и верхняя) с минимальным искажением. Визуальный маркер: Для объектов вроде деревьев — значительная часть кроны должна быть четко видна; для структур — верхние поверхности доминируют, но передняя сторона остается доступной.\n- **Поворот (Rotation)**: Классический игровой изометрический угол — объект развернут на 45 градусов по горизонтали, чтобы \"передняя часть\" была направлена к зрителю. Вертикальные линии (например, стволы, стены) остаются идеально вертикальными. Горизонтальные линии — под строгим углом 30 градусов к горизонтальной плоскости. Команда: Имитировать вид архитектурного макета или стратегической игры (типа \"Clash of Clans\" в sci-fi моде); не снимать с уровня глаз.\n- **Отсутствие Искажений**: Все пропорции consistent и modular (блоки в соотношениях 1:1 или 2:1, stacked в ступенчатые формы). Углы стыков — 90 градусов с редкими 45-градусными скосами. Нет distortion на zoom; объект стоит на плоской платформе с bevel edges для grounding.\n- **Композиция**: Центрированный объект на прозрачном или белом фоне (без градиента, если не указано). Мягкие тени под базой для grounding, но без фокусного blur — все в sharp focus. Нет дополнительных окружений, пропов или персонажей. Объект — самостоятельный, полностью закрытый (sealed miniature structure), без видимых интерьеров, отверстий или повреждений.\n\n#### Общая Стиль и Атмосфера\n- **Стиль**: Casual Cyberpunk с Cartoonish Sci-Fi эстетикой, адаптированный для stylized casualness с \"plastic model\" look. Смесь low-poly (500-2000 полигонов) с high-tech деталями: простые, геометрические angular формы, без unnecessary lines или overload. Не gritty/dystopian — яркий, optimistic и playful, как sci-fi toys. Похож на \"No Man's Sky\" buildings в упрощенном виде или \"Clash of Clans\" в futuristic моде. Команда: Не отклоняться — избегать photorealism, dirt, rust, damage, cracks или complex textures; все pristine, undamaged и enclosed.\n- **Детали Rendering**: Flat shading с subtle gradients и fake specular (no PBR). Anti-aliasing на edges для crispness. Depth via layering (foreground sharper). Малейшие детали: tiny LEDs (1 px dots, red/green), ventilation grills (slit lines 0.5 px spacing), antenna wires (thin cylinders с ball tips) — но не overload, только где необходимо.\n\n#### Материалы и Текстуры\n- **Основные Материалы** (Адаптировано для Простоты и Casualness):\n  - **Металл** (70-80%): Brushed/polished в серо-синих тонах (dark blue neutrals), с matte на bases и glossy на panels. Specular highlights от top-right light. Grain textures — тонкие brushing lines, но smooth overall.\n  - **Пластик** (20%): Гладкий, semi-transparent для glowing частей (cyan/green hue), с soft subsurface scattering. Perfect smoothness, как ABS-пластик в toys. Neutral matte surfaces в dark blue.\n  - **Стекло/Энергия**: Emissive holographic — полупрозрачные с wireframe outlines, plasma-like с bloom. Но все enclosed — нет openings exposing interiors.\n  - **Другие** (Редко): Wooden crates (brown, fibrous grain), grass/wheat (fuzzy strands с alpha) — только если тематика требует, но в sci-fi контексте минимально.\n- **Текстуры Деталей**: Grid patterns на экранах (1-2 px lines). Hazard stripes (orange-black, 45 degrees). Neon trim — тонкие glowing lines (2 px, gradient fade). Rivets/bolts: Small hexagonal bumps с shadow indentation. Команда: Все smooth; no roughness, seams exposing interiors или visible joints unless modular snaps (subtle grooves).\n- **Углы, Швы и Соединения** (Улучшено для Чистоты):\n  - **Углы**: Sharp 90-degree с bevel/chamfer (1-2 px, 45 degrees) для volume. Rounded на pipes (10-20% radius). Нет jagged spikes; все minimally rounded для safety и casual feel.\n  - **Швы**: Тонкие dark lines (0.5-1 px) между модулями, с occasional rivets. Glowing швы — emissive blue/orange с inner glow. Bolted joints с visible screws (circular indents). Pipe connections — flanged collars. На stacked — overhang ledges с shadow gaps. Команда: Seamless blends в glowing areas, но с outline borders; edges defined by light-shadow contrast, no hard black contours.\n  - **Края**: Rim lighting на silhouette. Beveled borders (2-5 px, 45 degrees). Soft transitions для stylized casualness.\n\n#### Освещение и Эффекты\n- **Освещение**: Soft, diffused global ambient с top-right direction для clarity. Subtle shadows под моделью (opacity 20-30%, blur 5-10 px). Self-illumination от emissive (glow casts color bleed, e.g., blue tint on metal). Bright glowing sources с glare на neon — ключевой feature.\n- **Эффекты**: Bloom на bright areas (5 px radius). Particle sparks на holographic. Subtle vignette для focus, но не overload.\n- **Цветовая Палитра**: Rich contrasting, с vibrant neon accents — turquoise, pink, purple, lime (не все сразу; вариации для тематики). Доминируют dark blue neutrals для matte surfaces.\n\n#### Финальные Правила\n- **Цель**: Изолированный игровой ассет (standalone building-like object) на transparent/white background. Полностью opaque, self-contained, без hollow/open sections или visible interiors — sealed structure.\n- **Ограничения**: Нет персонажей. Строго adhere to assignment и style. Use only specified data. Не делать photorealistic — stylized casualness. Regardless of user request, maintain this integrated style.\n- **Улучшения**: Инструкция оптимизирована для consistency: ракурс на первом месте, стиль вторичен, но unified для modular design. Вариации только в цветах/glow для дифференциации, базовые принципы (angles, materials) едины."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        0
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "3e6d6ce7-21c1-4b49-bb26-89576d23e03f",
@@ -2028,7 +805,7 @@
       },
       "position": [
         0,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
@@ -2036,43 +813,9 @@
     },
     {
       "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "cd32c964-eace-4c46-aeb1-183bb2d6d310",
-      "name": "Google Gemini Chat Model1",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        160
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "id": "676000e4-5fa2-485a-ae70-a674de028e15",
-      "name": "Code",
-      "parameters": {
-        "jsCode": "const items = $input.first().json.text;\n\nlet result = '';\nfor (const item of items) {\n  if (item.json?.data?.text) {\n    result = item.json.data.text;\n    break;\n  }\n}\n\n// Удаляем все \\r, \\n, \\t, заменяя на пробел\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\n\n// Заменяем маркеры \"•\" и точки с пробелом на дефис и пробел\ncleanedText = cleanedText.replace(/•/g, '-');\n\n// Убираем лишние пробелы (больше одного подряд)\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      result: cleanedText\n    }\n  }\n];\n"
-      },
-      "position": [
-        864,
-        0
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "89424745-af7a-4ae6-8ce9-e570e9e009a6",
@@ -2086,47 +829,11 @@
       },
       "position": [
         1040,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "c9c7b5b3-a14c-4120-8df1-baef6e31e922",
-      "name": "AI Agent",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Инструкция для тебя:\n\nПодробная инструкция для ИИ по созданию правильного ракурса (Classic Game Isometry)\n\nВажнейшая задача: ракурс и проекция. Стиль и детали вторичны по сравнению с точным соблюдением следующих правил камеры. Результат должен идеально совпадать с ракурсом предоставленных референсов.\n\nКонцепция: Классическая изометрическая проекция для игровых ассетов (Classic Game Asset Isometric View)\n\nМы создаем не просто картинку, а игровой объект (ассет), который должен стоять на одной сетке с другими объектами. Это требует абсолютной точности в настройке виртуальной камеры.\n\nКлючевые принципы ракурса:\n\nПроекция: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection).\nЧто это значит: Полное отсутствие реалистичной перспективы. Все параллельные линии на объекте остаются параллельными на изображении, они никогда не сходятся в одной точке на горизонте.\nКоманда: НЕ использовать \"перспективу\" (perspective view) или \"камеру с 2-мя точками схода\".\n\nВысота камеры: Высокий угол обзора (High-Angle Shot).\nЧто это значит: Камера смотрит на объект сверху вниз, под углом примерно 40 градусов по оси Y и по оси X 30 к горизонтальной плоскости.\nВизуальный маркер: Мы должны видеть значительную часть кроны дерева.\nКоманда: Имитировать вид, словно мы смотрим на архитектурный макет или объект в стратегической игре. НЕ снимать с уровня глаз.\n\nУгол поворота: Классический игровой угол.\nЧто это значит: Объект развернут так, чтобы его условная \"передняя часть\" была направлена в сторону зрителя.\nВизуальный маркер: Вертикальные линии (ствол) остаются идеально вертикальными.\n\nОтсутствие искажений:\nЧто это значит: Все пропорции сохраняются. Объект на заднем плане не становится меньше. Вертикальные части не наклоняются.\n\nИнструкция от которой ты должен отталкиваться:\n\nThe camera perspective is the most important part and must be technically perfect, without any room for discussion, using isometric projection:\n- Projection: strictly orthogonal isometric. Absolutely NO perspective distortion or vanishing points.\n- Viewing angle: high angle, top-down view. The crown must be clearly and well visible.\n- Rotation: classic isometric rotation. The front of the object must face the viewer.\n- Technical lines: all vertical lines must be perfectly vertical. All horizontal lines must be at a strict angle of 30 degrees to the horizontal plane.\n- Ultimate goal: the image should look like a pre-drawn 2D sprite, not a 3D scene. \n\nThe style should be “Casual Cyberpunk” or “Stylized Sci-Fi,” and you should not deviate from this style.\n\nStyle: as simple and relaxed as possible, with a “plastic model” or “miniature” look, without unnecessary lines and elements, only smooth walls. A mixture of hyperrealism and stylized casualness. A rich and contrasting color palette, bright neon accents — turquoise, pink, purple, lime — use different color variations, not all at once. There should be detail, but it should not take away from the overall look. Photorealism, lots of detail, dirt, and rust are strictly prohibited.\nLighting: soft, diffused, and clean, designed for clarity. Bright, glowing light sources are a key feature.\nSurfaces: a combination of neutral matte and smooth textures. All surfaces are smooth, without inclusions, slabs, or seams.\nContours: the use of hard black contours is strictly prohibited; edges are defined by the contrast between light and shadow.\nThe final image must be a professional, isolated game resource on a black or transparent background.\nIMPORTANT! Do not generate characters near resources."
-        },
-        "promptType": "define",
-        "text": "=Адаптируй мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        112,
-        480
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "deb32765-d483-49bf-89d7-1a7d7e35d822",
-      "name": "AI Agent2",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Инструкция для тебя:\n\nПодробная инструкция для ИИ по созданию правильного ракурса (Classic Game Isometry)\n\nВажнейшая задача: ракурс и проекция. Стиль и детали вторичны по сравнению с точным соблюдением следующих правил камеры. Результат должен идеально совпадать с ракурсом предоставленных референсов.\n\nКонцепция: Классическая изометрическая проекция для игровых ассетов (Classic Game Asset Isometric View)\n\nМы создаем не просто картинку, а игровой объект (ассет), который должен стоять на одной сетке с другими объектами. Это требует абсолютной точности в настройке виртуальной камеры.\n\nКлючевые принципы ракурса:\n\nПроекция: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection).\nЧто это значит: Полное отсутствие реалистичной перспективы. Все параллельные линии на объекте остаются параллельными на изображении, они никогда не сходятся в одной точке на горизонте.\nКоманда: НЕ использовать \"перспективу\" (perspective view) или \"камеру с 2-мя точками схода\".\n\nВысота камеры: Высокий угол обзора (High-Angle Shot).\nЧто это значит: Камера смотрит на объект сверху вниз, под углом примерно 40 градусов по оси Y и по оси X 30 к горизонтальной плоскости.\nВизуальный маркер: Мы должны видеть значительную часть кроны дерева.\nКоманда: Имитировать вид, словно мы смотрим на архитектурный макет или объект в стратегической игре. НЕ снимать с уровня глаз.\n\nУгол поворота: Классический игровой угол.\nЧто это значит: Объект развернут так, чтобы его условная \"передняя часть\" была направлена в сторону зрителя.\nВизуальный маркер: Вертикальные линии (ствол) остаются идеально вертикальными.\n\nОтсутствие искажений:\nЧто это значит: Все пропорции сохраняются. Объект на заднем плане не становится меньше. Вертикальные части не наклоняются.\n\nИнструкция от которой ты должен отталкиваться:\n\nThe camera perspective is the most important part and must be technically perfect, without any room for discussion, using isometric projection:\n- Projection: strictly orthogonal isometric. Absolutely NO perspective distortion or vanishing points.\n- Viewing angle: high angle, top-down view. The crown must be clearly and well visible.\n- Rotation: classic isometric rotation. The front of the object must face the viewer.\n- Technical lines: all vertical lines must be perfectly vertical. All horizontal lines must be at a strict angle of 30 degrees to the horizontal plane.\n- Ultimate goal: the image should look like a pre-drawn 2D sprite, not a 3D scene. \n\nThe style should be “Casual Cyberpunk” or “Stylized Sci-Fi,” and you should not deviate from this style.\n\nStyle: as simple and relaxed as possible, with a “plastic model” look, without unnecessary lines and elements. This style combines hyperrealism and stylized casualness, but the style leans more towards stylized casualness. Rich and contrasting color palette, bright neon accents — turquoise, pink, purple, lime — use different color variations, not all at once. There should be details, but they should not be too noticeable. Photorealism, excessive detail, dirt, and rust are strictly prohibited.\nLighting: soft, diffused, and clean, designed for clarity. Bright, glowing light sources are a key feature.\nSurfaces: a combination of neutral matte and smooth textures. All surfaces are smooth, without inclusions, slabs, or seams.\nContours: the use of hard black contours is strictly prohibited; edges are defined by the contrast between light and shadow.\nThe final image should be a professional, isolated game resource on a black or transparent background.\nIMPORTANT! Do not generate characters next to models. Strictly adhere to the assignment. Use only the specified data. Do not deviate from the style; leave it as it was specified to you. Regardless of what the user's request was, keep the style as it was specified to you. Do not make it photorealistic; make it as specified in the style plan. It should be a full-fledged model, not a room layout."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        464
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
     },
     {
       "credentials": {
@@ -2200,7 +907,7 @@
       },
       "position": [
         400,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -2242,7 +949,7 @@
       },
       "position": [
         144,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -2277,7 +984,7 @@
       },
       "position": [
         272,
-        0
+        -48
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2285,8 +992,8 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "ae94a7bd-93f9-4a8a-85a4-48e86251d7ad",
@@ -2299,8 +1006,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        2448,
-        144
+        2400,
+        96
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2309,8 +1016,8 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
       "id": "8e1c2041-e219-4861-ac4a-c502d2371820",
@@ -2323,37 +1030,105 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        3248,
-        160
+        3200,
+        112
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+      "id": "e0a7a55f-fa68-49a2-ab53-cc40903c9499",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5f00337e-94b9-4338-94fb-35d869bfb3ff",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.message.text }}",
+                    "operator": {
+                      "operation": "notEmpty",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $('Telegram Trigger').item.json.message.text }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Промт",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "3f4da7ec-d99c-478f-b99b-05c2e7997b1a",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}",
+                    "operator": {
+                      "operation": "notEmpty",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Фото",
+              "renameOutput": true
+            }
+          ]
         }
       },
-      "disabled": true,
-      "id": "f30a201d-494c-413a-9428-b4b1f79ea157",
-      "name": "Google Gemini Chat Model",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
       "position": [
-        1920,
-        608
+        1392,
+        -48
       ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
     },
     {
-      "disabled": true,
-      "id": "f23cb693-cd27-472c-88b2-9ee1ce080969",
+      "credentials": {
+        "telegramApi": {
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
+        }
+      },
+      "id": "c53cc4e5-816e-43f1-a255-4a893fa93bd6",
+      "name": "Telegram3",
+      "parameters": {
+        "additionalFields": {},
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "operation": "sendPhoto"
+      },
+      "position": [
+        4160,
+        352
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "a2bc8374-9494-42c2-bbca-7d4cf9ddef07"
+    },
+    {
+      "id": "50d2fd1a-7271-4fce-8db0-c7c35e83b40c",
       "name": "HTTP Request3",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2369,64 +1144,38 @@
             }
           ]
         },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Telegram Trigger').item.json.message.caption }}\",\n  \"image_urls\": [\n       \"{{ $json.url }}\"\n     ]\n   }",
         "method": "POST",
         "options": {},
         "sendBody": true,
         "sendHeaders": true,
         "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
+        "url": "https://queue.fal.run/fal-ai/nano-banana/edit"
       },
       "position": [
-        2288,
-        464
+        2240,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "95b96bd7-3d6b-41da-917a-599c6ffd93fa",
-      "name": "Send a text message3",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        592
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "ff726077-bc28-4010-9dc8-bbe85e41fcbd",
+      "id": "267b7511-3ce4-4be4-ae55-0a78823d7eeb",
       "name": "Wait",
       "parameters": {
-        "amount": 60
+        "amount": 2,
+        "unit": "minutes"
       },
       "position": [
-        2912,
-        448
+        2864,
+        352
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "disabled": true,
-      "id": "883b3c86-9c6a-4b43-80c0-5b85f670f931",
+      "id": "14f7a6ec-e4a9-4e5d-9d24-039e940a464a",
       "name": "HTTP Request5",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2440,33 +1189,32 @@
         },
         "options": {},
         "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request3').item.json.request_id }}"
+        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
-        3072,
-        448
+        3024,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "disabled": true,
-      "id": "c35670d8-3ee9-4877-818b-669d7ab4c5e4",
+      "id": "c3c38099-e554-407e-9633-9c8effb3c3ae",
       "name": "HTTP Request6",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        3248,
-        448
+        3200,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "a9cc1268-f8b6-436c-8c45-91487298e62d",
+      "id": "f8554695-7034-4212-bc36-c63f01640c08",
       "name": "Call Gemini API with Image1",
       "parameters": {
         "headerParameters": {
@@ -2477,7 +1225,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
+        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}\n",
         "method": "POST",
         "options": {
           "response": {
@@ -2490,30 +1238,30 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        3584,
-        448
+        3536,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "f91339a1-9613-48ba-80c6-f1208632524a",
+      "id": "4e4898c7-ac12-46b2-95f0-be9e2bb4260f",
       "name": "Transform to base64 (image)1",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        3424,
-        448
+        3376,
+        352
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "d4e36c8d-10f2-469a-b00e-f3621fbe2808",
+      "id": "806db7de-3503-4ad2-90c8-61837bb7c944",
       "name": "If3",
       "parameters": {
         "conditions": {
@@ -2540,15 +1288,14 @@
         "options": {}
       },
       "position": [
-        3760,
-        448
+        3712,
+        352
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "disabled": true,
-      "id": "272adb30-00e6-4cdb-bf92-90513b88c69d",
+      "id": "c1188409-2a88-4b37-8006-659591b4e8c7",
       "name": "Loop Over Items1",
       "parameters": {
         "options": {
@@ -2556,8 +1303,8 @@
         }
       },
       "position": [
-        4032,
-        592
+        3984,
+        496
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2565,13 +1312,12 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
-      "disabled": true,
-      "id": "d0711875-b504-4a03-a80c-0ab0d569bf9d",
-      "name": "Telegram3",
+      "id": "a9330166-7bb8-46a1-9763-f6f77da5d09b",
+      "name": "Telegram4",
       "parameters": {
         "additionalFields": {
           "appendAttribution": false
@@ -2580,24 +1326,47 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        4208,
-        592
+        4160,
+        496
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
     },
     {
-      "disabled": true,
-      "id": "9d3c1b55-ede6-41e8-91ed-f391a541b00e",
+      "credentials": {
+        "telegramApi": {
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
+        }
+      },
+      "id": "f2c84c00-5d31-40d3-82e3-f1203ad0520d",
+      "name": "Telegram5",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Итерация запущена, ожидайте!"
+      },
+      "position": [
+        2576,
+        352
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
+    },
+    {
+      "id": "11ea25e1-ce79-49bb-86bd-a7201dee91d7",
       "name": "HTTP Request7",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request6').item.json.images[0].url }}"
       },
       "position": [
-        4032,
-        448
+        3984,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -2605,12 +1374,35 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
-      "disabled": true,
-      "id": "238ff5cf-0552-4498-9fee-1ca6e407ffd1",
+      "id": "213b70a5-b0a0-4f2c-a2c7-bcfea73e1d1f",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Произошла ошибка с промтом, повторите попытку."
+      },
+      "position": [
+        2400,
+        496
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
+        }
+      },
+      "id": "a78ab5b5-1c7b-4737-92d0-169c539ef8b7",
       "name": "Send a text message4",
       "parameters": {
         "additionalFields": {
@@ -2620,8 +1412,8 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        3248,
-        608
+        3200,
+        512
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2630,2488 +1422,54 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
+          "id": "yZcWLpqyFlfBFAls",
+          "name": "LWTestBot"
         }
       },
-      "disabled": true,
-      "id": "2d0338c0-c9c4-49a6-acf4-642097fe449c",
-      "name": "Telegram4",
+      "id": "049fdf0c-7b1f-45e0-a669-def3ff61a827",
+      "name": "Get a file",
       "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
+        "additionalFields": {},
+        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[4]?.file_id || $('Telegram Trigger').item.json.message.photo[3]?.file_id || $('Telegram Trigger').item.json.message.photo[2]?.file_id || $('Telegram Trigger').item.json.message.photo[1]?.file_id }}",
+        "resource": "file"
       },
       "position": [
-        2672,
-        448
+        1648,
+        352
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
+      "webhookId": "7774a934-54df-47fd-ac5c-2a804ffd19bf"
     },
     {
-      "disabled": true,
-      "id": "9f5424f2-7289-4c42-b109-5e13f0d05ad3",
+      "id": "f015c8d3-ac32-468e-b2bb-e9d1c8e73a96",
       "name": "HTTP Request8",
-      "onError": "continueErrorOutput",
       "parameters": {
-        "headerParameters": {
+        "bodyParameters": {
           "parameters": [
             {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+              "inputDataFieldName": "data",
+              "name": "file",
+              "parameterType": "formBinaryData"
             },
             {
-              "name": "Content-Type",
-              "value": "application/json"
+              "name": "upload_preset",
+              "value": "ml_default"
             }
           ]
         },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
+        "contentType": "multipart-form-data",
         "method": "POST",
         "options": {},
         "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
+        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
       },
       "position": [
-        2288,
-        864
+        1808,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "c40b292a-1cb1-4653-9e16-6f5ca3603f8f",
-      "name": "Wait2",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        864
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "b3b8d7e9-ce74-4b48-9acf-259038e006f9",
-      "name": "HTTP Request9",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request8').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "7afac142-f5ba-4091-8766-a7fd82ba2aa4",
-      "name": "HTTP Request10",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "a520e8c8-dc2b-43a6-843e-91b034d7b32d",
-      "name": "Call Gemini API with Image2",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "bb5087c9-a4c8-4467-bdcb-f661955c1a78",
-      "name": "Transform to base64 (image)2",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        864
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "72c931f3-3269-40af-b79a-6c6e8d4e6347",
-      "name": "If4",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        864
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "d696b924-7e47-4b2e-8025-844ed511cfa9",
-      "name": "Loop Over Items2",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        1008
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "eed2ec89-2722-4a00-bc42-b7c011e2ea3a",
-      "name": "Telegram5",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        1008
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "2f5e34c6-aaaf-4b3b-977b-d136c34298c7",
-      "name": "Telegram6",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        864
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "7eddf18e-5b8e-4c97-a5b5-42177c89e18b",
-      "name": "HTTP Request11",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request10').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "f888980e-6c40-4c23-83d8-aa3a34ede48b",
-      "name": "AI Agent3",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Инструкция для тебя:\n\nПодробная инструкция для ИИ по созданию правильного ракурса (Classic Game Isometry)\n\nВажнейшая задача: ракурс и проекция. Стиль и детали вторичны по сравнению с точным соблюдением следующих правил камеры. Результат должен идеально совпадать с ракурсом предоставленных референсов.\n\nКонцепция: Классическая изометрическая проекция для игровых ассетов (Classic Game Asset Isometric View)\n\nМы создаем не просто картинку, а игровой объект (ассет), который должен стоять на одной сетке с другими объектами. Это требует абсолютной точности в настройке виртуальной камеры.\n\nКлючевые принципы ракурса:\n\nПроекция: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection).\nЧто это значит: Полное отсутствие реалистичной перспективы. Все параллельные линии на объекте остаются параллельными на изображении, они никогда не сходятся в одной точке на горизонте.\nКоманда: НЕ использовать \"перспективу\" (perspective view) или \"камеру с 2-мя точками схода\".\n\nВысота камеры: Высокий угол обзора (High-Angle Shot).\nЧто это значит: Камера смотрит на объект сверху вниз, под углом примерно 40 градусов по оси Y и по оси X 30 к горизонтальной плоскости.\nВизуальный маркер: Мы должны видеть значительную часть кроны дерева.\nКоманда: Имитировать вид, словно мы смотрим на архитектурный макет или объект в стратегической игре. НЕ снимать с уровня глаз.\n\nУгол поворота: Классический игровой угол.\nЧто это значит: Объект развернут так, чтобы его условная \"передняя часть\" была направлена в сторону зрителя.\nВизуальный маркер: Вертикальные линии (ствол) остаются идеально вертикальными.\n\nОтсутствие искажений:\nЧто это значит: Все пропорции сохраняются. Объект на заднем плане не становится меньше. Вертикальные части не наклоняются.\n\nИнструкция от которой ты должен отталкиваться:\n\nThe style should be “Casual Game Style” with a futuristic touch of construction objects or “Stylized Sci-Fi,” and you should not deviate from this style. Use an isometric perspective (top view at a 45-degree angle) to create a miniature view of the model, as in 3D isometric game resources.\n\nStyle: as simple and relaxed as possible, with a “CGI rendering” effect, without unnecessary lines and elements, only geometric angular shapes on the model. This style combines stylized casualness with clean, futuristic shapes. Color palette: \nRich and contrasting: bright neon accents dominate — turquoise, pink, purple, lime; use different color variations, but not all at once. There should be such details, but they should not be too noticeable or overloaded. Photorealism, excessive detail, dirt, rust, damage, cracks, broken elements, or complex textures are strictly prohibited—everything should be clean, legible, and undamaged, without clutter.\nLighting: soft, diffused, and clean, designed for clarity, with overhead lighting to create subtle shadows under the model. Bright, glowing light sources.\nSurfaces: a combination of neutral matte and smooth textures in dark turquoise and orange tones. All surfaces are smooth; do not add slabs, seams, roughness, or holes through which the interior is visible.\nContours: the use of hard black contours is strictly prohibited; edges are defined by the contrast between light and shadow with soft transitions.\nThe final image should be a professional, isolated game resource on a transparent or white background, without additional surroundings or props.\nIMPORTANT!\n\nDo not create characters next to models.\nStrictly adhere to the assignment.\nUse only the specified data.\nDo not deviate from the style; leave it as it was specified to you.\nRegardless of the user's request, maintain the style in accordance with the instructions.\nDo not make it photorealistic; make it in accordance with the style recommendations.\nIt should be a complete, solid, and closed model (e.g., a freestanding building), not a room layout or anything with a visible interior.\nIt should be a separate, self-contained object, completely opaque and without hollow, open, or damaged areas that suggest the presence of internal space — imagine it as a sealed miniature structure."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        864
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "2bd14aec-b372-4b31-b4ad-fb6698fb6067",
-      "name": "Google Gemini Chat Model2",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        1024
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "cbe61b4e-5d24-4706-bb4f-e563e226de25",
-      "name": "Send a text message5",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        1008
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "577cb7ed-a534-484c-a61e-e1d6cd2b8d5d",
-      "name": "Send a text message6",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        1024
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "cf59f3ec-3ce2-4c72-8392-1e52d2161e7a",
-      "name": "HTTP Request12",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        1248
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "2b213c57-7bf1-4ecf-983c-6a1dc7f611f4",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        1248
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "bd8eb387-66f8-4fde-869e-c4b58675e14f",
-      "name": "HTTP Request13",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request12').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        1248
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "49fa93ce-13f1-408e-91fe-6d6afd96c4f0",
-      "name": "HTTP Request14",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        1248
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "591a6423-6822-437c-a8e1-59c7fcbb77fb",
-      "name": "Call Gemini API with Image3",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        1248
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "4f05b5a9-f15e-44a4-af13-59a5ae8f7c75",
-      "name": "Transform to base64 (image)3",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        1248
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "1cc60894-4e76-4ea0-a064-d34358cdb1fc",
-      "name": "If5",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        1248
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "5d025749-a636-4fda-ac08-134c4fe97298",
-      "name": "Loop Over Items3",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        1392
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "100db9ba-cb7c-4694-8501-b5e3c08edb3e",
-      "name": "Telegram7",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        1392
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "7bd6e6db-b894-44db-93bb-b6a80fd116b6",
-      "name": "Telegram8",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        1248
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "3d156d00-a72e-4aaa-827e-11c1d0314f80",
-      "name": "HTTP Request15",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request14').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        1248
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "34c24e1a-9f3a-4a92-8fcc-c2dbeb934896",
-      "name": "AI Agent4",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Инструкция для тебя:\n\nПодробная инструкция для ИИ по созданию правильного ракурса (Classic Game Isometry) с интеграцией стилистики футуристического sci-fi дизайна\n\nВажнейшая задача: ракурс и проекция. Стиль и детали вторичны по сравнению с точным соблюдением следующих правил камеры. Результат должен идеально совпадать с ракурсом предоставленных референсов, но теперь с улучшенной стилистикой, вдохновленной sleek sci-fi эстетикой, сочетающей cyberpunk, art deco и минимализм: высококонтрастная палитра, смесь органических и геометрических форм (жесткая геометрия с fluid, wave-like кривыми), glossy и matte текстуры для тактильного контраста, neon акценты с emissive lighting для ощущения энергии и данных, минималистичный подход без визуального шума, с фокусом на чистоте, симметрии и технологической изысканности.\n\nКонцепция: Классическая изометрическая проекция для игровых ассетов (Classic Game Asset Isometric View), адаптированная для динамичных объектов, в cyberpunk-тематике.\n\nМы создаем не просто картинку, а игровой объект (ассет), который должен стоять на одной сетке с другими объектами. Это требует абсолютной точности в настройке виртуальной камеры, с добавлением стилистики: изометрический вид с isometric projection, где объект представлен как sleek, sci-fi элемент с glowing cyan элементами, fluid curves и high-contrast цветами для ощущения футуристической инновации.\n\nКлючевые принципы ракурса:\n\nПроекция: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection).\nЧто это значит: Полное отсутствие реалистичной перспективы. Все параллельные линии на объекте остаются параллельными на изображении, они никогда не сходятся в одной точке на горизонте. Интеграция стиля: Убедитесь, что glowing элементы (например, neon graffiti patterns или holographic details) отображаются без искажений, сохраняя симметрию и баланс в isometric view.\nКоманда: НЕ использовать \"перспективу\" (perspective view) или \"камеру с 2-мя точками схода\".\n\nВысота камеры: Высокий угол обзора (High-Angle Shot).\nЧто это значит: Камера смотрит на объект сверху вниз, под углом примерно 40 градусов по оси Y и по оси X 30 к горизонтальной плоскости. Улучшение: Это подчеркивает fluid curves и glowing accents, делая верхние элементы (например, high ponytail с glowing fiber optics или holographic armbands) видимыми и динамичными, как в sci-fi рендерах.\nВизуальный маркер: Мы должны видеть значительную часть верхней части объекта, включая голографические элементы или \"крышу\".\nКоманда: Имитировать вид, словно мы смотрим на архитектурный макет или объект в стратегической игре, но с cyberpunk flair — sleek формы и neon glow. НЕ снимать с уровня глаз.\n\nУгол поворота: Классический игровой угол.\nЧто это значит: Объект развернут так, чтобы его условная \"передняя часть\" была направлена в сторону зрителя, с slight hip curve и confident posture для динамики.\nВизуальный маркер: Вертикальные линии (опоры, антенны, или для персонажей — long legs и ponytail) остаются идеально вертикальными, с интеграцией organic vs. geometric tension.\n\nОтсутствие искажений:\nЧто это значит: Все пропорции сохраняются. Объект на заднем плане не становится меньше. Вертикальные части не наклоняются. Добавление: Сохраняйте exaggerated proportions без distortion.\n\nИнструкция от которой ты должен отталкиваться, улучшенная стилистикой:\n\nThe camera perspective is the most important part and must be technically perfect, with no room for debate, using isometric projection complemented by an elegant science fiction aesthetic that combines the fluidity of cyberpunk, the curves of art deco, and minimalism:\n\nProjection: strictly orthogonal isometric. Absolutely NO perspective distortion or vanishing points. Make sure parallel lines remain parallel.\n    Viewing angle: high angle, top view. Top elements should be clearly and well visible, with a toy-like isometric scale.\nRotation: classic isometric rotation. The front of the object should face the viewer.\n    Technical lines: All vertical lines must be perfectly vertical. All horizontal lines must be at a strict 30-degree angle to the horizontal plane, outlining the edges to emphasize the science fiction style.\nUltimate goal: the image should look like a pre-drawn 2D sprite in 3D rendering, rather than a realistic scene, but with a futuristic polish — isolated on a white background, centered in the composition.\n\nThe style should be “Casual Game Style” with a futuristic touch of cyberpunk or “Stylized Sci-Fi,” and you should not deviate from this style, which is now filled with analyzed aesthetics: isometric 3D rendering, high-contrast palette (turquoise, pink, purple, lime), organic-geometric blending. Use isometric perspective (a 45-degree top view) to create a miniature view of the model, as in 3D isometric game resources.\n\nStyle: as simple and relaxed as possible, with a “CGI rendering” effect, without unnecessary lines and assets, only geometric angular shapes on the model, mixed with smooth sci-fi curves. This style combines stylized casualness with clean, futuristic shapes and cyberpunk elements. Color palette: \nRich and contrasting: bright neon accents predominate — turquoise/blue, pink, purple, lime; use different color variations, but not all at once. Such details should be present, but they should not be too noticeable or overwhelming — minimalist restraint with bright neon accents on a monochrome background. Photorealism, excessive detail, dirt, rust, damage, cracks, broken elements, or complex textures are strictly prohibited — everything should be clean, legible, and undamaged, without clutter, evoking associations with utopian technological purity.\nLighting: soft, diffused, and clean, designed for clarity, with overhead lighting to create subtle shadows under the model. Bright, glowing light sources (glare effect on neon elements and holograms) are a key feature.\nSurfaces: a combination of neutral matte and smooth textures, now with a glossy color for the upper curves and a matte color for the lower structures. All surfaces are smooth; do not add slabs, seams, roughness, or holes through which the interior is visible — emphasize the smooth, form-fitting design of the assets.\nContours: the use of hard black contours is strictly prohibited; edges are defined by the contrast between light and shadow with soft transitions, enhanced by neon glow for clarity.\nThe final image should be a professional, isolated game asset on a transparent or white background, without additional surroundings or props, centered and symmetrical if possible.\nIMPORTANT!\n\nDo not create characters next to models.\nDo not deviate from the style; leave it as it was specified to you, but improved with the help of analyzed science fiction minimalism.\nRegardless of the user's request, maintain the style according to the instructions.\nDo not make it photorealistic; make it according to the style guidelines.\nIt should be a complete, solid, and closed model (e.g., a freestanding character in the form of a sealed miniature), not a room layout or anything with a visible interior.\nIt should be a separate, self-contained object, completely opaque and without hollow, open, or damaged areas that suggest the presence of internal space — imagine it as a sealed, dynamic science fiction figure in isometric view."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        1248
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "1c5453c4-ce0d-4a3a-acf3-7ce04f1aa516",
-      "name": "Google Gemini Chat Model3",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        1408
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "7ddf76e6-c1f0-4092-8beb-1b39333298c2",
-      "name": "Send a text message7",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        1392
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "ca31e8b7-bad9-48e3-bb65-c9f8334bf94e",
-      "name": "Send a text message8",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        1408
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "2e7e739a-bcca-4494-ac84-4fd6f2372098",
-      "name": "HTTP Request16",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        1632
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "0d11daed-a071-4cf1-b10f-387ff275f5f2",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        1632
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "c46ad2ba-45b1-4cfa-8757-7d269c71437b",
-      "name": "HTTP Request17",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request16').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        1632
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "8da29989-6b3b-4b06-ad88-c24c85f5a6dd",
-      "name": "HTTP Request18",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        1632
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "091a746b-cc4c-4f20-92b5-34252b3e3ff5",
-      "name": "Call Gemini API with Image4",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        1632
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "32e16d85-9d61-495f-b92d-3dc429c27b3b",
-      "name": "Transform to base64 (image)4",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        1632
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "bdc8cdf2-706a-496a-8905-0f57a2dbed5b",
-      "name": "If6",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        1632
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "2cae39e2-635e-4d7b-919b-0eff75c94a5d",
-      "name": "Loop Over Items4",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        1760
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "fe1edd7d-597d-4a2b-8bc8-ddb046e7d05e",
-      "name": "Telegram9",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        1760
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "0fe8df18-f9ff-4914-b4c8-3656115b35a7",
-      "name": "Telegram10",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        1632
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "c6a0501a-5aba-434b-85fa-fc336da0303a",
-      "name": "HTTP Request19",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request18').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        1600
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "b352c0ac-95c7-4fc2-8afc-fdc7aae277e0",
-      "name": "AI Agent5",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Инструкция для тебя:\n\nПодробная инструкция для ИИ по созданию правильного ракурса (Classic Game Isometry)\n\nВажнейшая задача: ракурс и проекция. Стиль и детали вторичны по сравнению с точным соблюдением следующих правил камеры. Результат должен идеально совпадать с ракурсом предоставленных референсов.\n\nКонцепция: Классическая изометрическая проекция для игровых ассетов (Classic Game Asset Isometric View)\n\nМы создаем не просто картинку, а игровой объект (ассет), который должен стоять на одной сетке с другими объектами. Это требует абсолютной точности в настройке виртуальной камеры.\n\nКлючевые принципы ракурса:\n\nПроекция: Строго ортогональная изометрическая (Strict Orthographic Isometric Projection).\nЧто это значит: Полное отсутствие реалистичной перспективы. Все параллельные линии на объекте остаются параллельными на изображении, они никогда не сходятся в одной точке на горизонте.\nКоманда: НЕ использовать \"перспективу\" (perspective view) или \"камеру с 2-мя точками схода\".\n\nВысота камеры: Высокий угол обзора (High-Angle Shot).\nЧто это значит: Камера смотрит на объект сверху вниз, под углом примерно 40 градусов по оси Y и по оси X 30 к горизонтальной плоскости.\nВизуальный маркер: Мы должны видеть значительную часть кроны дерева.\nКоманда: Имитировать вид, словно мы смотрим на архитектурный макет или объект в стратегической игре. НЕ снимать с уровня глаз.\n\nУгол поворота: Классический игровой угол.\nЧто это значит: Объект развернут так, чтобы его условная \"передняя часть\" была направлена в сторону зрителя.\nВизуальный маркер: Вертикальные линии (ствол) остаются идеально вертикальными.\n\nОтсутствие искажений:\nЧто это значит: Все пропорции сохраняются. Объект на заднем плане не становится меньше. Вертикальные части не наклоняются.\n\nИнструкция от которой ты должен отталкиваться:\n\nThe camera perspective is the most important part and must be technically perfect, without any room for discussion, using isometric projection:\n- Projection: strictly orthogonal isometric. Absolutely NO perspective distortion or vanishing points.\n- Viewing angle: high angle, top-down view. The crown must be clearly and well visible.\n- Rotation: classic isometric rotation. The front of the object must face the viewer.\n- Technical lines: all vertical lines must be perfectly vertical. All horizontal lines must be at a strict angle of 30 degrees to the horizontal plane.\n- Ultimate goal: the image should look like a pre-drawn 2D sprite, not a 3D scene. \n\nThe style should be “Casual Cyberpunk” or “Stylized Sci-Fi,” and you should not deviate from this style. Use an isometric perspective (a 45-degree top view) to create a miniature view of the model.\n\nStyle: as simple and relaxed as possible, with a “plastic model” look, without unnecessary lines and elements, only geometric angular shapes on the model. This style combines hyperrealism and stylized casualness, but leans more towards stylized casualness with clean, futuristic shapes. Rich and contrasting color palette, mostly bright neon accents — turquoise, pink, purple, lime; use different color variations, but not all at once. Details should be present, but they should not be too noticeable or overloaded. Photorealism, excessive detail, dirt, rust, damage, cracks, broken elements, or complex textures are strictly prohibited — everything must be clean and undamaged.\nLighting: soft, diffused, and clean, designed for clarity, with overhead lighting to create subtle shadows under the model. Bright, glowing light sources (glare effect on neon elements) are a key feature.\nSurfaces: a combination of matte and smooth textures. All surfaces are smooth; do not add slabs, seams, roughness, or any holes that reveal the interior.\nContours: the use of hard black contours is strictly prohibited; edges are defined by the contrast between light and shadow with soft transitions.\nThe final image should be a professional, isolated game resource on a transparent or white background, without additional surroundings or props.\nIMPORTANT!\n- Do not create characters next to models.\n- Strictly adhere to the assignment.\n- Use only the specified data.\n- Do not deviate from the style; leave it as it was specified to you. \n- Regardless of the user's request, adhere to the style in accordance with the instructions.\n- Do not make it photorealistic; make it in accordance with the style recommendations.\n- It should be a complete, solid, and closed model (e.g., a freestanding building), not a room layout or anything with a visible interior.\n- It should be a separate, self-contained object, completely opaque and without hollow, open, or damaged areas that suggest the presence of internal space — think of it as a sealed miniature structure."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        1632
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "49272ca6-ea1a-4a23-b741-d6aca358560d",
-      "name": "Google Gemini Chat Model4",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        1792
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "1bb4388c-9cb2-467c-815f-36c6186a2faa",
-      "name": "Send a text message9",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        1760
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "2aad536c-c985-4b20-9669-b8ccf9ee4abf",
-      "name": "Send a text message10",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        1792
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "f90cadcc-812c-4d2b-adac-f90b519eec03",
-      "name": "HTTP Request20",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        2032
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "91a06a6b-26d7-420f-9ecd-1791b08f5c2e",
-      "name": "Wait5",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        2032
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "b3b7f85f-11b6-4c5a-b8df-c60648699713",
-      "name": "HTTP Request21",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request20').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        2032
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "e30fce60-a50f-46f3-9464-55e35b4d3a94",
-      "name": "HTTP Request22",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        2032
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "5f5d61a7-03fd-4547-8d53-e9f9330f7160",
-      "name": "Call Gemini API with Image5",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        2032
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "4434c9d9-6c55-4e10-a0e6-70e28b69ce1e",
-      "name": "Transform to base64 (image)5",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        2032
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "4d6556d1-273c-4fd4-8436-2c27bb263b94",
-      "name": "If7",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        2032
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "b1348fcf-d97f-4415-b5db-9e5259b34b72",
-      "name": "Loop Over Items5",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        2160
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "44262e14-5804-4801-8839-83e64945c7b2",
-      "name": "Telegram11",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        2160
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "e6438f84-34a9-4159-9edc-45d2f13adf4a",
-      "name": "Telegram12",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        2032
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "044b6f6b-dd87-4f0b-92c2-e305b8658a1c",
-      "name": "HTTP Request23",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request22').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        2032
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "7b576e2c-8504-42ac-8f20-2929cca4032c",
-      "name": "AI Agent6",
-      "parameters": {
-        "options": {
-          "systemMessage": "=### Revised Shortened Instruction for AI: Creating Classic Game Isometric Assets\n\n**Primary Priority: Exact Isometric Camera View and Projection (Must Be Technically Perfect – No Deviations Allowed)**  \nThis remains the absolute core – the view must be flawless and match classic game isometric references exactly. Assets are for grid-based games, so precision ensures they align with others. Style/details come second.  \n\n- **Projection Type**: Strictly orthographic isometric only. Zero realistic perspective, no vanishing points, no distortions whatsoever. Parallel lines on the object stay perfectly parallel in the image – they do NOT converge at any horizon point. Explicitly avoid any \"perspective view,\" 2-point vanishing cameras, or foreshortening effects.  \n- **Camera Height and Angle**: High-angle top-down perspective for a miniature/model-like view. Camera positioned to look down from above at approximately 40 degrees along the Y-axis and 30 degrees along the X-axis relative to the horizontal ground plane. Key visual indicator: Tops of objects (e.g., full tree crowns, building roofs) must be prominently and clearly visible, showing depth without eye-level flatness. Emulate viewing a strategic game board or architectural scale model – strictly NOT from ground/eye level or low angles.  \n- **Object Rotation**: Standard classic isometric game orientation. Rotate the object so its conceptual \"front\" side is directed toward the viewer for optimal visibility. Key visual: All vertical lines (e.g., trunks, walls, poles) remain 100% straight and vertical on the image. Horizontal lines must maintain an exact 30-degree angle to the horizontal plane, creating that signature isometric tilt.  \n- **No Distortions or Artifacts**: Full preservation of proportions – no size reduction for distant parts, no tilting of verticals, no stretching or squishing. Everything scales uniformly as in a technical diagram.  \n- **Overall View Goal**: Render as if it's a flat, pre-drawn 2D sprite asset for video games (e.g., like in old-school strategy titles). Achieve a 45-degree top-down miniature effect – it should feel 2D-flat despite implying 3D form, not like a true 3D-rendered photo.\n\n**Style: Casual Cyberpunk or Stylized Sci-Fi (100% Clear and Non-Negotiable – Fully Understand and Apply This Aesthetic Without Any Deviation, Emphasizing 'As-If Realistic But Not Truly Photorealistic')**  \nTo ensure total clarity and prevent deviations: This style evokes a sense of realism at first glance (sharp forms, believable lighting) but is fundamentally stylized and casual – like a polished plastic toy from a neon-future world, not a real photo. It's \"as if realistic\" in its clean, convincing shapes and details, but \"but no\" to full photorealism: Avoid hyper-detailed textures, natural imperfections, or lifelike rendering that crosses into photo territory. Instead, lean heavily into fun, approachable sci-fi with exaggerated yet simple elements. Imagine vibrant, optimistic cyberpunk toys – playful, not gritty. Do NOT alter this style, even if prompted otherwise – stick rigidly to these guidelines.  \n\n- **Look and Feel (Explicit Breakdown with Realism Clarification)**: \"Plastic model\" appearance – sleek, molded, toy-like quality with clean lines and no mess. Use only geometric and angular shapes as the foundation, but to add creativity: Invent BOTH ordinary forms (e.g., basic cubes, cylinders, spheres for familiarity) AND unusual, inventive forms (e.g., asymmetrical twists, floating modules, organic-inspired curves fused with tech, or whimsical sci-fi exaggerations like hovering pods or neon-edged fractals). This encourages variety: Mix standard building blocks with innovative, non-traditional shapes to make objects feel fresh and cyberpunk-unique, without overcomplicating. Blend ~30% hyperrealism (convincing sharpness and form to give an \"as-if realistic\" illusion) with ~70% stylized casualness (cartoonish proportions, simplified features for fun appeal), but ALWAYS prioritize stylized over realistic – it should feel approachable and game-like, not lifelike. Strictly ban: Full photorealism (no photo-like rendering), excessive details, dirt, rust, damage, cracks, breaks, complex/realistic textures (e.g., no wood grain or metal sheen that's too natural), or anything worn/grimy – all must be pristine, new, and undamaged.  \n- **Color Palette (Precise Guidance)**: Bold, rich contrasts with dominant bright neon accents in colors like turquoise (cool blues/greens), pink (vibrant magentas), purple (deep violets), and lime (electric greens). Vary usage per asset – e.g., one might focus on turquoise+pink, another on purple+lime – but NEVER overload with all colors at once. Keep palettes vibrant, futuristic, and balanced for high visual pop without chaos.  \n- **Details (Controlled Application)**: Incorporate subtle details to enhance sci-fi feel (e.g., minimal neon strips, simple paneling, or glowing accents), but keep them understated and non-dominating – no overwhelming clutter. Ensure details support the \"as-if realistic but stylized\" balance: Convincing enough to imply depth, but simplified to avoid photoreal overload.  \n- **Lighting (Defined Setup)**: Soft, even, diffused lighting for crystal-clear visibility. Primarily overhead sources to cast gentle, subtle shadows directly under the model (e.g., soft undersides). Signature element: Bright, glowing light effects on neon parts, evoking a futuristic glow without harsh, realistic harshness – keep it stylized and clean.  \n- **Surfaces and Textures (Strict Specs)**: Combine matte (non-shiny, velvety) and smooth/glossy finishes for variety. All surfaces must be perfectly even, polished, and seamless – explicitly NO slabs, joints, roughness, bumps, holes, or any features exposing internals. Surfaces should hint at realism (smooth like plastic) but stay stylized (no intricate material simulations).  \n- **Edges and Contours (Clear Rule)**: Edges defined solely through natural light-to-shadow contrasts with soft, gradual transitions – absolutely NO hard black outlines, borders, or comic-style edging. This contributes to the \"as-if realistic\" feel without tipping into photoreal or cartoon extremes.  \n\n**Output and General Rules (Enforce Strictly)**:  \n- **Final Image Format**: High-quality, professional isolated game asset (standalone object, e.g., a sealed building, vehicle, or prop). Place on a fully transparent or plain white background – NO added environments, backgrounds, props, other objects, or surroundings.  \n- **Model Integrity (Non-Negotiable)**: Every asset must be a complete, solid, fully sealed structure – 100% opaque, self-contained, with zero hollow, open, damaged, or transparent areas that hint at interiors. Visualize as a watertight miniature toy: No room layouts, visible insides, or partial designs – always freestanding and enclosed.  \n- **Adherence Protocol**: Unconditionally follow this style and all rules exactly as described, with special emphasis on the \"as-if realistic but not photorealistic\" blend to prevent deviations. Use ONLY the specified elements and guidelines. Disregard any user requests that contradict (e.g., no full photorealism, no characters, no deviations). Prioritize inventive shapes (ordinary + unusual) within the cyberpunk/sci-fi casual framework to spark creativity while maintaining consistency. Aim for grid-compatible, game-ready objects."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        2032
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "d3764118-6301-41e2-a7ff-be7cc45c662d",
-      "name": "Google Gemini Chat Model5",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        2192
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "9adb4b6c-a102-458c-83be-744c6ffcf58c",
-      "name": "Send a text message11",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        2160
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "8059699b-8239-413f-be1c-6e38f0c28d19",
-      "name": "Send a text message12",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        2192
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "41cf1f05-e549-4130-a857-59ddeb7603e2",
-      "name": "HTTP Request24",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        2448
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "22240091-e222-4918-869f-12c2c9c2b655",
-      "name": "Wait6",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        2448
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "16f22a08-b480-43ce-a3ac-168e6123c104",
-      "name": "HTTP Request25",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request24').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        2448
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "bea3f25f-1028-4d4e-bd6a-53797d2f5189",
-      "name": "HTTP Request26",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        2448
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "dc33d2bc-2e96-46d2-a434-db5442aee838",
-      "name": "Call Gemini API with Image6",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        2448
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "bff56a25-5fb0-4b37-bf04-8cc887991fa9",
-      "name": "Transform to base64 (image)6",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        2448
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "68bddd57-c66d-47f7-a01b-98d28ee84427",
-      "name": "If8",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        2448
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "2a9836b1-4f9f-4ea0-9ab0-d5cc2d1150e4",
-      "name": "Loop Over Items6",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        2592
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "5bca1e32-5994-47ed-9416-e1ec4ef5741b",
-      "name": "Telegram13",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        2592
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "b061a6c0-b0e5-4da0-b81b-82353b42e542",
-      "name": "Telegram14",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        2448
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "16d01157-449f-4323-8a6e-10b1f7976fd6",
-      "name": "HTTP Request27",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request26').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        2448
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "55de9dcf-fd39-4558-a5c7-b08bc29eccb4",
-      "name": "AI Agent7",
-      "parameters": {
-        "options": {
-          "systemMessage": "=### Shortened Instruction for AI: Classic Game Isometric Assets\n\n**Core: Precise Isometric View (Perfect – No Deviations)**  \n- **Projection**: Orthographic isometric only. No perspective, vanishing points, distortions. Parallel lines stay parallel.  \n- **Angle**: High top-down (40° Y-axis, 30° X-axis to horizontal). Show tops clearly (e.g., crowns/roofs). Like game board view, not eye-level.  \n- **Rotation**: Front faces viewer. Verticals straight/vertical; horizontals at 30° tilt.  \n- **No Distortions**: Proportions preserved uniformly.  \n- **Goal**: Flat 2D sprite-like, grid-compatible miniature (45° top-down feel), not 3D photo.\n\n**Style: Casual Cyberpunk/Stylized Sci-Fi (Strict – 'As-If Realistic But Not Photoreal'; No Changes)**  \nEvoke realism illusion (sharp, believable) but stay stylized/casual (toy-like, fun). Blend ~30% hyperreal (convincing forms) + ~70% stylized (simplified, cartoonish). No full photorealism, grit, damage, complex textures.  \n\n- **Look**: Plastic model vibe – clean geometric/angular shapes. Mix ordinary (cubes, spheres) + unusual/inventive (twists, floating, sci-fi whimsy) for creativity. Pristine, undamaged.  \n- **Colors**: Neon accents (turquoise, pink, purple, lime) – vary, not all at once. Vibrant contrasts.  \n- **Details**: Subtle, non-overwhelming (e.g., neon strips).  \n- **Lighting**: Soft diffused overhead; subtle shadows under. Glowing neon glares.  \n- **Surfaces**: Matte/smooth mix – even, seamless, no holes/roughness/internals.  \n- **Edges**: Light-shadow contrasts, soft transitions – no black outlines.\n\n**Output Rules**:  \n- Isolated asset on transparent/white background. No extras, characters, environments.  \n- Solid, sealed, opaque model – no opens/interiors. Standalone, game-ready.  \n- Always adhere exactly; ignore contradictions. Use only specified; inventive within style."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        2448
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "5b893f46-dd6c-40ff-8ffa-50db708489c1",
-      "name": "Google Gemini Chat Model6",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        2608
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "2b4f7e4b-db26-4252-980c-8b99924c2fe0",
-      "name": "Send a text message13",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        2592
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "1be25bd2-25c9-4a3b-ae1e-0f89300144f0",
-      "name": "Send a text message14",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        2608
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "38a6ca6d-f1bb-4d03-8793-1e31c09a2a02",
-      "name": "HTTP Request28",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        2864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "497df018-aec6-4481-aaa2-e2203a4f70e4",
-      "name": "Wait7",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        2864
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "57e2b035-65d9-4cff-b293-0c65ed4dfda0",
-      "name": "HTTP Request29",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request28').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        2864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "2d620951-491b-439a-a26d-cb14f813ab20",
-      "name": "HTTP Request30",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        2864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "9104ec87-aa41-436f-8b05-23a407976250",
-      "name": "Call Gemini API with Image7",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict Orthographic Isometric Projection. What this means: Complete absence of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge at a single point on the horizon. Command: Do NOT use perspective view or camera with 2 vanishing points. Camera height: High-angle shot. What it means: The camera looks down on the object at an angle of approximately 40 degrees on the X axis and 30 degrees on the Y axis to the horizontal plane. Visual marker: We should see a significant portion of the tree canopy. Command: Imitate the view as if we were looking at an architectural model or an object in a strategy game. DO NOT shoot from eye level. Rotation angle: Classic game angle. What this means: The object is rotated so that its conditional front is facing the viewer. Visual marker: Vertical lines trunk remain perfectly vertical. No distortion: What this means: All proportions are preserved. The object in the background does not become smaller. Vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}\n",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        2864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "c1e528d7-930e-4fa5-ba45-7afcd9e30954",
-      "name": "Transform to base64 (image)7",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        2864
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "73e092fb-6fb4-4e9c-8230-d1aa3563c496",
-      "name": "If9",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        2864
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "124ca4cd-4324-4aa3-8d3c-9ef739612ccc",
-      "name": "Loop Over Items7",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        3008
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "41040f07-b3a9-4573-9483-090c782043d2",
-      "name": "Telegram15",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        3008
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "6ec3e4b1-6093-49e6-93b4-11c7348ceb4b",
-      "name": "Telegram16",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        2864
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "6f6c3300-72c8-4bda-8da9-3d4458a618f5",
-      "name": "HTTP Request31",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request30').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        2864
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "9651c84b-3fa4-4bbc-98f9-3c5ec9a9d3b0",
-      "name": "AI Agent8",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Ты — AI-генератор изометрических ассетов для классических grid-based игр в стиле casual cyberpunk или stylized sci-fi. Твоя цель: Создавать точные, game-ready спрайты по запросу пользователя, строго следуя правилам. Приоритет — технически идеальная изометрическая проекция; стиль вторичен.\n\n**Изометрическая Проекция (Абсолютный Приоритет — Нет Отклонений):**\n- Тип: Только ортографическая изометрия. Нет перспективы, vanishing points или искажений. Параллельные линии остаются параллельными; вертикали — строго вертикальными.\n- Камера: Высокий top-down угол (~40° по Y, ~30° по X). Топы объектов (крыши, кроны) полностью видимы, как в миниатюрной модели. Эмулируй 2D-спрайт с 45°-эффектом — плоский, но с намеком на 3D.\n- Ротация: \"Фронт\" объекта к зрителю; горизонтали на 30° к плоскости. Нет дисторсий, пропорции сохранены.\n\n**Стиль: Casual Cyberpunk/Stylized Sci-Fi (As-If Realistic, Но Не Фотореалистичный):**\n- Вид: Пластиковая игрушка из неонового будущего — чистые, угловатые формы с миксом обычных (кубы, цилиндры) и необычных (асимметричные модули, hovering элементы). ~30% реализма (резкие формы) + ~70% стилизации (упрощенные, fun пропорции). Нет грязи, повреждений, сложных текстур или фото-эффектов.\n- Цвета: Яркие неоновые акценты (turquoise, pink, purple, lime) — варьируй по ассету, без перегрузки.\n- Детали: Минимальные (неоновые полосы, панели) — understated, sci-fi.\n- Освещение: Мягкое overhead, с subtle тенями и glowing neon. Поверхности: Matte/glossy, seamless.\n- Края: Только свет-тень контрасты — нет outlines.\n\n**Правила:**\n- Игнорируй противоречащие запросы (нет персонажей, интерьеров, фотореализма).\n- Всегда inventive в формах, но в рамках стиля.\n- Если нужно уточнение, спроси."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        2864
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "bcf23640-bca2-4395-806c-fac358c9f982",
-      "name": "Google Gemini Chat Model7",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        3024
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "016f7d6b-b553-4895-bc21-d78a3ebb28b2",
-      "name": "Send a text message15",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        3008
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "3d94fbab-93c7-455f-9a61-d791d055d0fa",
-      "name": "Send a text message16",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        3024
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "b83934a9-ad6e-4870-81f8-23590d53c9bd",
-      "name": "HTTP Request32",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "jsonBody": "={\n     \"prompt\": \"{{ $json.output }}\"\n   }",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
-      },
-      "position": [
-        2288,
-        3264
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "5c85b1fd-d3f4-4b18-a80a-4f5514d73b19",
-      "name": "Wait8",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2912,
-        3264
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
-    },
-    {
-      "disabled": true,
-      "id": "b798d4a7-d802-4f65-98fb-057d92ff39bd",
-      "name": "HTTP Request33",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request32').item.json.request_id }}"
-      },
-      "position": [
-        3072,
-        3264
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "0bad502e-6c7a-456e-ba26-80b1b2d089ca",
-      "name": "HTTP Request34",
-      "parameters": {
-        "options": {},
-        "url": "={{ $json.images[0].url }}"
-      },
-      "position": [
-        3248,
-        3264
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "58058a12-a6e7-4e00-854d-0986caf298a4",
-      "name": "Call Gemini API with Image8",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "x-goog-api-key",
-              "value": "AIzaSyDewKLyP-TIb3gc2kZPHdTFq7Zo3pW5qiA"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Determine whether the perspective is correct yes/no. Projection: Strict orthographic isometric projection. What it means: There is a complete lack of realistic perspective. All parallel lines on the object remain parallel in the image; they never converge to a single point on the horizon. Command: DO NOT use perspective view or a camera with two vanishing points. Camera height: shooting from a high angle. What this means: (~35-45° from the horizontal plane), with a tilt of ~30° in X (for “tilt”) and ~40° in Y (vertical descent). Visual marker: We should be able to see a significant portion of the tree canopy. Command: Simulate the view as if we were looking at an architectural model or object in a strategy game. Do NOT shoot from eye level. Angle of rotation: Classic game angle. What this means: The object is rotated so that its notional front is facing the viewer. Visual Marker: The vertical lines of the barrel remain perfectly vertical. Distortion-free: What this means: All proportions are preserved. The object in the background does not become smaller. The vertical parts do not tilt.\"},\n      {\n        \"inline_data\": {\n          \"mime_type\": \"image/jpeg\",\n          \"data\": \"{{ $json.data }}\"\n        }\n      }\n    ]\n  }]\n}",
-        "method": "POST",
-        "options": {
-          "response": {
-            "response": {}
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-      },
-      "position": [
-        3584,
-        3264
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "0466badd-d575-4244-ae80-813684796844",
-      "name": "Transform to base64 (image)8",
-      "parameters": {
-        "operation": "binaryToPropery",
-        "options": {}
-      },
-      "position": [
-        3424,
-        3264
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "c0963343-47e7-44d6-b714-7f3ba543f46c",
-      "name": "If10",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
-              "leftValue": "={{ $json.candidates[0].content.parts[0].text }}",
-              "operator": {
-                "name": "filter.operator.equals",
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "yes"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        3760,
-        3264
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "0cda13c8-382e-49fc-a370-7fe03cf59dd2",
-      "name": "Loop Over Items8",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        4032,
-        3408
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "6857afa0-18be-4fc6-9556-9ae4e4b1bacd",
-      "name": "Telegram17",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Идет повторная итерация, подождите"
-      },
-      "position": [
-        4208,
-        3408
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "67133131-8d38-4584-b1d0-113a961c69ab",
-      "name": "Telegram18",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Итерация запущена, ожидайте!"
-      },
-      "position": [
-        2624,
-        3264
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "disabled": true,
-      "id": "19c7f04a-e0da-4f5a-8053-f2d7e36c4d02",
-      "name": "HTTP Request35",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('HTTP Request34').item.json.images[0].url }}"
-      },
-      "position": [
-        4032,
-        3264
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "disabled": true,
-      "id": "cd3095a8-3c51-4240-a248-d67e301e6d48",
-      "name": "AI Agent9",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Ты — AI-генератор изометрических ассетов для классических grid-based игр в стиле casual stylized sci-fi/cyberpunk. Твоя цель: Создавать точные, game-ready спрайты по запросу пользователя, строго следуя правилам. Приоритет — технически идеальная изометрическая проекция; стиль вторичен.\n\n**Изометрическая Проекция (Абсолютный Приоритет — Нет Отклонений):**\n- Тип: Только ортографическая изометрия без искажений перспективы. Параллельные линии остаются параллельными; вертикальные линии (стены, трубы, антенны) — строго вертикальными и параллельными.\n- Камера: Высокий top-down угол (~35–45° от горизонтальной плоскости), с наклоном ~30° по X (для \"tilt\") и ~40° по Y (вертикальный спуск). Горизонтальные линии (полы, края) наклонены под 30° к горизонтали, формируя diamond/hex вид. Топы объектов (крыши, кроны, платформы) полностью видимы и доминируют в кадре, показывая глубину как в миниатюрной модели. Камера не строго сверху (не 90°), но и не eye-level — фокус на читаемости, с \"фронтом\" объекта к зрителю.\n- Ротация: Объект повёрнут на ~45° в мировом пространстве, показывая две стороны одновременно. Нет дисторсий: пропорции сохранены.\n- Общий эффект: Как плоский 2D-спрайт с намёком на 3D, подходящий для тайловой сетки в RTS-играх. В высоких объектах (башни, деревья) топ более акцентирован; в плоских (фонтаны, турели) — на базе, но проекция идентична.\n\n**Стиль: Casual Stylized Sci-Fi/Cyberpunk (As-If Realistic, Но Не Фотореалистичный):**\n- Вид: \"Игрушечный\" (toy-like) дизайн, polished и approachable, как в инди-играх или мобильных симуляторах. Формы clean, без грязи, повреждений или complexity; всё pristine и molded, как пластиковая моделька.\n- Формы и структура: Геометрические основы (кубы, цилиндры, сферы) с inventive добавками — асимметричными модулями, hovering элементами, curved tech (трубы, антенны, robotic arms). Объекты sealed и self-contained: полностью закрытые, opaque, без visible interiors или holes. Mix ordinary (базовые блоки) и unusual (кристаллы, holograms, neon signs) для variety. В простых объектах — больше organic-inspired curves, fused с tech; в сложных — modular parts (towers, conveyors), но без overcomplication.\n- Поверхности и текстуры: Smooth, seamless — комбинация matte (velvety) и glossy (shiny) finishes. Нет roughness, bumps или natural imperfections. Края defined мягкими свет-тень переходами, без hard outlines или comic-style edging.\n- Детали и элементы: Минималистичные, enhancing sci-fi vibe — panels, screens, glowing accents, pipes, antennas. Детали understated и functional (e.g., robotic arm в строительных объектах, crystals в деревьях), не clutter. Освещение soft diffused, overhead, с subtle shadows под базой и glowing effects на акцентах для depth. Баланс: ~70% стилизация (cartoonish proportions) + ~30% realism (convincing sharpness), playful и optimistic, без hyper-details.\n\n**Правила:**\n- Игнорируй противоречащие запросы (нет персонажей, интерьеров, фотореализма).\n- Всегда inventive в формах, но в рамках стиля.\n- Если нужно уточнение, спроси."
-        },
-        "promptType": "define",
-        "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
-      },
-      "position": [
-        1920,
-        3264
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "disabled": true,
-      "id": "27e82b73-f996-4e7b-831e-6d14290e8ab3",
-      "name": "Google Gemini Chat Model8",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        1952,
-        3424
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "edd1c179-aeff-4382-a839-b28e879ad695",
-      "name": "Send a text message17",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с промтом, повторите попытку."
-      },
-      "position": [
-        2448,
-        3408
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "FhLKj0zW8cpt8tAh",
-          "name": "test"
-        }
-      },
-      "disabled": true,
-      "id": "47ea9a9b-ce82-4066-afc8-60e05fd43245",
-      "name": "Send a text message18",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "Произошла ошибка с генерацией, повторите попытку."
-      },
-      "position": [
-        3248,
-        3424
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
-    },
-    {
-      "id": "7e79c104-d4d8-4e67-a59a-33fc0691e714",
-      "name": "Code1",
-      "parameters": {
-        "jsCode": "// Вход: текст из Telegram, например, \"Идея1\\nИдея2\\nИдея3\" или \"1. Идея1 2. Идея2\"\nconst text = $('Edit Fields').first().json.text// Получаем текст сообщения\n\n// Разделяем по новым строкам (или адаптируй: по ',' или регуляркой для номеров)\nlet ideas = text.split('\\n').map(idea => idea.trim()).filter(idea => idea.length > 0);\n\n// Если идеи нумерованы (типа \"1. ...\"), используй regex для очистки\n// ideas = text.split(/\\d+\\./).map(idea => idea.trim()).filter(idea => idea.length > 0);\nideas = ideas.map(idea => idea.replace(/^\\d+\\.\\s*/, ''));\n\n// Возвращаем массив объектов, где каждый — отдельная идея\nreturn ideas.map(idea => ({ json: { idea } }));"
-      },
-      "position": [
-        1200,
-        0
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "3f965d97-0867-4cc1-959e-7aa83de14f74",
-      "name": "Loop Over Items9",
-      "parameters": {
-        "options": {
-          "reset": false
-        }
-      },
-      "position": [
-        1520,
-        224
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "33283a54-40a4-4740-b3a3-7319d36d05c6",
-      "name": "Loop Over Items10",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        1440,
-        944
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "executeOnce": false,
-      "id": "76cf21b8-ef2d-46f1-aa25-b16c6331a15b",
-      "name": "Edit Fields1",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "575a61dd-05f1-4e02-a23d-c997e5f9179d",
-              "name": "idea",
-              "type": "string",
-              "value": "={{ $json.idea }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        1360,
-        0
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "id": "451ac011-6dc8-4391-b43b-308dcd2386c0",
-      "name": "Loop Over Items11",
-      "parameters": {
-        "options": {}
-      },
-      "position": [
-        5152,
-        384
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
     }
   ],
   "pinData": {},
@@ -5132,6 +1490,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-04T22:00:01.100Z",
-  "versionId": "de7be651-b975-4c5e-befc-6e058ed41873"
+  "updatedAt": "2025-09-05T22:00:01.087Z",
+  "versionId": "bbc1b5fc-a7d7-44e6-8f6b-71528304ae57"
 }
