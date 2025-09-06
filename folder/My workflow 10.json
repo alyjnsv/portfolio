@@ -23,7 +23,7 @@
         ]
       ]
     },
-    "Generate an image": {
+    "Generate an image1": {
       "main": [
         [
           {
@@ -124,7 +124,7 @@
         [
           {
             "index": 0,
-            "node": "Generate an image",
+            "node": "Generate an image1",
             "type": "main"
           }
         ]
@@ -148,6 +148,9 @@
           "item": [
             {
               "mode": "everyMinute"
+            },
+            {
+              "mode": "everyMinute"
             }
           ]
         }
@@ -167,7 +170,7 @@
           "systemMessage": "Ты бот который оформляет новостей текст по играм красиво в стиле телеграмм поста, чтобы все пользователям понравилось, без кода и строго до 950  символов. Если текст на на английском, переведи его на Русский."
         },
         "promptType": "define",
-        "text": "=Возьми текст отсюда: {{ $('RSS Feed Trigger').item.json.content }} и найди продолжение отсюда: {{ $json.data }} после оформи текст, и в конце напиши что то прикольное, в виде шуточного комментария. Пиши только текст, без своих начанльных предложений."
+        "text": "=Возьми текст отсюда: {{ $('RSS Feed Trigger').item.json.content}} и найди продолжение отсюда: {{ $json.data }} после оформи текст, и в конце напиши что то прикольное, в виде шуточного комментария. Пиши только текст, без своих начанльных предложений."
       },
       "position": [
         2320,
@@ -175,31 +178,6 @@
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
-    },
-    {
-      "credentials": {
-        "openAiApi": {
-          "id": "I7lLealOUwgNCRyL",
-          "name": "OpenAi account 2"
-        }
-      },
-      "id": "95793705-e74d-48e0-bc39-f2a7eaffbf19",
-      "name": "OpenAI Chat Model",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "gpt-4.1",
-          "mode": "list",
-          "value": "gpt-4.1"
-        },
-        "options": {}
-      },
-      "position": [
-        2320,
-        160
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2
     },
     {
       "alwaysOutputData": true,
@@ -390,7 +368,7 @@
       "name": "Send a photo message",
       "parameters": {
         "additionalFields": {
-          "caption": "={{ $json.output }}"
+          "caption": "={{ $('AI Agent').item.json.output }}"
         },
         "binaryData": true,
         "chatId": "@gamenseveryday",
@@ -577,8 +555,8 @@
           "name": "OpenAi account 2"
         }
       },
-      "id": "c2c0af0a-6de4-440d-af0d-4b68b9ccc830",
-      "name": "Generate an image",
+      "id": "b7b289c6-f35c-4ea0-8729-8518dd773d0c",
+      "name": "Generate an image1",
       "parameters": {
         "model": "gpt-image-1",
         "options": {
@@ -589,11 +567,36 @@
         "resource": "image"
       },
       "position": [
-        2864,
-        160
+        2816,
+        -176
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "I7lLealOUwgNCRyL",
+          "name": "OpenAi account 2"
+        }
+      },
+      "id": "e3206e55-15a0-4872-a000-1cf062d383d8",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        2320,
+        304
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
     }
   ],
   "pinData": {},
@@ -613,11 +616,14 @@
   ],
   "staticData": {
     "node:RSS Feed Trigger": {
-      "lastItemDate": "2025-09-05T21:11:59.000Z"
+      "lastItemDate": "2025-09-06T20:59:35.000Z"
+    },
+    "node:RSS Feed Trigger1": {
+      "lastItemDate": "2025-09-06T16:08:02.000Z"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-03T12:47:58.000Z",
-  "versionId": "900c8806-aa94-4125-9f4e-a583a828097a"
+  "updatedAt": "2025-09-06T18:56:31.000Z",
+  "versionId": "c55662dd-8881-4514-9c0e-6bc17a6e5d12"
 }
