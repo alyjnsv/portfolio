@@ -1821,6 +1821,13 @@
             "node": "Get row(s) in sheet",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Жанры",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -2856,6 +2863,7 @@
     {
       "id": "f7d3d95d-6bc8-4b92-81c8-9d2e83029f16",
       "name": "Жанры",
+      "onError": "continueErrorOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
@@ -5799,17 +5807,17 @@
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "11",
-          "Day of week": "Monday",
+          "Day of month": "06",
+          "Day of week": "Saturday",
           "Hour": "16",
           "Minute": "00",
-          "Month": "August",
-          "Readable date": "August 11th 2025, 4:00:00 pm",
+          "Month": "September",
+          "Readable date": "September 6th 2025, 4:00:00 pm",
           "Readable time": "4:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-08-11T16:00:00.005+02:00"
+          "timestamp": "2025-09-06T16:00:00.029+02:00"
         }
       }
     ]
@@ -5845,6 +5853,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T13:49:53.000Z",
-  "versionId": "13581dc0-9f6a-4286-9187-7a35917b01fd"
+  "updatedAt": "2025-09-06T14:09:22.000Z",
+  "versionId": "0414dc1c-6f5c-4ef7-a2bf-8be772b2a1a3"
 }
