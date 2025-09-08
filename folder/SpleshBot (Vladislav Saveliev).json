@@ -1,68 +1,13 @@
 {
   "active": true,
   "connections": {
-    "AI Agent": {
+    "HTTP Request": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Aggregate",
+            "node": "HTTP Request2",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Aggregate": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Download file": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Switch",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Send message and wait for response",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent",
-            "type": "ai_languageModel"
           }
         ]
       ]
@@ -73,6 +18,17 @@
           {
             "index": 0,
             "node": "Send a document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a document1",
             "type": "main"
           }
         ]
@@ -100,24 +56,24 @@
         ]
       ]
     },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Search files and folders": {
+    "HTTP Request5": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Download file",
+            "node": "Send a text message3",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Фон",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -133,12 +89,12 @@
         ]
       ]
     },
-    "Send message and wait for response": {
+    "Send a text message3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent1",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -149,7 +105,7 @@
         [
           {
             "index": 0,
-            "node": "AI Agent",
+            "node": "Фон",
             "type": "main"
           }
         ],
@@ -167,18 +123,18 @@
         [
           {
             "index": 0,
-            "node": "Upload file",
+            "node": "Switch",
             "type": "main"
           }
         ]
       ]
     },
-    "Upload file": {
+    "Wait": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Search files and folders",
+            "node": "HTTP Request",
             "type": "main"
           }
         ]
@@ -194,6 +150,27 @@
           }
         ]
       ]
+    },
+    "Фон": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "HTTP Request3",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "HTTP Request5",
+            "type": "main"
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-07-29T08:27:57.897Z",
@@ -204,26 +181,6 @@
   },
   "name": "SpleshBot (Vladislav Saveliev)",
   "nodes": [
-    {
-      "executeOnce": false,
-      "id": "3361c9fe-2da2-4ad1-98be-41b1836ea227",
-      "name": "AI Agent",
-      "parameters": {
-        "hasOutputParser": true,
-        "options": {
-          "passthroughBinaryImages": true,
-          "systemMessage": "Ты бот который анализирует изображение и все, только информация что на изображениях, больше ты не должен ничего писать. Обязательно проанализируй изображение так,  чтобы при следующей генерации оно было один в один до малейших деталей, старайся не упускать ничего."
-        },
-        "promptType": "define",
-        "text": "=Проанализируй изображение"
-      },
-      "position": [
-        1168,
-        -80
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
     {
       "id": "f0532e83-90f7-4b3d-a402-6437bea3b849",
       "name": "Switch",
@@ -286,7 +243,7 @@
         }
       },
       "position": [
-        720,
+        928,
         -80
       ],
       "type": "n8n-nodes-base.switch",
@@ -310,7 +267,7 @@
         ]
       },
       "position": [
-        -176,
+        688,
         -80
       ],
       "type": "n8n-nodes-base.telegramTrigger",
@@ -334,237 +291,12 @@
         "text": "Отправьте изображение и промт"
       },
       "position": [
-        912,
-        192
+        928,
+        144
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "880672cd-cdfb-4356-adb4-ee9106ca1148"
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "id": "749f6540-b40c-4495-a487-bb8da6c93185",
-      "name": "Google Gemini Chat Model",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {
-          "temperature": 0.2
-        }
-      },
-      "position": [
-        1168,
-        112
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "googleDriveOAuth2Api": {
-          "id": "OkH8dso5q8ZT5CFW",
-          "name": "N8N Bot"
-        }
-      },
-      "id": "5d1aadb8-c723-4e15-87b4-bffc51706ca3",
-      "name": "Download file",
-      "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "operation": "download",
-        "options": {}
-      },
-      "position": [
-        528,
-        -80
-      ],
-      "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "googleDriveOAuth2Api": {
-          "id": "OkH8dso5q8ZT5CFW",
-          "name": "N8N Bot"
-        }
-      },
-      "id": "083402c3-7b93-43f8-b5b5-bf0bb1352a51",
-      "name": "Search files and folders",
-      "parameters": {
-        "filter": {
-          "driveId": {
-            "mode": "list",
-            "value": "My Drive"
-          },
-          "folderId": {
-            "__rl": true,
-            "cachedResultName": "test",
-            "cachedResultUrl": "https://drive.google.com/drive/folders/1rT-HsXuF89GZf8JWs4BSOcv3uRIY7FNn",
-            "mode": "list",
-            "value": "1rT-HsXuF89GZf8JWs4BSOcv3uRIY7FNn"
-          }
-        },
-        "limit": 2,
-        "options": {},
-        "resource": "fileFolder"
-      },
-      "position": [
-        304,
-        -80
-      ],
-      "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "googleDriveOAuth2Api": {
-          "id": "OkH8dso5q8ZT5CFW",
-          "name": "N8N Bot"
-        }
-      },
-      "id": "77ebcb78-150e-4a8e-b5d2-560f770f55d6",
-      "name": "Upload file",
-      "parameters": {
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
-        "folderId": {
-          "__rl": true,
-          "cachedResultName": "test",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1rT-HsXuF89GZf8JWs4BSOcv3uRIY7FNn",
-          "mode": "list",
-          "value": "1rT-HsXuF89GZf8JWs4BSOcv3uRIY7FNn"
-        },
-        "name": "imd",
-        "options": {}
-      },
-      "position": [
-        80,
-        -80
-      ],
-      "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
-    },
-    {
-      "id": "f9cfb3d9-5cc6-46d7-a041-6f8ea23bbce5",
-      "name": "Aggregate",
-      "parameters": {
-        "fieldsToAggregate": {
-          "fieldToAggregate": [
-            {
-              "fieldToAggregate": "output"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        1520,
-        -80
-      ],
-      "type": "n8n-nodes-base.aggregate",
-      "typeVersion": 1
-    },
-    {
-      "executeOnce": true,
-      "id": "a15b6629-1be2-429c-ad36-008c76814ded",
-      "name": "Edit Fields",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "d2c1cbc7-5e72-46c7-a439-f803945fd2e5",
-              "name": "output",
-              "type": "string",
-              "value": "={{ $json.output }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        1744,
-        -80
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "id": "d6926597-1951-42ff-b7dd-ec34dbc173c8",
-      "name": "AI Agent1",
-      "parameters": {
-        "options": {
-          "systemMessage": "Ты бот который делает слияние описание изображения чтобы получить симбиоз промта, для дальнейшей генерации изображения\nЗапрещено использовать все кавычки, скобки, минусы и т.д и новые строки тоже."
-        },
-        "promptType": "define",
-        "text": "=Убери все лишние символы, оставь только точки и запятые и сделай из этого промт на английском, совмести этот запрос {{ $json.data.text }} с этим {{ $('Edit Fields').item.json.output }}"
-      },
-      "position": [
-        2160,
-        -80
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "openAiApi": {
-          "id": "TeJoupiuKVAuyWb3",
-          "name": "GPT"
-        }
-      },
-      "id": "8478e2d7-e400-41a3-99ed-ba9d0460831b",
-      "name": "OpenAI Chat Model",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "gpt-4.1",
-          "mode": "list",
-          "value": "gpt-4.1"
-        },
-        "options": {}
-      },
-      "position": [
-        2160,
-        128
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "yGk3DCP1Rk9Uzvb0",
-          "name": "SpleshBot"
-        }
-      },
-      "id": "91a80621-453d-48c8-9a64-176e000aca60",
-      "name": "Send message and wait for response",
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "message": "Напишите промт",
-        "operation": "sendAndWait",
-        "options": {
-          "messageButtonLabel": "Промт"
-        },
-        "responseType": "freeText"
-      },
-      "position": [
-        1968,
-        -80
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "f55e4dc0-deea-44a0-aef3-08e712222089"
     },
     {
       "id": "8d50cf4f-b8c9-4c46-9437-9718caa0fc8a",
@@ -573,7 +305,7 @@
         "amount": 120
       },
       "position": [
-        2848,
+        1984,
         -80
       ],
       "type": "n8n-nodes-base.wait",
@@ -598,7 +330,7 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
-        2992,
+        2128,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -616,7 +348,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output }}\"\n} ",
+        "jsonBody": "={\n  \"prompt\": \"{{ $json.output }}\",\n  \"aspect_ratio\": \"1:1\",\n  \"resolution\": \"1K\"\n} ",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -625,7 +357,7 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        2512,
+        1648,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -648,7 +380,7 @@
         "text": "Wait..."
       },
       "position": [
-        2688,
+        1824,
         -80
       ],
       "type": "n8n-nodes-base.telegram",
@@ -663,7 +395,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        3184,
+        2320,
         -80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -685,8 +417,200 @@
         "operation": "sendDocument"
       },
       "position": [
-        3344,
+        2480,
         -80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "535b20ba-3350-4b21-bfd1-7eee3744fa1d"
+    },
+    {
+      "id": "a204ba65-0ae4-4f7f-a350-490040ee80b9",
+      "name": "Фон",
+      "parameters": {
+        "options": {
+          "systemMessage": "=# Генерация научно-фантастического киберпанк фона для сплеш-арта\n\n## Роль\nТы — ИИ-ассистент, специализирующийся на генерации детализированных промптов для нейросетей (Image Generation AI). Твоя задача — действовать как креативный директор для создания игровых ассетов.\n\n---\n\n## Контекст\nКоманде разработчиков требуются уникальные и стилистически выдержанные фоны для сплеш-артов. Существует четкое видение стиля, основанное на референсах. Твоя задача — преобразовать запрос пользователя в полноценный, богатый деталями промпт, который точно воссоздаст нужную атмосферу.\n\n---\n\n## Задача\nВзять краткий запрос пользователя и обогатить его набором стилистических ключевых слов, чтобы сгенерировать фон для сплеш-арта в заранее определенном художественном стиле.\n\n---\n\n## Входные данные\n* {{ $json.message.text }}: Краткое описание сцены от пользователя (например, \"база на астероиде\" или \"рынок в нижних уровнях города\").\n\n---\n\n## Формат ответа\nГотовый текстовый промпт на английском языке для отправки в модель генерации изображений.\n\n---\n\n## Стиль\nЧеткий, профессиональный, креативный.\n\n---\n\n## Требования\n* **Язык**: Итоговый промпт должен быть на английском языке.\n* **Обязательные стилистические элементы**: В каждый генерируемый промпт необходимо **обязательно** включать следующий набор ключевых слов, описывающих стиль рисовки:\n    * `digital painting, concept art aesthetic, highly detailed, sharp focus`\n    * `cinematic lighting, high contrast, atmospheric haze`\n    * `vibrant neon palette, dominant magenta and cyan lighting, glowing holographic UI elements`\n* **Структура промпта**: Финальный промпт должен быть собран по схеме: [Общая тема] + [Описание от пользователя] + [Стилистические элементы] + [Технические параметры].\n* **Технические параметры**: Всегда добавляй в конец промпта `--ar 1:1 --s 750 --v 6.0`.\n\n---\n\n## Примеры плохого и хорошего ответа\n\n* **Входные данные {{ $json.message.text }}: \"A high-speed train station\"\n* **Плохо**: \"A high-speed train station in a cyberpunk city.\"\n* **Хорошо**: \"Sci-fi cyberpunk background, a bustling high-speed train station with futuristic maglev trains. **digital painting, concept art aesthetic, highly detailed, sharp focus, cinematic lighting, high contrast, atmospheric haze, vibrant neon palette, dominant magenta and cyan lighting, glowing holographic UI elements.** --ar 1:1 --s 750 --v 6.0\"\n\n---\n\n## Финальный чек-лист\n* Промпт содержит описание от пользователя?\n* Все обязательные стилистические элементы из раздела \"Требования\" добавлены?\n* Технические параметры (`--ar 1:1 --s 750 --v 6.0`) присутствуют в конце?\n\n---\n\n## Запрещено\n* Игнорировать или изменять обязательные стилистические элементы.\n* Добавлять стили, противоречащие заданному (например, `photorealistic, cartoon, watercolor`).\n* Создавать промпты короче 20 слов."
+        },
+        "promptType": "define",
+        "text": "={{ $json.message.text }}"
+      },
+      "position": [
+        1232,
+        -80
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "cc43c410-5692-4b8a-8b16-c5e3958d1c30",
+      "name": "OpenAI Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        1232,
+        80
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "yGk3DCP1Rk9Uzvb0",
+          "name": "SpleshBot"
+        }
+      },
+      "id": "7f61e207-0c69-41a9-a74e-8618904a1e56",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "Генерация запущена!"
+      },
+      "position": [
+        1536,
+        -224
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "880672cd-cdfb-4356-adb4-ee9106ca1148"
+    },
+    {
+      "id": "e66b2d9e-6d18-4166-9d59-743b4d8492a8",
+      "name": "Wait",
+      "parameters": {
+        "amount": 120
+      },
+      "position": [
+        1984,
+        96
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
+    },
+    {
+      "id": "518b0bc8-c8d8-4d24-91f3-b98719158b4f",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request5').item.json.request_id }}"
+      },
+      "position": [
+        2128,
+        96
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "014f9492-0eb7-4bc4-84c8-88eda6ad60a5",
+      "name": "HTTP Request5",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"prompt\": \"{{ $json.output }}\"\n} ",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/nano-banana"
+      },
+      "position": [
+        1648,
+        96
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "yGk3DCP1Rk9Uzvb0",
+          "name": "SpleshBot"
+        }
+      },
+      "id": "e24c9db5-0af2-4a7e-9234-24f2da6887ba",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Wait..."
+      },
+      "position": [
+        1824,
+        96
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "43cae7ca-44eb-47f5-ac7e-7780d90f3f88"
+    },
+    {
+      "id": "15fb9ef6-194d-4978-9777-b95da0da8a6e",
+      "name": "HTTP Request2",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        2320,
+        96
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "yGk3DCP1Rk9Uzvb0",
+          "name": "SpleshBot"
+        }
+      },
+      "id": "6772a30c-3bb0-4c4a-9efb-3d66a37048a8",
+      "name": "Send a document1",
+      "parameters": {
+        "additionalFields": {},
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        2480,
+        96
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -709,6 +633,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-03T10:10:44.000Z",
-  "versionId": "0a02906d-4850-484c-b298-fc48fcbb6245"
+  "updatedAt": "2025-09-08T09:49:41.000Z",
+  "versionId": "1ea91351-dda2-442c-9f5d-0d2dfb01b7b2"
 }
