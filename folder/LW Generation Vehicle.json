@@ -177,7 +177,7 @@
         ]
       ]
     },
-    "Date & Time": {
+    "Date & Time1": {
       "main": [
         [
           {
@@ -194,7 +194,7 @@
         [
           {
             "index": 0,
-            "node": "Wait5",
+            "node": "Drive URL1",
             "type": "main"
           }
         ]
@@ -206,7 +206,7 @@
         [
           {
             "index": 0,
-            "node": "Wait4",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -690,6 +690,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait4",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -699,6 +706,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait5",
             "type": "main"
           }
         ]
@@ -712,6 +726,13 @@
             "node": ">71",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait6",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -721,6 +742,13 @@
           {
             "index": 0,
             "node": ">72",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
             "type": "main"
           }
         ]
@@ -929,7 +957,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Rated",
             "type": "main"
           }
         ]
@@ -940,7 +968,29 @@
         [
           {
             "index": 0,
-            "node": "Drive URL1",
+            "node": "Rated1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated3",
             "type": "main"
           }
         ]
@@ -951,7 +1001,7 @@
         [
           {
             "index": 0,
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main"
           }
         ]
@@ -970,13 +1020,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "1d38af16-a1e1-4c26-a6e8-f679cb0902fd",
       "name": "Google Gemini Chat Model2",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1007,7 +1056,7 @@
         "url": "={{ $('Url').item.json.images[0].url }}"
       },
       "position": [
-        2448,
+        2464,
         -736
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1169,13 +1218,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "7d215f7d-7d57-4399-be6f-c6b2821cf656",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1206,7 +1254,7 @@
         "url": "={{ $('Url1').item.json.images[0].url }}"
       },
       "position": [
-        2448,
+        2464,
         -400
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1327,13 +1375,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "0a1285c0-5b03-4fbb-932c-c39cd6bd9116",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1364,7 +1411,7 @@
         "url": "={{ $('Url2').item.json.images[0].url }}"
       },
       "position": [
-        2448,
+        2464,
         -64
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1485,13 +1532,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "0ed6e2ce-e708-4f94-ac90-bf2749c9f133",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1522,7 +1568,7 @@
         "url": "={{ $('Url3').item.json.images[0].url }}"
       },
       "position": [
-        2448,
+        2464,
         272
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1653,19 +1699,6 @@
       "typeVersion": 3.2
     },
     {
-      "id": "25214a0a-42b3-4e81-ad5d-4428b345065b",
-      "name": "Date & Time",
-      "parameters": {
-        "options": {}
-      },
-      "position": [
-        -944,
-        -736
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
-    },
-    {
       "id": "70541157-7822-4068-b84a-9670b68f54c4",
       "name": "Formatted Date",
       "parameters": {
@@ -1700,7 +1733,7 @@
           "mode": "list",
           "value": "1-CGJkerQh2Q1N8qx9yh_qwUC5KHm5pO0"
         },
-        "name": "={{ $json.formattedDate }} Vehicle",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
@@ -1734,7 +1767,7 @@
         }
       },
       "position": [
-        2448,
+        2464,
         -608
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -1749,7 +1782,7 @@
         }
       },
       "position": [
-        2448,
+        2464,
         -272
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -1764,7 +1797,7 @@
         }
       },
       "position": [
-        2448,
+        2464,
         64
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -1779,7 +1812,7 @@
         }
       },
       "position": [
-        2448,
+        2464,
         400
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -1809,7 +1842,7 @@
         "options": {}
       },
       "position": [
-        2672,
+        2688,
         272
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -1853,8 +1886,8 @@
         "text": "=🔄    🚘 *Создаю транспорт!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -224,
-        -992
+        -256,
+        -912
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1900,28 +1933,14 @@
         "text": "=✅    🚘 *Ваши транспорты готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        416,
-        -992
+        432,
+        -912
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
-      "id": "114b6c97-a7bb-4d21-b566-ad4623c27dae",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        592,
-        -912
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
     },
     {
       "credentials": {
@@ -1937,14 +1956,14 @@
       "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
-          "appendAttribution": false
+          "appendAttribution": false,
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    🚘 *Создаю транспорт!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄    🚘 Создаю транспорт!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        96,
+        -32,
         -912
       ],
       "retryOnFail": true,
@@ -1968,30 +1987,13 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    🚘 *Ваши транспорты готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=✅    🚘 Ваши транспорты готовы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        768,
+        656,
         -912
       ],
       "retryOnFail": true,
@@ -1999,20 +2001,6 @@
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
-      "id": "cc6ed201-cff8-4315-81d0-7456924dfde6",
-      "name": "Wait5",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -64,
-        -912
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
     },
     {
       "id": "6bbaa206-e7e4-4845-bbad-e174fc409eeb",
@@ -2210,7 +2198,7 @@
         "options": {}
       },
       "position": [
-        2672,
+        2688,
         -64
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2240,7 +2228,7 @@
         "options": {}
       },
       "position": [
-        2672,
+        2688,
         -400
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2270,7 +2258,7 @@
         "options": {}
       },
       "position": [
-        2672,
+        2688,
         -736
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2314,12 +2302,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "76e4a73c-f128-4edf-af86-d56fd21904ae",
       "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2408,12 +2397,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "06a4a32d-de26-4196-a9b1-0e92480492b5",
       "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2502,12 +2492,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "dbc8c72d-d886-459f-927a-e60fe6966e44",
       "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2596,12 +2587,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "4d3d29e0-74da-4e53-9c8e-06bd7b86f8ae",
       "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2651,6 +2643,78 @@
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
+    },
+    {
+      "executeOnce": true,
+      "id": "910710a4-5478-40b6-bbfb-303997af4d8a",
+      "name": "Date & Time1",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        -944,
+        -736
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "id": "ec8a7693-5676-4909-b5f4-0861370bd216",
+      "name": "Wait4",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2240,
+        -592
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
+    },
+    {
+      "id": "e5c0eef0-8f39-47cd-8fc4-bcdb38f4a3ac",
+      "name": "Wait5",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2256,
+        -256
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
+    },
+    {
+      "id": "b90286ce-6b6f-488e-bbb8-f28f9139616c",
+      "name": "Wait6",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2256,
+        80
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
+    },
+    {
+      "id": "324e876e-051b-4572-8dc9-c714dd6d3d31",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2272,
+        416
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
     }
   ],
   "pinData": {},
@@ -2678,6 +2742,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-29T11:42:50.000Z",
-  "versionId": "7adb76d2-a86a-4a82-8ad8-ecc27fa78915"
+  "updatedAt": "2025-09-09T14:42:24.000Z",
+  "versionId": "8482ff9d-e641-4e65-8d03-5074c33784ed"
 }
