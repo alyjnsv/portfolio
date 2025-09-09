@@ -217,7 +217,7 @@
         ]
       ]
     },
-    "Date & Time": {
+    "Date & Time1": {
       "main": [
         [
           {
@@ -234,7 +234,7 @@
         [
           {
             "index": 0,
-            "node": "Wait3",
+            "node": "Drive URL1",
             "type": "main"
           }
         ]
@@ -246,7 +246,7 @@
         [
           {
             "index": 0,
-            "node": "Wait4",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -265,57 +265,22 @@
     },
     "Google Gemini Chat Model": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Promt",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Google Gemini Chat Model1": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Promt1",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model2": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Promt2",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Google Gemini Chat Model3": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Promt3",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Google Gemini Chat Model4": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Promt4",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Image": {
@@ -657,6 +622,61 @@
         ]
       ]
     },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt4",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "Promt": {
       "main": [
         [
@@ -845,6 +865,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait3",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -854,6 +881,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait4",
             "type": "main"
           }
         ]
@@ -867,6 +901,13 @@
             "node": ">1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -878,6 +919,13 @@
             "node": ">2",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait8",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -887,6 +935,13 @@
           {
             "index": 0,
             "node": ">3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait9",
             "type": "main"
           }
         ]
@@ -1032,6 +1087,13 @@
             "node": "All Icons",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait20",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1041,6 +1103,13 @@
           {
             "index": 0,
             "node": "All Icons1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait19",
             "type": "main"
           }
         ]
@@ -1054,6 +1123,13 @@
             "node": "All Icons2",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait18",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1065,6 +1141,13 @@
             "node": "All Icons3",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait17",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1074,6 +1157,13 @@
           {
             "index": 0,
             "node": "All Icons4",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait16",
             "type": "main"
           }
         ]
@@ -1101,6 +1191,50 @@
         ]
       ]
     },
+    "Wait16": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait17": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait18": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait19": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Wait2": {
       "main": [
         [
@@ -1112,12 +1246,23 @@
         ]
       ]
     },
+    "Wait20": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Wait3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Drive URL1",
+            "node": "Rated",
             "type": "main"
           }
         ]
@@ -1128,7 +1273,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Rated1",
             "type": "main"
           }
         ]
@@ -1156,12 +1301,45 @@
         ]
       ]
     },
+    "Wait7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "When Executed by Another Workflow": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main"
           }
         ]
@@ -1180,18 +1358,18 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "6966c9a1-b442-46be-a0bd-d0bee8a98cce",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
+        "modelName": "models/gemini-2.5-pro-preview-05-06",
         "options": {}
       },
       "position": [
-        -1488,
-        -320
+        -1968,
+        -224
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1216,6 +1394,7 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "3e092864-1a25-4acd-8279-7a4623746013",
       "name": "Create folder",
       "parameters": {
@@ -1231,7 +1410,7 @@
           "mode": "list",
           "value": "1NJrIwD2x-RiZ-7v7cwkG-Go80y5jbS_B"
         },
-        "name": "={{ $json.formattedDateTime }} Icons",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
@@ -1265,7 +1444,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1292,20 +1471,6 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "c90ca2b9-bf3d-446f-9180-677a58726bcd"
-    },
-    {
-      "id": "ac7ba132-19ec-4f43-865c-e293bea34b14",
-      "name": "Date & Time",
-      "parameters": {
-        "options": {},
-        "outputFieldName": "=currentDate"
-      },
-      "position": [
-        -2848,
-        -512
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
     },
     {
       "id": "02b7a1cf-379c-4af0-9927-1d817eb023f0",
@@ -1396,7 +1561,9 @@
     },
     {
       "id": "2ec2eba6-c288-416a-b1d8-0c6a34279afe",
+      "maxTries": 5,
       "name": "Url",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1405,8 +1572,10 @@
         -272,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "8fc01780-f11a-4be3-a864-05482bc72eb4",
@@ -1425,6 +1594,7 @@
     },
     {
       "id": "acda7381-9eb4-4ac9-839d-550baac551e2",
+      "maxTries": 5,
       "name": "Image",
       "parameters": {
         "options": {},
@@ -1434,8 +1604,10 @@
         624,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1444,15 +1616,14 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "a0e4681e-a944-45f2-b72c-1f87a0045920",
       "name": "All Icons",
       "parameters": {
         "fileId": {
           "__rl": true,
-          "cachedResultName": "All_Icons.png",
-          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
-          "mode": "list",
-          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/10OWuUauJ5iFMmI-h2XuE-U8nLNRdS4dC/view?usp=sharing"
         },
         "operation": "download",
         "options": {
@@ -1505,12 +1676,14 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "disabled": true,
       "id": "53460c17-8d3a-4705-81f3-73a4e13f5c23",
+      "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1529,25 +1702,26 @@
         176,
         -512
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "07d3db40-d3d0-4669-b537-f7bcaa98fa07",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        80
+        -1952,
+        48
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1560,7 +1734,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1664,7 +1838,9 @@
     },
     {
       "id": "73696526-a5cb-45a0-9062-1f94c320f372",
+      "maxTries": 5,
       "name": "Url1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1673,8 +1849,10 @@
         -272,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "f4d31f10-d096-4f2f-9b1e-613a488599c2",
@@ -1693,7 +1871,9 @@
     },
     {
       "id": "017a0c04-b205-49c2-a36b-d9f99b553051",
+      "maxTries": 5,
       "name": "Image1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $('Url1').item.json.images[0].url }}"
@@ -1702,8 +1882,10 @@
         624,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1712,15 +1894,14 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "a1806fed-c4a3-451d-b26b-7989c8e5e4b2",
       "name": "All Icons1",
       "parameters": {
         "fileId": {
           "__rl": true,
-          "cachedResultName": "All_Icons.png",
-          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
-          "mode": "list",
-          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/10OWuUauJ5iFMmI-h2XuE-U8nLNRdS4dC/view?usp=sharing"
         },
         "operation": "download",
         "options": {
@@ -1773,12 +1954,14 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "disabled": true,
       "id": "155c64cb-f1a0-4047-8a82-4df259254cf6",
+      "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1797,8 +1980,10 @@
         176,
         -128
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "7adca536-a45b-4c73-ba01-ca9eb58bc55d",
@@ -1807,31 +1992,11 @@
         "numberInputs": 5
       },
       "position": [
-        1152,
-        -144
+        1168,
+        224
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
-        }
-      },
-      "id": "5769291b-5995-4b3c-8e3e-049ec68a3a7e",
-      "name": "Google Gemini Chat Model2",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        -1488,
-        464
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
     },
     {
       "id": "70e818fe-62c7-46a9-a09d-c6c578437d48",
@@ -1841,7 +2006,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1945,7 +2110,9 @@
     },
     {
       "id": "de3ee8e6-b2dc-43cf-9b5d-321a1bc0261d",
+      "maxTries": 5,
       "name": "Url2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1954,8 +2121,10 @@
         -272,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "cc54a907-c890-4f73-a6fc-9f1a101775f8",
@@ -1974,7 +2143,9 @@
     },
     {
       "id": "c9098766-4063-44a2-963a-62ddc6d52aff",
+      "maxTries": 5,
       "name": "Image2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $('Url2').item.json.images[0].url }}"
@@ -1983,8 +2154,10 @@
         624,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1993,15 +2166,14 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "56ddbe13-1be0-4eac-a782-17a252abe095",
       "name": "All Icons2",
       "parameters": {
         "fileId": {
           "__rl": true,
-          "cachedResultName": "All_Icons.png",
-          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
-          "mode": "list",
-          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/10OWuUauJ5iFMmI-h2XuE-U8nLNRdS4dC/view?usp=sharing"
         },
         "operation": "download",
         "options": {
@@ -2054,12 +2226,14 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "disabled": true,
       "id": "3e02dbb0-6fbb-4494-9965-00743472c1b2",
+      "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2078,8 +2252,10 @@
         176,
         272
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2089,6 +2265,7 @@
         }
       },
       "id": "0d9c2b1a-0807-4982-8cd1-5698cacf4a5d",
+      "maxTries": 5,
       "name": "Upload file3",
       "parameters": {
         "driveId": {
@@ -2105,11 +2282,13 @@
         "options": {}
       },
       "position": [
-        864,
+        848,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "35cdfb5d-c7f5-4f7f-a500-87ea9cd3f3ca",
@@ -2120,7 +2299,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         -352
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2135,7 +2314,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         48
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2150,7 +2329,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         432
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2165,7 +2344,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         -352
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2180,7 +2359,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         48
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2195,7 +2374,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         432
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2209,6 +2388,7 @@
         }
       },
       "id": "28c291be-2065-4d86-a734-b9bfea54141b",
+      "maxTries": 5,
       "name": "Upload file4",
       "parameters": {
         "driveId": {
@@ -2225,11 +2405,13 @@
         "options": {}
       },
       "position": [
-        864,
+        848,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2239,6 +2421,7 @@
         }
       },
       "id": "92b76b53-134b-4b79-a204-84157fa8e317",
+      "maxTries": 5,
       "name": "Upload file5",
       "parameters": {
         "driveId": {
@@ -2255,11 +2438,13 @@
         "options": {}
       },
       "position": [
-        864,
+        848,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2300,8 +2485,8 @@
         "text": "=🔄    💠 *Создаю иконки!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -2160,
-        -752
+        -2192,
+        -688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2349,43 +2534,13 @@
       },
       "position": [
         -1488,
-        -752
+        -688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
-    {
-      "disabled": true,
-      "id": "a9258e73-841e-4a8a-a04f-4d6d0b9bb6b7",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -2000,
-        -672
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "72ce4587-5c61-4b28-9427-b62c541384c2"
-    },
-    {
-      "disabled": true,
-      "id": "4e552c81-11a0-4461-b0e2-79c739c768f1",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -1312,
-        -672
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "5b5d9b2b-9b87-4c3f-b7ec-b80cc73e97e9"
     },
     {
       "credentials": {
@@ -2403,31 +2558,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    💠 *Создаю иконки!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄    💠 Создаю иконки!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1840,
-        -672
+        -1968,
+        -688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2451,31 +2589,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    💠 *Ваши иконки готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=✅    💠 Ваши иконки готовы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1136,
-        -672
+        -1264,
+        -688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2553,18 +2674,17 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "f38ebe3a-9ff9-49f8-8b2f-cbe172f226b9",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        880
+        -1664,
+        864
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -2577,7 +2697,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -2681,7 +2801,9 @@
     },
     {
       "id": "8db77334-3a8e-40a7-b6d7-3fc17c500fa9",
+      "maxTries": 5,
       "name": "Url3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -2690,8 +2812,10 @@
         -272,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "22b9af9c-56ad-4a1c-a8c0-0b155be730de",
@@ -2710,7 +2834,9 @@
     },
     {
       "id": "d3ced2d7-cf7f-481a-a543-0d0bffff1f5c",
+      "maxTries": 5,
       "name": "Image3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $('Url3').item.json.images[0].url }}"
@@ -2719,8 +2845,10 @@
         624,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2729,15 +2857,14 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "3d9bedb2-dece-4738-bd1c-e6cd9eda56b2",
       "name": "All Icons3",
       "parameters": {
         "fileId": {
           "__rl": true,
-          "cachedResultName": "All_Icons.png",
-          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
-          "mode": "list",
-          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/10OWuUauJ5iFMmI-h2XuE-U8nLNRdS4dC/view?usp=sharing"
         },
         "operation": "download",
         "options": {
@@ -2790,12 +2917,14 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "disabled": true,
       "id": "935ed0f4-e2f6-4769-9395-1fb01cc8d653",
+      "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2814,8 +2943,10 @@
         176,
         688
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "83d95a9b-bed8-43c6-9d00-ca2dc6f16bab",
@@ -2826,7 +2957,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         848
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2841,7 +2972,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         848
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2855,6 +2986,7 @@
         }
       },
       "id": "621b1cd6-6722-4193-ba10-064c252cd4a8",
+      "maxTries": 5,
       "name": "Upload file",
       "parameters": {
         "driveId": {
@@ -2871,11 +3003,13 @@
         "options": {}
       },
       "position": [
-        864,
+        848,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "248d9606-0107-4477-9137-bb8b042fc52f",
@@ -2894,17 +3028,16 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "c660f636-fc05-42d7-8bbd-dcb9532348a3",
       "name": "Google Gemini Chat Model4",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
+        -1712,
         1312
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
@@ -2918,7 +3051,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации flat иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации minimalist flat UI иконки в стилистике cyberpunk sci-fi.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Minimalist flat UI icon дизайн\n- Геометрические формы с четкими углами\n- Solid fills без градиентов, текстур и теней\n- Чистый черный фон\n- Высокий контраст\n- Четкая читаемость на малых размерах\n- Cyberpunk sci-fi эстетика\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ОПРЕДЕЛИ ФУНКЦИОНАЛЬНУЮ КАТЕГОРИЮ из ТЗ:\n- Оружие/Атака: острые угловатые формы, агрессивная геометрия, красные/оранжевые цвета\n- Защита/Щиты: массивные формы, стабильная геометрия, синие/фиолетовые цвета\n- Технологии/Хакинг: сложная геометрия, схемные элементы, cyan/зеленые цвета\n- Движение/Скорость: динамичные формы, стрелки, желтые/белые цвета\n- Энергия/Мощность: взрывные формы, лучи, яркие неоновые цвета\n\n2. ИЗВЛЕКИ ИЗ ТЗ:\n- Название иконки\n- Основную функцию/назначение\n- Ключевые визуальные элементы\n- Предпочтительную цветовую схему\n- Специфические детали дизайна\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"Minimalist flat UI icon of a futuristic cyberpunk [основной объект из ТЗ]. The design is [характеристики формы по категории] and [геометрические особенности из ТЗ]. [Описание ключевых визуальных элементов из ТЗ]. The style is entirely flat vector with solid fills only, no gradients, no textures, no shading. High contrast [цвет по категории] [объект] on a pure black background. [Дополнительные детали из ТЗ]. Clean, iconic, and highly readable, optimized for small-scale display.\"\n\nВАЖНО:\n- Сохраняй все уникальные детали из ТЗ\n- Адаптируй под flat UI стилистику\n- Подчеркивай функциональность через геометрию\n- Используй контрастные цвета соответствующие категории\n- Обеспечь читаемость на малых размерах\n- Избегай сложных деталей, которые потеряются при уменьшении\n- Всегда отдельно выводи Название из полученного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ).\n\nПроанализируй предоставленное ТЗ и создай промт для генерации flat UI иконки.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -3021,8 +3154,11 @@
       "waitBetweenTries": 2000
     },
     {
+      "executeOnce": false,
       "id": "5df9b4a6-5c11-4ddd-8d87-29694f6541cc",
+      "maxTries": 5,
       "name": "Url4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -3031,8 +3167,10 @@
         -272,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "b3abe990-13db-49e5-8a90-66d353c2c64d",
@@ -3051,7 +3189,9 @@
     },
     {
       "id": "8e3fd291-c5e3-4b8f-a393-7f2c66ad0667",
+      "maxTries": 5,
       "name": "Image4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $('Url4').item.json.images[0].url }}"
@@ -3060,8 +3200,10 @@
         624,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -3070,15 +3212,14 @@
           "name": "N8N Bot"
         }
       },
+      "disabled": true,
       "id": "7618b00f-b49b-493f-acfb-d4fa33257062",
       "name": "All Icons4",
       "parameters": {
         "fileId": {
           "__rl": true,
-          "cachedResultName": "All_Icons.png",
-          "cachedResultUrl": "https://drive.google.com/file/d/1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1/view?usp=drivesdk",
-          "mode": "list",
-          "value": "1XM4RvtqzGug_a3uz6ZcaipXrBFTpT9o1"
+          "mode": "url",
+          "value": "https://drive.google.com/file/d/10OWuUauJ5iFMmI-h2XuE-U8nLNRdS4dC/view?usp=sharing"
         },
         "operation": "download",
         "options": {
@@ -3131,12 +3272,14 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "disabled": true,
       "id": "35c22669-6c38-4d2b-9f7f-3a5bef2353c8",
+      "maxTries": 5,
       "name": "Rated4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -3155,8 +3298,10 @@
         176,
         1120
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "88896c86-6682-4713-8679-caac99c0b98e",
@@ -3167,7 +3312,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         1280
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3182,7 +3327,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         1280
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3196,6 +3341,7 @@
         }
       },
       "id": "05093e79-b4de-40c3-b0df-12661e495be2",
+      "maxTries": 5,
       "name": "Upload file6",
       "parameters": {
         "driveId": {
@@ -3212,11 +3358,13 @@
         "options": {}
       },
       "position": [
-        864,
+        848,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "0386a666-4b8f-406d-b070-e90f7c97b2fe",
@@ -3230,20 +3378,285 @@
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
+    },
+    {
+      "executeOnce": true,
+      "id": "c7ca2107-3280-45d9-9bdd-5d060a6cbe85",
+      "name": "Date & Time1",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        -2848,
+        -512
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "disabled": true,
+      "id": "46339302-cfc2-408b-ba38-17f15b0f5aa4",
+      "name": "Wait3",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        -336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "disabled": true,
+      "id": "2b71455d-c940-4b22-854b-e01303d6ccbf",
+      "name": "Wait4",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        64
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "disabled": true,
+      "id": "772dcc6d-d2bf-43d3-a3ca-23aa25f12b85",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        400,
+        448
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "disabled": true,
+      "id": "9d1fd199-cd05-4813-b0d9-4207ea6b8e56",
+      "name": "Wait8",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        864
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "disabled": true,
+      "id": "c35bad03-f9e1-4828-9df8-9669a23c879d",
+      "name": "Wait9",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        1296
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "id": "333e4c51-0db5-4d62-ad2a-d7eb45b1a9be",
+      "name": "Wait16",
+      "parameters": {},
+      "position": [
+        -32,
+        1296
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "f93a68fa-e7cb-4572-93ec-f89af451d3c5",
+      "name": "Wait17",
+      "parameters": {},
+      "position": [
+        -32,
+        864
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "dd4b876d-7640-478c-8479-ebe20d264cbe",
+      "name": "Wait18",
+      "parameters": {},
+      "position": [
+        -32,
+        448
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "73de0bcc-f5cd-4ef4-b6af-d537a5285454",
+      "name": "Wait19",
+      "parameters": {},
+      "position": [
+        -32,
+        64
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "eff523ab-6589-4a91-87fa-8ac5b6768db5",
+      "name": "Wait20",
+      "parameters": {},
+      "position": [
+        -32,
+        -336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "cbda1299-3a2e-4dd0-a7a2-0137907c95b8",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -1488,
+        -320
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "24b09667-a7e1-49de-900b-7424346fe1ee",
+      "name": "OpenAI Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -1504,
+        96
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "149bd90b-2cca-4d9b-96e6-390a51e6a91e",
+      "name": "OpenAI Chat Model2",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -1488,
+        480
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "8491131b-30b8-4c6a-84a6-b4d78df0ccf6",
+      "name": "OpenAI Chat Model3",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -1488,
+        864
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "20187c8f-421b-4188-b780-2287b66b7a45",
+      "name": "OpenAI Chat Model4",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -1488,
+        1360
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
     }
   ],
-  "pinData": {
-    "When Executed by Another Workflow": [
-      {
-        "json": {
-          "Chat ID": [
-            "804687104"
-          ],
-          "Tasks": "Название: KillEliteBiomechanoids\nТип объекта: Flat Иконка\nКраткое описание: Разработать 3D-иконку для обозначения элитного врага на карте или в интерфейсе.\nРоль/назначение: Маркер цели. Появляется после сканирования и указывает на местоположение элитного врага типа \"Биомеханоид\", с которым можно начать сражение.\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой стилизованный голографический проектор. Основа — плоский шестиугольный диск из темного металла. Из центра диска проецируется вверх объемный символ угрозы. Символ — агрессивная, угловатая стилизация биомеханического черепа, состоящего из чистых геометрических форм и светящихся линий.\nМатериалы и поверхности: Основа выполнена из матового, полированного металла с глянцевыми фасками, на которых играют четкие блики. Голографический символ выполнен из полупрозрачного светящегося материала с ярким внутренним градиентом.\nОсвещение и блики: Яркое спекулярное освещение подчеркивает металлические грани основы. Голографический символ является источником света, создавая мягкое свечение и отражения на поверхности диска.\nСветящиеся элементы: Основной светящийся элемент — это сам голографический символ. По периметру металлической основы проходит тонкая неоновая линия, дублирующая цвет символа.\nДетализация: На поверхности металлического диска присутствуют тонкие гравировки в виде технологических паттернов. Голографический символ имеет несколько слоев, создающих эффект глубины и объема.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (Cyan) (#00FFFF) используется для основного свечения голографического символа и контурной подсветки основы.\n---\nНазвание: KillBigBiomechanoid\nТип объекта: Flat Иконка\nКраткое описание: Разработать 3D-иконку для обозначения особо крупного и опасного врага (босса) на карте или в интерфейсе.\nРоль/назначение: Маркер цели-босса. Появляется после сканирования и указывает на местоположение \"Большого Биомеханоида\", инициируя сражение с ним.\nОписание и адаптация:\nФорма и композиция: Иконка является усиленной версией маркера элитного врага. Основа — круглый диск с более сложной геометрией и несколькими слоями. Голографический символ, проецируемый из центра, значительно крупнее и агрессивнее. Он представляет собой стилизованную биомеханическую маску с двумя массивными энергетическими \"рогами\" или клинками, расходящимися в стороны.\nМатериалы и поверхности: Основа выполнена из полированного темного металла с элементами из глянцевого белого пластика. Голографическая проекция обладает высокой интенсивностью свечения и сложным внутренним градиентом.\nОсвещение и блики: Мощные спекулярные блики на полированной основе. Голограмма отбрасывает интенсивное свечение с эффектом bloom, подчеркивая статус босса.\nСветящиеся элементы: Центральная голограмма маски и ее энергетические \"рога\" — основные источники света. На диске-основе расположены несколько пульсирующих индикаторов.\nДетализация: Голографический символ состоит из множества пересекающихся энергетических слоев. На металлической основе видны выгравированные предупреждающие символы. Общая форма более сложная и многослойная, чем у иконки элитного врага, что визуально передает повышенный уровень угрозы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Фиолетовый (Magenta) (#FF00FF) используется для голографической проекции и ее элементов, чтобы четко выделить маркер босса среди других целей."
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1",
@@ -3268,6 +3681,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-29T11:41:24.000Z",
-  "versionId": "d67b64d6-3ea5-4bdb-8935-505ecfb550fa"
+  "updatedAt": "2025-09-09T20:31:54.000Z",
+  "versionId": "a6efc974-b3c9-4423-b720-bf5f91428d6c"
 }
