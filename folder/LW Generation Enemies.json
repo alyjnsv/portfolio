@@ -177,7 +177,7 @@
         ]
       ]
     },
-    "Date & Time": {
+    "Date & Time1": {
       "main": [
         [
           {
@@ -194,19 +194,7 @@
         [
           {
             "index": 0,
-            "node": "Wait3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Drive URL1": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait6",
+            "node": "Drive URL2",
             "type": "main"
           }
         ]
@@ -218,7 +206,7 @@
         [
           {
             "index": 0,
-            "node": "Wait4",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -430,7 +418,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Male1",
+            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -442,7 +430,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Female1",
+            "node": "Wait5",
             "type": "main"
           }
         ]
@@ -514,7 +502,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Male",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -526,7 +514,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Female",
+            "node": "Wait1",
             "type": "main"
           }
         ]
@@ -639,7 +627,7 @@
         [
           {
             "index": 0,
-            "node": "Wait8",
+            "node": "Loop Over Items7",
             "type": "main"
           }
         ]
@@ -657,7 +645,7 @@
         [
           {
             "index": 0,
-            "node": "Wait7",
+            "node": "Loop Over Items8",
             "type": "main"
           }
         ]
@@ -675,85 +663,13 @@
         [
           {
             "index": 0,
-            "node": "Wait9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url3",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait10",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url2",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
             "node": "Loop Over Items11",
             "type": "main"
           }
         ]
       ]
     },
-    "Queue7": {
+    "Queue3": {
       "main": [
         [
           {
@@ -779,6 +695,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait14",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -788,6 +711,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait13",
             "type": "main"
           }
         ]
@@ -801,6 +731,13 @@
             "node": ">71",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait11",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -810,6 +747,13 @@
           {
             "index": 0,
             "node": ">1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait12",
             "type": "main"
           }
         ]
@@ -991,12 +935,45 @@
         ]
       ]
     },
-    "Wait10": {
+    "Wait11": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Queue7",
+            "node": "Rated2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait12": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait13": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait14": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated",
             "type": "main"
           }
         ]
@@ -1013,28 +990,6 @@
         ]
       ]
     },
-    "Wait3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Drive URL1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Finish1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Wait5": {
       "main": [
         [
@@ -1046,56 +1001,12 @@
         ]
       ]
     },
-    "Wait6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Drive URL2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "When Executed by Another Workflow": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main"
           }
         ]
@@ -1114,13 +1025,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "7fde0b1f-7346-4fe7-8a94-bd7d27084f30",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1134,13 +1044,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "d620f8e5-ad9b-40a6-85b0-4f150c657689",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1185,7 +1094,7 @@
           "mode": "list",
           "value": "1_F8QgLn2mPmM2AezyM6vuphRbZKVSOSi"
         },
-        "name": "={{ $json.formattedDateTime }} Character",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
@@ -1195,20 +1104,6 @@
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
-    },
-    {
-      "id": "4e5b3b7b-f523-4493-92a3-149c70678865",
-      "name": "Date & Time",
-      "parameters": {
-        "options": {},
-        "outputFieldName": "=currentDate"
-      },
-      "position": [
-        -2848,
-        -256
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
     },
     {
       "id": "14dca930-1eae-446a-aa9c-2073270b40b2",
@@ -1435,11 +1330,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "9ac16410-9d9a-447c-88da-6d62fa866c0b",
+      "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1458,8 +1355,10 @@
         96,
         -256
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "89950e83-32ba-4837-85cb-4d9b9acf9545",
@@ -1646,11 +1545,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "2d17625d-0109-436c-9127-9cd05af68657",
+      "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1669,8 +1570,10 @@
         96,
         144
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "4ad87668-1d05-4f3b-b9a0-656721a892db",
@@ -1879,6 +1782,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
+      "disabled": true,
       "executeOnce": true,
       "id": "7106a77e-2f6a-479b-b363-09ad370345e0",
       "maxTries": 5,
@@ -1910,8 +1814,8 @@
         "text": "=🔄    👤 *Создаю персонажей \"Враги\"!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1920,
-        -560
+        -2192,
+        -448
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1926,6 +1830,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
+      "disabled": true,
       "executeOnce": true,
       "id": "fa5a313e-0f12-4f1d-89cf-ec7648c77e4f",
       "maxTries": 5,
@@ -1957,8 +1862,8 @@
         "text": "=✅    👤 *Ваши персонажи \"Враги\" готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
       },
       "position": [
-        -1536,
-        -416
+        -1552,
+        -448
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1967,87 +1872,13 @@
       "webhookId": "78b431b2-46ef-49a1-9fea-804fddf97363"
     },
     {
-      "id": "a043ea17-ea43-4c08-b367-ca7f50d6b599",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 2
-      },
-      "position": [
-        -1696,
-        -560
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "42548182-398a-497f-9541-e5b8a7edd9b1"
-    },
-    {
-      "id": "0f4dd12a-c88f-4ec7-8091-57a1945b9900",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -1296,
-        -416
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "16004912-fbd4-421a-b45c-3e7145b725ef"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
           "name": "@lw_art_assistant_bot"
         }
       },
-      "executeOnce": true,
-      "id": "928bd27c-1d9e-4baa-851b-fb6721b564a4",
-      "maxTries": 5,
-      "name": "Drive URL1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "Markdown"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    👤 *Создаю персонажей \"Враги\"!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
-      },
-      "position": [
-        -1536,
-        -560
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "a7909627-1754-4ef0-8cc3-a014c6c1e679"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "sDFqRe7Aff5vEwek",
-          "name": "@lw_art_assistant_bot"
-        }
-      },
+      "disabled": true,
       "executeOnce": true,
       "id": "ef264cf0-f91c-4d92-9e85-3ccd527504d5",
       "maxTries": 5,
@@ -2055,31 +1886,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    👤 *Ваши персонажи \"Враги\" готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
+        "text": "=✅    👤 Ваши персонажи \"Враги\" готовы!\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
       },
       "position": [
-        -1136,
-        -416
+        -1328,
+        -448
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2135,13 +1949,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "a1176f13-5eb1-41bc-aba1-d10def9f3f56",
       "name": "Google Gemini Chat Model2",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2155,13 +1968,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "e57ba95f-cade-4ec9-baf8-66db4b6cca6c",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2356,11 +2168,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "9f0ccffd-f3f1-40bb-a947-bedddf8c9004",
+      "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2379,8 +2193,10 @@
         96,
         544
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "41d65be2-a49b-495c-ab83-184bb201a6bf",
@@ -2567,11 +2383,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "82635080-3e59-48e7-a89d-cca268e0eb92",
+      "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2590,8 +2408,10 @@
         96,
         944
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2810,26 +2630,13 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "d33a03a1-c9dc-4f9d-8542-547a2ac4d020",
-      "name": "Wait6",
-      "parameters": {
-        "amount": 4
-      },
-      "position": [
-        -1296,
-        -560
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "39ca9a61-1ecd-45b6-b9c5-aec7aa33c99c"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
           "name": "@lw_art_assistant_bot"
         }
       },
+      "disabled": true,
       "executeOnce": true,
       "id": "1bf3472f-780f-4626-9bfc-334f7bc49196",
       "maxTries": 5,
@@ -2838,31 +2645,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    👤 *Создаю персонажей!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄    👤 Создаю персонажей! \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1136,
-        -560
+        -1968,
+        -448
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2871,171 +2661,90 @@
       "webhookId": "7ea1aab5-6025-4cb3-9e84-21208780cf49"
     },
     {
-      "id": "0699d9be-a1b1-408d-8d9d-7a1b828de866",
-      "maxTries": 5,
-      "name": "Queue4",
-      "onError": "continueErrorOutput",
+      "id": "eecb2281-d6b6-41a0-82ca-9cee55bb7d7f",
+      "name": "Wait11",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('Imagen').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        -576,
-        320
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "4a759e07-360a-4674-b21a-a3abf6b771b9",
-      "name": "Wait7",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        320
+        304,
+        720
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "ea48f4c7-3a45-40d8-86c4-7cdaf3058413"
+      "webhookId": "c25fe961-827e-409e-a175-6c0fec7d2740"
     },
     {
-      "id": "a9538ab9-615d-42ce-8901-f591bf7028b5",
-      "maxTries": 5,
-      "name": "Queue5",
-      "onError": "continueErrorOutput",
+      "id": "c2351e3e-caf4-45a5-ba41-b2abb45a6e23",
+      "name": "Wait12",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('Imagen 4').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        -576,
-        -96
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "16af5c62-0867-4273-9251-5b6e6bec074d",
-      "name": "Wait8",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        -96
+        304,
+        1136
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "7e86ded8-8ab5-46cd-bcae-17f59b0236a5"
+      "webhookId": "c25fe961-827e-409e-a175-6c0fec7d2740"
     },
     {
-      "id": "9c566a60-acf0-475e-b4f6-f2c0819939ba",
-      "maxTries": 5,
-      "name": "Queue6",
-      "onError": "continueErrorOutput",
+      "id": "031b1f34-c96a-46ff-b74f-41b8582880e4",
+      "name": "Wait13",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('Imagen 5').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        -576,
-        704
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "f21ababb-aec9-4f15-b9ba-1e9446ff3582",
-      "name": "Wait9",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        704
+        304,
+        336
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "612894ab-cbfd-4dc2-a4b9-580ec906abaa"
+      "webhookId": "c25fe961-827e-409e-a175-6c0fec7d2740"
     },
     {
-      "id": "0a2fd607-c10e-45d3-98e8-b58bcc463efc",
-      "maxTries": 5,
-      "name": "Queue7",
-      "onError": "continueErrorOutput",
+      "id": "40b79a80-00bf-4291-b903-85ee7ac46a2d",
+      "name": "Wait14",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('Imagen 1').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        -576,
-        1120
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "79a77630-6768-4c59-9a0f-bb44eca5e1e9",
-      "name": "Wait10",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        1120
+        304,
+        -80
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "5c0385f9-398f-44f5-ace8-a2504e70164f"
+      "webhookId": "c25fe961-827e-409e-a175-6c0fec7d2740"
+    },
+    {
+      "executeOnce": true,
+      "id": "dffb752d-aaaa-4bd3-98a8-8318b81b016a",
+      "name": "Date & Time1",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        -2848,
+        -256
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "Chat ID": [
+            "696703711"
+          ],
+          "Tasks": "Название: Enemy_Bioinsectoid\nТип объекта: Враг\nКраткое описание: Создать 3D-модель агрессивного биомеханического врага-инсектоида \"Биоинсектоид-гончая\", предназначенного для разрушенного мира.\nРоль/назначение: Архетип: кибернетический хищник. Функция: быстрый противник ближнего боя, созданный из обломков технологий и мутировавшей органики для преследования и уничтожения цели.\nОписание и адаптация:\nЖанр и стиль: Стилизованный 3D в духе hero-shooter'ов с эстетикой киберпанк sci-fi. Дизайн должен быть агрессивным, с четким и угрожающим силуэтом, отражающим хаос разрушенного мира.\nПропорции и анатомия: Массивное, приземистое тело, сочетающее органические и механические элементы. Несколько пар конечностей, где передняя пара значительно увеличена и модифицирована в грубые режущие лезвия. Пропорции подчеркивают его роль \"брузера\" — тяжелого, но способного на быстрые рывки противника.\nСилуэт и поза: Уверенная, низкая, хищная стойка, готовая к атаке. Силуэт асимметричный и зазубренный, состоящий из острых углов ржавой брони и торчащих кабелей, чтобы моментально читаться как угроза.\nЛицо и голова: Вытянутая голова, напоминающая череп насекомого, собрана из сварных кусков металла и пластика. Вместо глаз — несколько хаотично расположенных оптических сенсоров разного размера, один из которых разбит, а остальные мерцают сбоящим неоновым светом. Нижняя челюсть заменена промышленным гидравлическим захватом.\nДизайн брони: Броня представляет собой хаотичный коллаж из разнородных металлических пластин, снятых со старой техники и грубо приваренных к органическому телу. Видны ржавчина, потертости и грубые сварные швы. Из-под брони проглядывают пучки проводов, некоторые из которых искрят.\nЦвет и материалы: Преобладание темных, матовых и ржавых металлических поверхностей. Контраст создается за счет ярких, но \"глючных\" неоновых акцентов — сбоящих оранжевых сенсоров и искрящих бирюзовых кабелей, что символизирует нестабильность и опасность.\nТехнологические детали: На спине расположен поврежденный энергетический блок, из которого вырываются короткие электрические разряды. Конечности представляют собой гибрид органики и грубой механики: гидравлические поршни и сервоприводы, закрепленные массивными болтами.\nОружие и снаряжение: Основное оружие — это его передние конечности, модифицированные в зазубренные лезвия из арматуры и заточенных кусков металла. Они могут быть обвиты искрящими проводами, создавая дополнительный электрический урон.\nОсвещение и рендер: Яркое спекулярное освещение с сильными контрастами, подчеркивающее полированные и ржавые поверхности брони, а также нестабильное свечение неона. Чистый белый фон для максимальной читаемости.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Сбоящий оранжевый (#FF4500) используется для оптических сенсоров и энергетических утечек. Бирюзовый (#00FFFF) используется для искрящих кабелей и проводки."
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -3058,6 +2767,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-29T11:44:09.000Z",
-  "versionId": "0a856a0e-a6c2-4dde-8c04-0c18da0fe499"
+  "updatedAt": "2025-09-09T13:55:41.000Z",
+  "versionId": "6ce4a5cd-5e4f-42e8-84b2-1ab0efb7aba0"
 }
