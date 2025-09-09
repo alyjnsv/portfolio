@@ -217,7 +217,7 @@
         ]
       ]
     },
-    "Date & Time": {
+    "Date & Time1": {
       "main": [
         [
           {
@@ -234,19 +234,7 @@
         [
           {
             "index": 0,
-            "node": "Wait5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Drive URL1": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait7",
+            "node": "Drive URL2",
             "type": "main"
           }
         ]
@@ -258,7 +246,7 @@
         [
           {
             "index": 0,
-            "node": "Wait6",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -543,7 +531,7 @@
         [
           {
             "index": 0,
-            "node": "Promt",
+            "node": "Wait1",
             "type": "main"
           }
         ]
@@ -567,7 +555,7 @@
         [
           {
             "index": 0,
-            "node": "Promt1",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -579,7 +567,7 @@
         [
           {
             "index": 0,
-            "node": "Promt2",
+            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -591,7 +579,7 @@
         [
           {
             "index": 0,
-            "node": "Promt3",
+            "node": "Wait3",
             "type": "main"
           }
         ]
@@ -603,7 +591,7 @@
         [
           {
             "index": 0,
-            "node": "Promt4",
+            "node": "Wait4",
             "type": "main"
           }
         ]
@@ -887,7 +875,7 @@
         [
           {
             "index": 0,
-            "node": "Wait8",
+            "node": "Loop Over Items16",
             "type": "main"
           }
         ]
@@ -905,7 +893,7 @@
         [
           {
             "index": 0,
-            "node": "Wait9",
+            "node": "Loop Over Items21",
             "type": "main"
           }
         ]
@@ -923,7 +911,7 @@
         [
           {
             "index": 0,
-            "node": "Wait10",
+            "node": "Loop Over Items22",
             "type": "main"
           }
         ]
@@ -941,103 +929,13 @@
         [
           {
             "index": 0,
-            "node": "Wait11",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url8",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait12",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items16",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url2",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items21",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url4",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items22",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url6",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
             "node": "Loop Over Items23",
             "type": "main"
           }
         ]
       ]
     },
-    "Queue9": {
+    "Queue4": {
       "main": [
         [
           {
@@ -1063,6 +961,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait5",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1072,6 +977,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait6",
             "type": "main"
           }
         ]
@@ -1085,6 +997,13 @@
             "node": ">1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1096,6 +1015,13 @@
             "node": ">2",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait8",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1105,6 +1031,13 @@
           {
             "index": 0,
             "node": ">3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait9",
             "type": "main"
           }
         ]
@@ -1430,39 +1363,6 @@
         ]
       ]
     },
-    "Wait10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait11": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait12": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Wait2": {
       "main": [
         [
@@ -1501,7 +1401,7 @@
         [
           {
             "index": 0,
-            "node": "Drive URL1",
+            "node": "Rated",
             "type": "main"
           }
         ]
@@ -1512,7 +1412,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Rated1",
             "type": "main"
           }
         ]
@@ -1523,7 +1423,7 @@
         [
           {
             "index": 0,
-            "node": "Drive URL2",
+            "node": "Rated2",
             "type": "main"
           }
         ]
@@ -1534,7 +1434,7 @@
         [
           {
             "index": 0,
-            "node": "Queue5",
+            "node": "Rated3",
             "type": "main"
           }
         ]
@@ -1545,7 +1445,7 @@
         [
           {
             "index": 0,
-            "node": "Queue6",
+            "node": "Rated4",
             "type": "main"
           }
         ]
@@ -1556,7 +1456,7 @@
         [
           {
             "index": 0,
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main"
           }
         ]
@@ -1724,7 +1624,7 @@
         "inputSource": "passthrough"
       },
       "position": [
-        -1632,
+        -1696,
         192
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
@@ -1752,29 +1652,16 @@
           "mode": "list",
           "value": "1wqN2ol9SlOY1s76pCAb-20GADNd4J4Z-"
         },
-        "name": "={{ $json.formattedDateTime }} Buildings/Props",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
       "position": [
-        -1040,
+        -1104,
         192
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
-    },
-    {
-      "id": "d246e66a-826a-4fa7-89ad-17c3ded6f58e",
-      "name": "Date & Time",
-      "parameters": {
-        "options": {}
-      },
-      "position": [
-        -1440,
-        192
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
     },
     {
       "id": "517f9b08-e48c-46d0-8aa9-cccfb8be5e99",
@@ -1783,7 +1670,7 @@
         "jsCode": "// Код для форматирования даты и времени в российском формате для n8n\n// Входная дата: 2025-08-04T15:56:12.178+03:00\n\nconst date = new Date($input.first().json.currentDate);\n\n// Форматирование даты (ДД.ММ.ГГГГ)\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0');\nconst year = date.getFullYear();\n\n// Форматирование времени (ЧЧ:ММ:СС)\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\n// Возвращаем различные форматы\nreturn [{\n  formattedDate: `${day}.${month}.${year}`,\n  formattedTime: `${hours}:${minutes}:${seconds}`,\n  formattedDateTime: `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`,\n  formattedDateTimeShort: `${day}.${month}.${year} ${hours}:${minutes}`\n}];\n\n// Альтернативный вариант с использованием toLocaleString для российской локали:\n/*\nconst date = new Date($input.first().json.currentDate);\n\nreturn [{\n  formattedDate: date.toLocaleDateString('ru-RU'),\n  formattedTime: date.toLocaleTimeString('ru-RU'),\n  formattedDateTime: date.toLocaleString('ru-RU'),\n  formattedDateTimeCustom: date.toLocaleString('ru-RU', {\n    day: '2-digit',\n    month: '2-digit',\n    year: 'numeric',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n  })\n}];\n*/"
       },
       "position": [
-        -1232,
+        -1296,
         192
       ],
       "type": "n8n-nodes-base.code",
@@ -1823,7 +1710,7 @@
         "jsCode": "// Получаем текст напрямую из Gemini API\nconst input = $('When Executed by Another Workflow').first().json.Tasks;\n\n// Логируем входные данные для отладки\nconsole.log('Input text:', input);\nconsole.log('Input type:', typeof input);\n\n// Проверяем, что input - это строка\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  console.log('Error: Input is not a string, received:', input);\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\n// Удаляем все \\r, \\n, \\t, заменяя на пробел\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\n\n// Заменяем маркеры \"•\" и \"●\" на дефис\ncleanedText = cleanedText.replace(/[•●]/g, '-');\n\n// Убираем лишние пробелы (больше одного подряд)\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      result: cleanedText,\n      original_length: result.length,\n      cleaned_length: cleanedText.length\n    }\n  }\n];"
       },
       "position": [
-        -848,
+        -896,
         192
       ],
       "type": "n8n-nodes-base.code",
@@ -1833,13 +1720,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "b75e2c5f-c168-45d1-a0dd-d0c6a64502fe",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1866,13 +1752,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "9c87ac98-4fd3-41a8-b6b5-52c0c026e0cd",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1899,13 +1784,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "77e41b20-462a-492e-8185-1da7080ad2de",
       "name": "Google Gemini Chat Model2",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1932,13 +1816,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "da626ddf-e069-49ce-9db6-1e0f5c1e8382",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1965,13 +1848,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "246adf17-5248-4bb1-b4f8-c828d347a22e",
       "name": "Google Gemini Chat Model4",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2336,12 +2218,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "eab15b1c-7eb0-4aec-901b-03183920762a",
       "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2666,12 +2549,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "402a07c6-e10c-4f4a-a395-c83325c07723",
       "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2996,12 +2880,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "737cfc5e-95cb-46df-a745-2cc69f520f9c",
       "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -3326,12 +3211,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "4b4ee0ce-af2d-45bc-9d8a-a5a9e2d5dd98",
       "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -3656,12 +3542,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "bd075129-2a69-4600-932e-0930140c5c18",
       "maxTries": 5,
       "name": "Rated4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -3738,7 +3625,7 @@
         "options": {}
       },
       "position": [
-        2912,
+        2896,
         192
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3768,7 +3655,7 @@
         "options": {}
       },
       "position": [
-        2912,
+        2896,
         560
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3798,7 +3685,7 @@
         "options": {}
       },
       "position": [
-        2912,
+        2896,
         928
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3828,7 +3715,7 @@
         "options": {}
       },
       "position": [
-        2912,
+        2896,
         1296
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3858,7 +3745,7 @@
         "options": {}
       },
       "position": [
-        2912,
+        2896,
         1664
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3902,8 +3789,8 @@
         "text": "=🔄   🏛️ *Создаю здания и пропсы!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -640,
-        -144
+        -896,
+        32
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3967,7 +3854,7 @@
         }
       },
       "position": [
-        352,
+        192,
         352
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3982,7 +3869,7 @@
         }
       },
       "position": [
-        352,
+        192,
         720
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3997,7 +3884,7 @@
         }
       },
       "position": [
-        352,
+        192,
         1088
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -4012,7 +3899,7 @@
         }
       },
       "position": [
-        352,
+        192,
         1456
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -4027,7 +3914,7 @@
         }
       },
       "position": [
-        352,
+        192,
         1824
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -4049,81 +3936,6 @@
       "typeVersion": 3
     },
     {
-      "id": "a1f87e46-225f-44a3-92d0-a94aafbfa31b",
-      "name": "Wait5",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -400,
-        -144
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
-      "id": "0b2090c9-418a-4d94-b2ef-23b9bf4d83d9",
-      "name": "Wait6",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        16,
-        16
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "sDFqRe7Aff5vEwek",
-          "name": "@lw_art_assistant_bot"
-        }
-      },
-      "executeOnce": true,
-      "id": "9029dab5-0d33-4cc5-ab66-da9dfd0b9d92",
-      "maxTries": 5,
-      "name": "Drive URL1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "Markdown"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄   🏛️ *Создаю здания и пропсы!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
-      },
-      "position": [
-        -224,
-        -144
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
@@ -4138,30 +3950,13 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    🏛️ *Ваши здания и пропсы готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=✅    🏛️ Ваши здания и пропсы готовы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        208,
+        0,
         16
       ],
       "retryOnFail": true,
@@ -4236,20 +4031,6 @@
       "typeVersion": 2
     },
     {
-      "id": "b80deb89-097d-4d37-adf6-02f6e5c6e453",
-      "name": "Wait7",
-      "parameters": {
-        "amount": 4
-      },
-      "position": [
-        0,
-        -144
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
@@ -4260,82 +4041,24 @@
       "id": "24cc99d3-9d99-4c42-a957-f256efd3b363",
       "maxTries": 5,
       "name": "Drive URL2",
-      "onError": "continueErrorOutput",
+      "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄   🏛️ *Создаю здания и пропсы!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄   🏛️ Создаю здания и пропсы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        208,
-        -144
+        -672,
+        32
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
-      "id": "ddf53832-43e1-4070-8b90-bc8b567b78c6",
-      "name": "Wait8",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        592,
-        352
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "944d6669-341d-4e23-81d4-59e44f23347d",
-      "maxTries": 5,
-      "name": "Queue5",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('Imagen 4').item.json.request_id }}"
-      },
-      "position": [
-        784,
-        352
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
     },
     {
       "id": "886d6786-1ded-4097-b249-bacae9bd2f3d",
@@ -4353,47 +4076,6 @@
       "typeVersion": 3
     },
     {
-      "id": "aad7ab3c-7963-4e21-a191-d7a9dc7e334b",
-      "name": "Wait9",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        592,
-        720
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "c8357c4c-c8d8-47c1-9667-677b569ba03e",
-      "maxTries": 5,
-      "name": "Queue6",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('Imagen').item.json.request_id }}"
-      },
-      "position": [
-        784,
-        720
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
-    },
-    {
       "id": "c751751e-e669-4cb2-a9ee-32bb6f06f5d5",
       "name": "Loop Over Items22",
       "parameters": {
@@ -4407,47 +4089,6 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
-    },
-    {
-      "id": "1cd8cd70-37c7-4d5e-91ca-1cda22b4479c",
-      "name": "Wait10",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        592,
-        1088
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "784436cd-2a42-4429-8c15-3ea673bfdaa5",
-      "maxTries": 5,
-      "name": "Queue7",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('Imagen 1').item.json.request_id }}"
-      },
-      "position": [
-        784,
-        1088
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
     },
     {
       "id": "e6fb6c07-ba1f-473b-bb90-30af29c34fce",
@@ -4465,47 +4106,6 @@
       "typeVersion": 3
     },
     {
-      "id": "35339a6e-3ca5-4c72-a677-619f38793075",
-      "name": "Wait11",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        592,
-        1456
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "ab767396-2624-42b3-975c-e42330a85944",
-      "maxTries": 5,
-      "name": "Queue8",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('Imagen 2').item.json.request_id }}"
-      },
-      "position": [
-        784,
-        1456
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
-    },
-    {
       "id": "575a96ab-d831-4159-a5e3-ef5cd2fca939",
       "name": "Loop Over Items24",
       "parameters": {
@@ -4521,45 +4121,90 @@
       "typeVersion": 3
     },
     {
-      "id": "746ac678-e35f-4619-a100-52ddffc4c2ce",
-      "name": "Wait12",
+      "executeOnce": true,
+      "id": "e325d537-dc46-4f02-b9d0-4ac4b142da9c",
+      "name": "Date & Time1",
       "parameters": {
-        "amount": 6
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
       },
       "position": [
-        592,
-        1824
+        -1488,
+        192
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "id": "184e58c1-fbaa-46c9-abf3-2638e92dc5f4",
+      "name": "Wait5",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2416,
+        368
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
+      "webhookId": "fa0df082-1a91-417e-98ea-85964e20b2ba"
     },
     {
-      "id": "3943e890-b1ce-4499-983a-c3867376e064",
-      "maxTries": 5,
-      "name": "Queue9",
-      "onError": "continueErrorOutput",
+      "id": "b77670f6-8e5a-4c98-b1d3-f38f0fc654d9",
+      "name": "Wait6",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gpt-image-1/requests/{{ $('Imagen 3').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        784,
-        1824
+        2416,
+        736
       ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fa0df082-1a91-417e-98ea-85964e20b2ba"
+    },
+    {
+      "id": "9418e2af-a4f5-4289-b864-c2b740342377",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2416,
+        1104
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fa0df082-1a91-417e-98ea-85964e20b2ba"
+    },
+    {
+      "id": "d064a8f8-39c6-4f89-8d5f-f7d0e039f40d",
+      "name": "Wait8",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2416,
+        1472
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fa0df082-1a91-417e-98ea-85964e20b2ba"
+    },
+    {
+      "id": "acdf558f-351e-4b81-8bcb-28942638f9b3",
+      "name": "Wait9",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2416,
+        1840
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "fa0df082-1a91-417e-98ea-85964e20b2ba"
     }
   ],
   "pinData": {},
@@ -4585,6 +4230,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T11:46:00.000Z",
-  "versionId": "29b6e6da-0e72-4b73-bb02-b476742802e0"
+  "updatedAt": "2025-09-09T14:38:36.000Z",
+  "versionId": "f1aafe3d-888a-42b3-8593-ffb342e9147a"
 }
