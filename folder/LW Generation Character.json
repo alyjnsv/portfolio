@@ -194,19 +194,7 @@
         [
           {
             "index": 0,
-            "node": "Wait3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Drive URL1": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait6",
+            "node": "Drive URL2",
             "type": "main"
           }
         ]
@@ -218,7 +206,7 @@
         [
           {
             "index": 0,
-            "node": "Wait4",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -430,7 +418,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Male1",
+            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -442,7 +430,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Female1",
+            "node": "Wait5",
             "type": "main"
           }
         ]
@@ -514,7 +502,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Male",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -526,7 +514,7 @@
         [
           {
             "index": 0,
-            "node": "Promt Female",
+            "node": "Wait1",
             "type": "main"
           }
         ]
@@ -639,7 +627,7 @@
         [
           {
             "index": 0,
-            "node": "Wait8",
+            "node": "Loop Over Items7",
             "type": "main"
           }
         ]
@@ -657,7 +645,7 @@
         [
           {
             "index": 0,
-            "node": "Wait7",
+            "node": "Loop Over Items8",
             "type": "main"
           }
         ]
@@ -675,85 +663,13 @@
         [
           {
             "index": 0,
-            "node": "Wait9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url3",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait10",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Queue6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Url2",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
             "node": "Loop Over Items11",
             "type": "main"
           }
         ]
       ]
     },
-    "Queue7": {
+    "Queue3": {
       "main": [
         [
           {
@@ -779,6 +695,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait3",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -788,6 +711,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait4",
             "type": "main"
           }
         ]
@@ -801,6 +731,13 @@
             "node": ">71",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait6",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -810,6 +747,13 @@
           {
             "index": 0,
             "node": ">1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
             "type": "main"
           }
         ]
@@ -991,17 +935,6 @@
         ]
       ]
     },
-    "Wait10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Wait2": {
       "main": [
         [
@@ -1018,7 +951,7 @@
         [
           {
             "index": 0,
-            "node": "Drive URL1",
+            "node": "Rated",
             "type": "main"
           }
         ]
@@ -1029,7 +962,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Rated1",
             "type": "main"
           }
         ]
@@ -1051,7 +984,7 @@
         [
           {
             "index": 0,
-            "node": "Drive URL2",
+            "node": "Rated2",
             "type": "main"
           }
         ]
@@ -1062,29 +995,7 @@
         [
           {
             "index": 0,
-            "node": "Queue4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Queue6",
+            "node": "Rated3",
             "type": "main"
           }
         ]
@@ -1114,13 +1025,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "10672c61-42c9-49e4-ad1d-4798207f6d65",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1134,13 +1044,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "ad20bb4e-22ff-4fbe-88db-17ce8e6ea49a",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1157,7 +1066,7 @@
         "inputSource": "passthrough"
       },
       "position": [
-        -3088,
+        -3040,
         -256
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
@@ -1185,12 +1094,12 @@
           "mode": "list",
           "value": "1Y0B_0tWwVYSkee1cqC4qJlbD7mORfNAE"
         },
-        "name": "={{ $json.formattedDateTime }} Character",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
       "position": [
-        -2384,
+        -2432,
         -256
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -1200,11 +1109,13 @@
       "id": "445f302c-b846-4700-87c0-a1eeca411eba",
       "name": "Date & Time",
       "parameters": {
-        "options": {},
+        "options": {
+          "timezone": "Europe/Moscow"
+        },
         "outputFieldName": "=currentDate"
       },
       "position": [
-        -2848,
+        -2832,
         -256
       ],
       "type": "n8n-nodes-base.dateTime",
@@ -1217,7 +1128,7 @@
         "jsCode": "// Код для форматирования даты и времени в российском формате для n8n\n// Входная дата: 2025-08-04T15:56:12.178+03:00\n\nconst date = new Date($input.first().json.currentDate);\n\n// Форматирование даты (ДД.ММ.ГГГГ)\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0');\nconst year = date.getFullYear();\n\n// Форматирование времени (ЧЧ:ММ:СС)\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\n// Возвращаем различные форматы\nreturn [{\n  formattedDate: `${day}.${month}.${year}`,\n  formattedTime: `${hours}:${minutes}:${seconds}`,\n  formattedDateTime: `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`,\n  formattedDateTimeShort: `${day}.${month}.${year} ${hours}:${minutes}`\n}];\n\n// Альтернативный вариант с использованием toLocaleString для российской локали:\n/*\nconst date = new Date($input.first().json.currentDate);\n\nreturn [{\n  formattedDate: date.toLocaleDateString('ru-RU'),\n  formattedTime: date.toLocaleTimeString('ru-RU'),\n  formattedDateTime: date.toLocaleString('ru-RU'),\n  formattedDateTimeCustom: date.toLocaleString('ru-RU', {\n    day: '2-digit',\n    month: '2-digit',\n    year: 'numeric',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n  })\n}];\n*/"
       },
       "position": [
-        -2624,
+        -2640,
         -256
       ],
       "type": "n8n-nodes-base.code",
@@ -1435,11 +1346,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "c53f5800-3da2-4a2f-b766-2316a53b02c8",
+      "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1458,8 +1371,10 @@
         96,
         -256
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "c57be125-d284-434a-9a4f-f15d1a00a3fc",
@@ -1646,11 +1561,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "6ab77482-1afd-4680-84af-3c83dabaa277",
+      "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1669,8 +1586,10 @@
         96,
         144
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "6c4d936e-e220-451f-a021-2c1a4165911b",
@@ -1679,7 +1598,7 @@
         "numberInputs": 4
       },
       "position": [
-        1216,
+        1136,
         304
       ],
       "type": "n8n-nodes-base.merge",
@@ -1910,8 +1829,8 @@
         "text": "=🔄    👤 *Создаю персонажей!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1920,
-        -560
+        -2192,
+        -416
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1967,81 +1886,6 @@
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
     },
     {
-      "id": "7b2d78d0-2945-4185-b0c3-4389f57f4902",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 2
-      },
-      "position": [
-        -1696,
-        -560
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
-      "id": "b11ca75d-ef84-4bbc-8513-fe2c0dde6c68",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -1296,
-        -416
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "sDFqRe7Aff5vEwek",
-          "name": "@lw_art_assistant_bot"
-        }
-      },
-      "executeOnce": true,
-      "id": "d791eb85-860c-42ca-bc25-7be8ce08fdd5",
-      "maxTries": 5,
-      "name": "Drive URL1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "Markdown"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    👤 *Создаю персонажей!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
-      },
-      "position": [
-        -1536,
-        -560
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
@@ -2055,14 +1899,14 @@
       "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
-          "appendAttribution": false
+          "appendAttribution": false,
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    👤 *Ваши персонажи готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
+        "text": "=✅    👤 Ваши персонажи готовы!\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
       },
       "position": [
-        -1136,
+        -1312,
         -416
       ],
       "retryOnFail": true,
@@ -2119,13 +1963,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "8f58d487-a7ba-4c0e-b1cc-8c56685f23a6",
       "name": "Google Gemini Chat Model2",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2139,13 +1982,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "43519af1-d5d8-45d2-95d9-f1edaa5b661d",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2340,11 +2182,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "9e0f7c89-e3d8-487f-a632-d638faabd9a3",
+      "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2363,8 +2207,10 @@
         96,
         544
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "e65d2446-45ec-40f1-aac1-012f4c7d7ccb",
@@ -2551,11 +2397,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "e2c4b6bf-715b-4d32-874b-42634a8b10d7",
+      "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2574,8 +2422,10 @@
         96,
         944
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2794,20 +2644,6 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "461c16ec-c425-437e-a6b1-c40fe456c032",
-      "name": "Wait6",
-      "parameters": {
-        "amount": 4
-      },
-      "position": [
-        -1296,
-        -560
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "sDFqRe7Aff5vEwek",
@@ -2821,15 +2657,15 @@
       "onError": "continueRegularOutput",
       "parameters": {
         "additionalFields": {
-          "appendAttribution": false
+          "appendAttribution": false,
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    👤 *Создаю персонажей!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄    👤 Создаю персонажей!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1136,
-        -560
+        -1968,
+        -416
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2838,168 +2674,60 @@
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
     },
     {
-      "id": "03bd364d-ad1c-4fc0-8d62-dd02943c7978",
-      "maxTries": 5,
-      "name": "Queue4",
-      "onError": "continueErrorOutput",
+      "id": "a438d9fb-89e8-4ea5-9d2a-bfaa8dc033cc",
+      "name": "Wait3",
       "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen').item.json.request_id }}"
+        "amount": 10
       },
       "position": [
-        -576,
-        320
+        304,
+        -80
       ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "f0186bc4-6142-4939-b00d-45e924de2db5"
     },
     {
-      "id": "dea60753-f655-438e-afac-9afaa67a3079",
+      "id": "fe7ab8a0-5f8c-4f89-a19e-51773cc349a2",
+      "name": "Wait4",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        304,
+        336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "f0186bc4-6142-4939-b00d-45e924de2db5"
+    },
+    {
+      "id": "334ed493-9d62-4ce5-9583-6c413567ceb5",
+      "name": "Wait6",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        304,
+        720
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "f0186bc4-6142-4939-b00d-45e924de2db5"
+    },
+    {
+      "id": "37b4411b-6070-4d5c-941a-cad4dc287e7e",
       "name": "Wait7",
       "parameters": {
-        "amount": 6
+        "amount": 10
       },
       "position": [
-        -768,
-        320
+        304,
+        1136
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "5350adcd-41e3-4c65-834f-74114fe7af5e",
-      "maxTries": 5,
-      "name": "Queue5",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 4').item.json.request_id }}"
-      },
-      "position": [
-        -576,
-        -96
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "2ecd834a-0368-4369-93c5-3a2dd9b86d96",
-      "name": "Wait8",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        -96
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "5e0f9857-c92f-445e-b6c4-79d614324bed",
-      "maxTries": 5,
-      "name": "Queue6",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 5').item.json.request_id }}"
-      },
-      "position": [
-        -576,
-        704
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "269a5afe-e04d-4c19-88de-a7c3ba087e3f",
-      "name": "Wait9",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        704
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "ec7bab63-3dcf-4870-b3eb-dc2acea587e9",
-      "maxTries": 5,
-      "name": "Queue7",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 1').item.json.request_id }}"
-      },
-      "position": [
-        -576,
-        1120
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 2000
-    },
-    {
-      "id": "cf7e0972-febb-4c67-9466-c472a2e02e72",
-      "name": "Wait10",
-      "parameters": {
-        "amount": 6
-      },
-      "position": [
-        -768,
-        1120
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
+      "webhookId": "f0186bc4-6142-4939-b00d-45e924de2db5"
     }
   ],
   "pinData": {},
@@ -3025,6 +2753,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-29T11:37:10.000Z",
-  "versionId": "e80d148b-b776-4ac8-8d5e-f0198ad51255"
+  "updatedAt": "2025-09-09T14:59:27.000Z",
+  "versionId": "bfec1abe-3bc2-4622-bbb4-f39750c801a3"
 }
