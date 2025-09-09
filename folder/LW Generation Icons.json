@@ -217,7 +217,7 @@
         ]
       ]
     },
-    "Date & Time": {
+    "Date & Time1": {
       "main": [
         [
           {
@@ -234,7 +234,7 @@
         [
           {
             "index": 0,
-            "node": "Wait3",
+            "node": "Drive URL1",
             "type": "main"
           }
         ]
@@ -246,7 +246,7 @@
         [
           {
             "index": 0,
-            "node": "Wait4",
+            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -550,6 +550,18 @@
         ]
       ]
     },
+    "Loop Over Items16": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Promt2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Loop Over Items2": {
       "main": [
         [],
@@ -593,18 +605,6 @@
           {
             "index": 0,
             "node": "Promt1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items6": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Promt2",
             "type": "main"
           }
         ]
@@ -705,7 +705,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items6",
+            "node": "Loop Over Items16",
             "type": "main"
           }
         ]
@@ -845,6 +845,13 @@
             "node": ">70",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait11",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -854,6 +861,13 @@
           {
             "index": 0,
             "node": ">",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait10",
             "type": "main"
           }
         ]
@@ -867,6 +881,13 @@
             "node": ">1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait9",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -878,6 +899,13 @@
             "node": ">2",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait8",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -887,6 +915,13 @@
           {
             "index": 0,
             "node": ">3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
             "type": "main"
           }
         ]
@@ -1032,6 +1067,13 @@
             "node": "All Icons",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait16",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1041,6 +1083,13 @@
           {
             "index": 0,
             "node": "All Icons1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait15",
             "type": "main"
           }
         ]
@@ -1054,6 +1103,13 @@
             "node": "All Icons2",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait14",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1065,6 +1121,13 @@
             "node": "All Icons3",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait13",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1074,6 +1137,13 @@
           {
             "index": 0,
             "node": "All Icons4",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait12",
             "type": "main"
           }
         ]
@@ -1101,34 +1171,89 @@
         ]
       ]
     },
+    "Wait10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait11": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait12": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait13": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait14": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait15": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait16": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Wait2": {
       "main": [
         [
           {
             "index": 0,
             "node": "Queue2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Drive URL1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Finish1",
             "type": "main"
           }
         ]
@@ -1156,12 +1281,45 @@
         ]
       ]
     },
+    "Wait7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "When Executed by Another Workflow": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main"
           }
         ]
@@ -1180,13 +1338,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "aabb5964-e493-4352-b891-01b8e385e5b0",
       "name": "Google Gemini Chat Model",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1231,7 +1388,7 @@
           "mode": "list",
           "value": "1NJrIwD2x-RiZ-7v7cwkG-Go80y5jbS_B"
         },
-        "name": "={{ $json.formattedDateTime }} Icons",
+        "name": "={{ $json.formattedDateTime }} {{ $('When Executed by Another Workflow').item.json.File_name[0].replace(/\\+/g, '_').replace('.pdf', '') }}",
         "options": {},
         "resource": "folder"
       },
@@ -1265,7 +1422,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nПараметры вывода:\n- В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n- Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1292,20 +1449,6 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "395c5841-b3e7-4b7e-9b32-6072a14880d9"
-    },
-    {
-      "id": "8b0b0e95-f10a-4b13-8b7e-cf908a2581df",
-      "name": "Date & Time",
-      "parameters": {
-        "options": {},
-        "outputFieldName": "=currentDate"
-      },
-      "position": [
-        -2848,
-        -512
-      ],
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2
     },
     {
       "id": "7ec5fb76-02aa-4c08-a6e1-488f64c2d6ab",
@@ -1396,7 +1539,9 @@
     },
     {
       "id": "a3c5719a-5aa1-4826-a199-d18cb303c4d2",
+      "maxTries": 5,
       "name": "Url",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1405,8 +1550,10 @@
         -272,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "38cff83d-d905-43bd-914b-85f44f8f35f1",
@@ -1425,6 +1572,7 @@
     },
     {
       "id": "27ba7c0d-7c7b-420f-be3d-601b3624e416",
+      "maxTries": 5,
       "name": "Image",
       "parameters": {
         "options": {},
@@ -1434,8 +1582,10 @@
         624,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1445,6 +1595,7 @@
         }
       },
       "id": "d68d04e9-d65e-4dde-9a0f-9321863dd4c3",
+      "maxTries": 5,
       "name": "All Icons",
       "parameters": {
         "fileId": {
@@ -1463,8 +1614,10 @@
         -32,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "308cadcc-c6ee-42dc-b683-69cb9284ca61",
@@ -1504,11 +1657,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "524bdae7-7fe7-448b-9bc1-2267c55e7f95",
+      "maxTries": 5,
       "name": "Rated",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1527,20 +1682,21 @@
         176,
         -512
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "510d1f9f-5157-4a3e-83d2-899a7722dbef",
       "name": "Google Gemini Chat Model1",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1558,7 +1714,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nПараметры вывода:\n- В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n- Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1662,7 +1818,9 @@
     },
     {
       "id": "2bcf98fc-ddfc-445b-8dce-5fa342e08b7a",
+      "maxTries": 5,
       "name": "Url1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1671,8 +1829,10 @@
         -272,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "6579515a-46f8-4d41-a089-d4656197c0ad",
@@ -1691,6 +1851,7 @@
     },
     {
       "id": "255f9b33-79a6-4f40-b870-914f875807bc",
+      "maxTries": 5,
       "name": "Image1",
       "parameters": {
         "options": {},
@@ -1700,8 +1861,10 @@
         624,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1711,6 +1874,7 @@
         }
       },
       "id": "e089981f-457a-43c0-8868-1d45669a2379",
+      "maxTries": 5,
       "name": "All Icons1",
       "parameters": {
         "fileId": {
@@ -1729,8 +1893,10 @@
         -32,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "0fe49b03-c49e-4de0-88f8-5cce301af6b0",
@@ -1770,11 +1936,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "08a4149f-9953-44f8-aac1-37dbc6919935",
+      "maxTries": 5,
       "name": "Rated1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -1793,8 +1961,10 @@
         176,
         -128
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "4ad8ce36-63cd-4a8c-a503-3d609651d899",
@@ -1803,8 +1973,8 @@
         "numberInputs": 5
       },
       "position": [
-        1152,
-        -144
+        1136,
+        224
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1813,13 +1983,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "2251335a-5396-4bcd-bee8-0171ff664313",
       "name": "Google Gemini Chat Model2",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1837,7 +2006,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nПараметры вывода:\n- В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n- Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA stylized game icon of a futuristic energy cell, cylindrical in shape and slightly tilted upwards to the right. The entire object has a sleek, matte finish with subtle surface details. The main body is made of a glowing, translucent material with a vibrant internal yellow to orange gradient, resembling active energy or liquid. Its surface features gentle ambient lighting that follows the cylindrical form. A prominent, stylized lightning bolt symbol with a bold red outline and a bright yellow-orange fill is centered on its surface, appearing slightly raised with a subtle shadow effect. The top and bottom caps are a sleek, dark purple with a smooth matte finish, featuring distinct beveled edges with soft ambient lighting that emphasizes their curved form, with gentle glow effects on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic headset or VR goggles, presented from a slightly angled front-side view, featuring a prominent glowing visor. The entire object has a sleek, matte finish with subtle surface textures. The main body is predominantly dark charcoal grey, composed of robust, interlocking, hard-surface panels and chunky forms, with gentle ambient lighting. The large central visor area is a deep, dark screen with a bold, vibrant neon cyan outline that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. Yellow armored plates form prominent accents around the visor and on the side earpieces, with soft ambient lighting. Small, glowing neon cyan and vibrant yellow indicator lights are subtly embedded on the surface, emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic energy shard or gem-infused device, presented from a slightly angled front view. The entire object has a sleek, matte finish with subtle surface details. The main body is a thick, angular, dark charcoal grey shield-like structure, composed of multi-faceted, robust hard-surface panels, with gentle ambient lighting. A prominent, large, faceted, vibrant yellow-orange crystal gem is deeply set into the center, emitting a strong, soft internal glow, casting gentle luminescent effects onto surrounding surfaces and showing soft, internal light refractions. Multiple thin, internally glowing neon orange lines curve outwards from the gem, and a striking vertical neon cyan light strip is embedded into a recessed 'V' shaped section below the gem, all emitting a soft internal glow with gentle light bleed on the dark chassis. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nA stylized game icon of a futuristic key, angled slightly downwards to the right, emphasizing its solid, three-dimensional form. The entire object has a sleek, matte finish with subtle surface textures. The main body of the key is a vibrant blue, with the head featuring intricate, angular, chunky shapes and layered panels that subtly transition to a deeper purple at the edges. These surfaces feature gentle ambient lighting that follows their forms. A prominent circular recess within the key's head contains a vibrant neon cyan element that emits a soft internal glow, casting gentle luminescent effects onto surrounding surfaces. A circular hole is present at the top of the key head, also showing a smooth, matte finish. The key's shaft is thick and solid blue, with crisp edges and soft ambient lighting. The key's teeth are chunky and defined, matching the matte blue material. Clean geometric shapes, simplified futuristic design, vibrant casual game art style, UI element, game asset, high detail, 8k, trending on ArtStation, isolated on a pure white background.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1941,7 +2110,9 @@
     },
     {
       "id": "0638673e-e700-4c82-97ea-2f8617302303",
+      "maxTries": 5,
       "name": "Url2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -1950,8 +2121,10 @@
         -272,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "129d3127-f0d8-489f-a58d-84069e403de7",
@@ -1970,6 +2143,7 @@
     },
     {
       "id": "0f0ecba2-9559-4a1f-b9d5-b86be4c92601",
+      "maxTries": 5,
       "name": "Image2",
       "parameters": {
         "options": {},
@@ -1979,8 +2153,10 @@
         624,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -1990,6 +2166,7 @@
         }
       },
       "id": "0b5085f0-07b0-4779-9a84-6980c96a4701",
+      "maxTries": 5,
       "name": "All Icons2",
       "parameters": {
         "fileId": {
@@ -2008,8 +2185,10 @@
         -32,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "71fde46a-4767-461c-a894-10c45d8c31ae",
@@ -2049,11 +2228,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "35630c59-75ce-4abc-95ff-0571bcb9ffa1",
+      "maxTries": 5,
       "name": "Rated2",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2072,8 +2253,10 @@
         176,
         272
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2083,6 +2266,7 @@
         }
       },
       "id": "d4705155-60a4-47ea-ac45-aefff6999601",
+      "maxTries": 5,
       "name": "Upload file3",
       "parameters": {
         "driveId": {
@@ -2102,8 +2286,10 @@
         864,
         -512
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "e4e3132f-38bd-4b06-8d6b-e83dfd878e31",
@@ -2114,7 +2300,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         -352
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2129,23 +2315,8 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         48
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "cb139e85-8349-46e0-b379-dc674c781df2",
-      "name": "Loop Over Items6",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -896,
-        432
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2159,7 +2330,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         -352
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2174,7 +2345,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         48
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2189,7 +2360,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         432
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2203,6 +2374,7 @@
         }
       },
       "id": "ecccd936-dbec-48de-b082-85bb8695f499",
+      "maxTries": 5,
       "name": "Upload file4",
       "parameters": {
         "driveId": {
@@ -2222,8 +2394,10 @@
         864,
         -128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2233,6 +2407,7 @@
         }
       },
       "id": "c41b7bf0-2d2d-4b0b-b05f-658a4349f40b",
+      "maxTries": 5,
       "name": "Upload file5",
       "parameters": {
         "driveId": {
@@ -2252,8 +2427,10 @@
         864,
         272
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2293,8 +2470,8 @@
         "text": "=🔄    💠 *Создаю иконки!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -2160,
-        -752
+        -2192,
+        -704
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2341,41 +2518,13 @@
       },
       "position": [
         -1488,
-        -752
+        -704
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "d1ab5ff9-6b18-42fd-a914-7c232e03ca78"
-    },
-    {
-      "id": "550104dc-8b92-4ef3-8939-76eb985785a9",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -2000,
-        -672
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
-    },
-    {
-      "id": "6b103e67-a40c-4674-a5da-482b889ddf0b",
-      "name": "Wait4",
-      "parameters": {
-        "amount": 1
-      },
-      "position": [
-        -1312,
-        -672
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e035f88e-60ef-4e3b-b46c-2092317d3515"
     },
     {
       "credentials": {
@@ -2392,31 +2541,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=🔄    💠 *Создаю иконки!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=🔄    💠 Создаю иконки!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1840,
-        -672
+        -1968,
+        -704
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2439,31 +2571,14 @@
       "parameters": {
         "additionalFields": {
           "appendAttribution": false,
-          "parse_mode": "Markdown"
+          "parse_mode": "HTML"
         },
         "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"][0] }}",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "url": "=https://drive.google.com/drive/folders/{{ $json.id }}"
-                    },
-                    "text": "☁️ Google Drive "
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "replyMarkup": "inlineKeyboard",
-        "text": "=✅    💠 *Ваши иконки готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
+        "text": "=✅    💠 Ваши иконки готовы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1136,
-        -672
+        -1264,
+        -704
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2541,13 +2656,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "2603f45a-1504-41ae-8a3d-e865be449888",
       "name": "Google Gemini Chat Model3",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2565,7 +2679,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA flawless, production-ready 2.5D game UI icon of a Calendar. The design is a sleek, futuristic data-slate shaped like a calendar page, with a glowing holographic display. The final output must look like a perfectly polished game asset. The surfaces are impossibly smooth, like polished polymer, with perfect, clean gradients from a deep indigo to a brilliant violet. A thick, bold black outline defines the entire silhouette, giving it a sharp, graphical pop. The design is enhanced with glowing neon circuit lines tracing the frame and a bright holographic date number that glow with a vibrant light blue. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art for a stylized sci-fi game, matching the provided reference image. Think clean lines, smooth gradients, and a sleek, non-photorealistic aesthetic with prominent neon highlights and bold black outlines. Absolutely NO photorealism, NO gritty textures, NO heavy industrial look. High-end mobile game UI, icon design, 4K. Isolated on a clean, light grey background.\n\nПараметры вывода:\n- В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n- Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA flawless, production-ready 2.5D game UI icon of a Calendar. The design is a sleek, futuristic data-slate shaped like a calendar page, with a glowing holographic display. The final output must look like a perfectly polished game asset. The surfaces are impossibly smooth, like polished polymer, with perfect, clean gradients from a deep indigo to a brilliant violet. A thick, bold black outline defines the entire silhouette, giving it a sharp, graphical pop. The design is enhanced with glowing neon circuit lines tracing the frame and a bright holographic date number that glow with a vibrant light blue. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art for a stylized sci-fi game, matching the provided reference image. Think clean lines, smooth gradients, and a sleek, non-photorealistic aesthetic with prominent neon highlights and bold black outlines. Absolutely NO photorealism, NO gritty textures, NO heavy industrial look. High-end mobile game UI, icon design, 4K. Isolated on a clean, light grey background.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -2669,7 +2783,9 @@
     },
     {
       "id": "05c32b94-8fc8-4d68-8e6c-3ff997a50d1f",
+      "maxTries": 5,
       "name": "Url3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -2678,8 +2794,10 @@
         -272,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "e6e338c0-be8d-4e93-902e-7f96401f6518",
@@ -2698,6 +2816,7 @@
     },
     {
       "id": "58ee4f7c-30ca-425e-9f50-0d943eded8c6",
+      "maxTries": 5,
       "name": "Image3",
       "parameters": {
         "options": {},
@@ -2707,8 +2826,10 @@
         624,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -2718,6 +2839,7 @@
         }
       },
       "id": "839881e4-df41-4a4c-a92e-9b4560002495",
+      "maxTries": 5,
       "name": "All Icons3",
       "parameters": {
         "fileId": {
@@ -2736,8 +2858,10 @@
         -32,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "2d21006e-402b-4e53-aeb9-2f494ead0998",
@@ -2777,11 +2901,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "66f81d70-3182-433e-88b6-5af16a1009ec",
+      "maxTries": 5,
       "name": "Rated3",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -2800,8 +2926,10 @@
         176,
         688
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "29ad57a2-1558-488f-bbcc-2585b452fe03",
@@ -2812,7 +2940,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         848
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2827,7 +2955,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         848
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2841,6 +2969,7 @@
         }
       },
       "id": "d161d74d-a19e-40c1-a636-a2bd8bf09885",
+      "maxTries": 5,
       "name": "Upload file",
       "parameters": {
         "driveId": {
@@ -2860,8 +2989,10 @@
         864,
         688
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "c53d3268-f28e-43f3-bf52-e2f89e21166a",
@@ -2880,13 +3011,12 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "b2a55df5-32ac-413d-84bf-d1894d79202d",
       "name": "Google Gemini Chat Model4",
       "parameters": {
-        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2904,7 +3034,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA flawless, production-ready 2.5D game UI icon of Construction. The design is a stylized, futuristic energy hammer and wrench crossed together, made from sleek alloys. The final output must look like a perfectly polished game asset. The surfaces are impossibly smooth, like polished polymer, with perfect, clean gradients from a dark industrial orange to a bright electric yellow. A thick, bold black outline defines the entire silhouette, giving it a sharp, graphical pop. The design is enhanced with glowing neon energy circuits running along the tools that glow with a vibrant cyan. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art for a stylized sci-fi game, matching the provided reference image. Think clean lines, smooth gradients, and a sleek, non-photorealistic aesthetic with prominent neon highlights and bold black outlines. Absolutely NO photorealism, NO gritty textures, NO heavy industrial look. High-end mobile game UI, icon design, 4K. Isolated on a clean, light grey background.\n\nПараметры вывода:\n- В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n- Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nINSTRUCTION FOR ICON PROMPT GENERATOR BOT\n\nYour task is to generate concise, ready-to-use English prompts for an image AI that creates high-quality, 3D-looking stylized game icons in a semi-realistic casual style.\n\nHere are the detailed characteristics:\n\nColor Palette: The objects feature a vibrant yet cohesive color scheme, predominantly using bold primary colors such as yellow, orange, blue, and purple, often accented with neon highlights in cyan or red. This creates a striking contrast against the white backgrounds, emphasizing a high-tech, glowing effect typical of sci-fi visuals.\n\nSimplified 2D Design:a casual style would shift toward a flatter, 2D illustration. This involves reducing depth with minimal shading and avoiding complex gradients or reflections. The focus would be on clean, bold outlines and flat color fills, giving a hand-drawn or sketch-like feel suitable for casual gaming or app interfaces.\n\nFuturistic Design: The objects—such as a battery, key, pickaxe, camera, radar, wheel, card reader, helmet, and visor—incorporate sleek, angular shapes and geometric patterns. These designs are reminiscent of advanced technology or cyberpunk aesthetics, with elements like sharp edges, metallic textures, and integrated lights or screens.\nNeon Accents: A defining feature is the use of neon lines and glowing details, often in cyan or red, which outline key components or highlight interactive elements (e.g., the camera lens, radar screen, or keyhole). This adds a dynamic, energetic feel and suggests functionality or power.\nMaterial and Texture: The objects appear to be made of a combination of metallic and matte materials, with some areas suggesting plastic or glass (e.g., the transparent visor or the glowing core of the diamond-shaped item). The textures are clean and stylized, avoiding intricate realism for a more uniform, polished look.\nThematic Consistency: All items share a unified theme of advanced technology or gaming-related icons, likely intended for a sci-fi game or digital interface. The consistent use of glowing elements and futuristic shapes ties them together as part of a cohesive visual language.\nReflections should be minimal and subtle, appearing as soft ambient lighting rather than sharp highlights or mirror-like effects.\n\n**BOT BEHAVIOR:**\n\n* Output only the finished English prompt, no explanations or greetings.\n* Always follow the style guide above, strictly **without black outlines**, matching the depth, color, and clarity of the references.\n\n**Example prompts:**\n\nA flawless, production-ready 2.5D game UI icon of Construction. The design is a stylized, futuristic energy hammer and wrench crossed together, made from sleek alloys. The final output must look like a perfectly polished game asset. The surfaces are impossibly smooth, like polished polymer, with perfect, clean gradients from a dark industrial orange to a bright electric yellow. A thick, bold black outline defines the entire silhouette, giving it a sharp, graphical pop. The design is enhanced with glowing neon energy circuits running along the tools that glow with a vibrant cyan. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art for a stylized sci-fi game, matching the provided reference image. Think clean lines, smooth gradients, and a sleek, non-photorealistic aesthetic with prominent neon highlights and bold black outlines. Absolutely NO photorealism, NO gritty textures, NO heavy industrial look. High-end mobile game UI, icon design, 4K. Isolated on a clean, light grey background.\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -3008,7 +3138,9 @@
     },
     {
       "id": "bc0e6c97-fcba-4086-b6b7-d5f7c57db98a",
+      "maxTries": 5,
       "name": "Url4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
@@ -3017,8 +3149,10 @@
         -272,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "id": "0ef495ba-0e4a-47a8-82a0-1954e1944512",
@@ -3037,6 +3171,7 @@
     },
     {
       "id": "20dc7bee-74fb-4f06-bae4-93e0234b891c",
+      "maxTries": 5,
       "name": "Image4",
       "parameters": {
         "options": {},
@@ -3046,8 +3181,10 @@
         624,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
     },
     {
       "credentials": {
@@ -3057,6 +3194,7 @@
         }
       },
       "id": "881ecc25-ca1f-494a-ac07-e7eba3f27e0a",
+      "maxTries": 4,
       "name": "All Icons4",
       "parameters": {
         "fileId": {
@@ -3075,8 +3213,10 @@
         -32,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "f492f68c-66b2-416b-ac48-bb9fefc88b2e",
@@ -3116,11 +3256,13 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "6198d5be-aa46-4dbb-a88d-1a3671f101e4",
+      "maxTries": 5,
       "name": "Rated4",
+      "onError": "continueErrorOutput",
       "parameters": {
         "binaryPropertyName": "data1, data",
         "inputType": "binary",
@@ -3139,8 +3281,10 @@
         176,
         1120
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
     },
     {
       "id": "7c6e4666-3067-4869-8eb6-351e39223a48",
@@ -3151,7 +3295,7 @@
         }
       },
       "position": [
-        -896,
+        -1072,
         1280
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3166,7 +3310,7 @@
         }
       },
       "position": [
-        -272,
+        -496,
         1280
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3180,6 +3324,7 @@
         }
       },
       "id": "4282669d-bc90-4916-ae6f-9bf24f93654a",
+      "maxTries": 5,
       "name": "Upload file6",
       "parameters": {
         "driveId": {
@@ -3199,8 +3344,10 @@
         864,
         1120
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
     },
     {
       "id": "38ca4714-1972-4672-96c9-2e0144759d56",
@@ -3214,9 +3361,187 @@
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
+    },
+    {
+      "id": "a7f4a87b-8a5e-40a5-a29d-385d421e43bf",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        1296
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "87ed3d6e-755a-4776-861a-83b0dfc5c78e",
+      "name": "Wait8",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        864
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "8f9915ba-939b-493a-8e26-d13ab9a2318b",
+      "name": "Wait9",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        448
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "3316fb79-04f0-43f6-b586-3acf386dfd8c",
+      "name": "Wait10",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        64
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "8ff5523e-d51a-4362-ad0f-e8a2c689e169",
+      "name": "Wait11",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        384,
+        -336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "executeOnce": true,
+      "id": "1b1a1bea-63e9-477c-9884-8eef5eae17c5",
+      "name": "Date & Time1",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        -2848,
+        -512
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "id": "1f922172-32a0-4e29-83c5-37df0e0d783d",
+      "name": "Loop Over Items16",
+      "parameters": {
+        "options": {
+          "reset": true
+        }
+      },
+      "position": [
+        -1072,
+        432
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "7873e19c-5dcf-44a0-8de6-af32a53dd9cb",
+      "name": "Wait12",
+      "parameters": {},
+      "position": [
+        -32,
+        1296
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "234231d3-6d73-4011-b9a9-abdeedac0692",
+      "name": "Wait13",
+      "parameters": {},
+      "position": [
+        -32,
+        864
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "6a891ee0-6fe7-4833-b91e-3d50fef76169",
+      "name": "Wait14",
+      "parameters": {},
+      "position": [
+        -32,
+        448
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "785a0e4e-7a56-46cb-9563-36c218cd702d",
+      "name": "Wait15",
+      "parameters": {},
+      "position": [
+        -32,
+        64
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "c2139c52-7bff-4166-894d-6bb4ff1622ec",
+      "name": "Wait16",
+      "parameters": {},
+      "position": [
+        -32,
+        -336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "Chat ID": [
+            "804687104"
+          ],
+          "File_name": [
+            "Flat_UI.+Радара_fixed.pdf"
+          ],
+          "Tasks": "Название: Icon_RadarButton\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для перехода в интерфейс радара.\nРоль/назначение: Навигационный элемент UI, активирующий функцию сканирования и отображения глобальной карты.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна представлять собой высокотехнологичный сканер или радиолокационную систему, выполненную в виде упрощенного футуристического символа. Центральный элемент — динамический индикатор сканирования (возможно, вращающаяся линия или пульсирующая точка) внутри геометрической структуры, символизирующей радиус действия или область сканирования. Иконка должна иметь состояния: активное (яркое неоновое свечение, возможно, с легкой анимацией), неактивное (приглушенные цвета, без анимации) и заблокированное (темные, серые тона с символом блокировки или прерывистой неоновой линией).\nЦвет и типографика: Основная цветовая схема — контрастные неоновые акценты (бирюзовый, лаймовый) на темном или градиентном фоне, отражающем технологичность. Активное состояние усиливает яркость неона. Неактивное состояние использует приглушенные оттенки тех же цветов. Заблокированное состояние — серые тона с красными (#FF0000) или оранжевыми (#FFA500) предупреждающими элементами. Шрифты для текстовых элементов (если применимы) должны быть чистыми, рублеными, футуристичными.\nФункциональное назначение: Предоставляет игроку быстрый доступ к функции глобального сканирования и просмотру карты. Визуально подтверждает активацию радара и готовность к действию.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к синему (#00FFFF до #0000FF) или других насыщенных цветов.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, лаймовый #00FF00). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и активных элементов. Лаймовый (#00FF00) используется для второстепенных индикаторов.\n---\nНазвание: Icon_SaveSurvivors\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по спасению выжившего.\nРоль/назначение: UI-элемент, маркирующий миссию по спасению гражданского лица или ценного члена команды.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать высокотехнологичную капсулу или модуль жизнеобеспечения, возможно, с силуэтом или голографической проекцией человека внутри. Центральным элементом является стилизованный символ человеческой фигуры, выполненный в чистых геометрических формах, окруженный защитным энергетическим полем или контуром. Иконка должна иметь состояния: доступное (яркое свечение, готовое к активации), активное (постоянное свечение, возможно, с индикацией прогресса) и завершенное (приглушенный цвет или галочка).\nЦвет и типографика: Основная цветовая схема — зеленый (#00FF00) или бирюзовый (#00FFFF) для индикации \"спасения\" или \"доступности\". Неоновые акценты должны быть четкими и яркими. Завершенное состояние — зеленый или лаймовый, возможно, с белым (#FFFFFF) символом. Если есть текстовые элементы, они должны быть выполнены футуристичным, читаемым шрифтом.\nФункциональное назначение: Визуально обозначает доступную миссию по спасению. Помогает игроку быстро идентифицировать тип задания и его текущий статус.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от зеленого к лаймовому (#00FF00 до #00FF7F) или других насыщенных цветов.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (зеленый #00FF00, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Зеленый (#00FF00) используется для обозначения спасения/доступности. Бирюзовый (#00FFFF) используется для дополнительных неоновых акцентов.\n---\nНазвание: Icon_KillEliteBiomechanoids\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по уничтожению элитного биомеханоида.\nРоль/назначение: UI-элемент, маркирующий сложную боевую миссию против высокоуровневого противника.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна представлять собой стилизованную, угрожающую эмблему элитного биомеханоида. Это может быть стилизованный череп, но не органический, а кибернетический, с видимыми проводами, светящимися имплантами и острыми краями, выполненный из темного металла и светящихся бирюзовых (#00FFFF) или фиолетовых (#8A2BE2) акцентов. Возможно, за этим черепом будут скрещенные энергетические лезвия или символ \"прицела\". Иконка должна иметь состояния: доступное (яркое неоновое свечение, агрессивные цвета), активное (постоянное пульсирующее свечение) и завершенное (приглушенные цвета, возможно, с символом \"уничтожено\" или \"выполнено\").\nЦвет и типографика: Основная цветовая схема — темный фон с контрастными яркими неоновыми акцентами: бирюзовый (#00FFFF) или фиолетовый (#8A2BE2) для активных элементов и угроз, красный (#FF0000) для символов опасности. Неактивное состояние — приглушенные оттенки. Завершенное состояние — серые тона или более спокойный синий (#0000FF). Шрифты (если применимо) — агрессивные, технологичные, читаемые.\nФункциональное назначение: Визуально обозначает доступную миссию по уничтожению элитного врага. Помогает игроку мгновенно определить тип и сложность задания.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от синего к фиолетовому (#0000FF до #8A2BE2) или других насыщенных цветов, подчеркивающих угрозу.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, фиолетовый #8A2BE2, красный #FF0000). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и угрожающих элементов. Фиолетовый (#8A2BE2) используется для усиления эффекта элитности и опасности. Красный (#FF0000) используется для акцентов, сигнализирующих об опасности.\n---\nНазвание: Icon_KillBigBiomechanoid\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по уничтожению особо крупного и опасного биомеханоида.\nРоль/назначение: UI-элемент, маркирующий критически важную и высокосложную боевую миссию против босса или главного антагониста локации.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать чрезвычайно мощного и разрушительного биомеханоида, стилизованного до узнаваемой эмблемы. Это может быть крупный, агрессивно-угловатый кибернетический череп или голова робота-титана с множеством светящихся красных (#FF0000) или пурпурных (#800080) акцентов, символизирующих энергетические ядра или оружие. Фон может быть более темным и насыщенным, чем для обычных элитных врагов, подчеркивая масштаб угрозы. Иконка должна иметь состояния: доступное (интенсивное пульсирующее свечение), активное (постоянное яркое свечение с эффектом мерцания) и завершенное (темные, приглушенные тона с отметкой \"ликвидирован\").\nЦвет и типографика: Основная цветовая схема — глубокие темные оттенки с контрастными яркими неоновыми акцентами: пурпурный (#800080) или розовый (#FF00FF) для основного свечения, красный (#FF0000) для индикации максимальной опасности. Активное состояние — усиленное пульсирующее свечение. Завершенное состояние — приглушенные, \"потухшие\" тона. Шрифты (если применимо) — максимально агрессивные и футуристичные, возможно, с эффектом глитча.\nФункциональное назначение: Визуально обозначает доступную миссию по уничтожению главного босса. Помогает игроку мгновенно идентифицировать высший уровень угрозы.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от пурпурного к красному (#800080 до #FF0000) или других насыщенных цветов, подчеркивающих масштаб и разрушительную силу.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (пурпурный #800080, красный #FF0000, фиолетовый #8A2BE2). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение массивности и угрозы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Пурпурный (#800080) используется для основного свечения и индикации максимальной угрозы. Красный (#FF0000) используется для акцентов опасности. Фиолетовый (#8A2BE2) используется для второстепенных неоновых деталей.\n---\nНазвание: Icon_DestroyBiomechanoidLair\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по уничтожению ключевой вражеской базы или логова биомеханоидов.\nРоль/назначение: UI-элемент, маркирующий стратегическую миссию по устранению важного объекта или лидера противника.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический комплекс или ядро базы биомеханоидов, возможно, с символом \"Х\" или \"взрыва\" над ним. Вместо портрета солдата, центральным элементом должен быть техногенный символ, похожий на эмблему вражеской фракции, или стилизованное изображение разрушенного объекта. Вокруг может быть энергетическая рамка, которая пульсирует. Иконка должна иметь состояния: доступное (яркое, угрожающее свечение), активное (постоянное свечение с эффектом мерцания или глитча) и завершенное (темные, разрушенные тона с символом \"разрушено\").\nЦвет и типографика: Основная цветовая схема — темный, металлический фон с агрессивными неоновыми акцентами: оранжевый (#FFA500), красный (#FF0000) или фиолетовый (#8A2BE2) для индикации разрушения и опасности. Неактивное состояние — приглушенные, тусклые цвета. Завершенное состояние — темные, \"потухшие\" цвета. Шрифты (если применимо) — четкие, рубящие, с легким эффектом искажения для усиления темы разрушения.\nФункциональное назначение: Визуально обозначает доступную миссию по уничтожению вражеского опорного пункта. Помогает игроку идентифицировать ключевые стратегические цели.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от оранжевого к красному (#FFA500 до #FF0000) или других насыщенных цветов, подчеркивающих разрушение и опасность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (оранжевый #FFA500, красный #FF0000, фиолетовый #8A2BE2). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение технологической угрозы и разрушения.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжевый (#FFA500) используется для основного свечения и индикации критической цели. Красный (#FF0000) используется для акцентов опасности и разрушения. Фиолетовый (#8A2BE2) используется для второстепенных неоновых деталей.\n---\nНазвание: Icon_Hunt\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по \"охоте\" или устранению конкретной цели.\nРоль/назначение: UI-элемент, маркирующий боевую миссию по отслеживанию и ликвидации заданной цели.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический прицел или символ цели, интегрированный с элементами оружия или охотничьего дрона. Вместо простых скрещенных ножей или автомата, это может быть голографическая проекция целеуказателя с динамическими линиями, сходящимися к центру, или силуэт высокотехнологичного оружия, окруженный неоновым контуром. Активные элементы должны пульсировать, привлекая внимание. Иконка должна иметь состояния: доступное (яркое неоновое свечение, возможно, с легкой анимацией прицела), активное (постоянное свечение, индикация отслеживания цели) и завершенное (приглушенные цвета, символ \"поражено\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: оранжевый (#FFA500) или красный (#FF0000) для индикации цели и опасности. Неактивное состояние — приглушенные оттенки. Завершенное состояние — серые или темные тона. Шрифты (если применимо) — четкие, милитаризованные, с элементами глитча.\nФункциональное назначение: Визуально обозначает доступную миссию по устранению цели. Помогает игроку быстро идентифицировать боевое задание.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от оранжевого к красному (#FFA500 до #FF0000) или других насыщенных цветов, подчеркивающих боевую направленность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (оранжевый #FFA500, красный #FF0000). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение точности и опасности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжевый (#FFA500) используется для основного свечения и индикации цели. Красный (#FF0000) используется для акцентов опасности.\n---\nНазвание: Icon_HelpAllies\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по оказанию помощи союзникам.\nРоль/назначение: UI-элемент, маркирующий миссию поддержки или спасения союзного юнита/игрока.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический символ поддержки или защиты, возможно, с абстрактным силуэтом человека или дрона-помощника, окруженного энергетическим щитом или крестом (но не медицинским, а технологическим, например, из пересекающихся неоновых лучей). Основной элемент — это символ \"руки помощи\" или \"щита\" из чистых геометрических форм с неоновым свечением. Если требуется портрет, то он должен быть интегрирован в голографическую проекцию или экран внутри иконки. Иконка должна иметь состояния: доступное (яркое, приветливое свечение), активное (пульсирующее свечение с индикатором прогресса) и завершенное (приглушенные цвета, символ \"помощь оказана\").\nЦвет и типографика: Основная цветовая схема — яркие неоновые акценты: бирюзовый (#00FFFF), зеленый (#00FF00) или синий (#0000FF) для индикации поддержки и безопасности. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные, но все еще технологичные цвета. Шрифты (если применимо) — чистые, читаемые, футуристичные.\nФункциональное назначение: Визуально обозначает доступную миссию по оказанию помощи союзникам. Помогает игроку быстро идентифицировать задачи поддержки.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к зеленому (#00FFFF до #00FF00) или других насыщенных цветов, подчеркивающих помощь и поддержку.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, зеленый #00FF00, синий #0000FF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение надежности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и индикации поддержки. Зеленый (#00FF00) используется для дополнительных неоновых акцентов.\n---\nНазвание: Icon_ResourceCollection\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по сбору ресурсов.\nРоль/назначение: UI-элемент, маркирующий миссию по добыче ценных материалов.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать высокотехнологичное буровое устройство или экстрактор ресурсов, выполненный из чистых форм и светящихся элементов. Вместо обычного бура, это может быть модуль, который проецирует энергетический луч для добычи, или дрон-сборщик с выдвижными манипуляторами. Основной элемент — это стилизованный символ добычи или кристалла ресурса, окруженный технологическими контурами. Иконка должна иметь состояния: доступное (яркое неоновое свечение, возможно, с легкой анимацией), активное (постоянное свечение с индикатором прогресса) и завершенное (приглушенные цвета, символ \"добыто\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: зеленый (#00FF00) или желтый (#FFFF00) для индикации ресурсов и успеха. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные цвета с символом \"добыто\" или \"завершено\". Шрифты (если применимо) — чистые, технические, легко читаемые.\nФункциональное назначение: Визуально обозначает доступную миссию по сбору ресурсов. Помогает игроку быстро идентифицировать задачи по добыче.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от зеленого к желтому (#00FF00 до #FFFF00) или других насыщенных цветов, подчеркивающих ценность ресурсов.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (зеленый #00FF00, желтый #FFFF00, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Зеленый (#00FF00) используется для основного свечения и индикации ресурсов. Желтый (#FFFF00) используется для акцентов, подчеркивающих ценность.\n---\nНазвание: Icon_KillMechanoid\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по уничтожению рядовых биомеханоидов.\nРоль/назначение: UI-элемент, маркирующий стандартную боевую миссию против обычных вражеских юнитов.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, упрощенный силуэт или символ обычного биомеханоида или кибернетического существа, не слишком угрожающего, но однозначно враждебного. Это может быть стилизованная голова робота-солдата или абстрактный символ угрозы, выполненный из темного металла и светящихся лаймовых (#00FF00) или бирюзовых (#00FFFF) акцентов. Важно, чтобы дизайн отличался от элитных и босс-врагов меньшей детализацией и агрессивностью. Иконка должна иметь состояния: доступное (яркое, слегка пульсирующее свечение), активное (постоянное свечение) и завершенное (приглушенные цвета, символ \"уничтожено\").\nЦвет и типографика: Основная цветовая схема — темный фон с контрастными яркими неоновыми акцентами: лаймовый (#00FF00) или бирюзовый (#00FFFF) для индикации врага. Неактивное состояние — приглушенные оттенки. Завершенное состояние — серые, \"потухшие\" тона. Шрифты (если применимо) — чистые, технологичные, читаемые.\nФункциональное назначение: Визуально обозначает доступную миссию по уничтожению стандартных врагов. Помогает игроку быстро идентифицировать боевые задания.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от лаймового к бирюзовому (#00FF00 до #00FFFF) или других насыщенных цветов, подчеркивающих враждебность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (лаймовый #00FF00, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Лаймовый (#00FF00) используется для основного свечения и индикации врага. Бирюзовый (#00FFFF) используется для дополнительных неоновых акцентов.\n---\nНазвание: Icon_RevoltHelp\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по поддержке или спасению сил сопротивления.\nРоль/назначение: UI-элемент, маркирующий миссию по спасению или присоединению ключевых юнитов повстанцев к базе игрока.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический символ восстания или сопротивления, интегрированный с элементами коммуникации. Вместо простого киберпанк солдата и рации, это может быть стилизованный силуэт бойца сопротивления (в броне с неоновыми элементами), рядом с которым изображена голографическая проекция коммуникационного модуля или символа альянса, излучающего неоновое свечение. Акцент на символике свободы и связи. Иконка должна иметь состояния: доступное (яркое, энергичное свечение), активное (постоянное пульсирующее свечение с индикацией сигнала) и завершенное (приглушенные цвета, символ \"поддержано\" или \"спасен\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: розовый (#FF00FF), бирюзовый (#00FFFF) или оранжевый (#FFA500) для индикации восстания и связи. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные, но все еще технологичные цвета. Шрифты (если применимо) — четкие, с легким милитаризованным или футуристическим оттенком.\nФункциональное назначение: Визуально обозначает доступную миссию по поддержке или спасению юнитов восстания. Помогает игроку быстро идентифицировать задачи, связанные с союзниками.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от розового к бирюзовому (#FF00FF до #00FFFF) или других насыщенных цветов, подчеркивающих связь и сопротивление.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (розовый #FF00FF, бирюзовый #00FFFF, оранжевый #FFA500). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение единства и технологической готовности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Розовый (#FF00FF) используется для основного свечения и индикации восстания. Бирюзовый (#00FFFF) используется для акцентов связи. Оранжевый (#FFA500) для второстепенных неоновых деталей.\n---\nНазвание: Icon_Findings\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по обнаружению и мгновенному сбору ценных находок.\nРоль/назначение: UI-элемент, маркирующий миссию по быстрому получению ресурсов или ценных предметов.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический контейнер или ящик с голографической проекцией ценных предметов или ресурсов, возможно, с символом \"открытия\" или \"получения\". Вместо обычного сундука или ящиков, это может быть техногенный сейф с неоновыми замками или дрон-курьер с отсеком для ценностей, окруженный пульсирующим энергетическим полем. Акцент на мгновенном получении ценностей. Иконка должна иметь состояния: доступное (яркое, манящее свечение), активное (постоянное свечение с анимацией открытия) и завершенное (приглушенные цвета, символ \"получено\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: желтый (#FFFF00), оранжевый (#FFA500) или лаймовый (#00FF00) для индикации ценности и моментального получения. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные цвета с символом \"получено\". Шрифты (если применимо) — чистые, легко читаемые, с футуристическим оттенком.\nФункциональное назначение: Визуально обозначает доступную миссию по обнаружению и сбору мгновенных находок. Помогает игроку быстро идентифицировать задачи по получению ресурсов.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от желтого к оранжевому (#FFFF00 до #FFA500) или других насыщенных цветов, подчеркивающих ценность и скорость получения.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (желтый #FFFF00, оранжевый #FFA500, лаймовый #00FF00). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение надежности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Желтый (#FFFF00) используется для основного свечения и индикации ценности. Оранжевый (#FFA500) используется для акцентов.\n---\nНазвание: Icon_FindingsAir\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для активации миссии по обнаружению и сбору ресурсов с воздушных объектов или зон.\nРоль/назначение: UI-элемент, маркирующий миссию по добыче ценных ресурсов из обломков летательных аппаратов или в труднодоступных воздушных областях.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический дрон-разведчик или транспортный корабль, который проецирует сканирующий луч на землю, указывая на место находки. Вместо обычного самолета, это может быть асимметричный, обтекаемый летательный аппарат с неоновыми двигателями и голографическими сканерами. Под аппаратом или внутри него должен быть символ ресурса или \"находки\". Акцент на воздушной операции и сборе. Иконка должна иметь состояния: доступное (яркое, динамичное свечение), активное (пульсирующее свечение с анимацией сканирования) и завершенное (приглушенные цвета, символ \"добыто\" или \"исследовано\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: оранжевый (#FFA500) или бирюзовый (#00FFFF) для индикации воздушных находок и сканирования. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные цвета. Шрифты (если применимо) — чистые, технические, легко читаемые.\nФункциональное назначение: Визуально обозначает доступную миссию по сбору ресурсов из воздушных объектов или зон. Помогает игроку быстро идентифицировать задачи, требующие воздушного сканирования.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от оранжевого к бирюзовому (#FFA500 до #00FFFF) или других насыщенных цветов, подчеркивающих воздушный характер и сканирование.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (оранжевый #FFA500, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение высокой технологии и аэродинамики.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжевый (#FFA500) используется для основного свечения и индикации воздушных находок. Бирюзовый (#00FFFF) используется для акцентов сканирования.\n---\nНазвание: Icon_ProgressBarTasks\nТип объекта: Иконка\nКраткое описание: Интерактивный UI-элемент, отображающий прогресс выполнения текущего задания.\nРоль/назначение: UI-индикатор, визуально демонстрирующий статус выполнения задачи и количество оставшихся шагов.\nОписание и адаптация:\nКомпозиция и структура: Прогресс-бар должен быть выполнен в стиле полупрозрачного голографического дисплея с неоновым контуром. Левая часть должна содержать стилизованную иконку, символизирующую тип задания (например, универсальный символ \"задачи\" — шестеренка, микросхема или футуристический вопросительный знак, выполненный из неоновых линий). Сама полоса прогресса должна быть динамичной, с эффектом заполнения энергией. Текстовое отображение прогресса (например, \"0/25\") должно быть интегрировано в дизайн, возможно, как голографическая проекция над или внутри полосы. Иконка должна иметь состояния: незаполненное (пустая полоса, тусклый контур), заполняющееся (динамичное неоновое свечение, заполняющее полосу), полное (полоса полностью заполнена ярким неоновым светом, возможно, с галочкой или символом завершения).\nЦвет и типографика: Основная цветовая схема — прозрачный или темно-серый фон для полосы, с яркими неоновыми акцентами для заполнения: бирюзовый (#00FFFF), зеленый (#00FF00) или фиолетовый (#8A2BE2). Цвет неона должен быть насыщенным и контрастным. Текст прогресса — белый (#FFFFFF) или светлый неоновый цвет, выполненный чистым, рубленым, футуристичным шрифтом.\nФункциональное назначение: Предоставляет игроку мгновенную информацию о ходе выполнения задания, мотивируя к его завершению.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к зеленому (#00FFFF до #00FF00) или других насыщенных цветов, подчеркивающих прогресс.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, зеленый #00FF00). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения заполняемой полосы. Зеленый (#00FF00) используется для акцентов и полного заполнения.\n---\nНазвание: Icon_ProgressBarTasksFull\nТип объекта: Иконка\nКраткое описание: Полностью заполненный UI-элемент, отображающий завершение текущего задания.\nРоль/назначение: UI-индикатор, визуально подтверждающий успешное выполнение задачи.\nОписание и адаптация:\nКомпозиция и структура: Прогресс-бар должен быть полностью заполнен ярким неоновым свечением, выполненным в стиле голографического дисплея. Иконка в левой части (например, стилизованная галочка или символ \"завершено\") должна быть ярко подсвечена и, возможно, пульсировать. Вся полоса должна излучать насыщенное свечение. Текстовое отображение (например, \"15/30\" или \"ЗАВЕРШЕНО\") должно быть четким и ярко выраженным. Иконка должна быть статичной, демонстрируя окончательный результат.\nЦвет и типографика: Основная цветовая схема — насыщенный зеленый (#00FF00) или бирюзовый (#00FFFF) неоновый цвет для всей заполненной полосы. Фон — темный или прозрачный. Текст — белый (#FFFFFF) или яркий неоновый, выполненный чистым, рубленым, футуристичным шрифтом, возможно, с эффектом свечения.\nФункциональное назначение: Однозначно информирует игрока о полном завершении задания, подтверждает достижение цели.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от зеленого к лаймовому (#00FF00 до #00FF7F) или других насыщенных цветов, подчеркивающих завершенность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (зеленый #00FF00, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и завершенности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Зеленый (#00FF00) используется для полного заполнения и основного свечения. Бирюзовый (#00FFFF) используется для акцентов.\n---\nНазвание: Icon_RadarLevel\nТип объекта: Иконка\nКраткое описание: UI-элемент, отображающий текущий уровень технологического радара игрока.\nРоль/назначение: Индикатор прогресса и эффективности сканирующей системы игрока.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна представлять собой высокотехнологичный голографический радар или компактный сканирующий модуль. Это может быть стилизованная антенна или система датчиков, излучающая неоновые лучи, которые формируют круг сканирования. Важно, чтобы дизайн был чистым, футуристичным, без лишних деталей. Цифровое отображение уровня (например, \"Ур.2\" или \"LVL:2\") должно быть интегрировано в центральную часть иконки как голографическая проекция или четкий неоновый текст. Основной элемент — это символ радара с динамической анимацией сканирования.\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: бирюзовый (#00FFFF) или синий (#0000FF) для индикации работы радара и его уровня. Фон — темный или прозрачный. Текст уровня — белый (#FFFFFF) или яркий неоновый цвет, выполненный чистым, рубленым, футуристичным шрифтом, возможно, с эффектом свечения.\nФункциональное назначение: Предоставляет игроку мгновенную информацию о текущем уровне его радара, информируя о возможностях сканирования.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к синему (#00FFFF до #0000FF) или других насыщенных цветов, подчеркивающих технологичность радара.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, синий #0000FF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и индикации уровня радара. Синий (#0000FF) используется для акцентов.\n---\nНазвание: Icon_NewLevelRadar\nТип объекта: Иконка\nКраткое описание: UI-элемент, сигнализирующий о достижении нового уровня радара и доступности связанных улучшений.\nРоль/назначение: Уведомление игрока о важном достижении и открытии новых возможностей.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна быть ярким, привлекающим внимание индикатором \"нового уровня\" или \"улучшения\". Это может быть стилизованный, динамический символ стрелки вверх, или абстрактный всплеск энергии/данных вокруг символа радара. Элемент \"НОВИНКА!\" должен быть выполнен в футуристическом неоновом стиле, возможно, с эффектом глитча или пульсации. Может быть интегрирован небольшой, стилизованный символ радара или знака \"Level Up\". Иконка должна быть динамичной, с эффектом вспышки или свечения.\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: лаймовый (#00FF00), желтый (#FFFF00) или розовый (#FF00FF) для максимального привлечения внимания. Текст \"НОВИНКА!\" или \"LEVEL UP\" должен быть выполнен жирным, рубленым, футуристичным шрифтом, с мощным эффектом свечения.\nФункциональное назначение: Привлекает внимание игрока к важному событию — повышению уровня радара, сигнализируя о новых возможностях и прогрессе.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от лаймового к желтому (#00FF00 до #FFFF00) или других насыщенных цветов, подчеркивающих новизну и достижение.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (лаймовый #00FF00, желтый #FFFF00, розовый #FF00FF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение динамики и достижения.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Лаймовый (#00FF00) используется для основного свечения и индикации новизны. Желтый (#FFFF00) используется для акцентов и усиления эффекта. Розовый (#FF00FF) для дополнительной динамики.\n---\nНазвание: Icon_RadarInTheBase\nТип объекта: Иконка\nКраткое описание: UI-элемент, указывающий на доступность функции радара внутри базы или на конкретной локации базы.\nРоль/назначение: Индикатор функции сканирования, привязанной к стационарной структуре или зоне игрока.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна изображать стилизованный, футуристический радарный купол или массивную стационарную сканирующую установку, интегрированную с элементами архитектуры базы. Это может быть мощный излучатель энергии с круговыми неоновыми индикаторами, расположенный на стилизованной платформе или части стены базы. Акцент на стационарности и принадлежности к базе игрока (чистые формы, неоновые акценты). Направление \"сканирования\" может быть выражено динамическими линиями. Иконка должна иметь состояния: доступное (яркое, стабильное свечение), активное (пульсирующее свечение с анимацией сканирования) и неактивное (приглушенные цвета, без анимации).\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: бирюзовый (#00FFFF), синий (#0000FF) или лаймовый (#00FF00) для индикации работы радара и его стационарности. Фон — темный или прозрачный, с элементами, напоминающими структуры базы. Текст (если применимо) — чистый, рубленый, футуристичный.\nФункциональное назначение: Визуально обозначает доступную функцию радара, привязанную к базе. Помогает игроку определить, где и когда можно использовать стационарный сканер.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к синему (#00FFFF до #0000FF) или других насыщенных цветов, подчеркивающих технологичность и интегрированность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, синий #0000FF, лаймовый #00FF00). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение мощности и технологической интеграции.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и индикации работы радара. Синий (#0000FF) используется для акцентов.\n---\nНазвание: Icon_ProgressBarEvent\nТип объекта: Иконка\nКраткое описание: UI-элемент, отображающий прогресс сбора данных или выполнения задач для активного игрового события (ивента).\nРоль/назначение: Индикатор глобального или локального прогресса, связанного с временным событием.\nОписание и адаптация:\nКомпозиция и структура: Прогресс-бар должен быть выполнен в стиле полупрозрачного голографического дисплея с неоновым контуром, адаптированным под тематику текущего ивента. Иконка, символизирующая событие (например, стилизованный символ ивента, логотип или абстрактный знак, излучающий неоновое свечение), должна быть интегрирована в левую часть или динамически появляться при активации. Сама полоса прогресса должна динамично заполняться, возможно, с эффектом пульсации или потока данных. Текстовое отображение прогресса (например, \"287350/300000\" или \"ПРОГРЕСС СОБЫТИЯ\") должно быть четко интегрировано в дизайн.\nЦвет и типографика: Основная цветовая схема — динамические и контрастные неоновые акценты, зависящие от тематики ивента (например, розовый (#FF00FF) для таинственного события, оранжевый (#FFA500) для боевого, бирюзовый (#00FFFF) для технологического). Фон — темный или прозрачный. Текст прогресса — белый (#FFFFFF) или яркий неоновый, выполненный чистым, рубленым, футуристичным шрифтом, возможно, с эффектом свечения.\nФункциональное назначение: Информирует игрока о прогрессе участия в текущем ивенте, стимулируя к дальнейшему взаимодействию.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты в соответствии с тематикой ивента, подчеркивающие динамику и важность.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах, соответствующих ивенту. Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение динамики и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Цвет неона будет зависеть от тематики ивента. Например, Розовый (#FF00FF) используется для основного свечения ивентового прогресса, если ивент мистический. Оранжевый (#FFA500) для ивента с боевой тематикой. Бирюзовый (#00FFFF) для технологического ивента.\n---\nНазвание: Icon_InfoButton\nТип объекта: Иконка\nКраткое описание: Интерактивная кнопка для получения дополнительной информации.\nРоль/назначение: UI-элемент, предоставляющий доступ к всплывающим подсказкам, детальным описаниям или контекстной справке.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна быть выполнена в виде стилизованного, футуристического символа \"i\" (information) или голографического знака вопроса, окруженного неоновым кольцом или геометрической рамкой. Элемент \"Описание\" или \"Инфо\" должен быть интегрирован в дизайн как часть неонового свечения или как голографическая проекция. Символ должен быть чистым, хорошо читаемым и мгновенно узнаваемым как индикатор информации. Иконка должна иметь состояния: неактивное (приглушенное свечение), активное (яркое, стабильное свечение, возможно, с пульсацией) и нажатое (усиленное свечение, легкая анимация).\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: бирюзовый (#00FFFF), синий (#0000FF) или лаймовый (#00FF00) для индикации доступности информации. Неактивное состояние — приглушенные оттенки. Текст (если применимо) — белый (#FFFFFF) или светлый неоновый, выполненный чистым, рубленым, футуристичным шрифтом.\nФункциональное назначение: Визуально обозначает наличие дополнительной информации, помогая игроку получить необходимые данные без перехода в другие разделы.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к синему (#00FFFF до #0000FF) или других насыщенных цветов, подчеркивающих ясность информации.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, синий #0000FF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения и индикации информации. Синий (#0000FF) используется для акцентов.\n---\nНазвание: Icon_CharacterQuest\nТип объекта: Иконка\nКраткое описание: UI-элемент, маркирующий персонажа, выдающего миссию, или саму миссию.\nРоль/назначение: Индикатор интеракции с NPC для получения задания или отображение активного квеста.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна представлять собой стилизованный, футуристический символ, однозначно указывающий на квестового персонажа или задание. Это может быть голографическая проекция стилизованной головы или бюста персонажа (как в концептах киберпанк/sci-fi), окруженная неоновым ореолом или символом восклицательного знака. Вместо простого портрета, это должен быть динамичный, чистый элемент, отражающий личность персонажа или важность квеста. Иконка должна иметь состояния: доступное (яркое неоновое свечение, возможно, с легкой анимацией), активное (постоянное свечение с индикацией прогресса квеста) и завершенное (приглушенные цвета, символ галочки или \"выполнено\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: фиолетовый (#8A2BE2), розовый (#FF00FF) или бирюзовый (#00FFFF) для индикации квеста и интеракции. Неактивное состояние — приглушенные оттенки. Завершенное состояние — спокойные, но технологичные цвета. Шрифты (если применимо) — чистые, рубленые, футуристичные.\nФункциональное назначение: Визуально обозначает персонажа, у которого есть доступные задания, или активное задание, направляя игрока к источнику квеста.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от фиолетового к розовому (#8A2BE2 до #FF00FF) или других насыщенных цветов, подчеркивающих важность квеста.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (фиолетовый #8A2BE2, розовый #FF00FF, бирюзовый #00FFFF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение динамики и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Фиолетовый (#8A2BE2) используется для основного свечения и индикации квеста. Розовый (#FF00FF) используется для акцентов.\n---\nНазвание: Icon_TimerTask\nТип объекта: Иконка\nКраткое описание: UI-элемент, отображающий оставшееся время до завершения задания.\nРоль/назначение: Индикатор таймера для временных задач, требующих быстрого выполнения.\nОписание и адаптация:\nКомпозиция и структура: Иконка должна представлять собой стилизованный, футуристический таймер или голографические часы, отображающие обратный отсчет. Это может быть круглый или угловатый модуль с цифровым дисплеем, окруженный неоновым кольцом, которое постепенно гаснет или меняет цвет по мере истечения времени. Важно, чтобы дизайн был чистым, функциональным, с акцентом на четкое отображение времени (например, \"23:59:01\" или \"00:MM:CC\"). Иконка должна иметь состояния: активное (яркое неоновое свечение, динамичный обратный отсчет), предупреждающее (неоновое свечение красного или оранжевого цвета при малом остатке времени) и истекшее (темные, приглушенные цвета, символ \"время истекло\").\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: бирюзовый (#00FFFF), зеленый (#00FF00) или лаймовый (#00FF00) для основного свечения. Предупреждающее состояние — оранжевый (#FFA500) или красный (#FF0000). Текст времени — белый (#FFFFFF) или светлый неоновый цвет, выполненный чистым, рубленым, цифровым, футуристичным шрифтом.\nФункциональное назначение: Предоставляет игроку мгновенную информацию об оставшемся времени для выполнения задания, стимулируя к действию.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к зеленому (#00FFFF до #00FF00) или других насыщенных цветов, подчеркивающих динамику времени.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, зеленый #00FF00, оранжевый #FFA500). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения таймера. Зеленый (#00FF00) используется для акцентов. Красный (#FF0000) или Оранжевый (#FFA500) для предупреждения об истечении времени.\n---\nНазвание: Icon_ButtonGo\nТип объекта: Иконка\nКраткое описание: Стандартная интерактивная кнопка для перехода к следующему этапу или меню.\nРоль/назначение: Навигационный элемент UI, позволяющий игроку продвигаться по интерфейсу или подтверждать действие.\nОписание и адаптация:\nКомпозиция и структура: Кнопка должна быть выполнена в виде стилизованной, футуристической панели с четким символом \"Вперед\" (например, светящаяся стрелка, указывающая вправо или вверх) или символом активации/подтверждения. Фон кнопки может быть полупрозрачным или из матового металла с неоновым контуром. Текстовая надпись \"Вперёд\" должна быть интегрирована в дизайн, возможно, как голографическая проекция. Кнопка должна иметь состояния: неактивное (приглушенное свечение, без анимации), активное (яркое неоновое свечение, возможно, с легкой пульсацией) и нажатое (усиленное свечение, небольшая анимация).\nЦвет и типографика: Основная цветовая схема — контрастные яркие неоновые акценты: бирюзовый (#00FFFF), синий (#0000FF) или лаймовый (#00FF00) для индикации интерактивности. Неактивное состояние — приглушенные оттенки тех же цветов. Текст \"Вперёд\" — белый (#FFFFFF) или светлый неоновый цвет, выполненный чистым, рубленым, футуристичным шрифтом.\nФункциональное назначение: Предоставляет игроку возможность подтвердить выбор, перейти к следующему этапу или активировать действие.\nФорма и композиция: Чистые геометрические формы. Стилизованная игровая иконка с упрощенным футуристическим дизайном.\nМатериалы и поверхности: Гладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. Яркие внутренние градиенты от бирюзового к синему (#00FFFF до #0000FF) или других насыщенных цветов, подчеркивающих готовность к действию.\nОсвещение и блики: Четкие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\nСветящиеся элементы: Встроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах (бирюзовый #00FFFF, синий #0000FF). Видимое световое кровотечение и отражения на темных поверхностях.\nДетализация: Многослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы, создающие ощущение функциональности и технологичности.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бирюзовый (#00FFFF) используется для основного свечения кнопки. Синий (#0000FF) используется для акцентов.",
+          "Username": [
+            "Ne_Foxik"
+          ]
+        }
+      }
+    ]
+  },
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1",
@@ -3241,6 +3566,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-08-29T11:39:31.000Z",
-  "versionId": "dc09ae77-d87b-44ba-9a7f-045a523f9b09"
+  "updatedAt": "2025-09-09T18:49:15.000Z",
+  "versionId": "580b2a32-ff21-44d2-af96-ac3688b7ff44"
 }
