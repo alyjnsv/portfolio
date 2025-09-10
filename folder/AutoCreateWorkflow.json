@@ -1,56 +1,166 @@
 {
   "active": false,
   "connections": {
+    "AI Agent Generate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "AI Agent1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "If1",
+            "node": "If",
             "type": "main"
           }
         ]
       ]
     },
-    "AI Agent5": {
+    "AI Agent3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent6",
+            "node": "AI Agent4",
             "type": "main"
           }
         ]
       ]
     },
-    "AI Agent6": {
+    "AI Agent4": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Code5",
+            "node": "Code3",
             "type": "main"
           }
         ]
       ]
     },
-    "Anthropic Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Code5": {
+    "Aggregate Context": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Send a document1",
+            "node": "Бизнес-Анализ",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "To Binary JSON",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store1",
+            "type": "ai_document"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store1",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store2",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Init",
             "type": "main"
           }
         ]
@@ -67,6 +177,28 @@
         ]
       ]
     },
+    "Filter": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create a row",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get a file1": {
       "main": [
         [
@@ -78,31 +210,93 @@
         ]
       ]
     },
-    "If1": {
+    "Get many rows1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Send message and wait for response1",
+            "node": "Supabase Vector Store1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "AI Agent5",
+            "node": "AI Agent3",
             "type": "main"
           }
         ]
       ]
     },
-    "MCP Client": {
-      "ai_tool": [
+    "If: Has BPMN Document": {
+      "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent",
-            "type": "ai_tool"
+            "node": "Get a file",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Ask For BPMN",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Init": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "XML",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model (Gen)": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent Generate",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model (Q&A)": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Бизнес-Анализ",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -118,12 +312,34 @@
         ]
       ]
     },
+    "OpenRouter Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "OpenRouter Chat Model5": {
       "ai_languageModel": [
         [
           {
             "index": 0,
-            "node": "AI Agent5",
+            "node": "Генерация нод",
             "type": "ai_languageModel"
           }
         ]
@@ -134,18 +350,29 @@
         [
           {
             "index": 0,
-            "node": "AI Agent6",
+            "node": "Генерация нод1",
             "type": "ai_languageModel"
           }
         ]
       ]
     },
-    "Send message and wait for response1": {
+    "Recursive Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "index": 0,
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response": {
       "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent1",
+            "node": "Code2",
             "type": "main"
           }
         ]
@@ -156,13 +383,13 @@
         [
           {
             "index": 0,
-            "node": "XML",
+            "node": "XML1",
             "type": "main"
           }
         ]
       ]
     },
-    "Simple Memory1": {
+    "Simple Memory": {
       "ai_memory": [
         [
           {
@@ -173,34 +400,105 @@
         ]
       ]
     },
-    "Simple Memory4": {
+    "Simple Memory (Gen)": {
       "ai_memory": [
         [
           {
             "index": 0,
-            "node": "AI Agent5",
+            "node": "AI Agent Generate",
             "type": "ai_memory"
           }
         ]
       ]
     },
-    "Simple Memory5": {
+    "Simple Memory (Q&A)": {
       "ai_memory": [
         [
           {
             "index": 0,
-            "node": "AI Agent6",
+            "node": "Бизнес-Анализ",
             "type": "ai_memory"
           }
         ]
       ]
     },
-    "Telegram Trigger": {
+    "Simple Memory2": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory3": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Генерация нод",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store1": {
+      "main": [
+        []
+      ]
+    },
+    "Supabase Vector Store2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Генерация нод1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get a file1",
+            "node": "If: Has BPMN Document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "To Binary JSON": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send Workflow JSON",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Генерация нод1",
             "type": "main"
           }
         ]
@@ -211,7 +509,40 @@
         [
           {
             "index": 0,
-            "node": "AI Agent1",
+            "node": "Aggregate Context",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Бизнес-Анализ": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Генерация нод",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Генерация нод": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent Generate",
             "type": "main"
           }
         ]
@@ -227,7 +558,296 @@
   "name": "AutoCreateWorkflow",
   "nodes": [
     {
-      "id": "51662aa4-036d-4813-bc78-de1ab2a100ee",
+      "id": "b1e63389-2a72-4727-8581-2f55381549e7",
+      "name": "If: Has BPMN Document",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a65e1376-6fb7-4fbd-8283-30b0d312441b",
+              "leftValue": "={{ !!$json.message && !!$json.message.document && !!$json.message.document.file_id }}",
+              "operator": {
+                "operation": "exists",
+                "singleValue": true,
+                "type": "boolean"
+              },
+              "rightValue": "true"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -2176,
+        2112
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "QJyS49SuB0K3pVNb",
+          "name": "Telegram account 3"
+        }
+      },
+      "id": "2a714103-cc49-4fbc-add2-5bde669dcb76",
+      "name": "Ask For BPMN",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $json.message?.chat?.id }}",
+        "text": "Пришлите валидный xml"
+      },
+      "position": [
+        -1984,
+        2272
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "REPLACE_WITH_YOUR_WEBHOOK_ID"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "QJyS49SuB0K3pVNb",
+          "name": "Telegram account 3"
+        }
+      },
+      "id": "ca8a9e3a-cbfa-47c1-b632-0d72b9d832f4",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        -1984,
+        1984
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "REPLACE_WITH_YOUR_WEBHOOK_ID"
+    },
+    {
+      "id": "fc5da13a-a289-4435-8b30-73ac07dd1f38",
+      "name": "Extract from File",
+      "parameters": {
+        "operation": "xml",
+        "options": {}
+      },
+      "position": [
+        -1760,
+        1984
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "7b5233f0-6184-4208-82bd-f0b812bf0320",
+      "name": "Init",
+      "parameters": {
+        "keepOnlySet": true,
+        "options": {},
+        "values": {
+          "number": [
+            {
+              "name": "iteration"
+            }
+          ],
+          "string": [
+            {
+              "name": "xml",
+              "value": "={{ $json.data }}"
+            }
+          ]
+        }
+      },
+      "position": [
+        -1568,
+        1984
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1
+    },
+    {
+      "id": "a64af848-c97a-401f-91ef-5cea69a81086",
+      "name": "Aggregate Context",
+      "parameters": {
+        "jsCode": "const item = $json;\nconst xmlJson = $('XML').item.json.mxfile;\nconst prev = item.extra_info || '';\nconst answers = item.last_answer || '';\nconst iteration = typeof item.iteration === 'number' ? item.iteration : 0;\nconst extra = `Контекст:\\nИтерация: ${iteration}\\nОтвет пользователя: ${answers}\\n`; \nreturn { extra_info: prev + (prev ? '\\n' : '') + extra, iteration, xmlJson };"
+      },
+      "position": [
+        -1168,
+        1984
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "be9e4050-1db5-4fd5-bfb9-f6bf57977642",
+      "name": "OpenRouter Chat Model (Q&A)",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "json_object",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        -1056,
+        2144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "3e85877a-df76-446a-84c7-e098e02e0501",
+      "name": "Simple Memory (Q&A)",
+      "parameters": {
+        "contextWindowLength": 8,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger1').item.json.message.from.id }}"
+      },
+      "position": [
+        -928,
+        2144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "a2152d30-b1ac-472f-8790-8922e5ca36ff",
+      "name": "AI Agent Generate",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Ты senior n8n-разработчик. На основе BPMN и ответов пользователя создай валидный n8n workflow JSON, который можно импортировать и запустить. Используй только существующие ноды n8n (n8n-nodes-base.*). Убедись, что все id уникальны, connections непрерывны, параметры корректны. Верни СТРОГО JSON без Markdown."
+        },
+        "promptType": "define",
+        "text": "=Сгенерируй ВАЛИДНЫЙ n8n workflow JSON для импорта на основе сгенерированных и собранного контекста.\nВерни строго валидный JSON workflow (name, nodes, connections, settings, pinData, id). Без Markdown, без ```.\nКонтекст:\n{{ $('Бизнес-Анализ').item.json.output }}\nНоды:\n{{ $json.output }}"
+      },
+      "position": [
+        656,
+        1984
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "5368b35b-5378-45c7-839f-752e0bd209f9",
+      "name": "OpenRouter Chat Model (Gen)",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "json_object",
+          "temperature": 0.1,
+          "topP": 1
+        }
+      },
+      "position": [
+        544,
+        2160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "30786d78-a73d-42d3-82e5-778173d6a4ef",
+      "name": "Simple Memory (Gen)",
+      "parameters": {
+        "contextWindowLength": 8,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger1').item.json.message.from.id }}"
+      },
+      "position": [
+        640,
+        2160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "bb753187-bd07-40e1-8e2a-901b52566764",
+      "name": "To Binary JSON",
+      "parameters": {
+        "jsCode": "const content = JSON.stringify($json, null, 2);\nreturn {\n  json: {},\n  binary: {\n    data: {\n      data: Buffer.from(content, 'utf8').toString('base64'),\n      mimeType: 'application/json',\n      fileName: 'workflow.json'\n    }\n  }\n};"
+      },
+      "position": [
+        1200,
+        1984
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "QJyS49SuB0K3pVNb",
+          "name": "Telegram account 3"
+        }
+      },
+      "id": "d814f01a-7b2d-4fa2-822b-4eb3304da569",
+      "name": "Send Workflow JSON",
+      "parameters": {
+        "additionalFields": {
+          "caption": "={{ $('Code').item.json.name }}"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1392,
+        1984
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "REPLACE_WITH_YOUR_WEBHOOK_ID"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "QJyS49SuB0K3pVNb",
+          "name": "Telegram account 3"
+        }
+      },
+      "id": "7dba51f3-d11c-4621-beba-d877609aa5b6",
+      "name": "Telegram Trigger1",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -2368,
+        2112
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "REPLACE_WITH_YOUR_WEBHOOK_ID"
+    },
+    {
+      "id": "b1dd796f-c7c6-4a48-819b-a2a847810e56",
       "name": "XML",
       "parameters": {
         "dataPropertyName": "=xml",
@@ -238,63 +858,50 @@
         }
       },
       "position": [
-        528,
-        -912
+        -1360,
+        1984
       ],
       "type": "n8n-nodes-base.xml",
       "typeVersion": 1
     },
     {
-      "id": "0524d081-095e-4755-8315-d5526848830a",
-      "name": "Set",
+      "id": "820a930d-0dda-4c84-9c75-8af9fcd60d25",
+      "name": "Code",
       "parameters": {
-        "keepOnlySet": true,
-        "options": {},
-        "values": {
-          "string": [
-            {
-              "name": "xml",
-              "value": "={{ $json.data }}"
-            }
-          ]
-        }
+        "jsCode": "let data = $json.output ?? $json;\n\n// Если пришло строкой — снимаем ```json/``` и парсим\nif (typeof data === 'string') {\n  let raw = data.trim();\n  raw = raw.replace(/^```json\\s*/i, '').replace(/\\s*```$/i, '');\n  try {\n    data = JSON.parse(raw);\n  } catch (e) {\n    throw new Error('Gen: invalid JSON output: ' + e.message);\n  }\n}\n\n// Некоторые агенты кладут JSON ещё раз внутри output\nif (data && typeof data.output === 'string') {\n  let raw = data.output.trim();\n  raw = raw.replace(/^```json\\s*/i, '').replace(/\\s*```$/i, '');\n  try {\n    data = JSON.parse(raw);\n  } catch (e) {\n    // оставим как есть, если не парсится\n  }\n}\n\nreturn data;"
       },
       "position": [
-        384,
-        -912
+        1040,
+        1984
       ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
     },
     {
-      "id": "9e58f3a3-0112-4284-8429-9a8cbbaf5235",
-      "name": "AI Agent1",
+      "id": "ae1055db-f7ca-4fed-9a99-13336629e935",
+      "name": "When chat message received",
       "parameters": {
-        "hasOutputParser": true,
-        "options": {
-          "systemMessage": "=You are an n8n workflow automation specialist. You receive a JSON object representing a workflow. \nYour task is to analyze the workflow and identify any missing information, inconsistencies, or unclear parts that would prevent proper execution in n8n.\n\n### Rules:\n1. Examine nodes, parameters, connections, triggers, and sequence of execution.\n2. Focus on:\n   - Missing or incomplete node parameters\n   - Unconnected nodes or dangling flows\n   - Ambiguities in triggers or conditions\n   - Missing credentials or API references\n3. Ask **clarifying questions** in RUssian to gather necessary information to make the workflow fully executable.\n4. Do NOT modify the JSON yet. Only analyze and generate questions.\n5. Output must be JSON in the following format:\n\n```json\n{\n  \"clarifying_questions\": [\n    \"string: question 1\",\n    \"string: question 2\"\n  ]\n}\n\n\n"
-        },
-        "promptType": "define",
-        "text": "=Пример вывода:\n\nВот XML в виде JSON файл, который необходимо проанализировать:{{ $json['bpmn:definitions']['bpmn:process'] }}\n"
+        "options": {}
       },
       "position": [
-        896,
-        -912
+        -2384,
+        2544
       ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.2
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "webhookId": "4091fa09-fb9a-4039-9411-7104d213f601"
     },
     {
-      "id": "f5dcdd86-fc68-44c3-890d-927654095adc",
-      "name": "Simple Memory1",
+      "id": "f96f325e-8bee-42f9-80a3-b9a600ebf5ee",
+      "name": "Simple Memory",
       "parameters": {
         "contextWindowLength": 1,
         "sessionIdType": "customKey",
         "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
       },
       "position": [
-        864,
-        -720
+        -688,
+        1136
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
@@ -302,59 +909,12 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "QJyS49SuB0K3pVNb",
-          "name": "Telegram account 3"
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
         }
       },
-      "id": "c74bd71d-99ec-4d52-86ab-b451c26145d4",
-      "name": "Telegram Trigger",
-      "parameters": {
-        "additionalFields": {},
-        "updates": [
-          "message"
-        ]
-      },
-      "position": [
-        -176,
-        -912
-      ],
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.2,
-      "webhookId": "9ae65633-0436-45ee-920d-3b598dfea125"
-    },
-    {
-      "credentials": {
-        "openRouterApi": {
-          "id": "MxDmhTEDcHkODHH1",
-          "name": "OpenRouter account"
-        }
-      },
-      "id": "1fc000fe-31b4-4eed-ad55-9984d415f0f7",
-      "name": "OpenRouter Chat Model1",
-      "parameters": {
-        "model": "anthropic/claude-opus-4.1",
-        "options": {
-          "responseFormat": "text",
-          "temperature": 0,
-          "topP": 1
-        }
-      },
-      "position": [
-        736,
-        -720
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "QJyS49SuB0K3pVNb",
-          "name": "Telegram account 3"
-        }
-      },
-      "id": "8d3ad036-a391-404a-85a6-94cfbf1ce425",
-      "name": "Send message and wait for response1",
+      "id": "d140471b-6bfe-4a6d-9a0c-73b40698a533",
+      "name": "Send message and wait for response",
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "message": "={{ $json.output }}",
@@ -363,16 +923,16 @@
         "responseType": "freeText"
       },
       "position": [
-        1104,
-        -608
+        -240,
+        1120
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "feddf02b-190e-4b98-8e58-5270d0af3de4"
     },
     {
-      "id": "491411ee-c26a-42d7-b420-5f14f8f2e4ba",
-      "name": "If1",
+      "id": "ca3a1441-9cea-4488-8fce-37e73260ed9f",
+      "name": "If",
       "parameters": {
         "conditions": {
           "combinator": "and",
@@ -397,25 +957,51 @@
         "options": {}
       },
       "position": [
-        1232,
-        -912
+        -384,
+        944
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "a0d7b455-c1f2-4378-80bf-06e2c32240d2",
-      "name": "AI Agent5",
+      "id": "b6dad141-609e-47c0-a86c-f721c7913486",
+      "name": "Code1",
+      "parameters": {
+        "jsCode": "let extra_info = '';\ntry {\n  const chatData = $node[\"Code2\"].json;\n\n  const extra_info = `Вопросы к xml: ${chatData.chatData}, ответы от пользователя ${chatData.answers}. Предыдущие ответы на вопросы ${chatData.prevData}`;\n  return { extra_info: extra_info }\n} catch (e) {\n  const extra_info = '';\n}\n\nreturn { extra_info: extra_info }"
+      },
+      "position": [
+        -912,
+        944
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ee9db478-635a-4c9e-82bd-facc11939a4c",
+      "name": "Code2",
+      "parameters": {
+        "jsCode": "// Берём все items из ноды \"Ai Agent\"\nconst chatData = $node[\"AI Agent1\"].json;\nconst answers = $node[\"Send message and wait for response\"].json;\nconst prevData = $node[\"Code1\"].json;\n\n// Возвращаем вместе с текущим item\nreturn { prevData: prevData.extra_info, chatData: chatData.output, answers: answers.data.text}\n"
+      },
+      "position": [
+        -496,
+        1216
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "bab9afdf-9c87-4dd4-9646-1d13dd3fd8b4",
+      "name": "AI Agent3",
       "parameters": {
         "options": {
           "systemMessage": "=Действуй как senior N8N разработчик с 10 летним опытом разработки workflow.\nТы работаешь как помощник по интеграции BPMN в n8n. \nТвоя задача — проанализировать предоставленную диаграмму BPMN и определить, какие ноды нужно создать в n8n. \n\n⚠️ ВАЖНО:\n- Не генерируй финальный workflow JSON.\n- Верни только список нод.\n- Для каждой ноды укажи:\n  1. Название задачи из BPMN (\"bpmn_task_name\").\n  2. Соответствующий тип ноды в n8n (\"n8n_node_type\"). Только если можно заменить ноду легким блоком кода, то заменяй на код, то есть там, где необходимо выполнить операция конкатенации, слияния и тп делай с помощью кода, так будет лучше, если ты полностью не уверен, как используется та или иная нода, но не используй код везде!\n  3. Список параметров, по типу api, credentials, уточненные у пользователя для определенных нод. Если пользователь решил не давать какие то данные по этому параметру, то вводи N/A, то есть везде, где требовались credentials, api, ссылки, не получен ответ, то нужно брать N/A.\n 4. Связи с другими соседними узлами! Внимание, необходимо прописывать только про соседние узлы, которые напрямую связаны с нынешним!\n\nФормат ответа строго JSON.\n"
         },
         "promptType": "define",
-        "text": "={{ $json.output }}\n\nПример ответа: Пример:\n{\n  \"nodes_to_create\": [\n    {\n      \"bpmn_task_name\": \"Записать в Google Sheet\",\n      \"n8n_node_type\": \"n8n-nodes-base.googleSheets\",\n      \"info_needed\": [\"Sheet ID\", \"Cell Range\", \"Authentication\"]\n      \"connections\": {\n        \"bef_connections\": [связи с соседними прошлыми узлами],\n        \"aft_connections\": [связи со следующими узлами]\n      }\n    }\n  ]\n}\n\nПо этой ссылке доступна оффициальная документация, пользуйся ей при генерации: https://docs.n8n.io\nXML JSON в виде BPMN:\n{{ JSON.stringify($('XML').item.json.mxfile) }}"
+        "text": "={{ $json.output }}\n\nПример ответа: Пример:\n{\n  \"nodes_to_create\": [\n    {\n      \"bpmn_task_name\": \"Записать в Google Sheet\",\n      \"n8n_node_type\": \"n8n-nodes-base.googleSheets\",\n      \"info_needed\": [\"Sheet ID\", \"Cell Range\", \"Authentication\"]\n      \"connections\": {\n        \"bef_connections\": [связи с соседними прошлыми узлами],\n        \"aft_connections\": [связи со следующими узлами]\n      }\n    }\n  ]\n}\n\nПо этой ссылке доступна оффициальная документация, пользуйся ей при генерации: https://docs.n8n.io\nXML JSON в виде BPMN:\n{{ JSON.stringify($('XML1').item.json.mxfile) }}"
       },
       "position": [
-        1632,
-        -896
+        0,
+        912
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -427,8 +1013,8 @@
           "name": "OpenRouter account"
         }
       },
-      "id": "d933e4e8-523e-4ac8-ae13-d483fb694125",
-      "name": "OpenRouter Chat Model5",
+      "id": "aa02e688-a49a-4c61-8cc7-1f1a8aaef334",
+      "name": "OpenRouter Chat Model3",
       "parameters": {
         "model": "anthropic/claude-opus-4.1",
         "options": {
@@ -438,40 +1024,40 @@
         }
       },
       "position": [
-        1600,
-        -736
+        -32,
+        1072
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1
     },
     {
-      "id": "35091613-b71e-4da8-ac1d-82b413bc610f",
-      "name": "Simple Memory4",
+      "id": "461d2dcf-8612-4359-af3b-155ab8b6fff2",
+      "name": "Simple Memory2",
       "parameters": {
         "contextWindowLength": 1,
         "sessionIdType": "customKey",
         "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
       },
       "position": [
-        1760,
-        -720
+        128,
+        1088
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
     },
     {
-      "id": "b2cc9356-ae42-41e6-950f-c9f6d9d7b39b",
-      "name": "AI Agent6",
+      "id": "d86875cd-7830-4c6a-a84c-a006657b3b07",
+      "name": "AI Agent4",
       "parameters": {
         "options": {
           "systemMessage": "=Действуй как senior N8N разработчик с 10 летним опытом разработки workflow.\nУ тебя есть:\n1. Описание процесса (BPMN) в JSON.\nТвоя задача:\nСгенерировать валидный JSON-workflow для n8n, который можно сразу импортировать в n8n (через \"Import workflow\") и он будет запускаться.\nJSON должен содержать все обязательные поля (name, nodes, connections, settings, pinData, id).\nВ nodes укажи корректные parameters для каждого нода, подставив данные от пользователя.\nУбедись, что у всех нодов есть уникальные id и правильные type (n8n-nodes-base.*).\nНастрой связи в connections, чтобы workflow отражал процесс из BPMN.\nПроверь, что все узлы корректны, все соединения имеются и все параметры заполнены верно!\nВерни только чистый JSON без пояснений и форматирования.\n\n"
         },
         "promptType": "define",
-        "text": "=Примеры того, как выглядят ноды из N8N workflow в JSON формате, тут есть примеры того, как должны быть построены соединения, отдельные узлы и тп:\nобрати внимание если в узле берется бинарный файл, то нужно сначала привести к бинарному файлу, в json ниже есть примеры того, как можно это сделать и подсказки по некоторым нодам.\n{\n  \"name\": \"My workflow 12\",\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"updates\": [\n          \"message\"\n        ],\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.telegramTrigger\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3840,\n        -816\n      ],\n      \"id\": \"9458321c-d7ff-49fd-ae2e-26b74a6db6c7\",\n      \"name\": \"Telegram Trigger1\",\n      \"webhookId\": \"9ae65633-0436-45ee-920d-3b598dfea125\",\n      \"credentials\": {\n        \"telegramApi\": {\n          \"id\": \"uahQsuRxqjcRQnFs\",\n          \"name\": \"AutoCreateN8NWorkflow\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"resource\": \"file\",\n        \"fileId\": \"= $json.message.document.file_id \", в ноде телеграмма файлы всегда идут как document\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.telegram\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3600,\n        -816\n      ],\n      \"id\": \"29cf5b6a-b951-4545-af96-91ec9643a182\",\n      \"name\": \"Get a file\",\n      \"webhookId\": \"f5ecc49a-f7e5-4390-9086-c2dad12cf6cc\",\n      \"credentials\": {\n        \"telegramApi\": {\n          \"id\": \"uahQsuRxqjcRQnFs\",\n          \"name\": \"AutoCreateN8NWorkflow\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"xml\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.extractFromFile\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3360,\n        -816\n      ],\n      \"id\": \"9e6ac67a-fa04-45f6-8e4d-eaa8e7bcf72b\",\n      \"name\": \"Extract from File\"\n    },\n    {\n      \"parameters\": {\n        \"promptType\": \"define\",\n        \"text\": \"= $json.output \\n\\nПример ответа: Пример:\\n{\\n  \\\"nodes_to_create\\\": [\\n    {\\n      \\\"bpmn_task_name\\\": \\\"Записать в Google Sheet\\\",\\n      \\\"n8n_node_type\\\": \\\"n8n-nodes-base.googleSheets\\\",\\n      \\\"info_needed\\\": [\\\"Sheet ID\\\", \\\"Cell Range\\\", \\\"Authentication\\\"]\\n    }\\n  ]\\n}\\n\\nXML в виде BPMN:\\n $('Extract from File1').item.json.data \",\n        \"options\": {\n          \"systemMessage\": \"=Ты работаешь как помощник по интеграции BPMN в n8n. \\nТвоя задача — проанализировать предоставленную диаграмму BPMN и определить, какие ноды нужно создать в n8n. \\n\\n⚠️ ВАЖНО:\\n- Не генерируй финальный workflow JSON.\\n- Верни только список нод.\\n- Для каждой ноды укажи:\\n  1. Название задачи из BPMN (\\\"bpmn_task_name\\\").\\n  2. Соответствующий тип ноды в n8n (\\\"n8n_node_type\\\").\\n  3. Список параметров, по типу api, credentials, уточненные у пользователя для определенных нод. Если пользователь решил не давать какие то данные по этому параметру, то вводи N/A, то есть везде, где требовались credentials, api, ссылки, не получен ответ, то нужно брать N/A.\\n\\nФормат ответа строго JSON.\\n\"\n        }\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.agent\",\n      \"typeVersion\": 2.2,\n      \"position\": [\n        -4272,\n        -816\n      ],\n      \"id\": \"206d7774-bdb7-4b16-8cd0-0abf25913d20\",\n      \"name\": \"AI Agent3\"\n    },\n    {\n      \"parameters\": {\n        \"model\": \"anthropic/claude-opus-4.1\",\n        \"options\": {\n          \"responseFormat\": \"text\",\n          \"temperature\": 0,\n          \"topP\": 1\n        }\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.lmChatOpenRouter\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -4304,\n        -656\n      ],\n      \"id\": \"8d029a97-4338-4a23-a027-56bbc9405fc2\",\n      \"name\": \"OpenRouter Chat Model3\",\n      \"credentials\": {\n        \"openRouterApi\": {\n          \"id\": \"MxDmhTEDcHkODHH1\",\n          \"name\": \"OpenRouter account\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"sessionIdType\": \"customKey\",\n        \"sessionKey\": \"=123qwe\"\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.memoryBufferWindow\",\n      \"typeVersion\": 1.3,\n      \"position\": [\n        -4144,\n        -640\n      ],\n      \"id\": \"9a897a3b-3fcc-4b03-bb5f-36cd223fc34e\",\n      \"name\": \"Simple Memory2\"\n    },\n    {\n      \"parameters\": {\n        \"jsCode\": \"let extra_info = '';\\ntry {\\n  const chatData = $node[\\\"Code2\\\"].json;\\n\\n  const extra_info = `Вопросы к xml: ${chatData.chatData}, ответы от пользователя ${chatData.answers}. Предыдущие ответы на вопросы ${chatData.prevData}`;\\n  return { extra_info: extra_info }\\n} catch (e) {\\n  const extra_info = '';\\n}\\n\\nreturn { extra_info: extra_info }\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3872,\n        -592\n      ],\n      \"id\": \"2584250e-41b2-4e6f-97f0-40a2223cc9c3\",\n      \"name\": \"Code1\"\n    },\n    {\n      \"parameters\": {\n        \"resource\": \"video\",\n        \"operation\": \"analyze\",\n        \"modelId\": {\n          \"__rl\": true,\n          \"value\": \"models/gemini-2.5-pro\",\n          \"mode\": \"list\",\n          \"cachedResultName\": \"models/gemini-2.5-pro\"\n        },\n        \"text\": \"Проанализируй видеофайл строго по следующим инструкциям:\\n**Транскрибация и диаризация**\\n- Преобразуй всю речь в текст, сохраняя оригинальные имена участников БЕЗ ИЗМЕНЕНИЙ.\\n- Если имя на английском — оставь на английском, если на русском — на русском.\\n- Формат: [Оригинальное имя]: [Текст]. \\n\\n**Метаданные**\\n- Точная длительность видео (HH:MM:SS) — это общее время созвона.\\n- Тема встречи (1-2 предложения).\\n\\n**Анализ**\\n- Рассчитай % времени речи каждого участника относительно общей длительности.\\n- Пример: Danil Kalashnikov — 25%, Иван Петров — 30%.\\n\\n **Отчет**\\\\nФормат:\\n\\n## Диаризация\\n[Текст с именами в оригинальном виде]\\n\\n### Хронометраж\\n- Общее время: [HH:MM:SS]\\n- Время участников:\\n- [Оригинальное имя] — [XX%]\\n- [Оригинальное имя] — [XX%]\\n\\n### Задачи\\n[Список с датами из названия файла:  $('Google Drive4').first().json.name ]\\n### Проверка адекватности речи участников. Проанализируйте реплики каждого участника с точки зрения содержания и этики речи. Проверьте, нет ли в речи ненормативной лексики, оскорбительных выражений или явной неадекватности (бессвязная речь, отсутствие логики и структуры высказываний).Если подобные нарушения выявлены, обязательно укажите это в отчёте, отметив имя участника и пример выявленного нарушения. При отсутствии нарушений укажите, что все участники общались адекватно и корректно.\\n**Полезность участников**\\n[Оценки 1-10]\\n\\n**Аналитика для улучшения**\\n[Рекомендации]\\n\",\n        \"inputType\": \"binary\",\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.googleGemini\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3632,\n        -592\n      ],\n      \"id\": \"412db1fb-f093-455d-b704-e8c6fdd0651e\",\n      \"name\": \"Analyze video\",\n      \"retryOnFail\": true,\n      \"credentials\": {\n        \"googlePalmApi\": {\n          \"id\": \"kpb4KMG2LrUgiQZB\",\n          \"name\": \"Gemini\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"respondWith\": \"binary\",\n        \"options\": {\n          \"responseHeaders\": {\n            \"entries\": [\n              {\n                \"name\": \"Access-Control-Allow-Origin\",\n                \"value\": \"*\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Methods\",\n                \"value\": \"GET, POST, PUT, DELETE, OPTIONS\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Headers\",\n                \"value\": \"*\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Credentials\",\n                \"value\": \"true\"\n              }\n            ]\n          }\n        }\n      },\n      \"type\": \"n8n-nodes-base.respondToWebhook\",\n      \"typeVersion\": 1.4,\n      \"position\": [\n        -3312,\n        -592\n      ],\n      \"id\": \"4ef89b41-fd2a-4bf5-84a7-72dcc27b6cac\",\n      \"name\": \"Respond to Webhook\"\n    },\n    {\n      \"parameters\": {\n        \"conditions\": {\n          \"options\": {\n            \"caseSensitive\": true,\n            \"leftValue\": \"\",\n            \"typeValidation\": \"strict\",\n            \"version\": 2\n          },\n          \"conditions\": [\n            {\n              \"id\": \"d28054b3-7515-4967-8a7d-b7102c640e0a\",\n              \"leftValue\": \"= JSON.stringify($json.task_in_jira) \",\n              \"rightValue\": \"true\",\n              \"operator\": {\n                \"type\": \"string\",\n                \"operation\": \"equals\"\n              }\n            }\n          ],\n          \"combinator\": \"and\"\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.if\",\n      \"typeVersion\": 2.2,\n      \"position\": [\n        -3888,\n        -368\n      ],\n      \"id\": \"a1ebd565-8a4f-4525-b58d-650694487fd3\",\n      \"name\": \"If\"\n    },\n    {\n      \"parameters\": {\n        \"project\": {\n          \"__rl\": true,\n          \"mode\": \"list\",\n          \"value\": \"\"\n        },\n        \"issueType\": {\n          \"__rl\": true,\n          \"mode\": \"list\",\n          \"value\": \"\"\n        },\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.jira\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3632,\n        -368\n      ],\n      \"id\": \"cc725e3a-556c-4f5f-a1b1-3ecf485883e7\",\n      \"name\": \"Create task\"\n    },\n    {\n      \"parameters\": {\n        \"method\": \"POST\",\n        \"url\": \"https://queue.fal.run/fal-ai/imagen4/preview\",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization \",\n              \"value\": \"Key N/A\"\n            },\n            {\n              \"name\": \"Content-Type\",\n              \"value\": \"application/json\"\n            }\n          ]\n        },\n        \"sendBody\": true,\n        \"specifyBody\": \"json\",\n        \"jsonBody\": \"={\\n  \\\"prompt\\\":  JSON.stringify($('Telegram Trigger').item.json.message.text)\\n}\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3312,\n        -352\n      ],\n      \"id\": \"3a5034d7-5ee7-4673-9e65-61911f0403f9\",\n      \"name\": \"IMAGE GENERATE\"\n    },\n    {\n      \"parameters\": {\n        \"method\": \"POST\",\n        \"url\": \"https://queue.fal.run/fal-ai/hunyuan3d-v21\",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization\",\n              \"value\": \"Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e\"\n            },\n            {\n              \"name\": \"Content-Type\",\n              \"value\": \"application/json\"\n            }\n          ]\n        },\n        \"sendBody\": true,\n        \"specifyBody\": \"json\",\n        \"jsonBody\": \"={\\n  \\\"input_image_url\\\":  JSON.stringify($('Code6').item.json.file_path) \\n}\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3904,\n        -160\n      ],\n      \"id\": \"b60f24ae-f6de-4a60-9bd2-d77048f57bd2\",\n      \"name\": \"3D-Generation1\"\n    },\n    {\n      \"parameters\": {\n        \"url\": \"= $json.response_url \",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization\",\n              \"value\": \"Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3104,\n        -352\n      ],\n      \"id\": \"61ebcd9f-1ff3-4dde-b6ad-91eb5083381a\",\n      \"name\": \"GET IMAGE URL\"\n    },\n    {\n      \"parameters\": {\n        \"rules\": {\n          \"values\": [\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"leftValue\": \"= $json.status \",\n                    \"rightValue\": \"succeeded\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\"\n                    },\n                    \"id\": \"fe7f701f-bff9-422a-8b37-fb232d783a8c\"\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"succeeded\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"b707dd3a-073f-406a-aa38-7ca27d6703fd\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"failed\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"failed\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"88cd5155-794f-49be-a246-a705dbcf9809\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"planned\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"planned\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"64b99e8b-d95b-4bf4-9063-6d1768831098\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"being {{ $json.status }}\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"being processed\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.switch\",\n      \"typeVersion\": 3.2,\n      \"position\": [\n        -3632,\n        -160\n      ],\n      \"id\": \"92b46415-6b6b-4b91-a5eb-e41d4557f5ad\",\n      \"name\": \"Switch\"\n    },\n    {\n      \"parameters\": {\n        \"modelId\": {\n          \"__rl\": true,\n          \"value\": \"models/gemini-1.5-pro-latest\",\n          \"mode\": \"list\",\n          \"cachedResultName\": \"models/gemini-1.5-pro-latest\"\n        },\n        \"messages\": {\n          \"values\": [\n            {\n              \"content\": \"здесь промпт\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.googleGemini\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3312,\n        -128\n      ],\n      \"id\": \"15158475-d08d-4d84-a2e9-6c96af9076ab\",\n      \"name\": \"Extract Tasks1\",\n      \"credentials\": {\n        \"googlePalmApi\": {\n          \"id\": \"kpb4KMG2LrUgiQZB\",\n          \"name\": \"Gemini\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"rule\": {\n          \"interval\": [\n            {\n              \"field\": \"minutes\"\n            }\n          ]\n        }\n      },\n      \"id\": \"6bfd5dda-96d4-449d-a3f5-6a196d3fc977\",\n      \"name\": \"Schedule Trigger\",\n      \"type\": \"n8n-nodes-base.scheduleTrigger\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3376,\n        112\n      ]\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"formatDate\",\n        \"date\": \"= $now \",\n        \"format\": \"DD.MM.YYYY HH:mm:ss\",\n        \"options\": {}\n      },\n      \"id\": \"64d18717-0f19-40c0-a3eb-519a520a9096\",\n      \"name\": \"Date & Time\",\n      \"type\": \"n8n-nodes-base.dateTime\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3168,\n        112\n      ]\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"append\",\n        \"documentId\": {\n          \"__rl\": true,\n          \"value\": \"1AwDAamKUciLIdSxzxNze-mgURCVqVLzxd3CdcjnrtKY\",\n          \"mode\": \"id\"\n        },\n        \"sheetName\": {\n          \"__rl\": true,\n          \"value\": \"gid=0\",\n          \"mode\": \"id\"\n        },\n        \"columns\": {\n          \"mappingMode\": \"defineBelow\",\n          \"value\": {\n            \"content\": \"= $json.content.parts[0].text \",\n            \"finishReason\": \"= $('Date & Time').item.json.formattedDate \"\n          },\n          \"matchingColumns\": [],\n          \"schema\": [\n            {\n              \"id\": \"content\",\n              \"displayName\": \"content\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": false\n            },\n            {\n              \"id\": \"finishReason\",\n              \"displayName\": \"finishReason\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": false\n            },\n            {\n              \"id\": \"avgLogprobs\",\n              \"displayName\": \"avgLogprobs\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": true\n            }\n          ],\n          \"attemptToConvertTypes\": false,\n          \"convertFieldsToString\": false\n        },\n        \"options\": {}\n      },\n      \"id\": \"4f79212e-422c-4ad8-9f63-871bbd333112\",\n      \"name\": \"Google Sheets\",\n      \"type\": \"n8n-nodes-base.googleSheets\",\n      \"typeVersion\": 4.5,\n      \"position\": [\n        -2864,\n        -304\n      ],\n      \"credentials\": {\n        \"googleSheetsOAuth2Api\": {\n          \"id\": \"gngoNLFSKF2sQUSt\",\n          \"name\": \"N8NTelegram\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"appendOrUpdate\",\n        \"documentId\": {\n          \"__rl\": true,\n          \"value\": \"1AwDAamKUciLIdSxzxNze-mgURCVqVLzxd3CdcjnrtKY\",\n          \"mode\": \"id\"\n        },\n        \"sheetName\": {\n          \"__rl\": true,\n          \"value\": \"gid=0\",\n          \"mode\": \"id\"\n        },\n        \"columns\": {\n          \"mappingMode\": \"autoMapInputData\",\n          \"value\": \"= $json.values \",\n          \"matchingColumns\": [],\n          \"schema\": []\n        },\n        \"options\": {\n          \"cellFormat\": \"USER_ENTERED\"\n        }\n      },\n      \"id\": \"4ba1443c-463c-4e19-a8e8-2e17ddc99293\",\n      \"name\": \"Google Sheets1\",\n      \"type\": \"n8n-nodes-base.googleSheets\",\n      \"typeVersion\": 4.5,\n      \"position\": [\n        512,\n        288\n      ],\n      \"credentials\": {\n        \"googleSheetsOAuth2Api\": {\n          \"id\": \"gngoNLFSKF2sQUSt\",\n          \"name\": \"N8NTelegram\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"jsCode\": \"const f = $('Extract Tasks1').item.json.content.parts[0].text;\\nreturn {f: f}\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3008,\n        -128\n      ],\n      \"id\": \"8732e9f5-4eb5-4c22-a972-5b0accca59f5\",\n      \"name\": \"Code\"\n    },\n    {\n      \"parameters\": {\n        \"errorMessage\": \"=Ошибка получения документа ID  $json.document_id \"\n      },\n      \"type\": \"n8n-nodes-base.stopAndError\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3104,\n        -512\n      ],\n      \"id\": \"dd88d22c-38bc-4543-9314-862bb88c480c\",\n      \"name\": \"Logger2\"\n    },\n  ],\n  \"pinData\": {},\n  \"connections\": {\n    \"Telegram Trigger1\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Get a file\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Get a file\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Extract from File\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"OpenRouter Chat Model3\": {\n      \"ai_languageModel\": [\n        [\n          {\n            \"node\": \"AI Agent3\",\n            \"type\": \"ai_languageModel\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Simple Memory2\": {\n      \"ai_memory\": [\n        [\n          {\n            \"node\": \"AI Agent3\",\n            \"type\": \"ai_memory\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"IMAGE GENERATE\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"GET IMAGE URL\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Extract Tasks1\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Code\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Schedule Trigger\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Date & Time\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Create task\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Merge\",\n            \"type\": \"main\",\n            \"index\": 1\n          }\n        ]\n      ]\n    },\n    \"Analyze video\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Merge\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    }\n  },\n  \"active\": false,\n  \"settings\": {\n    \"executionOrder\": \"v1\"\n  },\n  \"versionId\": \"ea1b248c-99bb-4b9f-be4c-9da2799acae2\",\n  \"meta\": {\n    \"templateCredsSetupCompleted\": true,\n    \"instanceId\": \"75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620\"\n  },\n  \"id\": \"ehJb0je5eDf5I8iL\",\n  \"tags\": [\n    {\n      \"name\": \"Module\",\n      \"id\": \"EVKWz9eWTvHGovop\",\n      \"createdAt\": \"2025-09-01T07:43:10.299Z\",\n      \"updatedAt\": \"2025-09-01T07:43:10.299Z\"\n    }\n  ]\n}\n\nПо этой ссылке доступна оффициальная документация, пользуйся ей при генерации: https://docs.n8n.io\n\nобходи узлы: merge, html стороной и заменяй их на другие! Можно с помощью узлов Code! Если ты обращаешься в Code к другим нодам делай это с помощью $node[\"node_name\"], также не забывай, что выход от узлов текстового json всегда будет с ```json``` и \\n.\nОписание BPMN в формате JSON:\n{{ JSON.stringify($('AI Agent5').item.json.output) }}"
+        "text": "=Примеры того, как выглядят ноды из N8N workflow в JSON формате, тут есть примеры того, как должны быть построены соединения, отдельные узлы и тп:\nобрати внимание если в узле берется бинарный файл, то нужно сначала привести к бинарному файлу, в json ниже есть примеры того, как можно это сделать и подсказки по некоторым нодам.\nДля задач с использованием LLM бери Gemini 2.5 pro\n{\n  \"name\": \"My workflow 12\",\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"updates\": [\n          \"message\"\n        ],\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.telegramTrigger\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3840,\n        -816\n      ],\n      \"id\": \"9458321c-d7ff-49fd-ae2e-26b74a6db6c7\",\n      \"name\": \"Telegram Trigger1\",\n      \"webhookId\": \"9ae65633-0436-45ee-920d-3b598dfea125\",\n      \"credentials\": {\n        \"telegramApi\": {\n          \"id\": \"uahQsuRxqjcRQnFs\",\n          \"name\": \"AutoCreateN8NWorkflow\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"resource\": \"file\",\n        \"fileId\": \"= $json.message.document.file_id \", в ноде телеграмма файлы всегда идут как document\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.telegram\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3600,\n        -816\n      ],\n      \"id\": \"29cf5b6a-b951-4545-af96-91ec9643a182\",\n      \"name\": \"Get a file\",\n      \"webhookId\": \"f5ecc49a-f7e5-4390-9086-c2dad12cf6cc\",\n      \"credentials\": {\n        \"telegramApi\": {\n          \"id\": \"uahQsuRxqjcRQnFs\",\n          \"name\": \"AutoCreateN8NWorkflow\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"xml\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.extractFromFile\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3360,\n        -816\n      ],\n      \"id\": \"9e6ac67a-fa04-45f6-8e4d-eaa8e7bcf72b\",\n      \"name\": \"Extract from File\"\n    },\n    {\n      \"parameters\": {\n        \"promptType\": \"define\",\n        \"text\": \"= $json.output \\n\\nПример ответа: Пример:\\n{\\n  \\\"nodes_to_create\\\": [\\n    {\\n      \\\"bpmn_task_name\\\": \\\"Записать в Google Sheet\\\",\\n      \\\"n8n_node_type\\\": \\\"n8n-nodes-base.googleSheets\\\",\\n      \\\"info_needed\\\": [\\\"Sheet ID\\\", \\\"Cell Range\\\", \\\"Authentication\\\"]\\n    }\\n  ]\\n}\\n\\nXML в виде BPMN:\\n $('Extract from File1').item.json.data \",\n        \"options\": {\n          \"systemMessage\": \"=Ты работаешь как помощник по интеграции BPMN в n8n. \\nТвоя задача — проанализировать предоставленную диаграмму BPMN и определить, какие ноды нужно создать в n8n. \\n\\n⚠️ ВАЖНО:\\n- Не генерируй финальный workflow JSON.\\n- Верни только список нод.\\n- Для каждой ноды укажи:\\n  1. Название задачи из BPMN (\\\"bpmn_task_name\\\").\\n  2. Соответствующий тип ноды в n8n (\\\"n8n_node_type\\\").\\n  3. Список параметров, по типу api, credentials, уточненные у пользователя для определенных нод. Если пользователь решил не давать какие то данные по этому параметру, то вводи N/A, то есть везде, где требовались credentials, api, ссылки, не получен ответ, то нужно брать N/A.\\n\\nФормат ответа строго JSON.\\n\"\n        }\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.agent\",\n      \"typeVersion\": 2.2,\n      \"position\": [\n        -4272,\n        -816\n      ],\n      \"id\": \"206d7774-bdb7-4b16-8cd0-0abf25913d20\",\n      \"name\": \"AI Agent3\"\n    },\n    {\n      \"parameters\": {\n        \"model\": \"anthropic/claude-opus-4.1\",\n        \"options\": {\n          \"responseFormat\": \"text\",\n          \"temperature\": 0,\n          \"topP\": 1\n        }\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.lmChatOpenRouter\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -4304,\n        -656\n      ],\n      \"id\": \"8d029a97-4338-4a23-a027-56bbc9405fc2\",\n      \"name\": \"OpenRouter Chat Model3\",\n      \"credentials\": {\n        \"openRouterApi\": {\n          \"id\": \"MxDmhTEDcHkODHH1\",\n          \"name\": \"OpenRouter account\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"sessionIdType\": \"customKey\",\n        \"sessionKey\": \"=123qwe\"\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.memoryBufferWindow\",\n      \"typeVersion\": 1.3,\n      \"position\": [\n        -4144,\n        -640\n      ],\n      \"id\": \"9a897a3b-3fcc-4b03-bb5f-36cd223fc34e\",\n      \"name\": \"Simple Memory2\"\n    },\n    {\n      \"parameters\": {\n        \"jsCode\": \"let extra_info = '';\\ntry {\\n  const chatData = $node[\\\"Code2\\\"].json;\\n\\n  const extra_info = `Вопросы к xml: ${chatData.chatData}, ответы от пользователя ${chatData.answers}. Предыдущие ответы на вопросы ${chatData.prevData}`;\\n  return { extra_info: extra_info }\\n} catch (e) {\\n  const extra_info = '';\\n}\\n\\nreturn { extra_info: extra_info }\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3872,\n        -592\n      ],\n      \"id\": \"2584250e-41b2-4e6f-97f0-40a2223cc9c3\",\n      \"name\": \"Code1\"\n    },\n    {\n      \"parameters\": {\n        \"resource\": \"video\",\n        \"operation\": \"analyze\",\n        \"modelId\": {\n          \"__rl\": true,\n          \"value\": \"models/gemini-2.5-pro\",\n          \"mode\": \"list\",\n          \"cachedResultName\": \"models/gemini-2.5-pro\"\n        },\n        \"text\": \"Проанализируй видеофайл строго по следующим инструкциям:\\n**Транскрибация и диаризация**\\n- Преобразуй всю речь в текст, сохраняя оригинальные имена участников БЕЗ ИЗМЕНЕНИЙ.\\n- Если имя на английском — оставь на английском, если на русском — на русском.\\n- Формат: [Оригинальное имя]: [Текст]. \\n\\n**Метаданные**\\n- Точная длительность видео (HH:MM:SS) — это общее время созвона.\\n- Тема встречи (1-2 предложения).\\n\\n**Анализ**\\n- Рассчитай % времени речи каждого участника относительно общей длительности.\\n- Пример: Danil Kalashnikov — 25%, Иван Петров — 30%.\\n\\n **Отчет**\\\\nФормат:\\n\\n## Диаризация\\n[Текст с именами в оригинальном виде]\\n\\n### Хронометраж\\n- Общее время: [HH:MM:SS]\\n- Время участников:\\n- [Оригинальное имя] — [XX%]\\n- [Оригинальное имя] — [XX%]\\n\\n### Задачи\\n[Список с датами из названия файла:  $('Google Drive4').first().json.name ]\\n### Проверка адекватности речи участников. Проанализируйте реплики каждого участника с точки зрения содержания и этики речи. Проверьте, нет ли в речи ненормативной лексики, оскорбительных выражений или явной неадекватности (бессвязная речь, отсутствие логики и структуры высказываний).Если подобные нарушения выявлены, обязательно укажите это в отчёте, отметив имя участника и пример выявленного нарушения. При отсутствии нарушений укажите, что все участники общались адекватно и корректно.\\n**Полезность участников**\\n[Оценки 1-10]\\n\\n**Аналитика для улучшения**\\n[Рекомендации]\\n\",\n        \"inputType\": \"binary\",\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.googleGemini\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3632,\n        -592\n      ],\n      \"id\": \"412db1fb-f093-455d-b704-e8c6fdd0651e\",\n      \"name\": \"Analyze video\",\n      \"retryOnFail\": true,\n      \"credentials\": {\n        \"googlePalmApi\": {\n          \"id\": \"kpb4KMG2LrUgiQZB\",\n          \"name\": \"Gemini\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"respondWith\": \"binary\",\n        \"options\": {\n          \"responseHeaders\": {\n            \"entries\": [\n              {\n                \"name\": \"Access-Control-Allow-Origin\",\n                \"value\": \"*\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Methods\",\n                \"value\": \"GET, POST, PUT, DELETE, OPTIONS\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Headers\",\n                \"value\": \"*\"\n              },\n              {\n                \"name\": \"Access-Control-Allow-Credentials\",\n                \"value\": \"true\"\n              }\n            ]\n          }\n        }\n      },\n      \"type\": \"n8n-nodes-base.respondToWebhook\",\n      \"typeVersion\": 1.4,\n      \"position\": [\n        -3312,\n        -592\n      ],\n      \"id\": \"4ef89b41-fd2a-4bf5-84a7-72dcc27b6cac\",\n      \"name\": \"Respond to Webhook\"\n    },\n    {\n      \"parameters\": {\n        \"conditions\": {\n          \"options\": {\n            \"caseSensitive\": true,\n            \"leftValue\": \"\",\n            \"typeValidation\": \"strict\",\n            \"version\": 2\n          },\n          \"conditions\": [\n            {\n              \"id\": \"d28054b3-7515-4967-8a7d-b7102c640e0a\",\n              \"leftValue\": \"= JSON.stringify($json.task_in_jira) \",\n              \"rightValue\": \"true\",\n              \"operator\": {\n                \"type\": \"string\",\n                \"operation\": \"equals\"\n              }\n            }\n          ],\n          \"combinator\": \"and\"\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.if\",\n      \"typeVersion\": 2.2,\n      \"position\": [\n        -3888,\n        -368\n      ],\n      \"id\": \"a1ebd565-8a4f-4525-b58d-650694487fd3\",\n      \"name\": \"If\"\n    },\n    {\n      \"parameters\": {\n        \"project\": {\n          \"__rl\": true,\n          \"mode\": \"list\",\n          \"value\": \"\"\n        },\n        \"issueType\": {\n          \"__rl\": true,\n          \"mode\": \"list\",\n          \"value\": \"\"\n        },\n        \"additionalFields\": {}\n      },\n      \"type\": \"n8n-nodes-base.jira\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3632,\n        -368\n      ],\n      \"id\": \"cc725e3a-556c-4f5f-a1b1-3ecf485883e7\",\n      \"name\": \"Create task\"\n    },\n    {\n      \"parameters\": {\n        \"method\": \"POST\",\n        \"url\": \"https://queue.fal.run/fal-ai/imagen4/preview\",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization \",\n              \"value\": \"Key N/A\"\n            },\n            {\n              \"name\": \"Content-Type\",\n              \"value\": \"application/json\"\n            }\n          ]\n        },\n        \"sendBody\": true,\n        \"specifyBody\": \"json\",\n        \"jsonBody\": \"={\\n  \\\"prompt\\\":  JSON.stringify($('Telegram Trigger').item.json.message.text)\\n}\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3312,\n        -352\n      ],\n      \"id\": \"3a5034d7-5ee7-4673-9e65-61911f0403f9\",\n      \"name\": \"IMAGE GENERATE\"\n    },\n    {\n      \"parameters\": {\n        \"method\": \"POST\",\n        \"url\": \"https://queue.fal.run/fal-ai/hunyuan3d-v21\",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization\",\n              \"value\": \"Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e\"\n            },\n            {\n              \"name\": \"Content-Type\",\n              \"value\": \"application/json\"\n            }\n          ]\n        },\n        \"sendBody\": true,\n        \"specifyBody\": \"json\",\n        \"jsonBody\": \"={\\n  \\\"input_image_url\\\":  JSON.stringify($('Code6').item.json.file_path) \\n}\",\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3904,\n        -160\n      ],\n      \"id\": \"b60f24ae-f6de-4a60-9bd2-d77048f57bd2\",\n      \"name\": \"3D-Generation1\"\n    },\n    {\n      \"parameters\": {\n        \"url\": \"= $json.response_url \",\n        \"sendHeaders\": true,\n        \"headerParameters\": {\n          \"parameters\": [\n            {\n              \"name\": \"Authorization\",\n              \"value\": \"Key 3b5f507f-9b69-4311-934b-9373c38e9eca:7038e9e9e1ebd1fdec946f1ce4494c2e\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [\n        -3104,\n        -352\n      ],\n      \"id\": \"61ebcd9f-1ff3-4dde-b6ad-91eb5083381a\",\n      \"name\": \"GET IMAGE URL\"\n    },\n    {\n      \"parameters\": {\n        \"rules\": {\n          \"values\": [\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"leftValue\": \"= $json.status \",\n                    \"rightValue\": \"succeeded\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\"\n                    },\n                    \"id\": \"fe7f701f-bff9-422a-8b37-fb232d783a8c\"\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"succeeded\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"b707dd3a-073f-406a-aa38-7ca27d6703fd\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"failed\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"failed\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"88cd5155-794f-49be-a246-a705dbcf9809\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"planned\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"planned\"\n            },\n            {\n              \"conditions\": {\n                \"options\": {\n                  \"caseSensitive\": true,\n                  \"leftValue\": \"\",\n                  \"typeValidation\": \"strict\",\n                  \"version\": 2\n                },\n                \"conditions\": [\n                  {\n                    \"id\": \"64b99e8b-d95b-4bf4-9063-6d1768831098\",\n                    \"leftValue\": \"={{ $json.status }}\",\n                    \"rightValue\": \"being {{ $json.status }}\",\n                    \"operator\": {\n                      \"type\": \"string\",\n                      \"operation\": \"equals\",\n                      \"name\": \"filter.operator.equals\"\n                    }\n                  }\n                ],\n                \"combinator\": \"and\"\n              },\n              \"renameOutput\": true,\n              \"outputKey\": \"being processed\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.switch\",\n      \"typeVersion\": 3.2,\n      \"position\": [\n        -3632,\n        -160\n      ],\n      \"id\": \"92b46415-6b6b-4b91-a5eb-e41d4557f5ad\",\n      \"name\": \"Switch\"\n    },\n    {\n      \"parameters\": {\n        \"modelId\": {\n          \"__rl\": true,\n          \"value\": \"models/gemini-1.5-pro-latest\",\n          \"mode\": \"list\",\n          \"cachedResultName\": \"models/gemini-1.5-pro-latest\"\n        },\n        \"messages\": {\n          \"values\": [\n            {\n              \"content\": \"здесь промпт\"\n            }\n          ]\n        },\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.googleGemini\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3312,\n        -128\n      ],\n      \"id\": \"15158475-d08d-4d84-a2e9-6c96af9076ab\",\n      \"name\": \"Extract Tasks1\",\n      \"credentials\": {\n        \"googlePalmApi\": {\n          \"id\": \"kpb4KMG2LrUgiQZB\",\n          \"name\": \"Gemini\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"rule\": {\n          \"interval\": [\n            {\n              \"field\": \"minutes\"\n            }\n          ]\n        }\n      },\n      \"id\": \"6bfd5dda-96d4-449d-a3f5-6a196d3fc977\",\n      \"name\": \"Schedule Trigger\",\n      \"type\": \"n8n-nodes-base.scheduleTrigger\",\n      \"typeVersion\": 1.2,\n      \"position\": [\n        -3376,\n        112\n      ]\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"formatDate\",\n        \"date\": \"= $now \",\n        \"format\": \"DD.MM.YYYY HH:mm:ss\",\n        \"options\": {}\n      },\n      \"id\": \"64d18717-0f19-40c0-a3eb-519a520a9096\",\n      \"name\": \"Date & Time\",\n      \"type\": \"n8n-nodes-base.dateTime\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3168,\n        112\n      ]\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"append\",\n        \"documentId\": {\n          \"__rl\": true,\n          \"value\": \"1AwDAamKUciLIdSxzxNze-mgURCVqVLzxd3CdcjnrtKY\",\n          \"mode\": \"id\"\n        },\n        \"sheetName\": {\n          \"__rl\": true,\n          \"value\": \"gid=0\",\n          \"mode\": \"id\"\n        },\n        \"columns\": {\n          \"mappingMode\": \"defineBelow\",\n          \"value\": {\n            \"content\": \"= $json.content.parts[0].text \",\n            \"finishReason\": \"= $('Date & Time').item.json.formattedDate \"\n          },\n          \"matchingColumns\": [],\n          \"schema\": [\n            {\n              \"id\": \"content\",\n              \"displayName\": \"content\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": false\n            },\n            {\n              \"id\": \"finishReason\",\n              \"displayName\": \"finishReason\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": false\n            },\n            {\n              \"id\": \"avgLogprobs\",\n              \"displayName\": \"avgLogprobs\",\n              \"required\": false,\n              \"defaultMatch\": false,\n              \"display\": true,\n              \"type\": \"string\",\n              \"canBeUsedToMatch\": true,\n              \"removed\": true\n            }\n          ],\n          \"attemptToConvertTypes\": false,\n          \"convertFieldsToString\": false\n        },\n        \"options\": {}\n      },\n      \"id\": \"4f79212e-422c-4ad8-9f63-871bbd333112\",\n      \"name\": \"Google Sheets\",\n      \"type\": \"n8n-nodes-base.googleSheets\",\n      \"typeVersion\": 4.5,\n      \"position\": [\n        -2864,\n        -304\n      ],\n      \"credentials\": {\n        \"googleSheetsOAuth2Api\": {\n          \"id\": \"gngoNLFSKF2sQUSt\",\n          \"name\": \"N8NTelegram\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"operation\": \"appendOrUpdate\",\n        \"documentId\": {\n          \"__rl\": true,\n          \"value\": \"1AwDAamKUciLIdSxzxNze-mgURCVqVLzxd3CdcjnrtKY\",\n          \"mode\": \"id\"\n        },\n        \"sheetName\": {\n          \"__rl\": true,\n          \"value\": \"gid=0\",\n          \"mode\": \"id\"\n        },\n        \"columns\": {\n          \"mappingMode\": \"autoMapInputData\",\n          \"value\": \"= $json.values \",\n          \"matchingColumns\": [],\n          \"schema\": []\n        },\n        \"options\": {\n          \"cellFormat\": \"USER_ENTERED\"\n        }\n      },\n      \"id\": \"4ba1443c-463c-4e19-a8e8-2e17ddc99293\",\n      \"name\": \"Google Sheets1\",\n      \"type\": \"n8n-nodes-base.googleSheets\",\n      \"typeVersion\": 4.5,\n      \"position\": [\n        512,\n        288\n      ],\n      \"credentials\": {\n        \"googleSheetsOAuth2Api\": {\n          \"id\": \"gngoNLFSKF2sQUSt\",\n          \"name\": \"N8NTelegram\"\n        }\n      }\n    },\n    {\n      \"parameters\": {\n        \"jsCode\": \"const f = $('Extract Tasks1').item.json.content.parts[0].text;\\nreturn {f: f}\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [\n        -3008,\n        -128\n      ],\n      \"id\": \"8732e9f5-4eb5-4c22-a972-5b0accca59f5\",\n      \"name\": \"Code\"\n    },\n    {\n      \"parameters\": {\n        \"errorMessage\": \"=Ошибка получения документа ID  $json.document_id \"\n      },\n      \"type\": \"n8n-nodes-base.stopAndError\",\n      \"typeVersion\": 1,\n      \"position\": [\n        -3104,\n        -512\n      ],\n      \"id\": \"dd88d22c-38bc-4543-9314-862bb88c480c\",\n      \"name\": \"Logger2\"\n    },\n  ],\n  \"pinData\": {},\n  \"connections\": {\n    \"Telegram Trigger1\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Get a file\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Get a file\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Extract from File\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"OpenRouter Chat Model3\": {\n      \"ai_languageModel\": [\n        [\n          {\n            \"node\": \"AI Agent3\",\n            \"type\": \"ai_languageModel\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Simple Memory2\": {\n      \"ai_memory\": [\n        [\n          {\n            \"node\": \"AI Agent3\",\n            \"type\": \"ai_memory\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"IMAGE GENERATE\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"GET IMAGE URL\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Extract Tasks1\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Code\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Schedule Trigger\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Date & Time\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    },\n    \"Create task\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Merge\",\n            \"type\": \"main\",\n            \"index\": 1\n          }\n        ]\n      ]\n    },\n    \"Analyze video\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Merge\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    }\n  },\n  \"active\": false,\n  \"settings\": {\n    \"executionOrder\": \"v1\"\n  },\n  \"versionId\": \"ea1b248c-99bb-4b9f-be4c-9da2799acae2\",\n  \"meta\": {\n    \"templateCredsSetupCompleted\": true,\n    \"instanceId\": \"75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620\"\n  },\n  \"id\": \"ehJb0je5eDf5I8iL\",\n  \"tags\": [\n    {\n      \"name\": \"Module\",\n      \"id\": \"EVKWz9eWTvHGovop\",\n      \"createdAt\": \"2025-09-01T07:43:10.299Z\",\n      \"updatedAt\": \"2025-09-01T07:43:10.299Z\"\n    }\n  ]\n}\n\nПо этой ссылке доступна оффициальная документация, пользуйся ей при генерации: https://docs.n8n.io\n\nобходи узлы: merge, html стороной и заменяй их на другие! Можно с помощью узлов Code! Если ты обращаешься в Code к другим нодам делай это с помощью $node[\"node_name\"], также не забывай, что выход от узлов текстового json всегда будет с ```json``` и \\n.\nОписание BPMN в формате JSON:\n{{ JSON.stringify($('AI Agent3').item.json.output) }}"
       },
       "position": [
-        2000,
-        -896
+        368,
+        912
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -483,8 +1069,8 @@
           "name": "OpenRouter account"
         }
       },
-      "id": "ad64b25e-180e-4417-b35a-83e9ea78a97f",
-      "name": "OpenRouter Chat Model6",
+      "id": "2b55ed52-2418-4f39-af74-6bc717bbe49f",
+      "name": "OpenRouter Chat Model4",
       "parameters": {
         "model": "anthropic/claude-opus-4.1",
         "options": {
@@ -494,23 +1080,23 @@
         }
       },
       "position": [
-        1968,
-        -720
+        336,
+        1088
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1
     },
     {
-      "id": "e4e55e6f-f77d-4b4f-b072-e152f5bc4b80",
-      "name": "Simple Memory5",
+      "id": "ccdb4a26-f803-4937-bfe8-023e2244c089",
+      "name": "Simple Memory3",
       "parameters": {
         "contextWindowLength": 1,
         "sessionIdType": "customKey",
         "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
       },
       "position": [
-        2080,
-        -720
+        512,
+        1088
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
@@ -518,61 +1104,12 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "QJyS49SuB0K3pVNb",
-          "name": "Telegram account 3"
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
         }
       },
-      "id": "ef478c24-2435-4c3c-a02b-6d3dd8ba6301",
-      "name": "Get a file1",
-      "parameters": {
-        "additionalFields": {},
-        "fileId": "={{ $json.message.document.file_id }}",
-        "resource": "file"
-      },
-      "position": [
-        32,
-        -912
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
-    },
-    {
-      "id": "53f4c057-54b8-4d35-96e9-19a76bb3e5e1",
-      "name": "Extract from File1",
-      "parameters": {
-        "operation": "xml",
-        "options": {}
-      },
-      "position": [
-        240,
-        -912
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1
-    },
-    {
-      "id": "48b23c9a-767a-4e4e-8671-4ee3f6fc595e",
-      "name": "Code5",
-      "parameters": {
-        "jsCode": "return items.map(item => {\n  let raw = item.json.output;\n\n  if (!raw) {\n    return { json: {} };\n  }\n\n  // 1. Убираем ```json и ```\n  raw = raw.replace(/^```json\\s*/, '').replace(/\\s*```$/, '');\n\n  let data;\n  try {\n    // 2. Парсим JSON из строки\n    data = JSON.parse(raw);\n  } catch (error) {\n    throw new Error('Ошибка парсинга JSON: ' + error.message + '\\nСтрока: ' + raw.slice(0, 200));\n  }\n\n  // 3. Форматируем и создаём бинарник\n  const jsonString = JSON.stringify(data, null, 2);\n  const binaryData = Buffer.from(jsonString, 'utf8');\n\n  return {\n    json: {}, // json можно оставить пустым\n    binary: {\n      data: {\n        data: binaryData.toString('base64'),\n        mimeType: 'application/json',\n        fileName: 'workflow.json',\n      }\n    }\n  };\n});\n"
-      },
-      "position": [
-        2320,
-        -896
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "QJyS49SuB0K3pVNb",
-          "name": "Telegram account 3"
-        }
-      },
-      "id": "d191a0f1-2d5e-4778-a898-76d947602267",
-      "name": "Send a document1",
+      "id": "d001f171-0e66-4271-8f50-6a916f8ab5a7",
+      "name": "Send a document",
       "parameters": {
         "additionalFields": {},
         "binaryData": true,
@@ -580,75 +1117,566 @@
         "operation": "sendDocument"
       },
       "position": [
-        2512,
-        -896
+        880,
+        912
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "d5d8b6e2-59e5-469d-9ff6-ade9ba47deaa"
     },
     {
-      "id": "35b9cd54-6bce-4d93-a339-d48bbb8b6724",
-      "name": "AI Agent",
+      "id": "75b5857b-b52f-4f56-9aeb-49db5a050cb2",
+      "name": "Set",
       "parameters": {
-        "options": {
-          "systemMessage": "=Действуй как senior N8N разработчик с 10 летним опытом разработки workflow.\nТы работаешь как помощник по интеграции BPMN в n8n. \nТвоя задача — проанализировать предоставленную диаграмму BPMN и определить, какие ноды нужно создать в n8n. \n\n⚠️ ВАЖНО:\n- Не генерируй финальный workflow JSON.\n- Верни только список нод.\n- Для каждой ноды укажи:\n  1. Название задачи из BPMN (\"bpmn_task_name\").\n  2. Соответствующий тип ноды в n8n (\"n8n_node_type\"). Только если можно заменить ноду легким блоком кода, то заменяй на код, то есть там, где необходимо выполнить операция конкатенации, слияния и тп делай с помощью кода, так будет лучше, если ты полностью не уверен, как используется та или иная нода, но не используй код везде!\n  3. Список параметров, по типу api, credentials, уточненные у пользователя для определенных нод. Если пользователь решил не давать какие то данные по этому параметру, то вводи N/A, то есть везде, где требовались credentials, api, ссылки, не получен ответ, то нужно брать N/A.\n 4. Связи с другими соседними узлами! Внимание, необходимо прописывать только про соседние узлы, которые напрямую связаны с нынешним!\n\nФормат ответа строго JSON.\n"
-        },
-        "promptType": "define",
-        "text": "={{ $json.output }}\n\nПример ответа: Пример:\n{\n  \"nodes_to_create\": [\n    {\n      \"bpmn_task_name\": \"Записать в Google Sheet\",\n      \"n8n_node_type\": \"n8n-nodes-base.googleSheets\",\n      \"info_needed\": [\"Sheet ID\", \"Cell Range\", \"Authentication\"]\n      \"connections\": {\n        \"bef_connections\": [связи с соседними прошлыми узлами],\n        \"aft_connections\": [связи со следующими узлами]\n      }\n    }\n  ]\n}\n\nПо этой ссылке доступна оффициальная документация, пользуйся ей при генерации: https://docs.n8n.io\nXML JSON в виде BPMN:\n{{ JSON.stringify($('XML').item.json.mxfile) }}"
+        "keepOnlySet": true,
+        "options": {},
+        "values": {
+          "string": [
+            {
+              "name": "xml",
+              "value": "={{ $json.data }}"
+            }
+          ]
+        }
       },
       "position": [
-        1600,
-        -496
+        -1232,
+        944
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1
+    },
+    {
+      "id": "4f8293b0-1ff1-431a-9609-d8f29bf69bf9",
+      "name": "AI Agent1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Ты senior n8n-разработчик. Тебе дан BPMN (в JSON) и контекст диалога. Твоя задача: определить, достаточно ли данных для генерации n8n workflow.\nВерни СТРОГО JSON:\n{\n  \"need_more_information\": boolean,\n  \"questions\": string[],\n  \"analysis\": string\n}\nПравила:\n- Если данных достаточно, need_more_information=false и questions=[]\n- Без Markdown, без ```"
+        },
+        "promptType": "define",
+        "text": "=Пример вывода:\n\nИмя задачи в BPMN: \"Записать в Google Sheet\",\nВопросы по задаче в BPMN: Какие данные необходимо записать в Google Sheet, укажите Sheet ID, какой диапазон ячеек использовать?, выберите метод аутентификации\n\nВот XML в виде JSON файл, который необходимо проанализировать:{{ JSON.stringify($('XML1').item.json.mxfile) }}\nОтветы на прошлые вопросы, если есть\n{{ $json.extra_info }}\nЕсли у тебя нет вопросов по нодам, то не надо их задавать, выводи только те ноды в которых есть вопросы!"
+      },
+      "position": [
+        -720,
+        944
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
     },
     {
       "credentials": {
-        "httpHeaderAuth": {
-          "id": "9o52VSQAvN1ZZjpi",
-          "name": "Header Auth account"
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
         }
       },
-      "id": "c545324f-7730-4f0c-875b-26566713635d",
-      "name": "MCP Client",
+      "id": "68b6d13a-11a4-4335-a673-059459b9f483",
+      "name": "OpenRouter Chat Model1",
       "parameters": {
-        "authentication": "headerAuth",
-        "endpointUrl": "https://academicpixflow.app.n8n.cloud/",
-        "include": "selected"
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "text",
+          "temperature": 0,
+          "topP": 1
+        }
       },
       "position": [
-        1744,
-        -304
+        -816,
+        1136
       ],
-      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
-      "typeVersion": 1.1
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
     },
     {
       "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
         }
       },
-      "id": "73231ea3-0897-4e98-91a2-22c66485e70b",
-      "name": "Anthropic Chat Model",
+      "id": "d3b5f7fc-1ce2-41e1-aa1e-db6c56400559",
+      "name": "Get a file1",
       "parameters": {
-        "model": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        -1584,
+        944
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
+    },
+    {
+      "id": "2a9eb009-ec1d-426f-912d-57ce8de4d037",
+      "name": "Extract from File1",
+      "parameters": {
+        "operation": "xml",
+        "options": {}
+      },
+      "position": [
+        -1376,
+        944
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "08ac0602-cbca-497e-a0d9-59cd50cdc762",
+      "name": "Code3",
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  let raw = item.json.output;\n\n  if (!raw) {\n    return { json: {} };\n  }\n\n  // 1. Убираем ```json и ```\n  raw = raw.replace(/^```json\\s*/, '').replace(/\\s*```$/, '');\n\n  let data;\n  try {\n    // 2. Парсим JSON из строки\n    data = JSON.parse(raw);\n  } catch (error) {\n    throw new Error('Ошибка парсинга JSON: ' + error.message + '\\nСтрока: ' + raw.slice(0, 200));\n  }\n\n  // 3. Форматируем и создаём бинарник\n  const jsonString = JSON.stringify(data, null, 2);\n  const binaryData = Buffer.from(jsonString, 'utf8');\n\n  return {\n    json: {}, // json можно оставить пустым\n    binary: {\n      data: {\n        data: binaryData.toString('base64'),\n        mimeType: 'application/json',\n        fileName: 'workflow.json',\n      }\n    }\n  };\n});\n"
+      },
+      "position": [
+        688,
+        912
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "48656a73-b97a-4950-b29e-a4f8861e5812",
+      "name": "XML1",
+      "parameters": {
+        "dataPropertyName": "=xml",
+        "options": {
+          "attrkey": "$",
+          "explicitRoot": true,
+          "mergeAttrs": false
+        }
+      },
+      "position": [
+        -1088,
+        944
+      ],
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "f82e5985-e864-4251-b6ac-a5305d077183",
+      "name": "OpenRouter Chat Model5",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "json_object",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        -304,
+        2144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "3b3adacb-2cbe-4fa3-a738-dbf2c16b3df1",
+      "name": "Бизнес-Анализ",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=**Роль:** Ты — ведущий архитектор систем автоматизации на базе n8n и AI-агентов. Твоя задача — проанализировать **любую** входящую BPMN-диаграмму процесса и на её основе создать исчерпывающее техническое задание (ТЗ) для сборки workflow в n8n.\n\n**Конечная цель:** ТЗ должно быть настолько детализированным и четким, чтобы его мог использовать другой AI-агент (Gemini) или разработчик для точной и безошибочной реализации всего автоматизированного процесса в n8n.\n\n---\n\n### **Структура выходных данных (Строго её придерживайся):**\n\nСгенерируй ответ на русском языке, содержащий следующие разделы:\n\n**1. Общее описание процесса:**\n*   Кратко опиши бизнес-цель и суть процесса, изображенного на диаграмме.\n*   Перечисли всех участников (системы, люди, боты).\n\n**2. Декомпозиция диаграммы:**\n*   Выдели и перечисли все узлы (ноды) из диаграммы, классифицируя их по типам:\n    *   **Стартовые события (Triggers):** Что инициирует процесс? (e.g., Webhook, Telegram message, Schedule).\n    *   **Конечные события (End Events):** Чем завершается процесс?\n    *   **Действия (Tasks/Activities):** Какие основные операции выполняются?\n    *   **Шлюзы (Gateways):** Где процесс ветвится? Какие условия ветвления (логические вопросы)?\n    *   **Промежуточные события:** Есть ли ожидания, таймеры, обработка ошибок?\n\n**3. Детальное техническое задание для n8n и AI-агентов:**\nЭто ядро ТЗ. Опиши каждый узел диаграммы как отдельную задачу для n8n. Для *каждого* узла укажи:\n\n*   **3.X. [Название узла из диаграммы]**\n    *   **Тип ноды в n8n:** Предложи конкретную ноду для реализации (например, `n8n-nodes-base.httpRequest`, `n8n-nodes-base.if`, `n8n-nodes-base.telegram`).\n    *   **Назначение и логика:** Детальное описание того, что должна делать эта нода. Какие данные получает, что с ними делает, какой результат ожидается.\n    *   **Интеграция с AI-агентом (Gemini):**\n        *   **Триггер для AI:** При каких условиях и с какими данными нода n8n должна вызывать AI-агент (Gemini)? (Пример: \"Нода `HTTP Request` отправляет промпт и текст брифа на endpoint API Gemini\").\n        *   **Промпт для AI:** Какой *конкретный промпт* или задача должна быть передана AI-агенту для обработки на этом шаге? (Пример: \"Проанализируй следующий текст брифа и верни JSON с полями: `is_correct: boolean` и `feedback: string`\").\n        *   **Обработка ответа AI:** Как нода n8n должна обработать и использовать ответ, полученный от Gemini? (Пример: \"Сохрани ответ в `$json.geminiResponse` для использования в следующих нодах\").\n    *   **Входные данные (Input):** Какие данные эта нода ожидает получить от предыдущих нод (укажи путь в JSON, например, `{{ $json.message.text }}`).\n    *   **Выходные данные (Output):** Что эта нода должна передать следующим нодам.\n    *   **Связи:** Какие ноды являются предыдущими и последующими для данной? Укажи условия перехода, если они есть (например, \"Если `$json.geminiResponse.is_correct == true`, перейти к ноде [X], иначе к ноде [Y]\").\n\n**4. Схема данных workflow:**\n*   Опиши структуру JSON-объекта, который будет передаваться между нодами.\n*   Укажи, какие ключи и данные должны в нем сохраняться на каждом этапе (например, `chatId`, `rawBrief`, `geminiAnalysis`, `finalDiagramUrl`).\n\n**5. Обработка ошибок и исключений:**\n*   На каких этапах возможны сбои (API недоступен, AI вернул некорректный ответ, данные невалидны)?\n*   Для каждого потенциального сбоя предложи механизм обработки (например, ветка с нодой `n8n-nodes-base.errorTrigger`, отправка уведомления в Telegram на повторную обработку, логирование).\n\n**6. Рекомендации по реализации:**\n*   Общие советы по настройке n8n (например, использование Credentials для API-ключей).\n*   Предположи, какие данные нужно сохранять между запусками (сессии, кэш) и предложи ноды для этого (например, `n8n-nodes-base.set` или интеграция с БД).\n\n---\n\n### **Критически важные условия:**\n\n1.  **Универсальность:** Ты должен быть готов проанализировать *любую* переданную тебе BPMN-диаграмму, а не только пример из этого промпта.\n2.  **Детализация:** ТЗ должно быть максимально детализированным. Предположи, что по нему будет работать AI, не имеющий контекста. Избегай общих фраз.\n3.  **AI-центричность:** Все узлы обработки данных, принятия решений, анализа контента и трансформации должны быть реализованы через вызов AI-агента (Gemini). Твое ТЗ должно явно указывать: КОГДА вызывать AI, С КАКИМ ПРОМПТОМ и КАК обработать ответ.\n4.  **Ясность связей:** Описание связей между процессами (нодами) должно быть предельно четким, чтобы можно было однозначно воспроизвести поток данных и логику ветвления.\n\n**Входные данные:**\nПользователь предоставит тебе BPMN-диаграмму в формате XML (как из примера) или ее описание. Проанализируй её и составь ТЗ согласно инструкции выше.\n\nНачни свой ответ с фразы: \"Проанализировав предоставленную BPMN-диаграмму, я подготовил следующее техническое задание для реализации процесса в n8n с использованием AI-агентов:\""
+        },
+        "promptType": "define",
+        "text": "=Анализируй BPMN и сформируй ТЗ для создания автоматизации N8N\nКонтекст:\n"
+      },
+      "position": [
+        -976,
+        1984
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "FofIikxEJXWIzTm1",
+          "name": "Supabase account 2"
+        }
+      },
+      "id": "7b6ed76e-a6c1-4665-b919-2b0283288689",
+      "name": "Create a row",
+      "parameters": {
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "content",
+              "fieldValue": "={{ $json['Описание бота'] }}"
+            }
+          ]
+        },
+        "tableId": "documents"
+      },
+      "position": [
+        -1120,
+        2544
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "7ba3d108-6fa1-4cd5-acfb-cbc91704037c",
+      "name": "Get row(s) in sheet",
+      "parameters": {
+        "documentId": {
           "__rl": true,
-          "cachedResultName": "Claude 4 Sonnet",
+          "cachedResultName": "Каталог_автоматизаций_n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit?usp=drivesdk",
           "mode": "list",
-          "value": "claude-sonnet-4-20250514"
+          "value": "1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Все n8n цепочки",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit#gid=1639281281",
+          "mode": "list",
+          "value": 1639281281
+        }
+      },
+      "position": [
+        -1680,
+        2544
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "7600655f-d51f-4f1a-b57c-b56b308378e6",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f85cc72b-4f00-4412-a5dd-b452fbb644fb",
+              "name": "Описание бота",
+              "type": "string",
+              "value": "={{ $json['Описание бота'] }}"
+            },
+            {
+              "id": "a0ae3e82-6873-4ec1-8e8f-c386b6594f79",
+              "name": "Статус",
+              "type": "string",
+              "value": "={{ $json['\tСтатус'] }}"
+            },
+            {
+              "id": "91d0e31a-44da-4988-9d65-47f325fd5ab8",
+              "name": "Workflow (n8n)",
+              "type": "string",
+              "value": "={{ $json['Workflow (n8n)'] }}"
+            }
+          ]
         },
         "options": {}
       },
       "position": [
-        1600,
-        -320
+        -1504,
+        2544
       ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "eda24614-6e28-44f7-91ab-7e28ee2a6a91",
+      "name": "Filter",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9168f1bc-416f-47ef-be48-67020ccdb82f",
+              "leftValue": "={{ $json['Статус'] }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Завершён"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -1312,
+        2544
+      ],
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "FofIikxEJXWIzTm1",
+          "name": "Supabase account 2"
+        }
+      },
+      "id": "b53b108c-8a23-475d-b675-bef405d5ae73",
+      "name": "Supabase Vector Store",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {
+          "queryName": "match_documents"
+        },
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "n8n_projects",
+          "mode": "list",
+          "value": "n8n_projects"
+        },
+        "toolDescription": "Здесь перечислены готовые проекты, обращайся чтобы узнать список используемых нод, а так же их параметры"
+      },
+      "position": [
+        -144,
+        2208
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
       "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "af200756-2ecd-4191-a62c-09f35000d745",
+      "name": "Embeddings OpenAI",
+      "parameters": {
+        "options": {
+          "dimensions": 1536
+        }
+      },
+      "position": [
+        -144,
+        2368
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "f088b609-b7d6-43f7-a6e4-904ff00482b9",
+      "name": "Генерация нод",
+      "parameters": {
+        "options": {
+          "systemMessage": "=Ты - эксперт по созданию n8n workflow. Твоя задача - генерировать валидный JSON с нодами на основе пользовательского запроса и данных из RAG базы.\n\nПРАВИЛА ГЕНЕРАЦИИ:\n1. ВСЕГДА возвращай ТОЛЬКО валидный JSON без дополнительного текста\n2. Каждая нода должна иметь обязательные поля: id, name, type, typeVersion, position, parameters\n3. Используй корректные типы нод из n8n\n4. Позиции нод: первая нода [240, 300], каждая следующая +220 по X\n5. ID нод: уникальные строки (например: node-1, node-2)\n6. typeVersion: используй актуальные версии\n7. ВСЕГДА используй Google Gemini в качестве AI агента\n8. ОБЯЗАТЕЛЬНО подставляй credentials из RAG базы в соответствующие ноды\n\nФОРМАТ ОТВЕТА:\n{\n  \"nodes\": [\n    {\n      \"id\": \"node-1\",\n      \"name\": \"Node Name\",\n      \"type\": \"n8n-nodes-base.nodeType\",\n      \"typeVersion\": 1,\n      \"position\": [240, 300],\n      \"parameters\": {},\n      \"credentials\": {\n        \"credentialType\": {\n          \"id\": \"credential-id-from-rag\",\n          \"name\": \"Credential Name from RAG\"\n        }\n      }\n    }\n  ]\n}\n\nПРАВИЛА ДЛЯ CREDENTIALS:\n- Если в RAG данных есть поле \"credentials\" или \"credential_id\" - используй его\n- Если в RAG есть примеры workflow с credentials - копируй их структуру\n- Для каждого типа ноды используй соответствующий тип credential:\n  * telegramApi для Telegram нод\n  * googleSheetsOAuth2Api для Google Sheets\n  * openAiApi для OpenAI нод\n  * googleGeminiApi для Google Gemini нод\n  * slackOAuth2Api для Slack нод\n  * supabaseApi для Supabase нод\n  * pineconeApi для Pinecone нод\n  * qdrantApi для Qdrant нод\n  * weaviateApi для Weaviate нод\n  * chromaApi для Chroma нод\n\nПОЛНЫЙ СПИСОК ТИПОВ НОД:\n\nТРИГГЕРЫ:\n- n8n-nodes-base.webhook (webhook trigger)\n- n8n-nodes-base.telegramTrigger (telegram trigger) - требует telegramApi\n- n8n-nodes-base.cron (расписание)\n- n8n-nodes-base.emailReadImap (чтение email) - требует imap\n- n8n-nodes-base.slackTrigger (slack trigger) - требует slackOAuth2Api\n- n8n-nodes-base.discordTrigger (discord trigger) - требует discordApi\n- n8n-nodes-base.microsoftTeamsTrigger (teams trigger) - требует microsoftTeamsOAuth2Api\n- n8n-nodes-base.googleDriveTrigger (google drive trigger) - требует googleDriveOAuth2Api\n- n8n-nodes-base.dropboxTrigger (dropbox trigger) - требует dropboxOAuth2Api\n- n8n-nodes-base.manualTrigger (ручной запуск)\n\nHTTP И API:\n- n8n-nodes-base.httpRequest (HTTP запросы)\n- n8n-nodes-base.request (входящие запросы)\n- n8n-nodes-base.respondToWebhook (ответ на webhook)\n\nСОЦИАЛЬНЫЕ СЕТИ:\n- n8n-nodes-base.telegram (telegram API) - требует telegramApi\n- n8n-nodes-base.slack (slack API) - требует slackOAuth2Api\n- n8n-nodes-base.discord (discord API) - требует discordApi\n- n8n-nodes-base.microsoftTeams (teams API) - требует microsoftTeamsOAuth2Api\n- n8n-nodes-base.twitter (twitter API) - требует twitterOAuth1Api\n- n8n-nodes-base.facebook (facebook API) - требует facebookGraphApi\n- n8n-nodes-base.instagram (instagram API) - требует instagramBasicDisplayApi\n- n8n-nodes-base.linkedIn (linkedin API) - требует linkedInOAuth2Api\n\nEMAIL:\n- n8n-nodes-base.emailSend (отправка email) - требует smtp\n- n8n-nodes-base.emailReadImap (чтение email) - требует imap\n- n8n-nodes-base.gmail (gmail API) - требует gmailOAuth2Api\n- n8n-nodes-base.outlook (outlook API) - требует microsoftOutlookOAuth2Api\n\nGOOGLE СЕРВИСЫ:\n- n8n-nodes-base.googleSheets (google sheets) - требует googleSheetsOAuth2Api\n- n8n-nodes-base.googleDrive (google drive) - требует googleDriveOAuth2Api\n- n8n-nodes-base.googleCalendar (google calendar) - требует googleCalendarOAuth2Api\n- n8n-nodes-base.googleDocs (google docs) - требует googleDocsOAuth2Api\n- n8n-nodes-base.googleForms (google forms) - требует googleFormsOAuth2Api\n- n8n-nodes-base.googleTasks (google tasks) - требует googleTasksOAuth2Api\n- n8n-nodes-base.googleTranslate (google translate) - требует googleTranslateOAuth2Api\n- n8n-nodes-base.googleVision (google vision) - требует googleVisionOAuth2Api\n\nMICROSOFT СЕРВИСЫ:\n- n8n-nodes-base.microsoftExcel (excel) - требует microsoftExcelOAuth2Api\n- n8n-nodes-base.microsoftOneDrive (oneDrive) - требует microsoftOneDriveOAuth2Api\n- n8n-nodes-base.microsoftOutlook (outlook) - требует microsoftOutlookOAuth2Api\n- n8n-nodes-base.microsoftSharePoint (sharepoint) - требует microsoftSharePointOAuth2Api\n\nБАЗЫ ДАННЫХ:\n- n8n-nodes-base.supabase (supabase) - требует supabaseApi\n- n8n-nodes-base.postgres (postgresql) - требует postgres\n- n8n-nodes-base.mysql (mysql) - требует mysql\n- n8n-nodes-base.mongoDb (mongodb) - требует mongoDb\n- n8n-nodes-base.redis (redis) - требует redis\n- n8n-nodes-base.sqlite (sqlite) - требует sqlite\n\nФАЙЛОВЫЕ СИСТЕМЫ:\n- n8n-nodes-base.dropbox (dropbox) - требует dropboxOAuth2Api\n- n8n-nodes-base.awsS3 (AWS S3) - требует aws\n- n8n-nodes-base.ftp (FTP) - требует ftp\n- n8n-nodes-base.sftp (SFTP) - требует sftp\n- n8n-nodes-base.localFileTrigger (локальные файлы)\n\nВЕКТОРНЫЕ БАЗЫ И AI:\n- n8n-nodes-base.pinecone (pinecone) - требует pineconeApi\n- n8n-nodes-base.qdrant (qdrant) - требует qdrantApi\n- n8n-nodes-base.weaviate (weaviate) - требует weaviateApi\n- n8n-nodes-base.chroma (chroma) - требует chromaApi\n- @n8n/n8n-nodes-langchain.embeddingsOpenAi (openai embeddings) - требует openAiApi\n- @n8n/n8n-nodes-langchain.embeddingsGoogleGemini (google gemini embeddings) - требует googleGeminiApi\n- @n8n/n8n-nodes-langchain.lmChatOpenAi (openai chat) - требует openAiApi\n- @n8n/n8n-nodes-langchain.lmChatGoogleGemini (google gemini chat) - требует googleGeminiApi\n- @n8n/n8n-nodes-langchain.vectorStorePinecone (pinecone vector store) - требует pineconeApi\n- @n8n/n8n-nodes-langchain.vectorStoreQdrant (qdrant vector store) - требует qdrantApi\n- @n8n/n8n-nodes-langchain.vectorStoreWeaviate (weaviate vector store) - требует weaviateApi\n- @n8n/n8n-nodes-langchain.vectorStoreChroma (chroma vector store) - требует chromaApi\n\nAI АГЕНТЫ (ОБЯЗАТЕЛЬНО ИСПОЛЬЗУЙ GOOGLE GEMINI):\n- @n8n/n8n-nodes-langchain.agent (AI агент)\n- @n8n/n8n-nodes-langchain.agentGoogleGemini (Google Gemini агент) - требует googleGeminiApi\n- @n8n/n8n-nodes-langchain.agentOpenAi (OpenAI агент) - требует openAiApi\n\nЛОГИКА И УСЛОВИЯ:\n- n8n-nodes-base.if (условия)\n- n8n-nodes-base.switch (переключатель)\n- n8n-nodes-base.merge (объединение)\n- n8n-nodes-base.splitInBatches (разделение на батчи)\n- n8n-nodes-base.wait (ожидание)\n- n8n-nodes-base.stopAndError (остановка с ошибкой)\n\nОБРАБОТКА ДАННЫХ:\n- n8n-nodes-base.function (JavaScript код)\n- n8n-nodes-base.code (код)\n- n8n-nodes-base.set (установка данных)\n- n8n-nodes-base.itemLists (работа со списками)\n- n8n-nodes-base.sort (сортировка)\n- n8n-nodes-base.limit (ограничение)\n- n8n-nodes-base.aggregate (агрегация)\n\nТЕКСТ И ДОКУМЕНТЫ:\n- @n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter (разделение текста)\n- @n8n/n8n-nodes-langchain.documentDefaultDataLoader (загрузка документов)\n- n8n-nodes-base.extractFromFile (извлечение из файла)\n- n8n-nodes-base.readPdfFile (чтение PDF)\n- n8n-nodes-base.readWordFile (чтение Word)\n- n8n-nodes-base.readExcelFile (чтение Excel)\n\nУВЕДОМЛЕНИЯ:\n- n8n-nodes-base.pushover (pushover) - требует pushoverApi\n- n8n-nodes-base.pushbullet (pushbullet) - требует pushbulletApi\n- n8n-nodes-base.webhook (webhook уведомления)\n\nПРИМЕРЫ ПАРАМЕТРОВ С CREDENTIALS:\n- Telegram: {\"operation\": \"sendMessage\", \"chatId\": \"{{ $json.chatId }}\", \"text\": \"{{ $json.message }}\"}\n- Google Sheets: {\"operation\": \"appendOrUpdate\", \"documentId\": \"{{ $json.spreadsheetId }}\", \"sheetName\": \"{{ $json.sheetName }}\"}\n- Google Gemini Agent: {\"model\": \"gemini-pro\", \"temperature\": 0.7}\n- Function: {\"functionCode\": \"return [{json: {result: 'success'}}];\"}\n\nВАЖНО: \n- Отвечай ТОЛЬКО JSON, без объяснений и дополнительного текста!\n- ВСЕГДА используй Google Gemini для AI агентов!\n- ОБЯЗАТЕЛЬНО подставляй credentials из RAG базы!\n- Если в RAG есть примеры workflow - копируй их структуру credentials!\n- Используй актуальные версии typeVersion для каждого типа ноды!"
+        },
+        "promptType": "define",
+        "text": "={{ $json.output }}\n\n**Формат выходных данных:**\n{\n  \"nodes\": [\n    {\n      \"id\": \"unique-node-id\",\n      \"name\": \"Custom Node Name\",\n      \"type\": \"n8n-nodes-base.httpRequest\",\n      \"typeVersion\": 4.2,\n      \"position\": [240, 300],\n      \"parameters\": {\n        \"method\": \"GET\",\n        \"url\": \"https://api.example.com\",\n        \"options\": {}\n      },\n      \"credentials\": {\n        \"credentialType\": {\n          \"id\": \"credential-id-from-rag\",\n          \"name\": \"Credential Name from RAG\"\n        }\n      },\n      \"webhookId\": \"\",\n      \"continueOnFail\": false,\n      \"alwaysOutputData\": false,\n      \"executeOnce\": false,\n      \"disabled\": false,\n      \"notes\": \"Node description\",\n      \"notesInFlow\": false\n    }\n  ]\n}\n\n**Важно:**\n- Возвращай ТОЛЬКО валидный JSON\n- Каждая нода должна иметь все обязательные поля\n- Используй корректные типы нод из n8n\n- Позиции: первая нода [240, 300], следующие +220 по X\n- ID должны быть уникальными\n- ВСЕГДА используй Google Gemini для AI агентов: @n8n/n8n-nodes-langchain.agentGoogleGemini\n- ОБЯЗАТЕЛЬНО подставляй credentials из RAG базы в соответствующие ноды\n- Если в RAG данных есть поле \"credentials\" или \"credential_id\" - используй его\n- Для каждого типа ноды используй соответствующий тип credential (telegramApi, googleSheetsOAuth2Api, openAiApi, googleGeminiApi, slackOAuth2Api, supabaseApi, pineconeApi, qdrantApi, weaviateApi, chromaApi)\n- Если в RAG есть примеры workflow с credentials - копируй их структуру"
+      },
+      "position": [
+        -208,
+        1984
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "FofIikxEJXWIzTm1",
+          "name": "Supabase account 2"
+        }
+      },
+      "id": "0044a581-573f-4fd3-a951-495baa9aebd4",
+      "name": "Supabase Vector Store1",
+      "parameters": {
+        "mode": "insert",
+        "options": {},
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "documents",
+          "mode": "list",
+          "value": "documents"
+        }
+      },
+      "position": [
+        -592,
+        2544
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "5ff2bdb4-6469-47e9-b215-a49758e96544",
+      "name": "Embeddings OpenAI1",
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {
+          "dimensions": 1536
+        }
+      },
+      "position": [
+        -672,
+        2736
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "7efe2cc4-f861-4d89-a1fd-a29b6d016413",
+      "name": "Default Data Loader",
+      "parameters": {
+        "options": {},
+        "textSplittingMode": "custom"
+      },
+      "position": [
+        -544,
+        2736
+      ],
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "FofIikxEJXWIzTm1",
+          "name": "Supabase account 2"
+        }
+      },
+      "id": "09363fd6-2887-472a-860d-a2693283c348",
+      "name": "Get many rows1",
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "documents"
+      },
+      "position": [
+        -864,
+        2544
+      ],
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1
+    },
+    {
+      "id": "114ffd2c-08b3-4ebc-9620-d2c0c56561cd",
+      "name": "Recursive Character Text Splitter1",
+      "parameters": {
+        "chunkOverlap": 125,
+        "chunkSize": 500,
+        "options": {}
+      },
+      "position": [
+        -544,
+        2896
+      ],
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "c3949e05-9ee3-4b09-8693-5e7b7bc38186",
+      "name": "OpenRouter Chat Model6",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {
+          "responseFormat": "text",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        -2208,
+        2704
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "FofIikxEJXWIzTm1",
+          "name": "Supabase account 2"
+        }
+      },
+      "id": "6bf964e4-7522-43b2-a02b-9acabedb6824",
+      "name": "Supabase Vector Store2",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {},
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "documents",
+          "mode": "list",
+          "value": "documents"
+        },
+        "toolDescription": "Здесь перечислены готовые проекты, обращайся чтобы узнать список используемых нод, а так же их параметры"
+      },
+      "position": [
+        -2048,
+        2768
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "10a69d0f-74a3-4836-9b2c-568e51592499",
+      "name": "Embeddings OpenAI2",
+      "parameters": {
+        "options": {
+          "dimensions": 1536
+        }
+      },
+      "position": [
+        -2048,
+        2928
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "413c8ce3-0040-4b5b-a7e4-aeb7d47896d4",
+      "name": "Генерация нод1",
+      "parameters": {
+        "options": {
+          "systemMessage": "=**Роль:** Ты — эксперт по автоматизации в n8n. Твоя задача — проанализировать техническое задание и преобразовать его в список нод для реализации workflow.\n\n**Входные данные:** Техническое задание, включающее:\n- Описание процесса и бизнес-логики\n- Требуемые интеграции с сервисами\n- Схему данных и передачи информации между компонентами\n\n**Требования к выходным данным:**\n- Строго валидный JSON\n- Только список нод без описания workflow\n- Для каждой ноды указать обязательные параметры\n- Указать связи между нодами через nextNodes\n"
+        },
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}\n\n**Формат выходных данных:**\n```json\n{\n  \"nodes\": [\n    {\n      \"id\": \"уникальный-id-ноды\",\n      \"name\": \"Описательное название ноды\",\n      \"type\": \"n8n-nodes-base.тип-ноды\",\n      \"parameters\": {\n        \"параметр1\": \"значение1\",\n        \"параметр2\": \"значение2\"\n      },\n      \"credentials\": {\n        \"need_credential\": true/false,\n        \"type\": \"тип-учетных-данных\"\n      },\n      \"apiConnection\": {\n        \"need_api\": true/false,\n        \"url\": \"api-endpoint\"\n      },\n      \"nextNodes\": [\"id-следующей-ноды-1\", \"id-следующей-ноды-2\"]\n    }\n  ]\n}\n"
+      },
+      "position": [
+        -2112,
+        2544
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
     }
   ],
   "pinData": {},
@@ -667,6 +1695,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-09-09T15:43:52.000Z",
-  "versionId": "590f74d5-591b-48dc-9086-8067711be17b"
+  "updatedAt": "2025-09-10T21:54:11.000Z",
+  "versionId": "7a067fbf-3bdf-41f0-8ab6-34de8a3904a0"
 }
