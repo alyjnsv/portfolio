@@ -1132,7 +1132,7 @@
             }
           ]
         },
-        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt.replace(/\\n/g, '') }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.url }}\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -1706,6 +1706,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-28T09:38:18.000Z",
-  "versionId": "9bff98e8-67ab-4e1e-9fe3-d136e8783352"
+  "updatedAt": "2025-09-10T07:31:13.000Z",
+  "versionId": "d515e7fc-05ef-449a-9cb1-5133abb4aeeb"
 }
