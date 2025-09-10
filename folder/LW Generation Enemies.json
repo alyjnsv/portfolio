@@ -1031,6 +1031,7 @@
       "id": "7fde0b1f-7346-4fe7-8a94-bd7d27084f30",
       "name": "Google Gemini Chat Model1",
       "parameters": {
+        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1050,6 +1051,7 @@
       "id": "d620f8e5-ad9b-40a6-85b0-4f150c657689",
       "name": "Google Gemini Chat Model",
       "parameters": {
+        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1109,7 +1111,7 @@
       "id": "14dca930-1eae-446a-aa9c-2073270b40b2",
       "name": "Formatted Date",
       "parameters": {
-        "jsCode": "// Код для форматирования даты и времени в российском формате для n8n\n// Входная дата: 2025-08-04T15:56:12.178+03:00\n\nconst date = new Date($input.first().json.currentDate);\n\n// Форматирование даты (ДД.ММ.ГГГГ)\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0');\nconst year = date.getFullYear();\n\n// Форматирование времени (ЧЧ:ММ:СС)\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\n// Возвращаем различные форматы\nreturn [{\n  formattedDate: `${day}.${month}.${year}`,\n  formattedTime: `${hours}:${minutes}:${seconds}`,\n  formattedDateTime: `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`,\n  formattedDateTimeShort: `${day}.${month}.${year} ${hours}:${minutes}`\n}];\n\n// Альтернативный вариант с использованием toLocaleString для российской локали:\n/*\nconst date = new Date($input.first().json.currentDate);\n\nreturn [{\n  formattedDate: date.toLocaleDateString('ru-RU'),\n  formattedTime: date.toLocaleTimeString('ru-RU'),\n  formattedDateTime: date.toLocaleString('ru-RU'),\n  formattedDateTimeCustom: date.toLocaleString('ru-RU', {\n    day: '2-digit',\n    month: '2-digit',\n    year: 'numeric',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n  })\n}];\n*/"
+        "jsCode": "// Получаем исходную строку даты\nconst originalDateString = $input.first().json.currentDate;\n\n// Отсекаем информацию о часовом поясе и миллисекундах (берем первые 19 символов)\n// Это заставляет new Date() интерпретировать время \"как есть\", без конвертации\nconst localDateTimeString = originalDateString.substring(0, 19);\n\n// Создаем объект Date из строки без часового пояса\nconst date = new Date(localDateTimeString);\n\n// --- Дальнейший код остается без изменений ---\n\n// Форматирование даты (ДД.ММ.ГГГГ)\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0');\nconst year = date.getFullYear();\n\n// Форматирование времени (ЧЧ:ММ:СС)\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\n// Возвращаем различные форматы\nreturn [{\n  formattedDate: `${day}.${month}.${year}`,\n  formattedTime: `${hours}:${minutes}:${seconds}`,\n  formattedDateTime: `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`,\n  formattedDateTimeShort: `${day}.${month}.${year} ${hours}:${minutes}`\n}];"
       },
       "position": [
         -2624,
@@ -1782,7 +1784,6 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "disabled": true,
       "executeOnce": true,
       "id": "7106a77e-2f6a-479b-b363-09ad370345e0",
       "maxTries": 5,
@@ -1830,7 +1831,6 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "disabled": true,
       "executeOnce": true,
       "id": "fa5a313e-0f12-4f1d-89cf-ec7648c77e4f",
       "maxTries": 5,
@@ -1878,7 +1878,6 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "disabled": true,
       "executeOnce": true,
       "id": "ef264cf0-f91c-4d92-9e85-3ccd527504d5",
       "maxTries": 5,
@@ -1955,6 +1954,7 @@
       "id": "a1176f13-5eb1-41bc-aba1-d10def9f3f56",
       "name": "Google Gemini Chat Model2",
       "parameters": {
+        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -1974,6 +1974,7 @@
       "id": "e57ba95f-cade-4ec9-baf8-66db4b6cca6c",
       "name": "Google Gemini Chat Model3",
       "parameters": {
+        "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
@@ -2636,7 +2637,6 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "disabled": true,
       "executeOnce": true,
       "id": "1bf3472f-780f-4626-9bfc-334f7bc49196",
       "maxTries": 5,
@@ -2767,6 +2767,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-09-09T13:55:41.000Z",
-  "versionId": "6ce4a5cd-5e4f-42e8-84b2-1ab0efb7aba0"
+  "updatedAt": "2025-09-10T08:02:35.000Z",
+  "versionId": "2bc97012-5982-42d3-a5a5-04ae0ec497f7"
 }
