@@ -1461,6 +1461,13 @@
             "node": "Get row(s) in sheet",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Жанры",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1696,6 +1703,7 @@
       "typeVersion": 4.2
     },
     {
+      "disabled": true,
       "id": "820a3024-b9de-426f-9fc0-df77416adb3e",
       "name": "Chat Memory Manager",
       "parameters": {
@@ -1777,6 +1785,7 @@
       "typeVersion": 1.2
     },
     {
+      "disabled": true,
       "id": "a533d433-5b90-4126-9fdf-5f4f04ef1ea7",
       "name": "Simple Memory",
       "parameters": {
@@ -1813,6 +1822,7 @@
     {
       "id": "ef2b8997-5b89-4dcf-8f13-33b12e559b1d",
       "name": "Жанры",
+      "onError": "continueErrorOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
@@ -4677,17 +4687,17 @@
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "28",
-          "Day of week": "Thursday",
+          "Day of month": "10",
+          "Day of week": "Wednesday",
           "Hour": "17",
           "Minute": "00",
-          "Month": "August",
-          "Readable date": "August 28th 2025, 5:00:00 pm",
+          "Month": "September",
+          "Readable date": "September 10th 2025, 5:00:00 pm",
           "Readable time": "5:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-08-28T17:00:00.013+02:00"
+          "timestamp": "2025-09-10T17:00:00.006+02:00"
         }
       }
     ]
@@ -4723,6 +4733,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T13:48:57.000Z",
-  "versionId": "29d640a0-2d5c-4958-aab3-aa4746d8bcda"
+  "updatedAt": "2025-09-10T16:47:49.000Z",
+  "versionId": "1112459a-c929-48a6-af8a-891a4a6067d6"
 }
