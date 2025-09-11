@@ -561,13 +561,13 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $('Edit Fields1').item.json.idea }}\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Edit Fields').item.json.text }}\",\n  \"num_images\": 1,\n  \"enable_safety_checker\": true\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
         "sendHeaders": true,
         "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/nano-banana"
+        "url": "https://queue.fal.run/fal-ai/bytedance/seedream/v4/text-to-image"
       },
       "position": [
         2240,
@@ -606,7 +606,7 @@
         },
         "options": {},
         "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request').item.json.request_id }}"
+        "url": "=https://queue.fal.run/fal-ai/bytedance/requests/{{ $('HTTP Request').item.json.request_id }}"
       },
       "position": [
         3024,
@@ -1144,13 +1144,13 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $('Telegram Trigger').item.json.message.caption }}\",\n  \"image_urls\": [\n       \"{{ $json.url }}\"\n     ]\n   }",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Telegram Trigger').item.json.message.caption }}\",\n  \"num_images\": 1,\n  \"enable_safety_checker\": true,\n  \"image_urls\": [\n\"{{ $json.url }}\"\n  ]\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
         "sendHeaders": true,
         "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/nano-banana/edit"
+        "url": "https://queue.fal.run/fal-ai/bytedance/seedream/v4/edit"
       },
       "position": [
         2240,
@@ -1189,7 +1189,7 @@
         },
         "options": {},
         "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request3').item.json.request_id }}"
+        "url": "=https://queue.fal.run/fal-ai/bytedance/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
         3024,
@@ -1472,7 +1472,66 @@
       "typeVersion": 4.2
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Telegram Trigger": [
+      {
+        "json": {
+          "message": {
+            "caption": "дом 2",
+            "chat": {
+              "first_name": "Vlad",
+              "id": 751365965,
+              "last_name": "Shmitd",
+              "type": "private",
+              "username": "BGWilly"
+            },
+            "date": 1757590938,
+            "from": {
+              "first_name": "Vlad",
+              "id": 751365965,
+              "is_bot": false,
+              "is_premium": true,
+              "language_code": "en",
+              "last_name": "Shmitd",
+              "username": "BGWilly"
+            },
+            "message_id": 6336,
+            "photo": [
+              {
+                "file_id": "AgACAgIAAxkBAAIYumjCtMfgNaHzIufJ94f8ffPdeUEJAAI0_jEbyxMRSn3A-INoDEc5AQADAgADcwADNgQ",
+                "file_size": 2015,
+                "file_unique_id": "AQADNP4xG8sTEUp4",
+                "height": 90,
+                "width": 90
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIYumjCtMfgNaHzIufJ94f8ffPdeUEJAAI0_jEbyxMRSn3A-INoDEc5AQADAgADbQADNgQ",
+                "file_size": 34071,
+                "file_unique_id": "AQADNP4xG8sTEUpy",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIYumjCtMfgNaHzIufJ94f8ffPdeUEJAAI0_jEbyxMRSn3A-INoDEc5AQADAgADeAADNgQ",
+                "file_size": 161310,
+                "file_unique_id": "AQADNP4xG8sTEUp9",
+                "height": 800,
+                "width": 800
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIYumjCtMfgNaHzIufJ94f8ffPdeUEJAAI0_jEbyxMRSn3A-INoDEc5AQADAgADeQADNgQ",
+                "file_size": 219714,
+                "file_unique_id": "AQADNP4xG8sTEUp-",
+                "height": 1024,
+                "width": 1024
+              }
+            ]
+          },
+          "update_id": 775021864
+        }
+      }
+    ]
+  },
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "errorWorkflow": "3mM0jvFQycOqYesd",
@@ -1490,6 +1549,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-10T22:00:01.079Z",
-  "versionId": "bbc1b5fc-a7d7-44e6-8f6b-71528304ae57"
+  "updatedAt": "2025-09-11T22:00:01.047Z",
+  "versionId": "2b20c5fc-7c87-4c34-a607-cffc029d27fc"
 }
