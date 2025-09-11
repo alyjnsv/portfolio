@@ -1,0 +1,839 @@
+{
+  "active": false,
+  "connections": {
+    "Parse Gemini JSON": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Отправка на согласование HRD",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Анализ, в каком гео публиковать вакансию и какую ставить вилку": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Gemini JSON",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Добавление ссылки на бота в таблицу . Ссылка": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Формирование отчета по вакансии с брифом гео , всеми ссылками",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Занесение вакансии в таблицу \"матрица с видами оплат\" ссылка": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Анализ, в каком гео публиковать вакансию и какую ставить вилку",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Заполнение брифа на поиск сотрудника": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка брифа на корректность заполнения",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Исправление вручную": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Размещение вакансии на hh.ru от имени компании",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Корректировка вакансии вручную и отправка ссылки боту": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Параллельный запуск задач",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Настройка включения функции авторазбора откликов на hh.ru": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Включение функции авторазбора откликов на hh.ru по вакансии",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Отправка на согласование HRD": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Согласование",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Параллельный запуск задач": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание промта для проверки собеседования кандидата",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Создание промта для проверки резюме кандидата ",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Настройка включения функции авторазбора откликов на hh.ru",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Получение заявки от руководителя другого отдела на вакансию": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка брифа на корректность заполнения",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка брифа на корректность заполнения": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "доп.вопросы",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка решения HRD": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Размещение вакансии на hh.ru от имени компании",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Исправление вручную",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка финального согласования": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Параллельный запуск задач",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Корректировка вакансии вручную и отправка ссылки боту",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Размещение вакансии на hh.ru от имени компании": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание вакансии на hh.ru в разделе softintermob LLC",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Слияние данных о ботах": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Добавление ссылки на бота в таблицу . Ссылка",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Согласование": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка решения HRD",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Согласование вакансии": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка финального согласования",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Согласовать обновленный бриф": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Заполнение брифа на поиск сотрудника",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание бота по проверке кандидата после собеседования": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Слияние данных о ботах",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание вакансии на hh.ru в разделе softintermob LLC": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Уведомление о публикации",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание промта для проверки резюме кандидата ": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание бота для проверки резюме по вакансии",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание промта для проверки собеседования кандидата": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание бота по проверке кандидата после собеседования",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Уведомление о публикации": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Согласование вакансии",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Формирование отчета по вакансии с брифом гео , всеми ссылками": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Отправка отчета",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "доп.вопросы": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Подготовка файла для диска",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Согласовать обновленный бриф",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-11T17:18:20.492Z",
+  "id": "xNe43Hnla7nvW6rS",
+  "isArchived": false,
+  "meta": null,
+  "name": "Результт",
+  "nodes": [
+    {
+      "id": "f2fe074c-4ffe-4442-9eb6-89811c800a6d",
+      "name": "Получение заявки от руководителя другого отдела на вакансию",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "a4b2c1d-hr-recruitment-start"
+      },
+      "position": [
+        -1664,
+        1024
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "webhookId": "0a3e8b32-4ad0-414b-97d1-5f4c549f21ee"
+    },
+    {
+      "id": "b8a4a6d7-7c45-44fe-8e47-b8e798e5944c",
+      "name": "Проверка брифа на корректность заполнения",
+      "parameters": {
+        "jsCode": "const brief = $json.body;\nconst requiredFields = ['position', 'department', 'responsibilities', 'requirements']; // Пример обязательных полей\nlet isValid = requiredFields.every(field => brief[field] && brief[field].trim() !== '');\n$json.isValid = isValid;\nreturn $json;"
+      },
+      "position": [
+        -1408,
+        1024
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ed15baee-71dd-46e0-af06-2cb206b5aa53",
+      "name": "доп.вопросы",
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.isValid}}"
+            }
+          ]
+        }
+      },
+      "position": [
+        -1168,
+        1024
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1
+    },
+    {
+      "id": "9a1b2857-a651-485e-a1ff-013ade07a71d",
+      "name": "Согласовать обновленный бриф",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "N/A",
+        "text": "=Бриф на вакансию '{{$json.position}}' не прошел автоматическую проверку. Пожалуйста, убедитесь, что все обязательные поля заполнены и отправьте заявку повторно."
+      },
+      "position": [
+        -912,
+        1216
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "034ec0ae-72da-43ce-b26d-cd024d98b94a"
+    },
+    {
+      "id": "9e198526-b894-4598-8ddd-0ffddaa1d3bf",
+      "name": "Заполнение брифа на поиск сотрудника",
+      "parameters": {},
+      "position": [
+        -656,
+        1216
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "webhookId": "ec5dce4f-051a-4a50-a39d-6eaabd7bcf23"
+    },
+    {
+      "id": "85312a6a-d033-45cf-b9b7-66cfcac6ac7e",
+      "name": "Подготовка файла для диска",
+      "parameters": {
+        "jsCode": "const data = $json;\nconst fileContent = `Вакансия: ${data.position}\\nОтдел: ${data.department}\\n\\nОбязанности:\\n${data.responsibilities}\\n\\nТребования:\\n${data.requirements}`;\n\nconst binaryData = Buffer.from(fileContent, 'utf8');\n\nreturn [\n  {\n    json: data,\n    binary: {\n      data: binaryData.toString('base64'),\n      fileName: `Вакансия - ${data.position}.txt`,\n      mimeType: 'text/plain'\n    }\n  }\n];"
+      },
+      "position": [
+        -912,
+        816
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {},
+      "id": "88f7ab2e-7a23-48e6-a492-fca841c3f993",
+      "name": "Создание вакансии на кор.диске",
+      "parameters": {},
+      "position": [
+        -656,
+        816
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "70965b60-a56c-4ea2-9882-1708ef06158f",
+      "name": "Занесение вакансии в таблицу \"матрица с видами оплат\" ссылка",
+      "parameters": {
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DriveLink": "={{$json.driveLink}}",
+            "Position": "={{$node['Подготовка файла для диска'].json.position}}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1wURHWiF59HP0ScP6_y2nM7WRAQskn4v0oHXn2N6cMHs"
+        },
+        "operation": "append",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "gid=1242964478"
+        }
+      },
+      "position": [
+        -416,
+        816
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5
+    },
+    {
+      "id": "df4d8ac6-93b6-4f62-a6d7-6802538a8d15",
+      "name": "Анализ, в каком гео публиковать вакансию и какую ставить вилку",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "You are an expert HR analyst. Analyze the provided vacancy description and return your analysis strictly in JSON format: {\"geo\": \"suggested city or remote\", \"salary_min\": 100000, \"salary_max\": 150000, \"reasoning\": \"Your brief explanation\"}.",
+              "role": "system"
+            },
+            {
+              "content": "=Проанализируй описание вакансии: {{JSON.stringify($json)}}. Определи подходящий GEO для поиска и предложи рыночную зарплатную вилку."
+            }
+          ]
+        },
+        "modelId": "gemini-1.5-pro-latest",
+        "options": {}
+      },
+      "position": [
+        -208,
+        816
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "bd2f2b6d-908e-43e6-b7f9-5c9e9137bf16",
+      "name": "Parse Gemini JSON",
+      "parameters": {
+        "jsCode": "const text = $json.content;\nconst cleanedText = text.replace(/```json\\n|\\n```/g, '');\nconst analysis = JSON.parse(cleanedText);\nreturn { ...$item.json, analysis };"
+      },
+      "position": [
+        80,
+        816
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "76c9f56c-2ec9-4f8a-93ce-cd37d28fd25a",
+      "name": "Отправка на согласование HRD",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "N/A",
+        "text": "=Вакансия '{{$json.position}}' проанализирована.\nРекомендуемое ГЕО: {{$json.analysis.geo}}\nРекомендуемая вилка: {{$json.analysis.salary_min}} - {{$json.analysis.salary_max}}\n\nПожалуйста, согласуйте или запросите корректировку."
+      },
+      "position": [
+        336,
+        816
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "674d8acd-82ad-4c2a-b15f-28080e4bb08c"
+    },
+    {
+      "id": "b7d63fa4-acf8-4e22-9a06-851788482938",
+      "name": "Согласование",
+      "parameters": {},
+      "position": [
+        592,
+        1024
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "webhookId": "b91ede68-ff59-4b78-a689-d099513c3f94"
+    },
+    {
+      "id": "fa93b5a6-409a-4aa5-8515-7a62db20975e",
+      "name": "Проверка решения HRD",
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.body.approved}}"
+            }
+          ]
+        }
+      },
+      "position": [
+        832,
+        1024
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1
+    },
+    {
+      "id": "10947cee-9826-472b-85a9-439b36065f00",
+      "name": "Исправление вручную",
+      "parameters": {},
+      "position": [
+        1088,
+        1216
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "webhookId": "77a0845e-8ac0-4d6a-9cdc-fb174ec58e3a"
+    },
+    {
+      "id": "a9d563db-e349-477f-bfed-9051368d9435",
+      "name": "Размещение вакансии на hh.ru от имени компании",
+      "parameters": {
+        "jsonBody": "={\n  \"name\": \"{{$json.position}}\",\n  \"area\": {\n    \"id\": \"1\" \n  },\n  \"salary\": {\n    \"from\": {{$json.analysis.salary_min}},\n    \"to\": {{$json.analysis.salary_max}},\n    \"currency\": \"RUR\"\n  },\n  \"description\": \"{{$json.responsibilities}} \\n\\n {{$json.requirements}}\"\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://api.hh.ru/vacancies"
+      },
+      "position": [
+        1344,
+        1008
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "cbbd4ae8-40f3-4208-8330-9966e21df684",
+      "name": "Создание вакансии на hh.ru в разделе softintermob LLC",
+      "parameters": {
+        "method": "POST",
+        "options": {},
+        "url": "=https://api.hh.ru/vacancies/{{$json.id}}/publish"
+      },
+      "position": [
+        1584,
+        1008
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "bf6f75ed-14a1-4dfb-8b56-9a41cd40c8f5",
+      "name": "Уведомление о публикации",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "N/A",
+        "text": "=Вакансия '{{$json.name}}' опубликована на hh.ru: {{$json.alternate_url}}\n\nПожалуйста, согласуйте дальнейшие шаги."
+      },
+      "position": [
+        1840,
+        1008
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "3624b14b-6e41-4555-978d-270c9f25bb4c"
+    },
+    {
+      "id": "c1023bdd-69c2-41a3-8b7b-32ca05f7d7b2",
+      "name": "Согласование вакансии",
+      "parameters": {},
+      "position": [
+        2080,
+        1008
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "webhookId": "1cfd2628-ba3a-49ed-8658-74d6840ed0fd"
+    },
+    {
+      "id": "581dc1d0-b973-48f5-9c57-0ab2432cce91",
+      "name": "Проверка финального согласования",
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.body.approved}}"
+            }
+          ]
+        }
+      },
+      "position": [
+        2336,
+        1008
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1
+    },
+    {
+      "id": "8c054588-5f2c-4b3d-8302-83d8854b6a35",
+      "name": "Корректировка вакансии вручную и отправка ссылки боту",
+      "parameters": {},
+      "position": [
+        2592,
+        1216
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "webhookId": "90dd5abe-23d2-4a63-802e-b9b250be7c90"
+    },
+    {
+      "id": "287856ec-b850-4ff4-a091-221eb5f224d8",
+      "name": "Параллельный запуск задач",
+      "parameters": {},
+      "position": [
+        2832,
+        1024
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "a0064502-b63b-4b75-9a51-f71c09be892b",
+      "name": "Создание промта для проверки собеседования кандидата",
+      "parameters": {
+        "jsCode": "return { prompt_interview: 'Создай промпт для оценки записи собеседования для вакансии: ' + $json.name };"
+      },
+      "position": [
+        3088,
+        720
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "0ebdb8e7-5fed-47fe-87cc-dedefabe4623",
+      "name": "Создание промта для проверки резюме кандидата ",
+      "parameters": {
+        "jsCode": "return { prompt_resume: 'Создай промпт для оценки резюме для вакансии: ' + $json.name };"
+      },
+      "position": [
+        3088,
+        912
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "287f0e4d-d921-4788-bca3-c15141696065",
+      "name": "Настройка включения функции авторазбора откликов на hh.ru",
+      "parameters": {
+        "jsonBody": "{\"enable_auto_parse\": true}",
+        "method": "PUT",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.hh.ru/vacancies/{{$json.id}}"
+      },
+      "position": [
+        3088,
+        1120
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "663ee3bf-a53e-4aef-8c07-629b624cd350",
+      "name": "Создание бота по проверке кандидата после собеседования",
+      "parameters": {
+        "jsCode": "return { bot_interview_link: 'https://t.me/interview_bot_for_' + $json.id };"
+      },
+      "position": [
+        3344,
+        720
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6a144f41-a36b-48f4-8ade-49f454f71534",
+      "name": "Создание бота для проверки резюме по вакансии",
+      "parameters": {
+        "jsCode": "return { bot_resume_link: 'https://t.me/resume_bot_for_' + $json.id };"
+      },
+      "position": [
+        3344,
+        912
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "268da3d9-7af5-401a-9cf7-b941c1d46858",
+      "name": "Слияние данных о ботах",
+      "parameters": {
+        "jsCode": "const resumeBotData = $items('Создание бота для проверки резюме по вакансии')[0].json;\nconst interviewBotData = $items('Создание бота по проверке кандидата после собеседования')[0].json;\n\n// This approach assumes both previous nodes have finished.\n// A Merge node is a more reliable way to handle parallel branches.\nreturn [{ json: { ...$item.json, ...resumeBotData, ...interviewBotData } }];"
+      },
+      "position": [
+        3584,
+        720
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "44452a05-d93a-4192-9f28-939dce7934ab",
+      "name": "Добавление ссылки на бота в таблицу . Ссылка",
+      "parameters": {
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "InterviewBotLink": "={{$json.bot_interview_link}}",
+            "ResumeBotLink": "={{$json.bot_resume_link}}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "16sWn-3JJ0m7a1JDYsqBFoDvQZESX5lDRomp8mIjV12c"
+        },
+        "operation": "update",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "gid=953786814"
+        }
+      },
+      "position": [
+        3840,
+        720
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5
+    },
+    {
+      "id": "1de01094-12a8-4ce9-9be8-8c784da2209b",
+      "name": "Включение функции авторазбора откликов на hh.ru по вакансии",
+      "parameters": {},
+      "position": [
+        3344,
+        1120
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "536a5326-dc7b-4642-8526-587acad33a03",
+      "name": "Формирование отчета по вакансии с брифом гео , всеми ссылками",
+      "parameters": {
+        "jsCode": "const reportData = $item.json;\nconst report = `## Отчет по вакансии: ${reportData.name}\\n\\n` +\n`**ID вакансии:** ${reportData.id}\\n` +\n`**Ссылка на HH.ru:** ${reportData.alternate_url}\\n` +\n`**Ссылка на Google Drive:** ${$node['Создание вакансии на кор.диске'].json.driveLink}\\n` +\n`**Бот для резюме:** ${reportData.bot_resume_link}\\n` +\n`**Бот для собеседований:** ${reportData.bot_interview_link}`;\n\nreturn { report };"
+      },
+      "position": [
+        4080,
+        720
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "892967cb-9b4b-47ed-823f-0c4d3c55b1b9",
+      "name": "Отправка отчета",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "N/A",
+        "text": "={{$json.report}}"
+      },
+      "position": [
+        4336,
+        720
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d0252aba-9de9-4fc7-b1cc-8c96dd922444"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-09-11T17:18:20.495Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-09-11T17:18:20.495Z",
+      "workflowId": "xNe43Hnla7nvW6rS"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-11T17:18:20.492Z",
+  "versionId": "57acc8a0-a09c-41ea-8ef0-c99ab62e4211"
+}
