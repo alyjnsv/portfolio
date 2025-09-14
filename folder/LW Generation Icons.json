@@ -502,18 +502,6 @@
         ]
       ]
     },
-    "Loop Over Items12": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Loop Over Items13": {
       "main": [
         [],
@@ -533,18 +521,6 @@
           {
             "index": 0,
             "node": "Promt4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items15": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait6",
             "type": "main"
           }
         ]
@@ -605,42 +581,6 @@
           {
             "index": 0,
             "node": "Promt1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items7": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items8": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items9": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -759,7 +699,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items7",
+            "node": "Wait",
             "type": "main"
           }
         ]
@@ -777,7 +717,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items8",
+            "node": "Wait1",
             "type": "main"
           }
         ]
@@ -795,7 +735,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items9",
+            "node": "Wait2",
             "type": "main"
           }
         ]
@@ -813,7 +753,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items12",
+            "node": "Wait5",
             "type": "main"
           }
         ]
@@ -831,7 +771,7 @@
         [
           {
             "index": 0,
-            "node": "Loop Over Items15",
+            "node": "Wait6",
             "type": "main"
           }
         ]
@@ -1422,7 +1362,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nA flawless, production-ready 2.5D game UI icon of a Futuristic Armored Backpack (energy pack). The design is a hard-shell pack with a compact rectangular silhouette and rounded corners, built from clean, stacked layers. The front plate is a beveled, faceted shield of polygonal panels; the seams between panels emit a precise neon magenta glow. A sturdy top handle and side straps are simplified into crisp shapes that read instantly at small sizes. The final output must look like a perfectly polished digital illustration, as if the initial shapes were drawn with vector precision in Illustrator, then meticulously rendered with lighting and depth in Photoshop. The surfaces are impossibly smooth, with perfect, clean gradients. Color rules: Colors must be vivid, saturated, and high-contrast. The backpack body is deep ultramarine blue with gradients shifting to bright cyan and turquoise at the center of facets. Seams and LEDs glow in highly saturated neon magenta, with strong luminous intensity and sharp contrast against the body. Absolutely no dull or washed-out tones. A bold, crisp black outer stroke defines the backpack silhouette for maximum UI readability. The layers cast subtle, soft drop shadows on each other, painted with a very soft, low-opacity black brush to create a clean sense of separation. Background: Isolated on a clean background with a very light, subtle comic-style texture: a soft radial gradient (light grey-blue fading to white) with faint abstract strokes or diagonal comic lines. The background must remain minimal and non-distracting, but clearly visible enough to support and enhance the icon’s contrast. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art. Think clean lines, vivid saturated gradients, and a sleek, graphical, non-photorealistic aesthetic. It must feel designed and illustrated, not generated. Absolutely NO messy brush strokes, NO 3D textures, NO photorealism. The faceted front is a clean, sharp overlay with slight transparency in the glowing seams only—no noise or roughness. High-end mobile game UI, icon design, 4K, vector realism style. --ar 1:1 --style raw\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации высококачественной 3D стилизованной иконки в sci-fi игровом стиле.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Высококачественная стилизованная 3D иконка с сильным объемным видом\n- Трехчетвертной ракурс для максимальной читаемости\n- Яркие неоновые акценты и светящиеся элементы с glow-эффектами\n- Чистый белый фон\n- Четкие геометрические формы с beveled краями и layered деталями\n- Полированный sci-fi дизайн в стиле семи-реализма\n- Внутреннее свечение и мягкие световые эффекты\n- Спекулярные блики на металлических поверхностях\n\nАНАЛИЗ ТЗ И ИЗВЛЕЧЕНИЕ ДАННЫХ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Краткое описание\n- Роль/назначение\n- Форму и композицию из раздела \"Описание и адаптация\"\n- Материалы и поверхности\n- Освещение и блики\n- Светящиеся элементы\n- Детализацию\n- Цветовую палитру (конкретные hex-коды)\n\n2. ОПРЕДЕЛИ ТИП ОБЪЕКТА:\n- Медицинские: кресты, символы регенерации, контейнеры - бирюзовые/синие акценты\n- Временные: таймеры, часы, прогресс-бары - лаймовые/желтые акценты  \n- Информационные: символы \"i\", щиты, уведомления - синие/розовые акценты\n- Управляющие: кнопки +/-, стрелки - бирюзовые/оранжевые акценты\n- Статусные: силуэты, индикаторы - красные/зеленые акценты\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A high quality stylized game icon of [название из ТЗ] shown at a three quarter angle with a strong three dimensional appearance [детальное описание формы и композиции из ТЗ] the body is [материалы из ТЗ] with [текстуры и поверхности из ТЗ] beveled edges and layered details add depth [специфические конструктивные элементы из ТЗ] [описание светящихся элементов с точными цветами из ТЗ в hex] emitting a soft internal glow casting gentle light onto [указать поверхности] [описание бликов и освещения из ТЗ] subtle [дополнительные акценты и детализация из ТЗ] enhance contrast clean geometric shapes polished sci fi design vibrant casual game art style UI element game asset highly detailed 8k trending on ArtStation isolated on a pure white background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- Используй ТОЧНЫЕ hex-коды цветов из ТЗ\n- Сохраняй ВСЕ детали из разделов \"Материалы\", \"Освещение\", \"Светящиеся элементы\", \"Детализация\"\n- Подчеркивай объемность через \"beveled edges\", \"layered panels\", \"specular highlights\"\n- Обязательно включай \"soft internal glow\" и \"gentle light casting\"\n- Всегда отдельно выводи Название из ТЗ"
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -1714,7 +1654,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nA flawless, production-ready 2.5D game UI icon of a Futuristic Armored Backpack (energy pack). The design is a hard-shell pack with a compact rectangular silhouette and rounded corners, built from clean, stacked layers. The front plate is a beveled, faceted shield of polygonal panels; the seams between panels emit a precise neon magenta glow. A sturdy top handle and side straps are simplified into crisp shapes that read instantly at small sizes. The final output must look like a perfectly polished digital illustration, as if the initial shapes were drawn with vector precision in Illustrator, then meticulously rendered with lighting and depth in Photoshop. The surfaces are impossibly smooth, with perfect, clean gradients. Color rules: Colors must be vivid, saturated, and high-contrast. The backpack body is deep ultramarine blue with gradients shifting to bright cyan and turquoise at the center of facets. Seams and LEDs glow in highly saturated neon magenta, with strong luminous intensity and sharp contrast against the body. Absolutely no dull or washed-out tones. A bold, crisp black outer stroke defines the backpack silhouette for maximum UI readability. The layers cast subtle, soft drop shadows on each other, painted with a very soft, low-opacity black brush to create a clean sense of separation. Background: Isolated on a clean background with a very light, subtle comic-style texture: a soft radial gradient (light grey-blue fading to white) with faint abstract strokes or diagonal comic lines. The background must remain minimal and non-distracting, but clearly visible enough to support and enhance the icon’s contrast. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art. Think clean lines, vivid saturated gradients, and a sleek, graphical, non-photorealistic aesthetic. It must feel designed and illustrated, not generated. Absolutely NO messy brush strokes, NO 3D textures, NO photorealism. The faceted front is a clean, sharp overlay with slight transparency in the glowing seams only—no noise or roughness. High-end mobile game UI, icon design, 4K, vector realism style. --ar 1:1 --style raw\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации высококачественной 3D стилизованной иконки в sci-fi игровом стиле.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Высококачественная стилизованная 3D иконка с сильным объемным видом\n- Трехчетвертной ракурс для максимальной читаемости\n- Яркие неоновые акценты и светящиеся элементы с glow-эффектами\n- Чистый белый фон\n- Четкие геометрические формы с beveled краями и layered деталями\n- Полированный sci-fi дизайн в стиле семи-реализма\n- Внутреннее свечение и мягкие световые эффекты\n- Спекулярные блики на металлических поверхностях\n\nАНАЛИЗ ТЗ И ИЗВЛЕЧЕНИЕ ДАННЫХ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Краткое описание\n- Роль/назначение\n- Форму и композицию из раздела \"Описание и адаптация\"\n- Материалы и поверхности\n- Освещение и блики\n- Светящиеся элементы\n- Детализацию\n- Цветовую палитру (конкретные hex-коды)\n\n2. ОПРЕДЕЛИ ТИП ОБЪЕКТА:\n- Медицинские: кресты, символы регенерации, контейнеры - бирюзовые/синие акценты\n- Временные: таймеры, часы, прогресс-бары - лаймовые/желтые акценты  \n- Информационные: символы \"i\", щиты, уведомления - синие/розовые акценты\n- Управляющие: кнопки +/-, стрелки - бирюзовые/оранжевые акценты\n- Статусные: силуэты, индикаторы - красные/зеленые акценты\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A high quality stylized game icon of [название из ТЗ] shown at a three quarter angle with a strong three dimensional appearance [детальное описание формы и композиции из ТЗ] the body is [материалы из ТЗ] with [текстуры и поверхности из ТЗ] beveled edges and layered details add depth [специфические конструктивные элементы из ТЗ] [описание светящихся элементов с точными цветами из ТЗ в hex] emitting a soft internal glow casting gentle light onto [указать поверхности] [описание бликов и освещения из ТЗ] subtle [дополнительные акценты и детализация из ТЗ] enhance contrast clean geometric shapes polished sci fi design vibrant casual game art style UI element game asset highly detailed 8k trending on ArtStation isolated on a pure white background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- Используй ТОЧНЫЕ hex-коды цветов из ТЗ\n- Сохраняй ВСЕ детали из разделов \"Материалы\", \"Освещение\", \"Светящиеся элементы\", \"Детализация\"\n- Подчеркивай объемность через \"beveled edges\", \"layered panels\", \"specular highlights\"\n- Обязательно включай \"soft internal glow\" и \"gentle light casting\"\n- Всегда отдельно выводи Название из ТЗ"
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -2006,7 +1946,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nA flawless, production-ready 2.5D game UI icon of a Futuristic Armored Backpack (energy pack). The design is a hard-shell pack with a compact rectangular silhouette and rounded corners, built from clean, stacked layers. The front plate is a beveled, faceted shield of polygonal panels; the seams between panels emit a precise neon magenta glow. A sturdy top handle and side straps are simplified into crisp shapes that read instantly at small sizes. The final output must look like a perfectly polished digital illustration, as if the initial shapes were drawn with vector precision in Illustrator, then meticulously rendered with lighting and depth in Photoshop. The surfaces are impossibly smooth, with perfect, clean gradients. Color rules: Colors must be vivid, saturated, and high-contrast. The backpack body is deep ultramarine blue with gradients shifting to bright cyan and turquoise at the center of facets. Seams and LEDs glow in highly saturated neon magenta, with strong luminous intensity and sharp contrast against the body. Absolutely no dull or washed-out tones. A bold, crisp black outer stroke defines the backpack silhouette for maximum UI readability. The layers cast subtle, soft drop shadows on each other, painted with a very soft, low-opacity black brush to create a clean sense of separation. Background: Isolated on a clean background with a very light, subtle comic-style texture: a soft radial gradient (light grey-blue fading to white) with faint abstract strokes or diagonal comic lines. The background must remain minimal and non-distracting, but clearly visible enough to support and enhance the icon’s contrast. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art. Think clean lines, vivid saturated gradients, and a sleek, graphical, non-photorealistic aesthetic. It must feel designed and illustrated, not generated. Absolutely NO messy brush strokes, NO 3D textures, NO photorealism. The faceted front is a clean, sharp overlay with slight transparency in the glowing seams only—no noise or roughness. High-end mobile game UI, icon design, 4K, vector realism style. --ar 1:1 --style raw\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации высококачественной 3D стилизованной иконки в sci-fi игровом стиле.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Высококачественная стилизованная 3D иконка с сильным объемным видом\n- Трехчетвертной ракурс для максимальной читаемости\n- Яркие неоновые акценты и светящиеся элементы с glow-эффектами\n- Чистый белый фон\n- Четкие геометрические формы с beveled краями и layered деталями\n- Полированный sci-fi дизайн в стиле семи-реализма\n- Внутреннее свечение и мягкие световые эффекты\n- Спекулярные блики на металлических поверхностях\n\nАНАЛИЗ ТЗ И ИЗВЛЕЧЕНИЕ ДАННЫХ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Краткое описание\n- Роль/назначение\n- Форму и композицию из раздела \"Описание и адаптация\"\n- Материалы и поверхности\n- Освещение и блики\n- Светящиеся элементы\n- Детализацию\n- Цветовую палитру (конкретные hex-коды)\n\n2. ОПРЕДЕЛИ ТИП ОБЪЕКТА:\n- Медицинские: кресты, символы регенерации, контейнеры - бирюзовые/синие акценты\n- Временные: таймеры, часы, прогресс-бары - лаймовые/желтые акценты  \n- Информационные: символы \"i\", щиты, уведомления - синие/розовые акценты\n- Управляющие: кнопки +/-, стрелки - бирюзовые/оранжевые акценты\n- Статусные: силуэты, индикаторы - красные/зеленые акценты\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A high quality stylized game icon of [название из ТЗ] shown at a three quarter angle with a strong three dimensional appearance [детальное описание формы и композиции из ТЗ] the body is [материалы из ТЗ] with [текстуры и поверхности из ТЗ] beveled edges and layered details add depth [специфические конструктивные элементы из ТЗ] [описание светящихся элементов с точными цветами из ТЗ в hex] emitting a soft internal glow casting gentle light onto [указать поверхности] [описание бликов и освещения из ТЗ] subtle [дополнительные акценты и детализация из ТЗ] enhance contrast clean geometric shapes polished sci fi design vibrant casual game art style UI element game asset highly detailed 8k trending on ArtStation isolated on a pure white background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- Используй ТОЧНЫЕ hex-коды цветов из ТЗ\n- Сохраняй ВСЕ детали из разделов \"Материалы\", \"Освещение\", \"Светящиеся элементы\", \"Детализация\"\n- Подчеркивай объемность через \"beveled edges\", \"layered panels\", \"specular highlights\"\n- Обязательно включай \"soft internal glow\" и \"gentle light casting\"\n- Всегда отдельно выводи Название из ТЗ"
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -2317,51 +2257,6 @@
       "position": [
         -1072,
         48
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "d3a29ee7-981a-4f1a-a68a-a89c0e13f573",
-      "name": "Loop Over Items7",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -496,
-        -352
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "c68f759c-0091-4d39-861c-ccc45687921c",
-      "name": "Loop Over Items8",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -496,
-        48
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "d6166207-4180-4184-95f7-16b66707cd99",
-      "name": "Loop Over Items9",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -496,
-        432
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2679,7 +2574,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nA flawless, production-ready 2.5D game UI icon of a Futuristic Armored Backpack (energy pack). The design is a hard-shell pack with a compact rectangular silhouette and rounded corners, built from clean, stacked layers. The front plate is a beveled, faceted shield of polygonal panels; the seams between panels emit a precise neon magenta glow. A sturdy top handle and side straps are simplified into crisp shapes that read instantly at small sizes. The final output must look like a perfectly polished digital illustration, as if the initial shapes were drawn with vector precision in Illustrator, then meticulously rendered with lighting and depth in Photoshop. The surfaces are impossibly smooth, with perfect, clean gradients. Color rules: Colors must be vivid, saturated, and high-contrast. The backpack body is deep ultramarine blue with gradients shifting to bright cyan and turquoise at the center of facets. Seams and LEDs glow in highly saturated neon magenta, with strong luminous intensity and sharp contrast against the body. Absolutely no dull or washed-out tones. A bold, crisp black outer stroke defines the backpack silhouette for maximum UI readability. The layers cast subtle, soft drop shadows on each other, painted with a very soft, low-opacity black brush to create a clean sense of separation. Background: Isolated on a clean background with a very light, subtle comic-style texture: a soft radial gradient (light grey-blue fading to white) with faint abstract strokes or diagonal comic lines. The background must remain minimal and non-distracting, but clearly visible enough to support and enhance the icon’s contrast. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art. Think clean lines, vivid saturated gradients, and a sleek, graphical, non-photorealistic aesthetic. It must feel designed and illustrated, not generated. Absolutely NO messy brush strokes, NO 3D textures, NO photorealism. The faceted front is a clean, sharp overlay with slight transparency in the glowing seams only—no noise or roughness. High-end mobile game UI, icon design, 4K, vector realism style. --ar 1:1 --style raw\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации высококачественной 3D стилизованной иконки в sci-fi игровом стиле.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Высококачественная стилизованная 3D иконка с сильным объемным видом\n- Трехчетвертной ракурс для максимальной читаемости\n- Яркие неоновые акценты и светящиеся элементы с glow-эффектами\n- Чистый белый фон\n- Четкие геометрические формы с beveled краями и layered деталями\n- Полированный sci-fi дизайн в стиле семи-реализма\n- Внутреннее свечение и мягкие световые эффекты\n- Спекулярные блики на металлических поверхностях\n\nАНАЛИЗ ТЗ И ИЗВЛЕЧЕНИЕ ДАННЫХ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Краткое описание\n- Роль/назначение\n- Форму и композицию из раздела \"Описание и адаптация\"\n- Материалы и поверхности\n- Освещение и блики\n- Светящиеся элементы\n- Детализацию\n- Цветовую палитру (конкретные hex-коды)\n\n2. ОПРЕДЕЛИ ТИП ОБЪЕКТА:\n- Медицинские: кресты, символы регенерации, контейнеры - бирюзовые/синие акценты\n- Временные: таймеры, часы, прогресс-бары - лаймовые/желтые акценты  \n- Информационные: символы \"i\", щиты, уведомления - синие/розовые акценты\n- Управляющие: кнопки +/-, стрелки - бирюзовые/оранжевые акценты\n- Статусные: силуэты, индикаторы - красные/зеленые акценты\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A high quality stylized game icon of [название из ТЗ] shown at a three quarter angle with a strong three dimensional appearance [детальное описание формы и композиции из ТЗ] the body is [материалы из ТЗ] with [текстуры и поверхности из ТЗ] beveled edges and layered details add depth [специфические конструктивные элементы из ТЗ] [описание светящихся элементов с точными цветами из ТЗ в hex] emitting a soft internal glow casting gentle light onto [указать поверхности] [описание бликов и освещения из ТЗ] subtle [дополнительные акценты и детализация из ТЗ] enhance contrast clean geometric shapes polished sci fi design vibrant casual game art style UI element game asset highly detailed 8k trending on ArtStation isolated on a pure white background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- Используй ТОЧНЫЕ hex-коды цветов из ТЗ\n- Сохраняй ВСЕ детали из разделов \"Материалы\", \"Освещение\", \"Светящиеся элементы\", \"Детализация\"\n- Подчеркивай объемность через \"beveled edges\", \"layered panels\", \"specular highlights\"\n- Обязательно включай \"soft internal glow\" и \"gentle light casting\"\n- Всегда отдельно выводи Название из ТЗ"
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -2947,21 +2842,6 @@
       "typeVersion": 3
     },
     {
-      "id": "d02283c3-485f-4503-9101-fd48383cfa93",
-      "name": "Loop Over Items12",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -496,
-        848
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "OkH8dso5q8ZT5CFW",
@@ -3034,7 +2914,7 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Инструкция ниже описывает как составлять промт. Используй полученное ТЗ для составления промта.\n\nA flawless, production-ready 2.5D game UI icon of a Futuristic Armored Backpack (energy pack). The design is a hard-shell pack with a compact rectangular silhouette and rounded corners, built from clean, stacked layers. The front plate is a beveled, faceted shield of polygonal panels; the seams between panels emit a precise neon magenta glow. A sturdy top handle and side straps are simplified into crisp shapes that read instantly at small sizes. The final output must look like a perfectly polished digital illustration, as if the initial shapes were drawn with vector precision in Illustrator, then meticulously rendered with lighting and depth in Photoshop. The surfaces are impossibly smooth, with perfect, clean gradients. Color rules: Colors must be vivid, saturated, and high-contrast. The backpack body is deep ultramarine blue with gradients shifting to bright cyan and turquoise at the center of facets. Seams and LEDs glow in highly saturated neon magenta, with strong luminous intensity and sharp contrast against the body. Absolutely no dull or washed-out tones. A bold, crisp black outer stroke defines the backpack silhouette for maximum UI readability. The layers cast subtle, soft drop shadows on each other, painted with a very soft, low-opacity black brush to create a clean sense of separation. Background: Isolated on a clean background with a very light, subtle comic-style texture: a soft radial gradient (light grey-blue fading to white) with faint abstract strokes or diagonal comic lines. The background must remain minimal and non-distracting, but clearly visible enough to support and enhance the icon’s contrast. CRITICAL STYLE RULE: This is the pinnacle of polished 2.5D UI art. Think clean lines, vivid saturated gradients, and a sleek, graphical, non-photorealistic aesthetic. It must feel designed and illustrated, not generated. Absolutely NO messy brush strokes, NO 3D textures, NO photorealism. The faceted front is a clean, sharp overlay with slight transparency in the glowing seams only—no noise or roughness. High-end mobile game UI, icon design, 4K, vector realism style. --ar 1:1 --style raw\n\nФОРМАТ ОТВЕТА:\n\"Name\": \"Название из ТЗ\",\n\"Promt\": \"составленый промт\"\n\nВАЖНО:\n* В Промте не должно быть новых строк, только точки и запятые, без любых кавычек и без любых скобок, минус тоже нельзя. Промт должен быть на английском.\n* Всегда отдельньно выводи Название из получаеного ТЗ. Это всегда данные от Название: ДО Тип объекта: (вместо ДО будет название из ТЗ)."
+          "systemMessage": "=Ты AI agent, который создает промты для генерации игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации высококачественной 3D стилизованной иконки в sci-fi игровом стиле.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Высококачественная стилизованная 3D иконка с сильным объемным видом\n- Трехчетвертной ракурс для максимальной читаемости\n- Яркие неоновые акценты и светящиеся элементы с glow-эффектами\n- Чистый белый фон\n- Четкие геометрические формы с beveled краями и layered деталями\n- Полированный sci-fi дизайн в стиле семи-реализма\n- Внутреннее свечение и мягкие световые эффекты\n- Спекулярные блики на металлических поверхностях\n\nАНАЛИЗ ТЗ И ИЗВЛЕЧЕНИЕ ДАННЫХ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Краткое описание\n- Роль/назначение\n- Форму и композицию из раздела \"Описание и адаптация\"\n- Материалы и поверхности\n- Освещение и блики\n- Светящиеся элементы\n- Детализацию\n- Цветовую палитру (конкретные hex-коды)\n\n2. ОПРЕДЕЛИ ТИП ОБЪЕКТА:\n- Медицинские: кресты, символы регенерации, контейнеры - бирюзовые/синие акценты\n- Временные: таймеры, часы, прогресс-бары - лаймовые/желтые акценты  \n- Информационные: символы \"i\", щиты, уведомления - синие/розовые акценты\n- Управляющие: кнопки +/-, стрелки - бирюзовые/оранжевые акценты\n- Статусные: силуэты, индикаторы - красные/зеленые акценты\n\n3. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A high quality stylized game icon of [название из ТЗ] shown at a three quarter angle with a strong three dimensional appearance [детальное описание формы и композиции из ТЗ] the body is [материалы из ТЗ] with [текстуры и поверхности из ТЗ] beveled edges and layered details add depth [специфические конструктивные элементы из ТЗ] [описание светящихся элементов с точными цветами из ТЗ в hex] emitting a soft internal glow casting gentle light onto [указать поверхности] [описание бликов и освещения из ТЗ] subtle [дополнительные акценты и детализация из ТЗ] enhance contrast clean geometric shapes polished sci fi design vibrant casual game art style UI element game asset highly detailed 8k trending on ArtStation isolated on a pure white background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- Используй ТОЧНЫЕ hex-коды цветов из ТЗ\n- Сохраняй ВСЕ детали из разделов \"Материалы\", \"Освещение\", \"Светящиеся элементы\", \"Детализация\"\n- Подчеркивай объемность через \"beveled edges\", \"layered panels\", \"specular highlights\"\n- Обязательно включай \"soft internal glow\" и \"gentle light casting\"\n- Всегда отдельно выводи Название из ТЗ"
         },
         "promptType": "define",
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
@@ -3296,21 +3176,6 @@
       },
       "position": [
         -1072,
-        1280
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "75a7d08b-941d-48ef-9bab-9ab7920a16f8",
-      "name": "Loop Over Items15",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -496,
         1280
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -3588,6 +3453,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-09-12T13:05:11.000Z",
-  "versionId": "b0b9d60e-1c86-467e-a470-555bc690536c"
+  "updatedAt": "2025-09-14T20:29:26.000Z",
+  "versionId": "e72b40ba-12c8-418e-9080-fbc00f8b5cad"
 }
