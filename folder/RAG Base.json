@@ -1,0 +1,354 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Входные данные2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Входные данные2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Получить содержимое документа",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Получить содержимое документа": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Logger2",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-15T11:29:36.293Z",
+  "id": "kSagYyHLiYwjd0RR",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "RAG Base",
+  "nodes": [
+    {
+      "id": "c1b10b4b-2cc9-46cb-992d-a518e34ee980",
+      "name": "Webhook",
+      "parameters": {
+        "options": {},
+        "path": "/ragbase/update"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "1fadb363-ae58-43ef-a4ef-11d0bd15a1dd"
+    },
+    {
+      "id": "42a945e7-32f7-44c5-982e-fbf7ffb44d1d",
+      "name": "Входные данные2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fee506dd-116e-430c-8576-b4692a2d5923",
+              "name": "document_id",
+              "type": "string",
+              "value": "59227725"
+            },
+            {
+              "id": "c348b92d-514d-4ef9-8679-d9cbdb6e98d0",
+              "name": "auth_token",
+              "type": "string",
+              "value": "MzcwNDQwODYzODA4OgvFBHCa23zakQAwIpW16brArGgZ"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        192,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "53b116c5-2072-4628-91d5-d293bb3ba60a",
+      "name": "Получить содержимое документа",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $json.auth_token }}"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://confluence.itcomp.org/rest/api/content/{{ $json.document_id }}?expand=body.storage"
+      },
+      "position": [
+        384,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "0be49fc4-e953-430e-b307-152ef22db11f",
+      "name": "Logger2",
+      "parameters": {
+        "errorMessage": "=Ошибка получения документа ID {{ $json.document_id }}"
+      },
+      "position": [
+        528,
+        112
+      ],
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1
+    },
+    {
+      "id": "adcbe503-3b6b-4ceb-881d-84ca977c5415",
+      "name": "AI Agent",
+      "parameters": {
+        "hasOutputParser": true,
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "You are a helpful assistant"
+        },
+        "promptType": "define"
+      },
+      "position": [
+        768,
+        -16
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "7b9975a4-4efb-491b-82ac-923a3e99a76d",
+      "name": "Simple Memory",
+      "parameters": {
+        "contextWindowLength": 1000,
+        "sessionIdType": "customKey",
+        "sessionKey": "ragbaseaidocument"
+      },
+      "position": [
+        784,
+        192
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "pineconeApi": {
+          "id": "1HP054c8wBNXQQzQ",
+          "name": "PineconeApi account 3"
+        }
+      },
+      "id": "fa8ea279-5ca6-4871-9ebd-4d7250264013",
+      "name": "Pinecone Vector Store",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {},
+        "pineconeIndex": {
+          "__rl": true,
+          "cachedResultName": "n8n1",
+          "mode": "list",
+          "value": "n8n1"
+        }
+      },
+      "position": [
+        880,
+        192
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "b19c5cba-5dab-4eb9-b291-b9c08fb2a38b",
+      "name": "Embeddings OpenAI",
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {}
+      },
+      "position": [
+        880,
+        320
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "f809611d-2b84-4527-9202-ef687ab62e30",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d37103eb-b9ae-4434-9520-b407c4278a52",
+              "name": "Ответ",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "id": "6a2ac25a-f7d2-4fb7-bdf2-ee5457e6a149",
+              "name": "Результат",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1120,
+        -16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "3b8c1e3b-6f20-4af6-ace4-38ecfca3afea",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "7e1c9d5c-55c1-4a28-a778-94f178c78d35",
+              "leftValue": "",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Да"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1328,
+        -16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-09-15T11:29:36.299Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-09-15T11:29:36.299Z",
+      "workflowId": "kSagYyHLiYwjd0RR"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-15T12:11:17.000Z",
+  "versionId": "faaabc96-22fe-4fcf-83b6-d05c9103391a"
+}
