@@ -1,0 +1,344 @@
+{
+  "active": false,
+  "connections": {
+    "Clear Promt": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Imagen 4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Clear Promt",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Imagen 4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Queue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Url": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Queue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-16T14:19:31.588Z",
+  "id": "irTD0Thy0YGZu8Jb",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "LW Generation Icons test",
+  "nodes": [
+    {
+      "id": "055f28f1-790b-4e5d-bcf0-62d68ba2ca2f",
+      "name": "Wait",
+      "parameters": {
+        "amount": 12
+      },
+      "position": [
+        -688,
+        -512
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "3e540a76-941d-4629-8251-e6a120c8f2b3"
+    },
+    {
+      "id": "f4b3d892-9a3d-4ad5-b9a9-d6e5654b59a8",
+      "maxTries": 5,
+      "name": "Imagen 4",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n     \"prompt\": \"{{ $json.ClearPromt }}\"\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
+      },
+      "position": [
+        -896,
+        -512
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "2a540fcc-4dfc-4049-8055-30432d88c8c5",
+      "maxTries": 5,
+      "name": "Queue",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 4').item.json.request_id }}"
+      },
+      "position": [
+        -496,
+        -512
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "2866568c-7c1a-4431-86d3-cdb2c661d824",
+      "maxTries": 5,
+      "name": "Url",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        -272,
+        -512
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "id": "0769a45f-977a-4f58-85c0-8e8693d53411",
+      "name": "Clear Promt",
+      "parameters": {
+        "jsCode": "const input = $input.first().json.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
+      },
+      "position": [
+        -1104,
+        -512
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "36ec375b-7db5-46c9-884c-bbae6cbf4b1f",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -1536,
+        -512
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "88bf74c2-fdab-424f-9014-48c4bcf96ec8",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "38a7fc84-d596-4535-8e30-ab02da7ad39d",
+              "name": "Promt",
+              "type": "string",
+              "value": "3D game icon of a futuristic combat helmet — sleek and angular design with a reinforced faceplate, side-mounted modules, and a glowing cyan visor. Clean, polished, painterly rendering style with dramatic lighting, strong highlights, and subtle rim light. Slightly glossy materials with saturated colors (dark metal, chrome, neon cyan). Chunky, well-defined shape, easily readable at small size. Glowing sci-fi accents. Centered on a pure white background (#FFFFFF), no shadows."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1328,
+        -512
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    }
+  ],
+  "pinData": {
+    "Clear Promt": [
+      {
+        "json": {
+          "ClearPromt": "3D game icon of a futuristic combat helmet — sleek and angular design with a reinforced faceplate, side-mounted modules, and a glowing cyan visor. Clean, polished, painterly rendering style with dramatic lighting, strong highlights, and subtle rim light. Slightly glossy materials with saturated colors (dark metal, chrome, neon cyan). Chunky, well-defined shape, easily readable at small size. Glowing sci-fi accents. Centered on a pure white background (#FFFFFF), no shadows."
+        }
+      }
+    ],
+    "Edit Fields": [
+      {
+        "json": {
+          "Promt": "3D game icon of a futuristic combat helmet — sleek and angular design with a reinforced faceplate, side-mounted modules, and a glowing cyan visor. Clean, polished, painterly rendering style with dramatic lighting, strong highlights, and subtle rim light. Slightly glossy materials with saturated colors (dark metal, chrome, neon cyan). Chunky, well-defined shape, easily readable at small size. Glowing sci-fi accents. Centered on a pure white background (#FFFFFF), no shadows."
+        }
+      }
+    ],
+    "Imagen 4": [
+      {
+        "json": {
+          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e/cancel",
+          "logs": null,
+          "metrics": {},
+          "queue_position": 0,
+          "request_id": "9f58c258-c216-45db-ab63-f053ef4eb91e",
+          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e",
+          "status": "IN_QUEUE",
+          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e/status"
+        }
+      }
+    ],
+    "Queue": [
+      {
+        "json": {
+          "description": "Here's your futuristic combat helmet game icon!\n ",
+          "images": [
+            {
+              "content_type": "image/jpeg",
+              "file_name": "output.jpeg",
+              "file_size": null,
+              "url": "https://v3.fal.media/files/monkey/EZexb_fQOPHDKuWx6b-Vi.jpeg"
+            }
+          ]
+        }
+      }
+    ],
+    "Url": [
+      {
+        "json": {
+          "description": "Here's your futuristic combat helmet game icon!\n ",
+          "images": [
+            {
+              "content_type": "image/jpeg",
+              "file_name": "output.jpeg",
+              "file_size": null,
+              "url": "https://v3.fal.media/files/monkey/EZexb_fQOPHDKuWx6b-Vi.jpeg"
+            }
+          ]
+        }
+      }
+    ],
+    "Wait": [
+      {
+        "json": {
+          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e/cancel",
+          "logs": null,
+          "metrics": {},
+          "queue_position": 0,
+          "request_id": "9f58c258-c216-45db-ab63-f053ef4eb91e",
+          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e",
+          "status": "IN_QUEUE",
+          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/9f58c258-c216-45db-ab63-f053ef4eb91e/status"
+        }
+      }
+    ],
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "settings": {
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v1",
+    "timezone": "Europe/Moscow"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-09-16T14:19:31.593Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-09-16T14:19:31.593Z",
+      "workflowId": "irTD0Thy0YGZu8Jb"
+    }
+  ],
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-07-14T08:26:20.798Z",
+      "id": "QEHbVhy6Fh3iNUlR",
+      "name": "LW",
+      "updatedAt": "2025-07-14T08:26:20.798Z"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-16T14:22:54.000Z",
+  "versionId": "dcf0576f-c569-4848-8b0c-b23abfab512f"
+}
