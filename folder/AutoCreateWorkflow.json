@@ -177,6 +177,17 @@
         ]
       ]
     },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Extract from File1": {
       "main": [
         [
@@ -205,6 +216,17 @@
           {
             "index": 0,
             "node": "Create a row",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File",
             "type": "main"
           }
         ]
@@ -264,6 +286,17 @@
             "index": 0,
             "node": "AI Agent5",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -367,6 +400,17 @@
         ]
       ]
     },
+    "Set": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "XML",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Set1": {
       "main": [
         [
@@ -385,6 +429,17 @@
             "index": 0,
             "node": "XML4",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
           }
         ]
       ]
@@ -488,12 +543,34 @@
         ]
       ]
     },
+    "Telegram Trigger1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Telegram Trigger3": {
       "main": [
         [
           {
             "index": 0,
             "node": "Get a file4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "XML": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
             "type": "main"
           }
         ]
@@ -547,6 +624,7 @@
   "name": "AutoCreateWorkflow",
   "nodes": [
     {
+      "disabled": true,
       "id": "562c00e1-3853-4be6-8d4c-bde7c204a651",
       "name": "AI Agent11",
       "parameters": {
@@ -570,6 +648,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "fa5b8e54-d119-4893-86bf-70cccc8265d9",
       "name": "OpenRouter Chat Model13",
       "parameters": {
@@ -588,6 +667,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "c6f87d4e-bea1-4e60-a26a-cfee4530882c",
       "name": "Simple Memory3",
       "parameters": {
@@ -603,6 +683,7 @@
       "typeVersion": 1.3
     },
     {
+      "disabled": true,
       "id": "35c06183-f9f3-45d9-8d5c-987d28bad076",
       "name": "AI Agent13",
       "parameters": {
@@ -626,6 +707,7 @@
           "name": "Telegram account 3"
         }
       },
+      "disabled": true,
       "id": "7d81649b-6925-41a3-aea4-73d0d5e3c48b",
       "name": "Telegram Trigger3",
       "parameters": {
@@ -649,6 +731,7 @@
           "name": "Telegram account 3"
         }
       },
+      "disabled": true,
       "id": "5c32eb84-a2c0-4b2b-8306-5c34904f00a5",
       "name": "Get a file4",
       "parameters": {
@@ -665,6 +748,7 @@
       "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
     },
     {
+      "disabled": true,
       "id": "eeb9cf61-7059-4546-8d2c-b3cde472880d",
       "name": "Extract from File4",
       "parameters": {
@@ -679,6 +763,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "a27236e4-cc4c-403b-a9d5-1c64666a1a39",
       "name": "Code17",
       "parameters": {
@@ -698,6 +783,7 @@
           "name": "Telegram account 3"
         }
       },
+      "disabled": true,
       "id": "b3ecccfe-4910-4438-b31c-8f7cd2ead6b1",
       "name": "Send a document3",
       "parameters": {
@@ -715,6 +801,7 @@
       "webhookId": "d5d8b6e2-59e5-469d-9ff6-ade9ba47deaa"
     },
     {
+      "disabled": true,
       "id": "b6c92e0c-9dde-4e50-adaa-5ff4b8967d36",
       "name": "XML4",
       "parameters": {
@@ -733,6 +820,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "556772f9-8570-437c-b379-acb3227866b0",
       "name": "Set3",
       "parameters": {
@@ -761,6 +849,7 @@
           "name": "Supabase account 2"
         }
       },
+      "disabled": true,
       "id": "14b84ac0-ee87-45e9-84cb-f9c1da49f8a6",
       "name": "Supabase Vector Store8",
       "parameters": {
@@ -788,6 +877,7 @@
           "name": "OpenAi account"
         }
       },
+      "disabled": true,
       "id": "109b4197-ee10-44ed-905f-380382804deb",
       "name": "Embeddings OpenAI8",
       "parameters": {
@@ -803,6 +893,7 @@
       "typeVersion": 1.2
     },
     {
+      "disabled": true,
       "id": "362e2254-4e0f-46b4-be2c-f1de1dafcc21",
       "name": "AI Agent15",
       "parameters": {
@@ -826,6 +917,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "4d3def27-6eb2-4fdb-b765-7af5492ac20a",
       "name": "OpenRouter Chat Model16",
       "parameters": {
@@ -840,6 +932,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "93c39d46-5f8e-4f63-9864-fbd64962b24d",
       "name": "Валидация ответа3",
       "parameters": {
@@ -859,6 +952,7 @@
           "name": "Supabase account 2"
         }
       },
+      "disabled": true,
       "id": "86fa1899-ebc3-4de1-8929-a6e5a7f3724d",
       "name": "Create a row",
       "parameters": {
@@ -884,6 +978,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "a8d682bb-b009-4bea-afde-690755094af0",
       "name": "Code13",
       "parameters": {
@@ -897,6 +992,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "31b4e6fb-b2ce-4896-b334-9329168b8769",
       "name": "Filter1",
       "parameters": {
@@ -941,6 +1037,7 @@
       "typeVersion": 2.2
     },
     {
+      "disabled": true,
       "id": "4cf60c8a-483f-44f3-ba5a-5f0e62a2b052",
       "name": "Split Out",
       "parameters": {
@@ -961,6 +1058,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "dba2bdee-f857-4c57-9680-2113b769f52e",
       "name": "OpenRouter Chat Model14",
       "parameters": {
@@ -981,6 +1079,7 @@
           "name": "Supabase account 2"
         }
       },
+      "disabled": true,
       "id": "48f3771a-e8e8-40a2-a402-7d50e57d1369",
       "name": "Supabase Vector Store9",
       "parameters": {
@@ -1008,6 +1107,7 @@
           "name": "OpenAi account"
         }
       },
+      "disabled": true,
       "id": "cd04e997-ecc4-4107-afda-dd3f56c1ab8a",
       "name": "Embeddings OpenAI9",
       "parameters": {
@@ -1023,6 +1123,7 @@
       "typeVersion": 1.2
     },
     {
+      "disabled": true,
       "id": "540ce16b-0fe8-430b-9c59-866b7f8cbff8",
       "name": "AI Agent1",
       "parameters": {
@@ -1041,6 +1142,7 @@
       "typeVersion": 2.2
     },
     {
+      "disabled": true,
       "id": "ea79a34d-e404-41ad-8d2a-42d75ab47bfe",
       "name": "Simple Memory1",
       "parameters": {
@@ -1062,6 +1164,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "0ef847b7-9c2f-4d75-8ab4-5050dbe096d9",
       "name": "OpenRouter Chat Model1",
       "parameters": {
@@ -1086,6 +1189,7 @@
           "name": "Telegram account 3"
         }
       },
+      "disabled": true,
       "id": "43e64512-4131-4a87-87c8-c10fd87c4bb0",
       "name": "Send message and wait for response1",
       "parameters": {
@@ -1104,6 +1208,7 @@
       "webhookId": "feddf02b-190e-4b98-8e58-5270d0af3de4"
     },
     {
+      "disabled": true,
       "id": "78b7a152-c199-475f-9f06-5b03e7ecae05",
       "name": "If1",
       "parameters": {
@@ -1137,6 +1242,7 @@
       "typeVersion": 2.2
     },
     {
+      "disabled": true,
       "id": "23f2276a-998e-4861-a891-4b632e806b5f",
       "name": "Code3",
       "parameters": {
@@ -1150,6 +1256,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "5dd369c4-5760-44e5-9914-3301ee4619d0",
       "name": "Code4",
       "parameters": {
@@ -1163,6 +1270,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "c28ce6e3-709b-40ac-bd58-1be506af7c4b",
       "name": "AI Agent2",
       "parameters": {
@@ -1181,6 +1289,7 @@
       "typeVersion": 2.2
     },
     {
+      "disabled": true,
       "id": "1219f0f9-b514-493c-80be-68f84d1aa9fb",
       "name": "Simple Memory5",
       "parameters": {
@@ -1202,6 +1311,7 @@
           "name": "AutoCreateN8NWorkflow"
         }
       },
+      "disabled": true,
       "id": "10178f87-c104-42a6-af89-314608b47e92",
       "name": "Telegram Trigger",
       "parameters": {
@@ -1225,6 +1335,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "c2aad187-c920-4672-b52d-99100d3b79ad",
       "name": "OpenRouter Chat Model2",
       "parameters": {
@@ -1249,6 +1360,7 @@
           "name": "AutoCreateN8NWorkflow"
         }
       },
+      "disabled": true,
       "id": "e9d0d75a-5554-433d-a16b-dd150146abf2",
       "name": "Send message and wait for response2",
       "parameters": {
@@ -1267,6 +1379,7 @@
       "webhookId": "feddf02b-190e-4b98-8e58-5270d0af3de4"
     },
     {
+      "disabled": true,
       "id": "6c43e217-50c0-4d4d-9428-d596fa9d8922",
       "name": "If2",
       "parameters": {
@@ -1300,6 +1413,7 @@
       "typeVersion": 2.2
     },
     {
+      "disabled": true,
       "id": "38bf26ac-acdd-47f7-adfa-b7c8e33e5993",
       "name": "Code5",
       "parameters": {
@@ -1313,6 +1427,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "ce30e684-4f52-426d-b8e1-7854949ce022",
       "name": "Code6",
       "parameters": {
@@ -1326,6 +1441,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "49737a85-89e0-4579-ac27-a5d7a897a4ad",
       "name": "AI Agent5",
       "parameters": {
@@ -1349,6 +1465,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "400ecc85-d959-475c-b413-591036d4ca6a",
       "name": "OpenRouter Chat Model5",
       "parameters": {
@@ -1367,6 +1484,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "c3c53ce9-71c0-4925-adbe-0d0f70419590",
       "name": "Simple Memory6",
       "parameters": {
@@ -1382,6 +1500,7 @@
       "typeVersion": 1.3
     },
     {
+      "disabled": true,
       "id": "4a222cff-a7b6-40ea-ad4b-c42bac9038e1",
       "name": "AI Agent6",
       "parameters": {
@@ -1405,6 +1524,7 @@
           "name": "OpenRouter account"
         }
       },
+      "disabled": true,
       "id": "0e7859c1-a8a8-4666-85b6-8113020751f0",
       "name": "OpenRouter Chat Model6",
       "parameters": {
@@ -1423,6 +1543,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "3a3ccad4-26e0-47eb-85bb-7fd128ce492e",
       "name": "Simple Memory7",
       "parameters": {
@@ -1444,6 +1565,7 @@
           "name": "AutoCreateN8NWorkflow"
         }
       },
+      "disabled": true,
       "id": "47fb49a2-51c2-40f6-8c5c-27af7112779d",
       "name": "Get a file1",
       "parameters": {
@@ -1460,6 +1582,7 @@
       "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
     },
     {
+      "disabled": true,
       "id": "855c5910-f2f2-4c1a-9efa-a3b13235e77e",
       "name": "Extract from File1",
       "parameters": {
@@ -1474,6 +1597,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "ae964e69-8c7f-42e4-9e60-0c8ace5562de",
       "name": "Code7",
       "parameters": {
@@ -1493,6 +1617,7 @@
           "name": "AutoCreateN8NWorkflow"
         }
       },
+      "disabled": true,
       "id": "5acc086f-4cac-4bd4-b4e2-adb52f6d45b7",
       "name": "Send a document1",
       "parameters": {
@@ -1510,6 +1635,7 @@
       "webhookId": "d5d8b6e2-59e5-469d-9ff6-ade9ba47deaa"
     },
     {
+      "disabled": true,
       "id": "d871ab0e-7fad-4a4e-97bd-c0be1ef5bd7b",
       "name": "XML1",
       "parameters": {
@@ -1528,6 +1654,7 @@
       "typeVersion": 1
     },
     {
+      "disabled": true,
       "id": "8604e9b0-f9cf-49eb-88b3-b68d4eca308b",
       "name": "Set1",
       "parameters": {
@@ -1547,6 +1674,161 @@
         -2640
       ],
       "type": "n8n-nodes-base.set",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "89a4f36a-5151-4c73-9641-c93f3536b79f",
+      "name": "Telegram Trigger1",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -3504,
+        -2160
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "9ae65633-0436-45ee-920d-3b598dfea125"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "6182f2d6-4cff-4dae-b7d3-8928657f08c9",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        -3360,
+        -2160
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "f5ecc49a-f7e5-4390-9086-c2dad12cf6cc"
+    },
+    {
+      "id": "fb57db3e-26e2-4544-a775-49b0207f16f1",
+      "name": "Extract from File",
+      "parameters": {
+        "operation": "xml",
+        "options": {}
+      },
+      "position": [
+        -3216,
+        -2160
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "b5765fd4-a738-4bd7-af90-c06887e194f5",
+      "name": "XML",
+      "parameters": {
+        "dataPropertyName": "=xml",
+        "options": {
+          "explicitRoot": true,
+          "mergeAttrs": false
+        }
+      },
+      "position": [
+        -2928,
+        -2160
+      ],
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1
+    },
+    {
+      "id": "494a0168-d9d5-4240-815e-97ccbe52d6b7",
+      "name": "Set",
+      "parameters": {
+        "keepOnlySet": true,
+        "options": {},
+        "values": {
+          "string": [
+            {
+              "name": "xml",
+              "value": "={{ $json.data }}"
+            }
+          ]
+        }
+      },
+      "position": [
+        -3072,
+        -2160
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1
+    },
+    {
+      "id": "fcd48b20-25ce-49a1-a207-8a41d3b161b2",
+      "name": "AI Agent",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=## Роль:\n\nЯ — технический ассистент, помогающий разработчику n8n создавать понятные и надёжные инструкции.\n\n## Контекст:\n\nПосле экспорта BPMN-схемы в JSON требуется проверить корректность структуры и соответствие стандартным элементам n8n (nodes, connections, параметры). Это важно, чтобы избежать ошибок при загрузке в n8n и сэкономить время на отладку.\n\n## Задача:\n\nПроверить JSON-файл, полученный после конвертации BPMN, и убедиться, что он соответствует требованиям n8n (наличие обязательных полей, корректность связей и формата).\n\n## Входные данные:\n\n– JSON-файл, полученный после конвертации BPMN\n– Список обязательных полей n8n workflow (например: nodes, connections, name, type, parameters)\n\n## Формат ответа:\n\nMarkdown с чек-листом и примерами кода для проверки.\n\n## Стиль:\n\nСухо, деловой и по делу.\n\n## Требования:\n\n– Язык: русский\n– Добавь примеры кода (Node.js/Python) для валидации JSON\n– Ссылки на официальные доки n8n и BPMN\n\n## Примеры плохого и хорошего ответа:\n\nПлохо: *\"Просто проверьте JSON на ошибки.\"*\nХорошо:\n\"1. Убедитесь, что в JSON есть ключ nodes.\n2\\. Проверьте, что каждый node содержит поля id, name, type.\n3\\. В connections должны быть корректные ссылки на существующие id узлов.\n\nimport json\n\nwith open(\"workflow.json\") as f:\n    data = json.load(f)\n\nassert \"nodes\" in data, \"Нет блока nodes\"\nfor node in data[\"nodes\"]:\n    assert \"id\" in node, f\"Нет id в {node}\"\n    assert \"type\" in node, f\"Нет type в {node}\"\n\n## Финальный чек-лист:\n\n– Проверены обязательные поля (nodes, connections, name, type, parameters)?\n– Все id в connections соответствуют узлам?\n– Есть хотя бы один стартовый node (например, Trigger)?\n– Формат JSON корректен (валидируется через json.loads)?\n– Примеры кода и ссылки добавлены?\n– Оформлено в Markdown?\n\n## Запрещено:\n\n– Игнорировать ошибки в структуре\n– Придумывать несуществующие поля n8n\n– Добавлять рекламу или сторонние ссылки\n\n## Дополнительные ресурсы:\n\n– [Документация n8n Workflows](https://docs.n8n.io/workflows/)\n– [Официальная документация BPMN](https://www.bpmn.org/)\n– [JSON Schema Validator](https://json-schema.org/)\n\n## Ошибки и их решения (опционально):\n\n– Ошибка: Отсутствует поле connections.\nРешение: Добавьте пустой объект \"connections\": {} в корень JSON.\n\n– Ошибка: Несуществующий id в connections.\nРешение: Проверьте список nodes и исправьте id.\n\n– Ошибка: Неверный формат JSON.\nРешение: Пропустите файл через любой валидатор, например jq или jsonlint."
+        },
+        "promptType": "define",
+        "text": "=Твоя задача проанализировать сконвертированный файл из BPMN в JSON"
+      },
+      "position": [
+        -2768,
+        -2160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "69816901-1184-4c14-9999-07d138960975",
+      "name": "Simple Memory",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger1').item.json.message.from.id }}"
+      },
+      "position": [
+        -2720,
+        -1968
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "bfced6d6-e33e-4097-8d69-6c6b6719c6b9",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "x-ai/grok-code-fast-1",
+        "options": {
+          "responseFormat": "text",
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "position": [
+        -2784,
+        -1968
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1
     }
   ],
@@ -1574,6 +1856,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-09-15T14:33:17.000Z",
-  "versionId": "cc9beff9-b66b-4313-83b1-878b4e23dfe0"
+  "updatedAt": "2025-09-16T12:57:31.000Z",
+  "versionId": "633005c9-53bb-4143-ba69-0a9cdb463418"
 }
