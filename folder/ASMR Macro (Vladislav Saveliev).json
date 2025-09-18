@@ -9,6 +9,13 @@
             "node": "Chat Memory Manager",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items19",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -592,6 +599,18 @@
           {
             "index": 0,
             "node": "Wait6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items19": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Wait7",
             "type": "main"
           }
         ]
@@ -1231,6 +1250,17 @@
         ]
       ]
     },
+    "Wait7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append or update row in sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "YT Tags1": {
       "main": [
         [
@@ -1768,6 +1798,7 @@
       "typeVersion": 4.2
     },
     {
+      "disabled": true,
       "id": "9338e082-d5e1-4860-b8c5-ad6ec6591377",
       "name": "Chat Memory Manager",
       "parameters": {
@@ -2090,6 +2121,7 @@
       },
       "id": "2113928d-5d60-4e9d-a36b-7a4e703b8e3e",
       "name": "Append or update row in sheet",
+      "onError": "continueErrorOutput",
       "parameters": {
         "columns": {
           "attemptToConvertTypes": false,
@@ -4806,23 +4838,53 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "id": "443984f4-94b9-4ff8-859e-8d8870610b56",
+      "name": "Loop Over Items19",
+      "parameters": {
+        "options": {
+          "reset": true
+        }
+      },
+      "position": [
+        -5024,
+        1312
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "abfa786a-8585-4143-a8af-c4ac8166d9a5",
+      "name": "Wait7",
+      "parameters": {
+        "amount": 2,
+        "unit": "minutes"
+      },
+      "position": [
+        -5024,
+        1424
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "0a3418bd-686a-4ffa-adb9-779c0d77902d"
     }
   ],
   "pinData": {
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "06",
-          "Day of week": "Saturday",
+          "Day of month": "17",
+          "Day of week": "Wednesday",
           "Hour": "16",
           "Minute": "00",
           "Month": "September",
-          "Readable date": "September 6th 2025, 4:00:00 pm",
+          "Readable date": "September 17th 2025, 4:00:00 pm",
           "Readable time": "4:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-09-06T16:00:00.010+02:00"
+          "timestamp": "2025-09-17T16:00:00.012+02:00"
         }
       }
     ]
@@ -4858,6 +4920,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-09-06T14:14:43.000Z",
-  "versionId": "fb134871-64c0-4763-942d-7559b3475c3e"
+  "updatedAt": "2025-09-18T06:04:35.000Z",
+  "versionId": "dfe8c92a-3005-407c-9251-48be8d277091"
 }
