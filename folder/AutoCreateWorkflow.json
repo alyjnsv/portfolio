@@ -1,6 +1,17 @@
 {
   "active": false,
   "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "AI Agent1": {
       "main": [
         [
@@ -51,6 +62,28 @@
           {
             "index": 0,
             "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to File",
             "type": "main"
           }
         ]
@@ -150,6 +183,28 @@
           {
             "index": 0,
             "node": "Send a document1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
             "type": "main"
           }
         ]
@@ -290,6 +345,17 @@
         ]
       ]
     },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "OpenRouter Chat Model": {
       "ai_languageModel": [
         [
@@ -351,6 +417,17 @@
           {
             "index": 0,
             "node": "AI Agent2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
             "type": "ai_languageModel"
           }
         ]
@@ -450,6 +527,17 @@
           {
             "index": 0,
             "node": "AI Agent1",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory2": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
             "type": "ai_memory"
           }
         ]
@@ -570,7 +658,7 @@
         [
           {
             "index": 0,
-            "node": "AI Agent",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -603,12 +691,147 @@
         ]
       ]
     },
+    "Анализ гео, вилка": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Согласование вакансии",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Валидация ответа3": {
       "main": [
         [
           {
             "index": 0,
             "node": "Code13",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Включение функции авторазбора": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Формирование отчета",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Занесение вакансии в таблицу": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Анализ гео, вилка",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Исправление вручную": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Размещение вакансии на hh.ru",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Получение заявки": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка брифа на корректность",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка брифа на корректность": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание вакансии на кор.диске",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Доп. вопросы руководителю",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Размещение вакансии на hh.ru": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Создание вакансии softintermob LLC",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Согласование вакансии": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Размещение вакансии на hh.ru",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Исправление вручную",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание вакансии softintermob LLC": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Включение функции авторазбора",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Создание вакансии на кор.диске": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Занесение вакансии в таблицу",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Формирование отчета": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Отправка отчета",
             "type": "main"
           }
         ]
@@ -1692,7 +1915,7 @@
         ]
       },
       "position": [
-        -3504,
+        -3792,
         -2080
       ],
       "type": "n8n-nodes-base.telegramTrigger",
@@ -1714,7 +1937,7 @@
         "resource": "file"
       },
       "position": [
-        -3360,
+        -3648,
         -2080
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1729,7 +1952,7 @@
         "options": {}
       },
       "position": [
-        -3216,
+        -3504,
         -2080
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -1746,7 +1969,7 @@
         }
       },
       "position": [
-        -2928,
+        -3216,
         -2080
       ],
       "type": "n8n-nodes-base.xml",
@@ -1768,7 +1991,7 @@
         }
       },
       "position": [
-        -3072,
+        -3360,
         -2080
       ],
       "type": "n8n-nodes-base.set",
@@ -1780,13 +2003,13 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=## Роль:\n\nЯ — технический ассистент, помогающий разработчику n8n создавать понятные и надёжные инструкции.\n\n## Контекст:\n\nПосле экспорта BPMN-схемы в JSON требуется проверить корректность структуры и соответствие стандартным элементам n8n (nodes, connections, параметры). Это важно, чтобы избежать ошибок при загрузке в n8n и сэкономить время на отладку.\n\n## Задача:\n\nПроверить JSON-файл, полученный после конвертации BPMN, и убедиться, что он соответствует требованиям n8n (наличие обязательных полей, корректность связей и формата).\n\n## Входные данные:\n\n– JSON-файл, полученный после конвертации BPMN\n– Список обязательных полей n8n workflow (например: nodes, connections, name, type, parameters)\n\n## Формат ответа:\n\nMarkdown с чек-листом и примерами кода для проверки.\n\n## Стиль:\n\nСухо, деловой и по делу.\n\n## Требования:\n\n– Язык: русский\n– Добавь примеры кода (Node.js/Python) для валидации JSON\n– Ссылки на официальные доки n8n и BPMN\n\n## Примеры плохого и хорошего ответа:\n\nПлохо: *\"Просто проверьте JSON на ошибки.\"*\nХорошо:\n\"1. Убедитесь, что в JSON есть ключ nodes.\n2\\. Проверьте, что каждый node содержит поля id, name, type.\n3\\. В connections должны быть корректные ссылки на существующие id узлов.\n\nimport json\n\nwith open(\"workflow.json\") as f:\n    data = json.load(f)\n\nassert \"nodes\" in data, \"Нет блока nodes\"\nfor node in data[\"nodes\"]:\n    assert \"id\" in node, f\"Нет id в {node}\"\n    assert \"type\" in node, f\"Нет type в {node}\"\n\n## Финальный чек-лист:\n\n– Проверены обязательные поля (nodes, connections, name, type, parameters)?\n– Все id в connections соответствуют узлам?\n– Есть хотя бы один стартовый node (например, Trigger)?\n– Формат JSON корректен (валидируется через json.loads)?\n– Примеры кода и ссылки добавлены?\n– Оформлено в Markdown?\n\n## Запрещено:\n\n– Игнорировать ошибки в структуре\n– Придумывать несуществующие поля n8n\n– Добавлять рекламу или сторонние ссылки\n\n## Дополнительные ресурсы:\n\n– [Документация n8n Workflows](https://docs.n8n.io/workflows/)\n– [Официальная документация BPMN](https://www.bpmn.org/)\n– [JSON Schema Validator](https://json-schema.org/)\n\n## Ошибки и их решения (опционально):\n\n– Ошибка: Отсутствует поле connections.\nРешение: Добавьте пустой объект \"connections\": {} в корень JSON.\n\n– Ошибка: Несуществующий id в connections.\nРешение: Проверьте список nodes и исправьте id.\n\n– Ошибка: Неверный формат JSON.\nРешение: Пропустите файл через любой валидатор, например jq или jsonlint."
+          "systemMessage": "=## Роль:\n\nЯ — технический ассистент, помогающий разработчику n8n создавать понятные и надёжные инструкции.\n\n## Контекст:\n\nПосле экспорта BPMN-схемы в JSON требуется проверить корректность структуры и соответствие стандартным элементам n8n (nodes, connections, параметры). Это важно, чтобы избежать ошибок при загрузке в n8n и сэкономить время на отладку.\n\n## Задача:\n\nПроверить JSON-файл, полученный после конвертации BPMN, и убедиться, что он соответствует требованиям n8n (наличие обязательных полей, корректность связей и формата).\n\n## Входные данные:\n\n– JSON-файл, полученный после конвертации BPMN\n– Список обязательных полей n8n workflow (например: nodes, connections, name, type, parameters)\n\n## Формат ответа:\n\nMarkdown с чек-листом и примерами кода для проверки.\n\n## Стиль:\n\nСухо, деловой и по делу.\n\n## Требования:\n\n– Язык: русский\n\n## Примеры плохого и хорошего ответа:\n\nПлохо: *\"Просто проверьте JSON на ошибки.\"*\nХорошо:\n1. Убедитесь, что в JSON есть ключ nodes.\n2. Проверьте, что каждый node содержит поля id, name, type.\n3. В connections должны быть корректные ссылки на существующие id узлов.\n\nimport json\n\nwith open(\"workflow.json\") as f:\n    data = json.load(f)\n\nassert \"nodes\" in data, \"Нет блока nodes\"\nfor node in data[\"nodes\"]:\n    assert \"id\" in node, f\"Нет id в {node}\"\n    assert \"type\" in node, f\"Нет type в {node}\"\n\n## Финальный чек-лист:\n\n– Проверены обязательные поля (nodes, connections, name, type, parameters)?\n– Все id в connections соответствуют узлам?\n– Есть хотя бы один стартовый node (например, Trigger)?\n– Формат JSON корректен (валидируется через json.loads)?\n– Примеры кода и ссылки добавлены?\n– Оформлено в Markdown?\n\n## Запрещено:\n\n– Игнорировать ошибки в структуре\n– Придумывать несуществующие поля n8n\n– Добавлять рекламу или сторонние ссылки\n\n## Дополнительные ресурсы:\n\n– [Документация n8n Workflows](https://docs.n8n.io/workflows/)\n– [Официальная документация BPMN](https://www.bpmn.org/)\n– [JSON Schema Validator](https://json-schema.org/)\n\n## Ошибки и их решения (опционально):\n\n– Ошибка: Отсутствует поле connections.\nРешение: Добавьте пустой объект \"connections\": {} в корень JSON.\n\n– Ошибка: Несуществующий id в connections.\nРешение: Проверьте список nodes и исправьте id.\n\n– Ошибка: Неверный формат JSON.\nРешение: Пропустите файл через любой валидатор, например jq или jsonlint."
         },
         "promptType": "define",
-        "text": "=Твоя задача проанализировать сконвертированный файл из BPMN в JSON и выдать правильную структуру workflow для n8n в JSON коде, чтобы можно было его скопировать и вставить. "
+        "text": "=Твоя задача проанализировать JSON код, и испрпвить код на рабочий workflow для N8N. {{ $json.output }}\n\nВАЖНО! Пиши только код который можно вставить."
       },
       "position": [
-        -2768,
+        -2512,
         -2080
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1801,7 +2024,7 @@
         "sessionKey": "={{ $('Telegram Trigger1').item.json.message.from.id }}"
       },
       "position": [
-        -2720,
+        -2448,
         -1888
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
@@ -1817,15 +2040,349 @@
       "id": "bfced6d6-e33e-4097-8d69-6c6b6719c6b9",
       "name": "OpenRouter Chat Model",
       "parameters": {
-        "model": "x-ai/grok-code-fast-1",
+        "model": "anthropic/claude-opus-4.1",
+        "options": {}
+      },
+      "position": [
+        -2512,
+        -1888
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "79f43417-7d65-4e25-9302-a5d135f4df20",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b01572a7-1dd5-4103-bab5-1429cd9962b9",
+              "name": "JSON MBPN",
+              "type": "string",
+              "value": "={{ $json.mxfile }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -3008,
+        -2080
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "uahQsuRxqjcRQnFs",
+          "name": "AutoCreateN8NWorkflow"
+        }
+      },
+      "id": "1353c75f-7733-444e-8c92-56c84b495955",
+      "name": "Send a document",
+      "parameters": {
+        "additionalFields": {},
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        -1808,
+        -2080
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d5d8b6e2-59e5-469d-9ff6-ade9ba47deaa"
+    },
+    {
+      "id": "6cbd984b-9ea1-4f57-af4c-4ec2a7bb1e75",
+      "name": "Convert to File",
+      "parameters": {
+        "operation": "toText",
+        "options": {},
+        "sourceProperty": "output"
+      },
+      "position": [
+        -1968,
+        -2080
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "d635c5cf-bbb2-41de-8970-20a69fa75a1b",
+      "name": "AI Agent3",
+      "parameters": {
         "options": {
-          "responseFormat": "text",
-          "temperature": 0,
-          "topP": 1
+          "systemMessage": "=## Роль:\n\nЯ — технический ассистент, помогающий разработчику n8n создавать понятные и надёжные инструкции.\n\n## Контекст:\n\nПосле экспорта BPMN-схемы в JSON требуется проверить корректность структуры и соответствие стандартным элементам n8n (nodes, connections, параметры). Это важно, чтобы избежать ошибок при загрузке в n8n и сэкономить время на отладку.\n\n## Задача:\n\nПроверить JSON-файл, полученный после конвертации BPMN, и убедиться, что он соответствует требованиям n8n (наличие обязательных полей, корректность связей и формата).\n\n## Входные данные:\n\n– JSON-файл, полученный после конвертации BPMN\n– Список обязательных полей n8n workflow (например: nodes, connections, name, type, parameters)\n\n## Формат ответа:\n\nMarkdown с чек-листом и примерами кода для проверки.\n\n## Стиль:\n\nСухо, деловой и по делу.\n\n## Требования:\n\n– Язык: русский\n\n## Примеры плохого и хорошего ответа:\n\nПлохо: *\"Просто проверьте JSON на ошибки.\"*\nХорошо:\n1. Убедитесь, что в JSON есть ключ nodes.\n2. Проверьте, что каждый node содержит поля id, name, type.\n3. В connections должны быть корректные ссылки на существующие id узлов.\n\nimport json\n\nwith open(\"workflow.json\") as f:\n    data = json.load(f)\n\nassert \"nodes\" in data, \"Нет блока nodes\"\nfor node in data[\"nodes\"]:\n    assert \"id\" in node, f\"Нет id в {node}\"\n    assert \"type\" in node, f\"Нет type в {node}\"\n\n## Финальный чек-лист:\n\n– Проверены обязательные поля (nodes, connections, name, type, parameters)?\n– Все id в connections соответствуют узлам?\n– Есть хотя бы один стартовый node (например, Trigger)?\n– Формат JSON корректен (валидируется через json.loads)?\n– Примеры кода и ссылки добавлены?\n– Оформлено в Markdown?\n\n## Запрещено:\n\n– Игнорировать ошибки в структуре\n– Придумывать несуществующие поля n8n\n– Добавлять рекламу или сторонние ссылки\n\n## Дополнительные ресурсы:\n\n– [Документация n8n Workflows](https://docs.n8n.io/workflows/)\n– [Официальная документация BPMN](https://www.bpmn.org/)\n– [JSON Schema Validator](https://json-schema.org/)\n\n## Ошибки и их решения (опционально):\n\n– Ошибка: Отсутствует поле connections.\nРешение: Добавьте пустой объект \"connections\": {} в корень JSON.\n\n– Ошибка: Несуществующий id в connections.\nРешение: Проверьте список nodes и исправьте id.\n\n– Ошибка: Неверный формат JSON.\nРешение: Пропустите файл через любой валидатор, например jq или jsonlint."
+        },
+        "promptType": "define",
+        "text": "=Твоя задача проанализировать сконвертированный файл из BPMN в XML и выдать правильный код-структуру workflow для n8n в JSON коде, чтобы можно было его скопировать и вставить. {{ $json['JSON MBPN'] }}\n\nВАЖНО! Пиши только код который можно вставить."
+      },
+      "position": [
+        -2800,
+        -2080
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "4761f87e-2ed2-46f2-b8ab-fc6bb59c1ce9",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -2752,
+        -1888
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "91c40450-f250-44ac-bc5b-9905db810101",
+      "name": "Получение заявки",
+      "parameters": {},
+      "position": [
+        -1600,
+        -2096
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "2f1a6912-9bc3-4e58-8747-dc9e1882fed0",
+      "name": "Проверка брифа на корректность",
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "operation": "equals",
+              "value1": "={{$json.briefComplete}}",
+              "value2": "true"
+            }
+          ]
         }
       },
       "position": [
-        -2784,
+        -1408,
+        -2096
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1
+    },
+    {
+      "id": "fe756ed3-3a0a-4179-9a33-44036f4e095c",
+      "name": "Доп. вопросы руководителю",
+      "parameters": {
+        "jsCode": "// Отправка дополнительных вопросов руководителю\nconst questions = [\n  'Укажите точный размер заработной платы',\n  'Уточните требования к опыту работы',\n  'Какой график работы предполагается?'\n];\n\nreturn [{\n  json: {\n    status: 'questions_sent',\n    questions: questions,\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "position": [
+        -1200,
+        -2208
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ddd666cd-ba96-4b2d-a470-96ce67763fb9",
+      "name": "Создание вакансии на кор.диске",
+      "parameters": {
+        "jsCode": "// Создание вакансии на корпоративном диске\nconst vacancy = {\n  title: $input.first().json.position || 'Новая вакансия',\n  department: $input.first().json.department || '',\n  description: $input.first().json.description || '',\n  requirements: $input.first().json.requirements || [],\n  salary: $input.first().json.salary || '',\n  created_at: new Date().toISOString(),\n  drive_link: 'https://drive.google.com/file/d/1qH1IxkSdXB62L4GA0eqvilE5zkz7HyyM/view'\n};\n\nreturn [{\n  json: vacancy\n}];"
+      },
+      "position": [
+        -1200,
+        -2000
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "e892e088-2da9-444b-8d9a-5cbd04427edd",
+      "name": "Занесение вакансии в таблицу",
+      "parameters": {
+        "jsCode": "// Занесение вакансии в таблицу матрица с видами оплат\nconst tableData = {\n  vacancy_id: Math.random().toString(36).substr(2, 9),\n  position: $input.first().json.title || '',\n  department: $input.first().json.department || '',\n  salary_type: 'fixed',\n  salary_amount: $input.first().json.salary || '',\n  sheet_link: 'https://docs.google.com/spreadsheets/d/1wURHWiF59HP0ScP6_y2nM7WRAQskn4v0oHXn2N6cMHs/edit#gid=1242964478',\n  row_number: Math.floor(Math.random() * 100) + 1\n};\n\nreturn [{\n  json: tableData\n}];"
+      },
+      "position": [
+        -1008,
+        -2000
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "728d3e8b-53c7-43d6-8e11-b5117e5ec1e7",
+      "name": "Анализ гео, вилка",
+      "parameters": {
+        "jsCode": "// Анализ гео публикации и определение вилки зарплаты\nconst locations = ['Москва', 'Санкт-Петербург', 'Удаленно'];\nconst selectedLocation = locations[Math.floor(Math.random() * locations.length)];\n\nconst salaryRanges = {\n  'Москва': { min: 150000, max: 250000 },\n  'Санкт-Петербург': { min: 120000, max: 200000 },\n  'Удаленно': { min: 100000, max: 180000 }\n};\n\nconst analysis = {\n  location: selectedLocation,\n  salary_range: salaryRanges[selectedLocation],\n  currency: 'RUB',\n  competitors_count: Math.floor(Math.random() * 50) + 10,\n  recommended_publish: true\n};\n\nreturn [{\n  json: { ...($input.first().json), analysis }\n}];"
+      },
+      "position": [
+        -800,
+        -2000
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "7d6002a9-5921-4104-83ff-e8f9c3e38e50",
+      "name": "Согласование вакансии",
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.approved}}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "position": [
+        -608,
+        -1904
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1
+    },
+    {
+      "id": "39a35680-9201-4f31-8fea-8bc3e95d1d06",
+      "name": "Исправление вручную",
+      "parameters": {
+        "jsCode": "// Исправление вакансии вручную\nconst correctedVacancy = {\n  ...$input.first().json,\n  status: 'manually_corrected',\n  corrected_at: new Date().toISOString(),\n  approved: true\n};\n\nreturn [{\n  json: correctedVacancy\n}];"
+      },
+      "position": [
+        -608,
+        -1696
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "bdb8de14-76df-403b-8652-f059ef2a7152",
+      "name": "Размещение вакансии на hh.ru",
+      "parameters": {
+        "jsCode": "// Размещение вакансии на hh.ru\nconst hhVacancy = {\n  title: $input.first().json.title || '',\n  company: 'Наша компания',\n  description: $input.first().json.description || '',\n  salary: $input.first().json.analysis?.salary_range || {},\n  location: $input.first().json.analysis?.location || 'Москва',\n  employment: 'full',\n  schedule: 'fullDay',\n  published_at: new Date().toISOString(),\n  hh_id: 'HH' + Math.random().toString(36).substr(2, 9).toUpperCase()\n};\n\nreturn [{\n  json: hhVacancy\n}];"
+      },
+      "position": [
+        -400,
+        -1904
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "e3790d51-a1bd-4064-8afd-2ce5ce3ceb04",
+      "name": "Создание вакансии softintermob LLC",
+      "parameters": {
+        "jsCode": "// Создание вакансии на hh.ru в разделе softintermob LLC\nconst softintermobVacancy = {\n  ...$input.first().json,\n  company: 'softintermob LLC',\n  section: 'IT',\n  visibility: 'public',\n  auto_publish: true,\n  created_at: new Date().toISOString()\n};\n\nreturn [{\n  json: softintermobVacancy\n}];"
+      },
+      "position": [
+        -208,
+        -1904
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "99f223a9-df18-4c3a-b47d-5b6bc464dc88",
+      "name": "Включение функции авторазбора",
+      "parameters": {
+        "jsCode": "// Настройка авторазбора откликов на hh.ru\nconst autoParseSettings = {\n  enabled: true,\n  vacancy_id: $input.first().json.hh_id || '',\n  filters: {\n    min_experience: 2,\n    max_experience: 10,\n    keywords: ['JavaScript', 'Node.js', 'n8n'],\n    exclude_keywords: ['junior', 'intern']\n  },\n  auto_reject_threshold: 30,\n  auto_approve_threshold: 80,\n  notification_email: 'hr@company.com'\n};\n\nreturn [{\n  json: {\n    ...$input.first().json,\n    auto_parse: autoParseSettings\n  }\n}];"
+      },
+      "position": [
+        0,
+        -1904
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "53553571-a3c9-4743-87c7-9ea45b3ca240",
+      "name": "Формирование отчета",
+      "parameters": {
+        "jsCode": "// Формирование отчета по вакансии\nconst report = {\n  report_id: 'REP' + Date.now(),\n  vacancy: $input.first().json.title || 'Вакансия',\n  company: $input.first().json.company || '',\n  location: $input.first().json.location || '',\n  salary_range: $input.first().json.salary || {},\n  hh_id: $input.first().json.hh_id || '',\n  drive_link: $input.first().json.drive_link || '',\n  table_link: $input.first().json.sheet_link || '',\n  auto_parse_enabled: $input.first().json.auto_parse?.enabled || false,\n  status: 'completed',\n  created_at: new Date().toISOString()\n};\n\nreturn [{\n  json: report\n}];"
+      },
+      "position": [
+        192,
+        -1904
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "e8164050-64a6-4bc0-bd49-d121275e6e25",
+      "name": "Отправка отчета",
+      "parameters": {
+        "jsCode": "// Отправка отчета\nconst finalReport = {\n  ...($input.first().json),\n  sent_to: ['manager@company.com', 'hr@company.com'],\n  sent_at: new Date().toISOString(),\n  status: 'sent'\n};\n\nreturn [{\n  json: finalReport\n}];"
+      },
+      "position": [
+        400,
+        -1904
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "2e66a6b2-5c1a-41a8-b680-e0ac4ace8685",
+      "name": "AI Agent4",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=## Роль:\n\nЯ — технический ассистент, помогающий разработчику n8n создавать понятные и надёжные инструкции.\n\n## Контекст:\n\nПосле экспорта BPMN-схемы в JSON требуется проверить корректность структуры и соответствие стандартным элементам n8n (nodes, connections, параметры). Это важно, чтобы избежать ошибок при загрузке в n8n и сэкономить время на отладку.\n\n## Задача:\n\nПроверить JSON-файл, полученный после конвертации BPMN, и убедиться, что он соответствует требованиям n8n (наличие обязательных полей, корректность связей и формата).\n\n## Входные данные:\n\n– JSON-файл, полученный после конвертации BPMN\n– Список обязательных полей n8n workflow (например: nodes, connections, name, type, parameters)\n\n## Формат ответа:\n\nMarkdown с чек-листом и примерами кода для проверки.\n\n## Стиль:\n\nСухо, деловой и по делу.\n\n## Требования:\n\n– Язык: русский\n\n## Примеры плохого и хорошего ответа:\n\nПлохо: *\"Просто проверьте JSON на ошибки.\"*\nХорошо:\n1. Убедитесь, что в JSON есть ключ nodes.\n2. Проверьте, что каждый node содержит поля id, name, type.\n3. В connections должны быть корректные ссылки на существующие id узлов.\n\nimport json\n\nwith open(\"workflow.json\") as f:\n    data = json.load(f)\n\nassert \"nodes\" in data, \"Нет блока nodes\"\nfor node in data[\"nodes\"]:\n    assert \"id\" in node, f\"Нет id в {node}\"\n    assert \"type\" in node, f\"Нет type в {node}\"\n\n## Финальный чек-лист:\n\n– Проверены обязательные поля (nodes, connections, name, type, parameters)?\n– Все id в connections соответствуют узлам?\n– Есть хотя бы один стартовый node (например, Trigger)?\n– Формат JSON корректен (валидируется через json.loads)?\n– Примеры кода и ссылки добавлены?\n– Оформлено в Markdown?\n\n## Запрещено:\n\n– Игнорировать ошибки в структуре\n– Придумывать несуществующие поля n8n\n– Добавлять рекламу или сторонние ссылки\n\n## Дополнительные ресурсы:\n\n– [Документация n8n Workflows](https://docs.n8n.io/workflows/)\n– [Официальная документация BPMN](https://www.bpmn.org/)\n– [JSON Schema Validator](https://json-schema.org/)\n\n## Ошибки и их решения (опционально):\n\n– Ошибка: Отсутствует поле connections.\nРешение: Добавьте пустой объект \"connections\": {} в корень JSON.\n\n– Ошибка: Несуществующий id в connections.\nРешение: Проверьте список nodes и исправьте id.\n\n– Ошибка: Неверный формат JSON.\nРешение: Пропустите файл через любой валидатор, например jq или jsonlint."
+        },
+        "promptType": "define",
+        "text": "=Твоя задача проанализировать JSON код, и испрпвить код на рабочий workflow для N8N. {{ $json.output }}\n\nВАЖНО! Пиши только код который можно вставить."
+      },
+      "position": [
+        -2240,
+        -2080
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "83aa35b1-b67a-43fd-91d3-3e5a86196722",
+      "name": "Simple Memory2",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger1').item.json.message.from.id }}"
+      },
+      "position": [
+        -2176,
+        -1888
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "05038c78-e227-4dcb-b581-ec7861ec5541",
+      "name": "OpenRouter Chat Model3",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {}
+      },
+      "position": [
+        -2240,
         -1888
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
@@ -1856,6 +2413,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-09-18T13:58:30.000Z",
-  "versionId": "9493884c-03d0-47e5-8473-453b50dbefe4"
+  "updatedAt": "2025-09-19T14:39:30.000Z",
+  "versionId": "e2dc961b-3691-4715-8855-97b1626b10d9"
 }
