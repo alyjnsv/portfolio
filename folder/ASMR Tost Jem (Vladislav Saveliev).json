@@ -9,6 +9,13 @@
             "node": "Chat Memory Manager",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait10",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -1212,6 +1219,17 @@
         ]
       ]
     },
+    "Wait10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append or update row in sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Wait2": {
       "main": [
         [
@@ -2140,6 +2158,7 @@
       },
       "id": "72b15d1b-7e2a-4fa9-ba2e-41b2cc06be11",
       "name": "Append or update row in sheet",
+      "onError": "continueErrorOutput",
       "parameters": {
         "columns": {
           "attemptToConvertTypes": false,
@@ -4901,23 +4920,38 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a33d101c-a4c1-4992-a1db-536eea6dd5da"
+    },
+    {
+      "id": "3786f83e-ed43-4146-ba54-38cc844fcb3a",
+      "name": "Wait10",
+      "parameters": {
+        "amount": 2,
+        "unit": "minutes"
+      },
+      "position": [
+        -4944,
+        1488
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "5d040034-9fab-4447-90eb-9835c5463ff4"
     }
   ],
   "pinData": {
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "28",
-          "Day of week": "Thursday",
+          "Day of month": "19",
+          "Day of week": "Friday",
           "Hour": "15",
           "Minute": "00",
-          "Month": "August",
-          "Readable date": "August 28th 2025, 3:00:00 pm",
+          "Month": "September",
+          "Readable date": "September 19th 2025, 3:00:00 pm",
           "Readable time": "3:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-08-28T15:00:00.012+02:00"
+          "timestamp": "2025-09-19T15:00:00.004+02:00"
         }
       }
     ]
@@ -4953,6 +4987,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T13:49:27.000Z",
-  "versionId": "cbbd7ac9-cb2a-4826-a7c0-fbc5a6d4e94b"
+  "updatedAt": "2025-09-19T13:43:44.000Z",
+  "versionId": "dacada51-d43c-47b2-8f39-e0b026890564"
 }
