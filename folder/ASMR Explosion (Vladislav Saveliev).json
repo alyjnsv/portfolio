@@ -1745,6 +1745,13 @@
             "node": "Get row(s) in sheet",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Жанры",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -2754,6 +2761,7 @@
     {
       "id": "7903cf35-823c-4e90-a63e-c2a0433984cf",
       "name": "Жанры",
+      "onError": "continueErrorOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
@@ -5630,25 +5638,7 @@
       "webhookId": "82555773-06bc-4447-a550-56a22e26d6b2"
     }
   ],
-  "pinData": {
-    "Schedule Trigger1": [
-      {
-        "json": {
-          "Day of month": "01",
-          "Day of week": "Friday",
-          "Hour": "14",
-          "Minute": "00",
-          "Month": "August",
-          "Readable date": "August 1st 2025, 2:00:00 pm",
-          "Readable time": "2:00:00 pm",
-          "Second": "00",
-          "Timezone": "Europe/Warsaw (UTC+02:00)",
-          "Year": "2025",
-          "timestamp": "2025-08-01T14:00:00.005+02:00"
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "errorWorkflow": "3mM0jvFQycOqYesd",
@@ -5680,6 +5670,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-09-10T16:55:42.000Z",
-  "versionId": "b68dba30-85e2-4298-b412-56477ec1cc50"
+  "updatedAt": "2025-09-22T14:39:42.000Z",
+  "versionId": "b24d1774-84f1-4e34-bf9f-ca67c7554cbd"
 }
