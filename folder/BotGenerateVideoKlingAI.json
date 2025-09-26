@@ -1132,7 +1132,7 @@
             }
           ]
         },
-        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt.replace(/\\n/g, '') }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt.replace(/\\n/g, '') }}\",\n\"duration\": \"5\",\n\"image_url\": \"{{ $json.url }}\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -1451,7 +1451,7 @@
             }
           ]
         },
-        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt }}\",\n\"duration\": \"10\",\n\"image_url\": \"{{ $json.data }}\"\n}",
+        "jsonBody": "={\n\"prompt\": \"{{ $('Edit Fields').item.json.Promt }}\",\n\"duration\": \"5\",\n\"image_url\": \"{{ $json.data }}\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -1706,6 +1706,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-10T07:31:13.000Z",
-  "versionId": "d515e7fc-05ef-449a-9cb1-5133abb4aeeb"
+  "updatedAt": "2025-09-26T08:03:42.000Z",
+  "versionId": "b2480c35-3b6f-423f-b03a-b7ac46160ca1"
 }
