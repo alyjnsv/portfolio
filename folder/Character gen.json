@@ -89,6 +89,28 @@
         ]
       ]
     },
+    "Get row(s) in sheet in Google Sheets16": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1_",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet in Google Sheets17": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2_",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
@@ -338,6 +360,28 @@
         ]
       ]
     },
+    "OpenAI Chat Model21": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1_",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model22": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2_",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "Send a text message": {
       "main": [
         [
@@ -513,8 +557,8 @@
         "options": {}
       },
       "position": [
-        -1080,
-        180
+        -1088,
+        192
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -536,8 +580,8 @@
         "options": {}
       },
       "position": [
-        -920,
-        180
+        -928,
+        192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -558,8 +602,8 @@
         "operation": "sendPhoto"
       },
       "position": [
-        2580,
-        280
+        2592,
+        288
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -591,8 +635,8 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        200,
-        180
+        208,
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -604,8 +648,8 @@
         "amount": 60
       },
       "position": [
-        580,
-        180
+        592,
+        192
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -629,8 +673,8 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request').item.json.request_id }}"
       },
       "position": [
-        760,
-        180
+        768,
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -644,8 +688,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        940,
-        180
+        944,
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -677,7 +721,7 @@
       },
       "position": [
         1280,
-        180
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -692,7 +736,7 @@
       },
       "position": [
         1120,
-        180
+        192
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
@@ -726,8 +770,8 @@
         "options": {}
       },
       "position": [
-        1460,
-        180
+        1472,
+        192
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -742,7 +786,7 @@
         }
       },
       "position": [
-        1720,
+        1728,
         320
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -760,8 +804,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        1940,
-        340
+        1952,
+        352
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -785,7 +829,7 @@
       },
       "position": [
         400,
-        180
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -816,8 +860,8 @@
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -140,
-        180
+        -96,
+        192
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -838,8 +882,8 @@
         ]
       },
       "position": [
-        -1620,
-        180
+        -1616,
+        192
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
@@ -849,7 +893,7 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "730174cd-c6c0-4ea9-9109-7b583840919e",
@@ -859,8 +903,8 @@
         "options": {}
       },
       "position": [
-        -120,
-        340
+        -80,
+        352
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -882,8 +926,8 @@
         "text": "Проверка промта."
       },
       "position": [
-        -300,
-        180
+        -304,
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -900,8 +944,8 @@
         "text": "={{ $json.text }}"
       },
       "position": [
-        -700,
-        180
+        -704,
+        192
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -925,7 +969,7 @@
         "options": {}
       },
       "position": [
-        -680,
+        -688,
         400
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -949,7 +993,7 @@
       },
       "position": [
         400,
-        340
+        352
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -972,8 +1016,8 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        940,
-        340
+        944,
+        352
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1050,8 +1094,8 @@
         }
       },
       "position": [
-        -1220,
-        180
+        -1216,
+        192
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -1092,8 +1136,8 @@
         }
       },
       "position": [
-        -1480,
-        180
+        -1488,
+        192
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -1128,7 +1172,7 @@
       },
       "position": [
         -1360,
-        180
+        192
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1159,7 +1203,7 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        200,
+        208,
         560
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1172,7 +1216,7 @@
         "amount": 60
       },
       "position": [
-        580,
+        592,
         560
       ],
       "type": "n8n-nodes-base.wait",
@@ -1197,7 +1241,7 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
-        760,
+        768,
         560
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1212,7 +1256,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        940,
+        944,
         560
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1294,7 +1338,7 @@
         "options": {}
       },
       "position": [
-        1460,
+        1472,
         560
       ],
       "type": "n8n-nodes-base.if",
@@ -1310,8 +1354,8 @@
         }
       },
       "position": [
-        1720,
-        700
+        1728,
+        704
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -1328,7 +1372,7 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        1940,
+        1952,
         720
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1368,7 +1412,7 @@
       },
       "position": [
         1760,
-        540
+        544
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -1384,7 +1428,7 @@
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -140,
+        -144,
         560
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1394,7 +1438,7 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
       "id": "df9710bb-be2d-4c85-b69f-8c16e15a061e",
@@ -1404,7 +1448,7 @@
         "options": {}
       },
       "position": [
-        -120,
+        -128,
         720
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
@@ -1451,7 +1495,7 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        940,
+        944,
         720
       ],
       "type": "n8n-nodes-base.telegram",
@@ -1463,11 +1507,173 @@
       "name": "Merge",
       "parameters": {},
       "position": [
-        2420,
-        280
+        2432,
+        288
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
+    },
+    {
+      "id": "bcd10b02-3b15-45f7-949a-66cb713f0f52",
+      "name": "Get row(s) in sheet in Google Sheets16",
+      "parameters": {
+        "descriptionType": "manual",
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "Каталог_автоматизаций_n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист9",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit#gid=1471533551",
+          "mode": "list",
+          "value": 1471533551
+        },
+        "toolDescription": "Get row(s) in sheet in Google Sheets"
+      },
+      "position": [
+        48,
+        16
+      ],
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "b6822b50-aa74-4d98-8972-97e54df9cb45",
+      "name": "Sticky Note16",
+      "parameters": {
+        "content": "Character gen"
+      },
+      "position": [
+        -96,
+        -288
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "5559de87-be3e-40bc-b0c6-550f308efe21",
+      "name": "OpenAI Chat Model21",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -96,
+        16
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "c9616d75-4fa8-4812-b1e3-914742745e2b",
+      "name": "Get row(s) in sheet in Google Sheets17",
+      "parameters": {
+        "descriptionType": "manual",
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "Каталог_автоматизаций_n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист9",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit#gid=1471533551",
+          "mode": "list",
+          "value": 1471533551
+        },
+        "toolDescription": "Get row(s) in sheet in Google Sheets"
+      },
+      "position": [
+        400,
+        16
+      ],
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "bbd9cb11-f172-49ff-9785-397878d74585",
+      "name": "Sticky Note17",
+      "parameters": {
+        "content": "Character gen"
+      },
+      "position": [
+        256,
+        -288
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "8b35092b-12bf-4ca4-85e7-3a223c87303f",
+      "name": "OpenAI Chat Model22",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        256,
+        16
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "388fe725-0e9c-4ca5-85a8-c0ec8d714773",
+      "name": "AI Agent1_",
+      "parameters": {
+        "options": {
+          "systemMessage": "=Ты — AI агент в n8n.\n\nТекущий воркфлоу называется: \"{{ $workflow.name }}\"\nТвоя нода называется: \"AI Agent1\"\n\nУ тебя есть доступ к инструменту (tool) Google Sheets с колонками:\n- workflowName\n- nodeName\n- prompt\n\nТвоя задача:\n1. Используй название воркфлоу \"{{ $workflow.name }}\" и название ноды \"AI Agent1\".\n2. Обратись к Google Sheets tool и найди строку, где workflowName = \"{{ $workflow.name }}\" и nodeName = \"AI Agent1\".\n3. Возьми содержимое из колонки \"prompt\".\n4. **Немедленно выполни эту инструкцию** для текста, который уже передан в поле \"{{ $json.comment}}\". \n5. Не задавай уточняющих вопросов и не ожидай подтверждения — просто выполняй найденный prompt.\n6. Если подходящей строки нет — верни только: \"❌ Промпт для [{{ $workflow.name }} → обработка текста] не найден\".\n"
+        },
+        "promptType": "define",
+        "text": "=Текст для анализа: \"{{ $json.comment }}\""
+      },
+      "position": [
+        -96,
+        -128
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "fd71bee1-0f07-461e-9514-d19f4f240bcc",
+      "name": "AI Agent2_",
+      "parameters": {
+        "options": {
+          "systemMessage": "=Ты — AI агент в n8n.\n\nТекущий воркфлоу называется: \"{{ $workflow.name }}\"\nТвоя нода называется: \"AI Agent2\"\n\nУ тебя есть доступ к инструменту (tool) Google Sheets с колонками:\n- workflowName\n- nodeName\n- prompt\n\nТвоя задача:\n1. Используй название воркфлоу \"{{ $workflow.name }}\" и название ноды \"AI Agent2\".\n2. Обратись к Google Sheets tool и найди строку, где workflowName = \"{{ $workflow.name }}\" и nodeName = \"AI Agent2\".\n3. Возьми содержимое из колонки \"prompt\".\n4. **Немедленно выполни эту инструкцию** для текста, который уже передан в поле \"{{ $json.comment}}\". \n5. Не задавай уточняющих вопросов и не ожидай подтверждения — просто выполняй найденный prompt.\n6. Если подходящей строки нет — верни только: \"❌ Промпт для [{{ $workflow.name }} → обработка текста] не найден\".\n"
+        },
+        "promptType": "define",
+        "text": "=Текст для анализа: \"{{ $json.comment }}\""
+      },
+      "position": [
+        256,
+        -128
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
     }
   ],
   "pinData": {},
@@ -1493,6 +1699,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-09-25T22:00:00.706Z",
-  "versionId": "9f386ab0-6206-43c6-b1ff-39573ef0ddf0"
+  "updatedAt": "2025-09-26T22:00:00.596Z",
+  "versionId": "5483a4a7-a20e-4727-b598-95ce8561f26f"
 }
