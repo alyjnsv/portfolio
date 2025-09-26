@@ -1,0 +1,2641 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Date & Time",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ChatGPT Web Search Tool": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent5",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "ChatGPT Web Search Tool1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent6",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send message \"Дописать\"/\"Анализ\"",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task2": {
+      "main": [
+        []
+      ]
+    },
+    "Create Technical Task3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Formatted Date",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "ai_document"
+          }
+        ]
+      ]
+    },
+    "Download file1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload a file",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
+    "Formatted Date": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a document": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message4",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send message and wait for response3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent5",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent6",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "index": 0,
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter"
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        []
+      ]
+    },
+    "Send message \"Дописать\"/\"Анализ\"": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory4": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent3",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Simple Memory5": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Analyze document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Download file1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a document",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-26T06:53:12.332Z",
+  "id": "S5pWq8OACSQ9jZvH",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Strateg bot",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "disabled": true,
+      "id": "3828aef5-d240-4185-a8ad-f6aca7399b90",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message",
+          "callback_query"
+        ]
+      },
+      "position": [
+        -1328,
+        80
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "328ff5c3-2bc9-4d36-bff4-495f4035c072"
+    },
+    {
+      "id": "a7479bea-bc35-453f-b80d-44a83428434c",
+      "maxTries": 4,
+      "name": "AI Agent",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "batching": {},
+          "maxIterations": 15,
+          "systemMessage": "=Ты - помощник по сбору данных для анализа дела о плагиате. \n\nПроанализируй полученное сообщение пользователя проверь наличие данных указанных ниже, чтобы собрать всю необходимую информацию перед тем как данные пойдут на подробный анализ.\n\n1. Какие обязательные данные уже предоставлены\n2. Какие данные отсутствуют\n3. Какой следующий вопрос задать пользователю\n\nПроанализируй полученное сообщение пользователя проверь наличие данных указанных ниже.\n\nОБЯЗАТЕЛЬНЫЕ ДАННЫЕ:\n- Цель и критерии победы\n- Оригинальный контент (название, ссылка, дата публикации)\n- Предполагаемый плагиат (название, ссылка, автор, дата)\n- Платформа (YouTube/Steam/другое)\n- Хронология событий (таймлайн)\n- Документы и артефакты\n- Ограничения (бюджет, сроки)\n\nПринцип формирования ответа после анализа:\n- Твой ответ должен передавать пользователю информацию о том, что не хватило из списка ОБЯЗАТЕЛЬНЫЕ ДАННЫЕ.\n- Твоя задча после анализа запросить у пользователя все ОБЯЗАТЕЛЬНЫЕ ДАННЫЕ и дать критически ёмкое сообщение имеющее достаточное количество контмекста для запроса недостающих данных.\nВ конце ответа укажи, какие данные получены, для этого используй \"✅\"\n- В скобках указывай кратко: если есть информация \"✅\" и в скобках описание что было предоставнено.\n- Ставь \"📛\", если данных мало и укажи что нужно предоставить. \n- Артефакты, которые прикрепляет пользователь (названия, номера, ссылки и тд.) ОБЯЗАТЕЛЬНО сохраняй в том же виде. \n\nПример ответа:\n• ✅ - Цель и критерии победы (разобраться в следсвии)\n• ✅ - Оригинальный контент (видео youtube)\n• 📛 - Предполагаемый плагиат (предоставьте данные связанное с описанием плагиата)\n• ✅ - Платформа (YouTube/Steam/другое)\n• ✅ - Хронология событий (получено сообщение о нарушении)\n• ✅ - Документы и артефакты (ссылка на видео)\n• ✅ - Ограничения (бюджет 200 000 $)\n\nПредоставте недостающие данные или нажмите \"Сбор данных\" для начала поиска.\n\nПри формировании итогового ответа учти:\n- output: это сообщение для пользователя\n- data: это данные которые потом нужно будет проанализировать (обычно это ссылки, например на видео, таблицы и тд.)\n\nФОРМАТ ОТВЕТА JSON:\n[\n{\n\t\"output\": \"твой ответ\"\n},\n{\n    \"data\": \"данные для анализа, которые предоставил пользователь, например ссылка на видео\"\n},\n{\n    \"data\": \"данные для анализа\"\n}\n]\n\nЕсли данных нет:\n[\n{\n\t\"output\": \"твой ответ\"\n},\n    \"data\": \"null\"\n  }\n]\n\nВАЖНО:\n* Не добавляй комментарии, которые не касаются твоей задачи.\n* Предоставляй краткие сообщения с контекстом, чтобы собрать информацию от пользователя.\n* Не добавляй символ * в свой ответ."
+        },
+        "promptType": "define",
+        "text": "={{$json.message.text}}"
+      },
+      "position": [
+        -976,
+        80
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "d9ef4527-8abc-40b4-9882-bb222cd522d5",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -1088,
+        336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "78ce8970-4ee6-46ba-becf-18a516da0008",
+      "name": "Simple Memory",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
+      },
+      "position": [
+        -944,
+        336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "8278ab4e-c60b-4af3-aa2d-b113db021c42",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9e2f67bc-e2a5-4d3e-8f57-7c6866ef2c27",
+              "leftValue": "={{ $json.data.approved }}",
+              "operator": {
+                "operation": "true",
+                "singleValue": true,
+                "type": "boolean"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        656,
+        80
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "75a1f76f-01e3-4e53-ad1e-b27db4f912c7",
+      "name": "Send message and wait for response1",
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "message": "Предоставьте дополнительный контекст",
+        "operation": "sendAndWait",
+        "options": {
+          "appendAttribution": false
+        },
+        "responseType": "freeText"
+      },
+      "position": [
+        944,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8ed928e3-d409-4a28-a30d-e5ce83f96560"
+    },
+    {
+      "id": "20105f3c-860e-4697-adea-08347ec45712",
+      "maxTries": 4,
+      "name": "AI Agent1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "batching": {},
+          "maxIterations": 15,
+          "systemMessage": "=Ты AI агент n8n, который дособирает информацию за первым агентом, который ранее отправил пользователю сообщение: \"Ответ первого агента:\".\n\nТвоя задача дособрать полученную информацию пользователя, для этого у тебя есть память с перепиской и полученный контест от пользователя: \"Дописанный контест пользователем\". Из памяти в приоритет ставь последние отправленные сообщения\n\nДалее действуй по инструкции:\nПроанализируй полученное сообщение пользователя проверь наличие данных указанных ниже, чтобы собрать всю необходимую информацию перед тем как данные пойдут на подробный анализ.\n\nТебе требуется учесть описанный пользователем контекст и внедрить его в сруктуру \"ОБЯЗАТЕЛЬНЫЕ ДАННЫЕ\".\n\n1. Какие обязательные данные уже предоставлены\n2. Какие данные отсутствуют\n3. Какой следующий вопрос задать пользователю\n\nПроанализируй полученное сообщение пользователя проверь наличие данных указанных ниже.\n\nОБЯЗАТЕЛЬНЫЕ ДАННЫЕ:\n- Цель и критерии победы\n- Оригинальный контент (название, ссылка, дата публикации)\n- Предполагаемый плагиат (название, ссылка, автор, дата)\n- Платформа (YouTube/Steam/другое)\n- Хронология событий (таймлайн)\n- Документы и артефакты\n- Ограничения (бюджет, сроки)\n\nПринцип формирования ответа после анализа:\n- Твой ответ должен передавать пользователю информацию о том, что не хватило из списка ОБЯЗАТЕЛЬНЫЕ ДАННЫЕ.\n- Твоя задча после анализа запросить у пользователя все ОБЯЗАТЕЛЬНЫЕ ДАННЫЕ и дать критически ёмкое сообщение имеющее достаточное количество контмекста для запроса недостающих данных.\nВ конце ответа укажи, какие данные получены, для этого используй \"✅\"\n- В скобках указывай кратко: если есть информация \"✅\" и в скобках описание что было предоставнено.\n- Ставь \"📛\", если данных мало и укажи что нужно предоставить. \n- Артефакты, которые прикрепляет пользователь (названия, номера, ссылки и тд.) ОБЯЗАТЕЛЬНО сохраняй в том же виде. \n\nПример ответа:\n• ✅ - Цель и критерии победы (разобраться в следсвии)\n• ✅ - Оригинальный контент (видео youtube)\n• 📛 - Предполагаемый плагиат (предоставьте данные связанное с описанием плагиата)\n• ✅ - Платформа (YouTube/Steam/другое)\n• ✅ - Хронология событий (получено сообщение о нарушении)\n• ✅ - Документы и артефакты (ссылка на видео)\n• ✅ - Ограничения (бюджет 200 000 $)\n\nПредоставте недостающие данные или нажмите \"Сбор данных\" для начала поиска.\n\nПри формировании итогового ответа учти:\n- output: это сообщение для пользователя\n- data: это данные которые потом нужно будет проанализировать (обычно это ссылки, например на видео, таблицы и тд.)\n\nФОРМАТ ОТВЕТА JSON:\n[\n{\n\t\"output\": \"твой ответ\"\n},\n{\n    \"data\": \"данные для анализа, которые предоставил пользователь, например ссылка на видео\"\n},\n{\n    \"data\": \"данные для анализа\"\n}\n]\n\nВАЖНО:\n* Не добавляй комментарии, которые не касаются твоей задачи.\n* Предоставляй краткие сообщения с контекстом, чтобы собрать информацию от пользователя.\n* Не добавляй символ * в свой ответ.\n* Выполняй к памяти один запрос."
+        },
+        "promptType": "define",
+        "text": "=Ответ первого агента:\n{{ $('AI Agent').item.json.output }}\n\nДописанный контест пользователем:\n{{ $json.data.text }}"
+      },
+      "position": [
+        1168,
+        80
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "7c8d93ad-c04e-4a92-9573-c213217ae043",
+      "name": "Google Gemini Chat Model1",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        1056,
+        304
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "231b8575-dbcc-47d5-bd98-aa8c5ada7b37",
+      "name": "Simple Memory1",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
+      },
+      "position": [
+        1200,
+        304
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "98129e94-1f04-4d9d-aa77-b820ce30e77b",
+      "name": "Send message and wait for response2",
+      "parameters": {
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double",
+            "approveLabel": "⬇️ Запустить анализ",
+            "disapproveLabel": "📃 Дописать"
+          }
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "message": "=Ваш запрос был дополнен и соответсвует следующим критериям:\n\n{{ $json.output[0].output }}",
+        "operation": "sendAndWait",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "position": [
+        1552,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8ed928e3-d409-4a28-a30d-e5ce83f96560"
+    },
+    {
+      "id": "5cc3c533-d261-49c5-87b4-e6af58bac470",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9e2f67bc-e2a5-4d3e-8f57-7c6866ef2c27",
+              "leftValue": "={{ $json.data.approved }}",
+              "operator": {
+                "operation": "true",
+                "singleValue": true,
+                "type": "boolean"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1840,
+        80
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "7154884a-45de-4c27-92a0-3afa4d5fe03e",
+      "name": "Send message and wait for response3",
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "message": "Предоставьте дополнительный контекст",
+        "operation": "sendAndWait",
+        "options": {
+          "appendAttribution": false
+        },
+        "responseType": "freeText"
+      },
+      "position": [
+        2096,
+        192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8ed928e3-d409-4a28-a30d-e5ce83f96560"
+    },
+    {
+      "id": "4ed21971-7fe7-4ad7-a7a4-bc1b080d7616",
+      "name": "Sticky Note",
+      "parameters": {
+        "color": 7,
+        "content": "## Спрашиваем оправлять или дописать",
+        "height": 480,
+        "width": 320
+      },
+      "position": [
+        128,
+        -96
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "629b0496-6b13-4e21-b4e2-95677ef62d82",
+      "name": "Send message \"Дописать\"/\"Анализ\"",
+      "parameters": {
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double",
+            "approveLabel": "⬇️ Запустить анализ",
+            "disapproveLabel": "📃 Дописать"
+          }
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "message": "=Ваш запрос соответсвует следующим критериям:\n\n{{ $('AI Agent').item.json.output[0].output }}",
+        "operation": "sendAndWait",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "position": [
+        240,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8ed928e3-d409-4a28-a30d-e5ce83f96560"
+    },
+    {
+      "id": "91620e1b-967e-41d7-a1fd-2ff0bdd5cf76",
+      "name": "Structured Output Parser",
+      "parameters": {
+        "jsonSchemaExample": "[\n{\n\t\"output\": \"string\"\n},\n{\n    \"data\": \"string\"\n},\n{\n    \"data\": \"null\"\n}\n]"
+      },
+      "position": [
+        -816,
+        336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "6b3f1bf8-3339-429b-bbe7-7381afb44d5f",
+      "name": "AI Agent3",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true,
+          "systemMessage": "=Ты AI агент n8n, который сортирует информацию из полученного контекста. Веди себя как опытный аналитик данных, которые имеют особую ценность, поэтому важно собрать весь материал и не упустить никаких деталей. \n\nТвоя задача сформировать рапот из полученной информации: \"Собранные данные\", \"Артефакты для проверки\".\n\nДанные:\n- Так же у тебя есть память с перепиской, в которой ранее информация была добыта. Изучай полученный контест из памяти тоже.\n- Ты получиль текстовый файл для анализа, используй его контекст для ВТОРОГО раздела.\n\nДалее действуй по инструкции:\nТебе нужно составить наполнение для одного текстового документа. В него входит 2 блока:\n- Первый: НАЗВАНИЕ \"Основной материал\": структурировано подаёт весь контекст из переписки и сасое важное \"Собранные данные\", где уже оформлена вся важная информация\n- Второй: НАЗВАНИЕ \"Артефакты\": сюда укажи сам актефакт, например ссылку и дай краткое описание. (Пример: Ссылка на видео с yt: string)\n\nФОРМАТ РАПОРТА:\n\nОБЯЗАТЕЛЬНЫЕ ДАННЫЕ:\n- Цель и критерии победы\n- Оригинальный контент (название, ссылка, дата публикации)\n- Предполагаемый плагиат (название, ссылка, автор, дата)\n- Платформа (YouTube/Steam/другое)\n- Хронология событий (таймлайн)\n- Документы и артефакты\n- Ограничения (бюджет, сроки)\n\nПри формировании ответа обязательно изучи весь приложенный материал и составь подробынй рапорт. \n\nВАЖНО:\n* Выполняй к памяти один запрос.\n* Ты обязан расписать всё очень подробно, чтобы в дальнейшем не упустить никаких деталей."
+        },
+        "promptType": "define",
+        "text": "={{ $('AI Agent').item.json.output[0].output }}"
+      },
+      "position": [
+        1376,
+        -336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "bf07a627-2062-4995-87a3-72c3fbc0c869",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "27785db9-a7fc-444b-b75d-c00c1a0c3f29",
+              "leftValue": "={{ $('AI Agent').item.json.output[0].data }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        128,
+        -336
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "b3213278-464a-4e22-a528-97650f559687",
+      "name": "Structured Output Parser1",
+      "parameters": {
+        "jsonSchemaExample": "[\n{\n\t\"output\": \"string\"\n},\n{\n    \"data\": \"string\"\n},\n{\n    \"data\": \"string\"\n}\n]"
+      },
+      "position": [
+        1344,
+        304
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "ae51b742-ff8e-4baf-ab66-e1636eeeeb90",
+      "name": "Create Technical Task1",
+      "parameters": {
+        "content": "=пустой",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://drive.google.com/drive/folders/1dcXXCxqAZMtTSPCHug43vq5AiHGUAExv"
+        },
+        "name": "=База данных: {{ $json.formattedDateTimeShort }}",
+        "operation": "createFromText",
+        "options": {
+          "convertToGoogleDocument": false
+        }
+      },
+      "position": [
+        -176,
+        80
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "executeOnce": true,
+      "id": "48a23242-e862-46e3-8ed5-e6e12c523f54",
+      "name": "Date & Time",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        -544,
+        80
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "id": "68e5bb46-2437-4c0b-9bbd-cb31b0a6d30c",
+      "name": "Formatted Date",
+      "parameters": {
+        "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
+      },
+      "position": [
+        -352,
+        80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "a589d6fe-c9f5-43d9-9fc7-2cdd3baaf197",
+      "name": "Create Technical Task2",
+      "parameters": {
+        "changeFileContent": true,
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "newUpdatedFileName": "=База данных: {{ $('Formatted Date').item.json.formattedDateTimeShort }}",
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        784,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "a2e03243-0a67-42fa-a7ce-23cfe8ebcabc",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16e9958d-8f76-4156-a620-f8d67264007b",
+              "name": "myText",
+              "type": "string",
+              "value": "={{ $('AI Agent').item.json.output[0].data }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        368,
+        -336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "86f09d5c-5092-4dab-86cf-e7a4aa8cc478",
+      "name": "Code",
+      "parameters": {
+        "jsCode": "// Получаем входные данные из предыдущего узла\nconst items = $input.all();\n\n// Проходим по каждому элементу (item)\nfor (const item of items) {\n  // 1. Берем текст из поля 'myText', которое мы создали в узле Set\n  const textToConvert = item.json.myText;\n\n  // 2. Преобразуем строку в Buffer (бинарное представление) с кодировкой UTF-8\n  const binaryData = Buffer.from(textToConvert, 'utf8');\n\n  // 3. Возвращаем результат в специальном формате, который n8n понимает как бинарные данные.\n  // Важно, чтобы бинарные данные находились в свойстве с именем 'data'.\n  item.binary = {\n    data: binaryData\n  };\n}\n\n// Возвращаем измененные элементы\nreturn items;"
+      },
+      "position": [
+        576,
+        -336
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "32053195-71fa-455b-ae39-7f122c4ed947",
+      "name": "Create Technical Task3",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        1168,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "d3b35011-19c9-4071-b4a3-588d0d6748db",
+      "name": "Simple Memory4",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
+      },
+      "position": [
+        1504,
+        -144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "0a94fbcd-6b20-4a4b-aaab-9c633005d8d0",
+      "name": "Create Technical Task4",
+      "parameters": {
+        "changeFileContent": true,
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "newUpdatedFileName": "=База данных: {{ $('Formatted Date').item.json.formattedDateTimeShort }}",
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2096,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "a1851bda-59a4-4c85-8dd9-ce0f837ae95c",
+      "name": "Code1",
+      "parameters": {
+        "jsCode": "// Получаем входные данные из предыдущего узла\nconst items = $input.all();\n\n// Проходим по каждому элементу (item)\nfor (const item of items) {\n  // 1. Берем текст из поля 'myText', которое мы создали в узле Set\n  const textToConvert = item.json.myText;\n\n  // 2. Преобразуем строку в Buffer (бинарное представление) с кодировкой UTF-8\n  const binaryData = Buffer.from(textToConvert, 'utf8');\n\n  // 3. Возвращаем результат в специальном формате, который n8n понимает как бинарные данные.\n  // Важно, чтобы бинарные данные находились в свойстве с именем 'data'.\n  item.binary = {\n    data: binaryData\n  };\n}\n\n// Возвращаем измененные элементы\nreturn items;"
+      },
+      "position": [
+        1920,
+        -336
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "9f5df13b-3090-44e7-9236-464b1c46d09c",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16e9958d-8f76-4156-a620-f8d67264007b",
+              "name": "myText",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1712,
+        -336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "8bcb570b-16ac-4892-9270-88f0a2ef8ae2",
+      "name": "Google Gemini Chat Model4",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.6
+        }
+      },
+      "position": [
+        1360,
+        -160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "27e7923b-ebb0-46d9-9d0b-7cb8bfd74b88",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "position": [
+        2560,
+        -144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "f045302a-beeb-44a7-8508-2b0b5cb4cc9b",
+      "name": "ChatGPT Web Search Tool",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "jsonBody": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('JSON', `{\n  \"model\": \"gpt-4.1\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\"\n    }\n  ],\n  \"input\": \"Твой запрос\"\n} `, 'json') }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "toolDescription": "Используй этот инструмент для поиска информации в интернете для уточнения и подтверждения других запросов.\nChatGPT с вебпоиском\nвики для поиска - https://theriagames.com/last-war-survival-wiki/",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "position": [
+        2784,
+        -144
+      ],
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ffbf47dd-d16e-4f46-9310-52d06e635d8a",
+      "name": "AI Agent5",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true,
+          "systemMessage": "=Ты судебный эксперт с 40 летним опытом по этой должности, твоя задача точно провести разбор полученного документа и разузнать всё подробности, а затем вынести вердикт.\n\nТы должен каждый факт ставить под сомнение и проверять его обративнишь в инструмент: \"ChatGPT Web Search Tool\" для поиска доставерной информации.\n\nЕсли какая-то информация отсутсвует, то ищи её в интернете самостоятельно.\n\nТы обязан:\n- Проследить за тайм лайном всех событий в их естественном порядке.\n- Изучить все известные и найденные коммуникации встреч и переписок.\n- Разыскать судебные экспертизы по делу.\n- Сформировать стратегию, болагоря которой удастся обыграть аппонента.\n- Вычисли % победы над апонентом.\n\nПо итогу изучения материала по вышеописанным пунктам предоставь готовый ответ в виде судебного отчёта с вышеописанными данными.\n\nДля поиска информации обязательно используй инструмент: \"ChatGPT Web Search Tool\"\n\nВАЖНО:\n* Используй поиск в интерете, тк это ключевой шаг в поиске необходимой информации пот делу.\n* По каждому недостающему вопросу ты обязан обратиться в инструмент: \"ChatGPT Web Search Tool\" для поиска информации в интернете.\n* Если поиска в интеренете по делу не было, то ответ явяляется неверным.\n* В ответе не используй символ * и #."
+        },
+        "promptType": "define",
+        "text": "={{ $('AI Agent').item.json.output[0].output }}"
+      },
+      "position": [
+        2560,
+        -336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "86935c94-83cc-43c5-b68e-97efa9b7c3ac",
+      "name": "Create Technical Task5",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        2320,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "6bba95f9-e3a0-4468-9294-729aded2a941",
+      "name": "AI Agent4",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true,
+          "systemMessage": "=Ты AI агент n8n, который сортирует информацию из полученного контекста. Веди себя как опытный аналитик данных, которые имеют особую ценность, поэтому важно собрать весь материал и не упустить никаких деталей. \n\nТвоя задача сформировать рапот из полученной информации: \"Собранные данные\", \"Артефакты для проверки\".\n\nДанные:\n- Так же у тебя есть память с перепиской, в которой ранее информация была добыта. Изучай полученный контест из памяти тоже.\n- Ты получиль текстовый файл для анализа, используй его контекст для ВТОРОГО раздела.\n\nДалее действуй по инструкции:\nТебе нужно составить наполнение для одного текстового документа. В него входит 2 блока:\n- Первый: НАЗВАНИЕ \"Основной материал\": структурировано подаёт весь контекст из переписки и сасое важное \"Собранные данные\", где уже оформлена вся важная информация\n- Второй: НАЗВАНИЕ \"Артефакты\": сюда укажи сам актефакт, например ссылку и дай краткое описание. (Пример: Ссылка на видео с yt: string)\n\nФОРМАТ РАПОРТА:\n\nОБЯЗАТЕЛЬНЫЕ ДАННЫЕ:\n- Цель и критерии победы\n- Оригинальный контент (название, ссылка, дата публикации)\n- Предполагаемый плагиат (название, ссылка, автор, дата)\n- Платформа (YouTube/Steam/другое)\n- Хронология событий (таймлайн)\n- Документы и артефакты\n- Ограничения (бюджет, сроки)\n\nПри формировании ответа обязательно изучи весь приложенный материал и составь подробынй рапорт. \n\nВАЖНО:\n* Выполняй к памяти один запрос.\n* Ты обязан расписать всё очень подробно, чтобы в дальнейшем не упустить никаких деталей."
+        },
+        "promptType": "define",
+        "text": "={{ $('AI Agent').item.json.output[0].output }}"
+      },
+      "position": [
+        2592,
+        80
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "1ccf5473-ea3a-426d-9709-e8ae5d8e82ae",
+      "name": "Create Technical Task",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        2384,
+        80
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "2c14e838-afd5-44d0-8a87-dc45319a73b5",
+      "name": "Simple Memory5",
+      "parameters": {
+        "contextWindowLength": 100,
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
+      },
+      "position": [
+        2704,
+        272
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "969a4096-24f0-4d9a-809c-0acaa74744b0",
+      "name": "Create Technical Task6",
+      "parameters": {
+        "changeFileContent": true,
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "newUpdatedFileName": "=База данных: {{ $('Formatted Date').item.json.formattedDateTimeShort }}",
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        3312,
+        80
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "30771ea0-b97d-4ac7-aec2-0129b4455da5",
+      "name": "Code2",
+      "parameters": {
+        "jsCode": "// Получаем входные данные из предыдущего узла\nconst items = $input.all();\n\n// Проходим по каждому элементу (item)\nfor (const item of items) {\n  // 1. Берем текст из поля 'myText', которое мы создали в узле Set\n  const textToConvert = item.json.myText;\n\n  // 2. Преобразуем строку в Buffer (бинарное представление) с кодировкой UTF-8\n  const binaryData = Buffer.from(textToConvert, 'utf8');\n\n  // 3. Возвращаем результат в специальном формате, который n8n понимает как бинарные данные.\n  // Важно, чтобы бинарные данные находились в свойстве с именем 'data'.\n  item.binary = {\n    data: binaryData\n  };\n}\n\n// Возвращаем измененные элементы\nreturn items;"
+      },
+      "position": [
+        3136,
+        80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "813f65f5-cb42-497b-a14e-e80fcaf7b82e",
+      "name": "Edit Fields2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16e9958d-8f76-4156-a620-f8d67264007b",
+              "name": "myText",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2928,
+        80
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "e65128e3-ded4-41ef-8978-44a63ac44b57",
+      "name": "Google Gemini Chat Model5",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.6
+        }
+      },
+      "position": [
+        2560,
+        256
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "7c2d9d9f-105c-4f61-9f0d-573be29e5fc0",
+      "name": "OpenAI Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "position": [
+        3776,
+        272
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "cbf5cd7a-a6c3-4cfc-b3c9-2b1710442b6f",
+      "name": "ChatGPT Web Search Tool1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "jsonBody": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('JSON', `{\n  \"model\": \"gpt-4.1\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\"\n    }\n  ],\n  \"input\": \"Твой запрос\"\n} `, 'json') }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "toolDescription": "Используй этот инструмент для поиска информации в интернете для уточнения и подтверждения других запросов.\nChatGPT с вебпоиском\nвики для поиска - https://theriagames.com/last-war-survival-wiki/",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "position": [
+        3984,
+        272
+      ],
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "db4dea23-9f92-446f-8600-f4a1b583d48c",
+      "name": "AI Agent6",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true,
+          "systemMessage": "=Ты судебный эксперт с 40 летним опытом по этой должности, твоя задача точно провести разбор полученного документа и разузнать всё подробности, а затем вынести вердикт.\n\nТы должен каждый факт ставить под сомнение и проверять его обративнишь в инструмент: \"ChatGPT Web Search Tool\" для поиска доставерной информации.\n\nЕсли какая-то информация отсутсвует, то ищи её в интернете самостоятельно.\n\nТы обязан:\n- Проследить за тайм лайном всех событий в их естественном порядке.\n- Изучить все известные и найденные коммуникации встреч и переписок.\n- Разыскать судебные экспертизы по делу.\n- Сформировать стратегию, болагоря которой удастся обыграть аппонента.\n- Вычисли % победы над апонентом.\n\nПо итогу изучения материала по вышеописанным пунктам предоставь готовый ответ в виде судебного отчёта с вышеописанными данными.\n\nДля поиска информации обязательно используй инструмент: \"ChatGPT Web Search Tool\"\n\nВАЖНО:\n* Используй поиск в интерете, тк это ключевой шаг в поиске необходимой информации пот делу.\n* По каждому недостающему вопросу ты обязан обратиться в инструмент: \"ChatGPT Web Search Tool\" для поиска информации в интернете.\n* Если поиска в интеренете по делу не было, то ответ явяляется неверным.\n* В ответе не используй символ * и #.\n"
+        },
+        "promptType": "define",
+        "text": "={{ $('AI Agent').item.json.output[0].output }}"
+      },
+      "position": [
+        3776,
+        80
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "80d5327d-b5e1-46c1-9e7c-716b9fd0d11a",
+      "name": "Create Technical Task7",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        3536,
+        80
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "26ce492b-7190-466b-a51a-cdd534afd3c7",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $json.message.from.id }}",
+        "text": "🔄️ В работе..."
+      },
+      "position": [
+        -1088,
+        -304
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "dc2d1679-0269-475a-968b-145c6aaa2c1f"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "419bdb58-f951-4a0c-83ac-25b3de052d2f",
+      "name": "Send a text message1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "🔄️ В работе..."
+      },
+      "position": [
+        1168,
+        -144
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "dc2d1679-0269-475a-968b-145c6aaa2c1f"
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "9504eaac-1808-47d5-9cff-08d62fbe2cdd",
+      "name": "Create Technical Task8",
+      "parameters": {
+        "changeFileContent": true,
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "newUpdatedFileName": "=База данных: {{ $('Formatted Date').item.json.formattedDateTimeShort }}",
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        4560,
+        80
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "fdc3ae5e-3a50-4131-b419-8f56c499fdc2",
+      "name": "Code3",
+      "parameters": {
+        "jsCode": "// Получаем входные данные из предыдущего узла\nconst items = $input.all();\n\n// Проходим по каждому элементу (item)\nfor (const item of items) {\n  // 1. Берем текст из поля 'myText', которое мы создали в узле Set\n  const textToConvert = item.json.myText;\n\n  // 2. Преобразуем строку в Buffer (бинарное представление) с кодировкой UTF-8\n  const binaryData = Buffer.from(textToConvert, 'utf8');\n\n  // 3. Возвращаем результат в специальном формате, который n8n понимает как бинарные данные.\n  // Важно, чтобы бинарные данные находились в свойстве с именем 'data'.\n  item.binary = {\n    data: binaryData\n  };\n}\n\n// Возвращаем измененные элементы\nreturn items;"
+      },
+      "position": [
+        4352,
+        80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "7707aafd-90dd-49d1-969e-827f48e4d609",
+      "name": "Edit Fields3",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16e9958d-8f76-4156-a620-f8d67264007b",
+              "name": "myText",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        4160,
+        80
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "313f0233-bd21-437b-bce9-2669bee2d1c4",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "=Ваш документ с анализом:\n{{ $json.doc_link }}"
+      },
+      "position": [
+        4976,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "dc2d1679-0269-475a-968b-145c6aaa2c1f"
+    },
+    {
+      "id": "7ab0aee6-0613-49df-b443-2dfc4c25eff4",
+      "name": "Edit Fields4",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "11db2e72-2079-48ee-8219-c68ed7bac46c",
+              "name": "doc_link",
+              "type": "string",
+              "value": "=https://drive.google.com/file/d/{{ $json.id }}/view?usp=sharing"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        4784,
+        80
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "7538c33d-7218-4832-b7e5-6146fbf0f829",
+      "name": "Create Technical Task9",
+      "parameters": {
+        "changeFileContent": true,
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create Technical Task1').item.json.id }}"
+        },
+        "newUpdatedFileName": "=База данных: {{ $('Formatted Date').item.json.formattedDateTimeShort }}",
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        3360,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "2fdff037-be51-45ef-b535-3e44f989e498",
+      "name": "Code4",
+      "parameters": {
+        "jsCode": "// Получаем входные данные из предыдущего узла\nconst items = $input.all();\n\n// Проходим по каждому элементу (item)\nfor (const item of items) {\n  // 1. Берем текст из поля 'myText', которое мы создали в узле Set\n  const textToConvert = item.json.myText;\n\n  // 2. Преобразуем строку в Buffer (бинарное представление) с кодировкой UTF-8\n  const binaryData = Buffer.from(textToConvert, 'utf8');\n\n  // 3. Возвращаем результат в специальном формате, который n8n понимает как бинарные данные.\n  // Важно, чтобы бинарные данные находились в свойстве с именем 'data'.\n  item.binary = {\n    data: binaryData\n  };\n}\n\n// Возвращаем измененные элементы\nreturn items;"
+      },
+      "position": [
+        3152,
+        -336
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "27794c53-14e7-4f44-8d79-f3375af8b2ab",
+      "name": "Edit Fields5",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16e9958d-8f76-4156-a620-f8d67264007b",
+              "name": "myText",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2960,
+        -336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "e2c5f892-40d4-465e-882e-557bbc2b4872",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "=Ваш документ с анализом:\n{{ $json.doc_link }}"
+      },
+      "position": [
+        3776,
+        -336
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "dc2d1679-0269-475a-968b-145c6aaa2c1f"
+    },
+    {
+      "id": "309968d8-0ece-436b-9e01-b2f38feeec0a",
+      "name": "Edit Fields6",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "11db2e72-2079-48ee-8219-c68ed7bac46c",
+              "name": "doc_link",
+              "type": "string",
+              "value": "=https://drive.google.com/file/d/{{ $json.id }}/view?usp=sharing"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        3584,
+        -336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "0YrSUEgCG6U9WEEG",
+          "name": "strateg_tactical_bot"
+        }
+      },
+      "id": "6cf14bec-1bfc-4144-9d76-4f92f31251b8",
+      "name": "Send a text message4",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "🔄️ В работе..."
+      },
+      "position": [
+        2096,
+        -144
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "dc2d1679-0269-475a-968b-145c6aaa2c1f"
+    },
+    {
+      "id": "80831f15-e608-4d46-bbc1-583f17d20699",
+      "name": "Sticky Note1",
+      "parameters": {
+        "color": 7,
+        "content": "## Первичная обработка ответа пользователя",
+        "height": 576,
+        "width": 480
+      },
+      "position": [
+        -1136,
+        -96
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "14f47db0-1904-4bc9-ac73-748cfbf509be",
+      "name": "Sticky Note2",
+      "parameters": {
+        "color": 6,
+        "content": "",
+        "height": 1184,
+        "width": 6752
+      },
+      "position": [
+        -1472,
+        -544
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "1a4ca185-215f-4130-894a-adc0d9cb6074",
+      "name": "Sticky Note3",
+      "parameters": {
+        "color": 7,
+        "content": "## Создание пустого документа",
+        "height": 480,
+        "width": 592
+      },
+      "position": [
+        -592,
+        -96
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "9730d045-38fa-4622-bb9f-863fd615038d",
+      "name": "Sticky Note4",
+      "parameters": {
+        "color": 7,
+        "content": "## Заполняем данные артефактами",
+        "height": 288,
+        "width": 944
+      },
+      "position": [
+        80,
+        -432
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "097851ab-8d29-4e2f-8a11-81ce05ab9a10",
+      "name": "Sticky Note5",
+      "parameters": {
+        "color": 7,
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n## Блок доработки по желанию пользователя\n",
+        "height": 480,
+        "width": 1392
+      },
+      "position": [
+        896,
+        32
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "adfeb941-e5b3-453f-96be-de253c853f29",
+      "name": "Sticky Note6",
+      "parameters": {
+        "color": 7,
+        "content": "## Обработка результатов с поиском в интернете",
+        "height": 448,
+        "width": 1824
+      },
+      "position": [
+        1072,
+        -432
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "3e94a1fa-d6b2-4371-b586-45d05d0d098e",
+      "name": "Sticky Note7",
+      "parameters": {
+        "color": 7,
+        "content": "## Обработка результатов с поиском в интернете",
+        "height": 480,
+        "width": 1808
+      },
+      "position": [
+        2304,
+        32
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "9e462822-c112-4467-8a45-a356c498cc8c",
+      "name": "Sticky Note8",
+      "parameters": {
+        "color": 7,
+        "content": "## Финальный вывод",
+        "height": 480,
+        "width": 1072
+      },
+      "position": [
+        4128,
+        32
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "7d153ac7-5eaf-4c13-afa5-0051c20e18e1",
+      "name": "Sticky Note9",
+      "parameters": {
+        "color": 7,
+        "content": "## Финальный вывод",
+        "height": 448,
+        "width": 1072
+      },
+      "position": [
+        2912,
+        -432
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "c1a34913-0998-45f7-b2ce-f5e22aa8ae22",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -1472,
+        1568
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "815a4080-765c-40bd-b3eb-b431a9f408f3",
+      "name": "AI Agent2",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true
+        },
+        "promptType": "define",
+        "text": "=Ты получил объёмный текстовый файл, расскажи, такая огромная куча текста читабельна для тебя?\nСможешь собрать все имена персонажей из этого текста? Если нет, то расскажи почему.\n\nТебе запрещено искать контекст в интерете или где либо ещё. Изучай информацию только из документа."
+      },
+      "position": [
+        592,
+        1808
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "178db8d6-f0b3-4a6f-b67c-6a7c8b557966",
+      "name": "Google Gemini Chat Model2",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        544,
+        2048
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "7ad458f7-edcc-490c-8d4e-be7893a3a372",
+      "name": "OpenAI Chat Model2",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        1568,
+        2240
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "ffe294ac-d126-4a87-80c0-8c639f9103cc",
+      "name": "Upload file",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1Bt-dE0wVaJD5OWL8T1d-7y0UnDr-eVBY"
+        },
+        "name": "=voina-i-mir",
+        "options": {}
+      },
+      "position": [
+        1440,
+        1792
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "OkH8dso5q8ZT5CFW",
+          "name": "N8N Bot"
+        }
+      },
+      "id": "4ec32c66-bbf0-4e2d-971b-cb0175f3364a",
+      "name": "Download file1",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        1616,
+        1792
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "798f75ac-144f-4361-b0f2-e38a24d0fe88",
+      "name": "Upload a file",
+      "parameters": {
+        "inputType": "binary",
+        "resource": "file"
+      },
+      "position": [
+        1792,
+        1792
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "99ddccab-4a52-4fce-8aa7-81f975b1be35",
+      "name": "Analyze document",
+      "parameters": {
+        "documentUrls": "={{ $json.fileUri }}",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-pro",
+          "mode": "list",
+          "value": "models/gemini-2.5-pro"
+        },
+        "options": {},
+        "resource": "document"
+      },
+      "position": [
+        1968,
+        1792
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "pineconeApi": {
+          "id": "VpCLvVFOcQQaxLfb",
+          "name": "Strateg_bot"
+        }
+      },
+      "id": "280e50bd-7ae3-4887-ab89-f92ba0aac73e",
+      "name": "Pinecone Vector Store",
+      "parameters": {
+        "embeddingBatchSize": 400,
+        "mode": "insert",
+        "options": {
+          "clearNamespace": false
+        },
+        "pineconeIndex": {
+          "__rl": true,
+          "cachedResultName": "test-index",
+          "mode": "list",
+          "value": "test-index"
+        }
+      },
+      "position": [
+        -864,
+        1568
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "TeJoupiuKVAuyWb3",
+          "name": "GPT"
+        }
+      },
+      "id": "6474461f-e937-468e-a568-863367dd8f32",
+      "name": "Embeddings OpenAI",
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {
+          "batchSize": 100,
+          "dimensions": 1024
+        }
+      },
+      "position": [
+        -912,
+        1744
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "92b71702-9715-429a-bea6-f3415a735d87",
+      "name": "Default Data Loader",
+      "parameters": {
+        "options": {},
+        "textSplittingMode": "custom"
+      },
+      "position": [
+        -736,
+        1744
+      ],
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "20007fcf-5bb3-462f-ba90-702588b60793",
+      "name": "Recursive Character Text Splitter",
+      "parameters": {
+        "chunkOverlap": 250,
+        "chunkSize": 500,
+        "options": {}
+      },
+      "position": [
+        -736,
+        1904
+      ],
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "NHrybki4LfVJeaKs",
+          "name": "My First Project - bbigi1327@gmail.com"
+        }
+      },
+      "id": "25edcfbc-c21e-4f87-94c3-07d7c5f6a9b5",
+      "name": "Get a document",
+      "parameters": {
+        "documentURL": "1VK4c552yjJU2OTcwU2slgfEdfQV5svlwhFZazSqtN2Q",
+        "operation": "get"
+      },
+      "position": [
+        -1280,
+        1568
+      ],
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2
+    },
+    {
+      "id": "33e0fbea-73f1-468d-b17b-39e6e99edd12",
+      "name": "Edit Fields7",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "86fd8a5a-8aa0-4a7d-b854-6251594a025f",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1072,
+        1568
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    }
+  ],
+  "pinData": {
+    "Upload file": [
+      {
+        "json": {
+          "capabilities": {
+            "canAcceptOwnership": false,
+            "canAddChildren": false,
+            "canAddMyDriveParent": false,
+            "canChangeCopyRequiresWriterPermission": true,
+            "canChangeItemDownloadRestriction": true,
+            "canChangeSecurityUpdateEnabled": false,
+            "canChangeViewersCanCopyContent": true,
+            "canComment": true,
+            "canCopy": true,
+            "canDelete": true,
+            "canDisableInheritedPermissions": false,
+            "canDownload": true,
+            "canEdit": true,
+            "canEnableInheritedPermissions": true,
+            "canListChildren": false,
+            "canModifyContent": true,
+            "canModifyContentRestriction": true,
+            "canModifyEditorContentRestriction": true,
+            "canModifyLabels": false,
+            "canModifyOwnerContentRestriction": true,
+            "canMoveChildrenWithinDrive": false,
+            "canMoveItemIntoTeamDrive": true,
+            "canMoveItemOutOfDrive": true,
+            "canMoveItemWithinDrive": true,
+            "canReadLabels": false,
+            "canReadRevisions": true,
+            "canRemoveChildren": false,
+            "canRemoveContentRestriction": false,
+            "canRemoveMyDriveParent": true,
+            "canRename": true,
+            "canShare": true,
+            "canTrash": true,
+            "canUntrash": true
+          },
+          "copyRequiresWriterPermission": false,
+          "createdTime": "2025-09-26T13:23:06.345Z",
+          "downloadRestrictions": {
+            "effectiveDownloadRestrictionWithContext": {
+              "restrictedForReaders": false,
+              "restrictedForWriters": false
+            },
+            "itemDownloadRestriction": {
+              "restrictedForReaders": false,
+              "restrictedForWriters": false
+            }
+          },
+          "explicitlyTrashed": false,
+          "fileExtension": "",
+          "fullFileExtension": "",
+          "hasThumbnail": false,
+          "headRevisionId": "0B6tMFC4s8MZEVUpCWVBtemNaWHpGMzA3Um5STG9wVHJoNTJNPQ",
+          "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "id": "1rqZ_1ly5VnmO602hFIwdtclvFAFdpz0G",
+          "inheritedPermissionsDisabled": false,
+          "isAppAuthorized": true,
+          "kind": "drive#file",
+          "lastModifyingUser": {
+            "displayName": "N8N Bot",
+            "emailAddress": "n8nsoftintermob@gmail.com",
+            "kind": "drive#user",
+            "me": true,
+            "permissionId": "14431930671574059540",
+            "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocJLycDEpLpYomTFClHKTyPMYXvGqIKPKseKq82s7uA7PRRqFA=s64"
+          },
+          "linkShareMetadata": {
+            "securityUpdateEligible": false,
+            "securityUpdateEnabled": true
+          },
+          "md5Checksum": "78eaf37eac7cf3cb3411a3e09fb18363",
+          "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "modifiedByMe": true,
+          "modifiedByMeTime": "2025-09-26T13:23:07.010Z",
+          "modifiedTime": "2025-09-26T13:23:07.010Z",
+          "name": "voina-i-mir",
+          "originalFilename": "Untitled",
+          "ownedByMe": true,
+          "owners": [
+            {
+              "displayName": "N8N Bot",
+              "emailAddress": "n8nsoftintermob@gmail.com",
+              "kind": "drive#user",
+              "me": true,
+              "permissionId": "14431930671574059540",
+              "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocJLycDEpLpYomTFClHKTyPMYXvGqIKPKseKq82s7uA7PRRqFA=s64"
+            }
+          ],
+          "permissionIds": [
+            "anyoneWithLink",
+            "15716881100686218456",
+            "14431930671574059540"
+          ],
+          "permissions": [
+            {
+              "allowFileDiscovery": false,
+              "id": "anyoneWithLink",
+              "kind": "drive#permission",
+              "role": "writer",
+              "type": "anyone"
+            },
+            {
+              "deleted": false,
+              "displayName": "videoprodmulti",
+              "emailAddress": "videoprodmulti@gmail.com",
+              "id": "15716881100686218456",
+              "kind": "drive#permission",
+              "pendingOwner": false,
+              "role": "writer",
+              "type": "user"
+            },
+            {
+              "deleted": false,
+              "displayName": "n8nsoftintermob",
+              "emailAddress": "n8nsoftintermob@gmail.com",
+              "id": "14431930671574059540",
+              "kind": "drive#permission",
+              "pendingOwner": false,
+              "role": "owner",
+              "type": "user"
+            }
+          ],
+          "quotaBytesUsed": "4021035",
+          "sha1Checksum": "c5d493314a4aa4d2e77e6f13d54aa37fe0db8aa4",
+          "sha256Checksum": "0ca8d29f9d1d198c87688931c19e95901be481cd5984f5de80851ca696f26afe",
+          "shared": true,
+          "size": "4021035",
+          "spaces": [
+            "drive"
+          ],
+          "starred": false,
+          "thumbnailVersion": "0",
+          "trashed": false,
+          "version": "2",
+          "viewedByMe": false,
+          "viewersCanCopyContent": true,
+          "webContentLink": "https://drive.google.com/uc?id=1rqZ_1ly5VnmO602hFIwdtclvFAFdpz0G&export=download",
+          "webViewLink": "https://docs.google.com/document/d/1rqZ_1ly5VnmO602hFIwdtclvFAFdpz0G/edit?usp=drivesdk&ouid=106787840463382528901&rtpof=true&sd=true",
+          "writersCanShare": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-09-26T06:53:12.340Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-09-26T06:53:12.340Z",
+      "workflowId": "S5pWq8OACSQ9jZvH"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-26T15:08:54.000Z",
+  "versionId": "92c8ea84-f896-41c3-9c54-739b40268c89"
+}
