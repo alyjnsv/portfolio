@@ -1,0 +1,225 @@
+{
+  "active": false,
+  "connections": {
+    "Delete a workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Replace Me",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get many workflows": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Delete a workflow",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get many workflows",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-29T12:13:44.105Z",
+  "id": "bURs1I3CyIirMBFS",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "pylesos",
+  "nodes": [
+    {
+      "id": "77b0c7e3-6875-4a35-9f03-0c90b0048cb3",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        352,
+        -192
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "n8nApi": {
+          "id": "CenJbENup2Y8PYN2",
+          "name": "n8n account 2"
+        }
+      },
+      "id": "ea4fba47-6569-476d-93b2-c34b34a1bd9d",
+      "name": "Get many workflows",
+      "parameters": {
+        "filters": {
+          "excludePinnedData": true
+        },
+        "limit": 200,
+        "requestOptions": {},
+        "returnAll": false
+      },
+      "position": [
+        560,
+        -192
+      ],
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1
+    },
+    {
+      "id": "07736ea7-5ff8-4fad-8c36-52d134ecfbc1",
+      "name": "Filter",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "fe3bed4a-2b22-4921-9c9a-4b2cb5efc159",
+              "leftValue": "={{ $json.updatedAt }}",
+              "operator": {
+                "operation": "before",
+                "type": "dateTime"
+              },
+              "rightValue": "2025-08-01T00:00:00"
+            },
+            {
+              "id": "0d66f39b-53f3-4e03-b6a3-2eddebe9e7ea",
+              "leftValue": "={{ $json.name }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "My workflow"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        848,
+        -192
+      ],
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "bcba5a31-2709-468d-a287-e549bff6005f",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        1056,
+        -192
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "ce3b1935-62d9-45a5-973b-bae975d4934f",
+      "name": "Replace Me",
+      "parameters": {},
+      "position": [
+        1744,
+        -80
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "n8nApi": {
+          "id": "CenJbENup2Y8PYN2",
+          "name": "n8n account 2"
+        }
+      },
+      "id": "6cf5b70a-0e92-49f9-a9a8-5a1cf99ead3c",
+      "name": "Delete a workflow",
+      "parameters": {
+        "operation": "delete",
+        "requestOptions": {},
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        }
+      },
+      "position": [
+        1408,
+        -96
+      ],
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-09-29T12:13:44.111Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-09-29T12:13:44.111Z",
+      "workflowId": "bURs1I3CyIirMBFS"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-09-29T16:32:01.000Z",
+  "versionId": "cf006f1b-b0f0-42e5-8675-e3b35267dffd"
+}
