@@ -3,13 +3,7 @@
   "connections": {
     "AI Agent11": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update a document",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "AI Agent7": {
@@ -40,6 +34,28 @@
           {
             "index": 0,
             "node": "Анализ данных",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Разбивка",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Aggregate2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "all",
             "type": "main"
           }
         ]
@@ -452,6 +468,17 @@
         ]
       ]
     },
+    "Default Data Loader1": {
+      "ai_document": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store",
+            "type": "ai_document"
+          }
+        ]
+      ]
+    },
     "Download file": {
       "main": [
         [
@@ -695,12 +722,78 @@
         ]
       ]
     },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
     "Extract from File": {
       "main": [
         [
           {
             "index": 0,
             "node": "Analyze",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File2": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File3": {
+      "main": [
+        [
+          {
+            "index": 2,
+            "node": "Merge5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File4": {
+      "main": [
+        [
+          {
+            "index": 3,
+            "node": "Merge5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File5": {
+      "main": [
+        [
+          {
+            "index": 4,
+            "node": "Merge5",
             "type": "main"
           }
         ]
@@ -871,6 +964,17 @@
         ]
       ]
     },
+    "GPT_Web_Search_Tool1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "Get a document": {
       "main": [
         [
@@ -878,6 +982,17 @@
             "index": 0,
             "node": "AI Agent7",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Разбивка",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -1181,6 +1296,24 @@
         ]
       ]
     },
+    "Loop Over Items10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Aggregate1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Loop Over Items2": {
       "main": [
         [
@@ -1435,6 +1568,17 @@
         ]
       ]
     },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Merge6": {
       "main": [
         [
@@ -1564,6 +1708,17 @@
         ]
       ]
     },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search + Анализ1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "OpenAI Chat Model2": {
       "ai_languageModel": [
         [
@@ -1575,12 +1730,39 @@
         ]
       ]
     },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        []
+      ]
+    },
     "Recursive Character Text Splitter": {
       "ai_textSplitter": [
         [
           {
             "index": 0,
             "node": "Default Data Loader",
+            "type": "ai_textSplitter"
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "index": 0,
+            "node": "Default Data Loader1",
             "type": "ai_textSplitter"
           }
         ]
@@ -1597,12 +1779,34 @@
         ]
       ]
     },
+    "Search Folders1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Search files": {
       "main": [
         [
           {
             "index": 0,
             "node": "extension",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Search files1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "download",
             "type": "main"
           }
         ]
@@ -1718,6 +1922,17 @@
         ]
       ]
     },
+    "Search files2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "download1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Search files21": {
       "main": [
         [
@@ -1779,6 +1994,39 @@
           {
             "index": 0,
             "node": "Files6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Search files3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "download2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Search files4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "download3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Search files5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "download4",
             "type": "main"
           }
         ]
@@ -2122,6 +2370,28 @@
         ]
       ]
     },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search + Анализ1",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "Разбивка",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
     "Structured Output Parser2": {
       "ai_outputParser": [
         [
@@ -2294,6 +2564,45 @@
         ]
       ]
     },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Search files1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Search files2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Search files3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Search files4",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Search files5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Telegram Trigger": {
       "main": [
         [
@@ -2349,6 +2658,44 @@
         ]
       ]
     },
+    "Web Search + Анализ1": {
+      "main": [
+        []
+      ]
+    },
+    "Web Search1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search + Анализ1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "all": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "audio_content": {
       "main": [
         [
@@ -2388,6 +2735,61 @@
           {
             "index": 0,
             "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "download": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "download1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "download2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "download3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "download4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File5",
             "type": "main"
           }
         ]
@@ -2481,12 +2883,34 @@
         ]
       ]
     },
+    "strategy_template2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Web Search + Анализ1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "strategy_template3": {
       "ai_tool": [
         [
           {
             "index": 0,
             "node": "AI Agent11",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "strategy_template5": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Разбивка",
             "type": "ai_tool"
           }
         ]
@@ -2531,6 +2955,17 @@
           {
             "index": 0,
             "node": "Send message \"Дописать\"/\"Анализ\"",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Разбивка": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items10",
             "type": "main"
           }
         ]
@@ -2645,7 +3080,7 @@
                       "operation": "contains",
                       "type": "string"
                     },
-                    "rightValue": "drive.google.com/file/d/"
+                    "rightValue": "/analyze"
                   }
                 ],
                 "options": {
@@ -2655,7 +3090,7 @@
                   "version": 2
                 }
               },
-              "outputKey": "DRIVE",
+              "outputKey": "ANALYZE",
               "renameOutput": true
             }
           ]
@@ -3075,6 +3510,7 @@
       },
       "id": "fc12a444-a950-4f90-aeca-93bfe207522d",
       "name": "Get a document",
+      "onError": "continueRegularOutput",
       "parameters": {
         "documentURL": "={{ $json.id }}",
         "operation": "get"
@@ -3091,6 +3527,7 @@
       "id": "011b785c-d292-43b1-8c4e-ae301cb4b946",
       "maxTries": 5,
       "name": "AI Agent7",
+      "onError": "continueRegularOutput",
       "parameters": {
         "options": {
           "passthroughBinaryImages": true,
@@ -3132,6 +3569,7 @@
     {
       "id": "606ffe01-ec0f-45a4-93b4-9f3721640198",
       "name": "Extract from File",
+      "onError": "continueRegularOutput",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
@@ -3152,7 +3590,7 @@
       },
       "id": "b46be843-23c7-4996-9bea-bfbbcdefdfad",
       "name": "Analyze",
-      "onError": "continueErrorOutput",
+      "onError": "continueRegularOutput",
       "parameters": {
         "authentication": "predefinedCredentialType",
         "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"Ты AI агент-аналитик n8n, который извлекает и структурирует информацию из приложенных материалов для заполнения юридического шаблона стратегия защиты. Твоя задача - тщательно проанализировать приложенный материал и извлечь ВСЮ релевантную информацию по следующим категориям: РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА 0.1 КРИТИЧЕСКИЕ ДАННЫЕ - Юрисдикция встречи: город, страна, применимое законодательство - Тип процедуры: судебное заседание, медиация, переговоры, арбитраж, досудебное урегулирование - Дата встречи в формате ДД.ММ.ГГГГ - Предмет спора: краткое описание сути конфликта - Примерная стоимость спора в валюте 0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ - Законодательство актуально: да/нет - Оппонент исследован (20+ источников): да/нет - Все даты событий установлены: да/нет - Противоречия в хронологии: нет/есть - Доказательства верифицированы: да/нет РАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА 1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА Поисковые запросы и результаты: - [Имя оппонента] судебные дела - [Имя оппонента] плагиат скандал - [Компания оппонента] финансовая отчетность - [Имя оппонента] интеллектуальная собственность споры - [Имя оппонента] [наш спорный объект] - [Имя оппонента] репутация отзывы - [Имя оппонента] банкротство долги 1.2 ПРОФИЛЬ ОППОНЕНТА - Полное наименование/ФИО - Юридический статус - Финансовое состояние: способность к длительной тяжбе, точка финансового слома, критические бизнес-даты - История IP-споров: всего дел, выиграно, проиграно, мировые соглашения - Команда юристов оппонента: фирма, ведущий юрист, их сильные стороны, их известные промахи - Психологический профиль лица, принимающего решения: эго-точки, триггеры гнева, страхи/опасения, предпочитаемый стиль коммуникации РАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ 2.1 МАТРИЦА СОБЫТИЙ Дата, событие, наши доказательства, их версия, критическое расхождение: - Первая фиксация нашей идеи [ссылка] - Наша первая публикация [ссылка] - Контакт с оппонентом [ссылка] - Обнаружение плагиата [ссылка] - Первое обращение к ним [ссылка] 2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ Подозрительные периоды молчания между датами и датами: - Наше объяснение - Возможная их атака - Контрмера РАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА 3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ Тип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять ПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ - Документ [ссылка] [SHA-256] - Экспертиза [ссылка] [SHA-256] ВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ - Свидетель [контакт] N/A - Скриншот [ссылка] [SHA-256] РЕЗЕРВНЫЕ - ПЛАН Б 3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ Матрица взаимоподтверждения: - Доказательство А подтверждает Б, В, Г - Доказательство Б подтверждает А, В, Д - Доказательство В подтверждает А, Б, Е Критические зависимости: - Если отвергнут [А], то под угрозой [Б, В] - План восстановления РАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА 4.1 ЭКОНОМИКА КОНФЛИКТА Наши затраты: Статья, в день, в месяц, до конца дела - Юристы - Эксперты - Упущенная выгода - Репутационный ущерб ИТОГО: Их затраты (оценка): Статья, в день, в месяц, их точка слома - Юристы топ-уровня - Отвлечение ресурсов - Риск для бизнеса ИТОГО: 4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI) Сценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA - Победа в суде ___% - Мировое соглашение ___% - Частичная победа ___% - Поражение ___% Точка безубыточности для мировой Минимально приемлемая сумма РАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА 5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА ФИО Статистика решений: - По делам о плагиате: за истцов ___% за ответчиков ___% - Средний размер компенсаций - Любимые прецеденты Когнитивные особенности: - Уровень технической экспертизы: низкий, средний, высокий - Предпочитает: эмоции, логику, баланс - Триггеры раздражения Известные предубеждения: 5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ Эффект якоря (для расчета ущерба): - Первая названная сумма - Обоснование - Визуальный якорь Эффект ореола: - Наш позитивный образ - Их негативный образ - Контраст Предвзятость подтверждения: - Структура подачи, подтверждающая первое впечатление РАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ 6.1 ДЕРЕВО РЕШЕНИЙ НАЧАЛО ВСТРЕЧИ Они сразу предлагают мировую Сумма > нашего минимума → [Тактика А1: Повышаем на 30%] Сумма < нашего минимума → [Тактика А2: Демонстрируем силу] Они представляют новые доказательства Доказательства сильные → [План Б1: Требуем отложить] Доказательства слабые → [Атака К1: Разбиваем немедленно] Они атакуют нашу позицию Атака на даты → [Защита Д1: Хронология с экспертизой] Атака на авторство → [Защита Д2: Свидетели + документы] Атака на ущерб → [Защита Д3: Финансовая экспертиза] 6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ РИСК КАТАСТРОФИЧЕСКИЙ №1 Вероятность: ____% Индикаторы начала: 1.  2.  НЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: Шаг 1: [Действие] - [Ответственный] - [Время] Шаг 2: [Действие] - [Ответственный] - [Время] Шаг 3: [Действие] - [Ответственный] - [Время] План восстановления РАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ 7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА Ловушка №1: Противоречие в показаниях - Подготовка - Приманка - Вопрос-капкан: ? - Если попались - Если не попались Ловушка №2: Эмоциональный срыв - Триггер - Эскалация - Фиксация для протокола 7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ Дилемма заключенного: - Создание ситуации - Их варианты - Наш выигрыш в любом случае РАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ 8.1 ЗА 14 ДНЕЙ - Нотариальное заверение ВСЕХ электронных доказательств - Блокчейн-регистрация критических документов - Инструктаж всех свидетелей (репетиция 3 раза) - Заказ дополнительных экспертиз - Анализ социальных сетей оппонента за последний месяц - Подготовка досье на их юристов ИНСТРУКЦИИ ПО АНАЛИЗУ: 1. Для каждого события ОБЯЗАТЕЛЬНО указывай точную дату в формате ДД.ММ.ГГГГ 2. Для каждого факта требуй источник проверки через внешние источники (минимум 20 web_search запросов) 3. При нехватке данных пиши N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: [что именно] 4. НЕ додумывай, НЕ предполагай, НЕ обобщай - только факты из материала 5. Веди себя как опытный аналитик данных - каждая деталь имеет ценность ФОРМАТ ОТВЕТА: Структурируй ответ точно по разделам шаблона. Для каждого найденного факта указывай: - Источник в материале - Уровень достоверности (высокий/средний/низкий) - Необходимость дополнительной проверки ВАЖНО: Ты обязан расписать всё максимально подробно, чтобы в дальнейшем не упустить никаких деталей для успешной защиты в споре. Не добавляй дополнительные комментарии. КРИТИЧЕСКИЕ ТРЕБОВАНИЯ К ОТВЕТУ: 1. МАКСИМУМ 6000 символов (строгий лимит). 2. Убери все разметку: **, ###, ####, ---, | 3. Используй только простые символы: , . - 4. НЕ используй кавычки-елочки, подчеркивания, квадратные скобки. 5. Убери все N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ - пиши только найденные данные. 6. Краткие формулировки без детализации источников. 7. Отвечай только обычным текстом на русском без форматирования.\"\n        },\n        {\n          \"inline_data\": {\n            \"mime_type\": \"application/pdf\",\n            \"data\": \"{{ $json.data }}\"\n          }\n        }\n      ]\n    }\n  ]\n}",
@@ -3194,6 +3632,7 @@
       },
       "id": "1fdcc8fa-cabb-44d0-98d3-87ab7fab1c81",
       "name": "Create Technical Task10",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('AI Agent7').item.json.output }}",
         "driveId": {
@@ -3296,6 +3735,7 @@
       },
       "id": "265a9151-4f64-44b8-80c9-d7184e108921",
       "name": "Create Technical Task11",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze').item.json.candidates[0].content.parts[0].text }}",
         "driveId": {
@@ -3425,6 +3865,7 @@
       "id": "94964e97-9c9d-42e2-b3e7-863fbbc7b2e7",
       "maxTries": 4,
       "name": "Analyze video",
+      "onError": "continueRegularOutput",
       "parameters": {
         "modelId": {
           "__rl": true,
@@ -3456,6 +3897,7 @@
       },
       "id": "23bf8e71-d036-4984-8356-e77e69f38083",
       "name": "Create Technical Task12",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze video').item.json.content.parts[0].text }}",
         "driveId": {
@@ -3600,6 +4042,7 @@
       },
       "id": "c6c1d4fa-3bb3-45aa-b658-4d01ccaf61b0",
       "name": "Create Technical Task13",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze image').item.json.content.parts[0].text }}",
         "driveId": {
@@ -3636,6 +4079,7 @@
       "id": "34688967-77d3-44a2-beef-ebce160f9d72",
       "maxTries": 4,
       "name": "Analyze image",
+      "onError": "continueRegularOutput",
       "parameters": {
         "imageUrls": "={{ $json.image_link }}",
         "modelId": {
@@ -3674,6 +4118,7 @@
     {
       "id": "ec74b0f2-8815-45fb-91bf-5f5228a59e15",
       "name": "video_content",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -3697,6 +4142,7 @@
     {
       "id": "2d6ee120-3893-402d-8a27-2648cb37c46c",
       "name": "image_content",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -3720,6 +4166,7 @@
     {
       "id": "9041a626-8d8b-46f8-86b2-565ef61cc16a",
       "name": "pdf_content",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -3743,6 +4190,7 @@
     {
       "id": "84aa4196-7723-46ac-82e0-6f73ba35b6aa",
       "name": "doc_content",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -3766,6 +4214,7 @@
     {
       "id": "8abccdca-6ae4-4427-9786-4df2013c7ff4",
       "name": "image_link",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -4652,6 +5101,7 @@
       },
       "id": "abe7ef38-9969-4d01-8cfd-ab2eada31716",
       "name": "Create Technical Task15",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze audio').item.json.content.parts[0].text }}",
         "driveId": {
@@ -4688,6 +5138,7 @@
       "id": "41aa2477-5064-4105-b6d4-89c912edc27e",
       "maxTries": 4,
       "name": "Analyze audio",
+      "onError": "continueRegularOutput",
       "parameters": {
         "audioUrls": "={{ $json.audio_link }}",
         "modelId": {
@@ -4713,6 +5164,7 @@
     {
       "id": "0bc57ecd-dcec-4a6a-8679-9fb53367328d",
       "name": "audio_link",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -4736,6 +5188,7 @@
     {
       "id": "a3097be5-d933-40f3-bcd4-2bfe9178b429",
       "name": "video_link",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -4759,6 +5212,7 @@
     {
       "id": "4c47fc68-eb0c-482c-832e-06d8cf91c3d7",
       "name": "audio_content",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -4943,6 +5397,7 @@
       "id": "40e98003-9edf-4922-8f17-85802a5cbf21",
       "maxTries": 4,
       "name": "Analyze video1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "inputType": "binary",
         "modelId": {
@@ -4974,6 +5429,7 @@
       },
       "id": "cf4efa49-3437-423b-ab77-c84c8326c4a4",
       "name": "Create Technical Task17",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze video1').item.json.content.parts[0].text }}",
         "driveId": {
@@ -5051,6 +5507,7 @@
     {
       "id": "3db0af94-a091-416e-b53c-92565aa3f2ae",
       "name": "video_content1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -5141,6 +5598,7 @@
       },
       "id": "c96b6235-ea9b-4634-bafa-3450da760acf",
       "name": "Create Technical Task18",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze image1').item.json.content.parts[0].text }}",
         "driveId": {
@@ -5177,6 +5635,7 @@
       "id": "23472930-4b2d-4208-bb85-4966ff2d8bd2",
       "maxTries": 4,
       "name": "Analyze image1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "inputType": "binary",
         "modelId": {
@@ -5202,6 +5661,7 @@
     {
       "id": "ee9982ef-fe2d-4ed6-a3ea-c4d45b96b22a",
       "name": "image_content1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -5292,6 +5752,7 @@
       },
       "id": "45bf36af-2734-4327-833c-a4f2785f4a8d",
       "name": "Create Technical Task",
+      "onError": "continueRegularOutput",
       "parameters": {
         "content": "={{ $('Analyze audio1').item.json.content.parts[0].text }}",
         "driveId": {
@@ -5328,6 +5789,7 @@
       "id": "eda6917b-4844-4a53-9cb3-713cabb9bbac",
       "maxTries": 4,
       "name": "Analyze audio1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "inputType": "binary",
         "modelId": {
@@ -5353,6 +5815,7 @@
     {
       "id": "a301dbea-2408-4ab7-b890-15a8eea6cd23",
       "name": "audio_content1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -5380,6 +5843,7 @@
           "name": "bbigi1327@gmail.com"
         }
       },
+      "disabled": true,
       "id": "0185443a-7902-4c72-a691-3f91bc00f33b",
       "name": "Delete folder",
       "parameters": {
@@ -5726,13 +6190,13 @@
           "name": "API_sadas"
         }
       },
-      "disabled": true,
       "id": "5cff8e8b-fd00-4e84-9b61-f7110d11edbd",
       "name": "Pinecone Vector Store",
       "parameters": {
         "mode": "insert",
         "options": {
-          "clearNamespace": false
+          "clearNamespace": false,
+          "pineconeNamespace": "strategy"
         },
         "pineconeIndex": {
           "__rl": true,
@@ -5742,8 +6206,8 @@
         }
       },
       "position": [
-        10336,
-        1712
+        352,
+        5648
       ],
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
       "typeVersion": 1.3
@@ -5755,7 +6219,6 @@
           "name": "OpenAi account"
         }
       },
-      "disabled": true,
       "id": "31e49ca0-8beb-491f-bcd1-9c51b8c4b55e",
       "name": "Embeddings OpenAI",
       "parameters": {
@@ -5766,14 +6229,13 @@
         }
       },
       "position": [
-        10272,
-        1888
+        288,
+        5824
       ],
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1.2
     },
     {
-      "disabled": true,
       "id": "5a26dda4-9075-4644-bf04-3cc260a2b6c6",
       "name": "Default Data Loader",
       "parameters": {
@@ -5781,14 +6243,13 @@
         "textSplittingMode": "custom"
       },
       "position": [
-        10416,
-        1888
+        432,
+        5824
       ],
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1.1
     },
     {
-      "disabled": true,
       "id": "4ce7c78e-6096-446b-a715-2bf23aff19d6",
       "name": "Recursive Character Text Splitter",
       "parameters": {
@@ -5797,8 +6258,8 @@
         "options": {}
       },
       "position": [
-        10416,
-        2048
+        432,
+        5984
       ],
       "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
       "typeVersion": 1
@@ -8050,9 +8511,1324 @@
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "495f1028-e1e6-47ed-9760-4c88a8eb21f1",
+      "name": "Search Folders1",
+      "parameters": {
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1GeQjogoUh47k3-6yWdnZM31ZVKm0vsNj"
+          },
+          "whatToSearch": "folders"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5584,
+        5664
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "787b020e-dc21-4fa4-8970-2358f84d3e17",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -4048,
+        5312
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "8878a48f-6de6-4d8f-aab7-2d4d8107923b",
+      "name": "Switch3",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5f03c429-c6a3-4a19-aea1-0a39c6937887",
+                    "leftValue": "={{ $json.name }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "=База данных АУДИО"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "АУДИО",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "d5e7fa22-10ba-439f-9319-3fda9f6f862b",
+                    "leftValue": "={{ $json.name }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "База данных ИЗОБРАЖЕНИЯ"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "ИЗОБРАЖЕНИЯ",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "f924b5fd-2362-4ac5-a781-96b6bc159fcb",
+                    "leftValue": "={{ $json.name }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "База данных ВИДЕО"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "ВИДЕО",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "327b167c-6698-4333-9ef9-baf1f86c4181",
+                    "leftValue": "={{ $json.name }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "База данных PDF"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "PDF",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "97e8731e-d955-405a-9d74-e74b53ca24d9",
+                    "leftValue": "={{ $json.name }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "База данных DOC, DOCX"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "DOC",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -5376,
+        5616
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "387c725f-5f8e-42d7-abf8-5d6d1822f50c",
+      "name": "Search files1",
+      "parameters": {
+        "filter": {
+          "fileTypes": [
+            "*"
+          ],
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5056,
+        5312
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "78c95c59-1e97-49de-b9b2-95539a24fc08",
+      "name": "Search files2",
+      "parameters": {
+        "filter": {
+          "fileTypes": [
+            "*"
+          ],
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5056,
+        5488
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "f0198d4a-0e1b-4ec1-a9e2-bfeb467968b7",
+      "name": "Search files3",
+      "parameters": {
+        "filter": {
+          "fileTypes": [
+            "*"
+          ],
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5056,
+        5664
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "d741e252-a4df-4bfe-b94d-24f9b1050e0a",
+      "name": "Search files4",
+      "parameters": {
+        "filter": {
+          "fileTypes": [
+            "*"
+          ],
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5056,
+        5840
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "6123ed76-7b2c-4def-903f-83f30d36b2d9",
+      "name": "Search files5",
+      "parameters": {
+        "filter": {
+          "fileTypes": [
+            "*"
+          ],
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "whatToSearch": "files"
+        },
+        "options": {},
+        "queryString": "=",
+        "resource": "fileFolder",
+        "returnAll": true
+      },
+      "position": [
+        -5056,
+        6016
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "8a28830b-f81a-4e68-b91b-d3785be64538",
+      "name": "Aggregate1",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "position": [
+        -3872,
+        5728
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "538183fb-a1d6-4aab-978a-c91a8d39f488",
+      "name": "Extract from File1",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        -4656,
+        5312
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "0e7e875b-69c3-45e1-a004-b4fd0eceb9ac",
+      "name": "download",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -4864,
+        5312
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "6238606c-725f-4ebd-9d9b-5b345b30c032",
+      "name": "Extract from File2",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        -4656,
+        5488
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "1c43b3f2-3b78-4d1a-967a-710ba065949f",
+      "name": "download1",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -4864,
+        5488
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "db196716-561d-43f1-b74e-ab55ddea71e1",
+      "name": "Extract from File3",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        -4656,
+        5664
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "bd05dad5-9334-4f51-842c-c27aa110dda0",
+      "name": "download2",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -4864,
+        5664
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "1e9da444-d9f1-48f2-9706-d01c56595008",
+      "name": "Extract from File4",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        -4656,
+        5840
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "719c25df-da09-434d-8312-6990c19770ce",
+      "name": "download3",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -4864,
+        5840
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "df08821e-ff1b-485e-87b0-fe6d66f32d16",
+      "name": "Extract from File5",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        -4656,
+        6016
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Oere2nzI5wpHQs7Q",
+          "name": "bbigi1327@gmail.com"
+        }
+      },
+      "id": "dee884ef-2f54-450b-acaa-fc41cacd7003",
+      "name": "download4",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -4864,
+        6016
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "8a3cc170-661e-4b65-bc8f-95a33cf55fa3",
+      "name": "Merge5",
+      "parameters": {
+        "numberInputs": 5
+      },
+      "position": [
+        -4320,
+        5616
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "905c206b-a5a9-4e04-ab25-fcac80861933",
+      "name": "Loop Over Items10",
+      "parameters": {
+        "batchSize": 50,
+        "options": {}
+      },
+      "position": [
+        -4112,
+        5664
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "854315fc-ff89-48e3-8444-5c5572d1b352",
+      "name": "OpenAI Chat Model4",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -3872,
+        5952
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "7ce6a354-1c2a-4781-9fff-02f70bb9ff2e",
+      "maxTries": 4,
+      "name": "Разбивка",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "batching": {},
+          "maxIterations": 15,
+          "systemMessage": "=Ты AI агент-аналитик n8n, который извлекает и структурирует информацию из массива файлов для заполнения юридического шаблона стратегия защиты.\n\nПРИНЦИП РАБОТЫ\n1. Ты получаешь на вход:\n   - КОНТЕКСТ: массив файлов (array) с ранее проанализированной информацией\n   - tool: \"strategy_template5\" - шаблон со всеми ключевыми пунктами\n\n2. Обратись к tool strategy_template5 и изучи ВСЕ ключевые пункты шаблона\n\n3. Проанализируй КОНТЕКСТ (массив файлов) и найди информацию, которая соответствует пунктам шаблона\n\n4. Пройдись по КАЖДОМУ пункту шаблона и проверь, есть ли для него информация в контексте\n\n5. Собери ВСЕ найденные данные для всех пунктов в один ответ\n\n6. Выводи ТОЛЬКО те пункты, для которых есть информация в контексте\n\nСТРУКТУРА ШАБЛОНА\n\nРАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nЮрисдикция встречи: Город, Страна\nТип процедуры: Судебное заседание / Медиация / Переговоры / Арбитраж / Досудебное урегулирование\nДата встречи\nПредмет спора (кратко)\nПримерная стоимость спора\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nПараметр / Статус / Источник проверки / Дата проверки\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковый запрос / Результат / Ссылка на источник\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО\nЮридический статус\nФинансовое состояние: Способность к длительной тяжбе, Точка финансового слома, Критические бизнес-даты\nИстория IP-споров: Всего дел, Выиграно, Проиграно, Мировые, Средний размер выплат при проигрыше, Типичная тактика, Слабости в прошлых делах\nКоманда юристов оппонента: Фирма, Ведущий юрист, Их сильные стороны, Их известные промахи\nПсихологический профиль лица, принимающего решения: Эго-точки, Триггеры гнева, Страхи/опасения, Предпочитаемый стиль коммуникации\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата / Событие / Наши доказательства / Их версия / Критическое расхождение\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания: Между [дата] и [дата] - количество дней\nНаше объяснение\nВозможная их атака\nКонтрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип / Описание / Сила (1-10) / Хранение / Блокчейн-хеш / Когда предъявлять\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения\nКритические зависимости\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты: Статья / В день / В месяц / До конца дела (Юристы, Экспертизы, Упущенная выгода, Репутационный ущерб)\nИх затраты (оценка): Статья / В день / В месяц / Их точка слома\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий / Вероятность / Наш результат / Затраты / ROI / BATNA / WATNA\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений: По делам о плагиате (За истцов / За ответчиков), Средний размер компенсаций, Любимые прецеденты\nКогнитивные особенности: Уровень технической экспертизы, Предпочитает (Эмоции / Логику / Баланс), Триггеры раздражения\nИзвестные предубеждения\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба): Первая названная сумма, Обоснование, Визуальный якорь\nЭффект ореола: Наш позитивный образ, Их негативный образ, Контраст\nПредвзятость подтверждения: Структура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ - варианты развития событий и тактики\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1: Вероятность, Индикаторы начала, НЕМЕДЛЕННЫЕ ДЕЙСТВИЯ, План восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях (Подготовка, Приманка, Вопрос-капкан, Если попались, Если не попались)\nЛовушка №2: Эмоциональный срыв (Триггер, Эскалация, Фиксация для протокола)\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного: Создание ситуации, Их варианты, Наш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n\n8.1 ЗА 14 ДНЕЙ\n8.2 ЗА 7 ДНЕЙ\n8.3 ЗА 3 ДНЯ\n8.4 ЗА 1 ДЕНЬ\n8.5 В ДЕНЬ ВСТРЕЧИ\n\nРАЗДЕЛ 9: LIVE-СОПРОВОЖДЕНИЕ ВСТРЕЧИ\n\n9.1 МЕТРИКИ РЕАЛЬНОГО ВРЕМЕНИ\nВремя / Эмоции судьи / Язык тела оппонента / Новые факты / Наши шансы / Действие\n\n9.2 СИГНАЛЫ КОМАНДЫ\nКодовые фразы\n\n9.3 ТРИГГЕРЫ ИЗМЕНЕНИЯ ТАКТИКИ\nЕсли происходит / То делаем / Ответственный\n\nРАЗДЕЛ 10: АНАЛИЗ СИЛЬНЫХ И СЛАБЫХ СТОРОН\n\n10.1 НАШИ ПРЕИМУЩЕСТВА (ранжировано по силе)\nКОЗЫРЬ №1, №2, №3: Доказательство, Сила воздействия, Когда играть, Усиление через, Если атакуют это\n\n10.2 НАШИ УЯЗВИМОСТИ (план защиты)\nСЛАБОСТЬ КРИТИЧЕСКАЯ №1, №2: Вероятность атаки, Первая линия защиты, Вторая линия защиты, План отступления, Переход в контратаку\n\n10.3 ИХ СИЛЬНЫЕ СТОРОНЫ (нейтрализация)\nИХ КОЗЫРЬ №1, №2: Наша контрмера, Подрыв доверия к нему, Альтернативная интерпретация\n\n10.4 ИХ СЛАБОСТИ (эксплуатация)\nУЯЗВИМОСТЬ №1: Метод атаки, Оптимальный момент, Ожидаемый эффект, Добивание\n\nРАЗДЕЛ 11: ВОПРОСЫ И ОТВЕТЫ\n\n11.1 ТОП-10 УБИЙСТВЕННЫХ ВОПРОСОВ ОТ НИХ\nВОПРОС 1-10: Ловушка, НЕПРАВИЛЬНЫЙ ответ, ПРАВИЛЬНЫЙ ответ, Мост к нашей силе, Документ в поддержку\n\n11.2 НАШИ ВОПРОСЫ-ТОРПЕДЫ\nТОРПЕДА №1: Цель, Если ответят А, Если ответят Б, Если уклонятся\n\nРАЗДЕЛ 12: ИНФОРМАЦИОННАЯ ВОЙНА\n\n12.1 УПРАВЛЕНИЕ НАРРАТИВОМ\nНаша история (30 секунд)\nНаша история (2 минуты)\nКлючевые тезисы для повторения\n\n12.2 РАЗРУШЕНИЕ ИХ НАРРАТИВА\nИх история\nПротиворечие №1 / Опровержение\nПротиворечие №2 / Опровержение\n\nРАЗДЕЛ 13: ТЕХНОЛОГИЧЕСКАЯ ПОДДЕРЖКА\n\n13.1 AI-СИСТЕМЫ В РЕАЛЬНОМ ВРЕМЕНИ\nСистема / Функция / Доступ / Стоимость / Активировано\n\n13.2 БЛОКЧЕЙН-ФИКСАЦИЯ\nДокумент / SHA-256 хеш / Timestamp / Smart Contract\n\nРАЗДЕЛ 14: ПЛАНЫ А, Б, В, Г\n\nПЛАН А: Полная победа (Условия, Действия, Целевой результат)\nПЛАН Б: Выгодная мировая (Триггер перехода, Минимальные условия, Тактика торга)\nПЛАН В: Затягивание (Триггер, Методы, Выигрыш времени)\nПЛАН Г: Организованное отступление (Красная черта, Минимизация ущерба, Сохранение лица)\n\nРАЗДЕЛ 15: ЭМОЦИОНАЛЬНЫЙ ИНТЕЛЛЕКТ\n\n15.1 УПРАВЛЕНИЕ СВОИМИ ЭМОЦИЯМИ\nТехники заземления, Если накрывает гнев, Если накрывает страх\n\n15.2 СЧИТЫВАНИЕ И УПРАВЛЕНИЕ ИХ ЭМОЦИЯМИ\nИндикаторы стресса оппонента, Усиление их стресса, Снижение их защит\n\nРАЗДЕЛ 16: КОМАНДНАЯ КООРДИНАЦИЯ\n\n16.1 РОЛИ И ОТВЕТСТВЕННОСТЬ\nРоль / Человек / Основная задача / План Б если выбыл\n\n16.2 WAR ROOM SETUP\nФизический: Адрес / Оборудование / Резервный интернет\nВиртуальный: Платформа / Backup платформа / VPN туннель\n\nРАЗДЕЛ 17: ПОСТ-АНАЛИЗ\n\n17.1 НЕМЕДЛЕННО ПОСЛЕ ВСТРЕЧИ (30 минут)\nФиксировать горячим: Ключевые моменты, Их неожиданные ходы, Наши промахи, Реакции судьи на, Новая информация\n\n17.2 АНАЛИЗ В ТЕЧЕНИЕ 24 ЧАСОВ\nЧто сработало, Что провалилось, Корректировки на следующий раунд\n\nРАЗДЕЛ 18: КОНТРОЛЬНЫЕ ТОЧКИ ГОТОВНОСТИ\n\n18.1 ФИНАЛЬНАЯ ПРОВЕРКА (за 24 часа)\nАБСОЛЮТНО КРИТИЧЕСКОЕ\nИНФОРМАЦИОННЫЕ ПРОБЕЛЫ\n\n18.2 АПРУВ ПОЛЬЗОВАТЕЛЯ\nПодтверждаю готовность стратегии, Дата утверждения, Электронная подпись / ID сессии\n\nПРАВИЛА ИЗВЛЕЧЕНИЯ\n\n- Обратись к tool strategy_template5 и изучи структуру шаблона\n- Проанализируй массив файлов (КОНТЕКСТ) и найди информацию для каждого пункта\n- Выводи ТОЛЬКО ту информацию, которая есть в контексте\n- Если информации по какому-то пункту нет - НЕ выводи этот пункт вообще\n- Если информация для всего раздела отсутствует - выводи null\n- Все даты указывай в формате ДД.ММ.ГГГГ\n- НЕ додумывай, НЕ предполагай, НЕ обобщай\n- НЕ добавляй информацию, которой нет в контексте\n- НЕ пиши комментарии типа \"требуется информация\" - просто пропускай пункт\n\nФОРМАТ ОТВЕТА\n\nТвой ответ должен быть СТРОГО в формате JSON:\n\n{\n  \"content\": \"string\"\n}\n\nГде content содержит извлеченную информацию для ВСЕХ найденных пунктов в формате:\n\nНАЗВАНИЕ ПУНКТА 1:\n[отобранный контекст для этого пункта]\n\nНАЗВАНИЕ ПУНКТА 2:\n[отобранный контекст для этого пункта]\n\nНАЗВАНИЕ ПОДПУНКТА 2.1:\n[отобранный контекст для этого подпункта]\n\nВАЖНО:\n- Пройдись по ВСЕМ пунктам шаблона из tool strategy_template5\n- Проверь массив файлов на наличие информации для КАЖДОГО пункта\n- Выводи ТОЛЬКО те пункты, для которых есть информация в контексте\n- Пропускай пункты, для которых информации нет\n- Собери ВСЕ найденные данные в один ответ\n- Если информация полностью отсутствует, выводи: {\"content\": null}\n\nТРЕБОВАНИЯ К ФОРМАТИРОВАНИЮ\n\n- МАКСИМУМ 6000 символов (строгий лимит)\n- Убери всю разметку: **, ###, ####, ---, |\n- Используй только простые символы: , . -\n- НЕ используй кавычки-елочки, подчеркивания, квадратные скобки\n- Краткие формулировки без детализации источников\n- Отвечай только обычным текстом на русском без форматирования\n\nПРИМЕР ОТВЕТА\n\n{\n  \"content\": \"Юрисдикция встречи:\\nГород: Москва\\nСтрана: Россия\\n\\nДата встречи:\\n15.03.2025\\n\\nПредмет спора:\\nПлагиат программного обеспечения\\n\\nПримерная стоимость спора:\\n5000000 рублей\\n\\nПолное наименование оппонента:\\nООО Технологии Будущего\\n\\nЮридический статус:\\nОбщество с ограниченной ответственностью\\n\\nФинансовое состояние:\\nСпособность к длительной тяжбе: высокая\\nТочка финансового слома: 10000000 рублей в течение 12 месяцев\"\n}\n\nКРИТИЧЕСКИЕ НАПОМИНАНИЯ\n- Проанализируй ВСЕ пункты и подпункты из шаблона\n- Проверь массив файлов (контекст) на наличие информации для КАЖДОГО пункта\n- Извлекай информацию для КАЖДОГО пункта, если она есть в контексте\n- Собери ВСЕ найденные данные в один ответ\n- Выводи ТОЛЬКО те пункты, для которых есть информация\n- Пропускай пункты без информации - НЕ пиши для них ничего\n- Если весь контекст пустой - выводи {\"content\": null}\n- НЕ додумывай информацию, которой нет в контексте\n- СТРОГО следуй формату JSON ответа\n- Соблюдай лимит 6000 символов\n- Используй только простое текстовое форматирование\n\nВАЖНО:\n* ОБЯЗАТЕЛЬНО обратись к tool: \"strategy_template5\" для получения полной структуры шаблона.\n* Первыи делом выгрузи шаблон из tool: \"strategy_template5\", чтобы формировать ответ.\n* Максимальное "
+        },
+        "promptType": "define",
+        "text": "={{ $json.data }}"
+      },
+      "position": [
+        -3680,
+        5728
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "1lXW56b3636W5sgy",
+          "name": "antoly_bot"
+        }
+      },
+      "id": "283880a7-b5cb-4e6a-b6c8-1e66537c77a6",
+      "name": "Supabase Vector Store",
+      "parameters": {
+        "mode": "insert",
+        "options": {},
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "documents",
+          "mode": "list",
+          "value": "documents"
+        }
+      },
+      "position": [
+        -2480,
+        5584
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "b8e8ff13-b080-4585-a878-b780cad27d7e",
+      "name": "Embeddings OpenAI1",
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {
+          "dimensions": 1536
+        }
+      },
+      "position": [
+        -2496,
+        5792
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "60c0ac73-ec1a-49a8-9ea6-5bdc0ed99e1a",
+      "name": "Default Data Loader1",
+      "parameters": {
+        "options": {},
+        "textSplittingMode": "custom"
+      },
+      "position": [
+        -2384,
+        5792
+      ],
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "4d991104-25a1-4c4c-b07c-caea1a1d911f",
+      "name": "Recursive Character Text Splitter1",
+      "parameters": {
+        "chunkOverlap": 250,
+        "chunkSize": 500,
+        "options": {}
+      },
+      "position": [
+        -2384,
+        5936
+      ],
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1
+    },
+    {
+      "id": "e3479747-fb23-4195-9a98-82125c8ea60b",
+      "name": "Structured Output Parser1",
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"content\": \"string\"\n}"
+      },
+      "position": [
+        -3456,
+        5968
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "d470202d-d022-4a29-93e7-b81a441db624",
+      "name": "OpenAI Chat Model3",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "position": [
+        -3328,
+        5776
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "23f45e79-9ac2-4699-8524-da8b2fb48fe9",
+      "name": "GPT_Web_Search_Tool1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "jsonBody": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('JSON', `{\n  \"model\": \"gpt-4.1\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\"\n    }\n  ],\n  \"input\": \"Твой запрос\"\n} `, 'json') }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "toolDescription": "Используй этот инструмент для поиска информации в интернете для уточнения и подтверждения других запросов.\nChatGPT с вебпоиском",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "position": [
+        -3136,
+        5776
+      ],
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "2fcac857-a999-4b09-9c02-22bd714663f0",
+      "name": "Structured Output Parser",
+      "parameters": {
+        "jsonSchemaExample": "{\n\"title\": \"string\",  \n\"comment\": \"string\"\n}"
+      },
+      "position": [
+        -2656,
+        5808
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "NHrybki4LfVJeaKs",
+          "name": "My First Project - bbigi1327@gmail.com"
+        }
+      },
+      "id": "7daeb80b-03dd-4eae-b34e-f8ebe583edde",
+      "name": "strategy_template2",
+      "parameters": {
+        "documentURL": "1oFDTJu5MgEhjR9pF29sM1A-4gXrBoSMECaY-xcCDkpQ",
+        "operation": "get"
+      },
+      "position": [
+        -2784,
+        5856
+      ],
+      "type": "n8n-nodes-base.googleDocsTool",
+      "typeVersion": 2
+    },
+    {
+      "id": "29961cf8-b90b-447a-90d5-4661cfc5145e",
+      "maxTries": 5,
+      "name": "Web Search1",
+      "parameters": {
+        "options": {
+          "passthroughBinaryImages": true,
+          "systemMessage": "=Ты - AI агент-исследователь, который должен собрать максимально полную информацию через tool: \"GPT_Web_Search_Tool\" для заполнения юридической стратегии защиты. Твоя задача - провести глубокое исследование всех аспектов дела и найти недостающие данные.\n\nИзучи ранее приложенные текстовые данные и используй их как базу для поисковых запросов.\n\nОБЯЗАТЕЛЬНАЯ ПРОГРАММА ПОИСКА:\n\nБЛОК 1: ИССЛЕДОВАНИЕ ОППОНЕНТА (минимум 15 запросов)\n- Полное наименование оппонента + судебные дела\n- Полное наименование оппонента + финансовая отчетность  \n- Полное наименование оппонента + банкротство долги\n- Полное наименование оппонента + репутация отзывы\n- Полное наименование оппонента + интеллектуальная собственность споры\n- ФИО руководителя оппонента + биография\n- ФИО руководителя оппонента + скандалы\n- ФИО руководителя оппонента + социальные сети\n- Юридическая фирма оппонента + статистика дел\n- Юридическая фирма оппонента + известные промахи\n- ОГРН/ИНН оппонента + проверка в реестрах\n- Адрес оппонента + связанные компании\n- Отрасль деятельности оппонента + типичные споры\n- Конкуренты оппонента + их мнение\n- Партнеры оппонента + возможные свидетели\n\nБЛОК 2: ЮРИДИЧЕСКАЯ СРЕДА (минимум 10 запросов)\n- Актуальное законодательство по предмету спора + последние изменения\n- Судебная практика по аналогичным делам + статистика решений\n- Прецеденты по предмету спора + суммы компенсаций\n- ФИО судьи + статистика решений по типу дел\n- ФИО судьи + известные предпочтения и позиции\n- Арбитражный суд юрисдикции + особенности рассмотрения дел\n- Медиаторы в юрисдикции + специализация и опыт\n- Экспертные организации + стоимость услуг\n- Нотариусы для заверения + контакты и тарифы\n- Юридические фирмы конкурентов + их тактики\n\nБЛОК 3: ФИНАНСОВАЯ РАЗВЕДКА (минимум 8 запросов)\n- Рыночная стоимость предмета спора + аналоги\n- Стоимость юридических услуг в юрисдикции + средние тарифы\n- Стоимость экспертиз по предмету спора + сроки\n- Госпошлины и судебные расходы + актуальные размеры\n- Страхование правовых рисков + условия и стоимость\n- Финансовое состояние оппонента + кредитный рейтинг\n- Активы оппонента + возможность взыскания\n- Обеспечительные меры + практика применения\n\nБЛОК 4: СТРАТЕГИЧЕСКАЯ РАЗВЕДКА (минимум 7 запросов)\n- Аналогичные дела в отрасли + исходы и уроки\n- Репутационные риски для оппонента + чувствительные темы\n- Медиа освещение подобных споров + общественное мнение\n- Лоббистские группы в отрасли + их позиции\n- Регулятор отрасли + позиция по спорным вопросам\n- Международная практика по предмету спора + тренды\n- Альтернативные способы урегулирования + эффективность\n\nПРИНЦИПЫ ПОИСКА:\n- Используй точные названия, ФИО, номера документов из исходных данных\n- Ищи информацию за последние 3 года для актуальности\n- Проверяй данные через несколько независимых источников\n- Фиксируй источники и даты публикации для каждого факта\n- Обращай внимание на противоречивую информацию\n- Ищи скрытые связи и конфликты интересов\n\nФОРМАТ РЕЗУЛЬТАТА:\nУкажи максимально точно и подробно найденную информацию по блокам:\n1. ПРОФИЛЬ ОППОНЕНТА (финансы, репутация, слабости)\n2. ЮРИДИЧЕСКИЙ КОНТЕКСТ (законы, практика, судьи)\n3. ФИНАНСОВЫЕ ПАРАМЕТРЫ (стоимости, риски, возможности)\n4. СТРАТЕГИЧЕСКИЕ ВОЗМОЖНОСТИ (прецеденты, альтернативы, рычаги)\n\nДля каждого факта указывай:\n- Источник и дату\n- Уровень достоверности (высокий/средний/низкий)\n- Релевантность для дела (критическая/важная/полезная)\n\nВАЖНО:\n* Проводи поиск последовательно по всем блокам.\n* Не пропускай запросы даже если первые результаты кажутся неинформативными.\n* Ищи информацию на русском и английском языках.\n* Обращай внимание на даты - нужна только актуальная информация.\n* Если находишь противоречия - исследуй их глубже.\n* Многократно обращайся в tool: \"GPT_Web_Search_Tool\".\n* В ответе сохраняй точность и объём найденной информации.\n* Строго выполняй запросы для поиска по отдельности."
+        },
+        "promptType": "define",
+        "text": "={{ $json.content }}"
+      },
+      "position": [
+        -3312,
+        5584
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "454dbed2-d3e7-4185-8660-d9f6d6f2d493",
+      "maxTries": 4,
+      "name": "Web Search + Анализ1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "batching": {},
+          "maxIterations": 15,
+          "systemMessage": "=Ты судебный эксперт с 40-летним опытом, который специализируется на создании комплексных стратегий защиты для сложных юридических дел. \n\nТвоя задача - объединить все собранные данные и заполнить шаблон СТРАТЕГИЯ из tool: \"strategy_template1\", создав профессиональный документ готовый к реализации.\n\nИСХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА:\n1. web search (разведывательная информация об оппоненте, юридическом контексте, финансовых параметрах)\n2. Анализ файлов (структурированные данные из материалов дела)\n\nОбратись к tool: \"strategy_template1\", чтобьы получить данные о формировании итогового ответа.\n\nПРИНЦИПЫ ЗАПОЛНЕНИЯ ШАБЛОНА:\n\nКРИТИЧЕСКАЯ ТОЧНОСТЬ:\n- Используй только проверенные факты из предоставленных данных\n- При отсутствии информации пиши \"N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: [что именно]\"\n- Все даты указывай в формате ДД.ММ.ГГГГ\n- Каждый факт подкрепляй источником и уровнем достоверности\n- НЕ додумывай, НЕ предполагай, НЕ обобщай\n\nСТРАТЕГИЧЕСКОЕ МЫШЛЕНИЕ:\n- Анализируй слабые и сильные стороны с позиции 40-летнего опыта\n- Предвидь возможные ходы оппонента и готовь контрмеры\n- Создавай многоуровневые планы (А, Б, В, Г) для любого развития событий\n- Учитывай психологические аспекты всех участников процесса\n- Рассчитывай финансовую математику с точностью до копейки\n\nПРОФЕССИОНАЛЬНАЯ ЭКСПЕРТИЗА:\n- Используй знание судебной практики и процедур\n- Применяй тактические приемы, проверенные десятилетиями\n- Создавай ловушки для оппонента на основе их слабостей\n- Планируй информационную войну и управление нарративом\n- Интегрируй современные технологии (AI, блокчейн) в классическую стратегию\n\nСТРУКТУРА ЗАПОЛНЕНИЯ:\n\nРАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n- Заполни все критические данные из предоставленной информации\n- Проведи проверочный алгоритм и отметь статус каждого параметра\n- Укажи источники и даты проверки\n\nРАЗДЕЛЫ 1-18: ПОЛНОЕ ЗАПОЛНЕНИЕ\n- Методично заполни каждый раздел шаблона\n- Используй данные из обоих источников (первичный анализ + web-поиск)\n- Создавай синергию между разными типами информации\n- Выстраивай логические связи между разделами\n\nОСОБОЕ ВНИМАНИЕ К:\n- Профилю оппонента (раздел 1) - используй всю разведывательную информацию\n- Хронологической карте (раздел 2) - каждое событие с точной датой\n- Доказательной базе (раздел 3) - классификация по силе и важности\n- Финансовой математике (раздел 4) - точные расчеты всех сценариев\n- Психологической войне (раздел 5) - глубокий анализ всех участников\n- Тактическим ловушкам (раздел 7) - конкретные приемы против оппонента\n\nКОНТРОЛЬ КАЧЕСТВА:\n- Каждый раздел должен быть заполнен максимально подробно\n- Все N/A должны содержать конкретное описание недостающей информации\n- Стратегия должна быть готова к немедленной реализации\n- Документ должен отражать 40-летний опыт судебной практики\n\nФОРМАТ РЕЗУЛЬТАТА:\nСоздай полностью заполненный документ стратегии, где:\n- Каждое поле содержит конкретную информацию или обоснованное N/A\n- Все чекбоксы отмечены в соответствии с реальным статусом\n- Таблицы заполнены актуальными данными\n- Планы А, Б, В, Г детально проработаны\n- Контрольные точки готовности реалистично оценены\n\nФОРМАТ ОТВЕТА JSON в строго-заполненом порядке шаблона:\n{\n\"title\": \"краткое, но информативное название стратении\",  \n\"comment\": \"твой информативный ответ, который строго соответсвует шаблону\"\n}\n\nВАЖНО:\n* Документ должен быть готов к использованию в реальном деле.\n* Каждая рекомендация должна быть обоснована опытом и фактами.\n* Стратегия должна учитывать все возможные сценарии развития событий.\n* Результат должен демонстрировать профессионализм высшего уровня.\n* ОБЯЗАТЕЛЬНО строго следуй формату ответа в JSON."
+        },
+        "promptType": "define",
+        "text": "=web search:\n{{ $json.output }}\n\nАнализ файлов:\n{{ $('all').item.json.content }}"
+      },
+      "position": [
+        -2880,
+        5584
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "d38d9af9-21a2-4d6e-a3f9-3a86fd9c3bc6",
+      "name": "OpenAI Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        -2912,
+        5808
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "46ed2904-dbbc-4045-9b76-a389e75ef70f",
+      "name": "Aggregate2",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "position": [
+        -3872,
+        5584
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "NHrybki4LfVJeaKs",
+          "name": "My First Project - bbigi1327@gmail.com"
+        }
+      },
+      "id": "35ca5695-2324-4867-99a0-9460e97fee4e",
+      "name": "strategy_template5",
+      "parameters": {
+        "documentURL": "1oFDTJu5MgEhjR9pF29sM1A-4gXrBoSMECaY-xcCDkpQ",
+        "operation": "get"
+      },
+      "position": [
+        -3568,
+        6032
+      ],
+      "type": "n8n-nodes-base.googleDocsTool",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "99eec223-10c5-42c6-949e-ceee64e642c4",
+      "name": "Google Gemini Chat Model1",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -3728,
+        6000
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "0f8ad180-f5fe-4784-8fcd-ed85bfb15187",
+      "name": "all",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e1a2135f-234b-427a-879c-607cad14d382",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.data.map(item => item.output.content) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -3664,
+        5584
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "AI Agent11": [
+      {
+        "json": {
+          "output": "Версия 10.0 | Для AI-заполнения | Универсальная юрисдикция\n\nКРИТИЧЕСКИЕ ИНСТРУКЦИИ ДЛЯ AI\nПЕРЕД ЗАПОЛНЕНИЕМ ОБЯЗАТЕЛЬНО:\nЗапросить город и страну проведения встречи → найти актуальное законодательство\nДля КАЖДОГО события требовать точную дату [ДД.ММ.ГГГГ]\nПри упоминании оппонента → минимум 20 web_search запросов\nВсе факты проверять через внешние источники\nПри нехватке данных писать \"N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: [что именно]\"\nНЕ додумывать, НЕ предполагать, НЕ обобщать\n\nРАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ (без этого НЕ начинать)\nЮрисдикция встречи:\nГород: N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: конкретное место разбирательства и применимое законодательство\nСтрана: N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: конкретное место разбирательства и применимое законодательство\n[AI: выполнить поиск актуального законодательства на текущую дату]\nТип процедуры: N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: формат процедуры (судебное заседание/переговоры/арбитраж)\nДата встречи: 27.09.2025\nПредмет спора (кратко): автоматизация процесса создания игровых фичей, интеллектуальные права на n8n-боты и связанные механики\nПримерная стоимость спора: N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: финансовая оценка предмета спора\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально: N/A - требуется исходная юрисдикция\n- Оппонент исследован (20+ источников): N/A - отсутствует информация о лице/юр.лице-оппоненте\n- Все даты событий установлены: да (по технической документации), но без хронологии юридического спора\n- Противоречия в хронологии: не выявлено\n- Доказательства верифицированы: только внутренние источники, юридической проверки нет\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nN/A - отсутствует идентифицированный оппонент, невозможна корректная работа по шаблону\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: N/A\nЮридический статус: N/A\nФинансовое состояние: N/A\nСпособность к длительной тяжбе: N/A\nТочка финансового слома: N/A\nКритические бизнес-даты: N/A\nИстория IP-споров: N/A\nВсего дел: N/A Выиграно: N/A Проиграно: N/A Мировые: N/A\nСредний размер выплат при проигрыше: N/A\nТипичная тактика: N/A\nСлабости в прошлых делах: N/A\nКоманда юристов оппонента: N/A\nФирма: N/A\nВедущий юрист: N/A\nИх сильные стороны: N/A\nИх известные промахи: N/A\nПсихологический профиль лица, принимающего решения: N/A\nЭго-точки: N/A\nТриггеры гнева: N/A\nСтрахи/опасения: N/A\nПредпочитаемый стиль коммуникации: N/A\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\n07.08.2025: Подача заявки на создание корпоративного бота-агента (бріф как доказательство)\n27.09.2025: Фиксация/создание документа \"Проектировка INM3F9 N8N-бот #1...\"\n01.11.2025: Желание реализовать Мегабот #1 и доработки #2\n(Источники: документ, стр. 1, 17, SHA-256 911d1877cc0ca22121f0df133f11caafcb4abcd797d991e8be8e5964f92; уровень достоверности — высокий по технической части)\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания: не выявлены (информация только по этапам реализации проекта)\nМежду [дата] и [дата] - N/A дней\nНаше объяснение: N/A\nВозможная их атака: N/A\nКонтрмера: N/A\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ: \"Проектировка INM3F9 N8N-бот #1 создания фич из механик / ТЗ на доработку n8n #2 / Обновление Feature flow\", SHA-256, Google Drive, сила 9\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Figma Workflow Diagram: https://www.figma.com/board/bcU84rJSjAa4y7AboOf2sT/Feature-Jira-Flow?node-id=409-1513&t=UjA2MNivo2yT2JUr-4 — сила 8\n- Шаблон Механик: https://drive.google.com/file/d/1AHYzGoM3ctrD3kdMwWXzW4QwRUK1jnu9/view?usp=sharing — сила 8\n- Jira-спрэдшиты: https://docs.google.com/spreadsheets/d/1xAsr6fjQScPAW_zEhtuWtl2UFHBBt_hMWRLZdFdMZR0/edit?usp=sharing — сила 8\n- Confluence Механики: https://confluence.itcomp.org/spaces/SLW/pages/32574010/Механики — сила 8\n- Пример работы с ботом, Шаблоны Фичи, Confluence боты — дополнительная поддержка\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\nДокумент \"Проектировка...\" подтверждает → Figma, Confluence, Jira, Google Drive.\nКритические зависимости:\nЕсли отвергнут [Документ \"Проектировка...\"], то под угрозой [весь процесс]\nПлан восстановления: технический аудит, блокчейн-фиксация дат\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты: N/A - ТРЕБУЕТСЯ ИНФОРМАЦИЯ: суммы, бюджеты, расчет в разрезе функций/ролей\nИх затраты (оценка): N/A (нет оппонента, нет внешней стороны)\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nТочка безубыточности для мировой: N/A\nМинимально приемлемая сумма: N/A\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО: N/A\nСтатистика решений: N/A\nПо делам о плагиате: За истцов N/A% За ответчиков N/A%\nСредний размер компенсаций: N/A\nЛюбимые прецеденты: N/A\nКогнитивные особенности: N/A\nУровень технической экспертизы: N/A\nПредпочитает: N/A\nТриггеры раздражения: N/A\nИзвестные предубеждения: N/A\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба): N/A\nПервая названная сумма: N/A\nОбоснование: N/A\nВизуальный якорь: N/A\nЭффект ореола: N/A\nНаш позитивный образ: N/A\nИх негативный образ: N/A\nКонтраст: N/A\nПредвзятость подтверждения: N/A\nСтруктура подачи, подтверждающая первое впечатление: N/A\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\nN/A - отсутствует конфликт, невозможна детализация дерева решений и планов\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1: N/A\nВероятность: N/A% Индикаторы начала: N/A\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: N/A\nПлан восстановления: N/A\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: N/A\nЛовушка №2: N/A\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного: N/A\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n[ ] Нотариальное заверение ВСЕХ электронных доказательств\n[ ] Блокчейн-регистрация критических документов\n[ ] Инструктаж всех свидетелей (репетиция 3 раза)\n[ ] Заказ дополнительных экспертиз\n[ ] Анализ социальных сетей оппонента за последний месяц\n[ ] Подготовка досье на их юристов\n8.2 ЗА 7 ДНЕЙ\n[ ] Mock trial с фокус-группой (бюджет: N/A)\n[ ] Финальная проверка всех ссылок и документов\n[ ] Подготовка 3D-визуализаций для сложных моментов\n[ ] Исследование последних дел судьи\n[ ] Отработка ответов на 10 сложных вопросов\n[ ] Проверка оппонента на новые обстоятельства\n8.3 ЗА 3 ДНЯ\n[ ] Последний web_search по оппоненту\n[ ] Проверка изменений в законодательстве\n[ ] Тест всей техники для презентации\n[ ] Финальная встреча команды\n[ ] Отработка языка тела и тона голоса\n8.4 ЗА 1 ДЕНЬ\n[ ] Медитация/подготовка эмоционального состояния\n[ ] Последний прогон стратегии\n[ ] Проверка war room (физического или виртуального)\n[ ] Синхронизация всех устройств\n[ ] Сон минимум 7 часов\n8.5 В ДЕНЬ ВСТРЕЧИ\nЗа 2 часа:\n[ ] Проверка внешнего вида команды\n[ ] Последний брифинг (15 минут)\n[ ] Проверка всех материалов\n[ ] Активация системы live-поддержки\nЗа 30 минут:\n[ ] Прибытие в зал/подключение к конференции\n[ ] Проверка расположения/камер\n[ ] Дыхательные упражнения\n[ ] Финальная синхронизация с командой\n\nРАЗДЕЛ 9: LIVE-СОПРОВОЖДЕНИЕ ВСТРЕЧИ\n9.1 МЕТРИКИ РЕАЛЬНОГО ВРЕМЕНИ\nОбновление каждые 5 минут: N/A\n9.2 СИГНАЛЫ КОМАНДЫ\nКодовые фразы: N/A\n9.3 ТРИГГЕРЫ ИЗМЕНЕНИЯ ТАКТИКИ\nN/A\n\nРАЗДЕЛ 10: АНАЛИЗ СИЛЬНЫХ И СЛАБЫХ СТОРОН\n10.1 НАШИ ПРЕИМУЩЕСТВА (ранжировано по силе)\nКОЗЫРЬ №1: N/A\nКОЗЫРЬ №2: N/A\nКОЗЫРЬ №3: N/A\n10.2 НАШИ УЯЗВИМОСТИ (план защиты)\nСЛАБОСТЬ КРИТИЧЕСКАЯ №1: N/A\nСЛАБОСТЬ №2: N/A\n10.3 ИХ СИЛЬНЫЕ СТОРОНЫ (нейтрализация)\nИХ КОЗЫРЬ №1: N/A\nИХ КОЗЫРЬ №2: N/A\n10.4 ИХ СЛАБОСТИ (эксплуатация)\nУЯЗВИМОСТЬ №1: N/A\n\nРАЗДЕЛ 11: ВОПРОСЫ И ОТВЕТЫ\n11.1 ТОП-10 УБИЙСТВЕННЫХ ВОПРОСОВ ОТ НИХ\nВОПРОС 1: N/A\nВОПРОС 2: N/A\n11.2 НАШИ ВОПРОСЫ-ТОРПЕДЫ\nТОРПЕДА №1: N/A\n\nРАЗДЕЛ 12: ИНФОРМАЦИОННАЯ ВОЙНА\n12.1 УПРАВЛЕНИЕ НАРРАТИВОМ\nНаша история (30 секунд): \"Данная стратегия применима только для подтверждения приоритета, даты авторства и внутренней целостности R&D автоматизации разработки фичей.\"\nНаша история (2 минуты): \"Для подготовки к реальным юридическим сценариям требуется: 1) Идентификация оппонента(-ов), поиск их судебных историй, финансовых параметров и слабостей. 2) Экспертиза по патентоспособности/правовой охраноспособности автоматизации/алгоритма/бота. 3) Анализ российских и международных судебных прецедентов по IP в игровой индустрии. 4) Финансовое моделирование всех вариантов развития конфликта. 5) Построение сценариев рисков, контрмер, переговорных ловушек. 6) Интеграция AI и блокчейн-фиксации для доказания приоритета и оригинальности.\"\nКлючевые тезисы для повторения:\n- Подтверждение приоритета и даты авторства\n- Внутренняя целостность R&D автоматизации\n- Необходимость внешней аналитики для юридических сценариев\n12.2 РАЗРУШЕНИЕ ИХ НАРРАТИВА\nИх история: N/A\nПротиворечие №1: N/A\nПротиворечие №2: N/A\n\nРАЗДЕЛ 13: ТЕХНОЛОГИЧЕСКАЯ ПОДДЕРЖКА\n13.1 AI-СИСТЕМЫ В РЕАЛЬНОМ ВРЕМЕНИ\nN/A\n13.2 БЛОКЧЕЙН-ФИКСАЦИЯ\nКритические доказательства в блокчейне: N/A\n\nРАЗДЕЛ 14: ПЛАНЫ А, Б, В, Г\nПЛАН А: Полная победа\nУсловия: N/A\nДействия: N/A\nЦелевой результат: N/A\nПЛАН Б: Выгодная мировая\nТриггер перехода: N/A\nМинимальные условия: N/A\nСумма: не менее N/A\nПризнание: N/A\nГарантии: N/A Тактика торга: N/A\nПЛАН В: Затягивание\nТриггер: N/A\nМетоды: N/A\nВыигрыш времени: N/A дней/месяцев\nПЛАН Г: Организованное отступление\nКрасная черта: N/A\nМинимизация ущерба: N/A\nСохранение лица: N/A\n\nРАЗДЕЛ 15: ЭМОЦИОНАЛЬНЫЙ ИНТЕЛЛЕКТ\n15.1 УПРАВЛЕНИЕ СВОИМИ ЭМОЦИЯМИ\nТехники заземления: N/A\nДыхание 4-7-8: N/A\nЯкорь спокойствия: N/A\nМантра силы: \"N/A\"\nЕсли накрывает гнев: N/A\nЕсли накрывает страх: N/A\n15.2 СЧИТЫВАНИЕ И УПРАВЛЕНИЕ ИХ ЭМОЦИЯМИ\nИндикаторы стресса оппонента: N/A\nФизические: N/A\nВербальные: N/A\nПоведенческие: N/A\nУсиление их стресса: N/A\nСнижение их защит: N/A\n\nРАЗДЕЛ 16: КОМАНДНАЯ КООРДИНАЦИЯ\n16.1 РОЛИ И ОТВЕТСТВЕННОСТЬ\nN/A\n16.2 WAR ROOM SETUP\nФизический: N/A\nАдрес: N/A (N/A км от места встречи)\nОборудование: N/A\nРезервный интернет: N/A\nВиртуальный: N/A\nПлатформа: N/A\nBackup платформа: N/A\nVPN туннель: N/A\n\nРАЗДЕЛ 17: ПОСТ-АНАЛИЗ\n17.1 НЕМЕДЛЕННО ПОСЛЕ ВСТРЕЧИ (30 минут)\nФиксировать горячим: N/A\nКлючевые моменты: N/A\nИх неожиданные ходы: N/A\nНаши промахи: N/A\nРеакции судьи на: N/A\nНовая информация: N/A\n17.2 АНАЛИЗ В ТЕЧЕНИЕ 24 ЧАСОВ\nЧто сработало: N/A\nЧто провалилось: N/A\nКорректировки на следующий раунд: N/A\n\nРАЗДЕЛ 18: КОНТРОЛЬНЫЕ ТОЧКИ ГОТОВНОСТИ\n18.1 ФИНАЛЬНАЯ ПРОВЕРКА (за 24 часа)\nАБСОЛЮТНО КРИТИЧЕСКОЕ:\n[ ] Юрисдикция изучена, законы актуальны на СЕГОДНЯ: N/A - требуется исходная юрисдикция\n[X] ВСЕ даты событий точные, хронология без дыр\n[ ] Оппонент исследован минимум 5 источников: N/A - отсутствует информация о лице/юр.лице-оппоненте\n[X] Все доказательства проверены и доступны: только внутренние источники, юридической проверки нет\n[ ] Ответы на 10 сложных вопросов отрепетированы: N/A - нет сценариев конфликта\n[ ] План Б готов для КАЖДОГО критического риска: N/A - нет сценариев конфликта\n[ ] Команда знает роли и сигналы: N/A - нет сторон конфликта\n[ ] War room (физический/виртуальный) готов: N/A\n[ ] AI-системы подключены и протестированы: N/A\n[ ] Блокчейн-хеши зафиксированы: N/A - требуется доставление документации нотариусу, блокчейн-регистрация оригинала и ключевых шаблонов (SHA-256)\nИНФОРМАЦИОННЫЕ ПРОБЕЛЫ:\nN/A - требуется: исходная юрисдикция\nN/A - требуется: информация о лице/юр.лице-оппоненте\nN/A - требуется: финансовая оценка предмета спора\n[AI: Если есть N/A в критических пунктах - СТОП, запросить данные]\n18.2 АПРУВ ПОЛЬЗОВАТЕЛЯ\nПодтверждаю готовность стратегии:\n[ ] Все разделы заполнены корректно: N/A - много отсутствующих данных\n[ ] Источники проверены и актуальны: только внутренние источники\n[ ] Риски оценены и есть контрмеры: N/A - нет сценариев конфликта\n[ ] Я понимаю все элементы стратегии: N/A - отсутствуют ключевые данные\n[ ] Готов к реализации: N/A - документ не готов к реальным судебным действиям\nДата утверждения: 27.09.2025\nЭлектронная подпись / ID сессии: N/A\n\nКРИТИЧЕСКИЕ НАПОМИНАНИЯ\n⚠️ НИКОГДА:\nНе додумывать факты - только N/A или запрос\nНе принимать события без точных дат\nНе начинать без исследования оппонента\nНе игнорировать противоречия в хронологии\nНе пропускать верификацию доказательств\n✅ ВСЕГДА:\nПроверять актуальность законов НА СЕГОДНЯ\nИскать минимум 5 источников по оппоненту\nФиксировать ВСЕ в блокчейне\nИметь план Б для каждого риска\nОбновлять шансы на успех каждые 5 минут\n\nЦЕЛЬ: Победа 1000/100 через тотальную подготовку, проверку всех данных и адаптивную стратегию реального времени.\nСТАТУС ДОКУМЕНТА: Готов к AI-заполнению\nВЕРСИЯ: 10.0 | Универсальная | Масштабные дела\nЭто НЕ юридическая консультация, а система стратегической подготовки\n\nОСНОВНОЙ ВЫВОД:\nДанная стратегия применима только для подтверждения приоритета, даты авторства и внутренней целостности R&D автоматизации разработки фичей. Для подготовки к реальным юридическим сценариям требуется:\n1) Идентификация оппонента(-ов), поиск их судебных историй, финансовых параметров и слабостей.\n2) Экспертиза по патентоспособности/правовой охраноспособности автоматизации/алгоритма/бота.\n3) Анализ российских и международных судебных прецедентов по IP в игровой индустрии.\n4) Финансовое моделирование всех вариантов развития конфликта.\n5) Построение сценариев рисков, контрмер, переговорных ловушек.\n6) Интеграция AI и блокчейн-фиксации для доказания приоритета и оригинальности.\n\nПРИМЕЧАНИЕ: Вся представленная в шаблоне информация основана исключительно на технической документации, а не на юридических событиях или фактическом споре.\nДокумент не готов к реальным судебным действиям до получения внешней аналитики по пунктам N/A."
+        }
+      }
+    ],
+    "Aggregate2": [
+      {
+        "json": {
+          "data": [
+            {
+              "output": {
+                "content": "Предмет спора:\nvertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc, формат audio/x-aiff\n\nПРОВЕРОЧНЫЙ АЛГОРИТМ:\nВсе даты событий установлены: да. Установлены даты модификации файлов 27.09.2025.\nПротиворечия в хронологии: есть. Одинаковые даты создания и модификации для двух разных файлов, одинаковый ID файла в системе для двух разных файлов.\nДоказательства верифицированы: да. Присутствуют SHA-256 хеши для каждого файла.\n\nМАТРИЦА СОБЫТИЙ:\nПервая фиксация нашей идеи: 27.09.2025, событие Загрузка файла Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc.\nНаша первая публикация: 27.09.2025, событие Загрузка файла Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc.\n\nМАТРИЦА ДОКАЗАТЕЛЬСТВ:\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ:\nДокумент: BvsqIvbcV9EOi6syn158q_test-1.wav, ссылка https://drive.usercontent.google.com/uc?id=1VEl5-on9ppEQ2T7FlwtQlEJMKHq91-8u&export=download\nДокумент: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc\nТип: Аудиофайл\nФормат: audio/x-aiff\nХранение: Google Drive\nСсылка для загрузки: https://drive.usercontent.google.com/uc?id=143JXceRjEiiaFi7fUpb0itFDRsQv1Kkf&export=download\nВладелец: bbigi1327@gmail.com\nДокумент Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc\nСсылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\nSHA-256: 911d1877cc0c0ca221223947b91d8ef1f33f11caafcb4abcdd797d991e8e8e5964f92\nДокумент Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc\nСсылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\nSHA-256: 3c6b2451c27806536b306b38c2520901e878f0e793e8c5d6e2c6b45d070b4f8\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ:\nСвидетель: bbigi1327@gmail.com\n\nЗА 14 ДНЕЙ:\nНотариальное заверение ВСЕХ электронных доказательств\nБлокчейн-регистрация критических документов\nИнструктаж всех свидетелей (репетиция 3 раза)\nЗаказ дополнительных экспертиз\nАнализ социальных сетей оппонента за последний месяц\nПодготовка досье на их юристов"
+              }
+            },
+            {
+              "output": {
+                "content": "Законодательство актуально:\nда\n\nОппонент исследован (20+ источников):\nда\n\nВсе даты событий установлены:\nда\n\nДоказательства верифицированы:\nда\n\nДокумент:\nБот принимает на вход договоры, переписки, претензии, протоколы, инвойсы, технические отчёты, записи звонков. Бот распознает текст из фото/PDF, вытаскивает тему, даты, суммы, имена из почты/доков, вычисляет SHA-256 для файлов.\n\nСкриншот:\nБот принимает на вход фото/PDF, создает preview.\n\nЗА 14 ДНЕЙ:\nНотариальное заверение ВСЕХ электронных доказательств\nБлокчейн-регистрация критических документов\nИнструктаж всех свидетелей (репетиция 3 раза)\nЗаказ дополнительных экспертиз\nАнализ социальных сетей оппонента за последний месяц\nПодготовка досье на их юристов"
+              }
+            },
+            {
+              "output": {
+                "content": "Юрисдикция встречи:\nг. Москва, Российская Федерация, применимое законодательство Российской Федерации.\n\nТип процедуры:\nсудебное заседание, переговоры, судебное решение.\n\nДата встречи:\n27.09.2025, 03.02.2025\n\nПредмет спора:\nкража кренделей, предоставление услуг выполнения работ в сфере информационных технологий, передача исключительных прав на результаты интеллектуальной деятельности.\n\nПротиворечия в хронологии:\nесть (даты чаепития).\n\nПоисковые запросы и результаты:\nВалет Червей судебные дела: Обвиняемый в краже кренделей.\nВалет Червей наш спорный объект: Валет обвиняется в краже кренделей.\n\nПолное наименование/ФИО:\nВалет Червей, Анисимов Руслан Андреевич.\n\nЮридический статус:\nОбвиняемый в суде, самозанятый, плательщик налога на профессиональный доход.\n\nПсихологический профиль лица, принимающего решения:\nотрицает вину, ссылается на отсутствие прямых доказательств (нет подписи).\n\nМатрица событий:\nДата документа: 27.09.2025\nДата подачи заявки на бота: 07.08.2025\nЖелаемая дата реализации бота: 01.11.2025 (для Мегабота №1 и доработок №2)\nСобытие: Дама Червей напекла кренделей.\nСобытие: Валет Червей уволок семь кренделей.\nИх версия: Валет отрицает, что писал письмо (стихи), которое является уликой.\nИх версия: Валет не может плавать, что Король использует как доказательство его вины.\nКритическое расхождение: Валет отрицает написание письма, но Король утверждает, что отсутствие подписи делает его еще более подозрительным.\n\nМатрица доказательств:\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент: Стихи, найденные Белым Кроликом.\nДокумент: Блюдо с кренделями на столе.\nДокумент\nЭкспертиза\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель: Болванщик (показания путаные).\nСвидетель: Кухарка (показания о перце).\nСвидетель: Алиса (может опровергнуть абсурдные правила).\nСвидетель\nСкриншот\n\nПерекрестная валидация:\nМатрица взаимоподтверждения:\nДоказательство А подтверждает Б, В, Г\nДоказательство Б подтверждает А, В, Д\nДоказательство В подтверждает А, Б, Е\nКритические зависимости:\nЕсли отвергнут А, то под угрозой Б, В\n\nПрофиль судьи/медиатора:\nФИО: Король Червей.\nКогнитивные особенности:\nУровень технической экспертизы: низкий (путает слова, не понимает каламбуры).\nПредпочитает: логику (пытается применять правила), но легко поддается влиянию Королевы.\nТриггеры раздражения: шум, неповиновение, неясные показания.\nИзвестные предубеждения: склонен к обвинительному уклону, особенно под давлением Королевы.\n\nЭксплуатация когнитивных искажений:\nЭффект ореола:\nНаш позитивный образ: Алиса - ребенок, милая барышня.\nИх негативный образ: Королева - жестокая, рубит головы.\nКонтраст: Алиса против абсурдной и жестокой системы.\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление: Король и Королева склонны видеть вину во всем.\n\nДерево решений:\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую -> Сумма > нашего минимума -> Тактика А1: Повышаем на 30%; Сумма < нашего минимума -> Тактика А2: Демонстрируем силу\nОни представляют новые доказательства -> Доказательства сильные -> План Б1: Требуем отложить; Доказательства слабые -> Атака К1: Разбиваем немедленно, Алиса может их опровергнуть (как стихи).\nОни атакуют нашу позицию -> Атака на даты -> Защита Д1: Хронология с экспертизой; Атака на авторство -> Защита Д2: Свидетели + документы; Атака на ущерб -> Защита Д3: Финансовая экспертиза.\n\nКритические риски и планы:\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность: высокая.\nИндикаторы начала: 1. Королева багровеет от ярости. 2. Королева кричит Рубите ему голову!.\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: Шаг 1: Опровергнуть абсурдность обвинения (Алиса говорит Чепуха!). Шаг 2: Указать на отсутствие смысла в доказательствах. Шаг 3: Указать на нелегитимность правил (Алиса: это не настоящее правило. Вы его только что выдумали.).\n\nПровокации для оппонента:\nЛовушка №2: Эмоциональный срыв\nТриггер: Королева легко впадает в ярость."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Extract from File1": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- \"[Имя оппонента] судебные дела\"\n- \"[Имя оппонента] плагиат скандал\"\n- \"[Компания оппонента] финансовая отчетность\"\n- \"[Имя оппонента] интеллектуальная собственность споры\"\n- \"[Имя оппонента] [наш спорный объект]\"\n- \"[Имя оппонента] репутация отзывы\"\n- \"[Имя оппонента] банкротство долги\"\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи\n- Наша первая публикация\n- Контакт с оппонентом\n- Обнаружение плагиата\n- Первое обращение к ним\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ: BvsqIvbcV9EOi6syn158q_test-1.wav, ссылка https://drive.usercontent.google.com/uc?id=1VEl5-on9ppEQ2T7FlwtQlEJMKHq91-8u&export=download\n- Экспертиза:\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель: bbigi1327@gmail.com\n- Скриншот:\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г\n- Доказательство Б подтверждает А, В, Д\n- Доказательство В подтверждает А, Б, Е\n\nКритические зависимости:\n- Если отвергнут А, то под угрозой Б, В\n- План восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы\n- Эксперты\n- Упущенная выгода\n- Репутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня\n- Отвлечение ресурсов\n- Риск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде\n- Мировое соглашение\n- Частичная победа\n- Поражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\n- По делам о плагиате: за истцов за ответчиков\n- Средний размер компенсаций\n- Любимые прецеденты\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма\n- Обоснование\n- Визуальный якорь\n\nЭффект ореола:\n- Наш позитивный образ\n- Их негативный образ\n- Контраст\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма > нашего минимума\nСумма < нашего минимума\n\nОни представляют новые доказательства\nДоказательства сильные\nДоказательства слабые\n\nОни атакуют нашу позицию\nАтака на даты\nАтака на авторство\nАтака на ущерб\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка\n- Приманка\n- Вопрос-капкан:\n- Если попались\n- Если не попались\n\nЛовушка №2: Эмоциональный срыв\n- Триггер\n- Эскалация\n- Фиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации\n- Их варианты\n- Наш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств\n- Блокчейн-регистрация критических документов\n- Инструктаж всех свидетелей (репетиция 3 раза)\n- Заказ дополнительных экспертиз\n- Анализ социальных сетей оппонента за последний месяц\n- Подготовка досье на их юристов"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Предмет спора: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc, формат audio/x-aiff\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc\n  - Тип: Аудиофайл\n  - Формат: audio/x-aiff\n  - Хранение: Google Drive\n  - Ссылка для загрузки: https://drive.usercontent.google.com/uc?id=143JXceRjEiiaFi7fUpb0itFDRsQv1Kkf&export=download\n  - Владелец: bbigi1327@gmail.com\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ"
+        }
+      }
+    ],
+    "Extract from File2": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи в формате ДД.ММ.ГГГГ:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены: да. Установлены даты модификации файлов 27.09.2025.\n- Противоречия в хронологии: есть. Одинаковые даты создания и модификации для двух разных файлов, одинаковый ID файла в системе для двух разных файлов.\n- Доказательства верифицированы: да. Присутствуют SHA-256 хеши для каждого файла.\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\n- Первая фиксация нашей идеи: 27.09.2025, событие Загрузка файла Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc.\n- Наша первая публикация: 27.09.2025, событие Загрузка файла Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc.\n- Контакт с оппонентом:\n- Обнаружение плагиата:\n- Первое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc\n  - Ссылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\n  - SHA-256: 911d1877cc0c0ca221223947b91d8ef1f33f11caafcb4abcdd797d991e8e8e5964f92\n- Документ Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc\n  - Ссылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\n  - SHA-256: 3c6b2451c27806536b306b38c2520901e878f0e793e8c5d6e2c6b45d070b4f8\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n\nКритические зависимости:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\n\nИх затраты (оценка):\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\n\nКогнитивные особенности:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n\nЭффект ореола:\n\nПредвзятость подтверждения:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1:\n\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях:\n\nЛовушка №2: Эмоциональный срыв:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств:\n- Блокчейн-регистрация критических документов:\n- Инструктаж всех свидетелей (репетиция 3 раза):\n- Заказ дополнительных экспертиз:\n- Анализ социальных сетей оппонента за последний месяц:\n- Подготовка досье на их юристов:"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи в формате ДД.ММ.ГГГГ:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- Имя оппонента судебные дела\n- Имя оппонента плагиат скандал\n- Компания оппонента финансовая отчетность\n- Имя оппонента интеллектуальная собственность споры\n- Имя оппонента наш спорный объект\n- Имя оппонента репутация отзывы\n- Имя оппонента банкротство долги\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи\n- Наша первая публикация\n- Контакт с оппонентом\n- Обнаружение плагиата\n- Первое обращение к ним\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ\n- Экспертиза\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель\n- Скриншот\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г\n- Доказательство Б подтверждает А, В, Д\n- Доказательство В подтверждает А, Б, Е\n\nКритические зависимости:\n- Если отвергнут , то под угрозой\n- План восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы\n- Эксперты\n- Упущенная выгода\n- Репутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня\n- Отвлечение ресурсов\n- Риск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде\n- Мировое соглашение\n- Частичная победа\n- Поражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\n- По делам о плагиате: за истцов за ответчиков\n- Средний размер компенсаций\n- Любимые прецеденты\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма\n- Обоснование\n- Визуальный якорь\n\nЭффект ореола:\n- Наш позитивный образ\n- Их негативный образ\n- Контраст\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма  нашего минимума\nСумма  нашего минимума\n\nОни представляют новые доказательства\nДоказательства сильные\nДоказательства слабые\n\nОни атакуют нашу позицию\nАтака на даты\nАтака на авторство\nАтака на ущерб\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка\n- Приманка\n- Вопрос-капкан:\n- Если попались\n- Если не попались\n\nЛовушка №2: Эмоциональный срыв\n- Триггер\n- Эскалация\n- Фиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации\n- Их варианты\n- Наш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств\n- Блокчейн-регистрация критических документов\n- Инструктаж всех свидетелей (репетиция 3 раза)\n- Заказ дополнительных экспертиз\n- Анализ социальных сетей оппонента за последний месяц\n- Подготовка досье на их юристов"
+        }
+      }
+    ],
+    "Extract from File3": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи:\n- Предмет спора:\n- Примерная стоимость спора:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- [Имя оппонента] судебные дела:\n- [Имя оппонента] плагиат скандал:\n- [Компания оппонента] финансовая отчетность:\n- [Имя оппонента] интеллектуальная собственность споры:\n- [Имя оппонента] [наш спорный объект]:\n- [Имя оппонента] репутация отзывы:\n- [Имя оппонента] банкротство долги:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи:\n- Наша первая публикация:\n- Контакт с оппонентом:\n- Обнаружение плагиата:\n- Первое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение:\n- Возможная их атака:\n- Контрмера:\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ:\n- Экспертиза:\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель:\n- Скриншот:\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г:\n- Доказательство Б подтверждает А, В, Д:\n- Доказательство В подтверждает А, Б, Е:\n\nКритические зависимости:\n- Если отвергнут А, то под угрозой Б, В:\n- План восстановления:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы:\n- Эксперты:\n- Упущенная выгода:\n- Репутационный ущерб:\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня:\n- Отвлечение ресурсов:\n- Риск для бизнеса:\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде:\n- Мировое соглашение:\n- Частичная победа:\n- Поражение:\n\nТочка безубыточности для мировой:\nМинимально приемлемая сумма:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\nСтатистика решений:\n- По делам о плагиате: за истцов , за ответчиков\n- Средний размер компенсаций:\n- Любимые прецеденты:\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма:\n- Обоснование:\n- Визуальный якорь:\n\nЭффект ореола:\n- Наш позитивный образ:\n- Их негативный образ:\n- Контраст:\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую:\nСумма > нашего минимума:\nСумма < нашего минимума:\n\nОни представляют новые доказательства:\nДоказательства сильные:\nДоказательства слабые:\n\nОни атакуют нашу позицию:\nАтака на даты:\nАтака на авторство:\nАтака на ущерб:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1:\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка:\n- Приманка:\n- Вопрос-капкан:\n- Если попались:\n- Если не попались:\n\nЛовушка №2: Эмоциональный срыв\n- Триггер:\n- Эскалация:\n- Фиксация для протокола:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации:\n- Их варианты:\n- Наш выигрыш в любом случае:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств:\n- Блокчейн-регистрация критических документов:\n- Инструктаж всех свидетелей (репетиция 3 раза):\n- Заказ дополнительных экспертиз:\n- Анализ социальных сетей оппонента за последний месяц:\n- Подготовка досье на их юристов:"
+        }
+      }
+    ],
+    "Extract from File4": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nЮрисдикция встречи: Бот изучает права страны и юрисдикцию, где будет проходить встреча.\nТип процедуры: Бот принимает на вход тип встречи: судебное заседание, медиация, переговоры, статус-колл, разбор претензий.\nДата встречи:\nПредмет спора: Бот изучает дело и ищет подобные кейсы.\nПримерная стоимость спора:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nЗаконодательство актуально: да - Бот проводит ресерч в интернете и перепроверяет информацию, валидирует факты с источниками.\nОппонент исследован (20+ источников): да - Бот собирает и изучает всю необходимую информацию об оппоненте, с веб-поиском.\nВсе даты событий установлены: да - Бот учитывает и понимает последовательность по датам, анализирует их.\nПротиворечия в хронологии: Бот находит нестыковки в хронологии и выносит их в стратегию.\nДоказательства верифицированы: да - Бот проверяет тезисы по ссылкам на файлы или из интернета, валидирует факты с источниками.\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты: Бот проводит веб-ресёрч по теме и оппонентам.\nИмя оппонента судебные дела:\nИмя оппонента плагиат скандал:\nКомпания оппонента финансовая отчетность:\nИмя оппонента интеллектуальная собственность споры:\nИмя оппонента наш спорный объект:\nИмя оппонента репутация отзывы:\nИмя оппонента банкротство долги:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Бот собирает информацию о сторонах, оппоненте, их ролях и полномочиях.\nЮридический статус:\nФинансовое состояние:\nИстория IP-споров: Бот изучает дело и ищет подобные кейсы.\nКоманда юристов оппонента:\nПсихологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение: Входные данные для бота включают хронологию событий, ключевые факты. Бот учитывает и понимает последовательность по датам и логическую последовательность по событиям.\nПервая фиксация нашей идеи:\nНаша первая публикация:\nКонтакт с оппонентом:\nОбнаружение плагиата:\nПервое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами: Бот анализирует и находит нестыковки в хронологии, выносит их в стратегию.\nНаше объяснение:\nВозможная их атака:\nКонтрмера:\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент: Бот принимает на вход договоры, переписки, претензии, протоколы, инвойсы, технические отчёты, записи звонков. Бот распознает текст из фото/PDF, вытаскивает тему, даты, суммы, имена из почты/доков, вычисляет SHA-256 для файлов.\nЭкспертиза:\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель:\nСкриншот: Бот принимает на вход фото/PDF, создает preview.\nРЕЗЕРВНЫЕ - ПЛАН Б:\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения: Бот анализирует нестыковки.\nКритические зависимости:\nЕсли отвергнут А, то под угрозой Б, В:\nПлан восстановления:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты: Входные данные для бота включают бюджет.\nЮристы:\nЭксперты:\nУпущенная выгода:\nРепутационный ущерб:\nИТОГО:\nИх затраты (оценка):\nЮристы топ-уровня:\nОтвлечение ресурсов:\nРиск для бизнеса:\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA: Входные данные для бота включают критерии успеха (решение суда, сделка, обязательства, сроки, диапазоны уступок, минимально приемлемый исход) и цели по приоритетам.\nПобеда в суде:\nМировое соглашение:\nЧастичная победа:\nПоражение:\nТочка безубыточности для мировой:\nМинимально приемлемая сумма:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\nСтатистика решений:\nПо делам о плагиате: за истцов за ответчиков\nСредний размер компенсаций:\nЛюбимые прецеденты:\nКогнитивные особенности:\nУровень технической экспертизы:\nПредпочитает:\nТриггеры раздражения:\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\nПервая названная сумма:\nОбоснование:\nВизуальный якорь:\nЭффект ореола:\nНаш позитивный образ:\nИх негативный образ:\nКонтраст:\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ: Бот формирует стратегию, которая поможет вести встречу, сравнивать данные, помогать формировать вопросы.\nОни сразу предлагают мировую:\nСумма > нашего минимума:\nСумма < нашего минимума:\nОни представляют новые доказательства:\nДоказательства сильные:\nДоказательства слабые:\nОни атакуют нашу позицию:\nАтака на даты:\nАтака на авторство:\nАтака на ущерб:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1: Входные данные для бота включают красные линии и допустимые уступки.\nВероятность:\nИндикаторы начала: 1. 2.\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: Шаг 1: - - Шаг 2: - - Шаг 3: - -\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях:\nПодготовка:\nПриманка:\nВопрос-капкан: ?\nЕсли попались:\nЕсли не попались:\nЛовушка №2: Эмоциональный срыв:\nТриггер:\nЭскалация:\nФиксация для протокола:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\nСоздание ситуации:\nИх варианты:\nНаш выигрыш в любом случае:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\nБот предлагает действия перед началом встречи: например, позвонить, проговорить что-то, подготовить.\nНотариальное заверение ВСЕХ электронных доказательств:\nБлокчейн-регистрация критических документов:\nИнструктаж всех свидетелей (репетиция 3 раза):\nЗаказ дополнительных экспертиз:\nАнализ социальных сетей оппонента за последний месяц:\nПодготовка досье на их юристов:"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n Юрисдикция встречи: информация отсутствует в приложенном материале\n Тип процедуры: информация отсутствует в приложенном материале\n Дата встречи: 27.09.2025 (Источник: Титульный лист)\n Предмет спора: информация отсутствует в приложенном материале\n Примерная стоимость спора в валюте: информация отсутствует в приложенном материале\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n Законодательство актуально: информация отсутствует в приложенном материале\n Оппонент исследован (20+ источников): информация отсутствует в приложенном материале\n Все даты событий установлены: информация отсутствует в приложенном материале\n Противоречия в хронологии: информация отсутствует в приложенном материале\n Доказательства верифицированы: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\n Поисковые запросы и результаты: информация отсутствует в приложенном материале\n1.2 ПРОФИЛЬ ОППОНЕНТА\n Полное наименование/ФИО: информация отсутствует в приложенном материале\n Юридический статус: информация отсутствует в приложенном материале\n Финансовое состояние: информация отсутствует в приложенном материале\n История IP-споров: информация отсутствует в приложенном материале\n Команда юристов оппонента: информация отсутствует в приложенном материале\n Психологический профиль лица, принимающего решения: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\n Дата, событие, наши доказательства, их версия, критическое расхождение:\n Информация отсутствует в приложенном материале для хронологии спора. Доступна только дата документа.\n Дата документа: 27.09.2025 (Источник: Титульный лист)\n Дата подачи заявки на бота: 07.08.2025 (Источник: Стр. 17)\n Желаемая дата реализации бота: 01.11.2025 (для Мегабота №1 и доработок №2) (Источник: Стр. 17)\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\n Подозрительные периоды молчания между датами и датами: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n Тип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n ПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n Информация отсутствует в приложенном материале\n ВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n Информация отсутствует в приложенном материале\n РЕЗЕРВНЫЕ - ПЛАН Б\n Информация отсутствует в приложенном материале\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\n Матрица взаимоподтверждения: информация отсутствует в приложенном материале\n Критические зависимости: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n4.1 ЭКОНОМИКА КОНФЛИКТА\n Наши затраты: информация отсутствует в приложенном материале\n ИТОГО: информация отсутствует в приложенном материале\n Их затраты (оценка): информация отсутствует в приложенном материале\n ИТОГО: информация отсутствует в приложенном материале\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\n Сценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA: информация отсутствует в приложенном материале\n Точка безубыточности для мировой: информация отсутствует в приложенном материале\n Минимально приемлемая сумма: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\n ФИО: информация отсутствует в приложенном материале\n Статистика решений: информация отсутствует в приложенном материале\n Когнитивные особенности: информация отсутствует в приложенном материале\n Известные предубеждения: информация отсутствует в приложенном материале\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\n Эффект якоря (для расчета ущерба): информация отсутствует в приложенном материале\n Эффект ореола: информация отсутствует в приложенном материале\n Предвзятость подтверждения: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\n НАЧАЛО ВСТРЕЧИ: информация отсутствует в приложенном материале\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\n РИСК КАТАСТРОФИЧЕСКИЙ №1: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\n Ловушка №1: Противоречие в показаниях: информация отсутствует в приложенном материале\n Ловушка №2: Эмоциональный срыв: информация отсутствует в приложенном материале\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\n Дилемма заключенного: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n Нотариальное заверение ВСЕХ электронных доказательств: информация отсутствует в приложенном материале\n Блокчейн-регистрация критических документов: информация отсутствует в приложенном материале\n Инструктаж всех свидетелей (репетиция 3 раза): информация отсутствует в приложенном материале\n Заказ дополнительных экспертиз: информация отсутствует в приложенном материале\n Анализ социальных сетей оппонента за последний месяц: информация отсутствует в приложенном материале\n Подготовка досье на их юристов: информация отсутствует в приложенном материале"
+        }
+      }
+    ],
+    "Extract from File5": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nТип процедуры: судебное заседание.\nПредмет спора: кража кренделей.\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nПротиворечия в хронологии: есть (даты чаепития).\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\nВалет Червей судебные дела: Обвиняемый в краже кренделей.\nВалет Червей наш спорный объект: Валет обвиняется в краже кренделей.\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Валет Червей.\nЮридический статус: Обвиняемый в суде.\nПсихологический профиль лица, принимающего решения: отрицает вину, ссылается на отсутствие прямых доказательств (нет подписи).\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\nСобытие: Дама Червей напекла кренделей.\nСобытие: Валет Червей уволок семь кренделей.\nИх версия: Валет отрицает, что писал письмо (стихи), которое является уликой.\nИх версия: Валет не может плавать, что Король использует как доказательство его вины, основываясь на строке но плавать он не может.\nКритическое расхождение: Валет отрицает написание письма, но Король утверждает, что отсутствие подписи делает его еще более подозрительным.\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент: Стихи, найденные Белым Кроликом.\nДокумент: Блюдо с кренделями на столе.\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель: Болванщик (показания путаные).\nСвидетель: Кухарка (показания о перце).\nСвидетель: Алиса (может опровергнуть абсурдные правила).\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО: Король Червей.\nКогнитивные особенности:\nУровень технической экспертизы: низкий (путает слова, не понимает каламбуры).\nПредпочитает: логику (пытается применять правила), но легко поддается влиянию Королевы.\nТриггеры раздражения: шум, неповиновение, неясные показания.\nИзвестные предубеждения: склонен к обвинительному уклону, особенно под давлением Королевы.\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект ореола:\nНаш позитивный образ: Алиса - ребенок, милая барышня.\nИх негативный образ: Королева - жестокая, рубит головы.\nКонтраст: Алиса против абсурдной и жестокой системы.\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление: Король и Королева склонны видеть вину во всем.\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\nОни представляют новые доказательства\nДоказательства слабые: Алиса может их опровергнуть (как стихи).\nОни атакуют нашу позицию\nАтака на авторство: Валет отрицает авторство письма.\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность: высокая.\nИндикаторы начала:\n1. Королева багровеет от ярости.\n2. Королева кричит Рубите ему голову!.\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: Опровергнуть абсурдность обвинения (Алиса говорит Чепуха!).\nШаг 2: Указать на отсутствие смысла в доказательствах (Алиса: в них нет никакого смысла!).\nШаг 3: Указать на нелегитимность правил (Алиса: это не настоящее правило. Вы его только что выдумали.).\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №2: Эмоциональный срыв\nТриггер: Королева легко впадает в ярость."
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nЮрисдикция встречи: г. Москва, Российская Федерация, применимое законодательство Российской Федерации.\nТип процедуры: переговоры, судебное решение.\nДата встречи в формате ДД.ММ.ГГГГ: 03.02.2025.\nПредмет спора: предоставление услуг выполнения работ в сфере информационных технологий, передача исключительных прав на результаты интеллектуальной деятельности.\nПримерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nЗаконодательство актуально:\nОппонент исследован (20+ источников):\nВсе даты событий установлены:\nПротиворечия в хронологии:\nДоказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Анисимов Руслан Андреевич.\nЮридический статус: самозанятый, плательщик налога на профессиональный доход.\nФинансовое состояние:\nИстория IP-споров:\nКоманда юристов оппонента:\nПсихологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\nНаше объяснение\nВозможная их атака\nКонтрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент\nЭкспертиза\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель\nСкриншот\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\nДоказательство А подтверждает Б, В, Г\nДоказательство Б подтверждает А, В, Д\nДоказательство В подтверждает А, Б, Е\n\nКритические зависимости:\nЕсли отвергнут А, то под угрозой Б, В\nПлан восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\nЮристы\nЭксперты\nУпущенная выгода\nРепутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\nЮристы топ-уровня\nОтвлечение ресурсов\nРиск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\nПобеда в суде\nМировое соглашение\nЧастичная победа\nПоражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\nПо делам о плагиате: за истцов за ответчиков\nСредний размер компенсаций\nЛюбимые прецеденты\n\nКогнитивные особенности:\nУровень технической экспертизы:\nПредпочитает:\nТриггеры раздражения\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\nПервая названная сумма\nОбоснование\nВизуальный якорь\n\nЭффект ореола:\nНаш позитивный образ\nИх негативный образ\nКонтраст\n\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма > нашего минимума -> Тактика А1: Повышаем на 30%\nСумма < нашего минимума -> Тактика А2: Демонстрируем силу\n\nОни представляют новые доказательства\nДоказательства сильные -> План Б1: Требуем отложить\nДоказательства слабые -> Атака К1: Разбиваем немедленно\n\nОни атакуют нашу позицию\nАтака на даты -> Защита Д1: Хронология с экспертизой\nАтака на авторство -> Защита Д2: Свидетели + документы\nАтака на ущерб -> Защита Д3: Финансовая экспертиза\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: Действие - Ответственный - Время\nШаг 2: Действие - Ответственный - Время\nШаг 3: Действие - Ответственный - Время\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\nПодготовка\nПриманка\nВопрос-капкан: ?\nЕсли попались\nЕсли не попались\n\nЛовушка №2: Эмоциональный срыв\nТриггер\nЭскалация\nФиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\nСоздание ситуации\nИх варианты\nНаш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\nНотариальное заверение ВСЕХ электронных доказательств\nБлокчейн-регистрация критических документов\nИнструктаж всех свидетелей (репетиция 3 раза)\nЗаказ дополнительных экспертиз\nАнализ социальных сетей оппонента за последний месяц\nПодготовка досье на их юристов"
+        }
+      }
+    ],
+    "Merge5": [
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- \"[Имя оппонента] судебные дела\"\n- \"[Имя оппонента] плагиат скандал\"\n- \"[Компания оппонента] финансовая отчетность\"\n- \"[Имя оппонента] интеллектуальная собственность споры\"\n- \"[Имя оппонента] [наш спорный объект]\"\n- \"[Имя оппонента] репутация отзывы\"\n- \"[Имя оппонента] банкротство долги\"\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи\n- Наша первая публикация\n- Контакт с оппонентом\n- Обнаружение плагиата\n- Первое обращение к ним\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ: BvsqIvbcV9EOi6syn158q_test-1.wav, ссылка https://drive.usercontent.google.com/uc?id=1VEl5-on9ppEQ2T7FlwtQlEJMKHq91-8u&export=download\n- Экспертиза:\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель: bbigi1327@gmail.com\n- Скриншот:\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г\n- Доказательство Б подтверждает А, В, Д\n- Доказательство В подтверждает А, Б, Е\n\nКритические зависимости:\n- Если отвергнут А, то под угрозой Б, В\n- План восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы\n- Эксперты\n- Упущенная выгода\n- Репутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня\n- Отвлечение ресурсов\n- Риск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде\n- Мировое соглашение\n- Частичная победа\n- Поражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\n- По делам о плагиате: за истцов за ответчиков\n- Средний размер компенсаций\n- Любимые прецеденты\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма\n- Обоснование\n- Визуальный якорь\n\nЭффект ореола:\n- Наш позитивный образ\n- Их негативный образ\n- Контраст\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма > нашего минимума\nСумма < нашего минимума\n\nОни представляют новые доказательства\nДоказательства сильные\nДоказательства слабые\n\nОни атакуют нашу позицию\nАтака на даты\nАтака на авторство\nАтака на ущерб\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка\n- Приманка\n- Вопрос-капкан:\n- Если попались\n- Если не попались\n\nЛовушка №2: Эмоциональный срыв\n- Триггер\n- Эскалация\n- Фиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации\n- Их варианты\n- Наш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств\n- Блокчейн-регистрация критических документов\n- Инструктаж всех свидетелей (репетиция 3 раза)\n- Заказ дополнительных экспертиз\n- Анализ социальных сетей оппонента за последний месяц\n- Подготовка досье на их юристов"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Предмет спора: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc, формат audio/x-aiff\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc\n  - Тип: Аудиофайл\n  - Формат: audio/x-aiff\n  - Хранение: Google Drive\n  - Ссылка для загрузки: https://drive.usercontent.google.com/uc?id=143JXceRjEiiaFi7fUpb0itFDRsQv1Kkf&export=download\n  - Владелец: bbigi1327@gmail.com\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи в формате ДД.ММ.ГГГГ:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены: да. Установлены даты модификации файлов 27.09.2025.\n- Противоречия в хронологии: есть. Одинаковые даты создания и модификации для двух разных файлов, одинаковый ID файла в системе для двух разных файлов.\n- Доказательства верифицированы: да. Присутствуют SHA-256 хеши для каждого файла.\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\n- Первая фиксация нашей идеи: 27.09.2025, событие Загрузка файла Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc.\n- Наша первая публикация: 27.09.2025, событие Загрузка файла Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc.\n- Контакт с оппонентом:\n- Обнаружение плагиата:\n- Первое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc\n  - Ссылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\n  - SHA-256: 911d1877cc0c0ca221223947b91d8ef1f33f11caafcb4abcdd797d991e8e8e5964f92\n- Документ Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc\n  - Ссылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\n  - SHA-256: 3c6b2451c27806536b306b38c2520901e878f0e793e8c5d6e2c6b45d070b4f8\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n\nКритические зависимости:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\n\nИх затраты (оценка):\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\n\nКогнитивные особенности:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n\nЭффект ореола:\n\nПредвзятость подтверждения:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1:\n\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях:\n\nЛовушка №2: Эмоциональный срыв:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств:\n- Блокчейн-регистрация критических документов:\n- Инструктаж всех свидетелей (репетиция 3 раза):\n- Заказ дополнительных экспертиз:\n- Анализ социальных сетей оппонента за последний месяц:\n- Подготовка досье на их юристов:"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи в формате ДД.ММ.ГГГГ:\n- Предмет спора:\n- Примерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- Имя оппонента судебные дела\n- Имя оппонента плагиат скандал\n- Компания оппонента финансовая отчетность\n- Имя оппонента интеллектуальная собственность споры\n- Имя оппонента наш спорный объект\n- Имя оппонента репутация отзывы\n- Имя оппонента банкротство долги\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи\n- Наша первая публикация\n- Контакт с оппонентом\n- Обнаружение плагиата\n- Первое обращение к ним\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение\n- Возможная их атака\n- Контрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ\n- Экспертиза\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель\n- Скриншот\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г\n- Доказательство Б подтверждает А, В, Д\n- Доказательство В подтверждает А, Б, Е\n\nКритические зависимости:\n- Если отвергнут , то под угрозой\n- План восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы\n- Эксперты\n- Упущенная выгода\n- Репутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня\n- Отвлечение ресурсов\n- Риск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде\n- Мировое соглашение\n- Частичная победа\n- Поражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\n- По делам о плагиате: за истцов за ответчиков\n- Средний размер компенсаций\n- Любимые прецеденты\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма\n- Обоснование\n- Визуальный якорь\n\nЭффект ореола:\n- Наш позитивный образ\n- Их негативный образ\n- Контраст\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма  нашего минимума\nСумма  нашего минимума\n\nОни представляют новые доказательства\nДоказательства сильные\nДоказательства слабые\n\nОни атакуют нашу позицию\nАтака на даты\nАтака на авторство\nАтака на ущерб\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка\n- Приманка\n- Вопрос-капкан:\n- Если попались\n- Если не попались\n\nЛовушка №2: Эмоциональный срыв\n- Триггер\n- Эскалация\n- Фиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации\n- Их варианты\n- Наш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств\n- Блокчейн-регистрация критических документов\n- Инструктаж всех свидетелей (репетиция 3 раза)\n- Заказ дополнительных экспертиз\n- Анализ социальных сетей оппонента за последний месяц\n- Подготовка досье на их юристов"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n- Юрисдикция встречи:\n- Тип процедуры:\n- Дата встречи:\n- Предмет спора:\n- Примерная стоимость спора:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n- Законодательство актуально:\n- Оппонент исследован (20+ источников):\n- Все даты событий установлены:\n- Противоречия в хронологии:\n- Доказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n- [Имя оппонента] судебные дела:\n- [Имя оппонента] плагиат скандал:\n- [Компания оппонента] финансовая отчетность:\n- [Имя оппонента] интеллектуальная собственность споры:\n- [Имя оппонента] [наш спорный объект]:\n- [Имя оппонента] репутация отзывы:\n- [Имя оппонента] банкротство долги:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\n- Полное наименование/ФИО:\n- Юридический статус:\n- Финансовое состояние:\n- История IP-споров:\n- Команда юристов оппонента:\n- Психологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n- Первая фиксация нашей идеи:\n- Наша первая публикация:\n- Контакт с оппонентом:\n- Обнаружение плагиата:\n- Первое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\n- Наше объяснение:\n- Возможная их атака:\n- Контрмера:\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n- Документ:\n- Экспертиза:\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n- Свидетель:\n- Скриншот:\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\n- Доказательство А подтверждает Б, В, Г:\n- Доказательство Б подтверждает А, В, Д:\n- Доказательство В подтверждает А, Б, Е:\n\nКритические зависимости:\n- Если отвергнут А, то под угрозой Б, В:\n- План восстановления:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\n- Юристы:\n- Эксперты:\n- Упущенная выгода:\n- Репутационный ущерб:\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\n- Юристы топ-уровня:\n- Отвлечение ресурсов:\n- Риск для бизнеса:\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\n- Победа в суде:\n- Мировое соглашение:\n- Частичная победа:\n- Поражение:\n\nТочка безубыточности для мировой:\nМинимально приемлемая сумма:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\nСтатистика решений:\n- По делам о плагиате: за истцов , за ответчиков\n- Средний размер компенсаций:\n- Любимые прецеденты:\n\nКогнитивные особенности:\n- Уровень технической экспертизы:\n- Предпочитает:\n- Триггеры раздражения:\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\n- Первая названная сумма:\n- Обоснование:\n- Визуальный якорь:\n\nЭффект ореола:\n- Наш позитивный образ:\n- Их негативный образ:\n- Контраст:\n\nПредвзятость подтверждения:\n- Структура подачи, подтверждающая первое впечатление:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую:\nСумма > нашего минимума:\nСумма < нашего минимума:\n\nОни представляют новые доказательства:\nДоказательства сильные:\nДоказательства слабые:\n\nОни атакуют нашу позицию:\nАтака на даты:\nАтака на авторство:\nАтака на ущерб:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1:\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: - -\nШаг 2: - -\nШаг 3: - -\n\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\n- Подготовка:\n- Приманка:\n- Вопрос-капкан:\n- Если попались:\n- Если не попались:\n\nЛовушка №2: Эмоциональный срыв\n- Триггер:\n- Эскалация:\n- Фиксация для протокола:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\n- Создание ситуации:\n- Их варианты:\n- Наш выигрыш в любом случае:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n- Нотариальное заверение ВСЕХ электронных доказательств:\n- Блокчейн-регистрация критических документов:\n- Инструктаж всех свидетелей (репетиция 3 раза):\n- Заказ дополнительных экспертиз:\n- Анализ социальных сетей оппонента за последний месяц:\n- Подготовка досье на их юристов:"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nЮрисдикция встречи: Бот изучает права страны и юрисдикцию, где будет проходить встреча.\nТип процедуры: Бот принимает на вход тип встречи: судебное заседание, медиация, переговоры, статус-колл, разбор претензий.\nДата встречи:\nПредмет спора: Бот изучает дело и ищет подобные кейсы.\nПримерная стоимость спора:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nЗаконодательство актуально: да - Бот проводит ресерч в интернете и перепроверяет информацию, валидирует факты с источниками.\nОппонент исследован (20+ источников): да - Бот собирает и изучает всю необходимую информацию об оппоненте, с веб-поиском.\nВсе даты событий установлены: да - Бот учитывает и понимает последовательность по датам, анализирует их.\nПротиворечия в хронологии: Бот находит нестыковки в хронологии и выносит их в стратегию.\nДоказательства верифицированы: да - Бот проверяет тезисы по ссылкам на файлы или из интернета, валидирует факты с источниками.\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты: Бот проводит веб-ресёрч по теме и оппонентам.\nИмя оппонента судебные дела:\nИмя оппонента плагиат скандал:\nКомпания оппонента финансовая отчетность:\nИмя оппонента интеллектуальная собственность споры:\nИмя оппонента наш спорный объект:\nИмя оппонента репутация отзывы:\nИмя оппонента банкротство долги:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Бот собирает информацию о сторонах, оппоненте, их ролях и полномочиях.\nЮридический статус:\nФинансовое состояние:\nИстория IP-споров: Бот изучает дело и ищет подобные кейсы.\nКоманда юристов оппонента:\nПсихологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение: Входные данные для бота включают хронологию событий, ключевые факты. Бот учитывает и понимает последовательность по датам и логическую последовательность по событиям.\nПервая фиксация нашей идеи:\nНаша первая публикация:\nКонтакт с оппонентом:\nОбнаружение плагиата:\nПервое обращение к ним:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами: Бот анализирует и находит нестыковки в хронологии, выносит их в стратегию.\nНаше объяснение:\nВозможная их атака:\nКонтрмера:\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент: Бот принимает на вход договоры, переписки, претензии, протоколы, инвойсы, технические отчёты, записи звонков. Бот распознает текст из фото/PDF, вытаскивает тему, даты, суммы, имена из почты/доков, вычисляет SHA-256 для файлов.\nЭкспертиза:\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель:\nСкриншот: Бот принимает на вход фото/PDF, создает preview.\nРЕЗЕРВНЫЕ - ПЛАН Б:\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения: Бот анализирует нестыковки.\nКритические зависимости:\nЕсли отвергнут А, то под угрозой Б, В:\nПлан восстановления:\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты: Входные данные для бота включают бюджет.\nЮристы:\nЭксперты:\nУпущенная выгода:\nРепутационный ущерб:\nИТОГО:\nИх затраты (оценка):\nЮристы топ-уровня:\nОтвлечение ресурсов:\nРиск для бизнеса:\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA: Входные данные для бота включают критерии успеха (решение суда, сделка, обязательства, сроки, диапазоны уступок, минимально приемлемый исход) и цели по приоритетам.\nПобеда в суде:\nМировое соглашение:\nЧастичная победа:\nПоражение:\nТочка безубыточности для мировой:\nМинимально приемлемая сумма:\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО:\nСтатистика решений:\nПо делам о плагиате: за истцов за ответчиков\nСредний размер компенсаций:\nЛюбимые прецеденты:\nКогнитивные особенности:\nУровень технической экспертизы:\nПредпочитает:\nТриггеры раздражения:\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\nПервая названная сумма:\nОбоснование:\nВизуальный якорь:\nЭффект ореола:\nНаш позитивный образ:\nИх негативный образ:\nКонтраст:\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление:\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ: Бот формирует стратегию, которая поможет вести встречу, сравнивать данные, помогать формировать вопросы.\nОни сразу предлагают мировую:\nСумма > нашего минимума:\nСумма < нашего минимума:\nОни представляют новые доказательства:\nДоказательства сильные:\nДоказательства слабые:\nОни атакуют нашу позицию:\nАтака на даты:\nАтака на авторство:\nАтака на ущерб:\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1: Входные данные для бота включают красные линии и допустимые уступки.\nВероятность:\nИндикаторы начала: 1. 2.\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: Шаг 1: - - Шаг 2: - - Шаг 3: - -\nПлан восстановления:\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях:\nПодготовка:\nПриманка:\nВопрос-капкан: ?\nЕсли попались:\nЕсли не попались:\nЛовушка №2: Эмоциональный срыв:\nТриггер:\nЭскалация:\nФиксация для протокола:\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\nСоздание ситуации:\nИх варианты:\nНаш выигрыш в любом случае:\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\nБот предлагает действия перед началом встречи: например, позвонить, проговорить что-то, подготовить.\nНотариальное заверение ВСЕХ электронных доказательств:\nБлокчейн-регистрация критических документов:\nИнструктаж всех свидетелей (репетиция 3 раза):\nЗаказ дополнительных экспертиз:\nАнализ социальных сетей оппонента за последний месяц:\nПодготовка досье на их юристов:"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\n Юрисдикция встречи: информация отсутствует в приложенном материале\n Тип процедуры: информация отсутствует в приложенном материале\n Дата встречи: 27.09.2025 (Источник: Титульный лист)\n Предмет спора: информация отсутствует в приложенном материале\n Примерная стоимость спора в валюте: информация отсутствует в приложенном материале\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\n Законодательство актуально: информация отсутствует в приложенном материале\n Оппонент исследован (20+ источников): информация отсутствует в приложенном материале\n Все даты событий установлены: информация отсутствует в приложенном материале\n Противоречия в хронологии: информация отсутствует в приложенном материале\n Доказательства верифицированы: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\n Поисковые запросы и результаты: информация отсутствует в приложенном материале\n1.2 ПРОФИЛЬ ОППОНЕНТА\n Полное наименование/ФИО: информация отсутствует в приложенном материале\n Юридический статус: информация отсутствует в приложенном материале\n Финансовое состояние: информация отсутствует в приложенном материале\n История IP-споров: информация отсутствует в приложенном материале\n Команда юристов оппонента: информация отсутствует в приложенном материале\n Психологический профиль лица, принимающего решения: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\n Дата, событие, наши доказательства, их версия, критическое расхождение:\n Информация отсутствует в приложенном материале для хронологии спора. Доступна только дата документа.\n Дата документа: 27.09.2025 (Источник: Титульный лист)\n Дата подачи заявки на бота: 07.08.2025 (Источник: Стр. 17)\n Желаемая дата реализации бота: 01.11.2025 (для Мегабота №1 и доработок №2) (Источник: Стр. 17)\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\n Подозрительные периоды молчания между датами и датами: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\n Тип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n ПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\n Информация отсутствует в приложенном материале\n ВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\n Информация отсутствует в приложенном материале\n РЕЗЕРВНЫЕ - ПЛАН Б\n Информация отсутствует в приложенном материале\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\n Матрица взаимоподтверждения: информация отсутствует в приложенном материале\n Критические зависимости: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n4.1 ЭКОНОМИКА КОНФЛИКТА\n Наши затраты: информация отсутствует в приложенном материале\n ИТОГО: информация отсутствует в приложенном материале\n Их затраты (оценка): информация отсутствует в приложенном материале\n ИТОГО: информация отсутствует в приложенном материале\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\n Сценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA: информация отсутствует в приложенном материале\n Точка безубыточности для мировой: информация отсутствует в приложенном материале\n Минимально приемлемая сумма: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\n ФИО: информация отсутствует в приложенном материале\n Статистика решений: информация отсутствует в приложенном материале\n Когнитивные особенности: информация отсутствует в приложенном материале\n Известные предубеждения: информация отсутствует в приложенном материале\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\n Эффект якоря (для расчета ущерба): информация отсутствует в приложенном материале\n Эффект ореола: информация отсутствует в приложенном материале\n Предвзятость подтверждения: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\n НАЧАЛО ВСТРЕЧИ: информация отсутствует в приложенном материале\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\n РИСК КАТАСТРОФИЧЕСКИЙ №1: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\n Ловушка №1: Противоречие в показаниях: информация отсутствует в приложенном материале\n Ловушка №2: Эмоциональный срыв: информация отсутствует в приложенном материале\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\n Дилемма заключенного: информация отсутствует в приложенном материале\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\n Нотариальное заверение ВСЕХ электронных доказательств: информация отсутствует в приложенном материале\n Блокчейн-регистрация критических документов: информация отсутствует в приложенном материале\n Инструктаж всех свидетелей (репетиция 3 раза): информация отсутствует в приложенном материале\n Заказ дополнительных экспертиз: информация отсутствует в приложенном материале\n Анализ социальных сетей оппонента за последний месяц: информация отсутствует в приложенном материале\n Подготовка досье на их юристов: информация отсутствует в приложенном материале"
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nТип процедуры: судебное заседание.\nПредмет спора: кража кренделей.\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nПротиворечия в хронологии: есть (даты чаепития).\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\nВалет Червей судебные дела: Обвиняемый в краже кренделей.\nВалет Червей наш спорный объект: Валет обвиняется в краже кренделей.\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Валет Червей.\nЮридический статус: Обвиняемый в суде.\nПсихологический профиль лица, принимающего решения: отрицает вину, ссылается на отсутствие прямых доказательств (нет подписи).\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n2.1 МАТРИЦА СОБЫТИЙ\nСобытие: Дама Червей напекла кренделей.\nСобытие: Валет Червей уволок семь кренделей.\nИх версия: Валет отрицает, что писал письмо (стихи), которое является уликой.\nИх версия: Валет не может плавать, что Король использует как доказательство его вины, основываясь на строке но плавать он не может.\nКритическое расхождение: Валет отрицает написание письма, но Король утверждает, что отсутствие подписи делает его еще более подозрительным.\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент: Стихи, найденные Белым Кроликом.\nДокумент: Блюдо с кренделями на столе.\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель: Болванщик (показания путаные).\nСвидетель: Кухарка (показания о перце).\nСвидетель: Алиса (может опровергнуть абсурдные правила).\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО: Король Червей.\nКогнитивные особенности:\nУровень технической экспертизы: низкий (путает слова, не понимает каламбуры).\nПредпочитает: логику (пытается применять правила), но легко поддается влиянию Королевы.\nТриггеры раздражения: шум, неповиновение, неясные показания.\nИзвестные предубеждения: склонен к обвинительному уклону, особенно под давлением Королевы.\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект ореола:\nНаш позитивный образ: Алиса - ребенок, милая барышня.\nИх негативный образ: Королева - жестокая, рубит головы.\nКонтраст: Алиса против абсурдной и жестокой системы.\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление: Король и Королева склонны видеть вину во всем.\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n6.1 ДЕРЕВО РЕШЕНИЙ\nОни представляют новые доказательства\nДоказательства слабые: Алиса может их опровергнуть (как стихи).\nОни атакуют нашу позицию\nАтака на авторство: Валет отрицает авторство письма.\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность: высокая.\nИндикаторы начала:\n1. Королева багровеет от ярости.\n2. Королева кричит Рубите ему голову!.\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: Опровергнуть абсурдность обвинения (Алиса говорит Чепуха!).\nШаг 2: Указать на отсутствие смысла в доказательствах (Алиса: в них нет никакого смысла!).\nШаг 3: Указать на нелегитимность правил (Алиса: это не настоящее правило. Вы его только что выдумали.).\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №2: Эмоциональный срыв\nТриггер: Королева легко впадает в ярость."
+        }
+      },
+      {
+        "json": {
+          "data": "РАЗДЕЛ 0: ИНИЦИАЛИЗАЦИЯ И ПРОВЕРКА\n\n0.1 КРИТИЧЕСКИЕ ДАННЫЕ\nЮрисдикция встречи: г. Москва, Российская Федерация, применимое законодательство Российской Федерации.\nТип процедуры: переговоры, судебное решение.\nДата встречи в формате ДД.ММ.ГГГГ: 03.02.2025.\nПредмет спора: предоставление услуг выполнения работ в сфере информационных технологий, передача исключительных прав на результаты интеллектуальной деятельности.\nПримерная стоимость спора в валюте:\n\n0.2 ПРОВЕРОЧНЫЙ АЛГОРИТМ\nЗаконодательство актуально:\nОппонент исследован (20+ источников):\nВсе даты событий установлены:\nПротиворечия в хронологии:\nДоказательства верифицированы:\n\nРАЗДЕЛ 1: ИССЛЕДОВАНИЕ ОППОНЕНТА\n\n1.1 ОБЯЗАТЕЛЬНАЯ МАТРИЦА ПОИСКА\nПоисковые запросы и результаты:\n\n1.2 ПРОФИЛЬ ОППОНЕНТА\nПолное наименование/ФИО: Анисимов Руслан Андреевич.\nЮридический статус: самозанятый, плательщик налога на профессиональный доход.\nФинансовое состояние:\nИстория IP-споров:\nКоманда юристов оппонента:\nПсихологический профиль лица, принимающего решения:\n\nРАЗДЕЛ 2: ХРОНОЛОГИЧЕСКАЯ КАРТА СОБЫТИЙ\n\n2.1 МАТРИЦА СОБЫТИЙ\nДата, событие, наши доказательства, их версия, критическое расхождение:\n\n2.2 АНАЛИЗ ВРЕМЕННЫХ РАЗРЫВОВ\nПодозрительные периоды молчания между датами и датами:\nНаше объяснение\nВозможная их атака\nКонтрмера\n\nРАЗДЕЛ 3: ДОКАЗАТЕЛЬНАЯ БАЗА\n\n3.1 МАТРИЦА ДОКАЗАТЕЛЬСТВ\nТип, описание, сила (1-10), хранение, блокчейн-хеш, когда предъявлять\n\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\nДокумент\nЭкспертиза\n\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\nСвидетель\nСкриншот\n\nРЕЗЕРВНЫЕ - ПЛАН Б\n\n3.2 ПЕРЕКРЕСТНАЯ ВАЛИДАЦИЯ\nМатрица взаимоподтверждения:\nДоказательство А подтверждает Б, В, Г\nДоказательство Б подтверждает А, В, Д\nДоказательство В подтверждает А, Б, Е\n\nКритические зависимости:\nЕсли отвергнут А, то под угрозой Б, В\nПлан восстановления\n\nРАЗДЕЛ 4: ФИНАНСОВАЯ МАТЕМАТИКА ДЕЛА\n\n4.1 ЭКОНОМИКА КОНФЛИКТА\nНаши затраты:\nСтатья, в день, в месяц, до конца дела\nЮристы\nЭксперты\nУпущенная выгода\nРепутационный ущерб\nИТОГО:\n\nИх затраты (оценка):\nСтатья, в день, в месяц, их точка слома\nЮристы топ-уровня\nОтвлечение ресурсов\nРиск для бизнеса\nИТОГО:\n\n4.2 АНАЛИЗ СЦЕНАРИЕВ (ROI)\nСценарий, вероятность, наш результат, затраты, ROI, BATNA, WATNA\nПобеда в суде\nМировое соглашение\nЧастичная победа\nПоражение\n\nТочка безубыточности для мировой\nМинимально приемлемая сумма\n\nРАЗДЕЛ 5: ПСИХОЛОГИЧЕСКАЯ ВОЙНА\n\n5.1 ПРОФИЛЬ СУДЬИ/МЕДИАТОРА\nФИО\nСтатистика решений:\nПо делам о плагиате: за истцов за ответчиков\nСредний размер компенсаций\nЛюбимые прецеденты\n\nКогнитивные особенности:\nУровень технической экспертизы:\nПредпочитает:\nТриггеры раздражения\n\nИзвестные предубеждения:\n\n5.2 ЭКСПЛУАТАЦИЯ КОГНИТИВНЫХ ИСКАЖЕНИЙ\nЭффект якоря (для расчета ущерба):\nПервая названная сумма\nОбоснование\nВизуальный якорь\n\nЭффект ореола:\nНаш позитивный образ\nИх негативный образ\nКонтраст\n\nПредвзятость подтверждения:\nСтруктура подачи, подтверждающая первое впечатление\n\nРАЗДЕЛ 6: СЦЕНАРИИ И КОНТРМЕРЫ\n\n6.1 ДЕРЕВО РЕШЕНИЙ\nНАЧАЛО ВСТРЕЧИ\nОни сразу предлагают мировую\nСумма > нашего минимума -> Тактика А1: Повышаем на 30%\nСумма < нашего минимума -> Тактика А2: Демонстрируем силу\n\nОни представляют новые доказательства\nДоказательства сильные -> План Б1: Требуем отложить\nДоказательства слабые -> Атака К1: Разбиваем немедленно\n\nОни атакуют нашу позицию\nАтака на даты -> Защита Д1: Хронология с экспертизой\nАтака на авторство -> Защита Д2: Свидетели + документы\nАтака на ущерб -> Защита Д3: Финансовая экспертиза\n\n6.2 КРИТИЧЕСКИЕ РИСКИ И ПЛАНЫ\nРИСК КАТАСТРОФИЧЕСКИЙ №1\nВероятность:\nИндикаторы начала:\n1.\n2.\n\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ:\nШаг 1: Действие - Ответственный - Время\nШаг 2: Действие - Ответственный - Время\nШаг 3: Действие - Ответственный - Время\n\nПлан восстановления\n\nРАЗДЕЛ 7: ТАКТИЧЕСКИЕ ЛОВУШКИ\n\n7.1 ПРОВОКАЦИИ ДЛЯ ОППОНЕНТА\nЛовушка №1: Противоречие в показаниях\nПодготовка\nПриманка\nВопрос-капкан: ?\nЕсли попались\nЕсли не попались\n\nЛовушка №2: Эмоциональный срыв\nТриггер\nЭскалация\nФиксация для протокола\n\n7.2 ПСИХОЛОГИЧЕСКИЕ КАПКАНЫ\nДилемма заключенного:\nСоздание ситуации\nИх варианты\nНаш выигрыш в любом случае\n\nРАЗДЕЛ 8: ПОДГОТОВКА К ВСТРЕЧЕ\n8.1 ЗА 14 ДНЕЙ\nНотариальное заверение ВСЕХ электронных доказательств\nБлокчейн-регистрация критических документов\nИнструктаж всех свидетелей (репетиция 3 раза)\nЗаказ дополнительных экспертиз\nАнализ социальных сетей оппонента за последний месяц\nПодготовка досье на их юристов"
+        }
+      }
+    ],
+    "Search Folders1": [
+      {
+        "json": {
+          "id": "1sb_r-Okt7iBmxYc2Js3MAM0YreI2h5M5",
+          "name": "База данных АУДИО"
+        }
+      },
+      {
+        "json": {
+          "id": "1FeS7qdVOiCnLyCN1tOVRBRmQja06Ix5t",
+          "name": "База данных ИЗОБРАЖЕНИЯ"
+        }
+      },
+      {
+        "json": {
+          "id": "1fKGOEo6dW6NKZNsF2wddSnh3_af8acLr",
+          "name": "База данных ВИДЕО"
+        }
+      },
+      {
+        "json": {
+          "id": "1xKBI9Plh8n2KGYzPYk8dp0Y5Z4favgSK",
+          "name": "База данных PDF"
+        }
+      },
+      {
+        "json": {
+          "id": "1nWsEzir_jpdwjeZi6hH3VGfV7dDXRq8a",
+          "name": "База данных DOC, DOCX"
+        }
+      },
+      {
+        "json": {
+          "id": "1TtV3sSTkxpvKEhcdVPLgf8852ezHkonj",
+          "name": "test_flow v2"
+        }
+      }
+    ],
+    "Search files1": [
+      {
+        "json": {
+          "id": "1iUM2F4fn4b4EBao6FbMKXRAmJh0btx3H",
+          "name": "База данных: 02.10.2025 15:21"
+        }
+      },
+      {
+        "json": {
+          "id": "1pybufqd24fq7zh0ovtyq8ZK709EQQxwu",
+          "name": "База данных: 02.10.2025 15:20"
+        }
+      }
+    ],
+    "Search files2": [
+      {
+        "json": {
+          "id": "1_41_US0Hz5-tWfvMcbxg9PrCg6kakdtN",
+          "name": "База данных: 02.10.2025 15:19"
+        }
+      },
+      {
+        "json": {
+          "id": "15AObi07ASk2ZrC2wFVEnnYXeaDBHeY6Z",
+          "name": "База данных: 02.10.2025 15:17"
+        }
+      }
+    ],
+    "Search files3": [
+      {
+        "json": {
+          "id": "1jKcGNZit738YPwjq7y5uUsLceCkQ9SsZ",
+          "name": "База данных: 02.10.2025 15:17"
+        }
+      }
+    ],
+    "Search files4": [
+      {
+        "json": {
+          "id": "1wKKfrDPFICHAAm2Spfmj6oUPXlg52NbL",
+          "name": "База данных: 02.10.2025 15:16"
+        }
+      },
+      {
+        "json": {
+          "id": "1hT0D-Vn8_kVI4qGnucEf15-V3Ar6J-31",
+          "name": "База данных: 02.10.2025 15:14"
+        }
+      }
+    ],
+    "Search files5": [
+      {
+        "json": {
+          "id": "1gTDyw5L_x_dnwc8CIHNQQwiofjC4dkyS",
+          "name": "База данных: 02.10.2025 15:14"
+        }
+      },
+      {
+        "json": {
+          "id": "1hc6VxsLXDbiMd6i_qge7hzSHAwVcfDSk",
+          "name": "База данных: 02.10.2025 15:13"
+        }
+      }
+    ],
+    "Switch3": [
+      {
+        "json": {
+          "id": "1sb_r-Okt7iBmxYc2Js3MAM0YreI2h5M5",
+          "name": "База данных АУДИО"
+        }
+      }
+    ],
+    "Telegram Trigger": [
+      {
+        "json": {
+          "message": {
+            "chat": {
+              "first_name": "Ruslan",
+              "id": 6689839309,
+              "type": "private",
+              "username": "SingularityArt"
+            },
+            "date": 1759395965,
+            "entities": [
+              {
+                "length": 6,
+                "offset": 0,
+                "type": "bot_command"
+              }
+            ],
+            "from": {
+              "first_name": "Ruslan",
+              "id": 6689839309,
+              "is_bot": false,
+              "language_code": "en",
+              "username": "SingularityArt"
+            },
+            "message_id": 337,
+            "text": "/start"
+          },
+          "update_id": 988924283
+        }
+      }
+    ],
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {}
+      }
+    ],
+    "all": [
+      {
+        "json": {
+          "content": "[\"Предмет спора:\\nvertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc, формат audio/x-aiff\\n\\nПРОВЕРОЧНЫЙ АЛГОРИТМ:\\nВсе даты событий установлены: да. Установлены даты модификации файлов 27.09.2025.\\nПротиворечия в хронологии: есть. Одинаковые даты создания и модификации для двух разных файлов, одинаковый ID файла в системе для двух разных файлов.\\nДоказательства верифицированы: да. Присутствуют SHA-256 хеши для каждого файла.\\n\\nМАТРИЦА СОБЫТИЙ:\\nПервая фиксация нашей идеи: 27.09.2025, событие Загрузка файла Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc.\\nНаша первая публикация: 27.09.2025, событие Загрузка файла Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc.\\n\\nМАТРИЦА ДОКАЗАТЕЛЬСТВ:\\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ:\\nДокумент: BvsqIvbcV9EOi6syn158q_test-1.wav, ссылка https://drive.usercontent.google.com/uc?id=1VEl5-on9ppEQ2T7FlwtQlEJMKHq91-8u&export=download\\nДокумент: vertopal.com_BvsqIvbcV9EOi6syn158q_test-1.aifc\\nТип: Аудиофайл\\nФормат: audio/x-aiff\\nХранение: Google Drive\\nСсылка для загрузки: https://drive.usercontent.google.com/uc?id=143JXceRjEiiaFi7fUpb0itFDRsQv1Kkf&export=download\\nВладелец: bbigi1327@gmail.com\\nДокумент Проектировка+(INM3F9)+N8N-6от+N1+создания+фич+из+механик+_Т3+на+д обработку+n8n+N2+Обновление+Feature+flow+с+добавлением+механик.doc\\nСсылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\\nSHA-256: 911d1877cc0c0ca221223947b91d8ef1f33f11caafcb4abcdd797d991e8e8e5964f92\\nДокумент Кэрролл Льюис. Алиса в стране чудес - royallib.ru.doc\\nСсылка: https://drive.google.com/uc?id=1gXhzMUV_EMIp3UVXVML6MUO3XMaRjcJ&export=download\\nSHA-256: 3c6b2451c27806536b306b38c2520901e878f0e793e8c5d6e2c6b45d070b4f8\\n\\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ:\\nСвидетель: bbigi1327@gmail.com\\n\\nЗА 14 ДНЕЙ:\\nНотариальное заверение ВСЕХ электронных доказательств\\nБлокчейн-регистрация критических документов\\nИнструктаж всех свидетелей (репетиция 3 раза)\\nЗаказ дополнительных экспертиз\\nАнализ социальных сетей оппонента за последний месяц\\nПодготовка досье на их юристов\",\"Законодательство актуально:\\nда\\n\\nОппонент исследован (20+ источников):\\nда\\n\\nВсе даты событий установлены:\\nда\\n\\nДоказательства верифицированы:\\nда\\n\\nДокумент:\\nБот принимает на вход договоры, переписки, претензии, протоколы, инвойсы, технические отчёты, записи звонков. Бот распознает текст из фото/PDF, вытаскивает тему, даты, суммы, имена из почты/доков, вычисляет SHA-256 для файлов.\\n\\nСкриншот:\\nБот принимает на вход фото/PDF, создает preview.\\n\\nЗА 14 ДНЕЙ:\\nНотариальное заверение ВСЕХ электронных доказательств\\nБлокчейн-регистрация критических документов\\nИнструктаж всех свидетелей (репетиция 3 раза)\\nЗаказ дополнительных экспертиз\\nАнализ социальных сетей оппонента за последний месяц\\nПодготовка досье на их юристов\",\"Юрисдикция встречи:\\nг. Москва, Российская Федерация, применимое законодательство Российской Федерации.\\n\\nТип процедуры:\\nсудебное заседание, переговоры, судебное решение.\\n\\nДата встречи:\\n27.09.2025, 03.02.2025\\n\\nПредмет спора:\\nкража кренделей, предоставление услуг выполнения работ в сфере информационных технологий, передача исключительных прав на результаты интеллектуальной деятельности.\\n\\nПротиворечия в хронологии:\\nесть (даты чаепития).\\n\\nПоисковые запросы и результаты:\\nВалет Червей судебные дела: Обвиняемый в краже кренделей.\\nВалет Червей наш спорный объект: Валет обвиняется в краже кренделей.\\n\\nПолное наименование/ФИО:\\nВалет Червей, Анисимов Руслан Андреевич.\\n\\nЮридический статус:\\nОбвиняемый в суде, самозанятый, плательщик налога на профессиональный доход.\\n\\nПсихологический профиль лица, принимающего решения:\\nотрицает вину, ссылается на отсутствие прямых доказательств (нет подписи).\\n\\nМатрица событий:\\nДата документа: 27.09.2025\\nДата подачи заявки на бота: 07.08.2025\\nЖелаемая дата реализации бота: 01.11.2025 (для Мегабота №1 и доработок №2)\\nСобытие: Дама Червей напекла кренделей.\\nСобытие: Валет Червей уволок семь кренделей.\\nИх версия: Валет отрицает, что писал письмо (стихи), которое является уликой.\\nИх версия: Валет не может плавать, что Король использует как доказательство его вины.\\nКритическое расхождение: Валет отрицает написание письма, но Король утверждает, что отсутствие подписи делает его еще более подозрительным.\\n\\nМатрица доказательств:\\nПЕРВИЧНЫЕ - КРИТИЧЕСКИЕ\\nДокумент: Стихи, найденные Белым Кроликом.\\nДокумент: Блюдо с кренделями на столе.\\nДокумент\\nЭкспертиза\\nВТОРИЧНЫЕ - ПОДДЕРЖИВАЮЩИЕ\\nСвидетель: Болванщик (показания путаные).\\nСвидетель: Кухарка (показания о перце).\\nСвидетель: Алиса (может опровергнуть абсурдные правила).\\nСвидетель\\nСкриншот\\n\\nПерекрестная валидация:\\nМатрица взаимоподтверждения:\\nДоказательство А подтверждает Б, В, Г\\nДоказательство Б подтверждает А, В, Д\\nДоказательство В подтверждает А, Б, Е\\nКритические зависимости:\\nЕсли отвергнут А, то под угрозой Б, В\\n\\nПрофиль судьи/медиатора:\\nФИО: Король Червей.\\nКогнитивные особенности:\\nУровень технической экспертизы: низкий (путает слова, не понимает каламбуры).\\nПредпочитает: логику (пытается применять правила), но легко поддается влиянию Королевы.\\nТриггеры раздражения: шум, неповиновение, неясные показания.\\nИзвестные предубеждения: склонен к обвинительному уклону, особенно под давлением Королевы.\\n\\nЭксплуатация когнитивных искажений:\\nЭффект ореола:\\nНаш позитивный образ: Алиса - ребенок, милая барышня.\\nИх негативный образ: Королева - жестокая, рубит головы.\\nКонтраст: Алиса против абсурдной и жестокой системы.\\nПредвзятость подтверждения:\\nСтруктура подачи, подтверждающая первое впечатление: Король и Королева склонны видеть вину во всем.\\n\\nДерево решений:\\nНАЧАЛО ВСТРЕЧИ\\nОни сразу предлагают мировую -> Сумма > нашего минимума -> Тактика А1: Повышаем на 30%; Сумма < нашего минимума -> Тактика А2: Демонстрируем силу\\nОни представляют новые доказательства -> Доказательства сильные -> План Б1: Требуем отложить; Доказательства слабые -> Атака К1: Разбиваем немедленно, Алиса может их опровергнуть (как стихи).\\nОни атакуют нашу позицию -> Атака на даты -> Защита Д1: Хронология с экспертизой; Атака на авторство -> Защита Д2: Свидетели + документы; Атака на ущерб -> Защита Д3: Финансовая экспертиза.\\n\\nКритические риски и планы:\\nРИСК КАТАСТРОФИЧЕСКИЙ №1\\nВероятность: высокая.\\nИндикаторы начала: 1. Королева багровеет от ярости. 2. Королева кричит Рубите ему голову!.\\nНЕМЕДЛЕННЫЕ ДЕЙСТВИЯ: Шаг 1: Опровергнуть абсурдность обвинения (Алиса говорит Чепуха!). Шаг 2: Указать на отсутствие смысла в доказательствах. Шаг 3: Указать на нелегитимность правил (Алиса: это не настоящее правило. Вы его только что выдумали.).\\n\\nПровокации для оппонента:\\nЛовушка №2: Эмоциональный срыв\\nТриггер: Королева легко впадает в ярость.\"]"
+        }
+      }
+    ],
+    "download": [
+      {
+        "json": {
+          "id": "1iUM2F4fn4b4EBao6FbMKXRAmJh0btx3H",
+          "name": "База данных: 02.10.2025 15:21"
+        }
+      },
+      {
+        "json": {
+          "id": "1pybufqd24fq7zh0ovtyq8ZK709EQQxwu",
+          "name": "База данных: 02.10.2025 15:20"
+        }
+      }
+    ],
+    "download1": [
+      {
+        "json": {
+          "id": "1_41_US0Hz5-tWfvMcbxg9PrCg6kakdtN",
+          "name": "База данных: 02.10.2025 15:19"
+        }
+      },
+      {
+        "json": {
+          "id": "15AObi07ASk2ZrC2wFVEnnYXeaDBHeY6Z",
+          "name": "База данных: 02.10.2025 15:17"
+        }
+      }
+    ],
+    "download2": [
+      {
+        "json": {
+          "id": "1jKcGNZit738YPwjq7y5uUsLceCkQ9SsZ",
+          "name": "База данных: 02.10.2025 15:17"
+        }
+      }
+    ],
+    "download3": [
+      {
+        "json": {
+          "id": "1wKKfrDPFICHAAm2Spfmj6oUPXlg52NbL",
+          "name": "База данных: 02.10.2025 15:16"
+        }
+      },
+      {
+        "json": {
+          "id": "1hT0D-Vn8_kVI4qGnucEf15-V3Ar6J-31",
+          "name": "База данных: 02.10.2025 15:14"
+        }
+      }
+    ],
+    "download4": [
+      {
+        "json": {
+          "id": "1gTDyw5L_x_dnwc8CIHNQQwiofjC4dkyS",
+          "name": "База данных: 02.10.2025 15:14"
+        }
+      },
+      {
+        "json": {
+          "id": "1hc6VxsLXDbiMd6i_qge7hzSHAwVcfDSk",
+          "name": "База данных: 02.10.2025 15:13"
+        }
+      }
+    ]
+  },
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1",
@@ -8070,6 +9846,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-10-01T14:47:38.000Z",
-  "versionId": "30cd2500-ce1c-4918-965f-5cc0555d25bf"
+  "updatedAt": "2025-10-02T19:31:26.000Z",
+  "versionId": "ee1b70d7-26e3-4b54-89b9-b5e77f24362a"
 }
