@@ -196,17 +196,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1130,18 +1130,6 @@
         ]
       ]
     },
-    "Upload Video and Description to Tiktok": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait7",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Upload file1": {
       "main": [
         [
@@ -1280,17 +1268,6 @@
           {
             "index": 0,
             "node": "Delete rows or columns from sheet",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Upload Video and Description to Tiktok",
             "type": "main"
           }
         ]
@@ -1665,56 +1642,6 @@
   },
   "name": "CEO_ASMR Tost Jem (Vladislav Saveliev)",
   "nodes": [
-    {
-      "id": "4e712e32-38c2-4a4e-a543-6d9359daa5a6",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nBright ideas, good vibes, and daily inspiration.\n\nFind us on:\nYouTube: https://www.youtube.com/@Smushlight\nTikTok: https://www.tiktok.com/@smusshlight\nInstagram: https://www.instagram.com/smusshlight/\n"
-            },
-            {
-              "name": "user",
-              "value": "ASMRTost"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        192,
-        1088
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
     {
       "id": "c1d8477f-538c-460a-9bff-95c639000080",
       "name": "Upload Video and Description to Instagram",
@@ -4877,21 +4804,6 @@
       "typeVersion": 3
     },
     {
-      "id": "4fdfdb8e-fd6f-4371-88e8-2ccd84a3b918",
-      "name": "Wait7",
-      "parameters": {
-        "amount": 1,
-        "unit": "minutes"
-      },
-      "position": [
-        448,
-        1120
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "a33d101c-a4c1-4992-a1db-536eea6dd5da"
-    },
-    {
       "id": "9bb2c952-a9af-4430-b797-2294583b24ba",
       "name": "Wait8",
       "parameters": {
@@ -4935,23 +4847,49 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "5d040034-9fab-4447-90eb-9835c5463ff4"
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "cc85b35c-ac64-40db-b08e-c37bcfea166b",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} Bright ideas, good vibes, and daily inspiration.  Find us on: YouTube: https://www.youtube.com/@Smushlight TikTok: https://www.tiktok.com/@smusshlight Instagram: https://www.instagram.com/smusshlight/",
+        "user": "ASMRTost",
+        "video": "data"
+      },
+      "position": [
+        192,
+        1120
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "19",
-          "Day of week": "Friday",
+          "Day of month": "08",
+          "Day of week": "Wednesday",
           "Hour": "15",
           "Minute": "00",
-          "Month": "September",
-          "Readable date": "September 19th 2025, 3:00:00 pm",
+          "Month": "October",
+          "Readable date": "October 8th 2025, 3:00:00 pm",
           "Readable time": "3:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-09-19T15:00:00.004+02:00"
+          "timestamp": "2025-10-08T15:00:00.012+02:00"
         }
       }
     ]
@@ -4987,6 +4925,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:23:26.000Z",
-  "versionId": "d4f43986-6ca9-40e4-96db-f1485b8bbafe"
+  "updatedAt": "2025-10-09T10:20:41.000Z",
+  "versionId": "d9e86e56-51d6-4064-9af3-98c4d7236311"
 }
