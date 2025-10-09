@@ -204,17 +204,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1957,55 +1957,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "208f7029-bca9-42fa-acca-ae7eec5b93cc",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nHigh energy, bold ideas, and nonstop fun.\n\nFind us on:\nYouTube: https://www.youtube.com/@WipeeHype\nInstagram: https://www.instagram.com/wipeehype/\nTikTok: https://www.tiktok.com/@wipeehype\n"
-            },
-            {
-              "name": "user",
-              "value": "ASMREraser"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        224,
-        1200
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
     },
     {
       "id": "62329dea-bb71-4d30-8190-3f5f54b5fcb1",
@@ -5636,6 +5587,32 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "69488eca-a580-49d4-a95a-d36edaa48b9d"
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "6aeb591e-b694-4624-b8f7-7ba26b256fb5",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} High energy, bold ideas, and nonstop fun.  Find us on: YouTube: https://www.youtube.com/@WipeeHype Instagram: https://www.instagram.com/wipeehype/ TikTok: https://www.tiktok.com/@wipeehype",
+        "user": "ASMREraser",
+        "video": "data"
+      },
+      "position": [
+        224,
+        1232
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -5688,6 +5665,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:23:07.000Z",
-  "versionId": "216a6f4c-1a46-4fb3-88ca-51ec8abd0c64"
+  "updatedAt": "2025-10-09T10:24:05.000Z",
+  "versionId": "b42ef589-aa18-4422-96e8-cfdc646e6010"
 }
