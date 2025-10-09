@@ -177,17 +177,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Upload Video and Description to Instagram1",
+            "node": "Upload Post",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post1",
             "type": "main"
           }
         ]
@@ -1581,58 +1581,11 @@
   "createdAt": "2025-08-07T09:03:41.863Z",
   "id": "YjQP0SAZQdy4CkB4",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "CEO_ASMR Slice",
   "nodes": [
-    {
-      "id": "4b2674af-4b0d-4f3b-a75e-5090bec31af3",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nThe ASMR Garden\nRelax, unwind, and discover new ASMR experiences.\nFind us on:\nYouTube: https://www.youtube.com/@TheeASMRGarden\nTikTok: https://www.tiktok.com/@theeasmrgarden\nInstagram: https://www.instagram.com/theeasmrgarden/"
-            },
-            {
-              "name": "user",
-              "value": "ASMR"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        5648,
-        1120
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
     {
       "id": "95d07d12-6208-491c-9305-986772fe7eb7",
       "name": "Upload Video and Description to Instagram",
@@ -1682,71 +1635,6 @@
       "position": [
         5648,
         1344
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "f1dd3209-bc6a-494b-a7d8-07a85a158253",
-      "name": "Upload Video and Description to Instagram1",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}"
-            },
-            {
-              "name": "user",
-              "value": "ASMR"
-            },
-            {
-              "name": "platform[]",
-              "value": "youtube"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            },
-            {
-              "name": "tags",
-              "value": "={{ $('YT Tags1').item.json.output }}"
-            },
-            {
-              "name": "madeForKids",
-              "value": "false"
-            },
-            {
-              "name": "privacyStatus",
-              "value": "public"
-            },
-            {
-              "name": "description",
-              "value": "The ASMR Garden\nRelax, unwind, and discover new ASMR experiences.\nFind us on:\nYouTube: https://www.youtube.com/@TheeASMRGarden\nTikTok: https://www.tiktok.com/@theeasmrgarden\nInstagram: https://www.instagram.com/theeasmrgarden/"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        5648,
-        1568
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -4764,6 +4652,58 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "5c51a76f-6c35-4b20-a996-704f9877be0d",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} The ASMR Garden Relax, unwind, and discover new ASMR experiences. Find us on: YouTube: https://www.youtube.com/@TheeASMRGarden TikTok: https://www.tiktok.com/@theeasmrgarden Instagram: https://www.instagram.com/theeasmrgarden/",
+        "user": "ASMR",
+        "video": "data"
+      },
+      "position": [
+        5648,
+        1168
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "f3bea25a-67e4-48ab-af79-0babec7d0a87",
+      "name": "Upload Post1",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "youtube"
+        ],
+        "title": "={{ $('Generate Title1').item.json.message.content }}",
+        "user": "ASMR",
+        "video": "data",
+        "youtubeDescription": " The ASMR Garden Relax, unwind, and discover new ASMR experiences. Find us on: YouTube: https://www.youtube.com/@TheeASMRGarden TikTok: https://www.tiktok.com/@theeasmrgarden Instagram: https://www.instagram.com/theeasmrgarden/"
+      },
+      "position": [
+        5648,
+        1568
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -4813,6 +4753,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:23:50.000Z",
-  "versionId": "365664d5-e4b6-45cc-8745-01b012c20b35"
+  "updatedAt": "2025-10-09T10:16:39.000Z",
+  "versionId": "d8ab12ec-b051-4ee9-90ed-e359069c1c5a"
 }
