@@ -223,17 +223,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -2033,55 +2033,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "70a6eda9-ccf8-4cc0-9f66-e86badf342ad",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nVelvettember\nA touch of style, stories, and inspiration—every day.\n\nFind us on:\nYouTube: https://www.youtube.com/@velvettember\nTikTok: https://www.tiktok.com/@velvettember\nInstagram: https://www.instagram.com/velvettember\n"
-            },
-            {
-              "name": "user",
-              "value": "ASMRFire"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        784,
-        880
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
     },
     {
       "id": "30ee35f2-d7fe-4bf2-b8cb-2fef65de4b99",
@@ -5801,6 +5752,32 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "02765187-2e34-47b2-a41b-c6a0ba17d878"
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "4ed650e6-e0e5-44fc-8974-e2c629270309",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} Velvettember A touch of style, stories, and inspiration—every day.  Find us on: YouTube: https://www.youtube.com/@velvettember TikTok: https://www.tiktok.com/@velvettember Instagram: https://www.instagram.com/velvettember",
+        "user": "ASMRFire",
+        "video": "data"
+      },
+      "position": [
+        784,
+        880
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -5853,6 +5830,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:22:48.000Z",
-  "versionId": "3db6e2bc-0eaa-4e0c-8628-badca063fabd"
+  "updatedAt": "2025-10-09T10:27:10.000Z",
+  "versionId": "480bf9c0-4c23-4810-acbe-d65f3b392b92"
 }
