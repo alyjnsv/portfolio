@@ -209,12 +209,12 @@
           },
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
+            "node": "Upload Video and Description to Instagram1",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Upload Video and Description to Instagram1",
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1957,55 +1957,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "bb64d2c2-249e-4745-922f-e107a823beb8",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nCreativity, fun, and fresh moments every day.\n\nFollow us on:\nYouTube: https://www.youtube.com/@boommling\nTikTok: https://www.tiktok.com/@kyrawelsh744\nInstagram: https://www.instagram.com/boommling"
-            },
-            {
-              "name": "user",
-              "value": "ASMRBoom"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        608,
-        1184
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
     },
     {
       "id": "447fe4e5-088a-42d9-9861-8f18e266071c",
@@ -5636,9 +5587,53 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "82555773-06bc-4447-a550-56a22e26d6b2"
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "919e9f25-f1af-4431-8bec-c9fb53aeee4a",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} Creativity, fun, and fresh moments every day.  Follow us on: YouTube: https://www.youtube.com/@boommling TikTok: https://www.tiktok.com/@kyrawelsh744 Instagram: https://www.instagram.com/boommling",
+        "user": "ASMRBoom",
+        "video": "data"
+      },
+      "position": [
+        608,
+        1216
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Schedule Trigger1": [
+      {
+        "json": {
+          "Day of month": "08",
+          "Day of week": "Wednesday",
+          "Hour": "14",
+          "Minute": "00",
+          "Month": "October",
+          "Readable date": "October 8th 2025, 2:00:00 pm",
+          "Readable time": "2:00:00 pm",
+          "Second": "00",
+          "Timezone": "Europe/Warsaw (UTC+02:00)",
+          "Year": "2025",
+          "timestamp": "2025-10-08T14:00:00.019+02:00"
+        }
+      }
+    ]
+  },
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "errorWorkflow": "3mM0jvFQycOqYesd",
@@ -5670,6 +5665,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:23:36.000Z",
-  "versionId": "42a179fe-6cc5-485b-8508-cb6f872e3548"
+  "updatedAt": "2025-10-09T10:18:44.000Z",
+  "versionId": "2942bc17-7196-4df1-a58b-b2d94b26dbfc"
 }
