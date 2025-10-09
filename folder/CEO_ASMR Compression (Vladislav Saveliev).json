@@ -170,17 +170,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1535,55 +1535,6 @@
   },
   "name": "CEO_ASMR Compression (Vladislav Saveliev)",
   "nodes": [
-    {
-      "id": "41711f0c-1ba5-4a35-90fc-6dbea2bfaf9a",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nChronooCrush\nExploring moments, stories, and the passage of time.\n\nConnect with us:\nYouTube: https://www.youtube.com/@ChronooCrush\nInstagram: https://www.instagram.com/chronoocrush/\nTikTok: https://www.tiktok.com/@leblancjoel926"
-            },
-            {
-              "name": "user",
-              "value": "ASMRComp"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        1008,
-        992
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
     {
       "id": "f43ad926-03aa-4917-8883-e05401616907",
       "name": "Upload Video and Description to Instagram",
@@ -4681,6 +4632,32 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "89342610-9da4-4603-abbe-c6d23908d1c2",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} ChronooCrush Exploring moments, stories, and the passage of time.  Connect with us: YouTube: https://www.youtube.com/@ChronooCrush Instagram: https://www.instagram.com/chronoocrush/ TikTok: https://www.tiktok.com/@leblancjoel926",
+        "user": "ASMRComp",
+        "video": "data"
+      },
+      "position": [
+        1008,
+        1024
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -4733,6 +4710,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:22:58.000Z",
-  "versionId": "2330392f-66fc-4f76-afe4-9a5b75305c50"
+  "updatedAt": "2025-10-09T10:25:36.000Z",
+  "versionId": "f4c13e8c-0a61-4449-93aa-f6f7fb738ea4"
 }
