@@ -196,17 +196,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1744,55 +1744,6 @@
       "position": [
         304,
         1280
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "1e7a5705-49c1-489d-aecb-9265628010fa",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\n\nBold innovations, limitless connections, and nonstop inspiration.\n\nFind us on:\nYouTube: https://www.youtube.com/@zoomttopia\nInstagram: https://www.instagram.com/zoommtopia/\nTikTok: https://www.tiktok.com/@zoomttopia"
-            },
-            {
-              "name": "user",
-              "value": "ASMRZoom"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpZGVvcHJvZG11bHRpQGdtYWlsLmNvbSIsImV4cCI6NDkwODA2Mjc3MCwianRpIjoiYzI0MTZlODItNjU4Ny00MGM2LTkxYjQtMzM1MWNlN2RmY2ZlIn0.wKT0rHo8eRlJvGXOZavJjiJmJSuF8RNla3LjT1mKxU4"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        304,
-        1040
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -4868,6 +4819,32 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0a3418bd-686a-4ffa-adb9-779c0d77902d"
+    },
+    {
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "87caac63-b8d8-444d-a9aa-618ba3527338",
+      "name": "Upload Post",
+      "parameters": {
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }}\n\nBold innovations, limitless connections, and nonstop inspiration.\n\nFind us on:\nYouTube: https://www.youtube.com/@zoomttopia\nInstagram: https://www.instagram.com/zoommtopia/\nTikTok: https://www.tiktok.com/@zoomttopia",
+        "user": "ASMRZoom",
+        "video": "data"
+      },
+      "position": [
+        304,
+        1072
+      ],
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -4920,6 +4897,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:23:17.000Z",
-  "versionId": "f9a0270d-a43f-4a42-89fc-0aad0ba8be20"
+  "updatedAt": "2025-10-09T10:22:19.000Z",
+  "versionId": "0ee5a2c0-e949-4dc0-a7e7-d80e1fc708b5"
 }
