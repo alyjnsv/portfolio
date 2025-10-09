@@ -223,17 +223,17 @@
         [
           {
             "index": 0,
-            "node": "Upload Video and Description to Tiktok",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "Upload Video and Description to Instagram",
             "type": "main"
           },
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Upload Post",
             "type": "main"
           }
         ]
@@ -1319,18 +1319,6 @@
         ]
       ]
     },
-    "Upload Video and Description to Tiktok": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait11",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Upload file": {
       "main": [
         [
@@ -1436,17 +1424,6 @@
           {
             "index": 0,
             "node": "Upload Video and Description to Instagram",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait11": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Upload Video and Description to Tiktok",
             "type": "main"
           }
         ]
@@ -2091,56 +2068,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "6ef12ea0-b20e-456e-a040-0dfbfb4e436b",
-      "name": "Upload Video and Description to Tiktok",
-      "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
-      "notesInFlow": true,
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "title",
-              "value": "={{ $('Generate Title1').item.json.message.content }}\nGlosssfinity\nShine, beauty, and limitless creativity every day.\n\nFollow us on:\nYouTube: https://www.youtube.com/@Glosssfinity\nTikTok: https://www.tiktok.com/@glosssfinity\nInstagram: https://www.instagram.com/glosssfinity/\n"
-            },
-            {
-              "name": "user",
-              "value": "ASMRGrind"
-            },
-            {
-              "name": "platform[]",
-              "value": "tiktok"
-            },
-            {
-              "inputDataFieldName": "data",
-              "name": "video",
-              "parameterType": "formBinaryData"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Apikey eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbm5vbmhhbXphaEBnbWFpbC5jb20iLCJleHAiOjQ5MDMyMjI0MTcsImp0aSI6IjliYWM3ZGJjLTg3MjktNDQ1Yy04ODJiLTkwMDVlODU2NWMyMCJ9.yJi2F9zJ8dAmF9cqMJqEF8j5NKhTTdS5--67uJqRLJA"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "sendHeaders": true,
-        "url": "https://api.upload-post.com/api/upload"
-      },
-      "position": [
-        416,
-        1232
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
     },
     {
       "id": "c191596c-4f83-4e91-a237-988ed0d3cdfc",
@@ -5867,19 +5794,30 @@
       "webhookId": "2aa8c72c-6d53-40dc-b26a-5b866a322d59"
     },
     {
-      "id": "1a549740-8079-437c-9290-66cda64f1989",
-      "name": "Wait11",
+      "credentials": {
+        "uploadPostApi": {
+          "id": "2YLbM7GkHfpuNAfs",
+          "name": "Upload Post account"
+        }
+      },
+      "id": "05917378-70c5-4ecd-b09f-7b5837c81624",
+      "name": "Upload Post",
       "parameters": {
-        "amount": 1,
-        "unit": "minutes"
+        "operation": "uploadVideo",
+        "platform": [
+          "tiktok"
+        ],
+        "tiktokIsAigc": true,
+        "title": "={{ $('Generate Title1').item.json.message.content }} Glosssfinity Shine, beauty, and limitless creativity every day.  Follow us on: YouTube: https://www.youtube.com/@Glosssfinity TikTok: https://www.tiktok.com/@glosssfinity Instagram: https://www.instagram.com/glosssfinity/",
+        "user": "ASMRGrind",
+        "video": "data"
       },
       "position": [
-        624,
+        416,
         1248
       ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "2aa8c72c-6d53-40dc-b26a-5b866a322d59"
+      "type": "n8n-nodes-upload-post.uploadPost",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -5932,6 +5870,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:22:38.000Z",
-  "versionId": "2318e45f-6277-4688-85b2-c2469e31f6bc"
+  "updatedAt": "2025-10-09T10:28:55.000Z",
+  "versionId": "5d87e451-ecc4-4563-81d2-00a5c67c9e47"
 }
