@@ -1,0 +1,75 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-13T08:34:58.235Z",
+  "id": "VSnCG6x4mHCrATj2",
+  "isArchived": true,
+  "meta": null,
+  "name": "My workflow 15",
+  "nodes": [
+    {
+      "id": "95cdaa26-50ce-4ca1-a9a0-5f261c1cd34f",
+      "name": "When chat message received",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "webhookId": "16ed430c-46e7-4411-b1aa-398c1701734a"
+    },
+    {
+      "id": "593141b7-37de-4750-a187-3a240009cbf7",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "LW Task Builder",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/vdis3UoXojwOx9tO",
+          "mode": "list",
+          "value": "vdis3UoXojwOx9tO"
+        },
+        "operation": "get"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-10-13T08:34:58.239Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-10-13T08:34:58.239Z",
+      "workflowId": "VSnCG6x4mHCrATj2"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-13T08:35:09.000Z",
+  "versionId": "a667efa2-1a8c-45e8-a0a9-2cd7f4b98a28"
+}
