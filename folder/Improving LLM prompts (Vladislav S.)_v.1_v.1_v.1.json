@@ -1,0 +1,997 @@
+{
+  "active": true,
+  "connections": {
+    "Get prompt for Improving GPT prompts": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get prompt for Improving GPT prompts1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get prompt for Инструкция проверки промта": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Инструкция проверки промта",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
+            "node": "Model Selector",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Инструкция проверки промта",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Improving GPT prompts": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Improving GPT prompts1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Model Selector": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Model Selector",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
+            "node": "Improving GPT prompts",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Инструкция проверки промта",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 2,
+            "node": "Model Selector",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Send a text message1": {
+      "main": [
+        []
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "Инструкция проверки промта",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Improving GPT prompts",
+            "type": "main"
+          }
+        ],
+        []
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Инструкция проверки промта": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Инструкция проверки промта",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-25T06:24:07.205Z",
+  "id": "Z9qO0vrLaz1ilDe1",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Improving LLM prompts (Vladislav S.)_v.1_v.1_v.1",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "McM86BIQacMnHFB7",
+          "name": "Improving LLM prompts"
+        }
+      },
+      "id": "de0ac474-b8f9-477f-b86b-ddd3fca13173",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message",
+          "callback_query"
+        ]
+      },
+      "position": [
+        -368,
+        16
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "3b717edc-5d05-4597-9575-9edf16dbc2b2"
+    },
+    {
+      "id": "910a02d6-8eb1-4b22-ac95-4d73fcd2b513",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "cc8aca81-0d7f-4c46-9889-ce1ca72ae4d4",
+              "leftValue": "={{ $json.message.chat.username || $json.callback_query.message.chat.username }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "BGWilly"
+            },
+            {
+              "id": "335d29a9-b434-431b-8e8e-9521e29be338",
+              "leftValue": "={{ $json.message.chat.username || $json.callback_query.message.chat.username }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "Dan4cho"
+            },
+            {
+              "id": "bb7e03c3-51cc-47f6-ae09-9f495866750c",
+              "leftValue": "={{ $json.message.chat.username || $json.callback_query.message.chat.username }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "Ne_Foxik"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -192,
+        16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "McM86BIQacMnHFB7",
+          "name": "Improving LLM prompts"
+        }
+      },
+      "id": "3289dea7-d9ee-4810-b12a-142376c9bbee",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "Запросите доступ у админа ⚠️"
+      },
+      "position": [
+        144,
+        112
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "973cc524-d96c-4ab0-9718-decaef2f2125"
+    },
+    {
+      "id": "5d7e86a5-fe80-4d6c-b929-03537a5179f6",
+      "name": "Improving GPT prompts",
+      "parameters": {
+        "hasOutputParser": true,
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
+        },
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}"
+      },
+      "position": [
+        1200,
+        -368
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "1ebfd53b-db7b-459f-bdc4-6a0a64a36df6",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "d995b34f-1cbf-4014-a4ae-5d8cd54ba7a6",
+              "leftValue": "={{ $json.message?.text || $json.callback_query?.data}}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "/start"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        144,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "McM86BIQacMnHFB7",
+          "name": "Improving LLM prompts"
+        }
+      },
+      "id": "4a258d7d-e6cc-4ae1-bda0-e78ddfa6b8cc",
+      "name": "Send a text message1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "additionalFields": {
+                      "switch_inline_query_current_chat": "GPT (промт)"
+                    },
+                    "text": "GPT 5 🦾"
+                  },
+                  {
+                    "additionalFields": {
+                      "switch_inline_query_current_chat": "Gemini (промт)"
+                    },
+                    "text": "Gemini 🦾"
+                  },
+                  {
+                    "additionalFields": {
+                      "switch_inline_query_current_chat": "Cloude (промт)"
+                    },
+                    "text": "Cloude 🦾"
+                  },
+                  {
+                    "additionalFields": {
+                      "switch_inline_query_current_chat": "N8N (промт)"
+                    },
+                    "text": "N8N 🦾"
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "additionalFields": {
+                      "callback_data": "Сравнить"
+                    },
+                    "text": "Сравнить ⚖️"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "replyMarkup": "inlineKeyboard",
+        "text": "=Привет {{ $json.message.chat.first_name }}! Я улучшайзер промтов, отправь мне промт, и я подберу для самый лучший и скажу почему!"
+      },
+      "position": [
+        288,
+        192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "8c53b9fe-b13c-480f-a942-972a7bfffd0d"
+    },
+    {
+      "id": "2682a3f9-c146-449e-bce7-0dae46aefcdb",
+      "name": "Model Selector",
+      "parameters": {
+        "numberInputs": 3,
+        "rules": {
+          "rule": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "fbb94840-3592-45c7-9394-25a949f73bcb",
+                    "leftValue": "={{ $json.output.LLM }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "GPT"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "060447eb-49aa-4697-981f-fd3367f6aa00",
+                    "leftValue": "={{ $json.output.LLM }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Gemini"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "modelIndex": 2
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "659a89d5-28d2-40df-8d6e-4455837377d6",
+                    "leftValue": "={{ $json.output.LLM }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Claude"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "modelIndex": 3
+            }
+          ]
+        }
+      },
+      "position": [
+        1104,
+        -160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.modelSelector",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "967d8e4c-70f7-473d-b815-c62f6b319f33",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        992,
+        64
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "8a02c283-f253-40f3-91a9-5abce16662ac",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        1152,
+        64
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "3662812a-1b34-484f-80ae-294e1ce22c6a",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "anthropic/claude-opus-4.1",
+        "options": {}
+      },
+      "position": [
+        1280,
+        64
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "26752f02-71ad-48e6-b46a-405e671d7a07",
+      "name": "OpenAI Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        1344,
+        -160
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "fb937e88-cac0-4119-8f43-f9be95105c35",
+      "name": "OpenAI Chat Model2",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "position": [
+        368,
+        96
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "b9851e82-f94c-4678-824a-6d0e87150bc2",
+      "name": "Structured Output Parser",
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"LLM\": \"LLM модель\",\n\t\"почему?\": \"Подойдет лучше всего\"\n}"
+      },
+      "position": [
+        496,
+        96
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "McM86BIQacMnHFB7",
+          "name": "Improving LLM prompts"
+        }
+      },
+      "id": "efa07b09-77bf-4b00-908a-8f2666365435",
+      "name": "Send a text message6",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "={{ $('Инструкция проверки промта').item.json.output['почему?'] }}\n{{ $json.output }}"
+      },
+      "position": [
+        1552,
+        -80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "80a52dd7-44d0-4f03-9f75-430e717a4cf0"
+    },
+    {
+      "id": "19cbc4a5-1f48-4f43-8fb5-cb730ba1861a",
+      "name": "Инструкция проверки промта",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
+        },
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}"
+      },
+      "position": [
+        352,
+        -96
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "disabled": true,
+      "id": "e60a5951-90d4-4414-96b8-5257655f0e5b",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5fb5e947-5a68-4ab2-8b5d-36211ca7a4d6",
+                    "leftValue": "={{ $json.output['Что это?'] }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Улучшить"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Улучшить",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8e7a6aa7-6a06-4f30-b780-338d3fc6d325",
+                    "leftValue": "={{ $json.output['Что это?'] }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Сравнить"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Сравнить",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        672,
+        272
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "disabled": true,
+      "id": "20410865-c263-43b1-90c6-672cdd56f1b9",
+      "name": "Improving GPT prompts1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
+        },
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}"
+      },
+      "position": [
+        1184,
+        256
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true,
+      "id": "a6062f78-7494-478c-97f5-612ff7a1023a",
+      "name": "OpenAI Chat Model3",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "position": [
+        1168,
+        448
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "disabled": true,
+      "id": "4cad3148-0d15-40ac-a988-905c04bf053e",
+      "name": "HTTP Request5",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model\": \"gpt-4.1-mini\",\n  \"tools\": [\n    {\n      \"type\": \"web_search_preview\"\n    }\n  ],\n  \"input\": \"{{ $('Telegram Trigger').item.json.message.text }}\"\n} ",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.openai.com/v1/responses"
+      },
+      "position": [
+        960,
+        256
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "McM86BIQacMnHFB7",
+          "name": "Improving LLM prompts"
+        }
+      },
+      "disabled": true,
+      "id": "702e8c86-ffa0-468d-8aac-28a2980f8c7f",
+      "name": "Send a text message8",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "={{ $json.output }}"
+      },
+      "position": [
+        1552,
+        272
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "80a52dd7-44d0-4f03-9f75-430e717a4cf0"
+    },
+    {
+      "id": "datatable-tool-for-5d7e86a5-fe80-4d6c-b929-03537a5179f6",
+      "name": "Get prompt for Improving GPT prompts",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "5d7e86a5-fe80-4d6c-b929-03537a5179f6"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        1360,
+        -368
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "datatable-tool-for-19cbc4a5-1f48-4f43-8fb5-cb730ba1861a",
+      "name": "Get prompt for Инструкция проверки промта",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "19cbc4a5-1f48-4f43-8fb5-cb730ba1861a"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        512,
+        -96
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "datatable-tool-for-20410865-c263-43b1-90c6-672cdd56f1b9",
+      "name": "Get prompt for Improving GPT prompts1",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "20410865-c263-43b1-90c6-672cdd56f1b9"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        1344,
+        256
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-25T06:24:07.209Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-08-25T06:24:07.209Z",
+      "workflowId": "Z9qO0vrLaz1ilDe1"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-10-14T22:00:07.498Z",
+  "versionId": "3b415f9f-6f82-4ce5-b0cf-973f296919ff"
+}
