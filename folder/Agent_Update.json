@@ -1,0 +1,260 @@
+{
+  "active": false,
+  "connections": {
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get many workflows": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Replace Me",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get many workflows",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-10-14T07:18:30.912Z",
+  "id": "taQVQdcxWS9DPXZV",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Agent_Update",
+  "nodes": [
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "u4SvPPFCylzaLVXf",
+          "name": "Bearer Auth account"
+        }
+      },
+      "id": "400dc0af-e4d7-4e69-ad8c-b246cfecd487",
+      "name": "HTTP Request",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "=nodes",
+              "value": "={{ $('Code in JavaScript').item.json.nodes }}"
+            },
+            {
+              "name": "=connections",
+              "value": "={{ $('Code in JavaScript').item.json.connections }}"
+            },
+            {
+              "name": "=name",
+              "value": "={{ $('Code in JavaScript').item.json.name }}_v.1"
+            },
+            {
+              "name": "=settings",
+              "value": "={{ $json.data[0].settings }}"
+            }
+          ]
+        },
+        "genericAuthType": "httpBearerAuth",
+        "jsonHeaders": "{\n  \"X-N8N-API-KEY\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3YTBkMzcyNS1iOGY3LTRjNzgtYTllNC0zYjU2YWNiM2M1MzUiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzYwMTA5MjI2LCJleHAiOjE3NjI2NDI4MDB9.l8Ep6yltkraa_cM5InoT99lSzQkcN-8wTdC2aB3ZPx0\"\n}",
+        "method": "PUT",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "url": "=https://techspaceapp.app.n8n.cloud/api/v1/workflows/{{ $('Code in JavaScript').item.json.id }}"
+      },
+      "position": [
+        1056,
+        -112
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "ff50c406-02a0-41f1-8aa4-26cda7d823a0",
+      "name": "Code in JavaScript",
+      "parameters": {
+        "jsCode": "const workflow = $input.first().json;\n\n// Находим всех агентов\nconst agentNodes = workflow.nodes.filter(\n  node => node.type === '@n8n/n8n-nodes-langchain.agent'\n);\n\nif (agentNodes.length === 0) {\n  return []; // Нет агентов — выходим\n}\n\n// Обновляем каждого агента\nfor (const agent of agentNodes) {\n  // 1. Обновляем параметры агента\n  agent.parameters.promptType = 'define';\n  agent.parameters.text = '={{ $json.chatInput }}';\n  agent.parameters.options = agent.parameters.options || {};\n  agent.parameters.options.systemMessage = \n    '=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table';\n\n  // 2. Генерируем ID инструмента для этого агента\n  const toolId = `datatable-tool-for-${agent.id}`;\n  \n  // 3. Ищем существующий инструмент\n  let toolNode = workflow.nodes.find(n => n.id === toolId);\n  \n  if (!toolNode) {\n    // Создаём новый инструмент\n    toolNode = {\n      parameters: {\n        operation: \"get\",\n        dataTableId: {\n          \"__rl\": true,\n          \"value\": \"VzaWf779bSTwqxiQ\",\n          \"mode\": \"list\"\n        },\n        matchType: \"allConditions\",\n        filters: {\n          conditions: [\n            { keyName: \"node_id\", keyValue: agent.id } // ← уникальный ID!\n          ]\n        },\n        limit: 1000\n      },\n      type: \"n8n-nodes-base.dataTableTool\",\n      typeVersion: 1,\n      position: [agent.position[0] + 160, agent.position[1]],\n      id: toolId,\n      name: `Get prompt for ${agent.name}`\n    };\n    workflow.nodes.push(toolNode);\n  } else {\n    // Обновляем фильтр на случай изменений\n    toolNode.parameters.filters.conditions[0].keyValue = agent.id;\n  }\n\n  // 4. Обновляем connections: подключаем инструмент к этому агенту\n  workflow.connections = workflow.connections || {};\n  if (!workflow.connections[toolNode.name]) {\n    workflow.connections[toolNode.name] = {};\n  }\n  workflow.connections[toolNode.name].ai_tool = [[\n    { node: agent.name, type: \"ai_tool\", index: 0 }\n  ]];\n}\n\n// Возвращаем обновлённый workflow\nreturn { json: workflow };"
+      },
+      "position": [
+        704,
+        -112
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "45e858c2-2155-4b28-84a5-af9e979b95cc",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "890329b0-50e4-4fd2-b2aa-2bbbc59f3172",
+              "name": "data[0].settings.executionOrder",
+              "type": "string",
+              "value": "={{ $json.settings.executionOrder }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        864,
+        -112
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "88ef243c-3701-4694-b2f0-4b18445ffa03",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        128,
+        -128
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "b49167df-8e2e-4ff3-8667-2492da19a6fe",
+      "name": "Replace Me",
+      "parameters": {},
+      "position": [
+        1280,
+        -112
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "n8nApi": {
+          "id": "CenJbENup2Y8PYN2",
+          "name": "n8n account 2"
+        }
+      },
+      "id": "605ebcd5-2df5-491b-bcfb-53c8045db4ef",
+      "name": "Get many workflows",
+      "parameters": {
+        "filters": {
+          "activeWorkflows": true
+        },
+        "requestOptions": {}
+      },
+      "position": [
+        -80,
+        -128
+      ],
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1
+    },
+    {
+      "id": "e0cd5bf8-f9ba-4ad2-8712-706136ba2ae0",
+      "name": "Schedule Trigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "position": [
+        -272,
+        -128
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-10-14T07:18:30.915Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-10-14T07:18:30.915Z",
+      "workflowId": "taQVQdcxWS9DPXZV"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-10-14T09:43:09.000Z",
+  "versionId": "846c3c99-769b-40f2-a854-1fd7131c3ca9"
+}
