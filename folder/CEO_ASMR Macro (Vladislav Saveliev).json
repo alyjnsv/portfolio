@@ -1631,7 +1631,7 @@
   "name": "CEO_ASMR Macro (Vladislav Saveliev)",
   "nodes": [
     {
-      "id": "90872cdc-b707-4b6d-93fb-3ad397be1dd2",
+      "id": "4927d1bf-bc45-4183-b911-6d0b9de6125e",
       "name": "Upload Video and Description to Instagram1",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
@@ -1689,14 +1689,14 @@
         "url": "https://api.upload-post.com/api/upload"
       },
       "position": [
-        304,
-        1504
+        4640,
+        928
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "8895f17c-c0c8-428a-a860-ffbc50729952",
+      "id": "8d4888a7-07c7-415d-a3d5-808614891075",
       "name": "Upload Video and Description to Instagram",
       "notes": "Generate in upload-post.com the token and add to the credentials in the header-> Authorization: Apikey (token here)",
       "notesInFlow": true,
@@ -1742,56 +1742,56 @@
         "url": "https://api.upload-post.com/api/upload"
       },
       "position": [
-        304,
-        1280
+        4640,
+        704
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "9338e082-d5e1-4860-b8c5-ad6ec6591377",
+      "id": "6ef17ef8-8d1e-4ed0-b091-22a57833ca02",
       "name": "Chat Memory Manager",
       "parameters": {
         "deleteMode": "all",
         "mode": "delete"
       },
       "position": [
-        -4848,
-        1088
+        -512,
+        512
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryManager",
       "typeVersion": 1.1
     },
     {
-      "id": "dda89363-8322-4e08-b7f1-eaf5f4aff578",
+      "id": "92bbc046-6c30-48d8-bbf1-c101ed68c014",
       "name": "Structured Output Parser2",
       "parameters": {
         "autoFix": true,
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        -4256,
-        768
+        80,
+        192
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "aa6fecbd-5742-4cbe-b481-d2fd1a23369e",
+      "id": "3c38d841-88df-4b9f-b914-c967dd0f7736",
       "name": "Structured Output Parser1",
       "parameters": {
         "jsonSchemaExample": "{\n    \"title\": \"Название\"\n}"
       },
       "position": [
-        -5488,
-        1296
+        -1152,
+        720
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "f66f75dc-1886-444c-bdec-a488df5826f6",
+      "id": "398d90b3-726f-4235-a3ff-eb22c733fe5a",
       "name": "Simple Memory2",
       "parameters": {
         "contextWindowLength": 40,
@@ -1799,8 +1799,8 @@
         "sessionKey": "sesionasmrcompressname"
       },
       "position": [
-        -5568,
-        1296
+        -1232,
+        720
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
@@ -1812,7 +1812,7 @@
           "name": "GPT"
         }
       },
-      "id": "d6b642c0-87ef-40ca-8388-d0d49b7889a0",
+      "id": "b2d199ac-964f-45fb-ba69-32ff3301876b",
       "name": "OpenAI Chat Model6",
       "parameters": {
         "model": {
@@ -1824,14 +1824,14 @@
         "options": {}
       },
       "position": [
-        -4336,
-        768
+        0,
+        192
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "45dedc9c-e83c-43dd-a65a-6f875ff6110d",
+      "id": "b7ad2fa1-6e4e-4b9e-8c10-acf698687b37",
       "name": "Simple Memory",
       "parameters": {
         "contextWindowLength": 40,
@@ -1839,14 +1839,14 @@
         "sessionKey": "sesionasmrcompressname"
       },
       "position": [
-        -4848,
-        1296
+        -512,
+        720
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
     },
     {
-      "id": "f161f0c1-bf39-44c5-a4ee-6c3eadd0a81b",
+      "id": "c8a1a66f-a6e9-4678-9cac-c70dfe0c8e0c",
       "name": "Генератор сценарного шаблона",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1858,14 +1858,14 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который приблежают до макросъемки должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        -4336,
-        576
+        0,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "7b6e2624-5d86-48fd-8abb-e6a67a7a639f",
+      "id": "0f85e910-e927-4839-8e9f-86504f54f9aa",
       "name": "Жанры",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1877,8 +1877,8 @@
         "text": "Дай название фильма или сериала"
       },
       "position": [
-        -5648,
-        1088
+        -1312,
+        512
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -1890,7 +1890,7 @@
           "name": "GPT"
         }
       },
-      "id": "d909e46b-ca6b-49a5-a337-3ace40c8b03e",
+      "id": "03953b0c-6b77-4b2c-ba71-ebbb4a2402bf",
       "name": "Проверка по критериям",
       "parameters": {
         "jsonOutput": true,
@@ -1914,14 +1914,14 @@
         "options": {}
       },
       "position": [
-        -3888,
-        576
+        448,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.7
     },
     {
-      "id": "7084516d-b381-428a-b0fa-8bcdda517c3f",
+      "id": "d854b0d5-d438-49bf-9325-81bbbcb82175",
       "maxTries": 5,
       "name": "If1",
       "parameters": {
@@ -1948,15 +1948,15 @@
         "options": {}
       },
       "position": [
-        -3584,
-        576
+        752,
+        0
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "0b7fa8ea-67e0-4707-8aa9-1c7289e7e56e",
+      "id": "ff61b4ad-ffa6-430b-a05f-656bf22cea55",
       "name": "Loop Over Items1",
       "parameters": {
         "options": {
@@ -1964,8 +1964,8 @@
         }
       },
       "position": [
-        -3424,
-        576
+        912,
+        0
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -1978,7 +1978,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "2e885655-059e-42f3-bf4b-7e8fb98be217",
+      "id": "25db8e75-7296-42fc-89bc-d958b0e0b43e",
       "name": "Get row(s) in sheet",
       "parameters": {
         "documentId": {
@@ -2006,14 +2006,14 @@
         }
       },
       "position": [
-        -5344,
-        1088
+        -1008,
+        512
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "f428c528-c2c0-4349-a551-5e353a2ce312",
+      "id": "45a54d19-a507-49f5-81e5-a98516c87efe",
       "name": "If2",
       "parameters": {
         "conditions": {
@@ -2042,14 +2042,14 @@
         }
       },
       "position": [
-        -5184,
-        1088
+        -848,
+        512
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "8a16aae2-19fe-4fc2-a6ad-e52b57b57c74",
+      "id": "ef3f529e-0091-4702-a17b-0461adce0f62",
       "name": "Loop Over Items2",
       "parameters": {
         "options": {
@@ -2057,8 +2057,8 @@
         }
       },
       "position": [
-        -5184,
-        1232
+        -848,
+        656
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2070,7 +2070,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "2113928d-5d60-4e9d-a36b-7a4e703b8e3e",
+      "id": "9e4623d3-ed98-4d10-98b8-1fd8563d68be",
       "name": "Append or update row in sheet",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2145,28 +2145,28 @@
         }
       },
       "position": [
-        -5024,
-        1088
+        -688,
+        512
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "84aefbb6-b5f4-497e-b1b3-98d4c00d3426",
+      "id": "5c347239-b311-4a46-9972-cfd3198517d2",
       "name": "Structured Output Parser",
       "parameters": {
         "autoFix": true,
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        -4240,
-        1104
+        96,
+        528
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "376cf466-0a2b-4bfd-b6db-2199502a36eb",
+      "id": "82048c14-0865-4975-8c40-098b668f2960",
       "name": "Генератор сценарного шаблона1",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2178,8 +2178,8 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который приблежают до макросъемки должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        -4336,
-        912
+        0,
+        336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -2191,7 +2191,7 @@
           "name": "GPT"
         }
       },
-      "id": "ae2ffc92-762d-4097-940a-93c6d1357cab",
+      "id": "eca49813-8d38-4f2c-b1a3-71a87bc1f00f",
       "name": "Проверка по критериям1",
       "parameters": {
         "jsonOutput": true,
@@ -2215,14 +2215,14 @@
         "options": {}
       },
       "position": [
-        -3888,
-        912
+        448,
+        336
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.7
     },
     {
-      "id": "8fc4f08a-e8b1-4892-9dc0-c7d25ad3cd7c",
+      "id": "00910a65-0bb6-4e68-b26d-f6b8aeb8e70f",
       "maxTries": 5,
       "name": "If3",
       "parameters": {
@@ -2249,15 +2249,15 @@
         "options": {}
       },
       "position": [
-        -3584,
-        912
+        752,
+        336
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "a883b72c-d5a9-45f3-a747-854de8586146",
+      "id": "df37955d-0e5f-416d-9ef9-f11efe4c1bc5",
       "name": "Loop Over Items3",
       "parameters": {
         "options": {
@@ -2265,22 +2265,22 @@
         }
       },
       "position": [
-        -3424,
-        912
+        912,
+        336
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "f3f34ce1-8614-46f2-b9e4-3ef8078b5140",
+      "id": "8ea3060d-be09-454a-989c-ebb6838b6f66",
       "name": "Structured Output Parser3",
       "parameters": {
         "autoFix": true,
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        -4256,
-        1472
+        80,
+        896
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
@@ -2292,7 +2292,7 @@
           "name": "GPT"
         }
       },
-      "id": "0a55b6c8-385e-426f-abd2-1c997830eb1d",
+      "id": "1c408a4e-e90f-47ea-a460-f64a1a95c71a",
       "name": "OpenAI Chat Model7",
       "parameters": {
         "model": {
@@ -2304,14 +2304,14 @@
         "options": {}
       },
       "position": [
-        -4336,
-        1472
+        0,
+        896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "1f3141f3-fa5f-4f97-81de-248c9db14ed3",
+      "id": "3230f997-c9ee-428d-abd3-1ca314d22ae7",
       "name": "Генератор сценарного шаблона2",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2323,8 +2323,8 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который приблежают до макросъемки должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        -4336,
-        1264
+        0,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -2336,7 +2336,7 @@
           "name": "GPT"
         }
       },
-      "id": "77018a2d-b058-4a94-88ec-654783218247",
+      "id": "3e0c8919-44ce-4141-bf24-78868967c6eb",
       "name": "Проверка по критериям2",
       "parameters": {
         "jsonOutput": true,
@@ -2360,14 +2360,14 @@
         "options": {}
       },
       "position": [
-        -3888,
-        1264
+        448,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.7
     },
     {
-      "id": "1829e760-beb5-413d-8cc1-467f3b453dca",
+      "id": "593d0501-f299-445c-8390-b688c0ed950c",
       "maxTries": 5,
       "name": "If4",
       "parameters": {
@@ -2394,15 +2394,15 @@
         "options": {}
       },
       "position": [
-        -3584,
-        1264
+        752,
+        688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "b718c888-0609-486f-b9b6-78de7073e6cc",
+      "id": "4f2e93b9-bff3-4247-a2bb-bedacfa22b36",
       "name": "Loop Over Items4",
       "parameters": {
         "options": {
@@ -2410,22 +2410,22 @@
         }
       },
       "position": [
-        -3424,
-        1264
+        912,
+        688
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "9ccbe64f-668e-4024-8f7a-146b6f19ceae",
+      "id": "81774c11-a753-4161-a4a2-4eb042e31025",
       "name": "Structured Output Parser4",
       "parameters": {
         "autoFix": true,
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        -4256,
-        1824
+        80,
+        1248
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
@@ -2437,7 +2437,7 @@
           "name": "GPT"
         }
       },
-      "id": "6b0d2276-c201-4930-a9f5-8091a8c8ccbf",
+      "id": "7ed8886e-5237-4d60-95b6-dd4b339d2d63",
       "name": "OpenAI Chat Model8",
       "parameters": {
         "model": {
@@ -2449,14 +2449,14 @@
         "options": {}
       },
       "position": [
-        -4336,
-        1824
+        0,
+        1248
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "21218339-0015-4f72-b55d-d496d47be6d3",
+      "id": "e1a57738-82e9-4a32-8f4b-6da5369c2811",
       "name": "Генератор сценарного шаблона3",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2468,8 +2468,8 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который приблежают до макросъемки должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        -4336,
-        1632
+        0,
+        1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -2481,7 +2481,7 @@
           "name": "GPT"
         }
       },
-      "id": "fc23b03b-8e11-4f88-a565-a6434e2ca172",
+      "id": "e9f4394f-b51c-425c-8a93-50f54bb22d1a",
       "name": "Проверка по критериям3",
       "parameters": {
         "jsonOutput": true,
@@ -2505,14 +2505,14 @@
         "options": {}
       },
       "position": [
-        -3888,
-        1632
+        448,
+        1056
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.7
     },
     {
-      "id": "3761325b-dfb0-4e6d-b151-a8a88c045ac0",
+      "id": "69f5f9e2-733c-4a02-a7e8-30680b4ce652",
       "maxTries": 5,
       "name": "If5",
       "parameters": {
@@ -2539,15 +2539,15 @@
         "options": {}
       },
       "position": [
-        -3584,
-        1632
+        752,
+        1056
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "a293b49f-cdb4-4727-8e87-dfc9655adb29",
+      "id": "3ff44430-cf64-4796-b4a7-eb9e98790a13",
       "name": "Loop Over Items5",
       "parameters": {
         "options": {
@@ -2555,14 +2555,14 @@
         }
       },
       "position": [
-        -3424,
-        1632
+        912,
+        1056
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "ca7a0196-4724-4a1a-87a4-328dea36a4af",
+      "id": "79d6967c-83a0-4ab0-8673-1ea41529c07e",
       "name": "Генерация промтов1",
       "parameters": {
         "options": {
@@ -2572,8 +2572,8 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        -2960,
-        576
+        1376,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
@@ -2585,7 +2585,7 @@
           "name": "GPT"
         }
       },
-      "id": "ce3a07e0-c69a-470d-bced-e24f6fcaa199",
+      "id": "add3fe9e-f101-4d8f-93fb-5b0193f0727a",
       "name": "OpenAI Chat Model9",
       "parameters": {
         "model": {
@@ -2597,14 +2597,14 @@
         "options": {}
       },
       "position": [
-        -2960,
-        768
+        1376,
+        192
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "e96d6b78-5cb9-477a-b101-4a2dafde4e36",
+      "id": "43c154a0-f507-4b94-bf94-5fe6c5b430ac",
       "name": "Генератор сценария1",
       "parameters": {
         "options": {
@@ -2614,14 +2614,14 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields1').item.json.Scene }}"
       },
       "position": [
-        -3264,
-        576
+        1072,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
     },
     {
-      "id": "172951a7-2ece-400f-bf6f-2768d5617db0",
+      "id": "e7a5082f-f668-4d1a-878f-748eba92b2ff",
       "name": "Анимация видео1",
       "parameters": {
         "options": {
@@ -2631,14 +2631,14 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX: {{ $('Генератор сценария1').item.json.output }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -2656,
-        576
+        1680,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "25eb626d-cfed-4b04-afb4-7697c4f1b782",
+      "id": "3f7d8b3e-daa3-473b-866a-0abde70352a8",
       "name": "Генерация промтов2",
       "parameters": {
         "options": {
@@ -2648,8 +2648,8 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        -2960,
-        912
+        1376,
+        336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
@@ -2661,7 +2661,7 @@
           "name": "GPT"
         }
       },
-      "id": "75b7fa93-20c2-4833-82f7-cbf4478f4f53",
+      "id": "60f0afc0-af03-4b92-bea3-389b50e279bf",
       "name": "OpenAI Chat Model10",
       "parameters": {
         "model": {
@@ -2673,14 +2673,14 @@
         "options": {}
       },
       "position": [
-        -2960,
-        1104
+        1376,
+        528
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "1b5be965-aba4-441b-939c-a1671be82de0",
+      "id": "66eb9fbf-124f-401c-81c3-62feac95943d",
       "name": "Генератор сценария2",
       "parameters": {
         "options": {
@@ -2690,14 +2690,14 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields2').item.json.Scene }}"
       },
       "position": [
-        -3264,
-        912
+        1072,
+        336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
     },
     {
-      "id": "041982ea-ec77-4a35-b3ad-c28364d52525",
+      "id": "e47c7a1a-04ae-4759-8a1b-13126267c85e",
       "name": "Анимация видео2",
       "parameters": {
         "options": {
@@ -2707,14 +2707,14 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX: {{ $('Генератор сценария2').item.json.output }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -2656,
-        912
+        1680,
+        336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "3a85c50e-257c-4a57-8109-7ef33ace94e4",
+      "id": "6582aa9f-cdbf-44f2-8ae2-0c47388318a0",
       "name": "Генерация промтов3",
       "parameters": {
         "options": {
@@ -2724,8 +2724,8 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        -2960,
-        1264
+        1376,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
@@ -2737,7 +2737,7 @@
           "name": "GPT"
         }
       },
-      "id": "86c6e4a8-d337-4bfc-b542-f44bd1827e9d",
+      "id": "adb424b2-deb1-4ea2-a4fa-410971f69003",
       "name": "OpenAI Chat Model11",
       "parameters": {
         "model": {
@@ -2749,14 +2749,14 @@
         "options": {}
       },
       "position": [
-        -2960,
-        1472
+        1376,
+        896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "748d4762-ebef-4e89-aa3a-58a8c8588a15",
+      "id": "64df5f4c-c193-4903-8a93-7eeedfdaa398",
       "name": "Генератор сценария3",
       "parameters": {
         "options": {
@@ -2766,14 +2766,14 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields3').item.json.Scene }}"
       },
       "position": [
-        -3264,
-        1264
+        1072,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
     },
     {
-      "id": "b89ea55b-4e27-4a92-81a5-9da48c7906a3",
+      "id": "65216b9c-f3f3-4623-9032-dbaa877e3eb2",
       "name": "Анимация видео3",
       "parameters": {
         "options": {
@@ -2783,14 +2783,14 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX: {{ $('Генератор сценария3').item.json.output }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -2656,
-        1264
+        1680,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "6aa8f49c-dff3-4084-b72f-17c025bc6267",
+      "id": "9ad6315c-a8c1-46e9-b557-7661f9de1d8d",
       "name": "Генерация промтов4",
       "parameters": {
         "options": {
@@ -2800,8 +2800,8 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        -2960,
-        1632
+        1376,
+        1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
@@ -2813,7 +2813,7 @@
           "name": "GPT"
         }
       },
-      "id": "c0f9365f-4a47-4483-9957-68f5e3f0a7c3",
+      "id": "2de5ce31-e6aa-42f9-822a-5f513f4e0ef2",
       "name": "OpenAI Chat Model12",
       "parameters": {
         "model": {
@@ -2825,14 +2825,14 @@
         "options": {}
       },
       "position": [
-        -2960,
-        1824
+        1376,
+        1248
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "d47dffc5-fddd-40d2-a6ad-a7f189a49481",
+      "id": "c6805452-710b-45c1-a8ea-adfe5bf271bf",
       "name": "Генератор сценария4",
       "parameters": {
         "options": {
@@ -2842,14 +2842,14 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields4').item.json.Scene }}"
       },
       "position": [
-        -3264,
-        1632
+        1072,
+        1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8
     },
     {
-      "id": "ae203cf5-3112-4b58-a175-05bb12e3949a",
+      "id": "cb6b771c-ce4a-4179-a3ea-b844828dfb0d",
       "name": "Анимация видео4",
       "parameters": {
         "options": {
@@ -2859,14 +2859,14 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX: {{ $('Генератор сценария4').item.json.output }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -2656,
-        1632
+        1680,
+        1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "9150d096-be35-4a04-9ce0-a8ba3e5a619e",
+      "id": "e1a34b39-b8f9-49bd-a6b2-1d4f83ca8b6f",
       "name": "Create Video1",
       "parameters": {
         "headerParameters": {
@@ -2893,14 +2893,14 @@
         "url": "https://queue.fal.run/fal-ai/veo3"
       },
       "position": [
-        -2368,
-        576
+        1968,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "9169b323-a147-4f2b-a233-6692697465a0",
+      "id": "07266ed7-ffda-4a7d-a763-dc8187bdd8ec",
       "name": "Get Video1",
       "parameters": {
         "headerParameters": {
@@ -2916,28 +2916,28 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $('status').item.json.request_id }}"
       },
       "position": [
-        -1792,
-        576
+        2544,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "ffe65c37-e4d6-4729-9279-60b98c023872",
+      "id": "a34a232c-ca7f-4fe3-9203-887fdf128876",
       "name": "Wait for Veo",
       "parameters": {
         "amount": 60
       },
       "position": [
-        -2224,
-        576
+        2112,
+        0
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a7bf329e-b1ca-4f59-b954-d57e551210f6"
     },
     {
-      "id": "c46e4d89-700c-40d9-a861-3db0d017832e",
+      "id": "42327b8d-02ae-44a7-be53-b08294f0e22c",
       "name": "Create Video2",
       "parameters": {
         "headerParameters": {
@@ -2964,14 +2964,14 @@
         "url": "https://queue.fal.run/fal-ai/veo3"
       },
       "position": [
-        -2368,
-        912
+        1968,
+        336
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "4805da68-7533-40c2-8146-0c00b17c96a4",
+      "id": "5d64e5c9-656e-4666-b881-8f88a0ae07ad",
       "name": "Get Video2",
       "parameters": {
         "headerParameters": {
@@ -2987,28 +2987,28 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $('status1').item.json.request_id }}"
       },
       "position": [
-        -1792,
-        912
+        2544,
+        336
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "55395537-d68f-4cc5-9122-632f819c4c3a",
+      "id": "961b5723-e70d-4f14-bba1-a04c73d8e265",
       "name": "Wait for Veo4",
       "parameters": {
         "amount": 60
       },
       "position": [
-        -2208,
-        912
+        2128,
+        336
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a7bf329e-b1ca-4f59-b954-d57e551210f6"
     },
     {
-      "id": "0a0890ee-c4b3-465d-baaa-cd669f59adc2",
+      "id": "5af1dfc4-3390-45df-be8e-f40fda9688fe",
       "name": "Create Video3",
       "parameters": {
         "headerParameters": {
@@ -3035,28 +3035,28 @@
         "url": "https://queue.fal.run/fal-ai/veo3"
       },
       "position": [
-        -2368,
-        1264
+        1968,
+        688
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "52973f05-6e38-429e-8f43-fdeff71a3bbf",
+      "id": "d02bde4e-a844-48cf-9e2c-795b07faf491",
       "name": "Wait for Veo5",
       "parameters": {
         "amount": "=60"
       },
       "position": [
-        -2208,
-        1264
+        2128,
+        688
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a7bf329e-b1ca-4f59-b954-d57e551210f6"
     },
     {
-      "id": "23badca4-cec2-4d63-803d-30238b4db8f2",
+      "id": "89434ee7-8b4b-4b5b-9bc3-a374f700b707",
       "name": "Create Video4",
       "parameters": {
         "headerParameters": {
@@ -3083,41 +3083,41 @@
         "url": "https://queue.fal.run/fal-ai/veo3"
       },
       "position": [
-        -2368,
-        1632
+        1968,
+        1056
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "8ae29643-6149-45ca-b29c-330025e20ee6",
+      "id": "221bcbf5-c15d-47ce-9a36-74d1fe6b3116",
       "name": "Wait for Veo6",
       "parameters": {
         "amount": 60
       },
       "position": [
-        -2208,
-        1632
+        2128,
+        1056
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a7bf329e-b1ca-4f59-b954-d57e551210f6"
     },
     {
-      "id": "084d768e-f32f-4496-ab09-fafe1e04ca30",
+      "id": "913b91d0-c038-4dd8-9667-b70f188b564b",
       "name": "Merge",
       "parameters": {
         "numberInputs": 4
       },
       "position": [
-        -1312,
-        1056
+        3024,
+        480
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "95f47bd9-f5e0-4e90-824c-b65e5fca6c14",
+      "id": "cd279e65-8bf3-46cf-bb62-1dd7ee31bd57",
       "name": "HTTP Request",
       "parameters": {
         "headerParameters": {
@@ -3137,29 +3137,29 @@
         "url": "https://api.creatomate.com/v1/renders"
       },
       "position": [
-        -688,
-        1088
+        3648,
+        512
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "42309171-5cd5-41de-b455-7ee84e2409c8",
+      "id": "783407f1-7817-4320-b951-19515c3af9f0",
       "name": "Wait1",
       "parameters": {
         "amount": 8,
         "unit": "minutes"
       },
       "position": [
-        -528,
-        1088
+        3808,
+        512
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "5930f4ed-364c-4f4d-b6a6-01526460ca1a"
     },
     {
-      "id": "0786ba15-9e3b-4bf8-9ad0-07701fd93821",
+      "id": "b73f2c8e-4135-481a-8434-6b60d923a0b5",
       "name": "Get Final Video",
       "parameters": {
         "headerParameters": {
@@ -3175,28 +3175,28 @@
         "url": "=https://api.creatomate.com/v1/renders/{{ $json.id }}"
       },
       "position": [
-        -368,
-        1088
+        3968,
+        512
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "8064e33b-1eaa-438b-a87b-4b157b818184",
+      "id": "6e5a74e9-a5ac-4322-82a3-a1602d46c551",
       "name": "HTTP Request8",
       "parameters": {
         "options": {},
         "url": "={{ $json.url }}"
       },
       "position": [
-        -208,
-        1088
+        4128,
+        512
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "58998652-7c0d-49b0-9845-15348d24a22e",
+      "id": "9172342e-e8b1-4878-b328-af5c4a70b0ed",
       "name": "Edit Fields1",
       "parameters": {
         "assignments": {
@@ -3212,14 +3212,14 @@
         "options": {}
       },
       "position": [
-        -4048,
-        576
+        288,
+        0
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "7a56912a-735e-44d8-af93-ee885b88f767",
+      "id": "f1886479-a9bc-4db4-9f04-6a2526cf961f",
       "name": "Edit Fields2",
       "parameters": {
         "assignments": {
@@ -3235,14 +3235,14 @@
         "options": {}
       },
       "position": [
-        -4048,
-        912
+        288,
+        336
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "8612cb66-896a-47ce-8144-5ceeb062eac1",
+      "id": "65bfaf44-f608-4b87-b08d-77824106b310",
       "name": "Edit Fields3",
       "parameters": {
         "assignments": {
@@ -3258,14 +3258,14 @@
         "options": {}
       },
       "position": [
-        -4048,
-        1264
+        288,
+        688
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "026538e5-3ffa-487b-b2b0-f6510c4979e3",
+      "id": "e6161832-dbb8-4e9f-a939-8f2f5d56e82f",
       "name": "Edit Fields4",
       "parameters": {
         "assignments": {
@@ -3281,8 +3281,8 @@
         "options": {}
       },
       "position": [
-        -4048,
-        1632
+        288,
+        1056
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3294,7 +3294,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "f04a42b9-2037-4bd8-99cf-c7474e187c2e",
+      "id": "20935e4d-e78a-4ea5-a42a-0a4653d755bc",
       "name": "Append or update row in sheet5",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -3370,14 +3370,14 @@
         }
       },
       "position": [
-        144,
-        864
+        4480,
+        288
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "f4a0f0da-728a-4b18-81da-becef4d17f19",
+      "id": "c8ab8bd1-cfa8-433f-96b1-59d64a7e5741",
       "name": "Loop Over Items9",
       "parameters": {
         "options": {
@@ -3385,14 +3385,14 @@
         }
       },
       "position": [
-        -1792,
-        704
+        2544,
+        128
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "c22e5d20-2b04-4f62-8f3f-90d173987587",
+      "id": "63f1fde2-4b52-4888-befe-903b406c7795",
       "name": "Simple Memory1",
       "parameters": {
         "contextWindowLength": 50,
@@ -3400,14 +3400,14 @@
         "sessionKey": "compressitem"
       },
       "position": [
-        -4544,
-        1088
+        -208,
+        512
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
     },
     {
-      "id": "b6be4b3f-0444-4242-bf57-8444a3a9e708",
+      "id": "3bed1c38-6d22-4f3e-aaab-e5ffd48bc17c",
       "name": "Switch",
       "parameters": {
         "options": {},
@@ -3491,14 +3491,14 @@
         }
       },
       "position": [
-        -1936,
-        576
+        2400,
+        0
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "ef5176da-f25a-4644-8378-6e3a834c5edb",
+      "id": "e3cea350-9b77-4246-96d4-0e6ccf288f8b",
       "name": "Loop Over Items10",
       "parameters": {
         "options": {
@@ -3506,15 +3506,15 @@
         }
       },
       "position": [
-        -1936,
-        704
+        2400,
+        128
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "alwaysOutputData": false,
-      "id": "de22fd54-f063-45b4-8c2d-f94ab7b9ee12",
+      "id": "818b7508-d948-4280-a261-abf9964b65aa",
       "name": "status",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -3531,14 +3531,14 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}/status"
       },
       "position": [
-        -2080,
-        576
+        2256,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "b333f132-891c-4152-abe5-569e3375d3db",
+      "id": "861a5cb7-5d4d-4e0a-9dee-673d5f8b9f57",
       "name": "Loop Over Items11",
       "parameters": {
         "options": {
@@ -3546,14 +3546,14 @@
         }
       },
       "position": [
-        -1792,
-        1040
+        2544,
+        464
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "b49a9c25-f40e-4f10-9ae3-0f97fd7ac043",
+      "id": "14ee3d4c-3f6e-4e48-b1fa-76d3eed4fe01",
       "name": "Switch1",
       "parameters": {
         "options": {},
@@ -3637,14 +3637,14 @@
         }
       },
       "position": [
-        -1936,
-        912
+        2400,
+        336
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "8090a456-8833-4ecf-8b5e-e6a4e701fbaf",
+      "id": "3532e0f2-1330-4a2a-8949-c94c3b65ab91",
       "name": "Loop Over Items14",
       "parameters": {
         "options": {
@@ -3652,15 +3652,15 @@
         }
       },
       "position": [
-        -1936,
-        1040
+        2400,
+        464
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "alwaysOutputData": false,
-      "id": "2e2ddd6e-5e93-462f-b9ec-1a813a4a117a",
+      "id": "19f9a2bf-76a9-4757-beb1-069de1a2723b",
       "name": "status1",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -3677,14 +3677,14 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}/status"
       },
       "position": [
-        -2064,
-        912
+        2272,
+        336
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "d0ff2c22-26fc-4980-a54e-363c156ea034",
+      "id": "e577648f-8bf4-42a5-a15f-2e7c330e6162",
       "name": "Get Video3",
       "parameters": {
         "headerParameters": {
@@ -3700,14 +3700,14 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $('status2').item.json.request_id }}"
       },
       "position": [
-        -1792,
-        1264
+        2544,
+        688
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "319ad0c9-770b-4fe7-adcc-0e75b04064ad",
+      "id": "eb26aaf3-c4ab-46e1-b6b7-9291200d9ea2",
       "name": "Loop Over Items12",
       "parameters": {
         "options": {
@@ -3715,14 +3715,14 @@
         }
       },
       "position": [
-        -1792,
-        1392
+        2544,
+        816
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "e3b0bd30-0b49-4d3b-bf2a-1f179644e3fd",
+      "id": "e2904794-57a4-4311-a708-aa97c4ba7d4c",
       "name": "Switch2",
       "parameters": {
         "options": {},
@@ -3806,14 +3806,14 @@
         }
       },
       "position": [
-        -1936,
-        1264
+        2400,
+        688
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "2aa3a85a-a2f8-4885-a585-2a1924fa7220",
+      "id": "536afef4-bc03-4f3f-a170-54478b8d2f1d",
       "name": "Loop Over Items15",
       "parameters": {
         "options": {
@@ -3821,15 +3821,15 @@
         }
       },
       "position": [
-        -1936,
-        1392
+        2400,
+        816
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "alwaysOutputData": false,
-      "id": "b88c36bd-8294-41a2-8a86-52b965f8c62f",
+      "id": "ba625c63-e2bc-4c3f-b77a-3133c930b8d7",
       "name": "status2",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -3846,14 +3846,14 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}/status"
       },
       "position": [
-        -2064,
-        1264
+        2272,
+        688
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "e9c0c9dd-86b9-48d0-bc9f-a0bbed94760b",
+      "id": "b59ebb2a-078e-42fa-a69d-5564388c7ead",
       "name": "Get Video4",
       "parameters": {
         "headerParameters": {
@@ -3869,14 +3869,14 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $('status3').item.json.request_id }}"
       },
       "position": [
-        -1792,
-        1632
+        2544,
+        1056
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "fe17edf0-c0a5-423f-bfa5-d408a6542c2f",
+      "id": "1888110d-bc5b-41d5-85a6-2a8b40db67ec",
       "name": "Loop Over Items13",
       "parameters": {
         "options": {
@@ -3884,14 +3884,14 @@
         }
       },
       "position": [
-        -1792,
-        1760
+        2544,
+        1184
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "4dc6cc49-cfc8-4d72-94eb-0189706a0e25",
+      "id": "590598a7-a63c-46bf-9bf3-620048081ce3",
       "name": "Switch3",
       "parameters": {
         "options": {},
@@ -3975,14 +3975,14 @@
         }
       },
       "position": [
-        -1936,
-        1632
+        2400,
+        1056
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "86e7ee72-f11b-49f5-b4ff-e2298d56d326",
+      "id": "5578e17a-e549-4d95-a9da-44221fdf9317",
       "name": "Loop Over Items16",
       "parameters": {
         "options": {
@@ -3990,15 +3990,15 @@
         }
       },
       "position": [
-        -1936,
-        1760
+        2400,
+        1184
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "alwaysOutputData": false,
-      "id": "75ad8585-495f-4d3f-8a19-9d75b99d3a34",
+      "id": "a9551beb-9410-490f-9bd3-f2f43d950fc1",
       "name": "status3",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4015,8 +4015,8 @@
         "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}/status"
       },
       "position": [
-        -2064,
-        1632
+        2272,
+        1056
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -4028,7 +4028,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "4aa8c92d-895b-4020-836d-e3bcf5208bc9",
+      "id": "344d5bf7-bf56-4dde-a85b-fa0b170a5c71",
       "name": "Append or update row in sheet1",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4073,8 +4073,8 @@
         }
       },
       "position": [
-        -1584,
-        576
+        2752,
+        0
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -4086,7 +4086,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "2331a22b-91b7-4da7-a81e-8005b6a6090d",
+      "id": "11acd7d8-eda0-4d7e-878a-a6858af1cc32",
       "name": "Append or update row in sheet2",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4131,8 +4131,8 @@
         }
       },
       "position": [
-        -1584,
-        912
+        2752,
+        336
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -4144,7 +4144,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "c2c53a64-170f-459c-b839-c363d4fab4d9",
+      "id": "50f1f130-f2fa-4d72-a9af-69b8569da7a8",
       "name": "Append or update row in sheet3",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4189,8 +4189,8 @@
         }
       },
       "position": [
-        -1584,
-        1264
+        2752,
+        688
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -4202,7 +4202,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "28058ff0-4f27-4db8-9017-b49e433c2ebe",
+      "id": "f99ae0cd-caa9-45ab-af0a-6f47121cf751",
       "name": "Append or update row in sheet4",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4247,8 +4247,8 @@
         }
       },
       "position": [
-        -1584,
-        1632
+        2752,
+        1056
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -4261,7 +4261,7 @@
         }
       },
       "executeOnce": true,
-      "id": "4c2a3d53-3e18-4497-b68d-dbbfe1ad97df",
+      "id": "3896ee08-5398-42d5-8464-04debba4c29a",
       "name": "Get row(s) in sheet1",
       "parameters": {
         "documentId": {
@@ -4281,27 +4281,27 @@
         }
       },
       "position": [
-        -1168,
-        1088
+        3168,
+        512
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "be84cbec-58dc-458d-8333-3b3588e92c6c",
+      "id": "f10f62aa-3f19-46e6-ba5a-b13920467a35",
       "name": "Ссылки видео1",
       "parameters": {
         "jsCode": "// Получаем все строки с ссылками\nconst links = items.map(item => item.json.link);\nconst Names = items.map(item => item.json.Name);// Получаем все ссылки из данных\n\n// Возвращаем массив ссылок\nreturn [\n  {\n    json: {\n      links: links,\n      Names: Names\n    }\n  }\n];\n"
       },
       "position": [
-        -848,
-        1088
+        3488,
+        512
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "d14283a4-2bb8-4634-80b0-5a8d84c86181",
+      "id": "ff361b7f-d0ab-4144-b86b-46909135d869",
       "name": "Edit Fields5",
       "parameters": {
         "assignments": {
@@ -4323,8 +4323,8 @@
         "options": {}
       },
       "position": [
-        -1008,
-        1088
+        3328,
+        512
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -4337,7 +4337,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "a50c685c-fe9e-4c22-a304-4d2be5ac4191",
+      "id": "7a12898a-9668-409f-9594-6769eb128b15",
       "name": "Delete rows or columns from sheet",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4359,14 +4359,14 @@
         }
       },
       "position": [
-        304,
-        864
+        4640,
+        288
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5
     },
     {
-      "id": "f822a2d1-6b87-4981-b758-04841cb64953",
+      "id": "188694e1-f752-48bc-97b1-e6077af2b5b6",
       "name": "YT Tags1",
       "parameters": {
         "options": {
@@ -4376,8 +4376,8 @@
         "text": "=Now comes the actual topic/transcript. Give me the Youtube tags for it: {{ $('Генерация промтов1').last().json.output }}\n\n"
       },
       "position": [
-        -1008,
-        1296
+        3328,
+        720
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.9
@@ -4389,7 +4389,7 @@
           "name": "GPT"
         }
       },
-      "id": "519f8a7a-6568-4234-94b3-4d5406695b19",
+      "id": "91f37ffd-23b3-4375-a9b3-8aa1d325cfb3",
       "name": "Generate Title1",
       "notes": "Request to OpenAi for generate description with the audio extracted from the video",
       "notesInFlow": true,
@@ -4414,8 +4414,8 @@
         "options": {}
       },
       "position": [
-        -688,
-        1296
+        3648,
+        720
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -4429,7 +4429,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "36d1797b-5cc1-40e0-9ce6-07164ea7e9ca",
+      "id": "03922aeb-3cc3-4995-8f31-27b9096201e1",
       "name": "Upload file1",
       "parameters": {
         "driveId": {
@@ -4445,8 +4445,8 @@
         "options": {}
       },
       "position": [
-        -1168,
-        1296
+        3168,
+        720
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -4458,7 +4458,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "2d04e23a-7b5b-4e17-8e4f-c7ec27409bfb",
+      "id": "b4ec31a6-f5d6-4c53-9865-40c582e3581c",
       "name": "Search files and folders1",
       "parameters": {
         "filter": {
@@ -4484,8 +4484,8 @@
         "resource": "fileFolder"
       },
       "position": [
-        -368,
-        1296
+        3968,
+        720
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -4497,7 +4497,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "d9fd7667-8848-4eb7-be10-6f611994d7fa",
+      "id": "76a083ae-8710-4a4a-be2f-d9ad691c443e",
       "name": "Download file1",
       "parameters": {
         "fileId": {
@@ -4509,8 +4509,8 @@
         "options": {}
       },
       "position": [
-        -208,
-        1296
+        4128,
+        720
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -4522,7 +4522,7 @@
           "name": "GPT"
         }
       },
-      "id": "d309708f-4825-4f7f-aecf-36022a8d5d8f",
+      "id": "4996b871-3619-47b3-93f8-0b524a286cd9",
       "name": "OpenAI Chat Model13",
       "parameters": {
         "model": {
@@ -4534,8 +4534,8 @@
         "options": {}
       },
       "position": [
-        -5648,
-        1296
+        -1312,
+        720
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -4547,7 +4547,7 @@
           "name": "GPT"
         }
       },
-      "id": "142c6698-4af1-4194-b088-9e6514111d45",
+      "id": "769e8315-3528-4c9a-a494-44a46c74f1d1",
       "name": "OpenAI Chat Model14",
       "parameters": {
         "model": {
@@ -4559,14 +4559,14 @@
         "options": {}
       },
       "position": [
-        -1008,
-        1456
+        3328,
+        880
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "238868c8-baec-43d6-b772-fd9c089224e5",
+      "id": "558c54ee-22a5-489c-a58e-6d99b8b2553d",
       "name": "Schedule Trigger1",
       "parameters": {
         "rule": {
@@ -4579,8 +4579,8 @@
         }
       },
       "position": [
-        -5840,
-        1088
+        -1504,
+        512
       ],
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2
@@ -4592,7 +4592,7 @@
           "name": "GPT"
         }
       },
-      "id": "6d7a1c68-3a79-47da-9fc0-e68edfd02c24",
+      "id": "6ea819d0-e378-4fb0-bd32-99d6f7196e7d",
       "name": "OpenAI Chat Model",
       "parameters": {
         "model": {
@@ -4604,29 +4604,29 @@
         "options": {}
       },
       "position": [
-        -4336,
-        1104
+        0,
+        528
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "a637bc0a-48ad-4f02-a3d4-be353bc2083f",
+      "id": "6bec6fa5-60ad-4667-b85f-b931a398349c",
       "name": "Wait2",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        -1376,
-        2016
+        2960,
+        1440
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "9aece59e-8089-43d2-be22-2b8145cca245",
+      "id": "e48f7fcd-8660-425e-b20b-1dbe940533b8",
       "name": "Loop Over Items6",
       "parameters": {
         "options": {
@@ -4634,29 +4634,29 @@
         }
       },
       "position": [
-        -1376,
-        1888
+        2960,
+        1312
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "c74b4627-4c81-42fa-8e95-60fb960ae121",
+      "id": "7c8bfd86-f763-43d4-8218-67c3173ca675",
       "name": "Wait3",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        -1168,
-        2016
+        3168,
+        1440
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "db708104-dedd-4d78-92b9-6827d3c88808",
+      "id": "694abd1e-c821-46eb-9d65-3dd8655b86b7",
       "name": "Loop Over Items7",
       "parameters": {
         "options": {
@@ -4664,29 +4664,29 @@
         }
       },
       "position": [
-        -1168,
-        1888
+        3168,
+        1312
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "5815102a-825f-4941-b475-3da4f02ebb60",
+      "id": "940eeb17-9a05-4a65-ba20-c2f349fd0f61",
       "name": "Wait4",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        -1376,
-        2320
+        2960,
+        1744
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "6d178844-93d4-44c5-bf12-c8cc38e3e398",
+      "id": "dc23d4fa-ca29-483e-935b-d070227eb213",
       "name": "Loop Over Items8",
       "parameters": {
         "options": {
@@ -4694,29 +4694,29 @@
         }
       },
       "position": [
-        -1376,
-        2192
+        2960,
+        1616
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "262d5f6c-a0ae-4279-85ac-0d668fb99ded",
+      "id": "4dabb6aa-9b04-4e38-832e-752a28f2e5bf",
       "name": "Wait5",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        -1168,
-        2320
+        3168,
+        1744
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "ab473518-c9a7-43e7-b38a-146b734bd5e7",
+      "id": "d6d799ab-3ef6-4af5-a39e-06e12389418d",
       "name": "Loop Over Items17",
       "parameters": {
         "options": {
@@ -4724,29 +4724,29 @@
         }
       },
       "position": [
-        -1168,
-        2192
+        3168,
+        1616
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "50a0641a-63c0-4005-b496-df5558e0fb8f",
+      "id": "9b84d915-6c57-4db0-b41f-9b8cb0846c8f",
       "name": "Wait",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        144,
-        736
+        4480,
+        160
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "27df000f-d269-439d-811e-5318b0e20594",
+      "id": "a3085384-fb37-4e01-b228-adfa70223a8b",
       "name": "Loop Over Items",
       "parameters": {
         "options": {
@@ -4754,29 +4754,29 @@
         }
       },
       "position": [
-        144,
-        608
+        4480,
+        32
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "2bc9366a-2997-4d89-99e6-9847dca85eff",
+      "id": "35eb7417-1a0a-4cea-b502-5f629e980153",
       "name": "Wait6",
       "parameters": {
         "amount": 1,
         "unit": "minutes"
       },
       "position": [
-        304,
-        736
+        4640,
+        160
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "0283019f-871e-4d69-9255-dad985a2a0ba"
     },
     {
-      "id": "525a76f6-8f75-4bdb-b8b0-7648f188b749",
+      "id": "37e38966-166f-47e3-b62b-2563c218921c",
       "name": "Loop Over Items18",
       "parameters": {
         "options": {
@@ -4784,14 +4784,14 @@
         }
       },
       "position": [
-        304,
-        608
+        4640,
+        32
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "443984f4-94b9-4ff8-859e-8d8870610b56",
+      "id": "bef58625-aa89-43d6-aa1c-f09d9a68f44f",
       "name": "Loop Over Items19",
       "parameters": {
         "options": {
@@ -4799,22 +4799,22 @@
         }
       },
       "position": [
-        -5024,
-        1312
+        -688,
+        736
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "abfa786a-8585-4143-a8af-c4ac8166d9a5",
+      "id": "26ae8f58-c4a2-4bbc-b12c-e0d2959aa8f8",
       "name": "Wait7",
       "parameters": {
         "amount": 2,
         "unit": "minutes"
       },
       "position": [
-        -5024,
-        1424
+        -688,
+        848
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -4827,7 +4827,7 @@
           "name": "Upload Post account"
         }
       },
-      "id": "87caac63-b8d8-444d-a9aa-618ba3527338",
+      "id": "6d3ce16a-236f-4222-a693-428e6ca48f3e",
       "name": "Upload Post",
       "parameters": {
         "operation": "uploadVideo",
@@ -4840,35 +4840,15 @@
         "video": "data"
       },
       "position": [
-        304,
-        1072
+        4640,
+        496
       ],
       "type": "n8n-nodes-upload-post.uploadPost",
       "typeVersion": 1
     }
   ],
-  "pinData": {
-    "Schedule Trigger1": [
-      {
-        "json": {
-          "Day of month": "17",
-          "Day of week": "Wednesday",
-          "Hour": "16",
-          "Minute": "00",
-          "Month": "September",
-          "Readable date": "September 17th 2025, 4:00:00 pm",
-          "Readable time": "4:00:00 pm",
-          "Second": "00",
-          "Timezone": "Europe/Warsaw (UTC+02:00)",
-          "Year": "2025",
-          "timestamp": "2025-09-17T16:00:00.012+02:00"
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "3mM0jvFQycOqYesd",
     "executionOrder": "v1"
   },
   "shared": [
@@ -4897,6 +4877,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-09T10:22:19.000Z",
-  "versionId": "0ee5a2c0-e949-4dc0-a7e7-d80e1fc708b5"
+  "updatedAt": "2025-10-15T09:48:53.000Z",
+  "versionId": "3f9eebf8-5809-4cfa-9aec-b2e8499046eb"
 }
