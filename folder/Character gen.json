@@ -89,28 +89,6 @@
         ]
       ]
     },
-    "Get row(s) in sheet in Google Sheets16": {
-      "ai_tool": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1_",
-            "type": "ai_tool"
-          }
-        ]
-      ]
-    },
-    "Get row(s) in sheet in Google Sheets17": {
-      "ai_tool": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2_",
-            "type": "ai_tool"
-          }
-        ]
-      ]
-    },
     "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
@@ -360,28 +338,6 @@
         ]
       ]
     },
-    "OpenAI Chat Model21": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent1_",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model22": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2_",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
     "Send a text message": {
       "main": [
         [
@@ -396,11 +352,6 @@
             "type": "main"
           }
         ]
-      ]
-    },
-    "Telegram": {
-      "main": [
-        []
       ]
     },
     "Telegram Trigger": {
@@ -506,12 +457,14 @@
   "createdAt": "2025-07-14T08:28:22.993Z",
   "id": "LwFusBcWeqRAd7yR",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "Character gen",
   "nodes": [
     {
       "disabled": true,
-      "id": "b03289af-0922-430c-a798-d0f3d6ec5143",
+      "id": "3001c0c2-be67-45c8-8c3b-69a807153342",
       "name": "If",
       "parameters": {
         "conditions": {
@@ -557,14 +510,14 @@
         "options": {}
       },
       "position": [
-        -1088,
-        192
+        -1184,
+        480
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "da8e2d01-503f-4448-95af-886f3f33a4fd",
+      "id": "047743c8-f746-4cc4-8257-576f6755a548",
       "name": "Edit Fields",
       "parameters": {
         "assignments": {
@@ -580,8 +533,8 @@
         "options": {}
       },
       "position": [
-        -928,
-        192
+        -1024,
+        480
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -593,7 +546,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "4a313856-6755-4f85-bb80-3ebeee9056d7",
+      "id": "c9d518b8-9425-42cb-839f-dcff20ff1e9d",
       "name": "Telegram",
       "parameters": {
         "additionalFields": {},
@@ -602,15 +555,15 @@
         "operation": "sendPhoto"
       },
       "position": [
-        2592,
-        288
+        2496,
+        576
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "a2bc8374-9494-42c2-bbca-7d4cf9ddef07"
     },
     {
-      "id": "2486e87b-12ae-446e-999b-0a9b75da4917",
+      "id": "88503bb7-700b-4b6a-bc1c-ec70b1194bc7",
       "name": "HTTP Request",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -635,28 +588,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        208,
-        192
+        112,
+        480
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "51f1b0d6-8be1-4410-abc7-02cabfbde95b",
+      "id": "a4834745-703b-4838-881e-7c575f49e996",
       "name": "Wait1",
       "parameters": {
         "amount": 60
       },
       "position": [
-        592,
-        192
+        496,
+        480
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "1b11c0ff-308a-4f65-8a2b-bf30ee870022",
+      "id": "c8d1b871-0b4f-4051-9afb-067ee6d5c7e6",
       "name": "HTTP Request4",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -673,30 +626,30 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request').item.json.request_id }}"
       },
       "position": [
-        768,
-        192
+        672,
+        480
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "b1a49672-2e61-4666-9af3-135d665a01c7",
+      "id": "c3eeefec-fe9a-4abc-9279-0d161d1099a6",
       "name": "HTTP Request1",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        944,
-        192
+        848,
+        480
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "2851a221-496d-499b-b22f-8621688654b1",
+      "id": "aef1b397-ea61-4e63-afa5-aaca5d8002b9",
       "name": "Call Gemini API with Image",
       "parameters": {
         "headerParameters": {
@@ -720,30 +673,30 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1280,
-        192
+        1184,
+        480
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "3030309c-b4d4-4a04-a23b-4bd8473b4305",
+      "id": "c2cbfb74-f43f-4879-83f2-6120b02d0288",
       "name": "Transform to base64 (image)",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1120,
-        192
+        1024,
+        480
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "788a6b67-c88c-4fef-9e8d-14bf84b266fa",
+      "id": "2a6dcfb3-8085-4333-b67a-bcc69c1b3683",
       "name": "If1",
       "parameters": {
         "conditions": {
@@ -770,15 +723,15 @@
         "options": {}
       },
       "position": [
-        1472,
-        192
+        1376,
+        480
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
       "disabled": true,
-      "id": "6bec39d9-7be1-4695-bf54-914a36923c65",
+      "id": "06382d6a-d145-49aa-acae-342cbac7d4b9",
       "name": "Loop Over Items",
       "parameters": {
         "options": {
@@ -786,15 +739,15 @@
         }
       },
       "position": [
-        1728,
-        320
+        1632,
+        608
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "disabled": true,
-      "id": "5e21ba52-024b-4b02-bea8-aa27ebacea91",
+      "id": "c920197a-aee6-4de7-ab80-c93648f9c3dd",
       "name": "Telegram1",
       "parameters": {
         "additionalFields": {
@@ -804,8 +757,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        1952,
-        352
+        1856,
+        640
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -818,7 +771,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "e88bfbb3-31c9-49ab-a225-48aae13943a7",
+      "id": "a6d2b719-f708-4a97-80fe-2a97bbd034c3",
       "name": "Telegram2",
       "parameters": {
         "additionalFields": {
@@ -828,29 +781,29 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        400,
-        192
+        304,
+        480
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "2fe54419-a427-41f9-8b98-fb2511d54e3c",
+      "id": "0b163bc6-821d-4006-aed1-8ce075676e47",
       "name": "HTTP Request2",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request1').item.json.images[0].url }}"
       },
       "position": [
-        1760,
-        160
+        1664,
+        448
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "ae5d61d2-f08a-4991-85b0-4e8f3356bccc",
+      "id": "40d1af4a-f869-4d7c-aab1-bc9019e8bacc",
       "name": "AI Agent1",
       "parameters": {
         "options": {
@@ -860,8 +813,8 @@
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -96,
-        192
+        -192,
+        480
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -873,7 +826,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "7a2d36aa-f9d5-452d-97e2-7b5686d61bef",
+      "id": "cde97c81-9ba1-4964-b293-55fa8f5576e3",
       "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {},
@@ -882,8 +835,8 @@
         ]
       },
       "position": [
-        -1616,
-        192
+        -1712,
+        480
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
@@ -896,15 +849,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "730174cd-c6c0-4ea9-9109-7b583840919e",
+      "id": "89d84585-7b48-4f35-b9ec-e1dfb6bd8282",
       "name": "Google Gemini Chat Model1",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -80,
-        352
+        -176,
+        640
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -916,7 +869,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "1bc548fb-649e-4bb5-bb28-09068b31d958",
+      "id": "58172b1d-1626-4f5a-a723-c408f90f7d9f",
       "name": "Send a text message",
       "parameters": {
         "additionalFields": {
@@ -926,15 +879,15 @@
         "text": "Проверка промта."
       },
       "position": [
-        -304,
-        192
+        -400,
+        480
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "50ee3803-e7c2-4f35-9a9d-bc4df21c9d44",
+      "id": "37bfb35d-26ae-4868-a67d-22a77088ab04",
       "name": "AI Agent",
       "parameters": {
         "options": {
@@ -944,8 +897,8 @@
         "text": "={{ $json.text }}"
       },
       "position": [
-        -704,
-        192
+        -800,
+        480
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -957,7 +910,7 @@
           "name": "GPT"
         }
       },
-      "id": "911a903b-aa37-4a9a-a399-d12c6cecc6b9",
+      "id": "b7866c5d-4780-41d6-b1bc-ccbd145a65dd",
       "name": "OpenAI Chat Model",
       "parameters": {
         "model": {
@@ -969,8 +922,8 @@
         "options": {}
       },
       "position": [
-        -688,
-        400
+        -784,
+        688
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -982,7 +935,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "1f0d9b83-b8e4-41e2-9070-4023de89594c",
+      "id": "8aede36f-9cab-4527-a02c-24176f2bf3a7",
       "name": "Send a text message1",
       "parameters": {
         "additionalFields": {
@@ -992,8 +945,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        400,
-        352
+        304,
+        640
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1006,7 +959,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "0ecb9d42-7517-4000-bd14-a867c7118c44",
+      "id": "6117c8e1-bcd8-408a-b2c5-b2b8911c89e4",
       "name": "Send a text message2",
       "parameters": {
         "additionalFields": {
@@ -1016,8 +969,8 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        944,
-        352
+        848,
+        640
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1030,7 +983,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "70520ad1-a04e-4a69-87a0-985f88a2c6de",
+      "id": "dbc92e1c-04c7-43d8-bff9-eef9c45eba78",
       "name": "Append row in sheet",
       "parameters": {
         "columns": {
@@ -1094,8 +1047,8 @@
         }
       },
       "position": [
-        -1216,
-        192
+        -1312,
+        480
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -1108,7 +1061,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "b0ebbc4d-2d33-459f-b932-dbcd3abe2ebf",
+      "id": "f88e7172-0b4e-477c-9716-cc409e743306",
       "name": "Get row(s) in sheet",
       "parameters": {
         "documentId": {
@@ -1136,14 +1089,14 @@
         }
       },
       "position": [
-        -1488,
-        192
+        -1584,
+        480
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "e0065e0e-8a16-4693-be2a-3dbfc8928f21",
+      "id": "53203374-4a8a-4a31-81c0-293a86b66e5b",
       "name": "If2",
       "parameters": {
         "conditions": {
@@ -1171,14 +1124,14 @@
         "options": {}
       },
       "position": [
-        -1360,
-        192
+        -1456,
+        480
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "0b07daab-3716-4216-a9d0-1fa02c697f6a",
+      "id": "3b4e37d2-6df6-4b55-9d50-48d32ba16f72",
       "name": "HTTP Request3",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1203,28 +1156,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        208,
-        560
+        112,
+        848
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "584a40bc-cd4d-4e3b-ae89-29eb2b8ed8e9",
+      "id": "cb56676f-7b69-4042-8692-d136f141de1f",
       "name": "Wait",
       "parameters": {
         "amount": 60
       },
       "position": [
-        592,
-        560
+        496,
+        848
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "5326b4c0-08f5-449c-875a-e985e818d318",
+      "id": "356dbf7d-783e-4e44-b25c-96e3118bfc48",
       "name": "HTTP Request5",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1241,30 +1194,30 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request3').item.json.request_id }}"
       },
       "position": [
-        768,
-        560
+        672,
+        848
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "3872958a-f762-4deb-a06f-733179c87ea8",
+      "id": "2518657a-4eba-4d11-bdb2-91ae28f1e4f5",
       "name": "HTTP Request6",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        944,
-        560
+        848,
+        848
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "068533ed-97f8-4e1c-8add-3f53d162ee0f",
+      "id": "19d2a0f5-ed04-47ad-bff9-e288ba4cafb0",
       "name": "Call Gemini API with Image1",
       "parameters": {
         "headerParameters": {
@@ -1288,30 +1241,30 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1280,
-        560
+        1184,
+        848
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
       "disabled": true,
-      "id": "9315dfdc-18e3-4175-9d2e-b40d8e256845",
+      "id": "35be4439-9a63-4147-ad60-6ead65919696",
       "name": "Transform to base64 (image)1",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1120,
-        560
+        1024,
+        848
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "e83345a0-f66c-4d30-8de4-6a4b0925a3f0",
+      "id": "75fcc799-6acc-4a18-b85a-537a52d542ef",
       "name": "If3",
       "parameters": {
         "conditions": {
@@ -1338,15 +1291,15 @@
         "options": {}
       },
       "position": [
-        1472,
-        560
+        1376,
+        848
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
       "disabled": true,
-      "id": "5349e1c1-cb12-487e-882e-c342c673a21f",
+      "id": "1b87d4a8-dba9-4616-9dbd-9d38a0051970",
       "name": "Loop Over Items1",
       "parameters": {
         "options": {
@@ -1354,15 +1307,15 @@
         }
       },
       "position": [
-        1728,
-        704
+        1632,
+        992
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "disabled": true,
-      "id": "ae186d00-8ddf-4369-8e24-d4b6d2b98437",
+      "id": "adf37ee2-979b-4830-bb01-ab862ce6966a",
       "name": "Telegram4",
       "parameters": {
         "additionalFields": {
@@ -1372,8 +1325,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        1952,
-        720
+        1856,
+        1008
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1386,7 +1339,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "d243b063-621a-4896-a7a6-fb11ff4fb51c",
+      "id": "f00c0d0f-0932-4239-ba39-e6ae81912f97",
       "name": "Telegram5",
       "parameters": {
         "additionalFields": {
@@ -1396,29 +1349,29 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        400,
-        560
+        304,
+        848
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "1e63c207-210a-485d-b5a7-f16e6bba349f",
+      "id": "ad33b4eb-06e9-47f5-9769-81effae0fe21",
       "name": "HTTP Request7",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request6').item.json.images[0].url }}"
       },
       "position": [
-        1760,
-        544
+        1664,
+        832
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "6f7cd541-aa91-4ada-8038-232c06798065",
+      "id": "bf09e7b4-3b48-4b0f-a8bf-0a2e76063e52",
       "name": "AI Agent2",
       "parameters": {
         "options": {
@@ -1428,8 +1381,8 @@
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -144,
-        560
+        -240,
+        848
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -1441,15 +1394,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "df9710bb-be2d-4c85-b69f-8c16e15a061e",
+      "id": "6900cd57-604a-498b-a76d-196f581a687d",
       "name": "Google Gemini Chat Model",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -128,
-        720
+        -224,
+        1008
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1461,7 +1414,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "71f7b208-9f66-499e-8e16-772c570f2b32",
+      "id": "64e8a57f-9d8f-4d15-93d8-1b2ba53c49e7",
       "name": "Send a text message3",
       "parameters": {
         "additionalFields": {
@@ -1471,8 +1424,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        400,
-        720
+        304,
+        1008
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1485,7 +1438,7 @@
           "name": "LW Gen character"
         }
       },
-      "id": "f8cacc60-c36e-4370-bcfe-856bbbf076ae",
+      "id": "963939f9-4819-47fa-be13-84521496106d",
       "name": "Send a text message4",
       "parameters": {
         "additionalFields": {
@@ -1495,185 +1448,23 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        944,
-        720
+        848,
+        1008
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "6aebb3b3-ecb7-45ce-869d-d5c3769921ae",
+      "id": "dd5d68fa-fc12-4c54-b8ef-a3bd2f1c62d5",
       "name": "Merge",
       "parameters": {},
       "position": [
-        2432,
-        288
+        2336,
+        576
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
-    },
-    {
-      "id": "bcd10b02-3b15-45f7-949a-66cb713f0f52",
-      "name": "Get row(s) in sheet in Google Sheets16",
-      "parameters": {
-        "descriptionType": "manual",
-        "documentId": {
-          "__rl": true,
-          "cachedResultName": "Каталог_автоматизаций_n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit?usp=drivesdk",
-          "mode": "list",
-          "value": "1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw"
-        },
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "cachedResultName": "Лист9",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit#gid=1471533551",
-          "mode": "list",
-          "value": 1471533551
-        },
-        "toolDescription": "Get row(s) in sheet in Google Sheets"
-      },
-      "position": [
-        48,
-        16
-      ],
-      "type": "n8n-nodes-base.googleSheetsTool",
-      "typeVersion": 4.7
-    },
-    {
-      "id": "b6822b50-aa74-4d98-8972-97e54df9cb45",
-      "name": "Sticky Note16",
-      "parameters": {
-        "content": "Character gen"
-      },
-      "position": [
-        -96,
-        -288
-      ],
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
-    },
-    {
-      "id": "5559de87-be3e-40bc-b0c6-550f308efe21",
-      "name": "OpenAI Chat Model21",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "gpt-4.1",
-          "mode": "list",
-          "value": "gpt-4.1"
-        },
-        "options": {}
-      },
-      "position": [
-        -96,
-        16
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2
-    },
-    {
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "gngoNLFSKF2sQUSt",
-          "name": "N8NTelegram"
-        }
-      },
-      "id": "c9616d75-4fa8-4812-b1e3-914742745e2b",
-      "name": "Get row(s) in sheet in Google Sheets17",
-      "parameters": {
-        "descriptionType": "manual",
-        "documentId": {
-          "__rl": true,
-          "cachedResultName": "Каталог_автоматизаций_n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit?usp=drivesdk",
-          "mode": "list",
-          "value": "1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw"
-        },
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "cachedResultName": "Лист9",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zuN8NyA98i27vfugvXGIcIfacoikHqH-Ne4IwX_Gxhw/edit#gid=1471533551",
-          "mode": "list",
-          "value": 1471533551
-        },
-        "toolDescription": "Get row(s) in sheet in Google Sheets"
-      },
-      "position": [
-        400,
-        16
-      ],
-      "type": "n8n-nodes-base.googleSheetsTool",
-      "typeVersion": 4.7
-    },
-    {
-      "id": "bbd9cb11-f172-49ff-9785-397878d74585",
-      "name": "Sticky Note17",
-      "parameters": {
-        "content": "Character gen"
-      },
-      "position": [
-        256,
-        -288
-      ],
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
-    },
-    {
-      "id": "8b35092b-12bf-4ca4-85e7-3a223c87303f",
-      "name": "OpenAI Chat Model22",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "gpt-4.1",
-          "mode": "list",
-          "value": "gpt-4.1"
-        },
-        "options": {}
-      },
-      "position": [
-        256,
-        16
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2
-    },
-    {
-      "id": "388fe725-0e9c-4ca5-85a8-c0ec8d714773",
-      "name": "AI Agent1_",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Ты — AI агент в n8n.\n\nТекущий воркфлоу называется: \"{{ $workflow.name }}\"\nТвоя нода называется: \"AI Agent1\"\n\nУ тебя есть доступ к инструменту (tool) Google Sheets с колонками:\n- workflowName\n- nodeName\n- prompt\n\nТвоя задача:\n1. Используй название воркфлоу \"{{ $workflow.name }}\" и название ноды \"AI Agent1\".\n2. Обратись к Google Sheets tool и найди строку, где workflowName = \"{{ $workflow.name }}\" и nodeName = \"AI Agent1\".\n3. Возьми содержимое из колонки \"prompt\".\n4. **Немедленно выполни эту инструкцию** для текста, который уже передан в поле \"{{ $json.comment}}\". \n5. Не задавай уточняющих вопросов и не ожидай подтверждения — просто выполняй найденный prompt.\n6. Если подходящей строки нет — верни только: \"❌ Промпт для [{{ $workflow.name }} → обработка текста] не найден\".\n"
-        },
-        "promptType": "define",
-        "text": "=Текст для анализа: \"{{ $json.comment }}\""
-      },
-      "position": [
-        -96,
-        -128
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.2
-    },
-    {
-      "id": "fd71bee1-0f07-461e-9514-d19f4f240bcc",
-      "name": "AI Agent2_",
-      "parameters": {
-        "options": {
-          "systemMessage": "=Ты — AI агент в n8n.\n\nТекущий воркфлоу называется: \"{{ $workflow.name }}\"\nТвоя нода называется: \"AI Agent2\"\n\nУ тебя есть доступ к инструменту (tool) Google Sheets с колонками:\n- workflowName\n- nodeName\n- prompt\n\nТвоя задача:\n1. Используй название воркфлоу \"{{ $workflow.name }}\" и название ноды \"AI Agent2\".\n2. Обратись к Google Sheets tool и найди строку, где workflowName = \"{{ $workflow.name }}\" и nodeName = \"AI Agent2\".\n3. Возьми содержимое из колонки \"prompt\".\n4. **Немедленно выполни эту инструкцию** для текста, который уже передан в поле \"{{ $json.comment}}\". \n5. Не задавай уточняющих вопросов и не ожидай подтверждения — просто выполняй найденный prompt.\n6. Если подходящей строки нет — верни только: \"❌ Промпт для [{{ $workflow.name }} → обработка текста] не найден\".\n"
-        },
-        "promptType": "define",
-        "text": "=Текст для анализа: \"{{ $json.comment }}\""
-      },
-      "position": [
-        256,
-        -128
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.2
     }
   ],
   "pinData": {},
@@ -1699,6 +1490,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-10T15:00:01.004Z",
-  "versionId": "5483a4a7-a20e-4727-b598-95ce8561f26f"
+  "updatedAt": "2025-10-15T22:00:00.710Z",
+  "versionId": "eeb41751-d9da-4712-ab31-e660827c8104"
 }
