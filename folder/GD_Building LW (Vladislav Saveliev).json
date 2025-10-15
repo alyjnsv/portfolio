@@ -541,8 +541,7 @@
             "node": "Edit Fields",
             "type": "main"
           }
-        ],
-        []
+        ]
       ]
     },
     "If1": {
@@ -1031,7 +1030,7 @@
   "name": "GD_Building LW (Vladislav Saveliev)",
   "nodes": [
     {
-      "id": "6ea24c53-1eea-4abb-a23d-acad0c787fc0",
+      "id": "5a32237f-cc5c-4d72-aef0-20b18aeb2a2b",
       "name": "HTTP Request",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1056,28 +1055,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        144,
-        192
+        2368,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "130ccc74-e5af-4832-9691-d39c8d1bb1cf",
+      "id": "2c8dbb4d-fc8c-47db-ac88-e5135d1aa360",
       "name": "Wait1",
       "parameters": {
         "amount": 60
       },
       "position": [
-        768,
-        192
+        2992,
+        0
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "226d7f80-b964-42d3-b81b-53ec06292bc7",
+      "id": "60014cea-de6d-41a9-8a98-c16d410ca5f6",
       "name": "HTTP Request4",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1094,28 +1093,28 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request').item.json.request_id }}"
       },
       "position": [
-        928,
-        192
+        3152,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "ad3f492f-4661-4ecc-94b0-43e70e647d53",
+      "id": "ca4bb24e-6ee2-4081-aa71-ea69adb213e0",
       "name": "HTTP Request1",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        1104,
-        192
+        3328,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "93861461-cfab-4883-b772-9cae3c5e8c19",
+      "id": "63a3cc17-f2f1-40c2-802c-d4d2d7b33e3d",
       "name": "Call Gemini API with Image",
       "parameters": {
         "headerParameters": {
@@ -1139,28 +1138,28 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1440,
-        192
+        3664,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "49cf4716-e103-4b02-ae24-7baa4421d926",
+      "id": "5da05b5b-5235-406f-9f21-b56ea5cafda5",
       "name": "Transform to base64 (image)",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1280,
-        192
+        3504,
+        0
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "78c6d886-fa4f-42b0-918f-c00db36754e2",
+      "id": "bf039240-c5da-4571-b4cc-d51bc20d45ab",
       "name": "If1",
       "parameters": {
         "conditions": {
@@ -1187,14 +1186,14 @@
         "options": {}
       },
       "position": [
-        1632,
-        192
+        3856,
+        0
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "4ee7f315-fe08-4c76-bc7a-c2d3a24bc672",
+      "id": "e3fb7eed-9296-4ff0-aa5d-73a92f04a09f",
       "name": "Loop Over Items",
       "parameters": {
         "options": {
@@ -1202,28 +1201,28 @@
         }
       },
       "position": [
-        1888,
-        320
+        4112,
+        128
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "fc4d442e-7ed1-484c-af9a-e47777fed16a",
+      "id": "be976add-5588-4d1c-9651-aa99389554e0",
       "name": "HTTP Request2",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request1').item.json.images[0].url }}"
       },
       "position": [
-        1888,
-        192
+        4112,
+        0
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "a6143d90-6a60-4ae7-a24b-c1f7330737a4",
+      "id": "654bfb51-4aec-40eb-b4ba-cc4593a85a38",
       "name": "AI Agent1",
       "parameters": {
         "options": {
@@ -1233,8 +1232,8 @@
         "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -224,
-        192
+        2000,
+        0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -1246,15 +1245,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "8f71705a-78c7-4b2f-93a2-dd4f2af86232",
+      "id": "92811853-2854-434e-b0ea-d63ee88184c6",
       "name": "Google Gemini Chat Model1",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -208,
-        352
+        2016,
+        160
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1266,7 +1265,7 @@
           "name": "Build LW"
         }
       },
-      "id": "4f37912f-6668-477f-9495-c8aeb076effe",
+      "id": "ab8c32a2-c6a8-4722-99ce-836c327fa6ee",
       "name": "Send a text message1",
       "parameters": {
         "additionalFields": {
@@ -1276,8 +1275,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        304,
-        320
+        2528,
+        128
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1290,7 +1289,7 @@
           "name": "Build LW"
         }
       },
-      "id": "acf3575e-0366-463c-9a9a-004789ac21d2",
+      "id": "5e6fb381-1d6f-496a-81ff-52254a277c4d",
       "name": "Send a text message2",
       "parameters": {
         "additionalFields": {
@@ -1300,28 +1299,28 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        1104,
-        352
+        3328,
+        160
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "292fcbd0-f0a8-42ed-a51e-fc19bd613615",
+      "id": "79079bc0-6c90-4f58-9b4b-b69380a63a7b",
       "name": "Merge",
       "parameters": {
         "numberInputs": 5
       },
       "position": [
-        2432,
-        448
+        4656,
+        256
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "aa84a136-b8cf-4f55-8b98-afe476f0eab6",
+      "id": "6941a8e5-55d8-4b0e-9f8e-103ff8fd859f",
       "name": "HTTP Request8",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1346,28 +1345,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        144,
-        544
+        2368,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "4dfb380d-5fc3-4d69-8481-22e94ff1a2d6",
+      "id": "068220bb-495d-4fc9-b5a3-e994c5b4d82a",
       "name": "Wait2",
       "parameters": {
         "amount": 60
       },
       "position": [
-        768,
-        544
+        2992,
+        352
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "2de59ac7-6756-4509-955c-58f9af563f3f",
+      "id": "0deedc6c-cfa8-4579-92be-f240c602c653",
       "name": "HTTP Request9",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1384,28 +1383,28 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request8').item.json.request_id }}"
       },
       "position": [
-        928,
-        544
+        3152,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "cd67d418-d376-40ea-b73e-62bab3924b01",
+      "id": "55d10b94-53d1-49cb-bf1b-6239a8566276",
       "name": "HTTP Request10",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        1104,
-        544
+        3328,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "fa69f1cd-ba31-4194-b38e-336d4be78656",
+      "id": "f2036b0e-ced8-4b65-90bb-ac681f4719ed",
       "name": "Call Gemini API with Image2",
       "parameters": {
         "headerParameters": {
@@ -1429,28 +1428,28 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1440,
-        544
+        3664,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "4d6d6eb3-4306-447c-b4e5-c4ebaa20296d",
+      "id": "d7e2d391-436c-41fa-8a95-214dda17804b",
       "name": "Transform to base64 (image)2",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1280,
-        544
+        3504,
+        352
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "fdfba04e-ebad-478e-b116-f5f48a13fc84",
+      "id": "2262718d-555b-4147-92ff-e6c89e2f3eea",
       "name": "If4",
       "parameters": {
         "conditions": {
@@ -1477,14 +1476,14 @@
         "options": {}
       },
       "position": [
-        1632,
-        544
+        3856,
+        352
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "e4f3efca-9212-4971-8db3-a7566fe2ffdd",
+      "id": "d03a9ca0-11eb-4e58-b56c-9437aac9f534",
       "name": "Loop Over Items2",
       "parameters": {
         "options": {
@@ -1492,28 +1491,28 @@
         }
       },
       "position": [
-        1888,
-        688
+        4112,
+        496
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "a9298fe6-c235-40ac-8cc3-684c174970c6",
+      "id": "5d5f5d97-6e0b-44de-8b16-ecc0f58df031",
       "name": "HTTP Request11",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request10').item.json.images[0].url }}"
       },
       "position": [
-        1888,
-        544
+        4112,
+        352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "8c50888c-3ac2-46b6-96fb-12e1cc4566d8",
+      "id": "d6d432cd-50ac-42d2-b914-77b89cedbae5",
       "name": "AI Agent3",
       "parameters": {
         "options": {
@@ -1523,8 +1522,8 @@
         "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -224,
-        544
+        2000,
+        352
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -1536,15 +1535,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "c0ce1ef1-b1e6-4dc0-b402-fabb6fd51b2a",
+      "id": "bcd7aac5-e852-4fbc-9a80-ad144f946a04",
       "name": "Google Gemini Chat Model2",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -208,
-        704
+        2016,
+        512
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1556,7 +1555,7 @@
           "name": "Build LW"
         }
       },
-      "id": "66d55acf-17df-48d6-80c0-200be175ad1c",
+      "id": "5eda7db1-d23c-4fef-ae38-aafa157e1fea",
       "name": "Send a text message5",
       "parameters": {
         "additionalFields": {
@@ -1566,8 +1565,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        304,
-        688
+        2528,
+        496
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1580,7 +1579,7 @@
           "name": "Build LW"
         }
       },
-      "id": "b28e8f96-0783-402e-8845-309b2c13e5fa",
+      "id": "ac097197-f4e3-4bb5-9d98-ada0f8afdcaf",
       "name": "Send a text message6",
       "parameters": {
         "additionalFields": {
@@ -1590,15 +1589,15 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        1104,
-        704
+        3328,
+        512
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "6b819864-6ff4-4f66-b728-7f79a3a5b706",
+      "id": "6534cec4-9964-41d0-b3d7-34b45c07fc37",
       "name": "HTTP Request12",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1623,28 +1622,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        144,
-        928
+        2368,
+        736
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "f629bc18-9601-4e89-b3b5-fdaadbe42a62",
+      "id": "1cdad7d3-8372-49d0-8324-a7103f49d5e7",
       "name": "Wait3",
       "parameters": {
         "amount": 60
       },
       "position": [
-        768,
-        928
+        2992,
+        736
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "5be7043b-c4a3-420c-8279-7c52acb36be7",
+      "id": "31b281f6-30a5-4bd3-aed6-37e2e6331193",
       "name": "HTTP Request13",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1661,28 +1660,28 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request12').item.json.request_id }}"
       },
       "position": [
-        928,
-        928
+        3152,
+        736
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "3b00bcac-036f-45db-a155-b8ffd829a886",
+      "id": "cfceab56-e074-4df1-96e9-a3281ba5859f",
       "name": "HTTP Request14",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        1104,
-        928
+        3328,
+        736
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "4fc53d9c-2df6-423c-8249-b7ebc3437501",
+      "id": "3f55be70-fbd6-4eb4-9068-36695802a727",
       "name": "Call Gemini API with Image3",
       "parameters": {
         "headerParameters": {
@@ -1706,28 +1705,28 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1440,
-        928
+        3664,
+        736
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "91e7ae40-24fb-42bf-af44-98049ab78589",
+      "id": "4e88435d-1170-4830-bbef-5f65acfe1108",
       "name": "Transform to base64 (image)3",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1280,
-        928
+        3504,
+        736
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "4603987d-1936-4268-8e59-068d56705a1f",
+      "id": "c115ddbc-285d-4a47-a4d4-edb76827aef8",
       "name": "If5",
       "parameters": {
         "conditions": {
@@ -1754,14 +1753,14 @@
         "options": {}
       },
       "position": [
-        1632,
-        928
+        3856,
+        736
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "a8d1535f-9f0b-4923-9c1e-c051e1f23442",
+      "id": "701e3c80-94c3-4086-a5e7-2e5b2597e4ee",
       "name": "Loop Over Items3",
       "parameters": {
         "options": {
@@ -1769,28 +1768,28 @@
         }
       },
       "position": [
-        1888,
-        1072
+        4112,
+        880
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "fb3183cd-0d45-4f3b-988e-3f732496fef8",
+      "id": "03110f83-bda5-4a4d-91fa-11beb7a6703e",
       "name": "HTTP Request15",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request14').item.json.images[0].url }}"
       },
       "position": [
-        1888,
-        928
+        4112,
+        736
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "066b2834-dac6-4533-8fdf-2cf096051b2f",
+      "id": "66456edd-fc2e-485c-86e7-c9da77ca95f1",
       "name": "AI Agent4",
       "parameters": {
         "options": {
@@ -1800,8 +1799,8 @@
         "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -224,
-        928
+        2000,
+        736
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -1813,15 +1812,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "d689ed88-5b93-4435-ae29-09e4a98633d4",
+      "id": "e20dabb4-85bb-47b6-a628-9544c78877d5",
       "name": "Google Gemini Chat Model3",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -208,
-        1088
+        2016,
+        896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1833,7 +1832,7 @@
           "name": "Build LW"
         }
       },
-      "id": "4cf778cd-dc64-4820-8a5c-d3323ca1ac28",
+      "id": "975bc298-1371-41f3-a8d4-0c408e194493",
       "name": "Send a text message7",
       "parameters": {
         "additionalFields": {
@@ -1843,8 +1842,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        304,
-        1072
+        2528,
+        880
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1857,7 +1856,7 @@
           "name": "Build LW"
         }
       },
-      "id": "2ade27c5-8eca-4b15-b856-c8f484af57e3",
+      "id": "68b48a21-5b34-4427-aae6-027cd5a68e11",
       "name": "Send a text message8",
       "parameters": {
         "additionalFields": {
@@ -1867,15 +1866,15 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        1104,
-        1088
+        3328,
+        896
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "93bee64e-c427-483d-b790-a80d37c061ef",
+      "id": "03ad86b9-27cd-42c0-a8b9-7fc18af7d2ea",
       "name": "HTTP Request24",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1900,28 +1899,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        144,
-        1280
+        2368,
+        1088
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "450c6c4f-31ad-4113-a6d4-efbb121a76ad",
+      "id": "668455e7-e71c-4eb4-9c24-4516dce42780",
       "name": "Wait6",
       "parameters": {
         "amount": 60
       },
       "position": [
-        768,
-        1280
+        2992,
+        1088
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "d750da5a-4dde-482a-99cb-531df6e77e45",
+      "id": "f91da6c0-6d5b-42c1-b864-137045a423df",
       "name": "HTTP Request25",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -1938,28 +1937,28 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request24').item.json.request_id }}"
       },
       "position": [
-        928,
-        1280
+        3152,
+        1088
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "a3c60cdb-72fe-4e64-8298-827ad17621b7",
+      "id": "f581a839-381e-466a-8a84-e75b2c31f87d",
       "name": "HTTP Request26",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        1104,
-        1280
+        3328,
+        1088
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "955869fd-1557-4860-84a2-3155920030aa",
+      "id": "853d8c03-1944-484f-a604-69740c1abc25",
       "name": "Call Gemini API with Image6",
       "parameters": {
         "headerParameters": {
@@ -1983,28 +1982,28 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1440,
-        1280
+        3664,
+        1088
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "0fac63b3-fd5b-49f3-b3db-9b213b9ab051",
+      "id": "2f3dccc5-6132-44b9-a05a-5369cc3c3b90",
       "name": "Transform to base64 (image)6",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1280,
-        1280
+        3504,
+        1088
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "ff20661a-d308-4cfb-bc65-fd0a3e2c7fbe",
+      "id": "709abc2f-dca9-4d40-a7d5-94ebea2e53ed",
       "name": "If8",
       "parameters": {
         "conditions": {
@@ -2031,14 +2030,14 @@
         "options": {}
       },
       "position": [
-        1632,
-        1280
+        3856,
+        1088
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "77bcb24d-1699-413d-adc7-67f0033b8ea1",
+      "id": "767704a8-e5ce-474d-a10f-92aafa9502e2",
       "name": "Loop Over Items6",
       "parameters": {
         "options": {
@@ -2046,28 +2045,28 @@
         }
       },
       "position": [
-        1888,
-        1424
+        4112,
+        1232
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "2c497a78-e242-4069-a82b-f0181fa76f84",
+      "id": "c8c0c30b-85ab-441c-87a3-ae0282c7c64f",
       "name": "HTTP Request27",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request26').item.json.images[0].url }}"
       },
       "position": [
-        1888,
-        1280
+        4112,
+        1088
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "08137065-6695-42e7-b6ff-857b535b0ab0",
+      "id": "f335237d-ab37-4d6e-ad2d-1dddb8353c42",
       "name": "AI Agent7",
       "parameters": {
         "options": {
@@ -2077,8 +2076,8 @@
         "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -224,
-        1280
+        2000,
+        1088
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -2090,15 +2089,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "66f195f4-9eae-451c-ad86-9de820fcca8a",
+      "id": "2474b943-afc0-471e-a2d2-dd9d07e32fa5",
       "name": "Google Gemini Chat Model6",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -208,
-        1440
+        2016,
+        1248
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -2110,7 +2109,7 @@
           "name": "Build LW"
         }
       },
-      "id": "bc029f07-070f-4243-a6c8-1ecef98919c8",
+      "id": "9297a9ce-82ac-47f0-aa9e-960da59da5d3",
       "name": "Send a text message13",
       "parameters": {
         "additionalFields": {
@@ -2120,8 +2119,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        304,
-        1424
+        2528,
+        1232
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2134,7 +2133,7 @@
           "name": "Build LW"
         }
       },
-      "id": "79334586-9d11-42e1-b6a5-21f12fb28cd1",
+      "id": "29a97060-2791-46ec-afe7-52d1dc5156ad",
       "name": "Send a text message14",
       "parameters": {
         "additionalFields": {
@@ -2144,15 +2143,15 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        1104,
-        1440
+        3328,
+        1248
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "b5e5ed66-aa20-47e2-b2b4-6d993ac196c4",
+      "id": "abf29967-63e4-4164-aba4-5b447f6b4710",
       "name": "HTTP Request28",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2177,28 +2176,28 @@
         "url": "https://queue.fal.run/fal-ai/imagen4/preview/ultra"
       },
       "position": [
-        144,
-        1712
+        2368,
+        1520
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "5a8f9c1f-4b33-4f13-9597-81844305f5a7",
+      "id": "5c5bdae7-f2bc-4239-8984-1054e04f06c6",
       "name": "Wait7",
       "parameters": {
         "amount": 60
       },
       "position": [
-        768,
-        1712
+        2992,
+        1520
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "fa5b7242-9b55-4b80-9584-ab105925d0db"
     },
     {
-      "id": "ebda3113-69f6-4a30-b217-045a43bd9763",
+      "id": "700204a2-2810-4cc5-b772-2c74546794b0",
       "name": "HTTP Request29",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -2215,28 +2214,28 @@
         "url": "=https://queue.fal.run/fal-ai/imagen4/requests/{{ $('HTTP Request28').item.json.request_id }}"
       },
       "position": [
-        928,
-        1712
+        3152,
+        1520
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "cf651c09-22ee-414d-b4b5-7362389b0afc",
+      "id": "5f5c03b2-66aa-4857-8fc4-2afe22fc51ee",
       "name": "HTTP Request30",
       "parameters": {
         "options": {},
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        1104,
-        1712
+        3328,
+        1520
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "baaa9356-6eca-42a1-89a0-10414cd93e9e",
+      "id": "6552c88b-1a41-4b28-8d19-a3acf7c481aa",
       "name": "Call Gemini API with Image7",
       "parameters": {
         "headerParameters": {
@@ -2260,28 +2259,28 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       },
       "position": [
-        1440,
-        1712
+        3664,
+        1520
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "b4f7d9f6-8275-4bde-9f71-80d4f609ea6f",
+      "id": "73ff33bf-8cfa-450a-a569-4f0df44f9456",
       "name": "Transform to base64 (image)7",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        1280,
-        1712
+        3504,
+        1520
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "ae34f74c-bf3d-41d7-b81d-9328677a40a7",
+      "id": "54a59055-e872-44de-91b8-d82e5c379247",
       "name": "If9",
       "parameters": {
         "conditions": {
@@ -2308,14 +2307,14 @@
         "options": {}
       },
       "position": [
-        1632,
-        1712
+        3856,
+        1520
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "52a624db-64a8-4567-88aa-925498714a15",
+      "id": "25f9ea6e-0fa5-46fc-ab2a-30fce4819c26",
       "name": "Loop Over Items7",
       "parameters": {
         "options": {
@@ -2323,28 +2322,28 @@
         }
       },
       "position": [
-        1888,
-        1840
+        4112,
+        1648
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "394d4884-30cc-489f-8788-8c39e97f7e2b",
+      "id": "690c5ffa-ccc3-4a36-af33-8d29bceec84f",
       "name": "HTTP Request31",
       "parameters": {
         "options": {},
         "url": "={{ $('HTTP Request30').item.json.images[0].url }}"
       },
       "position": [
-        1888,
-        1712
+        4112,
+        1520
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "f4fb8471-b760-42da-885f-604bd17e9ab1",
+      "id": "e9c80328-3449-4c1d-91ce-6de1da82717f",
       "name": "AI Agent8",
       "parameters": {
         "options": {
@@ -2354,8 +2353,8 @@
         "text": "=Мой промт: {{ $('Edit Fields1').item.json.idea }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
       },
       "position": [
-        -224,
-        1712
+        2000,
+        1520
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
@@ -2367,15 +2366,15 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "8c7b16ec-2d1b-4a86-8af4-58d9cae6c39c",
+      "id": "a2ddce83-c931-450e-a6f0-94e2b012eac7",
       "name": "Google Gemini Chat Model7",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -208,
-        1872
+        2016,
+        1680
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -2387,7 +2386,7 @@
           "name": "Build LW"
         }
       },
-      "id": "cfb9f183-3200-4e8d-9f33-ac7882e6f2d9",
+      "id": "de4787a7-3498-4169-8988-c423a26ca1cd",
       "name": "Send a text message15",
       "parameters": {
         "additionalFields": {
@@ -2397,8 +2396,8 @@
         "text": "Произошла ошибка с промтом, повторите попытку."
       },
       "position": [
-        304,
-        1840
+        2528,
+        1648
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2411,7 +2410,7 @@
           "name": "Build LW"
         }
       },
-      "id": "f157e456-4410-456f-b0df-a1bd54732a92",
+      "id": "8d7831f5-5fe1-438c-81c7-ee0bd87432df",
       "name": "Send a text message16",
       "parameters": {
         "additionalFields": {
@@ -2421,15 +2420,15 @@
         "text": "Произошла ошибка с генерацией, повторите попытку."
       },
       "position": [
-        1104,
-        1872
+        3328,
+        1680
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "3df86982-4e7c-4fe4-ad5a-f93efa7c60b6"
     },
     {
-      "id": "71588e35-a686-47c4-8e50-0c546575169d",
+      "id": "f74dac4c-d23e-4ce3-9138-991a6b3bffef",
       "name": "Loop Over Items11",
       "parameters": {
         "options": {
@@ -2437,8 +2436,8 @@
         }
       },
       "position": [
-        3008,
-        560
+        5232,
+        368
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2450,7 +2449,7 @@
           "name": "Build LW"
         }
       },
-      "id": "7ed4acaa-286d-43ea-a4e2-22559303d855",
+      "id": "88afdf8e-c109-4cfc-b64e-39547df8e4e5",
       "name": "Send a photo message",
       "parameters": {
         "additionalFields": {},
@@ -2459,8 +2458,8 @@
         "operation": "sendPhoto"
       },
       "position": [
-        2624,
-        560
+        4848,
+        368
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2473,7 +2472,7 @@
           "name": "Build LW"
         }
       },
-      "id": "61bc1cee-83c8-461a-8385-e3a7e0a5033b",
+      "id": "86eec5fe-2c15-44c1-b1b2-9c2a6f649f5c",
       "name": "Send a text message19",
       "parameters": {
         "additionalFields": {
@@ -2483,8 +2482,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        480,
-        192
+        2704,
+        0
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2497,7 +2496,7 @@
           "name": "Build LW"
         }
       },
-      "id": "f8a0ada1-a868-42f9-bee5-b8f5ca14556a",
+      "id": "cf14460c-d8e4-4fff-861d-93786d9195e4",
       "name": "Send a text message20",
       "parameters": {
         "additionalFields": {
@@ -2507,8 +2506,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        2064,
-        320
+        4288,
+        128
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2521,7 +2520,7 @@
           "name": "Build LW"
         }
       },
-      "id": "2ba9b12b-7cef-4d6b-9beb-9960ef0a2831",
+      "id": "d6ef098a-b429-4814-8d1c-d6910d051078",
       "name": "Send a text message23",
       "parameters": {
         "additionalFields": {
@@ -2531,8 +2530,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        480,
-        544
+        2704,
+        352
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2545,7 +2544,7 @@
           "name": "Build LW"
         }
       },
-      "id": "3d68e975-b17b-4abf-b935-458e84d5e0b9",
+      "id": "309c2875-3c0f-4a44-a59b-584b7129c1d0",
       "name": "Send a text message24",
       "parameters": {
         "additionalFields": {
@@ -2555,8 +2554,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        2064,
-        688
+        4288,
+        496
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2569,7 +2568,7 @@
           "name": "Build LW"
         }
       },
-      "id": "54f77b42-6528-4b80-a95a-518067b5bd0e",
+      "id": "fbca609b-6e90-453d-8989-0ffd4070c878",
       "name": "Send a text message25",
       "parameters": {
         "additionalFields": {
@@ -2579,8 +2578,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        480,
-        928
+        2704,
+        736
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2593,7 +2592,7 @@
           "name": "Build LW"
         }
       },
-      "id": "149dd4cb-1dd2-400f-8f23-7eaf92cc5388",
+      "id": "35b0ee3a-a0d1-4989-8f68-ac4fc8aa4b0b",
       "name": "Send a text message26",
       "parameters": {
         "additionalFields": {
@@ -2603,8 +2602,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        2064,
-        1072
+        4288,
+        880
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2617,7 +2616,7 @@
           "name": "Build LW"
         }
       },
-      "id": "9155c6ba-e1c0-4bca-be30-74e1eca070b6",
+      "id": "3867a8d8-8162-48a8-a9cc-a7815b7d4d2b",
       "name": "Send a text message31",
       "parameters": {
         "additionalFields": {
@@ -2627,8 +2626,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        480,
-        1280
+        2704,
+        1088
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2641,7 +2640,7 @@
           "name": "Build LW"
         }
       },
-      "id": "9f3e8116-3094-44c3-ba54-bbc34dc538f3",
+      "id": "0e82973a-3ded-40cf-9998-678231d6ebb3",
       "name": "Send a text message32",
       "parameters": {
         "additionalFields": {
@@ -2651,8 +2650,8 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        2064,
-        1424
+        4288,
+        1232
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2665,7 +2664,7 @@
           "name": "Build LW"
         }
       },
-      "id": "940e75a5-5a97-4aa8-ada1-5e21b73ac66e",
+      "id": "52de50fe-32d7-4589-924e-9fed48d45678",
       "name": "Send a text message33",
       "parameters": {
         "additionalFields": {
@@ -2675,8 +2674,8 @@
         "text": "Итерация запущена, ожидайте!"
       },
       "position": [
-        480,
-        1712
+        2704,
+        1520
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2689,7 +2688,7 @@
           "name": "Build LW"
         }
       },
-      "id": "1a131f2a-5687-4c0e-a332-58b68e7a5a4b",
+      "id": "6a8f16d7-7476-4c51-9341-ef98cf3e13e9",
       "name": "Send a text message34",
       "parameters": {
         "additionalFields": {
@@ -2699,15 +2698,15 @@
         "text": "Идет повторная итерация, подождите"
       },
       "position": [
-        2064,
-        1840
+        4288,
+        1648
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "b1307b0b-042d-4df6-98a0-fbfe446a9d07"
     },
     {
-      "id": "760d120f-4c0b-4ee1-9b16-97ce057b2e27",
+      "id": "ed86b7d3-b475-421a-8683-c549fe9ef5df",
       "name": "If",
       "parameters": {
         "conditions": {
@@ -2773,14 +2772,14 @@
         "options": {}
       },
       "position": [
-        -1600,
-        192
+        624,
+        0
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "3e80049b-7812-4353-8099-1b64528ea422",
+      "id": "70889df3-030c-461d-8406-1401873ef9e3",
       "name": "Edit Fields",
       "parameters": {
         "assignments": {
@@ -2796,21 +2795,21 @@
         "options": {}
       },
       "position": [
-        -1360,
-        192
+        864,
+        0
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "f8021bc0-8d4a-4b71-afe4-aba2ad9f4479",
+      "id": "66e68886-b6c1-4272-963a-1365af04e177",
       "name": "Code",
       "parameters": {
         "jsCode": "const items = $input.first().json.text;\n\nlet result = '';\nfor (const item of items) {\n  if (item.json?.data?.text) {\n    result = item.json.data.text;\n    break;\n  }\n}\n\n// Удаляем все \\r, \\n, \\t, заменяя на пробел\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\n\n// Заменяем маркеры \"•\" и точки с пробелом на дефис и пробел\ncleanedText = cleanedText.replace(/•/g, '-');\n\n// Убираем лишние пробелы (больше одного подряд)\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      result: cleanedText\n    }\n  }\n];\n"
       },
       "position": [
-        -1184,
-        192
+        1040,
+        0
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2822,7 +2821,7 @@
           "name": "Build LW"
         }
       },
-      "id": "39d138d5-37cd-414e-af1c-cff5d50e5f11",
+      "id": "38eceff8-b14f-492a-80b4-892bd1cfed85",
       "name": "Send a text message",
       "parameters": {
         "additionalFields": {
@@ -2832,8 +2831,8 @@
         "text": "Проверка промта."
       },
       "position": [
-        -1008,
-        192
+        1216,
+        0
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2846,7 +2845,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "c6904f54-5ccc-41ad-b595-12743a902e7c",
+      "id": "48df9ff1-ef1c-4253-a6ea-ec17441d2077",
       "name": "Append row in sheet",
       "parameters": {
         "columns": {
@@ -2910,8 +2909,8 @@
         }
       },
       "position": [
-        -1744,
-        192
+        480,
+        0
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -2924,7 +2923,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "48ff8299-ce74-495d-bf76-9baba5956d74",
+      "id": "c910c86d-1ce1-4fec-b3bb-fb0dfcfa24ff",
       "name": "Get row(s) in sheet",
       "parameters": {
         "documentId": {
@@ -2952,14 +2951,14 @@
         }
       },
       "position": [
-        -2048,
-        192
+        176,
+        0
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
-      "id": "7ae0c274-7379-47c7-ae0d-9d8a7819f7ad",
+      "id": "d664fab5-9a26-4cce-b313-f9626b44ce69",
       "name": "If2",
       "parameters": {
         "conditions": {
@@ -2987,27 +2986,27 @@
         "options": {}
       },
       "position": [
-        -1888,
-        192
+        336,
+        0
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
-      "id": "dc48bef9-4a96-436e-a56c-2a6a9c4cef35",
+      "id": "fca2339f-53e7-4c9b-a847-6bbee6cad0ac",
       "name": "Code1",
       "parameters": {
         "jsCode": "// Вход: текст из Telegram, например, \"Идея1\\nИдея2\\nИдея3\" или \"1. Идея1 2. Идея2\"\nconst text = $('Edit Fields').first().json.text// Получаем текст сообщения\n\n// Разделяем по новым строкам (или адаптируй: по ',' или регуляркой для номеров)\nlet ideas = text.split('\\n').map(idea => idea.trim()).filter(idea => idea.length > 0);\n\n// Если идеи нумерованы (типа \"1. ...\"), используй regex для очистки\n// ideas = text.split(/\\d+\\./).map(idea => idea.trim()).filter(idea => idea.length > 0);\nideas = ideas.map(idea => idea.replace(/^\\d+\\.\\s*/, ''));\n\n// Возвращаем массив объектов, где каждый — отдельная идея\nreturn ideas.map(idea => ({ json: { idea } }));"
       },
       "position": [
-        -848,
-        192
+        1376,
+        0
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "44dd0a9a-f160-44a6-8f86-3b7fdffb56e1",
+      "id": "8c043bdf-474e-4d60-bc25-49781e1145ae",
       "name": "Loop Over Items9",
       "parameters": {
         "options": {
@@ -3015,15 +3014,15 @@
         }
       },
       "position": [
-        -544,
-        192
+        1680,
+        0
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "executeOnce": false,
-      "id": "5557b8ba-546a-4f8b-b0e9-5ea7003aea31",
+      "id": "786bfdca-5590-4157-a756-935f960e5d5c",
       "name": "Edit Fields1",
       "parameters": {
         "assignments": {
@@ -3039,8 +3038,8 @@
         "options": {}
       },
       "position": [
-        -688,
-        192
+        1536,
+        0
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3052,7 +3051,7 @@
           "name": "Build LW"
         }
       },
-      "id": "939b90b5-29e8-4566-8f26-b7e55ae017b8",
+      "id": "99eb7647-96f6-4e9d-9d60-c8802ed45007",
       "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {
@@ -3063,23 +3062,23 @@
         ]
       },
       "position": [
-        -2416,
-        192
+        -192,
+        0
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "webhookId": "2fe21576-187c-4acf-afeb-3784ec7eb79a"
     },
     {
-      "id": "60c8e5f0-e5f2-4802-9ce6-f03d5528474f",
+      "id": "177725c9-c627-4b55-8162-9d25da0aa976",
       "name": "Extract from File",
       "parameters": {
         "operation": "text",
         "options": {}
       },
       "position": [
-        -2208,
-        192
+        16,
+        0
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
@@ -3108,6 +3107,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-08T11:26:58.000Z",
-  "versionId": "0cb1b788-39b3-4a27-be9e-7e76de144c62"
+  "updatedAt": "2025-10-15T09:46:34.000Z",
+  "versionId": "026c70bf-e79f-4bdc-92f7-7fa87b9a26aa"
 }
