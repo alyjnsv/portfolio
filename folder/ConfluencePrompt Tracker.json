@@ -84,7 +84,7 @@
   "name": "ConfluencePrompt Tracker",
   "nodes": [
     {
-      "id": "f7691149-c958-4429-8bc3-94d827336d1b",
+      "id": "4b8016f0-ccbc-40d3-acfd-fbc8a286034a",
       "name": "Входные данные2",
       "parameters": {
         "assignments": {
@@ -106,14 +106,14 @@
         "options": {}
       },
       "position": [
-        -16,
-        -160
+        -1088,
+        -32
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "d01bce02-2c86-42da-b196-a5b0ec2a1bb2",
+      "id": "61c7a517-dd89-4725-851a-27f6a6f604c3",
       "name": "Получить содержимое документа",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -134,21 +134,21 @@
         "url": "=https://confluence.itcomp.org/rest/api/content/{{ $json.document_id }}?expand=body.storage"
       },
       "position": [
-        176,
-        -160
+        -896,
+        -32
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "84970ae2-ad97-4cca-b1b2-d9fcc276566a",
+      "id": "0c52bc2c-4abe-45a7-bf0c-314bd7ae58b8",
       "name": "Logger2",
       "parameters": {
         "errorMessage": "=Ошибка получения документа ID {{ $json.document_id }}"
       },
       "position": [
-        336,
-        -48
+        -736,
+        96
       ],
       "type": "n8n-nodes-base.stopAndError",
       "typeVersion": 1
@@ -160,7 +160,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "0a466acb-49c1-4dd6-92ca-0528f2e694ac",
+      "id": "cadaa8d7-84b0-4eef-aa4b-83b7b275360f",
       "name": "OpenAI Chat Model",
       "parameters": {
         "model": {
@@ -172,14 +172,14 @@
         "options": {}
       },
       "position": [
-        432,
-        80
+        -640,
+        224
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "c90f9cb5-1461-4f66-8af7-1211d0f5b08d",
+      "id": "b44ccfd1-0605-4f93-9cb8-d5f73efe7b3a",
       "name": "Обработка текста",
       "parameters": {
         "options": {},
@@ -187,14 +187,14 @@
         "text": "=Обработай текст, оставив только всю информацию а код убери, пиши только текст без всяких \"информация из текста (без кода):\" {{ $json.body.storage.value }}"
       },
       "position": [
-        432,
-        -176
+        -640,
+        -48
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
     },
     {
-      "id": "829526f1-7822-41c2-ad58-5ca8164864f8",
+      "id": "b9fb844c-99b6-485b-9aa1-36f031b586c4",
       "name": "AI Agent",
       "parameters": {
         "options": {
@@ -204,8 +204,8 @@
         "text": "Напиши промт для imagen4."
       },
       "position": [
-        720,
-        -176
+        -352,
+        -48
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -217,7 +217,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "1777d400-85ab-4c95-add9-9e5845a0b002",
+      "id": "456615fd-4ddd-43f1-bf7c-85596c10aba7",
       "name": "OpenAI Chat Model1",
       "parameters": {
         "model": {
@@ -229,14 +229,14 @@
         "options": {}
       },
       "position": [
-        720,
-        80
+        -352,
+        224
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "a12c189b-6701-47b2-ab95-ef752534b78d",
+      "id": "9782cd8d-a6e5-487e-9987-1bee4b942856",
       "name": "Webhook",
       "parameters": {
         "httpMethod": "POST",
@@ -244,8 +244,8 @@
         "path": "confluence/prompt/hook"
       },
       "position": [
-        -176,
-        -160
+        -1248,
+        -32
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -303,6 +303,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-09-18T06:36:07.000Z",
-  "versionId": "00c4f2c7-e7b3-4b95-9205-f6bcd1f48120"
+  "updatedAt": "2025-10-15T09:43:27.000Z",
+  "versionId": "e6b54f48-33fd-494d-b50d-5ba46dfa7ee2"
 }
