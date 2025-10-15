@@ -60,8 +60,7 @@
             "node": "Split GPT",
             "type": "main"
           }
-        ],
-        []
+        ]
       ]
     },
     "Append row in sheet": {
@@ -913,11 +912,6 @@
         ]
       ]
     },
-    "Send \"...\"1": {
-      "main": [
-        []
-      ]
-    },
     "Send \"Approve\"": {
       "main": [
         [
@@ -968,12 +962,6 @@
             "type": "main"
           }
         ]
-      ]
-    },
-    "Split GPT": {
-      "main": [
-        [],
-        []
       ]
     },
     "Switch": {
@@ -1184,7 +1172,7 @@
   "name": "LW Art Assistant",
   "nodes": [
     {
-      "id": "ae24982b-234d-4833-aeb5-c8ddcddb1a52",
+      "id": "8aa3a6f4-8136-4391-b549-ed74df3b831c",
       "name": "If8",
       "parameters": {
         "conditions": {
@@ -1221,15 +1209,15 @@
         "options": {}
       },
       "position": [
-        -448,
-        1136
+        -4560,
+        1840
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
     },
     {
       "disabled": true,
-      "id": "7d7619fa-5f3e-4f35-869f-eba1f7b8479d",
+      "id": "3c62ce96-6f4f-4b4b-ae5e-668247a2901c",
       "name": "AI Agent",
       "parameters": {
         "options": {
@@ -1239,14 +1227,14 @@
         "text": "=Проанализируй предоставленные данные и сформируй готовое ТЗ в формате Telegram MarkdownV2.\n\nВХОДНЫЕ ДАННЫЕ:\nПодпись к изображению: {{ $json.message.caption }}\nТекстовый запрос: {{ $json.message.text }}\n\nЭТАП 1: АНАЛИЗ ТИПА ОБЪЕКТА\n\nПроанализируй весь текст пользователя (подпись к изображению + текстовый запрос) на наличие типа объекта:\n\nКЛЮЧЕВЫЕ СЛОВА:\n• ПЕРСОНАЖ: персонаж, герой, человек, робот, монстр, воин, маг, рыцарь, NPC, характер, существо, солдат, боец, житель, враг, союзник\n• ИКОНКА: иконка, икона, значок, символ, кнопка, интерфейс, UI, предмет, ресурс, элемент интерфейса, игровой предмет\n• ЗДАНИЕ: здание, дом, башня, строение, архитектура, постройка, сооружение, крепость, завод, фабрика, замок, храм, магазин\n• ПРОПС: пропс, объект, декорация, мебель, оружие, инструмент, транспорт, предмет окружения, декор, аксессуар, механизм\n• FLAT ИКОНКА: плоская иконка, 2D иконка, комикс иконка, силуэтная иконка\n\nПРАВИЛО ОПРЕДЕЛЕНИЯ:\n- Если найдено ЛЮБОЕ ключевое слово → переходи к ЭТАПУ 2\n- Если ключевых слов НЕТ, но в контексте есть ранее созданное ТЗ → используй тип из предыдущего ТЗ и переходи к ЭТАПУ 2\n- Если ключевых слов НЕТ, ответь только: \"⚠️ Загрузите изображение ЕЩЁ РАЗ указав ТИП ОБЪЕКТА: персонаж/иконка/здание/пропс/flat иконка\"\n\nЭТАП 2: СОСТАВЛЕНИЕ ТЗ\n\nОБЩИЕ ТРЕБОВАНИЯ:\n1. Пиши только на русском языке.\n2. Формат разделов: каждый подпункт начинается с ● (круглый маркер).\n3. Не используй фразы: \"На изображении\", \"Видно\", \"Согласно запросу\", \"Добавить\".\n4. Интегрируй правки пользователя естественно в описание.\n5. Весь визуальный и функциональный разбор размещай ТОЛЬКО в разделе \"Описание и адаптация\", включая специфику типа. Не делай лишних блоков и не дублируй информацию.\n\nТРЕБОВАНИЯ К НАЗВАНИЮ:\n- Название должно быть функциональным, креативным и уникальным (но не шаблонным), ясно раскрывать смысл объекта, его функцию, назначение или особенности.\n- Для персонажа — индивидуальные черты, класс, имя или прозвище.\n- Для иконки, flat иконки или пропса — функциональность, специфику, игру слов, образ.\n- Не используй общие или абстрактные названия.\n\nОБЩАЯ СТИЛИСТИКА ПРОЕКТА (контекст для генерации):\nПроект строится на ярком визуальном контрасте между технологической базой игрока (порядок, прогресс: чистые формы, неоновые акценты, стекло, металл, энергия, голограммы, функциональная и симметричная архитектура) и постапокалиптическим миром (разрушенный техно-ландшафт, обломки, глухие серо-бурые цвета с редкими вспышками сбоящего неона). Основной художественный приём — столкновение утопии и антиутопии. Стиль: смешение семи-реализма и стилизованной казуальности, с упором на 3D-отображение объектов и персонажей. Цветовая палитра: сочная и контрастная, доминируют яркие неоновые акценты (бирюзовый, розовый, фиолетовый, лаймовый) на тёмных фонах и металлических материалах.\n\nСПЕЦИФИКА ПО ТИПАМ В \"ОПИСАНИЕ И АДАПТАЦИЯ\":\n- Для персонажа:\n    ● Жанр: стилизованный 3D в духе hero\\-shooter'ов\\. Вдохновения: Fortnite (sci\\-fi скины), Valorant, Hero Hunters, T3 Arena, Overwatch (светящиеся элементы), Cyber Hunter\\. Таргет: mid\\-core и core аудитория\\.\n    ● Пропорции и форма: Мужчины — героические пропорции, крупные плечи, массивные руки\\. Женщины — утрированные формы, акцент на талию, бедра, длинные ноги\\. Лицо — читаемая мимика, выразительные черты, частые элементы sci\\-fi (импланты, линзы, светящиеся глаза)\\.\n    ● Цвет и материалы: Цвет насыщенный, контрастный\\. Неоновые акценты: бирюза, розовый, фиолетовый, лаймовый, оранжевый\\. Активное применение светящихся элементов (glow) на броне, глазах, гаджетах\\. Материалы: глянцевый пластик, полированный металл, синтетика, хайтек-ткани\\. Детализация высокоуровневая, но контролируемая\\.\n    ● Дизайн костюма: Асимметрия — одна часть тела может быть с протезом, усиленной броней, дополнительным устройством\\. Модульность — визуально персонажи читаются как сборка по функциям (танк, разведка, инженер, support)\\. Форма \\= Функция — визуально видно, кто есть кто\\.\n    ● Характеристики персонажа: (возраст, пол, особенности характера)\n\n- Для здания:\n    ● Форма и композиция: Изометрическая сетка 2:1 обязательна\\. Все здания чётко вписаны в кратные модули: 1×1, 2×2, 3×3\\. Основание — всегда есть чёткая платформа или база, создающая визуальный фундамент\\. Формы: кубы, шестиугольники, цилиндры, обтекаемые капсулы\\. Верхушки зданий разнообразные — с элементами антенн, стеклянных куполов, турелей\\. Детализация средняя\\. Главное — читаемость конструкции, затем — мелкие элементы: экраны, панели, трубы, светящиеся сегменты\\. Иерархия размеров: основные здания крупнее, окружение — вторично\\. Например, генератор ≫ мусорка\\.\n    ● Цвет и материалы: Палитра включает бирюзовый / голубой неон для энергии / границ, тёмно\\-серый / графит / синий для корпусов зданий, белый / светло\\-серый для медицинских зданий, жёлто\\-оранжевый для энергомодулей, фиолетовый и лаймово\\-зелёный для акцентов\\. Материалы: матовые техно\\-поверхности: металл, стекло, композиты\\. Без бликов, отражений, грязи или натуралистичной текстуры\\. Вся яркость идёт от Glow\\-элементов, встроенных в стены и интерфейсы\\.\n    ● Свет и стиль: Освещение: глобальное, мягкое\\. Без ярких источников света — вся выразительность за счёт неоновых линий и экранов\\. Glow: используется в виде полос, прожекторов, голограмм, интерфейсов\\. Он не заливает всё изображение, а подчеркивает структуру\\.\n    ● Ключевые элементы стиля: Модульность: здания воспринимаются как части одной логики — их можно комбинировать в рабочие цепочки\\. Подсветка встроена в грани, швы, панели\\. Уникальные верхушки — каждый модуль легко узнаваем с высоты\\. Нет грязи: даже постапокалипсис здесь упорядочен, инженерный\\.\n    ● Подача и характер: Каждое здание имеет свою функцию, которая считывается визуально\\. Например: Энергетический блок — пульсирующее ядро в центре корпуса; Медицинская станция — белые глянцевые поверхности, интерфейсные мониторы; Командный центр — крупный купол, антенны, световой купол\\. Вид сверху в изометрии должен обеспечивать хорошую читаемость и восприятие масштаба\\. Форма \\= функция\\. Игрок с одного взгляда понимает назначение постройки\\.\n    ● Архитектурные особенности: (функциональные зоны, стилистические элементы)\n\n- Для пропса:\n    ● Функциональные особенности: (назначение, способ использования)\n\n- Для иконки:\n    ● Форма: Объекты построены из чистых геометрических примитивов (кубы, прямоугольники, скосы, фаски)\\. Присутствует аккуратная детализация: замки, выемки, подсветка, микрослоты, маркировка — всё при этом не перегружает форму\\. Все элементы читаются как \"сборные модули\", будто сделаны на 3D-принтере — с гладкими соединениями и аккуратными гранями\\.\n    ● Цвет и материалы: Используются насыщенные, матовые материалы с выразительными градиентами\\. Преобладают контрастные палитры: жёлтый\\+голубой, фиолетовый\\+синий, зелёный\\+пурпурный\\. Светящиеся элементы (glow) встроены в корпус: подсветка логотипов, вставки, швы, кнопки\\. Glow цвета: преимущественно яркие оттенки синего, лазурного, розового и салатового\\.\n    ● Обводка: Обязательная чёрная контурная обводка вокруг объекта\\. Толщина: 2–3 px в пропорции к 128–256 px размеру иконки\\. Стиль: чистая, равномерная, без рваности (в отличие от 2D-иконок)\\. Обводка отделяет объект от фона, делает его \"вырезанным\" и при этом добавляет ощущение выразительности\\.\n    ● Свет и тени: Освещение мягкое, равномерное, без агрессивных бликов\\. Используется легкий ambient occlusion, который помогает отделить детали и придаёт ощущение глубины\\. Основные светотени направлены фронтально или сверху, что хорошо сочетается с UI\\-сетапом\\.\n\n- Для flat иконки:\n    ● Форма: Объекты нарисованы в плоском силуэтном стиле, без объёма и рендеровки\\. Используются простые формы, легко узнаваемые даже при размере 32–64 px: круги, квадраты, стрелки, символы\\. Пропорции и детали утрированы для лучшей читаемости, особенно в интерфейсе\\. Часто используются \"рваные\" или неровные линии, стилизованные под ручной рисунок — это придаёт живость и комиксную экспрессию\\.\n    ● Цвет и материалы: Цветовая гамма предельно ограничена: чёрный и белый\\. Без градиентов, свечений и бликов — полный flat\\-стиль\\. Объекты не имеют текстур — только силуэт и обводка\\.\n    ● Обводка: Обязательная чёрная обводка, часто того же цвета, что и контур объекта\\. Толщина: от 2 px (для 64×64) до 4 px (для 128×128)\\. Стиль: рваный, прерывистый, с \"неровностями\", как будто нарисован тушью\\. Обводка подчёркивает силуэт, усиливает стилизацию под комикс и даёт визуальный ритм\\.\n    ● Свет и тени: Свет отсутствует — flat\\-дизайн\\. Иногда используется силуэтная заливка для создания ощущения глубины (например, небольшая \"тень\" на внутренней форме), но всегда чёрно\\-белыми средствами\\. Силуэт — основной носитель информации, поэтому всё внимание уделяется форме, а не светотени\\.\n\n**ГЛАВНОЕ ПРАВИЛО: ФОРМАТИРОВАНИЕ TELEGRAM MARKDOWNV2**\n*Для полной совместимости с Telegram MarkdownV2, ВЕСЬ итоговый текст должен быть отформатирован с экранированием специальных символов\\. Это значит, что перед каждым таким символом нужно ставить обратный слэш `\\`.*\n*Список символов для экранирования: `_ * [ ] ( ) ~ `` ` > # + - = | { } . !`*\n*Например, фраза \"Важный-пункт #1.\" должна выглядеть так: `Важный\\-пункт \\#1\\.`*\n*Для выделения жирным используй `*текст*`, а не `**текст**`.*\n\nСТРУКТУРА ТЗ (оформляй ТОЛЬКО так):\n\n*Название:* [уникальное, функциональное и осмысленное название]\n\n*Тип объекта:* [Персонаж/Иконка/Здание/Пропс/Flat Иконка]\n*Краткое описание:* [Краткое, емкое описание объекта, его главной идеи или визуального стиля\\.]\n*Роль/назначение:* [Функциональное предназначение объекта в игре\\.]\n\n*Описание и адаптация:*\n● Форма и пропорции: [описание, включая специфику для типа объекта]\n● Композиция: [описание, включая специфику для типа объекта]\n● Материалы и текстуры: [описание, включая специфику для типа объекта]\n● Свет и динамика: [описание, включая специфику для типа объекта]\n● Ключевые детали: [описание, включая специфику для типа объекта]\n[Если применимо, добавь специфический абзац из \"СПЕЦИФИКА ПО ТИПАМ В \"ОПИСАНИЕ И АДАПТАЦИЯ\" здесь, например: \"● Архитектурные особенности: [описание]\"]\n[Для иконки и flat иконки, добавь после \"Ключевые детали\" или специфического абзаца:]\n● Обводка: [описание обводки для иконки/flat иконки]\n● Общая стилистика проекта: Объект выполнен в стиле смешения семи\\-реализма и стилизованной казуальности с 3D\\-отображением, используя яркие неоновые акценты на тёмных/металлических фонах, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром\\.\n\n*Цветовая палитра:*\n● [Название цвета] \\(\\#HEXCODE\\) используется для [описание элемента]\\.\n(Перечисли основные цвета, используемые в объекте, с их HEX-кодами и указанием, где они применяются\\. Генерируй их на основе изображения/запроса и специфики типа объекта\\.)\n\nВАЖНО:\n- Не используй списки, кроме круглых маркеров (●)\\!\n- Структура всегда: Название — Тип объекта — Краткое описание — Роль/назначение — Описание и адаптация (абзац с ● для подпунктов) — Цветовая палитра (единый блок, каждый цвет — ●)\\.\n- Помни про обязательное экранирование ВСЕХ специальных символов (`.`, `-`, `(`, `)`, `!`, `+` и т\\.д\\.)\\!\n- Тип объекта всегда должен быть с заглавной буквы (Персонаж/Иконка/Здание/Пропс/Flat Иконка). "
       },
       "position": [
-        -432,
-        1264
+        -4544,
+        1968
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
     },
     {
-      "id": "ab1ddd91-b04d-4b1c-8edf-ea0cc94d48eb",
+      "id": "43b88eef-d328-4763-a22b-1f3f68b85e19",
       "name": "Switch",
       "parameters": {
         "options": {},
@@ -1380,14 +1368,14 @@
         }
       },
       "position": [
-        -784,
-        1296
+        -4896,
+        2000
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "3395323b-0139-49cb-8f39-d05b842a6845",
+      "id": "9bdfe68b-617b-4621-8e02-3f93693d38fc",
       "name": "If1",
       "parameters": {
         "conditions": {
@@ -1424,8 +1412,8 @@
         "options": {}
       },
       "position": [
-        -784,
-        1632
+        -4896,
+        2336
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1437,7 +1425,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "b78c1983-a748-45c9-aa35-c023f8e904d9",
+      "id": "c370924e-19ff-4880-9749-6bfce55293c3",
       "maxTries": 5,
       "name": "Send \"...\"",
       "parameters": {
@@ -1448,8 +1436,8 @@
         "text": "=..."
       },
       "position": [
-        -32,
-        1408
+        -4144,
+        2112
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1464,7 +1452,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "ec29e652-43bf-492a-9da8-ef2c68205da7",
+      "id": "5dc84abc-586c-43c7-a90e-062f00ec2cb5",
       "maxTries": 5,
       "name": "Send TT",
       "onError": "continueErrorOutput",
@@ -1478,8 +1466,8 @@
         "text": "={{ $json.output }}"
       },
       "position": [
-        208,
-        1312
+        -3904,
+        2016
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1494,7 +1482,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "5daebba3-0f66-4f06-bc90-f097652a24c9",
+      "id": "e3d0bb57-4494-47b7-8210-bfaaea6e63d7",
       "name": "Google Gemini Chat Model",
       "parameters": {
         "options": {
@@ -1502,8 +1490,8 @@
         }
       },
       "position": [
-        -448,
-        1392
+        -4560,
+        2096
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1515,7 +1503,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "c18e299f-d457-4529-92cd-88a8272bb78b",
+      "id": "978fc344-f36a-4c0d-a670-fa5e7035e0f4",
       "name": "Send \"Ready\"",
       "parameters": {
         "additionalFields": {
@@ -1525,8 +1513,8 @@
         "text": "Готов к формированию ТЗ!"
       },
       "position": [
-        -512,
-        1728
+        -4624,
+        2432
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1539,7 +1527,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "4252853b-4d50-4b4d-b406-41c2d58e8ba9",
+      "id": "88c16cef-5815-4f07-bd78-f8bf3e7b49dc",
       "name": "Send \"Type\"",
       "parameters": {
         "additionalFields": {
@@ -1549,8 +1537,8 @@
         "text": "⚠️ Загрузите изображение ЕЩЁ РАЗ указав ТИП ОБЪЕКТА: персонаж/иконка/здание/пропс"
       },
       "position": [
-        -512,
-        1856
+        -4624,
+        2560
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1563,7 +1551,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "2cacceb2-9ff3-4b34-ab10-9d0fae686cad",
+      "id": "21a1559f-e688-431f-ad73-687c3e7da0e5",
       "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {
@@ -1576,43 +1564,43 @@
         ]
       },
       "position": [
-        -2144,
-        1344
+        -6256,
+        2048
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "webhookId": "c81e401f-8eb5-4553-ae2c-2de9ccc6d5c5"
     },
     {
-      "id": "8be71150-146b-4947-b861-2e33ea7dec84",
+      "id": "28725555-6fc8-4ac9-b470-526f4e2d765a",
       "name": "Simple Memory",
       "parameters": {
         "sessionIdType": "customKey",
         "sessionKey": "={{ $('Telegram Trigger').item.json.message.from.id }}"
       },
       "position": [
-        -336,
-        1392
+        -4448,
+        2096
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
     },
     {
-      "id": "89c8e4d5-d60a-4577-9ff8-b7601097f006",
+      "id": "2ad7d745-a32e-4401-b9c7-be321feb142a",
       "name": "Extract from File",
       "parameters": {
         "operation": "binaryToPropery",
         "options": {}
       },
       "position": [
-        -448,
-        944
+        -4560,
+        1648
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1
     },
     {
-      "id": "ca614e9e-8d5d-4507-b9a3-b54396f5e9cc",
+      "id": "ce5e56d2-4cf3-41e3-8554-09ee0141ad85",
       "name": "Switch1",
       "parameters": {
         "options": {},
@@ -1814,14 +1802,14 @@
         }
       },
       "position": [
-        1056,
-        848
+        -3056,
+        1552
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
-      "id": "c2d103b0-3d42-4e07-8ec4-bf601d44ce98",
+      "id": "d3c270a3-bb97-4e67-b4d2-be1c94be3f95",
       "name": "Output",
       "parameters": {
         "assignments": {
@@ -1855,8 +1843,8 @@
         "options": {}
       },
       "position": [
-        192,
-        944
+        -3920,
+        1648
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1868,7 +1856,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "c26aa667-cda6-4117-af66-6d090325cff2",
+      "id": "9efadc00-fc4e-4edf-9d91-c10e2507135f",
       "maxTries": 5,
       "name": "Send \"PDF\"2",
       "onError": "continueRegularOutput",
@@ -1881,8 +1869,8 @@
         "text": "=⚡️ Анализ и составление ТЗ для файла:\n\n➡️ *{{ $('Telegram Trigger').item.json.message.document.file_name }}*"
       },
       "position": [
-        -448,
-        768
+        -4560,
+        1472
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1891,18 +1879,18 @@
       "webhookId": "08cc0e07-f5c6-4b69-8f4b-89acde2b24ff"
     },
     {
-      "id": "9c78c1fb-c7cf-41e8-8e95-6d2b66a5c44d",
+      "id": "4008b227-72fa-46a2-a8ce-59e8fd96eb52",
       "name": "Merge",
       "parameters": {},
       "position": [
-        1648,
-        160
+        -2464,
+        864
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "932fe26d-3a6f-4182-99c4-08722ced5cfd",
+      "id": "3f2d4171-e97b-4c86-8f2f-2e8979e055e0",
       "name": "Array Tasks",
       "parameters": {
         "fieldsToAggregate": {
@@ -1915,15 +1903,15 @@
         "options": {}
       },
       "position": [
-        1440,
-        80
+        -2672,
+        784
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "executeOnce": true,
-      "id": "37a9c9a0-3d82-49f3-b9e3-2a43200ac5c5",
+      "id": "f732d8e1-2e96-49ad-9bf5-e04acd6bb653",
       "name": "Array Chat ID",
       "parameters": {
         "fieldsToAggregate": {
@@ -1942,27 +1930,27 @@
         "options": {}
       },
       "position": [
-        1440,
-        240
+        -2672,
+        944
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "8028e99c-dcfb-4bdc-9387-31ccae85f154",
+      "id": "6e0db14f-d6da-4eba-b910-2c90167184b0",
       "name": "Array All",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        160
+        -2288,
+        864
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "d758c748-d6bc-4bf9-bdae-5751454050b7",
+      "id": "4c260ff7-42cb-4beb-9cd3-3c2a7c99c6e6",
       "name": "Icons",
       "parameters": {
         "options": {
@@ -1984,25 +1972,25 @@
         }
       },
       "position": [
-        2032,
-        160
+        -2080,
+        864
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
-      "id": "3d3160ee-69b5-498e-bbe0-2799fbb0d53d",
+      "id": "8d141961-f5d3-4f3b-a68c-e210cd8cd58c",
       "name": "Merge1",
       "parameters": {},
       "position": [
-        1648,
-        1632
+        -2464,
+        2336
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "da1385b5-b35a-4bc2-bbc4-1d8fbe489b08",
+      "id": "a0c7fae2-e65b-4dc8-bfa6-6519cde3cebd",
       "name": "Array Tasks1",
       "parameters": {
         "fieldsToAggregate": {
@@ -2015,21 +2003,21 @@
         "options": {}
       },
       "position": [
-        1440,
-        1552
+        -2672,
+        2256
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "952c21ab-699b-4a59-8b4f-a11a350b0b2b",
+      "id": "986ce7b1-e37b-45ac-842e-26d295d54633",
       "name": "Array All1",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        1632
+        -2288,
+        2336
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2042,7 +2030,7 @@
         }
       },
       "disabled": true,
-      "id": "3ab17c7d-e37d-4cf7-8718-8e357c543ba9",
+      "id": "421f2cb7-6d70-48ab-987a-36593e701ac3",
       "name": "Send \"Approve\"",
       "parameters": {
         "additionalFields": {
@@ -2052,20 +2040,20 @@
         "text": "=🔄 Генерация началась!"
       },
       "position": [
-        -1168,
-        -432
+        -5280,
+        272
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "08cc0e07-f5c6-4b69-8f4b-89acde2b24ff"
     },
     {
-      "id": "366de259-7839-41b5-98f4-f632fe914371",
+      "id": "f0014e9a-531c-403a-9029-5de06afa7a91",
       "name": "Error Trigger",
       "parameters": {},
       "position": [
-        -1680,
-        2192
+        -5792,
+        2896
       ],
       "type": "n8n-nodes-base.errorTrigger",
       "typeVersion": 1
@@ -2078,7 +2066,7 @@
         }
       },
       "executeOnce": true,
-      "id": "1f90c7f0-abda-4256-b1e3-6466707b2e38",
+      "id": "83c4411a-2d75-4d1e-bad7-65d4523d3b7e",
       "name": "Error",
       "parameters": {
         "additionalFields": {
@@ -2088,8 +2076,8 @@
         "text": "⚠️ Ошибка в tg боте \"LW Art Assistant\""
       },
       "position": [
-        -1488,
-        2192
+        -5600,
+        2896
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -2097,7 +2085,7 @@
     },
     {
       "disabled": true,
-      "id": "ec10814e-8408-4fc3-be7d-6ddb53e5ea03",
+      "id": "912152ad-6465-40bf-a318-8b94fa9d0bad",
       "name": "Output1",
       "parameters": {
         "assignments": {
@@ -2125,15 +2113,15 @@
         "options": {}
       },
       "position": [
-        -912,
-        -432
+        -5024,
+        272
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
       "disabled": true,
-      "id": "f234cfde-3307-4cda-85cc-4f3d37849da0",
+      "id": "7d0f48b9-6ef4-430b-b0d9-2211d8054f31",
       "name": "Switch2",
       "parameters": {
         "options": {},
@@ -2312,15 +2300,15 @@
         }
       },
       "position": [
-        -576,
-        -512
+        -4688,
+        192
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
       "disabled": true,
-      "id": "260b91de-6f4c-4e1b-8233-d104a5413245",
+      "id": "27600402-66a6-4452-b5a7-c75b2456a479",
       "name": "Aggregate",
       "parameters": {
         "fieldsToAggregate": {
@@ -2333,29 +2321,29 @@
         "options": {}
       },
       "position": [
-        -224,
-        -448
+        -4336,
+        256
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "a25e739c-8f64-4d22-bcca-c1dc76a10280",
+      "id": "551fb1dd-e544-442c-bda0-867e926eec3f",
       "name": "Code",
       "parameters": {
         "jsCode": "// Получаем массив данных из поля task_content\nconst taskContentArray = $input.first().json.task_content;\n\n// Проверяем, что данные получены и это массив\nif (!taskContentArray || !Array.isArray(taskContentArray)) {\n  console.log('Поле task_content не найдено или не является массивом');\n  return [{\n    Tasks: ''\n  }];\n}\n\nconsole.log(`Найдено элементов в массиве: ${taskContentArray.length}`);\n\n// Объединяем все элементы массива в одну строку с разделителем ---\nconst combinedTasks = taskContentArray.join('\\n---\\n');\n\nconsole.log(`Длина объединенной строки: ${combinedTasks.length}`);\n\nreturn [{\n  Tasks: combinedTasks\n}];"
       },
       "position": [
-        16,
-        -448
+        -4096,
+        256
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
       "disabled": true,
-      "id": "7cd6d066-df50-45e7-8446-9366c12e0207",
+      "id": "65d5de26-66ba-41db-a070-6a0f65f447bb",
       "name": "Транспорт1",
       "parameters": {
         "options": {
@@ -2377,27 +2365,27 @@
         }
       },
       "position": [
-        384,
-        -448
+        -3728,
+        256
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
       "disabled": true,
-      "id": "4247773f-d1c2-4a3b-a960-ccf49019fb95",
+      "id": "9f38d640-6977-41d7-9ff2-9eda01e9ef7c",
       "name": "Merge2",
       "parameters": {},
       "position": [
-        16,
-        -816
+        -4096,
+        -128
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
       "disabled": true,
-      "id": "ceed8ecb-84cb-4f10-810d-b644c9043a97",
+      "id": "71bf0b59-7055-4fb0-8b5e-60d088883aea",
       "name": "Array Tasks2",
       "parameters": {
         "fieldsToAggregate": {
@@ -2410,8 +2398,8 @@
         "options": {}
       },
       "position": [
-        -224,
-        -896
+        -4336,
+        -208
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2419,7 +2407,7 @@
     {
       "disabled": true,
       "executeOnce": true,
-      "id": "18534dc1-70b9-416d-9510-053990b5f187",
+      "id": "b5945a11-6b14-4033-b61e-93514bca4b2d",
       "name": "Array Chat ID2",
       "parameters": {
         "fieldsToAggregate": {
@@ -2432,41 +2420,41 @@
         "options": {}
       },
       "position": [
-        -224,
-        -736
+        -4336,
+        -48
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "162b85ab-d870-4d70-a851-ed8e13647c9c",
+      "id": "a74eb3ac-88d6-497d-9960-9911bed3093c",
       "name": "Array All2",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds\n}];"
       },
       "position": [
-        192,
-        -816
+        -3920,
+        -128
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
       "disabled": true,
-      "id": "d9fd68ef-dd43-41c0-9464-31c5931cb04c",
+      "id": "77465ea9-1baf-4d76-ab2f-9a2ebe43d871",
       "name": "Merge3",
       "parameters": {},
       "position": [
-        0,
-        -144
+        -4112,
+        560
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
       "disabled": true,
-      "id": "2e54f787-7d5d-4339-be5f-d321a6912c1a",
+      "id": "a75c32d9-f983-4967-b56e-0e074dd702a5",
       "name": "Array Tasks3",
       "parameters": {
         "fieldsToAggregate": {
@@ -2479,8 +2467,8 @@
         "options": {}
       },
       "position": [
-        -224,
-        -224
+        -4336,
+        480
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2488,7 +2476,7 @@
     {
       "disabled": true,
       "executeOnce": true,
-      "id": "49527be4-d9dd-420e-a34a-0d424c9bbf4d",
+      "id": "09351add-b6ef-482c-9388-38a7829f5ccc",
       "name": "Array Chat ID3",
       "parameters": {
         "fieldsToAggregate": {
@@ -2501,29 +2489,29 @@
         "options": {}
       },
       "position": [
-        -224,
-        -64
+        -4336,
+        640
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "disabled": true,
-      "id": "f82e0dbf-37db-489c-8df2-365e76f5aa1e",
+      "id": "1bda41c2-9254-47db-881c-70d6743066ca",
       "name": "Array All3",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds\n}];"
       },
       "position": [
-        176,
-        -144
+        -3936,
+        560
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
       "disabled": true,
-      "id": "9f2c7b59-1b2a-4559-a91a-256f4c968fdf",
+      "id": "0798807b-87cb-4525-9a8e-6ecbd957419f",
       "name": "Buildings/Props1",
       "parameters": {
         "options": {
@@ -2545,15 +2533,15 @@
         }
       },
       "position": [
-        384,
-        -144
+        -3728,
+        560
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
       "disabled": true,
-      "id": "54ca0a04-fb01-426c-a93b-5823db0a77e3",
+      "id": "acc2e9e6-421f-4891-bfc3-00eb732c4caa",
       "name": "Icons Solo",
       "parameters": {
         "options": {
@@ -2575,25 +2563,25 @@
         }
       },
       "position": [
-        384,
-        -816
+        -3728,
+        -128
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
-      "id": "19dd99ac-f76b-4502-b598-e5c5fb845204",
+      "id": "8b2b869d-96b4-43d7-879c-9462647ca6f4",
       "name": "Merge4",
       "parameters": {},
       "position": [
-        1648,
-        896
+        -2464,
+        1600
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "c9463c1b-2186-4a9a-a493-a7e630a07fb3",
+      "id": "5694ec9a-c7ea-424c-be22-70d12c2da594",
       "name": "Array Tasks4",
       "parameters": {
         "fieldsToAggregate": {
@@ -2606,38 +2594,38 @@
         "options": {}
       },
       "position": [
-        1440,
-        816
+        -2672,
+        1520
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "2c6388c4-86a7-41d0-ae0b-2b1f8bc655d9",
+      "id": "a91133d0-21bd-4f56-9e03-26d3e3ee3790",
       "name": "Array All4",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        896
+        -2288,
+        1600
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "03fa016c-0bee-406d-9512-91f07fe08c14",
+      "id": "03035086-a0ca-4998-906a-f1d03515fdee",
       "name": "Merge5",
       "parameters": {},
       "position": [
-        1648,
-        1264
+        -2464,
+        1968
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "3f183775-4a37-44f0-930e-3d6315520176",
+      "id": "6e1b903e-355a-45d3-a431-a5851600c27f",
       "name": "Array Tasks5",
       "parameters": {
         "fieldsToAggregate": {
@@ -2650,27 +2638,27 @@
         "options": {}
       },
       "position": [
-        1440,
-        1184
+        -2672,
+        1888
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "cf3df1eb-22e7-4bdb-bea9-de571e27310a",
+      "id": "02ae2b91-8d4b-43ea-aed7-233d757051df",
       "name": "Array All5",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        1264
+        -2288,
+        1968
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "55542707-09bd-4fa9-b946-461d4fe0fc23",
+      "id": "00489d7c-f9ab-4838-a20a-ffb833552e03",
       "name": "Vehicle",
       "parameters": {
         "options": {
@@ -2692,14 +2680,14 @@
         }
       },
       "position": [
-        2032,
-        1264
+        -2080,
+        1968
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
-      "id": "69cf9dbc-dc68-4a80-9d23-69a478a35bf2",
+      "id": "bc149ef2-6440-47fb-a43f-31bdbed7e6f9",
       "name": "Character",
       "parameters": {
         "options": {
@@ -2721,8 +2709,8 @@
         }
       },
       "position": [
-        2032,
-        896
+        -2080,
+        1600
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -2734,7 +2722,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "ad99fb12-ff10-4d7e-82c4-3eeef635e0cf",
+      "id": "fa60860e-6f7e-4f5d-b04a-0423a1ba5423",
       "maxTries": 5,
       "name": "Send TT1",
       "parameters": {
@@ -2747,8 +2735,8 @@
         "text": "={{ $json.output }}"
       },
       "position": [
-        416,
-        1408
+        -3696,
+        2112
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2757,18 +2745,18 @@
       "webhookId": "21b43d6a-8d3b-426e-aa7c-f196c4f439db"
     },
     {
-      "id": "033a5ed5-0fb5-4f7d-899a-4955885c3657",
+      "id": "c69731c9-d533-45aa-9b54-efcc1761aafb",
       "name": "Merge6",
       "parameters": {},
       "position": [
-        1648,
-        2016
+        -2464,
+        2720
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "5390bed0-b567-4923-9239-47be9a90c4b2",
+      "id": "a47b1eb9-b09c-4ce5-9bdc-cf706b451e2d",
       "name": "Array Tasks6",
       "parameters": {
         "fieldsToAggregate": {
@@ -2781,27 +2769,27 @@
         "options": {}
       },
       "position": [
-        1440,
-        1936
+        -2672,
+        2640
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "ff556422-ca37-4645-89d1-78430474f0c1",
+      "id": "eedc92a4-74da-4df2-a4b3-7eda6297da4b",
       "name": "Array All6",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        2016
+        -2288,
+        2720
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "044a12eb-6249-454d-929a-4974f814e34c",
+      "id": "6cb7b208-7e94-46de-84d3-7324f60c054e",
       "name": "Enemies",
       "parameters": {
         "options": {
@@ -2823,8 +2811,8 @@
         }
       },
       "position": [
-        2032,
-        2016
+        -2080,
+        2720
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -2836,7 +2824,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "f602f5c5-435d-4090-b166-2352d83cc359",
+      "id": "172be9d0-a8af-477f-80d5-aa92126535b3",
       "maxTries": 5,
       "name": "Send \"...\"1",
       "parameters": {
@@ -2847,8 +2835,8 @@
         "text": "=📛 Ошибка в стуктуре документа, необходимо загружать по одному файлу"
       },
       "position": [
-        192,
-        1136
+        -3920,
+        1840
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2858,7 +2846,7 @@
     },
     {
       "disabled": true,
-      "id": "7226605c-cdac-4f52-9c92-f73077e426fc",
+      "id": "33c01df0-a184-4f71-99ea-af59e4fd7fa9",
       "name": "If",
       "parameters": {
         "conditions": {
@@ -2964,8 +2952,8 @@
         "options": {}
       },
       "position": [
-        -1584,
-        1344
+        -5696,
+        2048
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2978,7 +2966,7 @@
         }
       },
       "disabled": true,
-      "id": "fdb5e3db-1082-4313-922d-21b65dbd7902",
+      "id": "11fdaff5-d1e2-4fc3-a93b-00da30d3de23",
       "name": "Append row in sheet",
       "parameters": {
         "columns": {
@@ -3042,8 +3030,8 @@
         }
       },
       "position": [
-        -1728,
-        1344
+        -5840,
+        2048
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
@@ -3057,7 +3045,7 @@
         }
       },
       "disabled": true,
-      "id": "19dddea9-c61e-459f-abea-ce2b3c8c9dc9",
+      "id": "b6e304d1-a7c5-4384-9421-4a7d0d3cf129",
       "name": "Get row(s) in sheet",
       "parameters": {
         "documentId": {
@@ -3085,15 +3073,15 @@
         }
       },
       "position": [
-        -1984,
-        1344
+        -6096,
+        2048
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.6
     },
     {
       "disabled": true,
-      "id": "121293fc-eea0-4ff5-b668-2e11fd6f7f2c",
+      "id": "f694bf8b-99da-4707-b1ec-d4f318258442",
       "name": "If2",
       "parameters": {
         "conditions": {
@@ -3121,8 +3109,8 @@
         "options": {}
       },
       "position": [
-        -1856,
-        1344
+        -5968,
+        2048
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -3135,7 +3123,7 @@
         }
       },
       "disabled": true,
-      "id": "7069d8fd-9ac5-40a9-aced-fdc2aabb7905",
+      "id": "9ff12b96-a37a-4e8a-b61f-6244c705e8b8",
       "name": "Get a file",
       "parameters": {
         "additionalFields": {},
@@ -3143,8 +3131,8 @@
         "resource": "file"
       },
       "position": [
-        -992,
-        1344
+        -5104,
+        2048
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -3153,12 +3141,12 @@
     {
       "disabled": true,
       "executeOnce": true,
-      "id": "fd49ae34-05d6-461c-b8cb-bae4afd4a07c",
+      "id": "6696b457-a760-4015-9b61-8357283ed331",
       "name": "No Operation, do nothing",
       "parameters": {},
       "position": [
-        -1248,
-        1344
+        -5360,
+        2048
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -3171,7 +3159,7 @@
         }
       },
       "disabled": true,
-      "id": "d0307055-0c45-42a5-bdb3-c5026689dfc9",
+      "id": "099f343f-cc48-4ac0-9b46-7d70a9b7e7eb",
       "maxTries": 5,
       "name": "Send TT2",
       "parameters": {
@@ -3184,8 +3172,8 @@
         "text": "=Нет доступа"
       },
       "position": [
-        -1248,
-        1536
+        -5360,
+        2240
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3195,7 +3183,7 @@
     },
     {
       "disabled": true,
-      "id": "79672f6b-d7f6-418b-add2-2f42a4e620cc",
+      "id": "bf12e17c-f881-4081-b8a8-d7e22dda5a1d",
       "name": "Sticky Note",
       "parameters": {
         "color": 3,
@@ -3204,14 +3192,14 @@
         "width": 224
       },
       "position": [
-        -1888,
-        1216
+        -6000,
+        1920
       ],
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1
     },
     {
-      "id": "e500f27e-a608-4c3c-a982-deebd6c51bf0",
+      "id": "cd31cc60-5d73-4988-be7a-79f2af3dde8f",
       "name": "Array Tasks7",
       "parameters": {
         "fieldsToAggregate": {
@@ -3224,38 +3212,38 @@
         "options": {}
       },
       "position": [
-        1440,
-        448
+        -2672,
+        1152
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
-      "id": "7cf9ef50-8f9a-438d-a493-08635d4438d6",
+      "id": "76303b77-5157-4188-a684-71ed04b859b9",
       "name": "Merge7",
       "parameters": {},
       "position": [
-        1648,
-        528
+        -2464,
+        1232
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "a5a6d542-c769-489a-b999-ecc1e9ba3867",
+      "id": "b0ff40b6-f1e6-4154-bfd6-f6e5bdecebad",
       "name": "Array All7",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        1824,
-        528
+        -2288,
+        1232
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "ef585dfd-1e1f-4e5f-adf0-5c9f10c65fc0",
+      "id": "9d115895-c8d7-47d7-9a1b-337586ddb43b",
       "name": "Icons1",
       "parameters": {
         "options": {
@@ -3277,15 +3265,15 @@
         }
       },
       "position": [
-        2032,
-        528
+        -2080,
+        1232
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
     },
     {
       "executeOnce": true,
-      "id": "a5beea45-0ea6-43ae-9ac3-a39cb544933e",
+      "id": "881cebbe-304b-431d-9df2-2d438fcaf6f9",
       "name": "Date & Time",
       "parameters": {
         "options": {
@@ -3293,27 +3281,27 @@
         }
       },
       "position": [
-        2032,
-        -16
+        -2080,
+        688
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "bf941102-9c16-4d61-acf2-3f23a8eb54e8",
+      "id": "af2ddf9d-186f-47b7-8cc8-e0ad69056cd3",
       "name": "Formatted Date",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        -16
+        -1904,
+        688
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "5953fcaf-75a9-4f62-9fe9-550c671761b1",
+      "id": "66fa1d48-074e-44ac-9cfc-2e9f6e4ecfd6",
       "name": "Edit Fields",
       "parameters": {
         "assignments": {
@@ -3329,8 +3317,8 @@
         "options": {}
       },
       "position": [
-        2624,
-        -16
+        -1488,
+        688
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3342,7 +3330,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "ebb0ccc6-241d-4985-a987-8db116754aa6",
+      "id": "efd06911-4821-4c23-be93-501cebd49808",
       "maxTries": 5,
       "name": "Technical Task",
       "parameters": {
@@ -3354,8 +3342,8 @@
         "text": "=📃 Созданные ТЗ для иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        -16
+        -1280,
+        688
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3370,7 +3358,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "f666d88c-e621-46f5-955d-f906cba0fe1c",
+      "id": "313c61d4-e6ac-4157-8c9e-4c0ededf0bc4",
       "name": "Create Technical Task",
       "parameters": {
         "content": "={{ $('Array All').item.json.Tasks }}",
@@ -3391,15 +3379,15 @@
         }
       },
       "position": [
-        2400,
-        -16
+        -1712,
+        688
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "executeOnce": true,
-      "id": "deefb3df-4dd5-4c52-a074-8632bed70021",
+      "id": "34315e47-7e2f-486a-a48f-ac0d27fcd354",
       "name": "Date & Time1",
       "parameters": {
         "options": {
@@ -3407,27 +3395,27 @@
         }
       },
       "position": [
-        2032,
-        720
+        -2080,
+        1424
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "1091e7ac-8d14-4eac-b281-70ee2f0c6bbd",
+      "id": "cf15dfda-f94b-418c-9f8b-fdd0ad62116c",
       "name": "Formatted Date1",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        720
+        -1904,
+        1424
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "d7f38827-ca12-4196-8134-1a64a4e0b95f",
+      "id": "2406953f-43a0-4896-8898-98be4e6eb90a",
       "name": "Edit Fields1",
       "parameters": {
         "assignments": {
@@ -3443,8 +3431,8 @@
         "options": {}
       },
       "position": [
-        2608,
-        720
+        -1504,
+        1424
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3456,7 +3444,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "fd2f8b60-8a67-446b-acbf-041e80b9ef21",
+      "id": "d8f28239-c0ee-4b10-8108-34530eb92f36",
       "maxTries": 5,
       "name": "Technical Task1",
       "parameters": {
@@ -3468,8 +3456,8 @@
         "text": "=📃 Созданные ТЗ для Персонажей:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        720
+        -1280,
+        1424
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3484,7 +3472,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "2977d7c2-a97f-4d1f-a963-cb197b62c4e1",
+      "id": "4594ac6e-96f6-4b12-b523-46ea70e29914",
       "name": "Create Technical Task1",
       "parameters": {
         "content": "={{ $('Array All4').item.json.Tasks }}",
@@ -3505,15 +3493,15 @@
         }
       },
       "position": [
-        2400,
-        720
+        -1712,
+        1424
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "executeOnce": true,
-      "id": "7bd71683-bc23-488d-8865-8eab28e0d380",
+      "id": "d9dfb5ee-69f7-4a6b-9cb7-362fb2f14441",
       "name": "Date & Time2",
       "parameters": {
         "options": {
@@ -3521,27 +3509,27 @@
         }
       },
       "position": [
-        2032,
-        352
+        -2080,
+        1056
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "0d9586a7-d1b0-45ea-858a-19a085507070",
+      "id": "357a1ff4-a531-4b0a-9eb8-d74525aa3d75",
       "name": "Formatted Date2",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        352
+        -1904,
+        1056
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "00e5a962-50c2-4446-8207-363353471381",
+      "id": "826619ac-ca65-416f-b25e-ff88917a3e7b",
       "name": "Edit Fields2",
       "parameters": {
         "assignments": {
@@ -3557,8 +3545,8 @@
         "options": {}
       },
       "position": [
-        2608,
-        352
+        -1504,
+        1056
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3570,7 +3558,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "9b259e50-b2d5-46be-9b5d-f0a588db2fa5",
+      "id": "7835a823-6e54-4e0c-8222-685bf50316e8",
       "maxTries": 5,
       "name": "Technical Task2",
       "parameters": {
@@ -3582,8 +3570,8 @@
         "text": "=📃 Созданные ТЗ для Flat иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        352
+        -1280,
+        1056
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3598,7 +3586,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "200bd119-065a-48d8-8a27-6d93ec8bc3a6",
+      "id": "fde910a4-8387-4fbf-a053-7253fe7502f4",
       "name": "Create Technical Task2",
       "parameters": {
         "content": "={{ $('Array All7').item.json.Tasks }}",
@@ -3619,15 +3607,15 @@
         }
       },
       "position": [
-        2400,
-        352
+        -1712,
+        1056
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "executeOnce": true,
-      "id": "806b9819-e51e-4a32-b901-b019456a57e4",
+      "id": "318100e9-5b89-4a88-b765-efc77ac232fc",
       "name": "Date & Time3",
       "parameters": {
         "options": {
@@ -3635,27 +3623,27 @@
         }
       },
       "position": [
-        2032,
-        1088
+        -2080,
+        1792
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "b1830d5b-f540-48e3-9c44-4088e2c05b5f",
+      "id": "9510f445-4e7f-42fb-9284-b27ffcbf309d",
       "name": "Formatted Date3",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        1088
+        -1904,
+        1792
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "1ceaabf3-b81e-4b5c-876a-820158ee7138",
+      "id": "be2c832f-2775-4860-9a98-5c63f62abf4d",
       "name": "Edit Fields3",
       "parameters": {
         "assignments": {
@@ -3671,8 +3659,8 @@
         "options": {}
       },
       "position": [
-        2608,
-        1088
+        -1504,
+        1792
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3684,7 +3672,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "e47abe1b-1331-4bca-8b45-15d19d7f8bcc",
+      "id": "4958e9dc-2220-44f8-96a8-d19e45a606fd",
       "maxTries": 5,
       "name": "Technical Task3",
       "parameters": {
@@ -3696,8 +3684,8 @@
         "text": "=📃 Созданные ТЗ для Транспорта:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        1088
+        -1280,
+        1792
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3712,7 +3700,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "6c0baa67-6194-481a-8aa0-89e67e9c1779",
+      "id": "af2a68f8-5dcb-4e0d-b625-961c20f3632a",
       "name": "Create Technical Task3",
       "parameters": {
         "content": "={{ $('Array All5').item.json.Tasks }}",
@@ -3733,15 +3721,15 @@
         }
       },
       "position": [
-        2400,
-        1088
+        -1712,
+        1792
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "executeOnce": true,
-      "id": "f284da74-254b-4cc9-976b-3faf0ac3019b",
+      "id": "04b131a3-3c6a-4f9b-9813-475f6879ec94",
       "name": "Date & Time4",
       "parameters": {
         "options": {
@@ -3749,27 +3737,27 @@
         }
       },
       "position": [
-        2032,
-        1456
+        -2080,
+        2160
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "767ae689-0e8e-43ca-b658-ee7c548862d6",
+      "id": "162631f0-d7df-4d7e-b283-930c4ae7cd33",
       "name": "Formatted Date4",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        1456
+        -1904,
+        2160
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "55f3e106-46e6-4a46-a664-03a3000a4ebe",
+      "id": "c0c410dc-2d60-4e13-8661-bdb434b98e6b",
       "name": "Edit Fields4",
       "parameters": {
         "assignments": {
@@ -3785,8 +3773,8 @@
         "options": {}
       },
       "position": [
-        2608,
-        1456
+        -1504,
+        2160
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3798,7 +3786,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "913033f3-cfd9-406b-8b28-a5af86257c3b",
+      "id": "ad87224f-20b0-49e4-a5c0-2677ae1eb93a",
       "maxTries": 5,
       "name": "Technical Task4",
       "parameters": {
@@ -3810,8 +3798,8 @@
         "text": "=📃 Созданные ТЗ для Зданий/Пропсов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        1456
+        -1280,
+        2160
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3826,7 +3814,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "7bac8be1-77e9-42d0-9202-aba12a248450",
+      "id": "6c61989c-6cd6-4f60-8879-5a7dbaea1f46",
       "name": "Create Technical Task4",
       "parameters": {
         "content": "={{ $('Array All1').item.json.Tasks }}",
@@ -3847,15 +3835,15 @@
         }
       },
       "position": [
-        2400,
-        1456
+        -1712,
+        2160
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "executeOnce": true,
-      "id": "fe270022-7d41-4477-8cef-632b57af7f77",
+      "id": "0efdb6e1-17fe-4a29-a3c1-aa81f4020d16",
       "name": "Date & Time5",
       "parameters": {
         "options": {
@@ -3863,27 +3851,27 @@
         }
       },
       "position": [
-        2032,
-        1840
+        -2080,
+        2544
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "63ab9937-07b8-49e0-b15c-baca1203f61f",
+      "id": "55f2f291-7864-439b-bac6-81053c4385c6",
       "name": "Formatted Date5",
       "parameters": {
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        2208,
-        1840
+        -1904,
+        2544
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "81102dd4-bd6a-4253-8b53-6ba8700e0238",
+      "id": "44d7fefa-019a-48c7-8dca-83e1d0d321d8",
       "name": "Edit Fields5",
       "parameters": {
         "assignments": {
@@ -3899,8 +3887,8 @@
         "options": {}
       },
       "position": [
-        2608,
-        1840
+        -1504,
+        2544
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -3912,7 +3900,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "fc82d0b7-864a-4636-b1b8-51d13beb2286",
+      "id": "2e441eef-af0f-49c6-82a5-65921f1ee7d6",
       "maxTries": 5,
       "name": "Technical Task5",
       "parameters": {
@@ -3924,8 +3912,8 @@
         "text": "=📃 Созданные ТЗ для Врагов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        2832,
-        1840
+        -1280,
+        2544
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3940,7 +3928,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "fb4f055c-a778-480c-b6d7-cf7cc3a02be6",
+      "id": "5556ef10-c3b0-443b-8633-b88bb2db495b",
       "name": "Create Technical Task5",
       "parameters": {
         "content": "={{ $('Array All6').item.json.Tasks }}",
@@ -3961,14 +3949,14 @@
         }
       },
       "position": [
-        2400,
-        1840
+        -1712,
+        2544
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "251c6945-ed58-40e0-9cdd-93079a322df2",
+      "id": "9ca6046a-1d5f-4628-9f21-1e9632aab806",
       "name": "Buildings/Props",
       "parameters": {
         "options": {
@@ -3990,8 +3978,8 @@
         }
       },
       "position": [
-        2032,
-        1632
+        -2080,
+        2336
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -4003,7 +3991,7 @@
           "name": "@lw_art_assistant_bot"
         }
       },
-      "id": "5d489a7b-679c-445f-99a2-667179de2e56",
+      "id": "45295f8d-ac19-48b1-9c5e-a2dc8480948c",
       "maxTries": 5,
       "name": "Send \"...\"2",
       "parameters": {
@@ -4014,8 +4002,8 @@
         "text": "=📛 {{ $json.error.message }}"
       },
       "position": [
-        -48,
-        1136
+        -4160,
+        1840
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -4025,7 +4013,7 @@
     },
     {
       "executeOnce": true,
-      "id": "23953dae-9654-42dd-bcd9-b5db5ea6c3af",
+      "id": "9e2c7132-099c-458f-bcef-10ac2851c059",
       "name": "Array Chat ID7",
       "parameters": {
         "fieldsToAggregate": {
@@ -4044,15 +4032,15 @@
         "options": {}
       },
       "position": [
-        1440,
-        608
+        -2672,
+        1312
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "executeOnce": true,
-      "id": "7e56ec66-1286-4865-8008-fcf9dc217ba7",
+      "id": "552d41e8-90e9-4b5a-835e-9cf76b32c2a4",
       "name": "Array Chat ID8",
       "parameters": {
         "fieldsToAggregate": {
@@ -4071,15 +4059,15 @@
         "options": {}
       },
       "position": [
-        1440,
-        976
+        -2672,
+        1680
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "executeOnce": true,
-      "id": "fd43974d-e508-4e0f-93ed-bd454881e63e",
+      "id": "f28d692d-a652-42b0-955e-4320639b74f7",
       "name": "Array Chat ID9",
       "parameters": {
         "fieldsToAggregate": {
@@ -4098,15 +4086,15 @@
         "options": {}
       },
       "position": [
-        1440,
-        1344
+        -2672,
+        2048
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "executeOnce": true,
-      "id": "5cf9684c-bbcb-403d-800d-96fb68575367",
+      "id": "e8acb2b8-7e68-43f9-87bd-6190e0ea329c",
       "name": "Array Chat ID10",
       "parameters": {
         "fieldsToAggregate": {
@@ -4125,15 +4113,15 @@
         "options": {}
       },
       "position": [
-        1440,
-        1712
+        -2672,
+        2416
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
     },
     {
       "executeOnce": true,
-      "id": "aec5e1b5-c5ab-4a6d-bd27-1efc17dd28f2",
+      "id": "e807e0a9-f82b-42c6-9d69-caf08abdc963",
       "name": "Array Chat ID11",
       "parameters": {
         "fieldsToAggregate": {
@@ -4152,8 +4140,8 @@
         "options": {}
       },
       "position": [
-        1440,
-        2096
+        -2672,
+        2800
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -4166,7 +4154,7 @@
         }
       },
       "disabled": true,
-      "id": "15526320-c25a-4289-b9fe-3b6011392be3",
+      "id": "dc9c7c7f-0eb2-4758-9110-9b4bfafa9b61",
       "name": "Analyze reserv",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4180,8 +4168,8 @@
         "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
       },
       "position": [
-        -224,
-        528
+        -4336,
+        1232
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -4200,7 +4188,7 @@
         }
       },
       "disabled": true,
-      "id": "7cf02d98-f4ac-42c0-a187-b603aaf16b75",
+      "id": "35f65dcf-cdb7-4fd3-be47-7128b34e01c2",
       "name": "Analyze GPT",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4214,8 +4202,8 @@
         "url": "https://api.openai.com/v1/chat/completions"
       },
       "position": [
-        -240,
-        768
+        -4352,
+        1472
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -4224,29 +4212,29 @@
     },
     {
       "disabled": true,
-      "id": "a377412e-8745-48b0-a1e1-9419232dea90",
+      "id": "9cc673cd-0a3a-44ff-99e7-e60da33ed2ba",
       "name": "Split GPT",
       "onError": "continueErrorOutput",
       "parameters": {
         "jsCode": "const fullText = $input.first().json.choices[0].message.content;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
       },
       "position": [
-        -48,
-        768
+        -4160,
+        1472
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "a759c601-8a48-4af4-aa33-fa0d7603864e",
+      "id": "2bded988-2067-4917-8af3-63a42e7f1b36",
       "name": "Split",
       "onError": "continueErrorOutput",
       "parameters": {
         "jsCode": "// Получаем текст из поля Tasks\nconst fullText = $input.first().json.candidates[0].content.parts[0].text;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
       },
       "position": [
-        -48,
-        944
+        -4160,
+        1648
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -4258,7 +4246,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "bfb1920a-9a07-4b43-803f-553addc5db2c",
+      "id": "1951172e-aef1-4833-97f4-2ebd65ebb4bc",
       "name": "Analyze",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -4272,8 +4260,8 @@
         "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
       },
       "position": [
-        -240,
-        944
+        -4352,
+        1648
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -4287,7 +4275,7 @@
           "name": "N8NTelegram"
         }
       },
-      "id": "dc401e65-7fd3-40b6-9ac7-8599b841e4c6",
+      "id": "10d7aa97-eec0-4c09-b701-ba615cebb584",
       "name": "Get row(s) in sheet in Google Sheets22",
       "parameters": {
         "descriptionType": "manual",
@@ -4309,21 +4297,21 @@
         "toolDescription": "Get row(s) in sheet in Google Sheets"
       },
       "position": [
-        -144,
-        1856
+        -4256,
+        2560
       ],
       "type": "n8n-nodes-base.googleSheetsTool",
       "typeVersion": 4.7
     },
     {
-      "id": "4ac3107d-d1ca-4789-8d19-6e4bce85f676",
+      "id": "31de6dfb-8d52-4ee5-97fd-895aae4c227f",
       "name": "Sticky Note22",
       "parameters": {
         "content": "LW Art Assistant\n"
       },
       "position": [
-        -288,
-        1552
+        -4400,
+        2256
       ],
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1
@@ -4335,7 +4323,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "c53abe0f-d8d3-4f58-a6fc-4d2f76a1b864",
+      "id": "048491d2-9aa6-43a3-a087-ffcfc6685ed0",
       "name": "OpenAI Chat Model27",
       "parameters": {
         "model": {
@@ -4347,14 +4335,14 @@
         "options": {}
       },
       "position": [
-        -288,
-        1856
+        -4400,
+        2560
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "bee31f55-c321-43cb-8cfe-80df1e34a98d",
+      "id": "1477947b-44bc-4540-9f16-252e70f0bc76",
       "name": "AI Agent1",
       "parameters": {
         "options": {
@@ -4364,8 +4352,8 @@
         "text": "=Текст для анализа: \"{{ $json.comment }}\""
       },
       "position": [
-        -288,
-        1712
+        -4400,
+        2416
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -4373,8 +4361,6 @@
   ],
   "pinData": {},
   "settings": {
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "toD9OwDAspVcuK67",
     "executionOrder": "v1"
   },
   "shared": [
@@ -4402,6 +4388,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-09-30T08:25:09.000Z",
-  "versionId": "01f3cc3e-f898-4dea-86ee-cc6462f4a7fd"
+  "updatedAt": "2025-10-15T09:45:29.000Z",
+  "versionId": "60adfa94-77a2-404f-aef1-94b2b8c385b6"
 }
