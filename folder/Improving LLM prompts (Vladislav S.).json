@@ -147,11 +147,6 @@
         ]
       ]
     },
-    "Send a text message1": {
-      "main": [
-        []
-      ]
-    },
     "Structured Output Parser": {
       "ai_outputParser": [
         [
@@ -171,8 +166,7 @@
             "node": "Improving GPT prompts",
             "type": "main"
           }
-        ],
-        []
+        ]
       ]
     },
     "Telegram Trigger": {
@@ -220,7 +214,7 @@
           "name": "Improving LLM prompts"
         }
       },
-      "id": "de0ac474-b8f9-477f-b86b-ddd3fca13173",
+      "id": "03a1e843-2736-4932-8450-a891b64530b5",
       "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {},
@@ -230,15 +224,15 @@
         ]
       },
       "position": [
-        -368,
-        16
+        -2144,
+        -224
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "webhookId": "3b717edc-5d05-4597-9575-9edf16dbc2b2"
     },
     {
-      "id": "910a02d6-8eb1-4b22-ac95-4d73fcd2b513",
+      "id": "0cd61ff2-a5ce-40d5-bb75-1f878d28e1a4",
       "name": "If",
       "parameters": {
         "conditions": {
@@ -282,8 +276,8 @@
         "options": {}
       },
       "position": [
-        -192,
-        16
+        -1968,
+        -224
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -295,7 +289,7 @@
           "name": "Improving LLM prompts"
         }
       },
-      "id": "3289dea7-d9ee-4810-b12a-142376c9bbee",
+      "id": "2fafa9f9-301c-45ed-ad86-c86068a34b2e",
       "name": "Send a text message",
       "parameters": {
         "additionalFields": {
@@ -305,15 +299,15 @@
         "text": "Запросите доступ у админа ⚠️"
       },
       "position": [
-        144,
-        112
+        -1632,
+        -128
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "973cc524-d96c-4ab0-9718-decaef2f2125"
     },
     {
-      "id": "5d7e86a5-fe80-4d6c-b929-03537a5179f6",
+      "id": "79a07e4d-c0ab-4458-a4fe-8a1f2a6749ac",
       "name": "Improving GPT prompts",
       "parameters": {
         "hasOutputParser": true,
@@ -325,14 +319,14 @@
         "text": "=Улучши промт {{ $('Telegram Trigger').item.json.message.text }}"
       },
       "position": [
-        1200,
-        -368
+        -576,
+        -608
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
     },
     {
-      "id": "1ebfd53b-db7b-459f-bdc4-6a0a64a36df6",
+      "id": "94a29718-b5ac-4d57-8083-e962d3450ad6",
       "name": "If1",
       "parameters": {
         "conditions": {
@@ -358,8 +352,8 @@
         "options": {}
       },
       "position": [
-        144,
-        0
+        -1632,
+        -240
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -371,7 +365,7 @@
           "name": "Improving LLM prompts"
         }
       },
-      "id": "4a258d7d-e6cc-4ae1-bda0-e78ddfa6b8cc",
+      "id": "f032b93e-5f73-4922-872f-bbe86e4a380a",
       "name": "Send a text message1",
       "parameters": {
         "additionalFields": {
@@ -428,15 +422,15 @@
         "text": "=Привет {{ $json.message.chat.first_name }}! Я улучшайзер промтов, отправь мне промт, и я подберу для самый лучший и скажу почему!"
       },
       "position": [
-        288,
-        192
+        -1488,
+        -48
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "8c53b9fe-b13c-480f-a942-972a7bfffd0d"
     },
     {
-      "id": "2682a3f9-c146-449e-bce7-0dae46aefcdb",
+      "id": "bcd3f5c6-6c26-4627-9572-9f92037162fc",
       "name": "Model Selector",
       "parameters": {
         "numberInputs": 3,
@@ -517,8 +511,8 @@
         }
       },
       "position": [
-        1104,
-        -160
+        -672,
+        -400
       ],
       "type": "@n8n/n8n-nodes-langchain.modelSelector",
       "typeVersion": 1
@@ -530,7 +524,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "967d8e4c-70f7-473d-b815-c62f6b319f33",
+      "id": "b2eff9c6-97fb-4118-8d18-ccf3377c9d16",
       "name": "OpenAI Chat Model",
       "parameters": {
         "model": {
@@ -542,8 +536,8 @@
         "options": {}
       },
       "position": [
-        992,
-        64
+        -784,
+        -176
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -552,18 +546,18 @@
       "credentials": {
         "googlePalmApi": {
           "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini"
+          "name": "Gemini Ilya Owner"
         }
       },
-      "id": "8a02c283-f253-40f3-91a9-5abce16662ac",
+      "id": "2a104e1f-9fbe-4a83-ab48-080cba2cbb05",
       "name": "Google Gemini Chat Model",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        1152,
-        64
+        -624,
+        -176
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -575,15 +569,15 @@
           "name": "OpenRouter account"
         }
       },
-      "id": "3662812a-1b34-484f-80ae-294e1ce22c6a",
+      "id": "4ec31c11-042b-47f2-b90a-c27ddb65605f",
       "name": "OpenRouter Chat Model",
       "parameters": {
         "model": "anthropic/claude-opus-4.1",
         "options": {}
       },
       "position": [
-        1280,
-        64
+        -496,
+        -176
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1
@@ -595,7 +589,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "26752f02-71ad-48e6-b46a-405e671d7a07",
+      "id": "3745ec48-2ff2-46d1-9f36-edb24c332ea7",
       "name": "OpenAI Chat Model1",
       "parameters": {
         "model": {
@@ -607,8 +601,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        -160
+        -432,
+        -400
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -620,7 +614,7 @@
           "name": "OpenAi account"
         }
       },
-      "id": "fb937e88-cac0-4119-8f43-f9be95105c35",
+      "id": "2f99c97c-10f6-48d4-968e-0a5d8705b118",
       "name": "OpenAI Chat Model2",
       "parameters": {
         "model": {
@@ -631,21 +625,21 @@
         "options": {}
       },
       "position": [
-        368,
-        96
+        -1408,
+        -144
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
-      "id": "b9851e82-f94c-4678-824a-6d0e87150bc2",
+      "id": "6475f8bc-fd47-4e0a-9847-1f02238a7b61",
       "name": "Structured Output Parser",
       "parameters": {
         "jsonSchemaExample": "{\n  \"LLM\": \"LLM модель\",\n\t\"почему?\": \"Подойдет лучше всего\"\n}"
       },
       "position": [
-        496,
-        96
+        -1280,
+        -144
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
@@ -657,7 +651,7 @@
           "name": "Improving LLM prompts"
         }
       },
-      "id": "efa07b09-77bf-4b00-908a-8f2666365435",
+      "id": "6e9fd906-a0d3-4c1f-98a2-d3b52dde6bcb",
       "name": "Send a text message6",
       "parameters": {
         "additionalFields": {
@@ -667,15 +661,15 @@
         "text": "={{ $('Инструкция проверки промта').item.json.output['почему?'] }}\n{{ $json.output }}"
       },
       "position": [
-        1552,
-        -80
+        -224,
+        -320
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "80a52dd7-44d0-4f03-9f75-430e717a4cf0"
     },
     {
-      "id": "19cbc4a5-1f48-4f43-8fb5-cb730ba1861a",
+      "id": "7ff19287-81b4-4e1e-b6bd-6044d9db4f10",
       "name": "Инструкция проверки промта",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -687,15 +681,15 @@
         "text": "=Для какой LLM подойдет промт? {{ $json.message.text }}"
       },
       "position": [
-        352,
-        -96
+        -1424,
+        -336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
     },
     {
       "disabled": true,
-      "id": "e60a5951-90d4-4414-96b8-5257655f0e5b",
+      "id": "7424bf39-8a34-4fab-a1a6-58f2c69a2cbb",
       "name": "Switch",
       "parameters": {
         "options": {},
@@ -754,15 +748,15 @@
         }
       },
       "position": [
-        672,
-        272
+        -1104,
+        48
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
     },
     {
       "disabled": true,
-      "id": "20410865-c263-43b1-90c6-672cdd56f1b9",
+      "id": "ac3806f9-ea3b-473a-97b2-89fabfa6db50",
       "name": "Improving GPT prompts1",
       "parameters": {
         "hasOutputParser": true,
@@ -773,8 +767,8 @@
         "text": "={{ $json.output[1].content[0].text }}"
       },
       "position": [
-        1184,
-        256
+        -592,
+        32
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -787,7 +781,7 @@
         }
       },
       "disabled": true,
-      "id": "a6062f78-7494-478c-97f5-612ff7a1023a",
+      "id": "63c331f3-3f29-40e3-925d-9d37e015aba1",
       "name": "OpenAI Chat Model3",
       "parameters": {
         "model": {
@@ -799,15 +793,15 @@
         "options": {}
       },
       "position": [
-        1168,
-        448
+        -608,
+        224
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
     },
     {
       "disabled": true,
-      "id": "4cad3148-0d15-40ac-a988-905c04bf053e",
+      "id": "007d4841-8afb-4443-ba68-909b899d1426",
       "name": "HTTP Request5",
       "parameters": {
         "headerParameters": {
@@ -827,8 +821,8 @@
         "url": "https://api.openai.com/v1/responses"
       },
       "position": [
-        960,
-        256
+        -816,
+        32
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -841,7 +835,7 @@
         }
       },
       "disabled": true,
-      "id": "702e8c86-ffa0-468d-8aac-28a2980f8c7f",
+      "id": "3d7dd022-ec5d-4b91-826f-80692f9da7b0",
       "name": "Send a text message8",
       "parameters": {
         "additionalFields": {
@@ -851,8 +845,8 @@
         "text": "={{ $json.output }}"
       },
       "position": [
-        1552,
-        272
+        -224,
+        48
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -875,6 +869,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-29T13:25:02.000Z",
-  "versionId": "3bfe163e-35ea-4f31-8996-51f1028516e5"
+  "updatedAt": "2025-10-15T09:44:25.000Z",
+  "versionId": "235da573-cd29-452b-bd9f-9c549a2e0fd8"
 }
