@@ -3,7 +3,13 @@
   "connections": {
     "Append or update row in sheet": {
       "main": [
-        []
+        [
+          {
+            "index": 0,
+            "node": "Анимация видео5",
+            "type": "main"
+          }
+        ]
       ]
     },
     "Append or update row in sheet1": {
@@ -84,6 +90,28 @@
           {
             "index": 0,
             "node": "Delete rows or columns from sheet",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Анимация видео6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet",
             "type": "main"
           }
         ]
@@ -214,7 +242,7 @@
         [
           {
             "index": 0,
-            "node": "Проверка по критериям4",
+            "node": "Генератор сценария",
             "type": "main"
           }
         ]
@@ -275,6 +303,17 @@
         ]
       ]
     },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ссылки видео",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Generate Title1": {
       "main": [
         [
@@ -292,6 +331,17 @@
           {
             "index": 0,
             "node": "HTTP Request8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get Final Video1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request17",
             "type": "main"
           }
         ]
@@ -335,7 +385,7 @@
         [
           {
             "index": 0,
-            "node": "Анимация видео5",
+            "node": "Append or update row in sheet",
             "type": "main"
           }
         ]
@@ -368,7 +418,29 @@
         [
           {
             "index": 0,
-            "node": "Анимация видео6",
+            "node": "Append or update row in sheet8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get Video9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append or update row in sheet9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields6",
             "type": "main"
           }
         ]
@@ -473,6 +545,17 @@
         ]
       ]
     },
+    "HTTP Request16": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "HTTP Request2": {
       "main": [
         [
@@ -561,24 +644,6 @@
           {
             "index": 0,
             "node": "Create Video6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценария",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items2",
             "type": "main"
           }
         ]
@@ -746,18 +811,6 @@
         ]
       ]
     },
-    "Loop Over Items2": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценарного шаблона4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Loop Over Items20": {
       "main": [
         [],
@@ -794,6 +847,18 @@
         ]
       ]
     },
+    "Loop Over Items25": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Генератор сценария",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Loop Over Items26": {
       "main": [
         [],
@@ -801,6 +866,18 @@
           {
             "index": 0,
             "node": "Wait for Veo9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items27": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Генератор сценария",
             "type": "main"
           }
         ]
@@ -982,18 +1059,7 @@
     },
     "OpenAI Chat Model13": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценарного шаблона4",
-            "type": "ai_languageModel"
-          },
-          {
-            "index": 0,
-            "node": "Structured Output Parser5",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "OpenAI Chat Model14": {
@@ -1012,17 +1078,7 @@
         [
           {
             "index": 0,
-            "node": "Генерация промтов",
-            "type": "ai_languageModel"
-          },
-          {
-            "index": 0,
             "node": "Анимация видео",
-            "type": "ai_languageModel"
-          },
-          {
-            "index": 0,
-            "node": "Генератор сценария",
             "type": "ai_languageModel"
           },
           {
@@ -1065,6 +1121,38 @@
           {
             "index": 0,
             "node": "Генератор сценарного шаблона3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Генератор сценарного шаблона4",
+            "type": "ai_languageModel"
+          },
+          {
+            "index": 0,
+            "node": "Structured Output Parser5",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Генерация промтов",
+            "type": "ai_languageModel"
+          },
+          {
+            "index": 0,
+            "node": "Генератор сценария",
             "type": "ai_languageModel"
           }
         ]
@@ -1425,6 +1513,17 @@
           {
             "index": 0,
             "node": "YT Tags1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Final Video1",
             "type": "main"
           }
         ]
@@ -1980,6 +2079,13 @@
             "node": "Edit Fields1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Генерация промтов",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -2049,12 +2155,12 @@
         ]
       ]
     },
-    "Проверка по критериям4": {
+    "Ссылки видео": {
       "main": [
         [
           {
             "index": 0,
-            "node": "If",
+            "node": "HTTP Request16",
             "type": "main"
           }
         ]
@@ -4721,6 +4827,7 @@
           "name": "GPT"
         }
       },
+      "disabled": true,
       "id": "09161549-3481-4491-9137-e1cf243631e3",
       "name": "OpenAI Chat Model13",
       "parameters": {
@@ -4733,8 +4840,8 @@
         "options": {}
       },
       "position": [
-        -3360,
-        272
+        -3568,
+        432
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -4746,10 +4853,10 @@
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=## Role\n\nYou are an **AI-Agent** inside **n8n**, responsible for generating **concise, technical scene descriptions** for video/render generation.\nYour outputs are used by the video production pipeline for stable, repeatable renders of a fixed female subject.\n\n---\n\n## Context\n\nThe scene depicts a **young, attractive athletic woman** (18+) performing **jump rope** in place.\nThe camera captures a **readable, cinematic motion loop**: physically accurate jumps, visible rope arc, deep neckline emphasis, **no nudity**.\nAesthetic, elegant, and realistic — **no morphing, no distortions, no hallucinations**.\nBody parameters must **never change**, only face variations are allowed.\n\n---\n\n## Body & Identity Lock (Permanent)\n\n**Identity Lock — Same Woman in Every Render (21+).**\nFace may vary slightly (expression, emotion), but body proportions and outfit are immutable.\n\n**Fixed Physical Attributes:**\n\n* Symmetric face, light skin, emerald eyes\n* Dark-brown wavy hair, shoulder length\n* **Body:** Hourglass 90–60–90 (never changes)\n* **Bust:** Very large, perky, natural shape\n* **Hips/Glutes:** Wide, firm, toned\n* Fit, feminine build with defined waist\n* Smooth, clear skin, no blemishes or scars\n\n**Outfit (Fixed):**\n\n* Matte black deep-V sports top (not sheer)\n* High-waisted black leggings, ankle-length\n* Minimalist black sneakers\n\n**Visual Style:**\n\n* Semi-realistic, Fortnite/Overwatch-level polish\n* No outlines, no painterly strokes, clean AAA shading\n\n**Lighting:**\n\n* Key top-left, soft fill front, subtle rim back-right\n* WB 5600K, soft neutral contrast\n\n**Background:**\n\n* Studio seamless backdrop (#FFFFFF or #BFBFBF)\n\n**Camera:**\n\n* 50 mm lens, clean DOF, static tripod\n* Mid-torso to ¾ crop, locked framing\n\n**Rule:**\nDo **not alter** body, outfit, color palette, or proportions.\nOnly minor face tweaks are acceptable.\n\n---\n\n## Task\n\nGenerate **1 main idea** and **2 concise variations**, each ≤120 words.\nEach describes a **clear, visually readable** ASMR-style scene.\nInclude angle, light, tempo, and mood.\nKeep tone technical and neutral.\n\n---\n\n## Input Variables\n\n```json\n{\n  \"setting\": \"any location\",\n  \"wardrobe\": \"black deep-V sports top, black leggings\",\n  \"mood\": \"energetic and inspiring\"\n}\n```\n\n---\n\n## Output Format (Markdown)\n\n### Main Idea\n\nIdentity lock, same woman every render (21+). Symmetric face, light skin, emerald eyes, dark-brown wavy hair to shoulders. Hourglass 90-60-90 body, wide hips, large perky bust, fit feminine build. Matte black deep-V top and high-waisted leggings. Static 9:16 camera (50 mm) mid-torso framing. Even soft light (key top-left). The subject jumps rope **on one fixed spot**, calm and rhythmic (~1.5 Hz). Rope arc readable, chest motion natural, cadence stable. No camera motion, no surreal effects. Background white seamless. Focus on realism and body dynamics.\n\n### Two Variations\n\n* **Variation 1:** Same woman, shot slightly lower angle (~10° up). Light cooler tone (WB 5400K). Slight smile, steady tempo 1.4 Hz, soft studio echo.\n* **Variation 2:** Same setup, warm tone (WB 5800K). Camera slightly closer (¾ crop). Gentle breathing visible, softer rim highlight on right shoulder.\n\n### Tech Notes\n\n* **Camera:** 50 mm fixed, 9:16 vertical, locked tripod\n* **Lighting:** Key top-left 45°, fill front −1 EV, rim +0.5 EV\n* **Stabilization:** Static; no pan/tilt/zoom\n* **Motion:** Bounce-step 1.4–1.6 Hz, clear rope arc\n* **Focus:** Chest & shoulders; DOF f/2.8–f/3.2\n* **Output:** 1080×1920, WB 5600 K\n\n### Safety Check\n\n* Confirmed subject age 21+\n* No nudity or exposure beyond neckline\n* No minors, uniforms, or school context\n* Physically realistic motion, no hallucinations or morphing\n* All proportions fixed per 90-60-90 reference\n\n---\n\n## References & Docs\n\n* [n8n Documentation](https://docs.n8n.io/)\n* [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)\n* [OpenAI Usage Policies](https://openai.com/policies/usage-policies)\n"
+          "systemMessage": "=### Role\n\nYou are an **AI-Agent** inside **n8n**, responsible for generating **concise, technical scene descriptions** for video generation.\nYour outputs are used by the video-production pipeline for stable, repeatable generation of a **fixed female subject** performing country-themed ASMR jump-rope scenes.\n\n---\n\n### Context\n\nThe scene depicts a **young, large-breasted woman** (21+) jumping in place with a jump rope and a plunging neckline.\n\nEach generation takes place in a **realistically absurd setting, inspired by the same country**, built on familiar cultural imagery—for example, a bear playing a balalaika at a wooden counter in Russia, paper lanterns and temple gates in Japan, sandstone pyramids and a resting camel in Egypt, or a quiet Parisian street cafe in France.\n\nAll background elements are **real, physically possible**, and based on light and perspective—no flying objects or surreal movements.\n\nHer outfit varies depending on the country: **a professional performance suit with a low cut**, created using national motifs (colors, textures, accessories), and a sleek, sporty cut.\n\nThe overall tone is cinematic, yet strictly realistic in terms of lighting, materials, and physics.\n\n---\n\n### Body & Identity Lock (Permanent)\n\n**Identity Lock — Young woman (21+).**\nFace may vary slightly (expression), but **body, proportions, and realism remain identical**.\n\n**Fixed Attributes**\n\n* Symmetrical face, fair skin, emerald eyes\n* Dark brown, wavy, shoulder-length hair\n* Hourglass figure (90-60-90)\n* Toned physique, smooth, clear skin\n* Large, firm breasts\n\n**Outfit**\n\n* Determined for each scene based on the country\n* Always designed in the country's style and sporty style\n* Fabrics: Lycra, satin, matte stretch, or breathable mesh\n\n\n**Lighting**\n\n* Key top-left 45°, soft fill front, rim back-right +0.5 EV\n* Default WB 5600 K (±300 K depending on scene mood)\n\n**Camera**\n\n* 50 mm lens, 9:16 vertical, static tripod\n* Mid-torso to ¾ crop, f/2.8–f/3.2\n\n---\n\n\n### Task\n\nGenerate **1 main idea** and **2 concise variations** (≤120 words).\nTone: technical and neutral.\nDescribe lighting, tempo, motion, and atmosphere.\nEach variation alters environment, wardrobe accent, and light tone.\n\n---\n\n\n### Input Variables\n\n```json\n{\n  \"identity_lock\": {\n    \"age\": 21,\n    \"face\": {\"symmetry\": \"high\", \"skin_tone\": \"light\", \"eye_color\": \"emerald\", \"hair_color\": \"dark brown\", \"hair_style\": \"wavy shoulder-length\"},\n    \"body\": {\"shape\": \"hourglass\", \"measurements\": \"90-60-90\", \"fitness\": \"athletic femininity\", \"bust\": \"large\"}\n  },\n  \"scene_context\": {\n    \"country\": \"Russia\",\n    \"symbolic_background\": \"wooden stall, bear with balalaika, traditional tablecloth, clear daylight\",\n    \"mood\": \"dry humor, calm realism\",\n    \"tempo\": \"1.5 Hz rhythmic loop\",\n    \"lighting_tone\": \"neutral daylight WB 5600 K\"\n  },\n  \"costume_style\": {\n    \"description\": \"red-blue-white athletic stage outfit with national pattern accents\",\n    \"materials\": \"matte lycra and satin trims\",\n    \"palette\": \"national colors\"\n  },\n  \"camera\": {\"lens\": \"50 mm\", \"framing\": \"mid-torso\", \"aspect_ratio\": \"9:16\", \"motion\": \"static\"},\n  \"generation_style\": {\"visual_style\": \"semi-realistic cinematic realism\", \"no_outlines\": true, \"clean_AAA_shading\": true}\n}\n```\n\n---\n\n## Output Format (Markdown)\n\n### Main Idea\n\nIdentity lock, the same young woman in every generation (21+). Symmetrical face, fair skin, emerald eyes, dark brown wavy shoulder-length hair. Hourglass figure (90-60-90), wide hips, large firm breasts, feminine build.\nStatic camera 9:16 (50mm), cropping mid-torso. Soft neutral light with key in upper left. The model jumps rope in place, calmly and rhythmically.\nThe background depicts France in an absurd ASMR style – the Eiffel Tower, floating croissants, sleepy pigeons soaring in the morning fog. The rope arc is easy to read, the body movements are realistic, the camera is static.\n\n\n### Tech Notes\n\n* **Camera:** 50 mm fixed, 9:16 vertical\n* **Lighting:** Key top-left 45°, fill −1 EV, rim +0.5 EV\n* **Motion:** Bounce 1.4–1.6 Hz, stable loop\n* **Focus:** Chest & shoulders\n* **Output:** 1080×1920, WB per scene tone\n\n---\n\n## Safety Check\n\n* Confirmed subject age 21+\n* No nudity or explicit exposure\n* Physically realistic motion\n* No morphing or deformation\n* Background absurdity restricted to environment only\n\n---\n\n## References & Docs\n\n* [n8n Documentation](https://docs.n8n.io/)\n* [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)\n* [OpenAI Usage Policies](https://openai.com/policies/usage-policies)\n"
         },
         "promptType": "define",
-        "text": "=Придумай новый сценарий и не повторяйся"
+        "text": "=Придумай новый сценарий и не повторяй страну"
       },
       "position": [
         -3360,
@@ -4759,102 +4866,13 @@
       "typeVersion": 2
     },
     {
-      "credentials": {
-        "openAiApi": {
-          "id": "TeJoupiuKVAuyWb3",
-          "name": "GPT"
-        }
-      },
-      "disabled": true,
-      "id": "02ed484d-d20c-4068-977e-554d9e4e7386",
-      "name": "Проверка по критериям4",
-      "parameters": {
-        "jsonOutput": true,
-        "messages": {
-          "values": [
-            {
-              "content": "=## Роль: Ты — ИИ-агент, оценивающий только сцены сжатия обычных объектов прессом по 20 критериям зрелищности, wow-эффекта, физики, звука и визуала.\n## Контекст: Критерии — только для обычных объектов и физического сжатия (никаких миниатюр, кластеров, магии, еды, абстракций).\n## Задача: Оценить сцену, выдать балл и вердикт (\"да\", если >=80; \"нет\" — если меньше).\n## Входные данные:\n– Markdown или JSON-сцена.\n## Формат ответа: JSON\n{\n  \"Score\": \"0-100\",\n  \"Pass\": \"да\" или \"нет\"\n}\n## Стиль: Сухо, только цифра и итог.\n## Требования:\n– Сцена — только про сжатие оригинального объекта прессом, только физика.\n– Только итог (баллы и вердикт), не объяснять критерии.\n## Финальный чек-лист:\n– Только баллы и вердикт, всё строго по формату.\n\n\n# Criteria (5 points max each)\n1. Trendiness: How current and hype-worthy.\n2. Wow Factor: Viewer surprise and delight.\n3. Initial Hook (0-1 sec): Instant visual/audio intrigue.\n4. Unexpected Twist: Shift from expected to surprising reaction.\n5. Sound Satisfaction: Realistic pour sounds (flow, bubble).\n6. Aesthetic Transformation: Beauty in mixing, spreading.\n7. Pour Speed (first 1.5 sec): Balanced rhythm.\n8. Audio-Visual Sync: Matching pour and reaction cues.\n9. Before/After Contrast: Dramatic change post-pour.\n10. Presence: Feels real and immersive.\n11. Micro-Details: Visible bubbles, swirls, textures.\n12. Cinematic Pour Moment: Clear, engaging flow.\n13. Framing: Centered for 9:16 vertical.\n14. Size Fit: Suited to vertical format.\n15. Closure: Satisfying end feel.\n16. Material Inertia: Post-pour behavior (settle, expand).\n17. Desire to Try: Urge to replicate.\n18. Reaction Dynamics: Unique dissolving, layering.\n19. Flow Smoothness: Anticipatory pour motion.\n20. Internal Surprise: Non-banal reveal (color burst, foam).",
-              "role": "system"
-            },
-            {
-              "content": "=<userQuery>\n{{ $json.Scene }}\n</userQuery>"
-            }
-          ]
-        },
-        "modelId": {
-          "__rl": true,
-          "cachedResultName": "GPT-4.1",
-          "mode": "list",
-          "value": "gpt-4.1"
-        },
-        "options": {}
-      },
-      "position": [
-        -2912,
-        80
-      ],
-      "type": "@n8n/n8n-nodes-langchain.openAi",
-      "typeVersion": 1.7
-    },
-    {
-      "disabled": true,
-      "id": "1322a64d-0dd4-4ff2-942d-e8d388a8e874",
-      "maxTries": 5,
-      "name": "If",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ce3f2894-f95a-4a5b-84bd-3199b575aad4",
-              "leftValue": "={{ $json.message.content.Pass }}",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "нет"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        -2608,
-        80
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "b601067b-3a3e-44a8-8962-e9a375856036",
-      "name": "Loop Over Items2",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        -2448,
-        80
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
       "id": "7fd03414-7a0a-4295-aabe-44dc78e70751",
       "name": "Генерация промтов",
+      "onError": "continueErrorOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
-          "systemMessage": "=Роль\nТы — ИИ-агент (Prompt Engineer) внутри n8n. Для узла генерации **Nano Banana** формируешь строгий промпт, negative-промпт и JSON-параметры (модель/разрешение/шаги/CFG/seed), чтобы получить **один реалистичный кадр**, выглядящий как **настоящая фотография**, без стилизации и признаков 3D-рендера. Сцена: молодая женщина 21+, атлетичная, симметричное лицо, гладкая кожа, очень большая грудь. Момент — начало прыжка со скакалкой снизу; реальный масштаб; без сюрреализма.\n\nБаза персонажа (вставлять ДОСЛОВНО как первый абзац prompt)\nMain Idea\nIdentity lock, same woman every render (21+). Symmetric face, light skin, emerald eyes, dark-brown wavy hair to shoulders. Hourglass body 90-60-90, wide hips, large bust, smooth stomach without visible abs, fit feminine. Outfit fixed: matte black deep-V sports top (not sheer), high-waisted black leggings, minimalist sneakers. **Pure photorealistic look — must appear like a real human photographed in studio, not 3D render or stylized image. No CGI, no cartoon, no Fortnite/Overwatch style.** Lighting: key top-left, soft fill front, subtle rim back-right; WB 5600K. Camera 50 mm, clean DOF, mid-torso to 3/4 crop. Rope visible below feet near floor level (bottom clearance 3 cm).\n\nКонтекст\nКамера неподвижна. Кадр — начальный момент **реальной фото-/видеосъёмки**. Все параметры должны быть физически правдоподобны и измеримы: просвет верёвки сверху/снизу (см), оптика (мм), экспозиция (f, s, ISO), свет (кратко), WB 5600K. Ракурс фронтальный, лицо вперёд. Композиционный акцент — грудная клетка и плечи (без оголённости). Особенности: живот гладкий, подтянутый, без выраженного пресса; шнур в кадре внизу, под ступнями (проходит у пола).\n\nЗадача\nСобрать и вернуть объект с полями:\n— prompt — основной промт (Identity Lock + Scene Spec)\n— negative_prompt — нежелательные элементы\n— nb_params — объект параметров Nano Banana\n— alts[2] — две краткие альтернативы (каждая: short, extended, negative, nb_params)\nОбъект сразу совместим с узлом Nano Banana в n8n.\n\nВходные данные\nИз {{$json.output}}:\n— camera_frame — тип кадра (например, «фронтальный средний план»)\n— location — локация («студия» / «крыша» / «квартира»)\n— attire — спортивная одежда (топ высокой поддержки + леггинсы, кроссовки)\n— pose_phase — backswing | takeoff | flight | landing\n— rope_top_cm — просвет сверху (см, по умолчанию 20)\n— rope_bottom_cm — просвет снизу (см, по умолчанию 3; шнур виден у пола)\n— focal_mm_equiv — экв. фокусное (мм: 35/50/85)\n— aperture_f — диафрагма (например, 4.0)\n— shutter_s — выдержка (сек, например, 0.001 = 1/1000 s)\n— iso — ISO (100–400)\n— ev_target — EV (8–9)\n— lighting_note — свет (например, «ключ 45° сверху-слева, мягкие тени»)\n— nb_model — модель Nano Banana (например, nb-photoreal-v1)\n— nb_width, nb_height — разрешение (например, 896×1152)\n— nb_steps — шаги диффузии (28–40)\n— nb_cfg — CFG (4.5–7.5)\n— nb_seed — сид (число или null)\n— nb_safety — bool (рекомендуется true)\n— nb_upscale — апскейл (1.0–2.0)\n\nДефолты\nrope_top_cm=20; rope_bottom_cm=3; focal_mm_equiv=50; aperture_f=4.0; shutter_s=0.001; iso=200; ev_target=«8–9»; camera_frame=«фронтальный средний план»; lighting_note=«ключ 45° сверху-слева, мягкие тени; фронтальная заливка; слабый контровой справа-сзади; WB 5600K»; nb_model=«nb-photoreal-v1»; nb_width=896; nb_height=1152; nb_steps=32; nb_cfg=6.5; nb_seed=null; nb_safety=true; nb_upscale=1.0; pose_phase=«flight».\n\nФормат ответа\nMarkdown с одним JSON-блоком.\nprompt = две части:\n\n1. Identity Lock — блок «Main Idea» (англ., см. выше) без изменений.\n2. Scene Spec — русскоязычная строка/абзац (≤120 слов), только измеримые признаки: тип кадра, фаза позы, просветы (см), оптика/экспозиция (мм, f, s, ISO, EV), WB 5600K, схема света, фон, акцент на верхнем торсе, шнур снизу у пола, камера статична, **реалистичный стиль съёмки без CGI и рендера.**\n\nnegative_prompt — список запретов.\nnb_params — как ниже.\nalts — массив из 2 вариантов (каждый повторяет Identity Lock в поле extended).\n\nСтиль\nСухой, инженерный, как технический паспорт фото-сцены. Только физические и проверяемые признаки. Русский язык (кроме блока Identity Lock).\n\nТребования\n— Абсолютно **реалистичный стиль**, как **реальная фотография**, без следов 3D-рендера, CGI, мультяшности, глянцевых отражений или пластиковой кожи.\n— Камера статична; масштаб реалистичный.\n— Без магии, VFX, логотипов, текста, неона, фантазийных эффектов.\n— Ракурс фронтальный, лицо к камере.\n— Акцент: грудная клетка и плечи, без оголённости.\n— Топ не просвечивает.\n— Живот без пресса (нет «кубиков»).\n— Шнур снизу, виден у пола; указать просветы в см.\n— Указать оптику/экспозицию/свет/WB; фон #FFFFFF или #BFBFBF.\n\nРекомендованный negative prompt\nNSFW, nudity, see-through, nipples, areolae, underboob, sideboob\nteen, child, minor, age-ambiguous\nsurreal, fantasy VFX, particles, smoke, neon haze, text, logo, watermark\nfisheye, extreme wide, motion blur, rolling shutter, lens dirt\nover-sharpen, plastic skin, heavy makeup, artificial lighting, CGI\nasymmetry, off-model face, different identity, different hair/eye color\ncropped head, cut limbs, extra fingers, stylized, cartoon, 3D render\n\nПримеры плохого и хорошего ответа\nПлохо: «Сделай красивую девушку со скакалкой.»\nХорошо:\nprompt = (Identity Lock) + (Scene Spec: «Начало прыжка со скакалкой снизу; фаза: flight; фронтальный средний план; просветы 20/3 см; камера 50 мм, f/4.0, 1/1000 s, ISO 200, EV 8–9; свет 45° сверху-слева, мягкие тени; WB 5600K; фон #FFFFFF; камера статична; реалистичная фотография без CGI и рендера; акцент на грудной клетке и плечах»).\n\nФинальный чек-лист\n— Все входные учтены или подставлены дефолты?\n— prompt начинается с Identity Lock и содержит Scene Spec (≤120 слов)?\n— Есть поля: prompt, negative_prompt, nb_params, alts[2]?\n— Камера статична; указана фаза позы?\n— Акцент на верхнем торсе, лицо к камере?\n— Живот без пресса, топ не прозрачный?\n— Шнур снизу, просветы указаны?\n— Упомянуто: реалистичная фотография, не рендер?\n— Запрещены бренды, логотипы, текст, сюрреализм, частицы, дым, неон, мультяшность?"
+          "systemMessage": "=### Роль\n\nТы — **ИИ-агент (Prompt Engineer)** внутри **n8n**.\nДля узла **Nano Banana** создаёшь промт, negative-промт и JSON-параметры, чтобы получить **один фотореалистичный кадр**, выглядящий как настоящая фотография без CGI или рендера.\nКаждый кадр — момент прыжка со скакалкой в реальном масштабе, с культурной сценографией конкретной страны.\n\nСцена: молодая женщина 21+, атлетичная, симметричное лицо, гладкая кожа, спортивная фигура, очень большая грудь.\nМомент — начало прыжка со скакалкой снизу; реальный масштаб; без сюрреализма.\nВ каждой сцене добавляется **реалистичный культурный контекст страны** (фон, детали окружения) и **одежда, адаптированная под этот стиль**, но сохраняющая спортивный характер и удобство движения.\n\n---\n\n## База персонажа\n\n**Main Idea**\nIdentification: Young woman (21+). Symmetrical face, fair skin, emerald eyes, dark brown wavy shoulder-length hair. Hourglass figure (90-60-90), athletic build, very large breasts.\nOutfit is determined for each country—a tracksuit in the style of the country with a distinctly professional look.\n**Purely photorealistic style—should look like a real studio or on-location photo, without 3D rendering.**\nLighting: Key light at the top left at a 45° angle, soft fill light at the edge of the right rear; white balance 5600K. Camera 50mm, cropped to the middle of the torso.\nThe rope is visible near the floor (3 cm gap at the bottom).\n\n---\n\n## Контекст\n\nФон — реалистичный, с земными культурными деталями: деревянный ангар и медведь с балалайкой (Россия), бумажные фонари и храм (Япония), песчаная площадка и верблюд (Египет), улица с кафе и плакат Эйфелевой башни (Франция).\nВсе объекты физически реальны, с правильным светом и перспективой.\nОдежда — спортивно-сценическая в стиле страны, без фантазии и экстрима.\n\n---\n\n## Задача\n\nВернуть объект с полями: `prompt`, `negative_prompt`, `nb_params`, `alts`.\nСтруктура, параметры и чек-лист сохраняются как в оригинале.\n\n---\n\n## Входные данные\n\nИз {{$json.output}}\n---\n\n### Дефолты\n\n```\nrope_top_cm=20\nrope_bottom_cm=3\nfocal_mm_equiv=50\naperture_f=4.0\nshutter_s=0.001\niso=200\nev_target=8–9\ncamera_frame=\"фронтальный средний план\"\nlighting_note=\"ключ 45° сверху-слева, мягкие тени; фронтальная заливка; слабый контровой справа-сзади; WB 5600K\"\nnb_model=\"nb-photoreal-v1\"\nnb_width=896\nnb_height=1152\nnb_steps=32\nnb_cfg=6.5\nnb_seed=null\nnb_safety=true\nnb_upscale=1.0\npose_phase=\"flight\"\nscene_context=\"France — Eiffel Tower blurred background, white daylight\"\nattire_style=\"athletic fashion bodysuit in blue-white-red palette\"\n```\n\n---\n\n## Формат ответа\n\nMarkdown с одним JSON-блоком.\n\n**prompt** = две части:\n1️⃣ Identity Lock (см. выше, англ.)\n2️⃣ Scene Spec (≤120 слов, на русском): только измеримые параметры + реалистичные детали сцены (кадр, экспозиция, свет, фон, одежда, ракурс, верёвка).\n\n**negative_prompt** — из списка ниже.\n**nb_params** — все числовые и логические параметры Nano Banana.\n**alts** — два коротких варианта (каждый с `extended` = Identity Lock + альтернативная Scene Spec).\n\n---\n\n## Стиль\n\nСухой, инженерный, как технический паспорт фото-съёмки.\nТолько измеримые, проверяемые признаки.\nРусский язык (кроме блока Identity Lock).\nФотореализм, без CGI, VFX, неона, текста, брендов.\n\n---\n\n## Требования\n\n* Абсолютный реализм — как кадр настоящей фото-съёмки.\n* Камера статична; лицо направлено вперёд.\n* Композиция: верхний торс в фокусе; фаза прыжка считана из `pose_phase`.\n* Фон реалистично отражает страну (`scene_context`), но не отвлекает от персонажа.\n* Одежда (`attire_style`) — спортивно-модная, реалистичная, в стиле страны.\n* Указать: просветы верёвки (см), оптику, экспозицию, свет, WB 5600 K.\n* Без сюрреализма, CGI, текста, водяных знаков.\n\n---\n\n## Рекомендованный negative_prompt\n\n```\nNSFW, nudity, see-through, surreal, fantasy, particles, smoke, neon,\ntext, logo, watermark, 3D render, cartoon, CGI, asymmetry, off-model,\ndifferent identity, cropped head, cut limbs, lens dirt, plastic skin,\nover-sharpen, artificial lighting, child, minor, brand marks\n```\n\n---\n\n## Пример корректного Scene Spec\n\n«Начало прыжка; фронтальный средний план; просветы 20/3 см; камера 50 мм, f/4.0, 1/1000 s, ISO 200;\nфон: деревянное помещение с медведем, сидящим у самовара; одежда — спортивный костюм в национальных цветах страны; камера статична; реалистичная фотография без рендера.»\n\n---\n\n## Финальный чек-лист\n\n* Все входные данные учтены или подставлены дефолты\n* prompt = Identity Lock + Scene Spec (≤ 120 слов)\n* Есть поля: prompt, negative_prompt, nb_params, alts[2]\n* Камера статична, поза и фаза указаны\n* Лицо к камере, масштаб реалистичный\n* Фон и одежда соответствуют стране\n* Упомянуты реализм, WB 5600 K, экспозиция, свет\n* Без CGI, текста, VFX, брендов.\n* Реализм: фотореалистичный свет, физика и масштаб."
         },
         "promptType": "define",
         "text": "=Напиши промт для генерации изображения в nano-banano:{{ $json.output }}"
@@ -4886,7 +4904,7 @@
       },
       "position": [
         -1984,
-        272
+        384
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2
@@ -4896,7 +4914,7 @@
       "name": "Генератор сценария",
       "parameters": {
         "options": {
-          "systemMessage": "=## Роль\nТы — ИИ-агент, который пишет сценарий только для реалистичной сцены, где Молодая очаравательная женщина с спортивным телосложением с очень большой грудью непрерывно прыгает на скакалке. Никакой магии, сюрреализма или визуальных эффектов, искажающих физику.\n## Контекст\nДлительность: 6–8 секунд. Камера статична, реальный масштаб на уровни груи. Фиксируется полный цикл движения: замах верёвки → отталкивание → фаза полёта → приземление. Звук: свист/шелест верёвки, лёгкий тик пола, дыхание, фон помещения.\n## Задача\nНаписать сценарий по секциям: Персона, Описание, Динамика прыжков, Поведение скакалки, Звук, Тайминг (start / jump loop / settle / end).\nВ каждой секции укажи цель кадра, ключевые действия (beats) и риск/контроль качества (если применимо). Лаконично и по делу.\n## Входные данные\n– {{ $('Edit Fields').item.json.Scene }}.\n## Формат ответа\nMarkdown, секции в строгом порядке:\n* Персона\n* Описание\n* Динамика прыжков\n* Поведение скакалки\n* Звук\n* Тайминг (6–8 с итого): start / jump loop / settle / end\n## Стиль\nСухо, пошагово, инженерно. Фокус на биомеханике, читаемости движения, звуке и проверяемых параметрах (просветы, частота, ракурс, свет).\n## Требования\n* Язык: русский.\n* Реализм: реальный масштаб, без миниатюр и кластеров, камера строго статична.\n* Укажи: тип кадра (например, средний план на уровни груди), частоту прыжков (Гц), ориентиры реального масштаба (плитка/фактура пола).\n* Если нужны слоумо-подсказки: упомяни «съёмка 60 fps → интерпретация 24 fps».\n## Финальный чек-лист\n* Только сцена прыжков и её физика?\n* Все секции присутствуют и заполнены целью/beats/рисками?\n* Тайминги суммарно дают 6–8 с и логично делят процесс?\n* Камера статична, параметры движения и звука заданы проверяемо?\n---\n## Шаблон ответа (заполни на русском)\nПерсона\n* Описание: Молодая очаравательная женщина с спортивным телосложением с очень большой грудью (18+) в {одежде}, покрытие пола: {резина/паркет/асфальт}, ориентиры масштаба: {плитка/фактура}. Камера: статичный {средний план на уровни груди}.\n* Цель кадра: Обеспечить полную читаемость тела и дуги верёвки.\n* Риск/контроль: Избегать кадрирования, при котором верёвка выходит за границы кадра.\nОписание\n* Свет: мягкий ровный, читаемые тени под стопами; без бликов, «съедающих» контур.\n* Кадр: в рамке одновременно видны верхний просвет над головой и нижний под носками; камера неподвижна.\n* Beats: 1) Нейтральная стойка; 2) Подъём верёвки; 3) Переход к циклу.\nДинамика прыжков\n* Частота: {cadence_hz Гц, по умолчанию 1.6}.\n* Механика: мягкие колени; приземление на переднюю часть стопы; локти близко к корпусу; плечи расслаблены.\n* Beats: циклы одинаковой высоты, без пропусков; стабильная амплитуда.\n* Риск/контроль: следить за постоянством темпа; исключить смаз и «телепорт» между кадрами.\nПоведение скакалки\n* Просветы: верхний ~{15–25 см}, нижний ~{2–5 см}.\n* Контакт: краткий «тик» пола каждый цикл; зацепов нет.\n* Beats: дуга ровная; точка наивысшего подъёма над головой стабильна.\n* Риск/контроль: не допускать пересечения верёвки с рамкой кадра/фоном, где теряется видимость.\nЗвук\n* Состав: свист/шелест верёвки (раз в цикл), лёгкий «тик» пола, мягкий удар обуви при приземлении, дыхание, нейтральный фон помещения.\n* Уровни: естественные, без усиления.\n* Beats: акцент тик-звука на каждом касании.\nТайминг (6–8 с итого)\n* Start (0:00–0:{t1}): стойка; верёвка заведена за пятки; короткий вдох.\n* Jump loop (0:{t1}–0:{t2}): непрерывные циклы с частотой {cadence_hz} Гц; сохраняется полный обзор дуги.\n* Settle (0:{t2}–0:{t3}): замедление на 1–2 цикла до устойчивой стойки.\n* End (0:{t3}–0:{T}): фиксированный кадр; дыхание слышно; верёвка неподвижна"
+          "systemMessage": "=### Роль\n\nТы — ИИ-агент, который пишет **реалистичный сценарий короткой сцены**, где молодая спортивная женщина непрерывно прыгает на скакалке с большой упругой грудью.\nКаждая сцена происходит в **определённой стране** с культурными деталями: медведь с балалайкой и самоваром, храм с фонарями, пирамида и верблюд и т.д.\nФон — физически возможный, без фантастики и «летающих» предметов.\nОдежда — **сценическая, национально-стилизованная**, подчёркивает динамику, объём груди и эстетику движения, но не нарушает реализм.\n\n### Контекст\n\nКамера статична (средний план, уровень груди).\nФиксируется полный цикл: стойка → замах → прыжок → приземление.\nФон — реалистичная декорация с элементами культуры страны (флаг, архитектурный мотив, реквизит).\nОдежда — лёгкий сценический костюм или спортивный комплект с национальными цветами с большим декальте.\nЗвук — свист верёвки, дыхание, фоновая среда (зал, улица, павильон) + лёгкий тональный акцент страны (например, дальний аккордеон, цикады, гул базара).\n\n### Задача\n\nСоставить сценарий по секциям:\n**Персона**, **Описание**\n\n## Входные данные\n– {{ $('Edit Fields').item.json.Scene }}.\n\n## Формат ответа\nMarkdown, секции в строгом порядке:\n* Персона\n* Описание\n\n## Стиль\nСухо, инженерно, без художественных преувеличений.\nФокус: физика, читаемость, свет, тайминг.\nФон — национальный; одежда — яркая, сценическая, реалистичная.\n\n## Требования\n* Язык: русский.\n* Реализм: реальный масштаб, без миниатюр и кластеров, камера строго статична.\n* Укажи: тип кадра (например, средний план на уровни груди), частоту прыжков (Гц), ориентиры реального масштаба (плитка/фактура пола).\n* Если нужны слоумо-подсказки: упомяни «съёмка 60 fps → интерпретация 24 fps».\n* Реальный масштаб; без миниатюр и CGI.\n* Камера неподвижна, средний план.\n* Материалы одежды фотореалистичные (лайкра, глянец, сетка, латекс, неон).\n* «Съёмка 60 fps → интерпретация 24 fps» при необходимости.\n* Одежда эффектная, в стиле страны, с большим декальте\n* Реализм не нарушен\n\n## Финальный чек-лист\n* Только сцена прыжков и её физика?\n* Все секции присутствуют и заполнены целью/рисками?\n* Камера статична, параметры движения и звука заданы проверяемо?\n---\n## Шаблон ответа (заполни на русском)\nПерсона\n* Описание: Молодая очаравательная женщина с спортивным телосложением с очень большой грудью (21+) в {одежде}, ориентиры масштаба: {плитка/фактура}. Камера: статичный {средний план на уровни груди}.\n* Цель кадра: Обеспечить полную читаемость тела и дуги верёвки.\n* Риск/контроль: Избегать кадрирования, при котором верёвка выходит за границы кадра.\nОписание\n* Свет: мягкий ровный, читаемые тени под стопами; без бликов, «съедающих» контур.\n* Кадр: в рамке одновременно видны верхний просвет над головой и нижний под носками; камера неподвижна.\n* Механика: мягкие колени; приземление на переднюю часть стопы; локти близко к корпусу; плечи расслаблены.\n* Риск/контроль: следить за постоянством темпа; исключить смаз и «телепорт» между кадрами.\nПоведение скакалки\n* Просветы: верхний ~15–25 см, нижний ~2–5 см.\n* Контакт: краткий «тик» пола каждый цикл; зацепов нет.\n* Риск/контроль: не допускать пересечения верёвки с рамкой кадра/фоном, где теряется видимость.\nЗвук\n* Состав: свист/шелест верёвки (раз в цикл), лёгкий «тик» пола, мягкий удар обуви при приземлении, дыхание, нейтральный фон помещения.\n* Уровни: естественные, без усиления."
         },
         "promptType": "define",
         "text": "=Мне нужен сценарий: {{ $('Edit Fields').item.json.Scene }}"
@@ -5171,7 +5189,7 @@
       "parameters": {
         "contextWindowLength": 100,
         "sessionIdType": "customKey",
-        "sessionKey": "skaklka"
+        "sessionKey": "skaklkav2"
       },
       "position": [
         -3280,
@@ -5222,7 +5240,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $('Edit Fields1').item.json.promo.replace(/\\n/g, '').replace(/\"/g, '').replace(/\\//g, '').replace(/\\{/g, '').replace(/\\}/g, '').replace(/\\[/g, '').replace(/\\]/g, '').replace(/\\:/g, '').replace(/\\\\/g, '').replace(/\\(/g, '').replace(/\\)/g, '') }} Don't add text\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"Do not add text, figures, etc. other than the character. {{ $('Edit Fields1').item.json.promo.replace(/\\n/g, '').replace(/\"/g, '').replace(/\\//g, '').replace(/\\{/g, '').replace(/\\}/g, '').replace(/\\[/g, '').replace(/\\]/g, '').replace(/\\:/g, '').replace(/\\\\/g, '').replace(/\\(/g, '').replace(/\\)/g, '') }} Don't add text\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -5295,7 +5313,6 @@
           "name": "N8NTelegram"
         }
       },
-      "disabled": true,
       "id": "73abf3c4-2bd0-4217-8fba-7c3a2dcb0edf",
       "name": "Append or update row in sheet",
       "onError": "continueErrorOutput",
@@ -5325,10 +5342,10 @@
         },
         "documentId": {
           "__rl": true,
-          "cachedResultName": "ASMR Compression Footage",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cbKWCZ8QEndWiFE0xGRch0-SRI8qGvSLI4mnm8Kegx4/edit?usp=drivesdk",
+          "cachedResultName": "ASMR Jump",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4/edit?usp=drivesdk",
           "mode": "list",
-          "value": "1cbKWCZ8QEndWiFE0xGRch0-SRI8qGvSLI4mnm8Kegx4"
+          "value": "1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4"
         },
         "operation": "appendOrUpdate",
         "options": {},
@@ -5341,7 +5358,7 @@
         }
       },
       "position": [
-        864,
+        640,
         96
       ],
       "type": "n8n-nodes-base.googleSheets",
@@ -5377,7 +5394,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"Change the camera angle, but keep the emphasis on the chest.\",\n  \"image_urls\": [\n       \"{{ $('HTTP Request3').item.json.images[0].url }}\"\n     ]\n}",
+        "jsonBody": "={\n  \"prompt\": \"Change the camera angle\",\n  \"image_urls\": [\n       \"{{ $('HTTP Request3').item.json.images[0].url }}\"\n     ]\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -6330,7 +6347,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"Change the camera angle, but keep the emphasis on the chest.\",\n  \"image_urls\": [\n       \"{{ $('HTTP Request7').item.json.images[0].url }}\"\n     ]\n}",
+        "jsonBody": "={\n  \"prompt\": \"Change the camera angle\",\n  \"image_urls\": [\n       \"{{ $('HTTP Request7').item.json.images[0].url }}\"\n     ]\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -6666,7 +6683,7 @@
               "id": "18e20636-ce4b-4f41-bce5-a86cf4c834da",
               "name": "promo",
               "type": "string",
-              "value": "={{ $json.output.prompt }}"
+              "value": "=Promt\n{{ $json.output.prompt }}\nNegative promt\n{{ $json.output.negative_prompt }}"
             }
           ]
         },
@@ -6678,16 +6695,319 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "e68b0797-be24-4397-92fc-87facb311a37",
+      "name": "Append or update row in sheet8",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Футажи"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Футажи",
+              "id": "Футажи",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Футажи": "={{ $json.video.url }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "ASMR Jump",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cbKWCZ8QEndWiFE0xGRch0-SRI8qGvSLI4mnm8Kegx4/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        640,
+        416
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "b47e1125-73f4-49b7-b675-49552228ea62",
+      "name": "Append or update row in sheet9",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Футажи"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Футажи",
+              "id": "Футажи",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Футажи": "={{ $json.video.url }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "ASMR Jump",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cbKWCZ8QEndWiFE0xGRch0-SRI8qGvSLI4mnm8Kegx4/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        640,
+        752
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "55409274-bdcd-44e0-a9e6-e19c6b98350f",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "anthropic/claude-sonnet-4.5",
+        "options": {}
+      },
+      "position": [
+        -3152,
+        464
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "47e40222-eda5-4b5e-867c-21cc66f978c8",
+      "name": "OpenRouter Chat Model1",
+      "parameters": {
+        "model": "anthropic/claude-sonnet-4.5",
+        "options": {}
+      },
+      "position": [
+        -2080,
+        544
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "id": "8bdc4163-a103-4d3b-b661-654496048aac",
+      "name": "HTTP Request16",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 5d5d8aff2d0d49c29e76955295185dd66ce445dea632809d1abbb569df90dbeab9985eff66803dccc012b6c485e0e47f"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"template_id\": \"dd46a8e9-ca16-42bb-bd39-80f834eff50b\",\n  \"modifications\": {\n    \"Front-1.source\": \"{{ $json.links[0] }}\",\n    \"Front-2.source\": \"{{ $json.links[1] }}\",\n    \"Front-3.source\": \"{{ $json.links[2] }}\"\n  }\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.creatomate.com/v1/renders"
+      },
+      "position": [
+        1296,
+        752
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "3f41f947-7629-4cb7-b806-bb5f3d1216e5",
+      "name": "Wait",
+      "parameters": {
+        "unit": "minutes"
+      },
+      "position": [
+        1456,
+        752
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "281d04e9-2744-42a5-97f7-30356f2dd37b"
+    },
+    {
+      "id": "22545ff4-ad83-4ae6-8f80-56d6ed871a36",
+      "name": "Get Final Video1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 5d5d8aff2d0d49c29e76955295185dd66ce445dea632809d1abbb569df90dbeab9985eff66803dccc012b6c485e0e47f"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://api.creatomate.com/v1/renders/{{ $json.id }}"
+      },
+      "position": [
+        1616,
+        752
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "366112ae-42d0-46b4-8960-fa63ddf1bf22",
+      "name": "HTTP Request17",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.url }}"
+      },
+      "position": [
+        1776,
+        752
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "executeOnce": true,
+      "id": "593bdc19-9a7a-4bf7-875a-8af0d5e0dff4",
+      "name": "Get row(s) in sheet",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "ASMR Jump",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Лист1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1naPOWTeXJx5zoN_DUhShRYYLU_zL97GjFWa2nRYHIB4/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        816,
+        752
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6
+    },
+    {
+      "id": "64e519c7-48ba-4441-b228-8355d9a1444e",
+      "name": "Ссылки видео",
+      "parameters": {
+        "jsCode": "// Получаем все строки с ссылками\nconst links = items.map(item => item.json.link);\nconst Names = items.map(item => item.json.Name);// Получаем все ссылки из данных\n\n// Возвращаем массив ссылок\nreturn [\n  {\n    json: {\n      links: links,\n      Names: Names\n    }\n  }\n];\n"
+      },
+      "position": [
+        1136,
+        752
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "12160ea7-0ee2-4c30-903c-84c5bfd46c2a",
+      "name": "Edit Fields6",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68a99b2d-bf33-4535-83be-1128ed8bec61",
+              "name": "link",
+              "type": "string",
+              "value": "={{ $json['Футажи'] }}"
+            },
+            {
+              "id": "83aedc92-0f57-4d66-b572-72fde52cb610",
+              "name": "Name",
+              "type": "string",
+              "value": "={{ $('Жанры').item.json.output.title }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        976,
+        752
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {
-    "If": [
-      {
-        "json": {
-          "Scene": "Bright studio with seamless white backdrop. Static 9:16 mid-torso shot (50mm) from front-left (30°). Soft key light left, gentle rim right. Subject (identity locked, 21+): athletic hourglass woman in matte black deep-V sports top and high-waisted leggings, emerald eyes, dark-brown wavy hair. She performs slow-tempo jump rope (~1 Hz), focusing on precision as she maintains upright form and smooth landings. Deep neckline is visible but modest. Rope arc crisp, chest and hips sync to rhythm. Slight determination on face, occasional light smile. No visual effects or distortion. Clean DOF, no camera movement.\nAthletic young woman, 21+, hourglass build (90-60-90 cm), light skin, emerald eyes, dark-brown shoulder-length wavy hair. Large natural bust, defined waist and hips. Outfit: matte black deep-V sports top, black high-waisted leggings, minimalist black sneakers.\nRhythmic, slow jump rope in place. Deliberate, controlled bounces, rope passing smoothly. Subtle body movement; chest and hips move realistically with each jump. Light facial engagement, focused with slight smile. Breathing is visible but calm.\nStandard black speed rope; matte black athletic apparel (deep-V top, leggings, sneakers).\nMinimalist white photo studio, seamless backdrop (#FFFFFF), no props, soft graded lighting (WB 5600K)."
-        }
-      }
-    ],
     "Schedule Trigger1": [
       {
         "json": {
@@ -6702,13 +7022,6 @@
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
           "timestamp": "2025-09-10T17:00:00.006+02:00"
-        }
-      }
-    ],
-    "Проверка по критериям4": [
-      {
-        "json": {
-          "Scene": "Bright studio with seamless white backdrop. Static 9:16 mid-torso shot (50mm) from front-left (30°). Soft key light left, gentle rim right. Subject (identity locked, 21+): athletic hourglass woman in matte black deep-V sports top and high-waisted leggings, emerald eyes, dark-brown wavy hair. She performs slow-tempo jump rope (~1 Hz), focusing on precision as she maintains upright form and smooth landings. Deep neckline is visible but modest. Rope arc crisp, chest and hips sync to rhythm. Slight determination on face, occasional light smile. No visual effects or distortion. Clean DOF, no camera movement.\nAthletic young woman, 21+, hourglass build (90-60-90 cm), light skin, emerald eyes, dark-brown shoulder-length wavy hair. Large natural bust, defined waist and hips. Outfit: matte black deep-V sports top, black high-waisted leggings, minimalist black sneakers.\nRhythmic, slow jump rope in place. Deliberate, controlled bounces, rope passing smoothly. Subtle body movement; chest and hips move realistically with each jump. Light facial engagement, focused with slight smile. Breathing is visible but calm.\nStandard black speed rope; matte black athletic apparel (deep-V top, leggings, sneakers).\nMinimalist white photo studio, seamless backdrop (#FFFFFF), no props, soft graded lighting (WB 5600K)."
         }
       }
     ]
@@ -6744,6 +7057,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-14T16:34:12.000Z",
-  "versionId": "6760b44a-3bc7-430d-b17a-288017a3e7fd"
+  "updatedAt": "2025-10-20T16:47:23.000Z",
+  "versionId": "08683a45-c61f-446a-bcc3-1730d2963a94"
 }
