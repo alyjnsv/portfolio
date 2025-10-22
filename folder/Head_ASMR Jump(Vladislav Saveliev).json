@@ -221,17 +221,6 @@
         ]
       ]
     },
-    "HTTP Request11": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Create Video8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "HTTP Request12": {
       "main": [
         [
@@ -255,17 +244,6 @@
       ]
     },
     "HTTP Request14": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request15",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request15": {
       "main": [
         [
           {
@@ -351,17 +329,6 @@
         [
           {
             "index": 0,
-            "node": "HTTP Request4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "HTTP Request4": {
-      "main": [
-        [
-          {
-            "index": 0,
             "node": "Create Video5",
             "type": "main"
           }
@@ -395,7 +362,7 @@
         [
           {
             "index": 0,
-            "node": "HTTP Request11",
+            "node": "Create Video8",
             "type": "main"
           }
         ]
@@ -1666,7 +1633,7 @@
         "text": "=Напиши промт для kling ai до 2200 символов: {{ $('Генератор сценария').item.json.output }}.\nВАЖНО! Выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -1248,
+        -1104,
         80
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1684,7 +1651,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Анимация видео').item.json.output }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.images[0].url }}\"\n}",
         "method": "POST",
         "options": {
           "batching": {
@@ -1928,36 +1895,6 @@
       "typeVersion": 1.3
     },
     {
-      "id": "433359bd-39e7-4bd7-98ba-dbbc749cb497",
-      "name": "HTTP Request4",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "inputDataFieldName": "data",
-              "name": "file",
-              "parameterType": "formBinaryData"
-            },
-            {
-              "name": "upload_preset",
-              "value": "ml_default"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
-      },
-      "position": [
-        -272,
-        80
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
       "id": "5062e604-9b56-4264-8630-758fd619215e",
       "name": "HTTP Request1",
       "parameters": {
@@ -1969,7 +1906,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"Do not add text, figures, etc. other than the character. Only realistic image. It is important that the rope from the jump rope is at the bottom! {{ $('Edit Fields1').item.json.promo.replace(/\\n/g, '').replace(/\"/g, '').replace(/\\//g, '').replace(/\\{/g, '').replace(/\\}/g, '').replace(/\\[/g, '').replace(/\\]/g, '').replace(/\\:/g, '').replace(/\\\\/g, '').replace(/\\(/g, '').replace(/\\)/g, '') }} Don't add text\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"Do not add text, figures, etc. other than the character. Only realistic images, no 3D rendering or drawing.. It is important that the rope from the jump rope is at the bottom! {{ $('Edit Fields1').item.json.promo.replace(/\\n/g, '').replace(/\"/g, '').replace(/\\//g, '').replace(/\\{/g, '').replace(/\\}/g, '').replace(/\\[/g, '').replace(/\\]/g, '').replace(/\\:/g, '').replace(/\\\\/g, '').replace(/\\(/g, '').replace(/\\)/g, '') }} Don't add text\"\n}",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -1978,7 +1915,7 @@
         "url": "https://queue.fal.run/fal-ai/nano-banana"
       },
       "position": [
-        -896,
+        -752,
         80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -1991,7 +1928,7 @@
         "amount": 60
       },
       "position": [
-        -736,
+        -592,
         80
       ],
       "type": "n8n-nodes-base.wait",
@@ -2015,7 +1952,7 @@
         "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request1').item.json.request_id }}"
       },
       "position": [
-        -592,
+        -448,
         80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2029,7 +1966,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -448,
+        -304,
         80
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2105,7 +2042,7 @@
         "text": "=Напиши промт для kling ai до 2200 символов: {{ $('Генератор сценария').item.json.output }}.\nВАЖНО! Выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -1248,
+        -1104,
         400
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2132,7 +2069,7 @@
         "url": "https://queue.fal.run/fal-ai/nano-banana/edit"
       },
       "position": [
-        -864,
+        -720,
         400
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2145,7 +2082,7 @@
         "amount": 60
       },
       "position": [
-        -704,
+        -560,
         400
       ],
       "type": "n8n-nodes-base.wait",
@@ -2169,7 +2106,7 @@
         "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request5').item.json.request_id }}"
       },
       "position": [
-        -560,
+        -416,
         400
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2183,7 +2120,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -416,
+        -272,
         400
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2201,7 +2138,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Анимация видео').item.json.output }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.images[0].url }}\"\n}",
         "method": "POST",
         "options": {
           "batching": {
@@ -2407,36 +2344,6 @@
       "typeVersion": 4.2
     },
     {
-      "id": "55ca91f8-e154-4753-8999-9517e997a072",
-      "name": "HTTP Request11",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "inputDataFieldName": "data",
-              "name": "file",
-              "parameterType": "formBinaryData"
-            },
-            {
-              "name": "upload_preset",
-              "value": "ml_default"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
-      },
-      "position": [
-        -256,
-        400
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
       "id": "8c0d4e35-c05b-42e9-80a5-7a25459b72ed",
       "name": "Анимация видео6",
       "parameters": {
@@ -2448,7 +2355,7 @@
         "text": "=Напиши промт для kling ai до 2200 символов: {{ $('Генератор сценария').item.json.output }}.\nВАЖНО! Выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        -1248,
+        -1104,
         736
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2475,7 +2382,7 @@
         "url": "https://queue.fal.run/fal-ai/nano-banana/edit"
       },
       "position": [
-        -864,
+        -720,
         736
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2488,7 +2395,7 @@
         "amount": 60
       },
       "position": [
-        -704,
+        -560,
         736
       ],
       "type": "n8n-nodes-base.wait",
@@ -2512,7 +2419,7 @@
         "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $('HTTP Request12').item.json.request_id }}"
       },
       "position": [
-        -560,
+        -416,
         736
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2526,7 +2433,7 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -416,
+        -272,
         736
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -2544,7 +2451,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.url }}\"\n}",
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Анимация видео').item.json.output }}\",\n  \"duration\": \"10\",\n  \"negative_prompt\": \"blur, distort, and low quality\",\n  \"cfg_scale\": 0.5,\n\"image_url\": \"{{ $json.images[0].url }}\"\n}",
         "method": "POST",
         "options": {
           "batching": {
@@ -2744,36 +2651,6 @@
       },
       "position": [
         208,
-        736
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "87229c24-93d4-4e0e-8892-3d269142ac51",
-      "name": "HTTP Request15",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "inputDataFieldName": "data",
-              "name": "file",
-              "parameterType": "formBinaryData"
-            },
-            {
-              "name": "upload_preset",
-              "value": "ml_default"
-            }
-          ]
-        },
-        "contentType": "multipart-form-data",
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
-      },
-      "position": [
-        -256,
         736
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -3424,17 +3301,17 @@
     "Schedule Trigger1": [
       {
         "json": {
-          "Day of month": "10",
-          "Day of week": "Wednesday",
+          "Day of month": "21",
+          "Day of week": "Tuesday",
           "Hour": "17",
           "Minute": "00",
-          "Month": "September",
-          "Readable date": "September 10th 2025, 5:00:00 pm",
+          "Month": "October",
+          "Readable date": "October 21st 2025, 5:00:00 pm",
           "Readable time": "5:00:00 pm",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+02:00)",
           "Year": "2025",
-          "timestamp": "2025-09-10T17:00:00.006+02:00"
+          "timestamp": "2025-10-21T17:00:00.016+02:00"
         }
       }
     ]
@@ -3470,6 +3347,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-21T14:52:48.000Z",
-  "versionId": "c543c5b8-3560-49fa-8cc8-5a3fab654b72"
+  "updatedAt": "2025-10-22T12:47:04.000Z",
+  "versionId": "405dd5f4-a211-42c7-abdc-44d23c8ca980"
 }
