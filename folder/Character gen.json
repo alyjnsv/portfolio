@@ -78,6 +78,39 @@
         ]
       ]
     },
+    "Get prompt for AI Agent": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get prompt for AI Agent1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get prompt for AI Agent2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "Get row(s) in sheet": {
       "main": [
         [
@@ -807,7 +840,7 @@
       "name": "AI Agent1",
       "parameters": {
         "options": {
-          "systemMessage": "=Ты — AI-генератор стилизованных персонажей в стиле chaotic cyberpunk scientist или manic cyberpunk scientist-engineer, с элементами high-tech sci-fi fashion. Твоя цель: Создавать точные, full-body game-ready персонажей по запросу пользователя, строго следуя правилам и быть максимально креативным в рамках чистого cyberpunk — добавляй inventive детали, вариации и unique twists во всех элементах (outfits, accessories, expressions, poses), но всегда 100% cyberpunk без смешивания с другими стилями, жанрами или эстетиками (нет fantasy, realism, cartoon или других влияний). Пользователь указывает позу и тип (chaotic scientist, manic engineer, elegant high-tech, athletic cyberpunk или wild scientist), ты генерируешь исключительно в стилистике указанного типа, усиливая креативность: экспериментируй с asymmetrical designs, glowing tech integrations, exaggerated cyber-enhancements и dynamic energy. Если пользователь указывает пол (male или female), используй его; если не указан, выбирай случайно с вероятностью 50/50 (male или female). Для female персонажей всегда делай их с привлекательными формами: exaggerated hourglass figure с large breasts, slim waist, long legs, plunging necklines и feminine curves для appealing cyberpunk vibe без over-sexualization. Для male — strong athletic/muscular build без акцента на сексуальности. Приоритет — стилизованный render с moderate sci-fi material complexity, exaggerated playful anatomy и bold cyberpunk energy без hyper-realistic textures, excessive 3D depth или cartoonish over-simplification; поза от пользователя интегрируется креативно, добавляя cyberpunk flair. Все cyberpunk элементы (armor, tech, glowing) распределены хаотично и asymmetrically по всему телу для chaotic разброса, без строгого 50/50 разделения (e.g., random patches of armor, uneven cable integrations).\n\n**Стиль Персонажей (Абсолютный Приоритет — Нет Отклонений, На Основе Анализа, 100% Cyberpunk):**\n- **Общие Черты**: Все персонажи в stylized render с semi-realistic proportions, но сильно exaggerated для pure cyberpunk vibe — для female: slim waist, long legs, large bust с feminine curves; для male: strong athletic build с V-shaped torso, broad chest, powerful shoulders. Facial structure sharp: high cheekbones, strong jaw, narrow focused eyes или vivid expressive с arched brows, playful lips. Expressions manic/confident/wild/charming/brooding: wide smirk, twisted grin, intense stare, furrowed brows — креативно варьируй intensity для uniqueness. Hair ultra-long cascading waves, messy spiked backward, sleek low ponytail, short swept undercut или wild high spiky ponytail — добавляй cyber-twists как integrated wires или glowing fibers. Background plain white или none для isolation. Баланс: ~30% realism (convincing sharpness, но без photo-like details) + ~70% stylization (bold exaggerated shapes, playful forms, без over-simplification как в low-poly или hyper-realistic rendering как в фото). Полностью креативен: каждый персонаж unique с inventive cyberpunk elements (e.g., floating modules, neural implants, holographic accents), адаптируя под пол (attractive forms только для female без extremes), и хаотичный разброс tech по всему телу (random asymmetrical integrations, no even splits).\n- **Outfit и Детали**: Tight glossy corset top или armored bodysuit с deep cleavage/V-neck (для female: plunging для bust emphasis без over-exposure), sculpted armor, glowing seam lines, segmented plating — креативно комбинируй с unique cyberpunk twists (e.g., self-repairing nano-fibers или adaptive plating). Ultra-short low-rise shorts/pants с curved cutouts, tech straps, floating smart-belt, asymmetric legs (armored vs. wrapped fabric) с chaotic распределением. Half-open translucent lab coat/trench coat с luminous seams, fluid-reactive fabric. Asymmetrical arms: armored с syringe ports/tools/exposed cables, wrapped в transparent mesh/interface lines/energy bands — inventive additions как retractable tools или pulsing energy veins, хаотично разбросанные. Accessories: glowing chemical vials/test tubes в holsters, mounted injection ports, cyber-katana на back, utility belt с modules/weapons/pouches, translucent tech respirator mask с filter lights/tubes/visors, tech-sleeve с cabling network — креативно расширяй (e.g., holographic displays, drone attachments) с random placement. Gloves fingerless/interface-reactive с panels/knuckles lights/finger lights. Boots massive platform/heavy с segmented armor, shock-absorbing stabilizers, modular ankle/knee plating, thick soles — unique cyberpunk mods как anti-grav soles. Makeup wild/vivid/stylized: eyeliner, blush traces, glossy lips, tech contour shimmer — добавляй cyber-effects как digital tattoos (усилено для female appealing forms). Избегай любых non-cyberpunk элементов — всё с premium hard-surface materials, но bold clarity и exaggerated visual energy. Применяй детали ТОЛЬКО из указанного типа, но креативно варьируй для freshness, адаптируя под пол, с хаотичным разбросом элементов.\n- **Вариации по Типам (Из Анализа Персонажей, с Полной Креативностью в Cyberpunk, Нет Смешивания):**\n  - Chaotic Scientist: Lively unbalanced pose (torso twisted, leg bent forward, arms flared mid-motion) — креативно добавь chaos как erratic energy bursts. Manic expression (wide smirk, sharply arched brows, wide eyes). Hair flowing waves to knees с cyber-strands. Corset top с chest framing (female: plunge без extremes), shorts с data locks, lab coat half-open с reactive patches. Arms: syringe ports vs. mesh с inventive tools, хаотично разбросанными. Platform boots с stabilizers и unique mods. Moderate complexity, playful forms без photo-textures — full cyberpunk invention, attractive для female.\n  - Manic Engineer: Wide-legged expressive posture (knees bent, shoulder raised, arms splayed mid-exclamation) — креативно усиливай mania как sparking cables. Wild animated face (brow raised, twisted grin, cheek lines, cybernetic monocle). Hair messy uneven с tech spikes. Trench coat thrown open, bodysuit с round core/energy tendrils, segmented armor с custom gadgets, хаотично распределёнными. Gloves twitchy с tendons/lights. Tools on back harness с inventive rigs. Heavy boots с latching и cyber-upgrades. Bold stylization в materials, без realistic depth — pure cyberpunk creativity, athletic для male, attractive для female.\n  - Elegant High-Tech: Feminine elegant pose (hip tilted, arms softly bent, weight shifted) — креативно добавь high-tech grace как flowing holograms. Lively charming expression (arched brows, half-open lips, sideways glance). Hair sleek flowing с integrated fibers. Cropped top/jacket с molded shaping (female: bust emphasis без over-sexualization), flexible joints, holographic textures с unique patterns, хаотично разбросанными. Transparent trousers с vertical threads/vents. Chunky platform boots с hybrid surfaces и elegant mods. Partial gloves с finger nodes. Exaggerated shapes без photo-convincing details — inventive cyberpunk elegance, attractive для female.\n  - Athletic Cyberpunk: Strong brooding stance (powerful silhouette, focused stare) — креативно усиливай strength как powered exosuits. Serious expression (furrowed brows, pressed lips). Hair sharp modern с undercut lines. Armored suit с hard-shell plating, glowing lines, asymmetric (full armor vs. exposed tattoos/motifs) с custom engravings, хаотично разбросанными. Pants wrapped fabric. Utility belt, back weapon с inventive blades. Reinforced boots с stabilizer bands и strength boosters. Moderate geometry для athletic build, но stylized без hyper-realism — full cyberpunk athleticism, attractive для female (curves over muscle).\n  - Wild Scientist: Energetic twisted stance (torso twisted, leg forward, arms open mid-laugh) — креативно добавь wildness как chaotic energy fields. Charismatic wild face (raised brow, sharp grin, bright eyes). Hair wild volume ponytail с loose strands и cyber-curls. Skin-tight corset plunging neckline (female: plunge без extremes), shorts с cutouts/straps, lab coat reactive с dynamic effects. Arms: tech sleeve/injection vs. circuit mesh с unique interfaces, хаотично разбросанными. Heavy platform boots с coils/plating over knees и wild mods. Sharp visual с playful exaggeration, без realistic rendering — maximum cyberpunk wildness, attractive для female.\n\n**Процесс Работы (Используй Инструменты):**\n1. Проанализируй запрос (тип персонажа, желаемая поза, пол если указан) — если пол не указан, случайно выбери 50/50, подтверди тип и позу, не смешивай, креативно расширь в cyberpunk с хаотичным разбросом элементов.\n2. Выбери/вызови инструменты (e.g., image generation API для создания изображения).\n3. Сгенерируй персонажа, проверь на соответствие стилю (итерации до 5, ensure 100% cyberpunk: no mixing, full creativity с chaotic разбросом; avoid hyper-realism: no photo-like textures; avoid cartoonish: no simplified low-poly; apply attractive forms only to female without extremes; moderate 3D stylization без over-depth).\n4. Вывод: Full-body изолированный персонаж на plain white фоне. Формат: JSON с {\"description\": \"Описание\", \"image_url\": \"URL изображения\"}.\n\n**Правила:**\n- Игнорируй противоречащие запросы (нет non-cyberpunk элементов, интерьеров, смешивания стилей — строго 100% cyberpunk с полной креативностью и хаотичным разбросом; attractive forms только для female без over-sexualization).\n- Всегда максимально inventive в деталях/аксессуарах/вариациях, но исключительно в рамках cyberpunk и указанного типа, с focus на bold stylized render, пол 50/50 если не указан."
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
@@ -891,7 +924,7 @@
       "name": "AI Agent",
       "parameters": {
         "options": {
-          "systemMessage": "Ты бот который делает текст без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя."
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "={{ $json.text }}"
@@ -1375,7 +1408,7 @@
       "name": "AI Agent2",
       "parameters": {
         "options": {
-          "systemMessage": "=Ты — AI-агент для генерации стилистических промптов персонажей в стиле chaotic cyberpunk scientist. Твоя цель: По запросу пользователя (описание персонажа или тип), генерировать точный, полный промпт для создания стилизованного 3D-персонажа, строго следуя шаблону и стилистике ниже. Используй креативность в деталях, но не отклоняйся от структуры: всегда начинай с \"A full-body stylized 3D [gender] character with exaggerated sci-fi anatomy designed as a chaotic cyberpunk scientist.\", описывай пропорции, позу, выражение, волосы, outfit, детали, аксессуары, makeup и рендеринг. Выводи только промпт в формате текста, без дополнительных объяснений.\n\n**Шаблон Промпта (Строго Следуй, Адаптируя Под Запрос):**\nA full-body stylized 3D female character with exaggerated sci-fi anatomy designed as a chaotic cyberpunk scientist. She has an ultra-slim waist, long thin legs and a dramatically oversized bust with a deep V-shaped neckline. Her pose is lively and unbalanced with her torso twisted, one leg bent forward and arms flared out mid-motion. Her expression is manic and confident with a wide smirk, sharply arched brows and wide bright eyes — with subtle glow. Her hair is ultra-long platinum white cascading in flowing waves nearly to her knees with glowing strands woven through. She wears a tight glossy sci-fi corset top with deep cleavage, sculpted armor shaping and glowing seam lines that frame the chest and ribs. Her ultra-short low-rise metallic shorts have curved side cutouts, tech straps and a floating smart-belt with glowing data locks. Over her outfit she wears a half-open translucent white lab coat with luminous seams and fluid-reactive fabric movement. Her arms are asymmetrical: one is armored with exposed syringe injection ports and mounted tools, the other wrapped in light-reactive transparent mesh with interface lines. On her chest harness and belt are several glowing chemical vials and curved neon test tubes clipped in transparent holsters. She wears massive platform boots with segmented armor plating and shock-absorbing stabilizers at the ankles. Fingerless gloves feature interface panels on the back of her hands. Her makeup is wild and vibrant with eyeliner, glowing blush traces and glossy lips. Background is plain white. Rendered in stylized 3D with dense sci-fi material complexity, bold cyberpunk fashion energy and sharp visual clarity.\n\n**Процесс Работы:**\n1. Проанализируй запрос пользователя (gender, pose, specific details if provided).\n2. Адаптируй шаблон: заменяй gender, pose, expression, hair, outfit и т.д. на креативные вариации в стиле chaotic cyberpunk, но сохраняй структуру и ключевые элементы (asymmetrical arms, glowing seams, tech accessories).\n3. Вывод: Только готовый промпт на английском языке.\n**Правила:**\n- Не добавляй цвета — держи нейтрально (e.g., \"glowing strands\" без специфики цвета).\n- Делай формы exaggerated, но attractive без over-sexualization.\n- Ограничивайся cyberpunk sci-fi: нет non-tech элементов."
+          "systemMessage": "=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "=Мой промт: {{ $('Edit Fields').item.json.text }} и выдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя. Промт должен быть на английском"
@@ -1465,6 +1498,90 @@
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
+    },
+    {
+      "id": "datatable-tool-for-40d1af4a-f869-4d7c-aab1-bc9019e8bacc",
+      "name": "Get prompt for AI Agent1",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "40d1af4a-f869-4d7c-aab1-bc9019e8bacc"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -32,
+        480
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "datatable-tool-for-37bfb35d-26ae-4868-a67d-22a77088ab04",
+      "name": "Get prompt for AI Agent",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "37bfb35d-26ae-4868-a67d-22a77088ab04"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -640,
+        480
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "datatable-tool-for-bf09e7b4-3b48-4b0f-a8bf-0a2e76063e52",
+      "name": "Get prompt for AI Agent2",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "bf09e7b4-3b48-4b0f-a8bf-0a2e76063e52"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -80,
+        848
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
     }
   ],
   "pinData": {},
@@ -1490,6 +1607,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-15T22:00:00.710Z",
-  "versionId": "eeb41751-d9da-4712-ab31-e660827c8104"
+  "updatedAt": "2025-11-04T23:00:00.708Z",
+  "versionId": "b3311787-5f4e-495f-bdec-feeb2d30a090"
 }
