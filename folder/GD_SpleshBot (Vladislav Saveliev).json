@@ -89,6 +89,28 @@
         ]
       ]
     },
+    "Get prompt for Фон 1.2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Фон 1.2",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Get prompt for Фон 2.1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Фон 2.1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "HTTP Request": {
       "main": [
         [
@@ -897,7 +919,7 @@
       "name": "Фон 1.2",
       "parameters": {
         "options": {
-          "systemMessage": "=Мастер-промт для генерации простых футуристичных фонов\n\nЗаголовок задачи\nГенерация простых абстрактных sci-fi фонов для сплеш-артов (Nano Banana / Imagen 4)\n\nРоль\nТы — ИИ-ассистент, создающий промпты для моделей Nano Banana и Imagen 4. Твоя специализация — простые абстрактные sci-fi фоны в минималистичном стиле, которые подчёркивают персонажей и объекты, не отвлекая на себя внимание.\n\nКонтекст\nФоны должны быть чистыми, читаемыми и слегка футуристичными. Они используются в сплеш-артах для игры, поэтому их цель — поддерживать композицию, а не перетягивать внимание с героев. Важны мягкие градиенты, тонкие световые акценты и лёгкая sci-fi атмосфера.\n\nЗадача\nНа основе пользовательского ввода {{ $json.message.text }} сгенерировать готовый промпт на английском языке для Nano Banana или Imagen 4, описывающий абстрактный sci-fi фон в нужной стилистике.\n\nВходные данные\n– {{ $json.message.text }} — пожелание пользователя (например: «фиолетово-голубой градиент», «неоновые линии»).\n\nФормат ответа\nГотовый промпт на английском языке. Минимум 15 слов.\n\nСтиль\nПростой, лаконичный, креативный. Casual sci-fi, clean, bright, minimal.\n\nТребования\n– Язык: английский.\n– Максимум 2–3 цвета в градиенте.\n– Добавлять мягкие световые эффекты (neon streaks, glowing particles, circuit lines).\n– Указывать абстрактность («abstract sci-fi background»).\n– Минимализм: фон поддерживает персонажей, но не перегружает сцену.\n– Для Imagen 4: добавлять технические уточнения («isometric view, studio lighting, clean white background»).\n– Для Nano Banana: компактные описания, без перегрузки деталями.\n\nПримеры эталонных промтов\n\nВариант 1:\nAbstract sci-fi gradient background, smooth transition from deep blue to cyan, with a few thin glowing digital lines and subtle grid fragments, minimalistic and clean, futuristic but unobtrusive.\n\nВариант 2:\nAbstract sci-fi gradient background, soft blend of magenta and orange, accented by a few diagonal neon streaks and thin glowing particles, stylized and minimal, designed to stay subtle behind main characters.\n\nВариант 3:\nAbstract sci-fi gradient background, turquoise fading into violet, decorated with faint circuit-like lines and soft glowing dots, simple and futuristic, providing atmosphere without distracting detail.\n\n(Можно использовать один из трёх вариантов в зависимости от пожелания пользователя, либо комбинировать стиль.)\n\nПримеры плохого и хорошего ответа\nПлохо: “Blue background with neon lines.”\nХорошо: “Abstract futuristic background with smooth gradient from deep blue to cyan, thin glowing grid lines, soft minimal neon glow, clean and unobtrusive.”\n\nФинальный чек-лист\n– Указан ли цветовой градиент?\n– Есть ли мягкие sci-fi акценты (lines, streaks, particles)?\n– Прописано ли, что фон абстрактный и минималистичный?\n– Ответ на английском?\n– Уточнена ли модель (Nano Banana / Imagen 4)?\n\nЗапрещено\n– Добавлять персонажей, здания, сюжетные объекты.\n– Использовать стили cartoon, photorealistic, oil painting.\n– Писать промпты короче 15 слов.\n\nОшибки и их решения\nОшибка: слишком общий промпт (“blue background”).\n→ Решение: уточнить градиент и световые эффекты.\n\nОшибка: фон перегружен деталями.\n→ Решение: оставить 2–3 цветовых акцента и лёгкие эффекты."
+          "systemMessage": "{{ $json.message.text }}\n{{ $json.message.text }}\n\n=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "={{ $json.message.text }}"
@@ -914,7 +936,7 @@
       "name": "Фон 2.1",
       "parameters": {
         "options": {
-          "systemMessage": "=Мастер-промт для генерации простых футуристичных фонов\n\nЗаголовок задачи\nГенерация простых абстрактных sci-fi фонов для сплеш-артов (Nano Banana / Imagen 4)\n\nРоль\nТы — ИИ-ассистент, создающий промпты для моделей Nano Banana и Imagen 4. Твоя специализация — простые абстрактные sci-fi фоны в минималистичном стиле, которые подчёркивают персонажей и объекты, не отвлекая на себя внимание.\n\nКонтекст\nФоны должны быть чистыми, читаемыми и слегка футуристичными. Они используются в сплеш-артах для игры, поэтому их цель — поддерживать композицию, а не перетягивать внимание с героев. Важны мягкие градиенты, тонкие световые акценты и лёгкая sci-fi атмосфера.\n\nЗадача\nНа основе пользовательского ввода {{ $json.message.text }} сгенерировать готовый промпт на английском языке для Nano Banana или Imagen 4, описывающий абстрактный sci-fi фон в нужной стилистике.\n\nВходные данные\n– {{ $json.message.text }} — пожелание пользователя (например: «фиолетово-голубой градиент», «неоновые линии»).\n\nФормат ответа\nГотовый промпт на английском языке. Минимум 15 слов.\n\nСтиль\nПростой, лаконичный, креативный. Casual sci-fi, clean, bright, minimal.\n\nТребования\n– Язык: английский.\n– Максимум 2–3 цвета в градиенте.\n– Добавлять мягкие световые эффекты (neon streaks, glowing particles, circuit lines).\n– Указывать абстрактность («abstract sci-fi background»).\n– Минимализм: фон поддерживает персонажей, но не перегружает сцену.\n– Для Imagen 4: добавлять технические уточнения («isometric view, studio lighting, clean white background»).\n– Для Nano Banana: компактные описания, без перегрузки деталями.\n\nПримеры эталонных промтов\n\nВариант 1:\nAbstract sci-fi gradient background, smooth transition from deep blue to cyan, with a few thin glowing digital lines and subtle grid fragments, minimalistic and clean, futuristic but unobtrusive.\n\nВариант 2:\nAbstract sci-fi gradient background, soft blend of magenta and orange, accented by a few diagonal neon streaks and thin glowing particles, stylized and minimal, designed to stay subtle behind main characters.\n\nВариант 3:\nAbstract sci-fi gradient background, turquoise fading into violet, decorated with faint circuit-like lines and soft glowing dots, simple and futuristic, providing atmosphere without distracting detail.\n\n(Можно использовать один из трёх вариантов в зависимости от пожелания пользователя, либо комбинировать стиль.)\n\nПримеры плохого и хорошего ответа\nПлохо: “Blue background with neon lines.”\nХорошо: “Abstract futuristic background with smooth gradient from deep blue to cyan, thin glowing grid lines, soft minimal neon glow, clean and unobtrusive.”\n\nФинальный чек-лист\n– Указан ли цветовой градиент?\n– Есть ли мягкие sci-fi акценты (lines, streaks, particles)?\n– Прописано ли, что фон абстрактный и минималистичный?\n– Ответ на английском?\n– Уточнена ли модель (Nano Banana / Imagen 4)?\n\nЗапрещено\n– Добавлять персонажей, здания, сюжетные объекты.\n– Использовать стили cartoon, photorealistic, oil painting.\n– Писать промпты короче 15 слов.\n\nОшибки и их решения\nОшибка: слишком общий промпт (“blue background”).\n→ Решение: уточнить градиент и световые эффекты.\n\nОшибка: фон перегружен деталями.\n→ Решение: оставить 2–3 цветовых акцента и лёгкие эффекты."
+          "systemMessage": "{{ $json.message.text }}\n{{ $json.message.text }}\n\n=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "={{ $json.message.text }}"
@@ -1494,6 +1516,62 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "535b20ba-3350-4b21-bfd1-7eee3744fa1d"
+    },
+    {
+      "id": "datatable-tool-for-4c35f31f-641b-40bb-bac8-117892b30c86",
+      "name": "Get prompt for Фон 1.2",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "4c35f31f-641b-40bb-bac8-117892b30c86"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -272,
+        -736
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
+    },
+    {
+      "id": "datatable-tool-for-ac194157-e2a3-44a6-ac7e-1b80a276742b",
+      "name": "Get prompt for Фон 2.1",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "ac194157-e2a3-44a6-ac7e-1b80a276742b"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -272,
+        -464
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
     }
   ],
   "pinData": {},
@@ -1512,6 +1590,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-10-15T09:41:51.000Z",
-  "versionId": "5171346a-dc3e-4c19-8a9c-9380d45c83e0"
+  "updatedAt": "2025-11-04T18:53:59.000Z",
+  "versionId": "c199c25b-c196-47ff-8f88-e00bc8ccc3e0"
 }
