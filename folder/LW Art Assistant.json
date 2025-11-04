@@ -676,6 +676,17 @@
         ]
       ]
     },
+    "Get prompt for AI Agent1": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "Get row(s) in sheet": {
       "main": [
         [
@@ -4346,7 +4357,7 @@
       "name": "AI Agent1",
       "parameters": {
         "options": {
-          "systemMessage": "=Ты — AI агент в n8n.\n\nТекущий воркфлоу называется: \"{{ $workflow.name }}\"\nТвоя нода называется: \"AI Agent\"\n\nУ тебя есть доступ к инструменту (tool) Google Sheets с колонками:\n- workflowName\n- nodeName\n- prompt\n\nТвоя задача:\n1. Используй название воркфлоу \"{{ $workflow.name }}\" и название ноды \"AI Agent\".\n2. Обратись к Google Sheets tool и найди строку, где workflowName = \"{{ $workflow.name }}\" и nodeName = \"AI Agent\".\n3. Возьми содержимое из колонки \"prompt\".\n4. **Немедленно выполни эту инструкцию** для текста, который уже передан в поле \"{{ $json.comment}}\". \n5. Не задавай уточняющих вопросов и не ожидай подтверждения — просто выполняй найденный prompt.\n6. Если подходящей строки нет — верни только: \"❌ Промпт для [{{ $workflow.name }} → обработка текста] не найден\".\n"
+          "systemMessage": "{{ $workflow.name }}\n{{ $workflow.name }}\n{{ $workflow.name }}\n{{ $json.comment}}\n{{ $workflow.name }}\n\n=Обратись к data table для получения промпта, полученный промпт используй для обработки входящего сообщения, обработай полученное сообщение сразу же, не спрашивай, не добавляй доп. текст, просто исполни инструкцию которую ты получил из data table"
         },
         "promptType": "define",
         "text": "=Текст для анализа: \"{{ $json.comment }}\""
@@ -4357,6 +4368,34 @@
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
+    },
+    {
+      "id": "datatable-tool-for-1477947b-44bc-4540-9f16-252e70f0bc76",
+      "name": "Get prompt for AI Agent1",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "VzaWf779bSTwqxiQ"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "node_id",
+              "keyValue": "1477947b-44bc-4540-9f16-252e70f0bc76"
+            }
+          ]
+        },
+        "limit": 1000,
+        "matchType": "allConditions",
+        "operation": "get"
+      },
+      "position": [
+        -4240,
+        2416
+      ],
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1
     }
   ],
   "pinData": {},
@@ -4388,6 +4427,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-10-15T09:45:29.000Z",
-  "versionId": "60adfa94-77a2-404f-aef1-94b2b8c385b6"
+  "updatedAt": "2025-11-04T19:12:01.000Z",
+  "versionId": "7a61a1f7-a7ee-4f57-abc1-17cef33982eb"
 }
