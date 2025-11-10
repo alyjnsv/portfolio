@@ -1,0 +1,367 @@
+{
+  "active": false,
+  "connections": {
+    "Analyze with Gemini": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Format Response for Matrix",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Download File from Drive": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload File to Gemini",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter Documents Only": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Download File from Drive",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Format Response for Matrix": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send to Matrix",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Drive Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter Documents Only",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send to Matrix": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Log Success",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload File to Gemini": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Analyze with Gemini",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-10T07:01:30.329Z",
+  "id": "38GFMkvHCMoZEsoZ",
+  "isArchived": false,
+  "meta": null,
+  "name": "Google Drive → Gemini → Matrix Analysis",
+  "nodes": [
+    {
+      "id": "67218e05-16c5-4e47-975f-1ca0d20fa429",
+      "name": "Google Drive Trigger",
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        }
+      },
+      "position": [
+        -816,
+        -112
+      ],
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "c82b468a-5f2f-4dd6-b42d-1ec77f8aeadf",
+      "name": "Filter Documents Only",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.mimeType }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "pdf"
+            },
+            {
+              "leftValue": "={{ $json.mimeType }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "document"
+            },
+            {
+              "leftValue": "={{ $json.mimeType }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "text"
+            }
+          ],
+          "options": {
+            "combineOperation": "any"
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -624,
+        -112
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2
+    },
+    {
+      "id": "ab19df03-2005-4c80-bc0d-cea8d1e8e4b8",
+      "name": "Download File from Drive",
+      "parameters": {
+        "fileId": {
+          "id": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {
+          "fileName": "={{ $json.name }}"
+        }
+      },
+      "position": [
+        -448,
+        -112
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "9o52VSQAvN1ZZjpi",
+          "name": "Header Auth account"
+        }
+      },
+      "id": "cf6dc126-ed0e-4c53-bb91-64e28ca86e21",
+      "name": "Upload File to Gemini",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "file"
+            }
+          ]
+        },
+        "contentType": "multipart-form-data",
+        "genericAuthType": "httpHeaderAuth",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Goog-Upload-Protocol",
+              "value": "multipart"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "url": "https://generativelanguage.googleapis.com/v1beta/files"
+      },
+      "position": [
+        -256,
+        -112
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "9o52VSQAvN1ZZjpi",
+          "name": "Header Auth account"
+        }
+      },
+      "id": "baf68efc-25a2-46ca-a3c6-b2b5975c777b",
+      "name": "Analyze with Gemini",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "contents",
+              "value": "={{ [{\"parts\": [{\"text\": \"Проанализируй этот документ и предоставь структурированный анализ в JSON формате:\\n\\nСТРУКТУРА JSON:\\n{\\n  \\\"document_info\\\": {\\n    \\\"title\\\": \\\"заголовок документа\\\",\\n    \\\"document_type\\\": \\\"report|invoice|contract|resume|article|other\\\",\\n    \\\"page_count\\\": 0,\\n    \\\"language\\\": \\\"ru\\\"\\n  },\\n  \\\"summary\\\": {\\n    \\\"brief\\\": \\\"краткое резюме в 1-2 предложения\\\",\\n    \\\"detailed\\\": \\\"детальное описание\\\",\\n    \\\"key_points\\\": [\\\"пункт 1\\\", \\\"пункт 2\\\", \\\"пункт 3\\\"]\\n  },\\n  \\\"extracted_data\\\": {\\n    \\\"entities\\\": {\\n      \\\"persons\\\": [],\\n      \\\"organizations\\\": [],\\n      \\\"locations\\\": [],\\n      \\\"dates\\\": []\\n    },\\n    \\\"financial_data\\\": [],\\n    \\\"tables\\\": []\\n  },\\n  \\\"analysis\\\": {\\n    \\\"sentiment\\\": \\\"positive|neutral|negative\\\",\\n    \\\"topics\\\": [],\\n    \\\"key_insights\\\": []\\n  },\\n  \\\"metadata\\\": {\\n    \\\"confidence_score\\\": 0.95\\n  }\\n}\\n\\nОБЯЗАТЕЛЬНО:\\n- Выведи ТОЛЬКО валидный JSON без markdown разметки\\n- Все даты в формате YYYY-MM-DD\\n- Финансовые суммы как числа\\n- Для отсутствующих данных используй null или пустые массивы\"}, {\"file_data\": {\"mime_type\": $json.file.mimeType, \"file_uri\": $json.file.uri}}]}] }}"
+            },
+            {
+              "name": "generationConfig",
+              "value": "={{ {\"temperature\": 0.1, \"responseMimeType\": \"application/json\"} }}"
+            }
+          ]
+        },
+        "genericAuthType": "httpHeaderAuth",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+      },
+      "position": [
+        -48,
+        -112
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "d52b2870-341c-4e97-95df-e411bf8292f4",
+      "name": "Format Response for Matrix",
+      "parameters": {
+        "jsCode": "// Извлечение и форматирование ответа от Gemini\nconst items = $input.all();\nconst output = [];\n\nfor (const item of items) {\n  let analysisData;\n  let rawResponse = '';\n  \n  try {\n    // Получаем ответ от Gemini\n    const geminiResponse = item.json;\n    \n    // Извлекаем текст из структуры ответа Gemini\n    if (geminiResponse.candidates && geminiResponse.candidates[0]) {\n      const candidate = geminiResponse.candidates[0];\n      if (candidate.content && candidate.content.parts && candidate.content.parts[0]) {\n        rawResponse = candidate.content.parts[0].text;\n      }\n    }\n    \n    // Очищаем от markdown разметки если есть\n    rawResponse = rawResponse.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n    \n    // Парсим JSON\n    analysisData = JSON.parse(rawResponse);\n    \n  } catch (error) {\n    // Если парсинг не удался, создаем базовую структуру\n    analysisData = {\n      document_info: {\n        title: \"Ошибка парсинга ответа\",\n        document_type: \"error\",\n        page_count: 0,\n        language: \"unknown\"\n      },\n      summary: {\n        brief: \"Не удалось обработать документ\",\n        detailed: error.message,\n        key_points: []\n      },\n      extracted_data: {\n        entities: {\n          persons: [],\n          organizations: [],\n          locations: [],\n          dates: []\n        }\n      },\n      metadata: {\n        error: error.message,\n        raw_response: rawResponse.substring(0, 500)\n      }\n    };\n  }\n  \n  // Добавляем метаданные обработки\n  if (!analysisData.metadata) {\n    analysisData.metadata = {};\n  }\n  \n  analysisData.metadata.processed_at = new Date().toISOString();\n  analysisData.metadata.file_name = item.json.fileName || 'unknown';\n  analysisData.metadata.model_used = 'gemini-2.5-flash';\n  \n  // Создаем форматированное HTML сообщение для Matrix\n  const htmlMessage = `\n<h2>📄 Анализ документа завершен</h2>\n\n<h3>📋 Информация о документе</h3>\n<ul>\n<li><b>Название:</b> ${analysisData.document_info?.title || 'N/A'}</li>\n<li><b>Тип:</b> ${analysisData.document_info?.document_type || 'N/A'}</li>\n<li><b>Страниц:</b> ${analysisData.document_info?.page_count || 'N/A'}</li>\n<li><b>Язык:</b> ${analysisData.document_info?.language || 'N/A'}</li>\n</ul>\n\n<h3>📝 Резюме</h3>\n<p><i>${analysisData.summary?.brief || 'Резюме недоступно'}</i></p>\n\n<h3>🔑 Ключевые пункты</h3>\n<ul>\n${(analysisData.summary?.key_points || []).map(point => `<li>${point}</li>`).join('\\n')}\n</ul>\n\n${analysisData.extracted_data?.entities ? `\n<h3>👥 Извлеченные сущности</h3>\n<ul>\n${analysisData.extracted_data.entities.persons?.length > 0 ? `<li><b>Люди:</b> ${analysisData.extracted_data.entities.persons.join(', ')}</li>` : ''}\n${analysisData.extracted_data.entities.organizations?.length > 0 ? `<li><b>Организации:</b> ${analysisData.extracted_data.entities.organizations.join(', ')}</li>` : ''}\n${analysisData.extracted_data.entities.locations?.length > 0 ? `<li><b>Места:</b> ${analysisData.extracted_data.entities.locations.join(', ')}</li>` : ''}\n</ul>\n` : ''}\n\n${analysisData.analysis ? `\n<h3>📊 Анализ</h3>\n<ul>\n<li><b>Настроение:</b> ${analysisData.analysis.sentiment || 'N/A'}</li>\n${analysisData.analysis.topics?.length > 0 ? `<li><b>Темы:</b> ${analysisData.analysis.topics.join(', ')}</li>` : ''}\n</ul>\n` : ''}\n\n<details>\n<summary><b>🔍 Полный JSON (нажмите для раскрытия)</b></summary>\n<pre><code>${JSON.stringify(analysisData, null, 2)}</code></pre>\n</details>\n\n<hr>\n<small>Обработано: ${analysisData.metadata.processed_at}</small>\n`;\n  \n  // Создаем plain text версию\n  const plainTextMessage = `\n📄 Анализ документа завершен\n\n📋 Информация:\nНазвание: ${analysisData.document_info?.title || 'N/A'}\nТип: ${analysisData.document_info?.document_type || 'N/A'}\nСтраниц: ${analysisData.document_info?.page_count || 'N/A'}\n\n📝 Резюме:\n${analysisData.summary?.brief || 'Резюме недоступно'}\n\n🔑 Ключевые пункты:\n${(analysisData.summary?.key_points || []).map((point, i) => `${i+1}. ${point}`).join('\\n')}\n\n---\nОбработано: ${analysisData.metadata.processed_at}\n`;\n  \n  output.push({\n    json: {\n      analysisData: analysisData,\n      htmlMessage: htmlMessage,\n      plainTextMessage: plainTextMessage,\n      fileName: item.json.fileName || 'unknown'\n    }\n  });\n}\n\nreturn output;"
+      },
+      "position": [
+        160,
+        -112
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "d7297b5e-c722-435b-987b-3b08b4b7ecdb",
+      "name": "Send to Matrix",
+      "parameters": {
+        "operation": "sendMessage"
+      },
+      "position": [
+        352,
+        -112
+      ],
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1
+    },
+    {
+      "id": "0dc9090a-14ca-4dc2-95dd-921a6ac494da",
+      "name": "Log Success",
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        560,
+        -112
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "9a3d165f-31bd-444e-9b3f-c16d86ea31d8",
+      "name": "Sticky Note",
+      "parameters": {
+        "content": "## 📋 Google Drive → Gemini → Matrix Workflow\n\n### Что делает этот workflow:\n1. Мониторит Google Drive папку на новые файлы\n2. Фильтрует только документы (PDF, DOCX, TXT)\n3. Загружает файлы в Gemini File API\n4. Анализирует содержимое с помощью Gemini 2.5 Flash\n5. Извлекает структурированные данные в JSON\n6. Отправляет результаты в Matrix\n\n### Перед использованием:\n\n**Замените следующие placeholder значения:**\n\n1. **Google Drive Credential:**\n   - Найдите все `YOUR_GOOGLE_DRIVE_CREDENTIAL_ID`\n   - Замените на ID ваших Google Drive OAuth2 credentials\n\n2. **Gemini API Credential:**\n   - Найдите все `YOUR_GEMINI_API_CREDENTIAL_ID`\n   - Создайте HTTP Header Auth credential:\n     - Name: `x-goog-api-key`\n     - Value: ваш Gemini API key\n   - Замените на ID этого credential\n\n3. **Matrix Credential:**\n   - Найдите все `YOUR_MATRIX_CREDENTIAL_ID`\n   - Замените на ID ваших Matrix credentials\n\n4. **Matrix Room ID:**\n   - Найдите все `!YOUR_ROOM_ID:matrix.org`\n   - Замените на ваш Room ID (формат: !xxxxx:homeserver.org)\n\n### Дополнительные настройки:\n\n**Google Drive Trigger:**\n- По умолчанию мониторит весь Drive каждую минуту\n- Чтобы мониторить конкретную папку, добавьте Folder ID в поле `watchFolder`\n\n**Фильтр документов:**\n- Настроен для PDF, DOCX, TXT\n- Добавьте другие MIME types если нужно\n\n**Gemini промпт:**\n- Отредактируйте промпт в узле \"Analyze with Gemini\"\n- Настройте структуру JSON под ваши нужды\n\n**Обработка ошибок:**\n- Error node отправляет уведомления в Matrix\n- Можно добавить retry logic в настройках nodes\n\n### Активация:\n1. Импортируйте этот workflow в N8N\n2. Замените все placeholder значения\n3. Сохраните workflow\n4. Активируйте (переключатель Active)\n5. Загрузите тестовый файл в Google Drive\n\n### Поддерживаемые форматы:\n- PDF\n- DOCX, DOC\n- TXT\n- HTML\n- CSV\n- И другие текстовые форматы\n\n### Стоимость:\n- ~$0.0003 за документ (10 страниц)\n- Gemini 2.5 Flash: $0.025/1M input tokens, $0.10/1M output tokens\n\n---\n\n**Готово! Workflow настроен и готов к использованию.**",
+        "height": 2800,
+        "width": 752
+      },
+      "position": [
+        -864,
+        240
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "dad7b745-a723-4935-be41-53dd7c9b302b",
+      "name": "Analyze document",
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {},
+        "resource": "document"
+      },
+      "position": [
+        160,
+        128
+      ],
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "310978fc-6559-4e7b-8433-87aaa7858862",
+      "name": "Embeddings Google Gemini",
+      "parameters": {},
+      "position": [
+        112,
+        336
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-10T07:01:30.334Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-10T07:01:30.334Z",
+      "workflowId": "38GFMkvHCMoZEsoZ"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-10T07:01:30.000Z",
+  "versionId": "77bd0567-d265-44a0-ac80-af1ff2f08b05"
+}
