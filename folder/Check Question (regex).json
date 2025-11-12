@@ -991,7 +991,7 @@
       "name": "Structured Output Parser6",
       "parameters": {
         "autoFix": true,
-        "jsonSchemaExample": "{\n  \"tone\": \"строка с описанием тона\",\n  \"clarity\": \"строка с описанием ясности\",\n  \"risk\": \"строка с описанием риска\"\n}"
+        "jsonSchemaExample": "{\n\"tone\": \"-\",\n\"clarity\": \"-\",\n\"risk \": \"-\"\n}"
       },
       "position": [
         -1184,
@@ -2213,7 +2213,7 @@
               "id": "0dcb1fc4-8156-45dc-83ef-4b62a7c49956",
               "name": "answer",
               "type": "string",
-              "value": "={{ $json.body.question }}"
+              "value": "={{ $json.body.answer }}"
             }
           ]
         },
@@ -3219,6 +3219,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-11-11T06:27:42.000Z",
-  "versionId": "0093b84c-9dc5-4bb1-a91f-8760da368a2e"
+  "updatedAt": "2025-11-12T05:54:12.000Z",
+  "versionId": "f84cd28b-a12a-4aab-9f7d-6a466bb95055"
 }
