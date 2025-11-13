@@ -1,6 +1,17 @@
 {
   "active": true,
   "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Markdown",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Aggregate1": {
       "main": [
         [
@@ -183,6 +194,17 @@
           {
             "index": 0,
             "node": "Проверка: это вопрос?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to Webhook7",
             "type": "main"
           }
         ]
@@ -371,6 +393,17 @@
           {
             "index": 0,
             "node": "Edit Fields (test)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -667,7 +700,7 @@
         [
           {
             "index": 0,
-            "node": "Respond to Webhook6",
+            "node": "Aggregate",
             "type": "main"
           }
         ]
@@ -2337,19 +2370,6 @@
       "typeVersion": 1.3
     },
     {
-      "id": "f4175d7a-4590-4a58-8cc4-4b0a3bcb9bcb",
-      "name": "Respond to Webhook6",
-      "parameters": {
-        "options": {}
-      },
-      "position": [
-        -1296,
-        2832
-      ],
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.4
-    },
-    {
       "id": "b5329f6c-fc58-4d45-95a0-bfef1c52cd24",
       "name": "Extract from File",
       "parameters": {
@@ -2964,6 +2984,77 @@
       ],
       "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
       "typeVersion": 1.3
+    },
+    {
+      "id": "a464a238-9e61-4266-8b4f-b6cbc4262510",
+      "name": "Aggregate",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "position": [
+        -1328,
+        2832
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "249edf46-13b9-4242-bfa1-f06c7aa7f19a",
+      "name": "Markdown",
+      "parameters": {
+        "markdown": "={{ $('Edit Fields').item.json.text }}",
+        "mode": "markdownToHtml",
+        "options": {}
+      },
+      "position": [
+        -1168,
+        2832
+      ],
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1
+    },
+    {
+      "id": "ad6bf273-b19e-4147-8ef9-9cdd80d1f045",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5cb9df0a-4291-4559-bccb-d61b49a3bc31",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $json.data }}"
+            },
+            {
+              "id": "8f7a1a32-b85a-41ce-b6a0-141aaf83311d",
+              "name": "session_id",
+              "type": "string",
+              "value": "={{ $('Code in JavaScript5').item.json.sessionId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -960,
+        2832
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a53864e3-19e0-438b-85c7-b6fb229715c0",
+      "name": "Respond to Webhook7",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -784,
+        2832
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4
     }
   ],
   "pinData": {
@@ -3219,6 +3310,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-11-12T05:54:12.000Z",
-  "versionId": "f84cd28b-a12a-4aab-9f7d-6a466bb95055"
+  "updatedAt": "2025-11-13T05:56:00.000Z",
+  "versionId": "1f0b0a95-107a-4d66-adde-e577efdb65e1"
 }
