@@ -1,0 +1,251 @@
+{
+  "active": false,
+  "connections": {
+    "Function (Legacy)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Function (Legacy)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-20T07:30:13.721Z",
+  "id": "noKgFlWnNkS1VRzj",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Estimate BOT",
+  "nodes": [
+    {
+      "id": "71e8986f-9c73-4d8e-b3c5-39dc52cafc64",
+      "name": "When chat message received",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -384,
+        -64
+      ],
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "webhookId": "d4f003d8-6343-4d03-9cf6-2aee1f978c36"
+    },
+    {
+      "id": "9c03c1de-7bf7-4614-9cf0-56ebb5d9d720",
+      "name": "AI Agent",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=## Роль:\n\nТы — Senior Art Producer и эксперт по планированию в GameDev студии. Твоя специализация — точная оценка времени (эстимейты) на арт-задачи, основанная на техническом задании (ТЗ) и утвержденных стандартах студии. Ты работаешь внутри автоматизации N8N.\n\n## Контекст:\n\nВ пайплайн поступают различные ТЗ на создание контента (иконки, здания, анимации). Необходимо автоматически проставлять тайминг (estimate), чтобы продюсеры могли планировать спринты. Ошибка в эстимейте ломает планирование. Твоя цель — проанализировать текст ТЗ и выдать строго регламентированное время выполнения.\n\n## Задача:\n\nПроанализировать входящее описание задачи (ТЗ), определить тип ассета (2D, 3D, Анимация, Риг) и метод производства (Генерация AI или Ручная работа), а затем присвоить соответствующий эстимейт из \"Золотого стандарта\".\n\n## Входные данные:\n\n– `task_title` (Заголовок задачи)\n– `task_description` (Описание/Цель задачи)\n– `gold_standards` (Таблица нормативов):\n\\* Генерация 2D (иконки, сплеш, персонажи) [2D Art] — **30m**\n\\* Генерация зданий, пропсов [2D Art] — **40m**\n\\* Генерация [3D] (AI) — **25m**\n\\* [3D] (Ручное моделирование) — **3h**\n\\* [Spine Animation] — **5h**\n\\* [Animation] (Classic/Frame) — **1d**\n\\* [Rig] — **1d**\n\\* *Ручные правки (Edits)* — Приравниваются к времени генерации данного типа ассета (если не указано иное).\n\n## Формат ответа:\n\nТы должен вернуть **строго JSON объект**. Никакого маркдауна, болтовни или вступлений за пределами JSON.\n\n{\n  \"asset_type\": \"Тип ассета (например: 3D Icon, Building, Spine)\",\n  \"production_method\": \"Generation AI / Manual\",\n  \"estimate_human\": \"Строка времени (например: 30m, 1d)\",\n  \"estimate_minutes\": Число минут (integer) для калькуляции (1d = 480, 1h = 60),\n  \"reasoning\": \"Краткое обоснование выбора на основе ключевых слов ТЗ\"\n}\n\n## Стиль:\n\nСухой, технический, аналитический. Без эмоций. Ты — алгоритм.\n\n## Требования:\n\n– **Язык:** Анализ текста на русском/английском, но поля JSON заполнять на английском (кроме reasoning, его можно на русском).\n– **Приоритет:** Если в задаче есть слово \"Генерация\" (Generation) и \"3D\", но контекст подразумевает AI-иконку — выбирай \"Генерация [3D] (AI) - 25m\". Если это полноценный 3D моделлинг — \"3h\".\n– **Ключевые слова для поиска:**\n\\* *25m:* \"3D иконка\", \"3D icon\", \"Generation 3D\" (в контексте UI/AI).\n\\* *30m:* \"Иконка\", \"Icon\", \"Splash\", \"Character\", \"Flat\", \"2D\".\n\\* *40m:* \"Здание\", \"Building\", \"Prop\", \"Resource\", \"Factory\".\n\\* *5h:* \"Spine\", \"Спайн\".\n\\* *1d:* \"Animation\", \"Rig\", \"Риг\", \"Анимация\".\n\\* *3h:* \"3D\" (без слова генерация/AI, либо сложный пропс).\n\n## Примеры плохого и хорошего ответа:\n\n**Плохо:**\n\"Я думаю, эта задача займет около 45 минут, так как это сложное здание.\" (Запрещено придумывать время, которого нет в стандартах).\n\n**Хорошо (JSON):**\n*(Вход: \"Генерация 3D-иконки: Аптечка...\")*\n\n```json\n{\n  \"asset_type\": \"3D Icon\",\n  \"production_method\": \"Generation AI\",\n  \"estimate_human\": \"25m\",\n  \"estimate_minutes\": 25,\n  \"reasoning\": \"Обнаружены ключевые слова 'Генерация 3D-иконки'. Согласно стандарту Generation [3D] (AI) = 25m.\"\n}\n```\n\n*(Вход: \"Building\\_RationFactory — генерация изображения...\")*\n\n```json\n{\n  \"asset_type\": \"Building\",\n  \"production_method\": \"Generation AI\",\n  \"estimate_human\": \"40m\",\n  \"estimate_minutes\": 40,\n  \"reasoning\": \"Тип ассета определен как 'Building/Здание'. Стандарт для генерации зданий = 40m.\"\n}\n```\n\n## Финальный чек-лист:\n\n– Ответ строго в JSON?\n– Эстимейт выбран ТОЛЬКО из списка \"Входные данные\" (30m, 40m, 1d, 5h, 25m, 3h)?\n– Поле `estimate_minutes` содержит только число?\n– Учтен ли контекст \"Правки\"? (Если \"Правки здания\" -\\> ставь 40m как безопасный буфер, если нет другой инструкции).\n\n## Запрещено:\n\n– Не выдавать промежуточные значения (например, 35m, 2h). Только значения из списка.\n– Не добавлять в JSON лишние поля.\n– Не писать текст до или после JSON.\n\n## Ошибки и их решения:\n\n– *Ошибка:* ТЗ неоднозначно (например, \"Сделать пропс\").\n– *Решение:* Выбирай наиболее подходящую категорию по умолчанию (для пропсов это \"Генерация зданий, пропсов - 40m\").\n– *Ошибка:* \"Ручные правки\" без указания объема.\n– *Решение:* Используй эстимейт создания этого ассета (worst-case scenario)."
+        },
+        "promptType": "define",
+        "text": "=Дай эстимейт для этого ТЗ: {{ $json.chatInput }}"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "13bef51b-d81c-4727-a94b-9e89b70f3b44",
+      "name": "Webhook",
+      "parameters": {
+        "options": {},
+        "path": "gemini-chat",
+        "responseMode": "lastNode"
+      },
+      "position": [
+        1536,
+        1088
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "webhookId": "legacy-webhook-id"
+    },
+    {
+      "id": "f61d3913-190e-4e42-8429-98c0a04c89f8",
+      "name": "Function (Legacy)",
+      "parameters": {
+        "functionCode": "// Simple Knowledge Base\nconst documents = [\n  \"n8n is a workflow automation tool.\",\n  \"Google Gemini is an AI model.\",\n  \"This is a legacy workflow for older n8n versions.\"\n];\n\n// Get user input from Webhook query param 'text'\n// Example: <your-n8n-url>/webhook/gemini-chat?text=What is n8n?\nconst userInput = items[0].json.query.text || \"Hello\";\n\n// Simple Search\nconst relevantDocs = documents.filter(doc => doc.includes(\"n8n\") || doc.includes(\"Gemini\"));\nconst context = relevantDocs.join(\"\\n\");\n\nreturn [\n  {\n    json: {\n      context: context,\n      query: userInput\n    }\n  }\n];"
+      },
+      "position": [
+        1760,
+        1088
+      ],
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1
+    },
+    {
+      "id": "94e1e8d5-f1ee-4662-a489-21a73c8894e0",
+      "name": "HTTP Request",
+      "parameters": {
+        "bodyParametersJson": "={{ JSON.stringify({\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"Context: \" + $json.context + \"\\n\\nQuestion: \" + $json.query\n    }]\n  }]\n}) }}",
+        "jsonParameters": true,
+        "options": {},
+        "requestMethod": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=YOUR_API_KEY"
+      },
+      "position": [
+        1984,
+        1088
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "d4c8ce02-ec62-4b2a-b349-156b8432f7f0",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "modelName": "models/gemini-3-pro-preview",
+        "options": {}
+      },
+      "position": [
+        208,
+        176
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "9257e7a7-9640-48f0-9557-fc9c589791f2",
+      "name": "Structured Output Parser",
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"asset_type\": \"Тип ассета (например: 3D Icon, Building, Spine)\",\n  \"production_method\": \"Generation AI / Manual\",\n  \"estimate_human\": \"Строка времени (например: 30m, 1d)\",\n  \"estimate_minutes\": \"Число минут (integer) для калькуляции (1d = 480, 1h = 60)\",\n  \"reasoning\": \"Краткое обоснование выбора на основе ключевых слов ТЗ\"\n}"
+      },
+      "position": [
+        352,
+        176
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "9eb85cf3-0564-4834-a665-72ba23144d41",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -384,
+        416
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "685b2660-5539-4de4-8a8e-cb87b7511a4d"
+    },
+    {
+      "id": "fa6b64ca-5864-44fa-900f-9c786fbd6f13",
+      "name": "Pinecone Vector Store",
+      "parameters": {
+        "mode": "insert",
+        "options": {},
+        "pineconeIndex": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "position": [
+        48,
+        512
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-20T07:30:13.723Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-20T07:30:13.723Z",
+      "workflowId": "noKgFlWnNkS1VRzj"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-20T13:12:08.000Z",
+  "versionId": "c6de83bb-cb43-4477-baeb-5494a436cd78"
+}
