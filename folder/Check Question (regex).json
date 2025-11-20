@@ -111,6 +111,17 @@
         ]
       ]
     },
+    "Code in JavaScript8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Default Data Loader": {
       "ai_document": [
         [
@@ -140,6 +151,17 @@
             "index": 0,
             "node": "Добавляем транскрипцию диалога",
             "type": "ai_document"
+          }
+        ]
+      ]
+    },
+    "Dialogue": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Сбор отчета",
+            "type": "ai_tool"
           }
         ]
       ]
@@ -221,6 +243,17 @@
         ]
       ]
     },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Strategy2",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
     "Embeddings OpenAI1": {
       "ai_embedding": [
         [
@@ -287,6 +320,17 @@
         ]
       ]
     },
+    "Embeddings OpenAI15": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Dialogue",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
     "Embeddings OpenAI2": {
       "ai_embedding": [
         [
@@ -346,8 +390,8 @@
       "main": [
         [
           {
-            "index": 0,
-            "node": "Respond to Webhook5",
+            "index": 1,
+            "node": "Merge1",
             "type": "main"
           }
         ]
@@ -392,7 +436,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields (test)",
+            "node": "Set - Normalize Input2",
             "type": "main"
           }
         ]
@@ -415,6 +459,17 @@
           {
             "index": 0,
             "node": "Code in JavaScript5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to Webhook5",
             "type": "main"
           }
         ]
@@ -475,6 +530,17 @@
         ]
       ]
     },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Сбор отчета",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "OpenAI Chat Model3": {
       "ai_languageModel": [
         [
@@ -525,6 +591,17 @@
           {
             "index": 0,
             "node": "Structured Output Parser5",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model8": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Structured Output Parser7",
             "type": "ai_languageModel"
           }
         ]
@@ -601,10 +678,15 @@
         [
           {
             "index": 0,
-            "node": "HTTP - Удаление данных из базы по sessionId",
+            "node": "Сбор отчета",
             "type": "main"
           }
         ]
+      ]
+    },
+    "Set - Normalize Input2": {
+      "main": [
+        []
       ]
     },
     "Set — Сохранение метаданных файла": {
@@ -651,6 +733,17 @@
         ]
       ]
     },
+    "Strategy2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Сбор отчета",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
     "Structured Output Parser": {
       "ai_outputParser": [
         [
@@ -690,6 +783,17 @@
           {
             "index": 0,
             "node": "Оценка ответа пользователя",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser7": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "Сбор отчета",
             "type": "ai_outputParser"
           }
         ]
@@ -883,6 +987,22 @@
           {
             "index": 0,
             "node": "Оценка ответа пользователя",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Сбор отчета": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP - Удаление данных из базы по sessionId",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Code in JavaScript8",
             "type": "main"
           }
         ]
@@ -2058,8 +2178,8 @@
         "responseMode": "responseNode"
       },
       "position": [
-        -2080,
-        3888
+        -2224,
+        4128
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -2082,8 +2202,8 @@
         "options": {}
       },
       "position": [
-        -1872,
-        3888
+        -2016,
+        4128
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2095,8 +2215,8 @@
         "options": {}
       },
       "position": [
-        -1328,
-        3888
+        -352,
+        4128
       ],
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4
@@ -2111,15 +2231,15 @@
               "id": "26e22517-1858-4c34-b15a-e77f00b8a7f8",
               "name": "sessionId",
               "type": "string",
-              "value": "=12341"
+              "value": "=69977483-1c00-4fa2-bac0-90b9a212f464"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -1840,
-        3680
+        -1776,
+        3808
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2128,13 +2248,13 @@
       "id": "57c3135a-bfab-40ff-8d07-4a0d00e97767",
       "name": "Sticky Note6",
       "parameters": {
-        "content": "Закрытие сессии удаление всех данных из базы",
-        "height": 80,
+        "content": "Закрытие сессии сбор отчета и удаление всех данных из базы",
+        "height": 96,
         "width": 176
       },
       "position": [
-        -2080,
-        3648
+        -2192,
+        3984
       ],
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1
@@ -2156,8 +2276,8 @@
         "url": "=https://tclvlwlrkljwpwscrmxf.supabase.co/rest/v1/documents?metadata->>session_id=eq.{{$json.sessionId}}"
       },
       "position": [
-        -1664,
-        3888
+        -1216,
+        4144
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
@@ -2858,17 +2978,6 @@
       "typeVersion": 2.2
     },
     {
-      "id": "951536e2-04d6-4f2d-ae29-0bce10214518",
-      "name": "Manual Trigger",
-      "parameters": {},
-      "position": [
-        0,
-        0
-      ],
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1
-    },
-    {
       "id": "c56d0bce-b630-4136-b0c3-2e516bfefb7e",
       "name": "Edit Fields (test)",
       "parameters": {
@@ -3055,6 +3164,268 @@
       ],
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "032b0a3f-748c-4394-9100-96198d3acbf4",
+      "name": "OpenAI Chat Model2",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4o",
+          "mode": "list",
+          "value": "gpt-4o"
+        },
+        "options": {}
+      },
+      "position": [
+        -1840,
+        4320
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "6e17e447-6696-4b66-a50a-c60782f1460b",
+      "name": "Structured Output Parser7",
+      "parameters": {
+        "autoFix": true,
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"report\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"strategy_result\": {\n          \"type\": \"string\",\n          \"enum\": [\"достигли\", \"не достигли\"],\n          \"description\": \"Итог по стратегии: достигли ли целей стратегии.\"\n        },\n        \"strategy_explanation\": {\n          \"type\": \"string\",\n          \"description\": \"Краткое фактическое объяснение, почему такой результат по стратегии.\"\n        },\n        \"deal_success_result\": {\n          \"type\": \"string\",\n          \"enum\": [\"достигли\", \"не достигли\"],\n          \"description\": \"Итог по критериям успеха сделки.\"\n        },\n        \"deal_success_explanation\": {\n          \"type\": \"string\",\n          \"description\": \"Краткое фактическое объяснение, почему такой результат по успеху сделки.\"\n        },\n        \"strategy_feedback\": {\n          \"type\": \"array\",\n          \"description\": \"Список наблюдений: что было сделано правильно/неправильно в рамках стратегии.\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        },\n        \"future_success_advice\": {\n          \"type\": \"array\",\n          \"description\": \"Практические советы, как повысить шансы успеха в будущих переговорах.\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"required\": [\n        \"strategy_result\",\n        \"strategy_explanation\",\n        \"deal_success_result\",\n        \"deal_success_explanation\",\n        \"strategy_feedback\",\n        \"future_success_advice\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\"report\"],\n  \"additionalProperties\": false\n}",
+        "schemaType": "manual"
+      },
+      "position": [
+        -1072,
+        4352
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "1bc22db6-f2f8-4efb-afb2-8e2e511aa58b",
+      "name": "Embeddings OpenAI",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -1824,
+        4608
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "8rdyQhWygVtM1q1J",
+          "name": "peregovori"
+        }
+      },
+      "id": "db0744cb-d2d1-450e-af15-1b0337420966",
+      "name": "Strategy2",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "session_id",
+                "value": "={{ $json.sessionId }}"
+              },
+              {
+                "name": "namespace",
+                "value": "strategy"
+              }
+            ]
+          }
+        },
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "documents",
+          "mode": "list",
+          "value": "documents"
+        },
+        "toolDescription": "Используй эти данные для анализа Стратегии",
+        "topK": 100
+      },
+      "position": [
+        -1824,
+        4448
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "53ce71c6-5227-412b-b6d0-4d36d5fc6236",
+      "name": "Embeddings OpenAI15",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -1504,
+        4608
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "supabaseApi": {
+          "id": "8rdyQhWygVtM1q1J",
+          "name": "peregovori"
+        }
+      },
+      "id": "3ab20048-f6a6-49c5-87f2-37a491cc0d31",
+      "name": "Dialogue",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "session_id",
+                "value": "={{ $json.sessionId }}"
+              },
+              {
+                "name": "namespace",
+                "value": "dialogue"
+              }
+            ]
+          }
+        },
+        "tableName": {
+          "__rl": true,
+          "cachedResultName": "documents",
+          "mode": "list",
+          "value": "documents"
+        },
+        "toolDescription": "Используй эти записи для анализа dialogue",
+        "topK": 1000
+      },
+      "position": [
+        -1520,
+        4464
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "da286939-cf91-4cff-a3ca-01a34dece3c5",
+      "name": "Code in JavaScript8",
+      "parameters": {
+        "jsCode": "// Если модель возвращает [{\"output\": {...}}]\nconst item = $json[0] || $json; // берём первый элемент, если это массив\nreturn [ item.output || item ];"
+      },
+      "position": [
+        -1264,
+        3936
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ce9f7920-5ece-4edd-9b8d-1a643d89df21",
+      "name": "Сбор отчета",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {},
+        "promptType": "define",
+        "text": "=Ты — переговорный аналитик и стратегический ассистент.\n\nВходные данные:\n\t•\tTool: Strategy2 — база документов стратегии (цели, тактика, критерии успеха, ключевые аргументы).\n\t•\tTool: Dialogue — полная транскрибация текущего диалога.\n\n⸻\n\nТвои задачи:\n\n1. Проанализировать стратегию (Tool: Strategy2)\n\nОпредели:\n\t•\tключевые стратегические цели;\n\t•\tтактические действия, необходимые для их достижения;\n\t•\tкритерии успеха;\n\t•\tаргументы и рамку, которые должны соблюдаться.\n\n2. Проанализировать фактические переговоры (Tool: Dialogue)\n\nСопоставь диалог со стратегией:\n\t•\tкакие цели полностью или частично достигнуты;\n\t•\tгде были отклонения от стратегии;\n\t•\tкакие критерии успеха выполнены/не выполнены;\n\t•\tкакие действия или реакции повлияли на результат.\n\n⸻\n\n3. Сформировать структурированный отчёт:\n\nA) strategy_result\n\t•\tЗначение: \"достигли\" или \"не достигли\".\n\t•\tОцени, выполнены ли стратегические цели, указанные в Strategy.\n\nA.1) strategy_explanation\n\nКраткое, чёткое, фактическое объяснение:\n\t•\tкакие цели стратегии удалось (или не удалось) реализовать;\n\t•\tкакие элементы стратегии соблюдены или нарушены;\n\t•\tкакие шаги/реплики повлияли на итоговое выполнение стратегии.\n\n⸻\n\nB) deal_success_result\n\t•\tЗначение: \"достигли\" или \"не достигли\".\n\t•\tОцени, выполнены ли критерии успеха, определённые в Strategy.\n\nB.1) deal_success_explanation\n\nКраткое фактическое объяснение:\n\t•\tкакие критерии успеха выполнены или нет;\n\t•\tчто конкретно в диалоге привело к такому результату;\n\t•\tкакая реакция оппонента или позиция повлияла на исход.\n\n⸻\n\nC) strategy_feedback\n\nСписок коротких пунктов.\nОпиши:\n\t•\tчто было сделано стратегически правильно;\n\t•\tгде были ошибки, недоработки, упущения;\n\t•\tчто из стратегии применено успешно, а что — нет.\n\n⸻\n\nD) future_success_advice\n\nСписок коротких практических рекомендаций:\n\t•\tчто улучшить в будущих переговорах;\n\t•\tкакие формулировки и тактики стоит применять;\n\t•\tкак повысить вероятность достижения успеха;\n\t•\tна что обращать внимание в динамике, реакциях, аргументации.\n\n⸻\n\nПравила:\n\t•\tИспользуй ТОЛЬКО Tool: Strategy2 и Tool: Dialogue.\n\t•\tНе выдумывай фактов и не используй внешние данные.\n\t•\tВсе формулировки — короткие, точные, по делу.\n\t•\tВсегда отвечай на русском языке.\n\t•\tВерни только JSON.\n\t•\tНикакого Markdown, комментариев или текстов вне JSON.\n\n⸻\n\nФормат ответа (строго соблюдать):\n\n{\n“report”: {\n“strategy_result”: “достигли”,\n“strategy_explanation”: “краткое фактическое объяснение”,\n“deal_success_result”: “не достигли”,\n“deal_success_explanation”: “краткое фактическое объяснение”,\n“strategy_feedback”: [\n“пункт 1”,\n“пункт 2”\n],\n“future_success_advice”: [\n“пункт 1”,\n“пункт 2”\n]\n}\n}\n\nВАЖНО:\nВерни результат строго в виде JSON-объекта, без обёртки в строку, без экранирования, без дополнительных полей.\nНикаких кавычек вокруг всего JSON. Никаких Markdown. Только чистый JSON."
+      },
+      "position": [
+        -1728,
+        4144
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "4ffa59eb-911e-4c3c-9dd4-219b832000cc",
+      "name": "Merge1",
+      "parameters": {
+        "mode": "combineBySql",
+        "options": {},
+        "query": "SELECT *\nFROM input1\nLEFT JOIN input2 ON input1.name = input2.id"
+      },
+      "position": [
+        -768,
+        4128
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "79bea08b-94c2-4629-948c-590798e2a870",
+      "name": "Edit Fields2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9b72c5f3-3bb0-4a00-8b56-5d430069c12c",
+              "name": "responce",
+              "type": "object",
+              "value": "={{ $json.report }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -960,
+        3792
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "5eb92158-06bc-4790-8adb-d63ed2e9813e",
+      "name": "Manual Trigger",
+      "parameters": {},
+      "position": [
+        -1968,
+        3808
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "ca1a1e16-f22e-4374-8533-903a55694fcf",
+      "name": "OpenAI Chat Model8",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "position": [
+        -1104,
+        4544
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
     }
   ],
   "pinData": {
@@ -3299,7 +3670,7 @@
     "availableInMCP": false,
     "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1",
-    "saveDataSuccessExecution": "none"
+    "saveDataSuccessExecution": "all"
   },
   "shared": [
     {
@@ -3313,6 +3684,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-11-19T06:59:24.000Z",
-  "versionId": "f469097f-8ee4-46d5-a9b3-04a73003ca7f"
+  "updatedAt": "2025-11-20T08:24:03.000Z",
+  "versionId": "4f7418e1-bb71-4d88-a98b-1f710f5afcef"
 }
