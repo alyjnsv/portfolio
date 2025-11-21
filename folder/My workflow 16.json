@@ -12,17 +12,23 @@
         ]
       ]
     },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "AI Agent4": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Split1",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "AI Agent",
+            "node": "Loop Over Items",
             "type": "main"
           }
         ]
@@ -33,7 +39,7 @@
         [
           {
             "index": 0,
-            "node": "AI Agent4",
+            "node": "Code in JavaScript",
             "type": "main"
           }
         ],
@@ -41,6 +47,17 @@
           {
             "index": 0,
             "node": "Send \"...\"5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Array All": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Date & Time",
             "type": "main"
           }
         ]
@@ -112,6 +129,17 @@
         ]
       ]
     },
+    "Array Chat ID": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Array Chat ID1": {
       "main": [
         [
@@ -173,6 +201,17 @@
           {
             "index": 1,
             "node": "Merge10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Array Tasks": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge",
             "type": "main"
           }
         ]
@@ -255,6 +294,28 @@
         ]
       ]
     },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Technical Task": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields13",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Create Technical Task10": {
       "main": [
         [
@@ -316,6 +377,17 @@
           {
             "index": 0,
             "node": "Edit Fields9",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Formatted Date",
             "type": "main"
           }
         ]
@@ -403,7 +475,7 @@
         [
           {
             "index": 0,
-            "node": "Pinecone Vector Store1",
+            "node": "AI Agent1",
             "type": "main"
           }
         ]
@@ -437,6 +509,17 @@
           {
             "index": 0,
             "node": "Analyze1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields13": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Technical Task",
             "type": "main"
           }
         ]
@@ -486,11 +569,6 @@
         ]
       ]
     },
-    "Embeddings Google Gemini": {
-      "ai_embedding": [
-        []
-      ]
-    },
     "Embeddings OpenAI": {
       "ai_embedding": [
         [
@@ -513,6 +591,17 @@
         ]
       ]
     },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store2",
+            "type": "ai_embedding"
+          }
+        ]
+      ]
+    },
     "Extract from File": {
       "main": [
         [
@@ -530,6 +619,17 @@
           {
             "index": 0,
             "node": "Edit Fields12",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Formatted Date": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Technical Task",
             "type": "main"
           }
         ]
@@ -630,6 +730,67 @@
             "index": 0,
             "node": "AI Agent",
             "type": "ai_languageModel"
+          },
+          {
+            "index": 0,
+            "node": "Structured Output Parser",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка ТЗ",
+            "type": "ai_languageModel"
+          },
+          {
+            "index": 0,
+            "node": "Проверка True False",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send \"...\"1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send \"...\"2",
+            "type": "main"
           }
         ]
       ]
@@ -662,7 +823,41 @@
         [
           {
             "index": 0,
-            "node": "Message a model",
+            "node": "Get a file",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Проверка ТЗ",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Array All",
             "type": "main"
           }
         ]
@@ -734,26 +929,9 @@
         ]
       ]
     },
-    "Message a model": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get a file",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "OpenRouter Chat Model": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent4",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Output1": {
@@ -776,6 +954,22 @@
             "type": "ai_tool"
           }
         ]
+      ]
+    },
+    "Pinecone Vector Store2": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка ТЗ",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Send \"...\"2": {
+      "main": [
+        []
       ]
     },
     "Split1": {
@@ -875,7 +1069,18 @@
             "type": "main"
           }
         ],
-        [],
+        [
+          {
+            "index": 0,
+            "node": "Array Tasks",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Array Chat ID",
+            "type": "main"
+          }
+        ],
         [
           {
             "index": 0,
@@ -920,6 +1125,28 @@
           {
             "index": 0,
             "node": "Switch2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка True False": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка ТЗ": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка True False",
             "type": "main"
           }
         ]
@@ -994,8 +1221,8 @@
         }
       },
       "position": [
-        -3504,
-        4224
+        -3200,
+        4432
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3
@@ -1018,8 +1245,8 @@
         "text": "Отправьте документы"
       },
       "position": [
-        -3184,
-        3968
+        -2896,
+        4176
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -1081,7 +1308,7 @@
                       "operation": "contains",
                       "type": "string"
                     },
-                    "rightValue": "Тип объекта: Flat иконка"
+                    "rightValue": "Тип объекта: FlatIcon"
                   }
                 ],
                 "options": {
@@ -1242,8 +1469,8 @@
         }
       },
       "position": [
-        -208,
-        3984
+        1552,
+        3968
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2
@@ -1264,27 +1491,27 @@
               "id": "208402e6-83f2-42b3-9b2e-4922145e8d7f",
               "name": "Username",
               "type": "string",
-              "value": "={{ $('Telegram Trigger1').item.json.message?.chat?.username || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.username }}"
+              "value": "={{ $('Telegram Trigger1').first().json.message?.chat?.username || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.username }}"
             },
             {
               "id": "4938c796-a723-4f3c-b756-762c09e572c9",
               "name": "Chat ID",
               "type": "string",
-              "value": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}"
+              "value": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}"
             },
             {
               "id": "4547a164-9221-4555-88ce-e73d0c3d3211",
               "name": "File_name",
               "type": "string",
-              "value": "={{ $('Telegram Trigger1').item.json.message.document.file_name }}"
+              "value": "={{ $('Telegram Trigger1').first().json.message.document.file_name }}"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -592,
-        4080
+        1184,
+        4064
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1309,8 +1536,8 @@
         "text": "=⚡️ Анализ и составление ТЗ для файла:\n\n➡️ *{{ $('Telegram Trigger1').item.json.message.document.file_name }}*"
       },
       "position": [
-        -2128,
-        3792
+        -2368,
+        3824
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1323,8 +1550,8 @@
       "name": "Merge2",
       "parameters": {},
       "position": [
-        384,
-        3296
+        2160,
+        2944
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1343,8 +1570,8 @@
         "options": {}
       },
       "position": [
-        176,
-        3216
+        1952,
+        2864
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1370,8 +1597,8 @@
         "options": {}
       },
       "position": [
-        176,
-        3376
+        1952,
+        3024
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1383,8 +1610,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        3296
+        2336,
+        2944
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1413,8 +1640,8 @@
         }
       },
       "position": [
-        800,
-        3264
+        2368,
+        2912
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -1424,8 +1651,8 @@
       "name": "Merge3",
       "parameters": {},
       "position": [
-        384,
-        4768
+        2160,
+        4784
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1444,8 +1671,8 @@
         "options": {}
       },
       "position": [
-        176,
-        4688
+        1952,
+        4704
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1457,8 +1684,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        4768
+        2336,
+        4784
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1468,8 +1695,8 @@
       "name": "Merge8",
       "parameters": {},
       "position": [
-        384,
-        4032
+        2160,
+        3680
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1488,8 +1715,8 @@
         "options": {}
       },
       "position": [
-        176,
-        3952
+        1952,
+        3600
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1501,8 +1728,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        4032
+        2336,
+        3680
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1512,8 +1739,8 @@
       "name": "Merge9",
       "parameters": {},
       "position": [
-        384,
-        4400
+        2160,
+        4048
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1532,8 +1759,8 @@
         "options": {}
       },
       "position": [
-        176,
-        4320
+        1952,
+        3968
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1545,8 +1772,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        4400
+        2336,
+        4048
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1574,8 +1801,8 @@
         }
       },
       "position": [
-        816,
-        4448
+        2352,
+        4048
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -1603,8 +1830,8 @@
         }
       },
       "position": [
-        784,
-        4032
+        2464,
+        3696
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -1614,8 +1841,8 @@
       "name": "Merge10",
       "parameters": {},
       "position": [
-        384,
-        5152
+        2160,
+        5168
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1634,8 +1861,8 @@
         "options": {}
       },
       "position": [
-        176,
-        5072
+        1952,
+        5088
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1647,8 +1874,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        5152
+        2336,
+        5168
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1676,8 +1903,8 @@
         }
       },
       "position": [
-        768,
-        5184
+        2336,
+        5200
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -1700,8 +1927,8 @@
         "text": "=📛 Ошибка в стуктуре документа, необходимо загружать по одному файлу"
       },
       "position": [
-        -592,
-        4272
+        1184,
+        4256
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1723,8 +1950,8 @@
         "options": {}
       },
       "position": [
-        176,
-        3584
+        1952,
+        3232
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -1734,8 +1961,8 @@
       "name": "Merge11",
       "parameters": {},
       "position": [
-        384,
-        3664
+        2160,
+        3312
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -1747,8 +1974,8 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        560,
-        3664
+        2336,
+        3312
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1776,8 +2003,8 @@
         }
       },
       "position": [
-        784,
-        3632
+        2352,
+        3280
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -1792,8 +2019,8 @@
         }
       },
       "position": [
-        768,
-        3120
+        2544,
+        2768
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -1805,8 +2032,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        3120
+        2720,
+        2768
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1828,8 +2055,8 @@
         "options": {}
       },
       "position": [
-        1360,
-        3120
+        3136,
+        2768
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1853,8 +2080,8 @@
         "text": "=📃 Созданные ТЗ для иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        3120
+        3344,
+        2768
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -1892,8 +2119,8 @@
         }
       },
       "position": [
-        1136,
-        3120
+        2912,
+        2768
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -1908,8 +2135,8 @@
         }
       },
       "position": [
-        768,
-        3856
+        2544,
+        3504
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -1921,8 +2148,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        3856
+        2720,
+        3504
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1944,8 +2171,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        3856
+        3120,
+        3504
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1969,8 +2196,8 @@
         "text": "=📃 Созданные ТЗ для Персонажей:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        3856
+        3344,
+        3504
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2008,8 +2235,8 @@
         }
       },
       "position": [
-        1136,
-        3856
+        2912,
+        3504
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -2024,8 +2251,8 @@
         }
       },
       "position": [
-        768,
-        3488
+        2544,
+        3136
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -2037,8 +2264,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        3488
+        2720,
+        3136
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2060,8 +2287,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        3488
+        3120,
+        3136
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2085,8 +2312,8 @@
         "text": "=📃 Созданные ТЗ для Flat иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        3488
+        3344,
+        3136
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2124,8 +2351,8 @@
         }
       },
       "position": [
-        1136,
-        3488
+        2912,
+        3136
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -2140,8 +2367,8 @@
         }
       },
       "position": [
-        768,
-        4224
+        2544,
+        3872
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -2153,8 +2380,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        4224
+        2720,
+        3872
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2176,8 +2403,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        4224
+        3120,
+        3872
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2201,8 +2428,8 @@
         "text": "=📃 Созданные ТЗ для Транспорта:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        4224
+        3344,
+        3872
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2240,8 +2467,8 @@
         }
       },
       "position": [
-        1136,
-        4224
+        2912,
+        3872
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -2256,8 +2483,8 @@
         }
       },
       "position": [
-        768,
-        4592
+        2544,
+        4608
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -2269,8 +2496,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        4592
+        2720,
+        4608
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2292,8 +2519,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        4592
+        3120,
+        4608
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2317,8 +2544,8 @@
         "text": "=📃 Созданные ТЗ для Зданий/Пропсов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        4592
+        3344,
+        4608
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2356,8 +2583,8 @@
         }
       },
       "position": [
-        1136,
-        4592
+        2912,
+        4608
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -2372,8 +2599,8 @@
         }
       },
       "position": [
-        768,
-        4976
+        2544,
+        4992
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
@@ -2385,8 +2612,8 @@
         "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
       },
       "position": [
-        944,
-        4976
+        2720,
+        4992
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2408,8 +2635,8 @@
         "options": {}
       },
       "position": [
-        1344,
-        4976
+        3120,
+        4992
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2433,8 +2660,8 @@
         "text": "=📃 Созданные ТЗ для Врагов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        1568,
-        4976
+        3344,
+        4992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2472,8 +2699,8 @@
         }
       },
       "position": [
-        1136,
-        4976
+        2912,
+        4992
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -2501,8 +2728,8 @@
         }
       },
       "position": [
-        832,
-        4736
+        2400,
+        4752
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.2
@@ -2525,7 +2752,7 @@
         "text": "=📛 {{ $json.error.message }}"
       },
       "position": [
-        -1552,
+        -1504,
         4240
       ],
       "retryOnFail": true,
@@ -2555,8 +2782,8 @@
         "options": {}
       },
       "position": [
-        176,
-        3744
+        1952,
+        3392
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2582,8 +2809,8 @@
         "options": {}
       },
       "position": [
-        176,
-        4112
+        1952,
+        3760
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2609,8 +2836,8 @@
         "options": {}
       },
       "position": [
-        176,
-        4480
+        1952,
+        4128
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2636,8 +2863,8 @@
         "options": {}
       },
       "position": [
-        176,
-        4848
+        1952,
+        4864
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2663,8 +2890,8 @@
         "options": {}
       },
       "position": [
-        176,
-        5232
+        1952,
+        5248
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -2677,8 +2904,8 @@
         "jsCode": "// Получаем текст из поля Tasks\nconst fullText = $input.first().json.output;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
       },
       "position": [
-        -832,
-        4080
+        944,
+        4064
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2717,14 +2944,14 @@
       "name": "AI Agent4",
       "parameters": {
         "options": {
-          "systemMessage": "=# Asset TZ Generation Agent - System Prompt\n\n## РОЛЬ И ЦЕЛЬ\n\nТы — эксперт тимлид 3D-художников, который создаёт детальные технические задания (ТЗ) для игровых ассетов.\n\nТвоя задача: на основе данных об ассете из JSON и контекста из RAG базы создать уникальное, детальное концептуальное ТЗ, которое художник сможет использовать для создания игрового ассета.\n\n## ВХОДНЫЕ ДАННЫЕ\n\nТы получишь JSON объект с данными об одном ассете:\n```json\n{\n  \"id\": 1,\n  \"name\": \"Название ассета\",\n  \"filename\": \"AssetFileName\",\n  \"type\": \"Building | Character | Enemy | Vehicle | Props | Icon | FlatIcon | UI\",\n  \"subtype\": \"Подтип если есть\",\n  \"reference_image\": {\n    \"visual_description\": \"Детальное описание референса\",\n    \"key_elements\": [\"элемент1\", \"элемент2\"],\n    \"colors\": [\"цвет1\", \"цвет2\"],\n    \"materials\": [\"материал1\", \"материал2\"],\n    \"style_notes\": \"Стилистические особенности\",\n    \"composition\": \"Описание композиции\"\n  },\n  \"context\": \"Дополнительный контекст\",\n  \"goal\": \"Функциональное назначение\"\n}\n```\n\n## ПРОЦЕСС РАБОТЫ\n\n### ШАГ 1: ЗАПРОС КОНТЕКСТА ИЗ RAG\n\nПеред созданием ТЗ ты ОБЯЗАН запросить из Pinecone Vector Store следующую информацию:\n\n**Обязательные запросы:**\n1. `\"наратив игры\"` - общий контекст мира\n2. `\"стиль-гайд проекта\"` - визуальная концепция\n3. `\"правила уникализации для {type}\"` - принципы переосмысления\n4. `\"технические стандарты {type}\"` - технические требования\n5. `\"шаблон описания {type}\"` - структура описания\n6. `\"цветовая палитра {type}\"` - если есть специфика для типа\n\n**Дополнительные запросы (по необходимости):**\n7. `\"примеры {type}\"` - референсы других ассетов этого типа\n8. `\"связанные ассеты {name}\"` - если есть семейство объектов\n9. `\"материалы для {type}\"` - специфика материалов\n10. `\"роль {subtype}\"` - если это персонаж или враг с ролью\n\n### ШАГ 2: АНАЛИЗ АРХЕТИПА И ФУНКЦИИ\n\nНа основе полученных данных определи:\n\n1. **АРХЕТИП** - к какой категории относится объект, абстрагируясь от внешнего вида\n   - Пример: На референсе плоскогубцы → архетип \"инструмент\"\n   - Пример: На референсе автобус → архетип \"транспорт\"\n\n2. **ЧИСТАЯ ФУНКЦИЯ** - для чего объект нужен в игре\n   - Пример: \"маркер квестового задания\"\n   - Пример: \"непроходимое препятствие\"\n   - Пример: \"источник ресурсов\"\n\n3. **ПРИНАДЛЕЖНОСТЬ К МИРУ**\n   - Технологичная база игрока (порядок, прогресс, чистота)\n   - Постапокалиптический мир (хаос, разрушение, обломки)\n   - Или гибрид (трофейная техника, модифицированные обломки)\n\n### ШАГ 3: УНИКАЛИЗАЦИЯ (КРИТИЧЕСКИ ВАЖНО)\n\n**ДЛЯ ВСЕХ ТИПОВ КРОМЕ Icon и FlatIcon:**\n\nТы ОБЯЗАН полностью переосмыслить объект с референса в стилистику проекта.\n\n**ЗАПРЕЩЕНО:**\n- ❌ Описывать референс как есть\n- ❌ Копировать внешний вид с референса\n- ❌ Упоминать бытовые предметы, не вписывающиеся в sci-fi\n- ❌ Писать \"как на референсе\", \"похожий на\", \"по образцу\"\n\n**ТРЕБУЕТСЯ:**\n- ✅ Создать НОВУЮ визуальную концепцию с нуля\n- ✅ Мыслить как концепт-дизайнер\n- ✅ Переводить бытовые понятия в технологические\n- ✅ Использовать контекст из RAG (наратив, стиль-гайд)\n\n**Ключевые вопросы для уникализации:**\n\n1. **Принадлежность:**\n   - База игрока: чистые формы, яркий неон, голограммы?\n   - Разрушенный мир: обломки, ржавчина, сбоящий неон?\n\n2. **Материалы и Формы:**\n   - Полированный металл и стекло или обломки старой техники?\n   - Формы гладкие и функциональные или хаотичные и поврежденные?\n\n3. **Технологический элемент:**\n   - Как используется неон? Ровные энергетические линии или мерцающие провода?\n\n4. **Принцип Действия:**\n   - Как функция реализуется через технологии?\n   - Барьер = голографическое поле или стена из дроидов?\n   - Маркер = светящийся технологичный артефакт?\n\n**ИСКЛЮЧЕНИЕ - ДЛЯ Icon и FlatIcon:**\nДля иконок используй визуальную информацию с референса как базу, но адаптируй в стилистику проекта (цвета, материалы, glow-эффекты).\n\n### ШАГ 4: ФОРМИРОВАНИЕ ТЗ\n\nИспользуй информацию из RAG для заполнения специфичных разделов по типу объекта.\n\n#### ОБЩАЯ СТРУКТУРА ВЫВОДА:\n```\nНазвание: [filename на английском]\nТип объекта: [type на русском, filename на английском для FlatIcon]\n\nКраткое описание:\n[1-2 предложения - суть концепции]\n\nРоль/назначение:\n[Функция в игре на основе goal и context]\n\nОписание и адаптация:\n\n[Подпункты зависят от типа - см. ниже]\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к [технологической базе игрока / постапокалиптическому миру / гибридному происхождению].\n\nЦветовая палитра:\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[и т.д. - минимум 3-4 цвета с HEX-кодами из RAG]\n```\n\n---\n\n## СПЕЦИФИКА ПО ТИПАМ ОБЪЕКТОВ\n\n### ТИП: Character (Персонаж)\n\n**Запросы из RAG:**\n- Роль персонажа из данных (танк, разведчик, инженер, хакер)\n- Палитра для роли\n- Примеры персонажей этой роли\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nРоль и функция:\n[Определение роли: танк/разведчик/инженер/хакер]\n\nЖанр и стиль:\nСтилизованный 3D в духе hero-shooter'ов. Яркий, читаемый дизайн с четким силуэтом.\n\nПропорции и анатомия:\n[Массивное для танка / Атлетическое для разведчика / Среднее для инженера-хакера]\n[Описание телосложения соответствующего роли]\n[Силуэт четко передает роль персонажа]\n\nЛицо и выражение:\n[Читаемая мимика соответствующая роли]\n[Кибернетические импланты, неоновая подводка глаз]\n[Маски/визоры с glowing-эффектами если нужно]\n\nЦвет и материалы:\n[Насыщенная контрастная палитра с неоновыми акцентами роли]\n[Glow-эффекты на швах, линиях и символах]\nМатериалы: глянцевый пластик, матовый металл, синтетические ткани, голографические элементы.\n\nДизайн костюма и экипировки:\n[Асимметричные элементы для динамичности]\n[Модульная броня строго соответствующая роли:]\n  - Танк: тяжелая броня, усиленные пластины\n  - Разведчик: легкая экипировка, мобильность\n  - Инженер: техническое снаряжение, инструменты\n  - Хакер: нейроинтерфейсы, голографические дисплеи\n[Многослойность: базовый костюм + накладная броня + аксессуары]\n\nТехнологические детали:\n[Светящиеся схемы и панели на броне]\n[Голографические элементы и проекторы]\n[Энергетические ядра в груди или на конечностях]\n[Кибернетические усиления рук и ног]\n[Специализированные элементы под роль]\n\nАксессуары и снаряжение:\n[Снаряжение соответствующее функции персонажа]\n[Примеры: голографические браслеты, высокотехнологичная обувь с подсветкой, энергетические наручи, плащи с усиленными пластинами]\n\nПоза и презентация:\n[Поза соответствующая роли и характеру]\n[Стойка подчеркивает функцию персонажа]\nПерсонаж стоит в полный рост.\n\nОсвещение и рендер:\nЯркое спекулярное освещение с контрастными тенями. Четкие блики на глянцевых поверхностях. Мягкое свечение от неоновых элементов. Чистый белый фон.\n```\n\n---\n\n### ТИП: Enemy (Враг)\n\n**Запросы из RAG:**\n- Стандарты для врагов\n- Агрессивная палитра\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nЖанр и стиль:\nСтилизованный 3D в духе hero-shooter'ов с эстетикой киберпанк sci-fi. Дизайн агрессивный, с четким и угрожающим силуэтом.\n\nПропорции и анатомия:\nМассивное телосложение с широкими плечами, подчеркивающее грубую силу и доминирование. Пропорции передают угрозу.\n\nСилуэт и поза:\nУверенная, широкая, доминирующая стойка. Силуэт легко читаемый для мгновенной идентификации угрозы.\n\nЛицо и голова:\nСуровое, непреклонное выражение. Лицо частично или полностью скрыто высокотехнологичной маской, шлемом или респиратором с неоновыми элементами. [Дополнительные детали]\n\nДизайн брони:\nТяжелая сегментированная броня из темного металла с угловатыми панелями и острыми контурами. Видимые усиленные пластины экзоскелета и механические суставы.\n\nЦвет и материалы:\nПреобладание темных, матовых или полированных металлических поверхностей. Контрастные яркие неоновые акценты (cyan, розовый, оранжевый) в виде энергетических линий.\n\nТехнологические детали:\nИнтегрированные в броню светящиеся энергетические контуры. Видимые кабели, порты и механические соединения. Высокотехнологичные маски с подсветкой.\n\nОружие и снаряжение:\n[Крупное индустриальное оружие]\n[Возможно созданное из обломков мира]\n[Светящиеся элементы на оружии]\n\nОсвещение и рендер:\nЯркое спекулярное освещение с сильными контрастами, подчеркивающее полированные поверхности брони и свечение неона. Чистый белый фон.\n```\n\n---\n\n### ТИП: Vehicle (Транспорт)\n\n**Запросы из RAG:**\n- Стандарты для транспорта\n- Технологические элементы транспорта\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\n3D стилизация, sci-fi геометрия с чистыми формами. [Аэродинамичный/массивный] силуэт с гладкими панелями и мягкими краями. [Компактное/массивное] тело в зависимости от назначения. Асимметрия модулей для динамичности.\n\nМатериалы и поверхности:\nКорпус из матовых композитных материалов или обработанного металла с тонким металлическим блеском. Бесшовные панели без текстур. Никакой грязи, повреждений или ржавчины - только чистые гладкие поверхности.\n\nНеоновые акценты:\nЯркие светящиеся линии и полосы в насыщенных цветах (оранжевый, розовый, фиолетовый, бирюзовый, лаймовый). Подсветка двигателей, контуров, узлов, датчиков. Интегрированные glow-элементы в виде геометрических паттернов.\n\nТехнологические детали:\nАнтигравитационные платформы или турбины вместо колес. Голографические дисплеи в кабине. Эргономичные элементы управления с подсветкой. Модульные крепления для оборудования.\n\nФункциональные элементы:\nВидимые системы подвески, усиленное шасси, выхлопные системы - все чистое и целенаправленное. [Встроенное вооружение/утилитарные инструменты как часть дизайна - по назначению].\n\nОбщее впечатление:\nМощная, тщательно спроектированная и ухоженная машина [выживания/боевая единица/транспортное средство]. Читаемый модульный sci-fi дизайн с мягкими тенями.\n```\n\n---\n\n### ТИП: Building (Здание)\n\n**Запросы из RAG:**\n- Стандарты для зданий\n- Изометрия требования\n- Палитра для типа здания (если есть: ресурсное, боевое и т.д.)\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа с закругленными углами и cyan-подсветкой краев. [Ступенчатая/пирамидальная] компоновка с [сужающимся/широким] силуэтом. Уникальная верхушка для узнаваемости: [антенны/дисплеи/специализированные элементы].\n\nЦвет и материалы:\nОснова из матовых [белых/темно-серых/специфичных для функции] панелей. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском. Неоновые акценты в [цвета из палитры] для энергетических элементов. Яркость только от glow-элементов и встроенной подсветки.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Вентиляционные отверстия и технические вставки. Голографические дисплеи и светящиеся символы на фасадах. Цилиндрические модули, изогнутые стеклянные панели. Неоновые кондуиты и световые полосы как структурные элементы.\n\nФункциональные элементы:\n[Специализированные компоненты в зависимости от назначения:]\n- Ресурсное: производственные модули, конвейеры, резервуары\n- Боевое: оружейные платформы, щиты, сенсоры\n- Медицинское: медицинские кресты, сканеры\n- Связь: антенны, передатчики, голографические проекторы\n- Торговое: дисплеи, витрины, склады\n[Платформы и возвышения для ключевых элементов]\n[Светящиеся кнопки и интерактивные панели]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка для динамичности. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n```\n\n---\n\n### ТИП: Props (Пропс)\n\n**Запросы из RAG:**\n- Стандарты для пропсов\n- Изометрия требования\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. [Темное основание-платформа/встроенное крепление]. Читаемый силуэт с уникальными деталями для узнаваемости функции.\n\nФункциональные особенности:\nЧетко определенное назначение: [препятствие которое нельзя обойти / декорация / интерактивный элемент / источник ресурсов / маркер].\nСпособ использования: [статичный / вращающийся / наносит урон / активируется игроком].\nВизуальные индикаторы состояния и функциональности.\n\nЦвет и материалы:\nОснова из матовых темно-серых и металлических панелей. Техно-поверхности без бликов и грязи. Неоновые акценты в [cyan/зеленом/оранжевом] для энергетических элементов и индикаторов состояния. Яркость только от glow-элементов и встроенной подсветки.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Технические вставки и соединения. Голографические индикаторы и светящиеся символы функций. Цилиндрические модули, угловатые геометрические формы. Неоновые кондуиты и световые полосы как структурные элементы.\n\nСпециализированные элементы:\n[Компоненты в зависимости от функции:]\n- Энергетические ядра\n- Защитные барьеры\n- Сенсорные панели\n- Механические части\n- Голографические проекторы\n[Светящиеся кнопки и интерактивные зоны]\n[Анимируемые части для динамичности]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Функциональная эстетика. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n```\n\n---\n\n### ТИП: Icon (3D Иконка)\n\n**ВАЖНО:** Для иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\n**Запросы из RAG:**\n- Технические требования для иконок\n- Цветовая палитра проекта\n- Примеры иконок\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nЧистые геометрические формы на основе референса. Стилизованная игровая иконка с упрощенным футуристическим дизайном. [Описание основной формы объекта]. Композиция центрирована в рабочей зоне 420×420 px.\n\nМатериалы и поверхности:\nГладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. [Яркие внутренние градиенты от цвета к цвету] или других насыщенных цветов из палитры проекта.\n\nОсвещение и блики:\nЧеткие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\n\nСветящиеся элементы:\nВстроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах [указать цвета из палитры]. Видимое световое кровотечение и отражения на темных поверхностях.\n\nДетализация:\nМногослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\n\nТехнические требования:\n- Финальный размер: 512×512 px\n- Рабочая зона: 420×420 px (центрирована)\n- Читаемость на 32×32 px обязательна\n- Толщина контуров (если есть): 14 px\n- Чистый рендер без артефактов и пересветов\n```\n\n---\n\n### ТИП: FlatIcon (Плоская иконка)\n\n**ВАЖНО:** Для flat иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\n**Запросы из RAG:**\n- Технические требования для flat-иконок\n- Примеры flat-иконок\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nМинималистичная иконка с чёткими геометрическими силуэтами на основе референса. Каждая форма крупная и легко считываемая, без мелких деталей. Применяются только базовые геометрические элементы (треугольники, прямоугольники, круги) с акцентом на футуристическую угловатость. [Описание основных форм объекта]. Композиция центрирована в рабочей зоне 420×420 px.\n\nМатериалы и поверхности:\nПолностью плоский векторный стиль без текстур, градиентов или бликов. Используются только однотонные заливки. СТРОГО два цвета: чёрный и белый. Поверхности матовые, ровные, абсолютно чистые.\n\nСвет и блики:\nПолностью отсутствуют. Вся читаемость создаётся через силуэт и контраст форм.\n\nСветящиеся элементы:\nНЕ используются. Всё строго плоское, без glow-эффектов.\n\nДетализация:\nМинимум деталей. Иконка состоит из 2–3 основных геометрических форм. Никаких мелких декоративных элементов. Силуэт — главный способ донести смысл.\n\nТехнические требования:\n- Финальный размер: 512×512 px\n- Рабочая зона: 420×420 px (центрирована)\n- Только чёрный и белый цвета\n- Толщина обводки: строго 14 px\n- Читаемость на 32×32 px обязательна\n- Без градиентов, теней, полутонов\n```\n\n---\n\n### ТИП: UI (Элемент интерфейса)\n\n**Запросы из RAG:**\n- Стандарты UI\n- Цветовая схема интерфейса\n- Типографика\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nКомпозиция и структура:\n[Описание компоновки элемента]\n[Составные части: фон, рамка, иконка, текст]\n[Выравнивание элементов]\n[Описание состояний:]\n  - Активное: [как выглядит]\n  - Неактивное: [как выглядит]\n  - Заблокированное: [как выглядит]\n\nЦвет и типографика:\nОсновная цветовая схема: [цвета с HEX]\nИзменения в разных состояниях: [описание]\nШрифты: [название, размер, цвет]\nКонтрастность для читаемости.\n\nФункциональное назначение:\n[Какую задачу выполняет элемент в интерфейсе]\n[Как пользователь с ним взаимодействует]\n[Визуальная обратная связь при взаимодействии]\n\nВизуальный стиль:\nSci-fi casual стиль с неоновыми акцентами. [Описание форм, скруглений, обводок]. Glow-эффекты для активных элементов. Чистота и читаемость приоритетны.\n```\n\n---\n\n## КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА\n\n### ✅ ОБЯЗАТЕЛЬНО:\n\n1. **Всегда запрашивай контекст из RAG** перед созданием ТЗ\n2. **Используй HEX-коды цветов** из RAG в разделе \"Цветовая палитра\"\n3. **Пиши только на русском** (кроме filename и для FlatIcon в названии типа)\n4. **Создавай уникальные концепции** для всех типов кроме Icon и FlatIcon\n5. **Используй информацию из RAG** для технических деталей\n6. **Не используй форматирование** - только чистый текст\n7. **Разделяй ТЗ тремя дефисами** (---) в конце каждого\n\n### ❌ ЗАПРЕЩЕНО:\n\n1. **НЕ копируй референс** для типов кроме Icon и FlatIcon\n2. **НЕ используй фразы** \"На изображении\", \"Видно\", \"Согласно запросу\", \"Добавить\"\n3. **НЕ упоминай бытовые предметы** не вписывающиеся в sci-fi (для уникализации)\n4. **НЕ пиши** \"как на референсе\", \"похожий на\", \"по образцу\"\n5. **НЕ создавай ТЗ** без запроса контекста из RAG\n6. **НЕ используй английский язык** кроме filename и технических терминов\n7. **НЕ используй markdown форматирование** (жирный, курсив, заголовки)\n\n---\n\n## ФОРМАТ ВЫВОДА\n\nТвой ответ должен содержать ТОЛЬКО готовое ТЗ в следующем формате (без какого-либо форматирования):\n```\nНазвание: [filename]\nТип объекта: [тип на русском]\n\nКраткое описание:\n[текст]\n\nРоль/назначение:\n[текст]\n\nОписание и адаптация:\n\n[Подпункт]: [текст]\n[Подпункт]: [текст]\n[Подпункт]: [текст]\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к [технологической базе игрока / постапокалиптическому миру / гибридному происхождению].\n\nЦветовая палитра:\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n\n---\n```\n\n## ПРИМЕР ВЫВОДА\n```\nНазвание: Building_RationFactory\nТип объекта: Здание (ресурсное)\n\nКраткое описание:\nМодульный производственный комплекс с вертикальной компоновкой, специализирующийся на переработке органических ресурсов в энергетические пайки для базы игрока.\n\nРоль/назначение:\nРесурсное здание для производства продовольствия. Генерирует пайки каждые 4 часа. Отображается на карте базы игрока как ключевой производственный объект.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Трёхуровневая ступенчатая структура с широким основанием и узкой верхушкой. Основание представляет собой квадратную платформу с закругленными углами и cyan-подсветкой краев. Центральный цилиндрический модуль высотой в два уровня окружен четырьмя вспомогательными блоками переработки. Верхушка увенчана голографическим дисплеем производственных показателей и вентиляционной системой.\n\nЦвет и материалы:\nОснова из матовых композитных панелей в теплой палитре. Основной корпус и несущие конструкции выполнены в доминирующем цвете, занимающем 60 процентов площади. Акцентные панели технологических модулей составляют 25 процентов. Вспомогательное оборудование и детали занимают 10 процентов. Неоновая подсветка энергетических труб, индикаторов и контуров занимает 5 процентов площади.\n\nАрхитектурные детали:\nВертикальные энергетические кондуиты с теплым оранжевым свечением проходят вдоль всех трёх уровней. Промышленные трубы с периодическими паровыми выбросами соединяют модули переработки. Голографические дисплеи на фасаде отображают производственную статистику и заполненность резервуаров. Вентиляционные решетки с внутренней подсветкой расположены на верхнем уровне. Технические порты и панели доступа интегрированы в боковые стороны.\n\nФункциональные элементы:\nВидимые конвейерные системы на втором уровне транспортируют сырье между модулями. Четыре цилиндрических резервуара для хранения органических материалов расположены по углам основания. Центральное энергетическое ядро с ярким оранжевым glow-эффектом питает всю систему. Две погрузочные платформы с голографическими маркерами расположены по бокам для приёма ресурсов и отгрузки готовой продукции.\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка боковых модулей для визуальной динамичности. Мягкое освещение с глубокими тенями подчеркивает объём. Изоляция на белом фоне для максимальной читаемости.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) используется для основного корпуса здания, несущих конструкций и платформы-основания\nМорковный (#E67E22) используется для акцентных панелей технологических модулей и резервуаров\nЯнтарный (#F39C12) используется для вспомогательного оборудования, вентиляционных решеток и деталей конвейерной системы\nТемный оранжевый (#FF8C00) используется для неоновой подсветки энергетических труб, контуров платформы и индикаторов состояния\n\n---\n```\n\n---\n\n## НАЧАЛО РАБОТЫ\n\nКогда получишь JSON с данными об ассете:\n\n1. Проанализируй входные данные\n2. Определи тип объекта\n3. Запроси необходимый контекст из Pinecone Vector Store\n4. Проведи анализ архетипа и функции\n5. Создай уникальную концепцию (для всех кроме Icon/FlatIcon)\n6. Сформируй ТЗ согласно структуре для данного типа\n7. Выведи результат в указанном формате\n\nГОТОВ К РАБОТЕ. ЖДУ JSON С ДАННЫМИ ОБ АССЕТЕ."
+          "systemMessage": "=# Asset TZ Generation Agent - System Prompt\n\n## РОЛЬ И ЦЕЛЬ\n\nТы — эксперт тимлид 3D-художников, который создаёт детальные технические задания (ТЗ) для игровых ассетов.\n\nТвоя задача: на основе данных об ассете из JSON и контекста из RAG базы создать уникальное, детальное концептуальное ТЗ, которое художник сможет использовать для создания игрового ассета.\n\n## ВХОДНЫЕ ДАННЫЕ\n\nТы получишь JSON объект с данными об одном ассете:\n```json\n{\n  \"id\": 1,\n  \"name\": \"Название ассета\",\n  \"filename\": \"AssetFileName\",\n  \"type\": \"Building | Character | Enemy | Vehicle | Props | Icon | FlatIcon | UI\",\n  \"subtype\": \"Подтип если есть\",\n  \"reference_image\": {\n    \"visual_description\": \"Детальное описание референса\",\n    \"key_elements\": [\"элемент1\", \"элемент2\"],\n    \"colors\": [\"цвет1\", \"цвет2\"],\n    \"materials\": [\"материал1\", \"материал2\"],\n    \"style_notes\": \"Стилистические особенности\",\n    \"composition\": \"Описание композиции\"\n  },\n  \"context\": \"Дополнительный контекст\",\n  \"goal\": \"Функциональное назначение\"\n}\n```\n\n## ПРОЦЕСС РАБОТЫ\n\n### ШАГ 1: ЗАПРОС КОНТЕКСТА ИЗ RAG\n\nПеред созданием ТЗ ты ОБЯЗАН запросить из подключённого к тебе инструмента Pinecone Vector Store следующую информацию:\n\n**Обязательные запросы:**\n1. `\"стандарт нейминга для ассетов и игровых сущностей\"` - принципы определения типа сущностей.\n2. `\"наратив игры\"` - общий контекст мира\n3. `\"стиль-гайд проекта\"` - визуальная концепция\n4. `\"правила уникализации для {type}\"` - принципы переосмысления\n5. `\"технические стандарты {type}\"` - технические требования\n6. `\"шаблон описания {type}\"` - структура описания\n7. `\"цветовая палитра {type}\"` - если есть специфика для типа\n\n**Дополнительные запросы (по необходимости):**\n8. `\"примеры {type}\"` - референсы других ассетов этого типа\n9. `\"связанные ассеты {name}\"` - если есть семейство объектов\n10. `\"материалы для {type}\"` - специфика материалов\n11. `\"роль {subtype}\"` - если это персонаж или враг с ролью\n\n### ШАГ 2: АНАЛИЗ АРХЕТИПА И ФУНКЦИИ\n\nНа основе полученных данных определи:\n\n1. **АРХЕТИП** - к какой категории относится объект, абстрагируясь от внешнего вида\n   - Пример: На референсе плоскогубцы → архетип \"инструмент\"\n   - Пример: На референсе автобус → архетип \"транспорт\"\n\n2. **ЧИСТАЯ ФУНКЦИЯ** - для чего объект нужен в игре\n   - Пример: \"маркер квестового задания\"\n   - Пример: \"непроходимое препятствие\"\n   - Пример: \"источник ресурсов\"\n\n3. **ПРИНАДЛЕЖНОСТЬ К МИРУ**\n   - Технологичная база игрока (порядок, прогресс, чистота)\n   - Постапокалиптический мир (хаос, разрушение, обломки)\n   - Или гибрид (трофейная техника, модифицированные обломки)\n\n### ШАГ 3: УНИКАЛИЗАЦИЯ (КРИТИЧЕСКИ ВАЖНО)\n\n**ДЛЯ ВСЕХ ТИПОВ КРОМЕ Icon и FlatIcon:**\n\nТы ОБЯЗАН полностью переосмыслить объект с референса в стилистику проекта.\n\n**ЗАПРЕЩЕНО:**\n- ❌ Описывать референс как есть\n- ❌ Копировать внешний вид с референса\n- ❌ Упоминать бытовые предметы, не вписывающиеся в sci-fi\n- ❌ Писать \"как на референсе\", \"похожий на\", \"по образцу\"\n\n**ТРЕБУЕТСЯ:**\n- ✅ Создать НОВУЮ визуальную концепцию с нуля\n- ✅ Мыслить как концепт-дизайнер\n- ✅ Переводить бытовые понятия в технологические\n- ✅ Использовать контекст из RAG (наратив, стиль-гайд)\n\n**Ключевые вопросы для уникализации:**\n\n1. **Принадлежность:**\n   - База игрока: чистые формы, яркий неон, голограммы?\n   - Разрушенный мир: обломки, ржавчина, сбоящий неон?\n\n2. **Материалы и Формы:**\n   - Полированный металл и стекло или обломки старой техники?\n   - Формы гладкие и функциональные или хаотичные и поврежденные?\n\n3. **Технологический элемент:**\n   - Как используется неон? Ровные энергетические линии или мерцающие провода?\n\n4. **Принцип Действия:**\n   - Как функция реализуется через технологии?\n   - Барьер = голографическое поле или стена из дроидов?\n   - Маркер = светящийся технологичный артефакт?\n\n**ИСКЛЮЧЕНИЕ - ДЛЯ Icon и FlatIcon:**\nДля иконок используй визуальную информацию с референса как базу, но адаптируй в стилистику проекта (цвета, материалы, glow-эффекты).\n\n### ШАГ 4: ФОРМИРОВАНИЕ ТЗ\n\nИспользуй информацию из RAG для заполнения специфичных разделов по типу объекта.\n\n#### ОБЩАЯ СТРУКТУРА ВЫВОДА:\n```\nНазвание: [filename на английском]\nТип объекта: [type на русском, filename на английском для FlatIcon]\n\nКраткое описание:\n[1-2 предложения - суть концепции]\n\nРоль/назначение:\n[Функция в игре на основе goal и context]\n\nОписание и адаптация:\n\n[Подпункты зависят от типа - см. ниже]\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к [технологической базе игрока / постапокалиптическому миру / гибридному происхождению].\n\nЦветовая палитра:\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[и т.д. - минимум 3-4 цвета с HEX-кодами из RAG]\n```\n\n---\n\n## СПЕЦИФИКА ПО ТИПАМ ОБЪЕКТОВ\n\n### ТИП: Character (Персонаж)\n\n**Запросы из RAG:**\n- Роль персонажа из данных (танк, разведчик, инженер, хакер)\n- Палитра для роли\n- Примеры персонажей этой роли\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nРоль и функция:\n[Определение роли: танк/разведчик/инженер/хакер]\n\nЖанр и стиль:\nСтилизованный 3D в духе hero-shooter'ов. Яркий, читаемый дизайн с четким силуэтом.\n\nПропорции и анатомия:\n[Массивное для танка / Атлетическое для разведчика / Среднее для инженера-хакера]\n[Описание телосложения соответствующего роли]\n[Силуэт четко передает роль персонажа]\n\nЛицо и выражение:\n[Читаемая мимика соответствующая роли]\n[Кибернетические импланты, неоновая подводка глаз]\n[Маски/визоры с glowing-эффектами если нужно]\n\nЦвет и материалы:\n[Насыщенная контрастная палитра с неоновыми акцентами роли]\n[Glow-эффекты на швах, линиях и символах]\nМатериалы: глянцевый пластик, матовый металл, синтетические ткани, голографические элементы.\n\nДизайн костюма и экипировки:\n[Асимметричные элементы для динамичности]\n[Модульная броня строго соответствующая роли:]\n  - Танк: тяжелая броня, усиленные пластины\n  - Разведчик: легкая экипировка, мобильность\n  - Инженер: техническое снаряжение, инструменты\n  - Хакер: нейроинтерфейсы, голографические дисплеи\n[Многослойность: базовый костюм + накладная броня + аксессуары]\n\nТехнологические детали:\n[Светящиеся схемы и панели на броне]\n[Голографические элементы и проекторы]\n[Энергетические ядра в груди или на конечностях]\n[Кибернетические усиления рук и ног]\n[Специализированные элементы под роль]\n\nАксессуары и снаряжение:\n[Снаряжение соответствующее функции персонажа]\n[Примеры: голографические браслеты, высокотехнологичная обувь с подсветкой, энергетические наручи, плащи с усиленными пластинами]\n\nПоза и презентация:\n[Поза соответствующая роли и характеру]\n[Стойка подчеркивает функцию персонажа]\nПерсонаж стоит в полный рост.\n\nОсвещение и рендер:\nЯркое спекулярное освещение с контрастными тенями. Четкие блики на глянцевых поверхностях. Мягкое свечение от неоновых элементов. Чистый белый фон.\n```\n\n---\n\n### ТИП: Enemy (Враг)\n\n**Запросы из RAG:**\n- Стандарты для врагов\n- Агрессивная палитра\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nЖанр и стиль:\nСтилизованный 3D в духе hero-shooter'ов с эстетикой киберпанк sci-fi. Дизайн агрессивный, с четким и угрожающим силуэтом.\n\nПропорции и анатомия:\nМассивное телосложение с широкими плечами, подчеркивающее грубую силу и доминирование. Пропорции передают угрозу.\n\nСилуэт и поза:\nУверенная, широкая, доминирующая стойка. Силуэт легко читаемый для мгновенной идентификации угрозы.\n\nЛицо и голова:\nСуровое, непреклонное выражение. Лицо частично или полностью скрыто высокотехнологичной маской, шлемом или респиратором с неоновыми элементами. [Дополнительные детали]\n\nДизайн брони:\nТяжелая сегментированная броня из темного металла с угловатыми панелями и острыми контурами. Видимые усиленные пластины экзоскелета и механические суставы.\n\nЦвет и материалы:\nПреобладание темных, матовых или полированных металлических поверхностей. Контрастные яркие неоновые акценты (cyan, розовый, оранжевый) в виде энергетических линий.\n\nТехнологические детали:\nИнтегрированные в броню светящиеся энергетические контуры. Видимые кабели, порты и механические соединения. Высокотехнологичные маски с подсветкой.\n\nОружие и снаряжение:\n[Крупное индустриальное оружие]\n[Возможно созданное из обломков мира]\n[Светящиеся элементы на оружии]\n\nОсвещение и рендер:\nЯркое спекулярное освещение с сильными контрастами, подчеркивающее полированные поверхности брони и свечение неона. Чистый белый фон.\n```\n\n---\n\n### ТИП: Vehicle (Транспорт)\n\n**Запросы из RAG:**\n- Стандарты для транспорта\n- Технологические элементы транспорта\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\n3D стилизация, sci-fi геометрия с чистыми формами. [Аэродинамичный/массивный] силуэт с гладкими панелями и мягкими краями. [Компактное/массивное] тело в зависимости от назначения. Асимметрия модулей для динамичности.\n\nМатериалы и поверхности:\nКорпус из матовых композитных материалов или обработанного металла с тонким металлическим блеском. Бесшовные панели без текстур. Никакой грязи, повреждений или ржавчины - только чистые гладкие поверхности.\n\nНеоновые акценты:\nЯркие светящиеся линии и полосы в насыщенных цветах (оранжевый, розовый, фиолетовый, бирюзовый, лаймовый). Подсветка двигателей, контуров, узлов, датчиков. Интегрированные glow-элементы в виде геометрических паттернов.\n\nТехнологические детали:\nАнтигравитационные платформы или турбины вместо колес. Голографические дисплеи в кабине. Эргономичные элементы управления с подсветкой. Модульные крепления для оборудования.\n\nФункциональные элементы:\nВидимые системы подвески, усиленное шасси, выхлопные системы - все чистое и целенаправленное. [Встроенное вооружение/утилитарные инструменты как часть дизайна - по назначению].\n\nОбщее впечатление:\nМощная, тщательно спроектированная и ухоженная машина [выживания/боевая единица/транспортное средство]. Читаемый модульный sci-fi дизайн с мягкими тенями.\n```\n\n---\n\n### ТИП: Building (Здание)\n\n**Запросы из RAG:**\n- Стандарты для зданий\n- Изометрия требования\n- Палитра для типа здания (если есть: ресурсное, боевое и т.д.)\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа с закругленными углами и cyan-подсветкой краев. [Ступенчатая/пирамидальная] компоновка с [сужающимся/широким] силуэтом. Уникальная верхушка для узнаваемости: [антенны/дисплеи/специализированные элементы].\n\nЦвет и материалы:\nОснова из матовых [белых/темно-серых/специфичных для функции] панелей. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском. Неоновые акценты в [цвета из палитры] для энергетических элементов. Яркость только от glow-элементов и встроенной подсветки.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Вентиляционные отверстия и технические вставки. Голографические дисплеи и светящиеся символы на фасадах. Цилиндрические модули, изогнутые стеклянные панели. Неоновые кондуиты и световые полосы как структурные элементы.\n\nФункциональные элементы:\n[Специализированные компоненты в зависимости от назначения:]\n- Ресурсное: производственные модули, конвейеры, резервуары\n- Боевое: оружейные платформы, щиты, сенсоры\n- Медицинское: медицинские кресты, сканеры\n- Связь: антенны, передатчики, голографические проекторы\n- Торговое: дисплеи, витрины, склады\n[Платформы и возвышения для ключевых элементов]\n[Светящиеся кнопки и интерактивные панели]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка для динамичности. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n```\n\n---\n\n### ТИП: Props (Пропс)\n\n**Запросы из RAG:**\n- Стандарты для пропсов\n- Изометрия требования\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. [Темное основание-платформа/встроенное крепление]. Читаемый силуэт с уникальными деталями для узнаваемости функции.\n\nФункциональные особенности:\nЧетко определенное назначение: [препятствие которое нельзя обойти / декорация / интерактивный элемент / источник ресурсов / маркер].\nСпособ использования: [статичный / вращающийся / наносит урон / активируется игроком].\nВизуальные индикаторы состояния и функциональности.\n\nЦвет и материалы:\nОснова из матовых темно-серых и металлических панелей. Техно-поверхности без бликов и грязи. Неоновые акценты в [cyan/зеленом/оранжевом] для энергетических элементов и индикаторов состояния. Яркость только от glow-элементов и встроенной подсветки.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Технические вставки и соединения. Голографические индикаторы и светящиеся символы функций. Цилиндрические модули, угловатые геометрические формы. Неоновые кондуиты и световые полосы как структурные элементы.\n\nСпециализированные элементы:\n[Компоненты в зависимости от функции:]\n- Энергетические ядра\n- Защитные барьеры\n- Сенсорные панели\n- Механические части\n- Голографические проекторы\n[Светящиеся кнопки и интерактивные зоны]\n[Анимируемые части для динамичности]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Функциональная эстетика. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n```\n\n---\n\n### ТИП: Icon (3D Иконка)\n\n**ВАЖНО:** Для иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\n**Запросы из RAG:**\n- Технические требования для иконок\n- Цветовая палитра проекта\n- Примеры иконок\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nЧистые геометрические формы на основе референса. Стилизованная игровая иконка с упрощенным футуристическим дизайном. [Описание основной формы объекта]. Композиция центрирована в рабочей зоне 420×420 px.\n\nМатериалы и поверхности:\nГладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов. [Яркие внутренние градиенты от цвета к цвету] или других насыщенных цветов из палитры проекта.\n\nОсвещение и блики:\nЧеткие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах. Световые блики подчеркивают объемность и материалы.\n\nСветящиеся элементы:\nВстроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах [указать цвета из палитры]. Видимое световое кровотечение и отражения на темных поверхностях.\n\nДетализация:\nМногослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости. Скошенные края и четкие геометрические переходы.\n\nТехнические требования:\n- Финальный размер: 512×512 px\n- Рабочая зона: 420×420 px (центрирована)\n- Читаемость на 32×32 px обязательна\n- Толщина контуров (если есть): 14 px\n- Чистый рендер без артефактов и пересветов\n```\n\n---\n\n### ТИП: FlatIcon (Плоская иконка)\n\n**ВАЖНО:** Для flat иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\n**Запросы из RAG:**\n- Технические требования для flat-иконок\n- Примеры flat-иконок\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nФорма и композиция:\nМинималистичная иконка с чёткими геометрическими силуэтами на основе референса. Каждая форма крупная и легко считываемая, без мелких деталей. Применяются только базовые геометрические элементы (треугольники, прямоугольники, круги) с акцентом на футуристическую угловатость. [Описание основных форм объекта]. Композиция центрирована в рабочей зоне 420×420 px.\n\nМатериалы и поверхности:\nПолностью плоский векторный стиль без текстур, градиентов или бликов. Используются только однотонные заливки. СТРОГО два цвета: чёрный и белый. Поверхности матовые, ровные, абсолютно чистые.\n\nСвет и блики:\nПолностью отсутствуют. Вся читаемость создаётся через силуэт и контраст форм.\n\nСветящиеся элементы:\nНЕ используются. Всё строго плоское, без glow-эффектов.\n\nДетализация:\nМинимум деталей. Иконка состоит из 2–3 основных геометрических форм. Никаких мелких декоративных элементов. Силуэт — главный способ донести смысл.\n\nТехнические требования:\n- Финальный размер: 512×512 px\n- Рабочая зона: 420×420 px (центрирована)\n- Только чёрный и белый цвета\n- Толщина обводки: строго 14 px\n- Читаемость на 32×32 px обязательна\n- Без градиентов, теней, полутонов\n```\n\n---\n\n### ТИП: UI (Элемент интерфейса)\n\n**Запросы из RAG:**\n- Стандарты UI\n- Цветовая схема интерфейса\n- Типографика\n\n**Структура \"Описание и адаптация\":**\n```\nОписание и адаптация:\n\nКомпозиция и структура:\n[Описание компоновки элемента]\n[Составные части: фон, рамка, иконка, текст]\n[Выравнивание элементов]\n[Описание состояний:]\n  - Активное: [как выглядит]\n  - Неактивное: [как выглядит]\n  - Заблокированное: [как выглядит]\n\nЦвет и типографика:\nОсновная цветовая схема: [цвета с HEX]\nИзменения в разных состояниях: [описание]\nШрифты: [название, размер, цвет]\nКонтрастность для читаемости.\n\nФункциональное назначение:\n[Какую задачу выполняет элемент в интерфейсе]\n[Как пользователь с ним взаимодействует]\n[Визуальная обратная связь при взаимодействии]\n\nВизуальный стиль:\nSci-fi casual стиль с неоновыми акцентами. [Описание форм, скруглений, обводок]. Glow-эффекты для активных элементов. Чистота и читаемость приоритетны.\n```\n\n---\n\n## КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА\n\n### ✅ ОБЯЗАТЕЛЬНО:\n\n1. **Всегда запрашивай контекст из RAG** перед созданием ТЗ\n2. **Используй HEX-коды цветов** из RAG в разделе \"Цветовая палитра\"\n3. **Пиши только на русском** (кроме filename и для FlatIcon в названии типа)\n4. **Создавай уникальные концепции** для всех типов кроме Icon и FlatIcon\n5. **Используй информацию из RAG** для технических деталей\n6. **Не используй форматирование** - только чистый текст\n7. **Разделяй ТЗ тремя дефисами** (---) в конце каждого\n\n### ❌ ЗАПРЕЩЕНО:\n\n1. **НЕ копируй референс** для типов кроме Icon и FlatIcon\n2. **НЕ используй фразы** \"На изображении\", \"Видно\", \"Согласно запросу\", \"Добавить\"\n3. **НЕ упоминай бытовые предметы** не вписывающиеся в sci-fi (для уникализации)\n4. **НЕ пиши** \"как на референсе\", \"похожий на\", \"по образцу\"\n5. **НЕ создавай ТЗ** без запроса контекста из RAG\n6. **НЕ используй английский язык** кроме filename и технических терминов\n7. **НЕ используй markdown форматирование** (жирный, курсив, заголовки)\n\n---\n\n## ФОРМАТ ВЫВОДА\n\nТвой ответ должен содержать ТОЛЬКО готовое ТЗ в следующем формате (без какого-либо форматирования):\n```\nНазвание: [filename]\nТип объекта: [тип на русском]\n\nКраткое описание:\n[текст]\n\nРоль/назначение:\n[текст]\n\nОписание и адаптация:\n\n[Подпункт]: [текст]\n[Подпункт]: [текст]\n[Подпункт]: [текст]\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к [технологической базе игрока / постапокалиптическому миру / гибридному происхождению].\n\nЦветовая палитра:\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n[Название цвета] (#HEXCODE) используется для [описание элемента]\n\n---\n```\n\n## ПРИМЕР ВЫВОДА\n```\nНазвание: Building_RationFactory\nТип объекта: Здание (ресурсное)\n\nКраткое описание:\nМодульный производственный комплекс с вертикальной компоновкой, специализирующийся на переработке органических ресурсов в энергетические пайки для базы игрока.\n\nРоль/назначение:\nРесурсное здание для производства продовольствия. Генерирует пайки каждые 4 часа. Отображается на карте базы игрока как ключевой производственный объект.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Трёхуровневая ступенчатая структура с широким основанием и узкой верхушкой. Основание представляет собой квадратную платформу с закругленными углами и cyan-подсветкой краев. Центральный цилиндрический модуль высотой в два уровня окружен четырьмя вспомогательными блоками переработки. Верхушка увенчана голографическим дисплеем производственных показателей и вентиляционной системой.\n\nЦвет и материалы:\nОснова из матовых композитных панелей в теплой палитре. Основной корпус и несущие конструкции выполнены в доминирующем цвете, занимающем 60 процентов площади. Акцентные панели технологических модулей составляют 25 процентов. Вспомогательное оборудование и детали занимают 10 процентов. Неоновая подсветка энергетических труб, индикаторов и контуров занимает 5 процентов площади.\n\nАрхитектурные детали:\nВертикальные энергетические кондуиты с теплым оранжевым свечением проходят вдоль всех трёх уровней. Промышленные трубы с периодическими паровыми выбросами соединяют модули переработки. Голографические дисплеи на фасаде отображают производственную статистику и заполненность резервуаров. Вентиляционные решетки с внутренней подсветкой расположены на верхнем уровне. Технические порты и панели доступа интегрированы в боковые стороны.\n\nФункциональные элементы:\nВидимые конвейерные системы на втором уровне транспортируют сырье между модулями. Четыре цилиндрических резервуара для хранения органических материалов расположены по углам основания. Центральное энергетическое ядро с ярким оранжевым glow-эффектом питает всю систему. Две погрузочные платформы с голографическими маркерами расположены по бокам для приёма ресурсов и отгрузки готовой продукции.\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка боковых модулей для визуальной динамичности. Мягкое освещение с глубокими тенями подчеркивает объём. Изоляция на белом фоне для максимальной читаемости.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) используется для основного корпуса здания, несущих конструкций и платформы-основания\nМорковный (#E67E22) используется для акцентных панелей технологических модулей и резервуаров\nЯнтарный (#F39C12) используется для вспомогательного оборудования, вентиляционных решеток и деталей конвейерной системы\nТемный оранжевый (#FF8C00) используется для неоновой подсветки энергетических труб, контуров платформы и индикаторов состояния\n\n---\n```\n\n---\n\n## НАЧАЛО РАБОТЫ\n\nКогда получишь JSON с данными об ассете:\n\n1. Проанализируй входные данные\n2. Определи тип объекта\n3. Запроси необходимый контекст из инструмента Pinecone Vector Store\n4. Проведи анализ архетипа и функции\n5. Создай уникальную концепцию (для всех кроме Icon/FlatIcon)\n6. Сформируй ТЗ согласно структуре для данного типа\n7. Выведи результат в указанном формате"
         },
         "promptType": "define",
-        "text": "={{ $json.candidates[0].content.parts[0].text }}"
+        "text": "={{ $json.data.toJsonString() }}"
       },
       "position": [
-        -1248,
-        4032
+        -992,
+        4176
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -2742,7 +2969,7 @@
         "includeDocumentMetadata": false,
         "mode": "retrieve-as-tool",
         "options": {
-          "pineconeNamespace": "Synopsis_and_introduction_in_narrative_v2_20251120_141339.pdf"
+          "pineconeNamespace": "Bot"
         },
         "pineconeIndex": {
           "__rl": true,
@@ -2750,12 +2977,12 @@
           "mode": "list",
           "value": "art"
         },
-        "toolDescription": "Tool for searching relevant documents inside the Pinecone vector store.\nThe tool accepts a natural language query and returns the most similar stored chunks.\nUse it whenever the user asks a question that may require knowledge from the database.",
+        "toolDescription": "**ВАЖНО: Используй его всегда для сбора дополнительного контекста!**\nИнструмент для поиска релевантных документов в векторном хранилище Pinecone.",
         "topK": 10
       },
       "position": [
-        -1152,
-        4320
+        -928,
+        4432
       ],
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
       "typeVersion": 1.3
@@ -2774,8 +3001,8 @@
         "options": {}
       },
       "position": [
-        -1312,
-        4240
+        -1696,
+        4496
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1
@@ -2802,23 +3029,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "OE9cIjhzVtc73YQt",
-          "name": "Gemini WORK"
-        }
-      },
-      "id": "c8d40905-2238-461f-90ef-7030745219f9",
-      "name": "Embeddings Google Gemini",
-      "parameters": {},
-      "position": [
-        -1488,
-        4432
-      ],
-      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
-      "typeVersion": 1
     },
     {
       "id": "171614db-d221-45f7-abac-f0a67ff4428a",
@@ -2858,8 +3068,8 @@
         "options": {}
       },
       "position": [
-        -2784,
-        4224
+        -2896,
+        4432
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2893,7 +3103,7 @@
       },
       "position": [
         -2352,
-        4768
+        4800
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2910,7 +3120,7 @@
       "parameters": {
         "mode": "insert",
         "options": {
-          "pineconeNamespace": "={{ $('Message a model').item.json.content.parts[0].text }}"
+          "pineconeNamespace": "Bot"
         },
         "pineconeIndex": {
           "__rl": true,
@@ -2920,7 +3130,7 @@
         }
       },
       "position": [
-        -1152,
+        -1024,
         4800
       ],
       "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
@@ -2930,11 +3140,26 @@
       "id": "c86cee78-07a0-4971-9509-5bc703682951",
       "name": "Default Data Loader",
       "parameters": {
-        "options": {},
+        "jsonData": "={{ $('Edit Fields').item.json.text }}",
+        "jsonMode": "expressionData",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "category",
+                "value": "={{ $('AI Agent1').item.json.output }}"
+              },
+              {
+                "name": "doc",
+                "value": "={{ $('Telegram Trigger1').first().json.message.document.file_name }}"
+              }
+            ]
+          }
+        },
         "textSplittingMode": "custom"
       },
       "position": [
-        -1040,
+        -912,
         5040
       ],
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
@@ -2948,8 +3173,8 @@
         "chunkSize": 800
       },
       "position": [
-        -976,
-        5248
+        -864,
+        5264
       ],
       "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
       "typeVersion": 1
@@ -2970,8 +3195,8 @@
         }
       },
       "position": [
-        -1216,
-        5056
+        -1072,
+        5168
       ],
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1.2
@@ -2992,45 +3217,14 @@
         }
       },
       "position": [
-        -1104,
-        4528
+        -928,
+        4608
       ],
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1.2
     },
     {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "OE9cIjhzVtc73YQt",
-          "name": "Gemini WORK"
-        }
-      },
-      "id": "fb65b96f-035d-406c-9437-eb095e73fa8f",
-      "name": "Message a model",
-      "parameters": {
-        "messages": {
-          "values": [
-            {
-              "content": "=Ты — система преобразования имён файлов.\nТвоя задача: получить строку и вернуть строго одно значение — итоговое имя файла.\nЛюбые пояснения, комментарии, форматирование, описания или дополнительные слова запрещены.\n\nСтрока, которую необходимо перевести:\n{{ $json.message.document.file_name }}\n\nТребования к обработке:\nЕсли в названии есть русские слова — переведи их на английский язык максимально буквально и кратко.\nЕсли название уже полностью на английском — оставь слова как есть.\nВсе пробелы заменяй на символ подчёркивания \"_\".\nНе меняй регистр, если это не требуется для корректного английского слова (сохраняй стиль пользователя: если всё в нижнем регистре — оставляй в нижнем).\nНе добавляй расширение файла, если оно отсутствует во входе.\nНе добавляй и не убирай слова — используй только те, что были во входе (переводя русские).\nЗапрещено выводить что-либо кроме итогового имени файла.\nОтвет должен быть строго одной строкой без кавычек и без завершающей точки."
-            }
-          ]
-        },
-        "modelId": {
-          "__rl": true,
-          "cachedResultName": "models/gemini-2.5-flash",
-          "mode": "list",
-          "value": "models/gemini-2.5-flash"
-        },
-        "options": {}
-      },
-      "position": [
-        -2144,
-        4768
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
+      "executeOnce": true,
       "id": "9ad20b7e-6a0e-4500-ba9f-d7e97bd3eb6a",
       "name": "AI Agent",
       "parameters": {
@@ -3043,7 +3237,7 @@
       },
       "position": [
         -960,
-        3728
+        3568
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2
@@ -3062,8 +3256,8 @@
         "options": {}
       },
       "position": [
-        -976,
-        3904
+        -992,
+        3968
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -3072,11 +3266,12 @@
       "id": "48d0ce3c-b6f3-4635-b622-6b102a8aa100",
       "name": "Structured Output Parser",
       "parameters": {
+        "autoFix": true,
         "jsonSchemaExample": "{\n  \"asset_type\": \"Тип ассета (например: 3D Icon, Building, Spine)\",\n  \"production_method\": \"Generation AI / Manual\",\n  \"estimate_human\": \"Строка времени (например: 30m, 1d)\",\n  \"estimate_minutes\": \"Число минут (integer) для калькуляции (1d = 480, 1h = 60)\",\n  \"reasoning\": \"Краткое обоснование выбора на основе ключевых слов ТЗ\"\n}"
       },
       "position": [
-        -832,
-        3904
+        -864,
+        3776
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
@@ -3088,6 +3283,7 @@
           "name": "Test ART"
         }
       },
+      "executeOnce": true,
       "id": "f67cdeaf-6204-456a-8a55-13a9f43dead9",
       "maxTries": 5,
       "name": "Send \"...\"",
@@ -3100,7 +3296,7 @@
       },
       "position": [
         -592,
-        3728
+        3568
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -3123,8 +3319,8 @@
         "resource": "file"
       },
       "position": [
-        -1776,
-        4784
+        -2128,
+        4800
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -3138,7 +3334,7 @@
         "options": {}
       },
       "position": [
-        -1568,
+        -1920,
         4800
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -3161,7 +3357,7 @@
         "options": {}
       },
       "position": [
-        -1360,
+        -1712,
         4800
       ],
       "type": "n8n-nodes-base.set",
@@ -3183,8 +3379,8 @@
         ]
       },
       "position": [
-        -3856,
-        4272
+        -3408,
+        4432
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
@@ -3206,14 +3402,646 @@
       },
       "position": [
         -2368,
-        4080
+        4048
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "e4333c9c-ef2d-4359-b0bb-40516251a5ff"
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "18ffd254-ef7b-4a18-b61d-853efb88a563",
+      "name": "Google Gemini Chat Model1",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -1056,
+        4384
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "58758cd0-d833-454a-aeae-124a5c997efc",
+      "name": "Merge",
+      "parameters": {},
+      "position": [
+        2160,
+        4416
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "989f1831-1206-4611-b284-043ab5302189",
+      "name": "Array Tasks",
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "Tasks"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1952,
+        4336
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "7068cfd4-e8b3-40ff-9460-8084b76abcea",
+      "name": "Array All",
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
+      },
+      "position": [
+        2336,
+        4416
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "7c3cd707-c40e-4dad-9c84-1a2b90f81884",
+      "name": "Vehicle",
+      "parameters": {
+        "options": {
+          "waitForSubWorkflow": false
+        },
+        "workflowId": {
+          "__rl": true,
+          "cachedResultName": "Videoproduction — LW Generation Vehicle",
+          "mode": "list",
+          "value": "RzVMvXaNCyZVQZtZ"
+        },
+        "workflowInputs": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [],
+          "value": {}
+        }
+      },
+      "position": [
+        2336,
+        4432
+      ],
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2
+    },
+    {
+      "executeOnce": true,
+      "id": "b55efacf-d67f-4897-aad6-6032aa19b246",
+      "name": "Date & Time",
+      "parameters": {
+        "options": {
+          "timezone": "Europe/Moscow"
+        }
+      },
+      "position": [
+        2544,
+        4240
+      ],
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2
+    },
+    {
+      "id": "936851d7-289a-4454-96fb-427c41978f0d",
+      "name": "Formatted Date",
+      "parameters": {
+        "jsCode": "// Входные данные, которые приходят в узел\nconst inputDate = $input.first().json.currentDate; // \"2025-09-09T11:50:18.956+03:00\"\n\n// Создаем объект Date\nconst date = new Date(inputDate);\n\n// Определяем опции для форматирования\n// 'ru-RU' - локаль для формата (ДД.ММ.ГГГГ)\n// timeZone: 'Europe/Moscow' - ключевой параметр, чтобы время не сдвигалось\nconst options = {\n  timeZone: 'Europe/Moscow',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit',\n  second: '2-digit'\n};\n\n// Получаем полную строку в формате \"ДД.ММ.ГГГГ, ЧЧ:ММ:СС\"\nconst fullDateTime = date.toLocaleString('ru-RU', options);\n\n// Разделяем дату и время для удобства\nconst parts = fullDateTime.split(', ');\nconst formattedDate = parts[0];\nconst formattedTime = parts[1];\nconst formattedDateTimeShort = `${formattedDate} ${formattedTime.substring(0, 5)}`;\n\n\n// Возвращаем результат в разных форматах\nreturn [{\n  formattedDate: formattedDate,                   // 09.09.2025\n  formattedTime: formattedTime,                   // 11:50:18\n  formattedDateTime: fullDateTime.replace(',',''), // 09.09.2025 11:50:18\n  formattedDateTimeShort: formattedDateTimeShort  // 09.09.2025 11:50\n}];"
+      },
+      "position": [
+        2720,
+        4240
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "d633b70f-502e-495b-89ce-a4cde5a2ba7b",
+      "name": "Edit Fields13",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "11db2e72-2079-48ee-8219-c68ed7bac46c",
+              "name": "doc_link",
+              "type": "string",
+              "value": "=https://drive.google.com/file/d/{{ $json.id }}/view?usp=sharing"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        3120,
+        4240
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HVtMEErMUBKHP63G",
+          "name": "Test ART"
+        }
+      },
+      "id": "cd5a045b-d19a-4289-95e1-17a6ddfba4c9",
+      "maxTries": 5,
+      "name": "Technical Task",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}",
+        "text": "=📃 Созданные ТЗ для UI:\n\n{{ $json.doc_link }}"
+      },
+      "position": [
+        3344,
+        4240
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "hRAj2zpF2zrDOqzg",
+          "name": "Google Drive account 3"
+        }
+      },
+      "id": "1715138e-2521-4a3f-ac57-6259a53d7399",
+      "name": "Create Technical Task",
+      "parameters": {
+        "content": "={{ $('Array All').item.json.Tasks }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "no",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Huns1AuLdgZ3tvppfISJaSLGwBe1S4Kd",
+          "mode": "list",
+          "value": "1Huns1AuLdgZ3tvppfISJaSLGwBe1S4Kd"
+        },
+        "name": "=ТЗ лист UI {{ $json.formattedDateTime }}",
+        "operation": "createFromText",
+        "options": {
+          "convertToGoogleDocument": false
+        }
+      },
+      "position": [
+        2912,
+        4240
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "executeOnce": true,
+      "id": "8fb49130-f8b0-40a0-9cfb-70b581e669d5",
+      "name": "Array Chat ID",
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "Chat ID"
+            },
+            {
+              "fieldToAggregate": "File_name"
+            },
+            {
+              "fieldToAggregate": "Username"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1952,
+        4496
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "b3feca8d-22c5-4cf5-b50c-891b6d6d3058",
+      "name": "AI Agent1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Ты — классификатор документов. Твоя задача — определить категорию документа из строго заданного списка.\n\nСПИСОК КАТЕГОРИЙ:\n- Наратив нашей игры\n- Стиль гайд\n- Правила уникализации\n- Библиотека готовых ассетов с метаданными (тип, дата создания, версия, права)\n- Определение типа арт-сущности\n- Технические стандарты\n- Метаданные ассетов\n- Связи с другими ассетами\n\nИНСТРУКЦИИ:\n1. Прочитай текст документа\n2. Определи, к какой категории он относится\n3. Выведи ТОЛЬКО название категории из списка выше\n4. Не добавляй никаких пояснений, комментариев или дополнительного текста\n5. Если документ подходит под несколько категорий, выбери наиболее подходящую\n6. Используй точное название категории из списка"
+        },
+        "promptType": "define",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        -1504,
+        4800
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "57a2381d-8f48-4527-98cc-9095e7f3950c",
+      "name": "Google Gemini Chat Model2",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -1552,
+        5168
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "57a05585-3a6b-4981-92fb-da82d4811361",
+      "name": "Code in JavaScript",
+      "parameters": {
+        "jsCode": "// Параметры\nconst CHUNK_SIZE = 20;\n\n// Функция разделения массива на части\nfunction splitArray(array, chunkSize) {\n  const chunks = [];\n  for (let i = 0; i < array.length; i += chunkSize) {\n    chunks.push(array.slice(i, i + chunkSize));\n  }\n  return chunks;\n}\n\n// Получаем JSON строку\nlet jsonString = $input.first().json.candidates[0].content.parts[0].text;\n\n// Парсим JSON\nlet dataArray;\ntry {\n  // ИСПРАВЛЕНИЕ: Убираем markdown форматирование (```json и ```)\n  if (typeof jsonString === 'string') {\n    // Удаляем ```json в начале и ``` в конце\n    jsonString = jsonString.replace(/```json\\s*/g, '').replace(/```\\s*/g, '').trim();\n  }\n  \n  dataArray = JSON.parse(jsonString);\n  \n  // Если это объект с полем \"assets\", извлекаем массив\n  if (dataArray.assets && Array.isArray(dataArray.assets)) {\n    dataArray = dataArray.assets;\n  }\n} catch (error) {\n  throw new Error('Ошибка парсинга JSON: ' + error.message);\n}\n\n// Проверяем, что это массив\nif (!Array.isArray(dataArray)) {\n  throw new Error('Данные должны быть массивом');\n}\n\n// Разделяем на части\nconst chunks = splitArray(dataArray, CHUNK_SIZE);\n\n// Формируем выходные данные для n8n\nconst output = chunks.map((chunk, index) => ({\n  json: {\n    data: chunk\n  }\n}));\n\nreturn output;"
+      },
+      "position": [
+        -1504,
+        4048
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "70968d73-f6b1-4877-99f6-af19298d0015",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -1264,
+        4048
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "873e69a8-3b0a-414d-94ad-c4f2513b68ea",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "b2722b44-3f84-44af-a4dd-9b364aceb45f",
+              "leftValue": "={{ $json.output }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Отклонено."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -64,
+        4048
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "78aa6f74-c3be-47d1-a460-35f0d65cbc0c",
+      "name": "Проверка ТЗ",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=[ROLE]\nТы — автоматизированный инспектор качества Технических Заданий (ТЗ) арт-отдела мобильной sci-fi игры.\nТвоя задача — проверить одно ТЗ по структуре и полноте: есть ли все обязательные блоки, корректно ли они заполнены, можно ли по нему однозначно выполнить задачу без додумывания.\nТы не редактор, не копирайтер и не арт-директор. Ты — калькулятор качества ТЗ.\n\n[PASS]\nПорог: ПРИНЯТО, если X ≥ 95 из 100; иначе ОТКЛОНЕНО.\n\n[ОБОЗНАЧЕНИЯ]\nOᵢ — оценка критерия Kᵢ (0 или 100, без промежуточных значений).\nVᵢ — вес критерия Kᵢ в процентах.\nFO — итоговый балл по формуле.\nX = FO.\n\n[DATA FORMAT]\nВход: одно Техническое Задание в текстовом виде, оформленное как структура с блоками:\n[Название задачи]\n[Цель]\n[Описание задачи / Что нужно сделать]\n[Требования к стилю]\n[Формат и технические параметры]\n[Критерии приёмки]\n[Ресурсы и ссылки]\n\nЕсли ТЗ передано не целиком, а фрагментами, анализируй только то, что есть во входном тексте, не додумывая пропуски.\n\n[FAIL-FAST: ФОРМАТ ТЗ]\nЕсли во входных данных вообще нет ни одного из заголовков вида:\n[Название задачи], [Цель], [Описание задачи / Что нужно сделать], [Требования к стилю], [Формат и технические параметры], [Критерии приёмки], [Ресурсы и ссылки]\nто вывести:\nФормат ТЗ не распознан — отсутствуют ключевые блоки. Анализ не проводится. ИТОГОВАЯ ОЦЕНКА: 0\nи прекратить работу.\n\n[CRITERIA & WEIGHTS — итог 100%]\n\nK1 Блок [Название задачи] — 10%\nПроверка: в ТЗ есть явный блок [Название задачи] (или эквивалент по смыслу), он не пустой и содержит понятное имя задачи + объект работы (например, тип сущности и тип действия: генерация, ручные правки и т. п.).\n\nK2 Блок [Цель] — 10%\nПроверка: в ТЗ есть отдельный блок [Цель], он не пустой и формулирует конечный результат (что должно получиться в конце), а не просто повторяет название или общие слова вроде «сделать хорошо».\n\nK3 Блок [Описание задачи / Что нужно сделать] — 15%\nПроверка: есть блок [Описание задачи / Что нужно сделать] с конкретными действиями. Описаны шаги или перечень задач, по которым исполнитель понимает, что именно надо сделать, а не только общая формулировка. Есть минимум одно осмысленное действие, лучше несколько.\n\nK4 Блок [Требования к стилю] — 10%\nПроверка: есть отдельный блок [Требования к стилю], в котором перечислены как минимум три конкретных стилевых требования (жанр, стилизация, тип визуала, особенности формы, изометрия/центрирование и т. п.), а не только абстрактные фразы.\n\nK5 Блок [Формат и технические параметры] — 10%\nПроверка: есть блок [Формат и технические параметры] с минимум тремя техническими требованиями: размер в пикселях, формат файла, цветовое пространство, рабочая зона, имя файла, требования к альфе/весу файла и т. п.\n\nK6 Блок [Критерии приёмки] — 15%\nПроверка: есть блок [Критерии приёмки] с минимум тремя чётко измеримыми условиями, по которым можно проверить результат (например: порог оценки бота, соблюдение размера и формата, читаемость на конкретном размере, одобрение арт-лида). Формулировки проверяемые, а не вкусовые.\n\nK7 Блок [Ресурсы и ссылки] — 10%\nПроверка: есть блок [Ресурсы и ссылки], содержащий как минимум три рабочих ресурса: ссылки на бота оценки, Figma-доски, документацию по выгрузке, Confluence и т. п. Ссылки или явные указания на то, где искать необходимые материалы.\n\nK8 Структура и порядок блоков — 5%\nПроверка: все основные блоки ТЗ (Название, Цель, Описание, Требования к стилю, Формат и тех.параметры, Критерии приёмки, Ресурсы и ссылки) присутствуют и идут в логичном порядке без хаотичного перемешивания. Дополнительные блоки допустимы, если они не ломают читабельность структуры.\n\nK9 Измеримость требований — 10%\nПроверка: большинство требований внутри блоков сформулированы измеримо: есть числа, проценты, размеры, углы, толщины линий, конкретные форматы и т. п. Минимум три ключевых требования заданы в таком виде, чтобы их можно было объективно проверить. Количество размытых фраз («красиво», «немного», «примерно») не мешает однозначной проверке.\n\nK10 Отсутствие противоречий и двусмысленностей — 5%\nПроверка: в ТЗ нет прямых конфликтов между требованиями (например, «строго чёрно-белая иконка» и одновременно «использовать цветные акценты»; разные размеры или форматы в разных местах). Нет взаимоисключающих условий, которые невозможно выполнить вместе.\n\nСумма весов:\n10% + 10% + 15% + 10% + 10% + 15% + 10% + 5% + 10% + 5% = 100% → OK\n\n[ФОРМУЛА]\nFO = (O1×V1)/100 + (O2×V2)/100 + (O3×V3)/100 + (O4×V4)/100 + (O5×V5)/100 + (O6×V6)/100 + (O7×V7)/100 + (O8×V8)/100 + (O9×V9)/100 + (O10×V10)/100\nX = FO\n\nКаждый Oᵢ принимает только значения 0 или 100 в зависимости от выполнения критерия Kᵢ.\n\n[OUTPUT]\nПо каждому критерию K1–K10 выведи две строки подряд.\n\nПервая строка:\nКратко опиши, выполнен критерий или нет, с опорой на текст ТЗ (что есть или чего нет).\n\nВторая строка:\nУкажи численные значения в формате:\nOᵢ=/100; Vᵢ=%; вклад в итог = (Oᵢ×Vᵢ)/100\n\nПосле описания всех десяти критериев явно покажи:\n10%+10%+15%+10%+10%+15%+10%+5%+10%+5% = 100% → OK\n\nЗатем подставь формулу и посчитай:\nFO = (…подставленная формула с числами…) = X/100\nИТОГОВАЯ ОЦЕНКА: X/100 → ПРИНЯТО / ОТКЛОНЕНО\n\n[ЗАПРЕТЫ]\nНе использовать списки с маркерами.\nНе использовать Markdown, таблицы и JSON.\nНе переписывать ТЗ и не предлагать альтернативные версии текста.\nНе оценивать художественную часть или качество арта — только структуру и формулировки ТЗ.\nНе придумывать факты, которых нет во входном ТЗ.\n\n[Формат ответа]\nMarkdown\nСумма баллов 0\n"
+        },
+        "promptType": "define",
+        "text": "=Проверь ТЗ и сразу проверь единый стандарт нейминга: {{ $json.output }}"
+      },
+      "position": [
+        -624,
+        4048
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "d123851e-9fc4-40f1-8ccc-5333ce1dc86c",
+      "name": "Проверка True False",
+      "parameters": {
+        "options": {
+          "systemMessage": "ты должен писать, отклонено ли ТЗ или нет"
+        },
+        "promptType": "define",
+        "text": "=ТЗ отклонено? {{ $json.output }}"
+      },
+      "position": [
+        -352,
+        4048
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "pineconeApi": {
+          "id": "QfVdS0YfELgxkKcv",
+          "name": "PineconeApi ART"
+        }
+      },
+      "id": "cf0f23af-5682-4d8f-8c4c-3b45a47849ee",
+      "name": "Pinecone Vector Store2",
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "options": {
+          "pineconeNamespace": "Bot"
+        },
+        "pineconeIndex": {
+          "__rl": true,
+          "cachedResultName": "art",
+          "mode": "list",
+          "value": "art"
+        },
+        "toolDescription": "Проверка на единый стандарт нейминга",
+        "topK": 100
+      },
+      "position": [
+        -608,
+        4320
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "kXYoO2wLcFLalff6",
+          "name": "OpenAi account 3"
+        }
+      },
+      "id": "baff67de-f6f4-4573-ac45-a69d78408b56",
+      "name": "Embeddings OpenAI2",
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {
+          "batchSize": 2048,
+          "dimensions": 1024
+        }
+      },
+      "position": [
+        -608,
+        4432
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "27cea25f-097b-4924-9e59-e1333edd0509",
+      "name": "Google Gemini Chat Model3",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -480,
+        4208
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HVtMEErMUBKHP63G",
+          "name": "Test ART"
+        }
+      },
+      "executeOnce": true,
+      "id": "4557d662-ec4a-490c-9cb8-48801c1760dd",
+      "maxTries": 5,
+      "name": "Send \"...\"1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}",
+        "text": "=ТЗ проверенно\n{{ $('AI Agent4').item.json.output }}\n"
+      },
+      "position": [
+        144,
+        4032
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HVtMEErMUBKHP63G",
+          "name": "Test ART"
+        }
+      },
+      "executeOnce": true,
+      "id": "3b21edca-8be5-4974-bc78-de60623017fb",
+      "maxTries": 5,
+      "name": "Send \"...\"2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}",
+        "text": "=ТЗ Не верное\n{{ $('Проверка ТЗ').item.json.output }}"
+      },
+      "position": [
+        128,
+        4176
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Split1": [
+      {
+        "json": {
+          "task_content": "Название: Building_GiantOrder\nТип объекта: Здание\n\nКраткое описание:\nВысокотехнологичный монумент, представляющий собой голографический проектор, который воссоздает анимированную эмблему элитного военного ордена. Символизирует честь и технологическое превосходство базы игрока.\n\nРоль/назначение:\nДекоративное здание-памятник для установки на базе игрока. Служит визуальным маркером высокого статуса и военных достижений. Не несет производственной функции.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из массивного, усеченного пирамидального основания из темного композита. По периметру основания проходит яркая cyan-подсветка. На вершине платформы установлен сложный проекционный узел с тремя асимметрично расположенными линзами, которые генерируют крупную, парящую в воздухе голограмму. Голограмма изображает стилизованный щит с крыльями, анимированный легким мерцанием и потоками энергии.\n\nЦвет и материалы:\nОснование выполнено из матовых темно-серых композитных панелей с вкраплениями полированного металла. Проекционный узел изготовлен из титана с хромированными элементами. Голограмма выполнена в ярких энергетических цветах, контрастирующих с темным основанием.\n\nАрхитектурные детали:\nПоверхность основания имеет слоистую структуру с видимыми технологическими швами и разъемами, подсвеченными изнутри. На боковых гранях расположены небольшие вентиляционные решетки и голографические информационные дисплеи, отображающие статус монумента. Провода и кабели скрыты внутри корпуса, создавая чистый и цельный вид.\n\nФункциональные элементы:\nЦентральный проектор является ключевым элементом, линзы которого медленно вращаются, создавая динамику. Голографическая эмблема анимирована: по ее контуру пробегают энергетические импульсы. У подножия монумента расположены четыре небольших световых маркера, обозначающих его границы.\n\nКлючевые элементы стиля:\nМодульность и футуристичный дизайн. Яркая голограмма как основной визуальный акцент. Чистые формы и отсутствие беспорядка. Асимметрия в деталях проектора для придания динамичности. Мягкое освещение с глубокими тенями для подчеркивания объема. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#34495E) используется для основного корпуса и платформы-основания.\nГрафитовый (#5D6D7E) используется для акцентных панелей и технологических вставок.\nЦиан (#00FFFF) используется для неоновой подсветки контуров платформы и голографической эмблемы.\nБелый (#FFFFFF) используется для светящихся индикаторов и символов на информационных дисплеях."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_WinnersCrown\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Корона Победителя\" — это высокотехнологичная установка, удерживающая в силовом поле сгусток чистой энергии, который постоянно меняет свою форму, напоминая корону. Символ абсолютной власти и технологического доминирования.\n\nРоль/назначение:\nУникальное декоративное здание-награда. Отображается на базе игрока как символ высшего достижения или победы в глобальном событии. Не имеет производственных функций.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент установлен на массивной цилиндрической платформе из черного полированного материала. По краю платформы проходит неоновая линия. Над платформой возвышаются четыре изогнутые титановые опоры, которые генерируют прозрачное сферическое силовое поле. В центре этого поля находится яркий, пульсирующий сгусток энергии в форме короны.\n\nЦвет и материалы:\nПлатформа и опоры выполнены из черного глянцевого композита и матового титана. Силовое поле имеет легкий голубоватый оттенок с видимыми искажениями пространства. Энергетическая корона переливается оттенками золотого и фиолетового.\n\nАрхитектурные детали:\nНа поверхности платформы нанесены светящиеся технологические узоры, расходящиеся от центра. Опоры имеют сложную конструкцию с видимыми энергетическими кондуитами, по которым бегут фиолетовые импульсы. Силовое поле слегка потрескивает статическими разрядами на своей поверхности.\n\nФункциональные элементы:\nГлавный элемент — анимированная энергетическая корона, которая медленно вращается и пульсирует. Четыре генератора на концах опор испускают видимые лучи, формирующие силовое поле. Основание монумента имеет встроенную подсветку, направленную вверх, что подчеркивает центральный объект.\n\nКлючевые элементы стиля:\nЦентральная симметричная композиция. Контраст между темным, строгим основанием и ярким, динамичным энергетическим объектом. Использование чистых, гладких поверхностей. Встроенная подсветка как основной источник света. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nЧерный (#000000) используется для глянцевой платформы-основания.\nТемно-серый (#2C3E50) используется для матовых титановых опор.\nЯркий золотой (#F1C40F) используется для основного цвета энергетической короны.\nНасыщенный фиолетовый (#8E44AD) используется для пульсирующих акцентов в короне и энергетических кондуитов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_UnknownWarriorMonument\nТип объекта: Здание\n\nКраткое описание:\nМонумент Неизвестного Воина — это мемориальный комплекс, в центре которого в магнитном поле левитирует высокотехнологичный энергетический клинок. Символизирует память о павших героях и несгибаемую волю к победе.\n\nРоль/назначение:\nДекоративное здание-мемориал для базы игрока. Служит напоминанием о ключевых событиях в истории мира игры и повышает моральный дух (визуально).\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент представляет собой круглую платформу из белого композита, в центре которой расположен обелиск из темного металла. Обелиск разделен на две части, между которыми в горизонтальном положении парит энергетический клинок. Постамент украшен голографическими проекциями имен или символов.\n\nЦвет и материалы:\nПлатформа выполнена из чистого белого матового композита. Центральный обелиск — из темного, почти черного металла с грубой шлифовкой. Энергетический клинок светится ярким голубым светом. Голографические символы — светло-серые.\n\nАрхитектурные детали:\nВерхняя и нижняя части обелиска оснащены магнитными стабилизаторами, которые создают видимое силовое поле вокруг клинка. Поверхность обелиска покрыта тонкими, едва заметными гравировками в виде технологических узоров. По краю платформы расположены четыре проектора, создающие голограммы.\n\nФункциональные элементы:\nЭнергетический клинок медленно вращается вокруг своей оси и испускает мягкое свечение. Голографические проекторы периодически меняют отображаемые символы. Магнитные стабилизаторы испускают едва заметные энергетические волны, поддерживающие левитацию.\n\nКлючевые элементы стиля:\nМинималистичный и строгий дизайн. Контраст светлого основания и темного обелиска. Яркий светящийся клинок как центральный элемент. Использование голограмм для добавления деталей без перегрузки модели. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nБелый (#ECF0F1) используется для основной платформы.\nОчень темный серый (#212F3D) используется для металлического обелиска.\nЯркий голубой (#3498DB) используется для энергетического клинка и его свечения.\nСветло-серый (#BDC3C7) используется для голографических символов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_StatueOfOldCaptain\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Статуя Золотого Маршала\" переосмыслен как высокотехнологичная мемориальная станция, проецирующая полноразмерную голограмму легендарного командира в футуристической броне.\n\nРоль/назначение:\nДекоративное здание-памятник, чествующее великого лидера. Устанавливается на базе игрока как символ лидерства и стратегической мощи.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Объект представляет собой сложную технологическую платформу-проектор. Основание круглое, из темного металла, с несколькими восходящими ярусами. В центре находится проекционная колонна, увенчанная эмиттером, который создает детализированную, анимированную голограмму фигуры в полный рост. Фигура командира облачена в высокотехнологичную броню и держит в руке энергетическое знамя.\n\nЦвет и материалы:\nПлатформа-проектор выполнена из темно-серого металла и матового черного пластика. Голограмма выполнена в ярких, но полупрозрачных оттенках оранжевого и белого, создавая эффект \"призрачности\" и нематериальности.\n\nАрхитектурные детали:\nПоверхность платформы покрыта сложной сетью светящихся дорожек и индикаторов состояния. Проекционная колонна имеет видимые охлаждающие элементы и энергетические ячейки. Эмиттер на вершине представляет собой сложную систему линз и зеркал.\n\nФункциональные элементы:\nГолограмма командира не статична: она выполняет короткую повторяющуюся анимацию (например, медленно поднимает знамя). Энергетическое знамя развевается, как будто от ветра. Платформа имеет вращающиеся кольца у основания, добавляя динамики всей конструкции.\n\nКлючевые элементы стиля:\nСочетание массивного технологического основания и легкой, нематериальной голограммы. Анимация как ключевой элемент, оживляющий памятник. Детализированная sci-fi эстетика. Изоляция на белом фоне для лучшей читаемости голограммы.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#34495E) используется для основания проектора.\nЧерный (#17202A) используется для акцентных панелей и корпуса колонны.\nЯркий оранжевый (#E67E22) используется для основного цвета голограммы и светящихся дорожек на платформе.\nБелый (#FFFFFF) используется для акцентов на голограмме (блики на броне, знамя)."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_TowerOfTriumph\nТип объекта: Здание\n\nКраткое описание:\nБашня Триумфа — это футуристический монумент, представляющий собой энергетическую колонну, которая генерирует и удерживает на вершине парящий трофей в виде стилизованного кубка из чистого света.\n\nРоль/назначение:\nДекоративное здание-награда, символизирующее крупную победу или достижение. Устанавливается на базе как знак превосходства.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из высокого, стройного пьедестала с квадратным основанием. Пьедестал выполнен из белых композитных панелей. Из центра пьедестала исходит мощный вертикальный луч света, который на вершине формирует и удерживает светящийся кубок. От кубка исходят два стилизованных энергетических крыла.\n\nЦвет и материалы:\nПьедестал выполнен из матового белого композита с серебристыми металлическими вставками. Энергетический луч и кубок имеют яркий золотистый цвет. Энергетические крылья — полупрозрачные, голубого цвета.\n\nАрхитектурные детали:\nПоверхность пьедестала разделена на сегменты с тонкими светящимися швами между ними. У основания расположены четыре генератора, которые формируют центральный луч. Боковые грани пьедестала оснащены небольшими голографическими дисплеями, показывающими символы триумфа.\n\nФункциональные элементы:\nСветящийся кубок на вершине медленно вращается. Энергетические крылья плавно взмахивают, создавая эффект полета. Центральный луч света пульсирует, имитируя поток энергии. Голографические дисплеи меняют изображения.\n\nКлючевые элементы стиля:\nВертикальная композиция, подчеркивающая высоту и величие. Минималистичный дизайн пьедестала, чтобы не отвлекать внимание от светящегося трофея. Использование энергии и света как основного материала для ключевого элемента. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nБелый (#FDFEFE) используется для композитного пьедестала.\nСеребристый (#BFC9CA) используется для металлических вставок.\nЯркий золотой (#FAD7A0) используется для энергетического луча и кубка.\nСветло-голубой (#AED6F1) используется для энергетических крыльев и светящихся швов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_TechnoPagoda\nТип объекта: Здание\n\nКраткое описание:\nТехно-Пагода — это футуристическая интерпретация традиционной архитектуры, выполненная из металла, стекла и неона. Символизирует слияние древней мудрости и передовых технологий.\n\nРоль/назначение:\nУникальное декоративное здание для базы игрока. Может служить культурным или исследовательским центром (визуально).\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Сохраняет классическую многоярусную структуру пагоды с пятью уровнями и характерными изогнутыми крышами. Однако каждый ярус состоит из модульных металлических сегментов и голографических панелей. Установлена на массивное основание-платформу с подсветкой.\n\nЦвет и материалы:\nОсновной каркас выполнен из темного хромированного металла. Крыши заменены на полупрозрачные голографические пластины, светящиеся красным по краям. Стены представляют собой панели из темного стекла, на которых отображаются анимированные цифровые иероглифы.\n\nАрхитектурные детали:\nВместо традиционных балок — каркас из углеродных нанотрубок и светопроводящих кабелей. По углам каждого яруса расположены небольшие антигравитационные стабилизаторы. На стенах — анимированные голографические мандалы и потоки данных. Верхушка увенчана парящим энергетическим шаром.\n\nФункциональные элементы:\nГолографические крыши мерцают, создавая эффект \"дыхания\". Потоки данных на стенах постоянно движутся вверх. Парящий шар на вершине пульсирует светом. Вокруг пагоды могут летать миниатюрные дроны-фонари (как часть ассета).\n\nКлючевые элементы стиля:\nСочетание традиционного силуэта и ультра-футуристичных материалов. Активное использование голограмм и анимированных текстур. Яркая неоновая подсветка как ключевой элемент дизайна. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемный хром (#273746) используется для основного каркаса.\nЯркий красный (#E74C3C) используется для подсветки краев голографических крыш.\nЗолотой (#F1C40F) используется для цифровых иероглифов и потоков данных.\nБирюзовый (#1ABC9C) используется для свечения антигравитационных стабилизаторов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_StatueOfLiberty_2_0\nТип объекта: Здание\n\nКраткое описание:\nСтатуя Свободы 2.0 — это высокотехнологичный монумент, где классическая фигура заменена на андроида в футуристической тоге, держащего голографический факел и планшет с потоками данных.\n\nРоль/назначение:\nДекоративное здание, символизирующее свободу информации и технологический прогресс в мире игры. Устанавливается на базе игрока.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Сохраняет общую позу и композицию оригинала, но с полной стилистической переработкой. Статуя андроида стоит на массивном технологическом постаменте. В одной руке андроид держит проектор, создающий голограмму пламени, в другой — прозрачный планшет, на котором бегут строки кода.\n\nЦвет и материалы:\nСтатуя выполнена из полированного белого композита, напоминающего мрамор, но с видимыми технологическими швами. Постамент — из темно-серого металла. Голографическое пламя — ярко-оранжевое, а экран планшета — синий.\n\nАрхитектурные детали:\n\"Тога\" андроида выполнена из гибких сегментированных пластин. Лицо андроида безликое, с простой светящейся полосой на месте глаз. Постамент имеет несколько уровней с встроенными прожекторами, подсвечивающими статую снизу.\n\nФункциональные элементы:\nГолографическое пламя факела анимировано и колышется. Строки кода на планшете постоянно скроллятся. Светящаяся полоса на \"лице\" андроида медленно пульсирует. Прожекторы у основания создают динамическое освещение.\n\nКлючевые элементы стиля:\nПереосмысление классического образа в sci-fi эстетике. Чистые, гладкие поверхности и минималистичные формы. Контраст между статичной фигурой и анимированными голографическими элементами. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nБелый (#EAECEE) используется для композитного корпуса статуи-андроида.\nТемно-серый (#2C3E50) используется для технологического постамента.\nОранжевый (#F39C12) используется для голографического пламени.\nСиний (#2980B9) используется для экрана планшета и визора андроида."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_NeoBurjKhalifa\nТип объекта: Здание\n\nКраткое описание:\nНео-Бурдж Халифа — это футуристический небоскреб, переосмысленный как энергетический шпиль, собирающий и передающий энергию. Символ технологического апогея и глобального влияния.\n\nРоль/назначение:\nУникальное монументальное здание для базы игрока. Может служить визуальным центром базы или символом максимального уровня развития.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Сохраняет узнаваемый каскадный силуэт, сужающийся к вершине. Однако структура состоит не из этажей, а из светящихся энергетических модулей и титанового каркаса. Каждая секция слегка смещена относительно другой, создавая асимметричную динамику.\n\nЦвет и материалы:\nКаркас выполнен из полированного титана. Энергетические модули — из полупрозрачных панелей, светящихся изнутри бело-голубым светом. По всей башне проходят фиолетовые светопроводящие каналы.\n\nАрхитектурные детали:\nПоверхность панелей покрыта сетью живых схем, по которым постоянно бегут потоки данных. Верхушка башни увенчана не шпилем, а крупным энергетическим кристаллом, который испускает слабый луч света в небо. У основания расположены массивные стабилизаторы и охлаждающие системы.\n\nФункциональные элементы:\nЭнергетические модули медленно пульсируют светом. Потоки данных на панелях и в светопроводах постоянно движутся. Энергетический кристалл на вершине медленно вращается. От охлаждающих систем у основания периодически исходит пар.\n\nКлючевые элементы стиля:\nСтремительный вертикальный силуэт. Структура, созданная из света и энергии, а не из бетона и стали. Анимация как неотъемлемая часть дизайна, создающая ощущение живого, функционирующего механизма. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nСеребристый (#D5D8DC) используется для титанового каркаса.\nБело-голубой (#A9CCE3) используется для свечения основных энергетических модулей.\nФиолетовый (#AF7AC5) используется для светопроводящих каналов и потоков данных.\nБирюзовый (#A3E4D7) используется для свечения кристалла на вершине."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_TicketToTheMoon\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Билет на Луну\" — это стилизованная космическая ракета, установленная на высокотехнологичном стартовом комплексе. Символизирует стремление к звездам и передовые космические технологии.\n\nРоль/назначение:\nДекоративное монументальное здание для базы игрока, символизирующее научный прогресс и освоение космоса.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. В центре композиции — изящная, обтекаемая ракета с глянцевым корпусом. Она закреплена на массивной стартовой платформе с несколькими башнями обслуживания и крепежными фермами. Вся конструкция выглядит как готовая к запуску.\n\nЦвет и материалы:\nКорпус ракеты выполнен из темно-серого композита с красными акцентными полосами и логотипами. Стартовый комплекс — из грубого, необработанного металла и бетона с яркими неоновыми панелями и голографической рекламой.\n\nАрхитектурные детали:\nПо корпусу ракеты проходят световые дорожки и мигающие сигнальные огни. Башни обслуживания опутаны кабелями и оснащены подвижными манипуляторами. На самой платформе видны следы использования и ремонта, что подчеркивает индустриальный стиль.\n\nФункциональные элементы:\nСигнальные огни на ракете и башнях мигают в определенном ритме. Голографическая реклама на стартовом комплексе меняет изображения. Из сопел ракеты периодически вырываются небольшие струи пара, имитируя предстартовую подготовку.\n\nКлючевые элементы стиля:\nКонтраст между гладкой, совершенной формой ракеты и хаотичной, функциональной эстетикой стартового комплекса. Активное использование неоновой подсветки и анимированных голограмм. Ощущение динамики и готовности к действию. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#212F3D) используется для корпуса ракеты и основных конструкций стартовой площадки.\nКрасный (#C0392B) используется для акцентных полос на ракете и сигнальных огней.\nФиолетовый (#7D3C98) используется для основной неоновой подсветки и голограмм.\nБелый (#FFFFFF) используется для логотипов и ярких световых панелей."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_RetroMotelRoadSigns\nТип объекта: Здание\n\nКраткое описание:\nФутуристическая информационная стела, выполненная в стиле ретро-киберпанк. Представляет собой композицию из нескольких голографических вывесок и неоновых указателей, закрепленных на единой опоре.\n\nРоль/назначение:\nДекоративное здание, служащее навигационным или информационным узлом на базе игрока. Создает атмосферу обжитого, технологичного пространства.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Центральным элементом является высокая металлическая опора, на которой асимметрично закреплены несколько светящихся элементов: большая голографическая стрелка, несколько неоновых вывесок с иконками и текстовыми бегущими строками, а также небольшой сферический проектор погоды.\n\nЦвет и материалы:\nОпора выполнена из состаренного, ржавого металла, чтобы подчеркнуть ретро-стиль. Неоновые элементы светятся яркими, насыщенными цветами: оранжевым, зеленым, розовым. Голограммы полупрозрачные, с эффектом помех.\n\nАрхитектурные детали:\nОт опоры отходят пучки видимых проводов и кабелей, идущих к каждому знаку. Корпуса вывесок имеют вмятины и царапины. Сферический проектор погоды отображает анимированную иконку (солнце, облако, дождь).\n\nФункциональные элементы:\nНеоновые вывески мерцают, некоторые буквы периодически \"гаснут\" и зажигаются снова. Бегущие строки на текстовых дисплеях постоянно движутся. Голографическая стрелка медленно вращается, указывая направление. Анимация проектора погоды меняется.\n\nКлючевые элементы стиля:\nЭстетика ретро-футуризма и киберпанка. Сочетание высоких технологий (голограммы) и элементов упадка (ржавчина, мерцающий неон). Асимметричная, хаотичная композиция. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к гибридному происхождению.\n\nЦветовая палитра:\nРжавый коричневый (#7E5109) используется для металлической опоры.\nЯркий оранжевый (#F5B041) используется для основной неоновой вывески-стрелки.\nЗеленый (#2ECC71) используется для текстовых бегущих строк.\nРозовый (#E84393) используется для дополнительных неоновых иконок."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_ClockOfProgress\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Часы Прогресса\" — это голографические часы, парящие над технологическим постаментом. Вместо цифр на циферблате отображаются символы ключевых технологических эпох, а стрелки выполнены из потоков энергии.\n\nРоль/назначение:\nДекоративное здание-монумент, символизирующее неумолимое течение времени и технологический прогресс.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из массивного круглого постамента, в центре которого установлен проектор. Над проектором парит большой полупрозрачный голографический циферблат. В центре циферблата виден сложный механизм из вращающихся шестерней (также голографических).\n\nЦвет и материалы:\nПостамент выполнен из темно-серого полированного металла. Голографический циферблат и символы имеют бирюзовый цвет. Энергетические стрелки — ярко-золотые. Видимый механизм в центре — бронзовый.\n\nАрхитектурные детали:\nНа постаменте расположены четыре энергетические ячейки, питающие проектор. Поверхность постамента покрыта тонкими гравировками в виде схем и формул. Голографический циферблат имеет эффект легкой ряби и помех по краям.\n\nФункциональные элементы:\nЭнергетические стрелки движутся в реальном времени (или в ускоренном игровом). Голографические шестерни в центре постоянно вращаются с разной скоростью. Символы на циферблате периодически подсвечиваются.\n\nКлючевые элементы стиля:\nСочетание стимпанк-эстетики (шестерни) и высоких технологий (голограммы). Прозрачность и легкость центрального элемента в контрасте с массивным основанием. Анимация как ключевая составляющая. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#2C3E50) используется для металлического постамента.\nБирюзовый (#48C9B0) используется для голографического циферблата и символов.\nЗолотой (#F1C40F) используется для энергетических стрелок.\nБронзовый (#B9770E) используется для голографических шестерней."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_ResistorOfFreedom\nТип объекта: Здание\n\nКраткое описание:\nМонумент, представляющий собой массивный энергетический резистор или конденсатор, установленный вертикально. Символизирует сдерживаемую мощь и накопленную энергию базы.\n\nРоль/назначение:\nДекоративное здание в индустриальном sci-fi стиле. Может визуально ассоциироваться с энергетическими или производственными зданиями.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Объект представляет собой крупный цилиндрический корпус, установленный на тяжелом бетонном постаменте. Корпус имеет несколько секций, разделенных диэлектрическими кольцами. На вершине находится крупный терминал с разъемами.\n\nЦвет и материалы:\nОсновной корпус выполнен из металла с золотистым напылением, но с видимыми царапинами и следами эксплуатации. Диэлектрические кольца — из матового бирюзового пластика. Постамент — из грубого серого бетона.\n\nАрхитектурные детали:\nНа корпусе нанесены маркировки и предупреждающие знаки (включая стилизованный знак радиации или высокого напряжения). От основания к вершине идут толстые силовые кабели. На диэлектрических кольцах видны светящиеся индикаторы заряда.\n\nФункциональные элементы:\nИндикаторы заряда на кольцах медленно пульсируют, имитируя накопление энергии. Между терминалами на вершине периодически проскакивают небольшие электрические разряды. От корпуса исходит легкое тепловое искажение воздуха (vfx).\n\nКлючевые элементы стиля:\nМассивная, индустриальная эстетика. Функциональный дизайн, где каждый элемент выглядит как часть рабочего механизма. Контраст между грубым бетоном и технологичными материалами корпуса. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nЗолотой (#D4AC0D) используется для металлического корпуса.\nБирюзовый (#16A085) используется для диэлектрических колец и индикаторов.\nСерый (#7F8C8D) используется для бетонного постамента.\nЖелтый (#F7DC6F) используется для электрических разрядов и предупреждающих знаков."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_MilitaryGlobe\nТип объекта: Здание\n\nКраткое описание:\nВоенный Глобус — это голографический тактический стол, проецирующий трехмерную карту мира с отмеченными на ней стратегическими объектами и боевыми единицами.\n\nРоль/назначение:\nДекоративное здание, символизирующее глобальный контроль и стратегическое планирование. Может служить визуальным центром военной зоны на базе игрока.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент представляет собой большую круглую платформу-проектор. Над ней парит детализированная голограмма планеты. На поверхности голограммы отображаются анимированные иконки танков, кораблей и авиации, которые перемещаются по заданным маршрутам.\n\nЦвет и материалы:\nПлатформа-проектор выполнена из темно-серого металла. Голограмма планеты выполнена в сине-зеленых тонах с яркими красными иконками для обозначения вражеских сил и синими для союзных.\n\nАрхитектурные детали:\nПо периметру платформы расположены несколько терминалов управления и голографических дисплеев, показывающих тактическую информацию (статистика, сводки). Сама платформа имеет сложную конструкцию с видимыми системами охлаждения и питания.\n\nФункциональные элементы:\nГолограмма планеты медленно вращается. Иконки боевых единиц движутся по поверхности, вступая в симулированные сражения (вспышки, взрывы). Информация на боковых дисплеях постоянно обновляется.\n\nКлючевые элементы стиля:\nВысокотехнологичный, милитари-дизайн. Интерактивность и информационная насыщенность. Голограмма как центральный, динамичный элемент. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#212F3D) используется для платформы-проектора.\nСиний (#2471A3) используется для океанов на голограмме и союзных иконок.\nЗеленый (#28B463) используется для континентов на голограмме.\nКрасный (#CB4335) используется для вражеских иконок и маркеров атаки."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_CacheOfNetrunners\nТип объекта: Здание\n\nКраткое описание:\nСхрон Нетраннеров — это частично раскопанный подземный бункер, из приоткрытой двери которого исходит таинственное свечение. Символизирует скрытые знания, данные и ресурсы.\n\nРоль/назначение:\nДекоративное здание, создающее атмосферу тайны и открытий. Может служить визуальным маркером склада или хранилища данных.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Композиция представляет собой небольшой участок земли, из которого видна верхняя часть массивной бронированной двери-люка, ведущей в подземный бункер. Дверь слегка приоткрыта. Вокруг — разбросанная земля, комья глины и несколько старых, поржавевших инструментов.\n\nЦвет и материалы:\nДверь-люк выполнена из потертого, поцарапанного металла темно-серого цвета. Земля вокруг — темно-коричневая. Из щели в двери исходит яркий оранжевый свет.\n\nАрхитектурные детали:\nДверь имеет сложный механизм замка в виде вращающегося колеса и нескольких электронных панелей. Поверхность двери покрыта старыми наклейками и граффити в киберпанк-стиле. Рядом с люком из земли торчит несколько оборванных силовых кабелей.\n\nФункциональные элементы:\nСвет, исходящий из-под двери, медленно и неравномерно пульсирует, как будто внутри работает некое мощное устройство. С электронной панели на двери периодически сыплются искры.\n\nКлючевые элементы стиля:\nСоздание интриги и повествования через окружение. Контраст между темным, грязным экстерьером и ярким, таинственным светом изнутри. Элементы износа и заброшенности в сочетании с работающей технологией. Изоляция на белом фоне (с небольшим \"островком\" земли).\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к гибридному происхождению.\n\nЦветовая палитра:\nТемно-серый (#2E4053) используется для металлической двери-люка.\nКоричневый (#6E4C1E) используется для земли и грязи.\nЯркий оранжевый (#F39C12) используется для таинственного свечения из-под двери.\nЦиан (#16A085) используется для светящихся элементов на электронных замках и граффити."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_StreetTotem\nТип объекта: Здание\n\nКраткое описание:\nУличный Тотем — это футуристический информационный или энергетический пилон, состоящий из нескольких левитирующих друг над другом модулей, удерживаемых силовым полем.\n\nРоль/назначение:\nДекоративное здание в стиле киберпанк. Может служить маркером зоны, точкой доступа к сети или просто футуристическим элементом городского пейзажа на базе.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из трех основных блоков, парящих друг над другом. Нижний блок — массивное основание, средний — энергетический кристалл, верхний — передающая антенна. Блоки удерживаются на расстоянии видимыми энергетическими полями.\n\nЦвет и материалы:\nВерхний и нижний модули выполнены из серебристого матового металла. Центральный кристалл — из полупрозрачного фиолетового материала, светящегося изнутри. Энергетические поля, удерживающие блоки, — голубоватые.\n\nАрхитектурные детали:\nПоверхность металлических блоков покрыта сложными технологическими узорами и разъемами. Центральный кристалл имеет неровную, естественную форму, контрастируя с геометрически правильными блоками. Верхняя антенна состоит из нескольких вращающихся колец.\n\nФункциональные элементы:\nБлоки слегка покачиваются и вращаются независимо друг от друга. Энергетический кристалл в центре ярко пульсирует. По поверхности энергетических полей пробегают разряды. Кольца антенны вращаются с разной скоростью.\n\nКлючевые элементы стиля:\nИспользование левитации для создания футуристического вида. Контраст между органической формой кристалла и строгими технологическими формами. Динамика, создаваемая независимым движением частей. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nСеребристый (#B2BABB) используется для верхнего и нижнего металлических блоков.\nНасыщенный фиолетовый (#884EA0) используется для центрального энергетического кристалла.\nГолубой (#5DADE2) используется для энергетических полей и светящихся узоров.\nБелый (#FFFFFF) используется для ярких бликов и разрядов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_MonumentOfWar\nТип объекта: Здание\n\nКраткое описание:\nМонумент Войны — это инсталляция, представляющая собой крупный энергетический кристалл, в котором \"заморожены\" голографические образы различного оружия, символизируя как разрушительную силу войны, так и ее сдерживание.\n\nРоль/назначение:\nДекоративное здание-мемориал, посвященное военной истории. Устанавливается на базе как символ военной мощи и памяти.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. В центре композиции находится большой, грубо обработанный кристалл неправильной формы, установленный на простом металлическом постаменте. Внутри кристалла видны полупрозрачные, мерцающие голограммы различного футуристического оружия (мечи, винтовки, клинки).\n\nЦвет и материалы:\nКристалл выполнен из полупрозрачного фиолетового материала. Голограммы оружия внутри него — серебристо-белые. Постамент — из темного, почти черного металла.\n\nАрхитектурные детали:\nПостамент имеет очень простую, минималистичную форму, чтобы не отвлекать внимание от кристалла. На поверхности кристалла видны трещины, из которых исходит более яркое свечение. Голограммы оружия расположены под разными углами, создавая ощущение хаоса, застывшего во времени.\n\nФункциональные элементы:\nКристалл медленно и слабо пульсирует фиолетовым светом. Голограммы оружия внутри него мерцают и иногда меняют свое положение, как будто плавая в вязкой жидкости. Из трещин на кристалле периодически вырываются небольшие энергетические разряды.\n\nКлючевые элементы стиля:\n\"История в объекте\" — концепция, где центральный элемент содержит в себе множество деталей. Контраст между хаотичным наполнением и спокойной внешней формой. Использование полупрозрачных материалов и голограмм для создания глубины. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nФиолетовый (#7D3C98) используется для основного объема кристалла.\nЯркий лиловый (#C39BD3) используется для свечения из трещин.\nСеребристо-белый (#FDFEFE) используется для голограмм оружия.\nЧерный (#1B2631) используется для минималистичного постамента."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_Centrifuge\nТип объекта: Здание\n\nКраткое описание:\nФутуристическая центрифуга или генератор экзотической материи. Представляет собой сложную установку с вращающимися кольцами вокруг центральной энергетической капсулы.\n\nРоль/назначение:\nДекоративное здание в научно-фантастическом стиле. Может визуально ассоциироваться с лабораториями, исследовательскими центрами или источниками энергии.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. В центре конструкции находится вертикальная капсула из бронированного стекла, внутри которой виден пульсирующий сгусток энергии. Вокруг капсулы на разных уровнях вращаются три больших металлических кольца со сложным оборудованием на них. Вся конструкция установлена на массивном постаменте.\n\nЦвет и материалы:\nКорпус и кольца выполнены из серебристого металла. Капсула — из тонированного стекла. Энергетический сгусток внутри — ярко-фиолетовый. На кольцах расположены светящиеся элементы оранжевого цвета.\n\nАрхитектурные детали:\nНа поверхности колец расположены различные датчики, кабели и манипуляторы. От постамента к центральной капсуле идут толстые трубы системы охлаждения. На стекле капсулы отображается голографический интерфейс с данными о состоянии энергии.\n\nФункциональные элементы:\nТри кольца вращаются в противоположных направлениях с разной скоростью. Энергетический сгусток в капсуле ярко пульсирует. Данные на голографическом интерфейсе постоянно обновляются. Из системы охлаждения периодически выходит пар.\n\nКлючевые элементы стиля:\nСложная, детализированная механика. Динамика, создаваемая вращением множества элементов. Ощущение работающего, мощного и потенциально опасного устройства. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nСеребристый (#AAB7B8) используется для корпуса и вращающихся колец.\nНасыщенный фиолетовый (#6C3483) используется для энергетического сгустка в капсуле.\nТемно-серый (#283747) используется для массивного постамента.\nОранжевый (#E67E22) используется для светящихся индикаторов и датчиков на кольцах."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_TechnoBlade\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Техноблейд\" — это гигантский высокотехнологичный меч, воткнутый в платформу-постамент. Лезвие меча состоит не из металла, а из стабилизированного энергетического поля.\n\nРоль/назначение:\nАгрессивное и милитаристическое декоративное здание. Символизирует военную мощь, решительность и готовность к бою.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Массивный футуристический меч воткнут под небольшим углом в круглую металлическую платформу. Платформа покрыта трещинами и разломами, расходящимися от точки входа клинка.\n\nЦвет и материалы:\nРукоять и гарда меча выполнены из темного, почти черного металла. \"Лезвие\" представляет собой полупрозрачное, ярко-фиолетовое энергетическое поле с более ярким ядром. Платформа-постамент — из серого, потрескавшегося металла.\n\nАрхитектурные детали:\nРукоять меча имеет сложную форму с интегрированной панелью управления и энергетической ячейкой. Поверхность энергетического лезвия нестабильна, по ней постоянно пробегают разряды и искажения. Из трещин в платформе исходит такое же фиолетовое свечение, как и от лезвия.\n\nФункциональные элементы:\nЭнергетическое лезвие меча постоянно \"гудит\" и мерцает. Энергетические разряды пробегают от ядра к краям. Свечение в трещинах на платформе пульсирует в такт с лезвием.\n\nКлючевые элементы стиля:\nОщущение огромной мощи и разрушения. Контраст между твердой, материальной рукоятью и нематериальным, энергетическим лезвием. Динамика, создаваемая эффектами энергии и разрушенным окружением. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nЧерный (#1C2833) используется для рукояти и гарды меча.\nЯркий фиолетовый (#9B59B6) используется для энергетического лезвия.\nСветло-лиловый (#D7BDE2) используется для энергетического ядра клинка и свечения в трещинах.\nСерый (#707B7C) используется для разрушенной платформы-постамента."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_EternalGuard\nТип объекта: Здание\n\nКраткое описание:\nВечный Дозорный — это статуя боевого меха или робота-стража в тяжелой броне, застывшего в почетном карауле. Символизирует защиту, безопасность и непоколебимую оборону базы.\n\nРоль/назначение:\nДекоративное здание-монумент в военной тематике. Устанавливается на входе в базу или рядом с оборонительными сооружениями.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Высокая, массивная фигура боевого робота стоит в статичной, прямой позе на квадратном постаменте. В руках робот держит огромное энергетическое копье или алебарду, упирая ее в постамент.\n\nЦвет и материалы:\nБроня робота выполнена из серебристого металла с фиолетовыми акцентными панелями. Энергетическое лезвие на копье — ярко-фиолетовое. Постамент — из темно-серого композита.\n\nАрхитектурные детали:\nБроня робота имеет сегментированную, многослойную структуру с видимыми механическими суставами и кабелями. Нагрудник украшен эмблемой. Шлем имеет один большой светящийся визор. Энергетическое копье подключено к реактору на спине робота видимым силовым кабелем.\n\nФункциональные элементы:\nВизор на шлеме робота медленно \"дышит\" светом. Энергетическое лезвие копья слабо пульсирует. По силовому кабелю, идущему к копью, пробегают энергетические импульсы.\n\nКлючевые элементы стиля:\nМонументальность и статичность, передающие ощущение надежности и вечности. Детализированный sci-fi дизайн брони и оружия. Минимальная, но заметная анимация, оживляющая \"статую\". Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nСеребристый (#CACFD2) используется для основной части брони робота.\nФиолетовый (#8E44AD) используется для акцентных панелей и визора.\nЯркий лиловый (#BB8FCE) используется для энергетического лезвия копья.\nТемно-серый (#34495E) используется для постамента и внутренних механизмов."
+        }
+      },
+      {
+        "json": {
+          "task_content": "Название: Building_BigBazooka\nТип объекта: Здание\n\nКраткое описание:\nМонумент \"Большая Базука\" — это массивная артиллерийская установка или рельсотрон, установленная на поворотной платформе в качестве памятника огневой мощи.\n\nРоль/назначение:\nАгрессивное декоративное здание, символизирующее наступательную мощь и передовые технологии вооружения.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Огромное орудие, напоминающее футуристическую гаубицу или рельсотрон, установлено на тяжелой, хорошо укрепленной поворотной платформе. Ствол орудия задран вверх под углом, как будто для выстрела на дальнюю дистанцию.\n\nЦвет и материалы:\nКорпус орудия и платформа выполнены из серебристого и темно-серого металла с элементами износа (царапины, потертости). Вдоль ствола и на механизмах наведения расположены светящиеся фиолетовые элементы — энергетические катушки и индикаторы.\n\nАрхитектурные детали:\nОрудие имеет сложную конструкцию с видимой системой зарядки, массивным противооткатным механизмом и сложной системой наведения с датчиками и линзами. Платформа имеет гидравлические опоры и бронированную рубку оператора.\n\nФункциональные элементы:\nЭнергетические катушки вдоль ствола медленно заряжаются и разряжаются, что видно по нарастающему и спадающему свечению. Платформа может совершать медленное, едва заметное вращение. Датчики на системе наведения мигают.\n\nКлючевые элементы стиля:\nМассивная, брутальная индустриальная эстетика. Упор на функциональность и механическую детализацию. Ощущение огромного веса и мощи. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nСветло-серый (#BFC9CA) используется для основных панелей корпуса орудия.\nТемно-серый (#566573) используется для платформы, механизмов и внутренних деталей.\nФиолетовый (#76448A) используется для свечения энергетических катушек и индикаторов.\nКрасный (#E74C3C) используется для предупреждающих знаков и сигнальных огней."
+        }
+      }
+    ],
+    "Telegram Trigger1": [
+      {
+        "json": {
+          "message": {
+            "chat": {
+              "first_name": "Timofey",
+              "id": 918851594,
+              "last_name": "Uchiha",
+              "type": "private",
+              "username": "timofeyuchiha"
+            },
+            "date": 1763738135,
+            "document": {
+              "file_id": "BQACAgIAAxkBAANdaSCCF8hvTXHjL3L688MEy6PMMZ4AAmaMAALW3gFJl4jE-dzw9TQ2BA",
+              "file_name": "Flat_UI.+Радара_fixed.pdf",
+              "file_size": 139446,
+              "file_unique_id": "AgADZowAAtbeAUk",
+              "mime_type": "application/pdf"
+            },
+            "from": {
+              "first_name": "Timofey",
+              "id": 918851594,
+              "is_bot": false,
+              "language_code": "ru",
+              "last_name": "Uchiha",
+              "username": "timofeyuchiha"
+            },
+            "message_id": 93
+          },
+          "update_id": 107119223
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -3229,6 +4057,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-20T15:31:12.000Z",
-  "versionId": "f275bfb6-dd71-4350-bc18-618a71360ad5"
+  "updatedAt": "2025-11-21T15:32:52.000Z",
+  "versionId": "9e58ee2c-6d0b-484c-a8ed-df9678a4dec5"
 }
