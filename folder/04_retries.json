@@ -1,0 +1,274 @@
+{
+  "active": false,
+  "connections": {
+    "CounterInit": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTPRequest_Failing",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTPRequest_Failing": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If_Success",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If_Success": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "StatusOK",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "IncreaseAttempt",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "IncreaseAttempt": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If_HasAttemptsLeft",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "CounterInit",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-21T15:50:24.729Z",
+  "id": "NKQXi1gPeQVCjh6V",
+  "isArchived": false,
+  "meta": null,
+  "name": "04_retries",
+  "nodes": [
+    {
+      "id": "a6485f8d-f0c2-4684-9283-c8bbea930a40",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "a9b8c20c-fff3-4793-a8b5-1b047eb4e8f1",
+      "name": "CounterInit",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "eab9c125-b8a5-4496-908a-118bc9b7f0ba",
+              "name": "attempt",
+              "type": "string",
+              "value": "0"
+            },
+            {
+              "id": "c8e69e96-35e2-42b1-8b07-2ab0f7f6c7e0",
+              "name": "maxAttempts",
+              "type": "string",
+              "value": "3"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "1e746115-c06a-4508-92ea-d138bec6d501",
+      "name": "HTTPRequest_Failing",
+      "notesInFlow": false,
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "options": {},
+        "url": "https://invalid.example.com"
+      },
+      "position": [
+        416,
+        0
+      ],
+      "retryOnFail": false,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "7258655e-94b9-4f3e-9abe-257a3cfd7324",
+      "name": "If_Success",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3ced7c00-7cbc-47d8-8d3f-6051c9bb2d3e",
+              "leftValue": 0,
+              "operator": {
+                "operation": "lt",
+                "type": "number"
+              },
+              "rightValue": 400
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        624,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "2d3cb371-e841-48a7-9017-a44713f1de38",
+      "name": "StatusOK",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b59d2426-0dec-4166-8ffd-434c7cae410c",
+              "name": "status",
+              "type": "string",
+              "value": "ok"
+            },
+            {
+              "id": "5eb6923d-a49c-476b-b46b-9a401ac84e8e",
+              "name": "attempt",
+              "type": "string",
+              "value": "={{$json[\"attempt\"]}}\n"
+            },
+            {
+              "id": "fb31a5ed-4c1e-45b3-bbf0-67bde51f77a4",
+              "name": "errorMessage",
+              "type": "string",
+              "value": "none"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        880,
+        -48
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "98ab7bd8-1685-44a1-bd0c-54f19ef26cd7",
+      "name": "IncreaseAttempt",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "19d13502-8945-4999-a46a-8935dcd22421",
+              "name": "attempt",
+              "type": "string",
+              "value": "={{$json[\"attempt\"] + 1}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        880,
+        112
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "4e01220b-4421-4b67-bf55-9eb4d6d10e25",
+      "name": "If_HasAttemptsLeft",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "307c1b9f-2bb6-40a4-998b-4e9d01a6938a",
+              "leftValue": "={{$json[\"attempt\"]}}",
+              "operator": {
+                "operation": "lt",
+                "type": "number"
+              },
+              "rightValue": 3
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1088,
+        112
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-21T15:50:24.731Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-21T15:50:24.731Z",
+      "workflowId": "NKQXi1gPeQVCjh6V"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-21T17:01:36.000Z",
+  "versionId": "2a39dc7e-a056-4595-a0b2-2fb67172dc28"
+}
