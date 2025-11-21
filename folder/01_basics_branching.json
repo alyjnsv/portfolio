@@ -1,0 +1,237 @@
+{
+  "active": false,
+  "connections": {
+    "If (score > 60).": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set (Passed).",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Set (Failed).",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Set (Failed).": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set (Summary).",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Set (Passed).": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set (Summary).",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Set (init)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If (score > 60).",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set (init)",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-21T12:35:56.177Z",
+  "id": "mhOLns4yj3OLJIOd",
+  "isArchived": false,
+  "meta": null,
+  "name": "01_basics_branching",
+  "nodes": [
+    {
+      "id": "82fcd8ed-6e47-4561-bab3-593441c87524",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "734b6e50-aa2f-47a3-a42f-9e013870f0b6",
+      "name": "Set (init)",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8e3c1fa2-c171-4691-bac5-e00a8551340c",
+              "name": "name",
+              "type": "string",
+              "value": "Иван"
+            },
+            {
+              "id": "e67d7402-7862-4c8a-a44c-108d8600498c",
+              "name": "score",
+              "type": "number",
+              "value": 70
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        256,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a454a41b-9e05-41b8-ad3a-bbedb6929e9a",
+      "name": "If (score > 60).",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a92be16b-f186-4e7a-a6ce-df4778ea0e76",
+              "leftValue": "={{$json.score}}",
+              "operator": {
+                "operation": "gt",
+                "type": "number"
+              },
+              "rightValue": 60
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        464,
+        0
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "83c5e6c8-1270-446c-8b6c-0e055c721be0",
+      "name": "Set (Passed).",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e57f774f-e09e-4a5a-8c84-9cc94c085f43",
+              "name": "result",
+              "type": "string",
+              "value": {}
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        672,
+        -96
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "d2bd05ff-1f77-4597-9662-16721a8d8291",
+      "name": "Set (Failed).",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8f447412-8fda-4919-a922-35fdee869595",
+              "name": "result",
+              "type": "string",
+              "value": "Failed"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        672,
+        96
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "c9cf7d1d-3e7e-406e-92c1-0db48c0c7009",
+      "name": "Set (Summary).",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "691c3fc2-4913-492f-8506-4dba14567e36",
+              "name": "message",
+              "type": "string",
+              "value": "={{$json.name}}: {{$json.result}}\n"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        960,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-21T12:35:56.180Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-21T12:35:56.180Z",
+      "workflowId": "mhOLns4yj3OLJIOd"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-21T13:29:10.000Z",
+  "versionId": "456bede0-9d5b-4477-9a5d-d85006e03b9b"
+}
