@@ -1,0 +1,107 @@
+{
+  "active": false,
+  "connections": {
+    "Запрос к API случайного сервиса": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Результат API",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Ручной запуск": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Запрос к API случайного сервиса",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-21T13:32:07.359Z",
+  "id": "O9nsbtAP2IAv3feE",
+  "isArchived": false,
+  "meta": null,
+  "name": "02_http_api",
+  "nodes": [
+    {
+      "id": "73ba3285-a815-4366-842e-cbd64a18df49",
+      "name": "Ручной запуск",
+      "parameters": {},
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "df3b0405-b65e-48cc-9deb-2c4452322876",
+      "name": "Запрос к API случайного сервиса",
+      "parameters": {
+        "options": {},
+        "url": "https://catfact.ninja/fact"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "9f59716b-bba7-4129-8ffc-686274f54ebc",
+      "name": "Результат API",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "726d180b-f756-44a3-888d-177a062e4eec",
+              "name": "apiName",
+              "type": "string",
+              "value": "={{$json[\"entries\"][0][\"API\"]}}"
+            },
+            {
+              "id": "60038a65-13d4-4196-b38d-3d4f38d8bd87",
+              "name": "category",
+              "type": "string",
+              "value": "={{$json[\"entries\"][0][\"Category\"]}}"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        416,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-21T13:32:07.361Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-21T13:32:07.361Z",
+      "workflowId": "O9nsbtAP2IAv3feE"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-21T14:00:27.000Z",
+  "versionId": "e9db5950-8a59-4e72-bb34-1a52580bccd6"
+}
