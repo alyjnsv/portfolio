@@ -23,6 +23,24 @@
         ]
       ]
     },
+    "If_HasAttemptsLeft": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "RetryDelay",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "StatusFail",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "If_Success": {
       "main": [
         [
@@ -47,6 +65,17 @@
           {
             "index": 0,
             "node": "If_HasAttemptsLeft",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "RetryDelay": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTPRequest_Failing",
             "type": "main"
           }
         ]
@@ -137,7 +166,7 @@
           "conditions": [
             {
               "id": "3ced7c00-7cbc-47d8-8d3f-6051c9bb2d3e",
-              "leftValue": 0,
+              "leftValue": "={{$json[\"statusCode\"] || 500}}\n",
               "operator": {
                 "operation": "lt",
                 "type": "number"
@@ -148,10 +177,11 @@
           "options": {
             "caseSensitive": true,
             "leftValue": "",
-            "typeValidation": "strict",
+            "typeValidation": "loose",
             "version": 2
           }
         },
+        "looseTypeValidation": true,
         "options": {}
       },
       "position": [
@@ -205,8 +235,8 @@
             {
               "id": "19d13502-8945-4999-a46a-8935dcd22421",
               "name": "attempt",
-              "type": "string",
-              "value": "={{$json[\"attempt\"] + 1}}"
+              "type": "number",
+              "value": "={{ $runIndex + 1 }}\n"
             }
           ]
         },
@@ -224,7 +254,7 @@
       "name": "If_HasAttemptsLeft",
       "parameters": {
         "conditions": {
-          "combinator": "and",
+          "combinator": "or",
           "conditions": [
             {
               "id": "307c1b9f-2bb6-40a4-998b-4e9d01a6938a",
@@ -239,10 +269,11 @@
           "options": {
             "caseSensitive": true,
             "leftValue": "",
-            "typeValidation": "strict",
+            "typeValidation": "loose",
             "version": 2
           }
         },
+        "looseTypeValidation": true,
         "options": {}
       },
       "position": [
@@ -251,6 +282,55 @@
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
+    },
+    {
+      "id": "d69197e6-433e-47ee-82d0-65ecba195b10",
+      "name": "RetryDelay",
+      "parameters": {
+        "amount": 2
+      },
+      "position": [
+        1088,
+        352
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "333adad9-07d6-492f-a709-b751d3f76662"
+    },
+    {
+      "id": "f792e35a-0afc-46b5-9f32-a39c9e716e1a",
+      "name": "StatusFail",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "98051475-b859-4fa7-9253-ab7132b29ba4",
+              "name": "status",
+              "type": "string",
+              "value": "failed"
+            },
+            {
+              "id": "fb905082-47c7-4437-b7ef-33da1c0f24de",
+              "name": "attempt",
+              "type": "number",
+              "value": "={{$json[\"attempt\"]}}\n"
+            },
+            {
+              "id": "28591a53-e77f-4a78-b942-c92f8f91625c",
+              "name": "errorMessage",
+              "type": "string",
+              "value": "={{$json[\"error\"] && $json[\"error\"][\"message\"] || \"Max attempts reached\"}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1344,
+        128
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {},
@@ -269,6 +349,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-21T17:01:36.000Z",
-  "versionId": "2a39dc7e-a056-4595-a0b2-2fb67172dc28"
+  "updatedAt": "2025-11-23T16:45:37.000Z",
+  "versionId": "a858a021-7757-4ff5-b4a3-993e7d92f2f5"
 }
