@@ -1,0 +1,337 @@
+{
+  "active": true,
+  "connections": {
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Message a model",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Code in JavaScript2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create an issue": {
+      "main": [
+        []
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-25T14:18:44.440Z",
+  "id": "Rcotd3IlEJw7xgce",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 21",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "ViCyYncd7owwVwr5",
+          "name": "ArtPipelineAutomation_bot"
+        }
+      },
+      "id": "f40b550d-8f6b-4eee-977c-9406fddb42da",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "5a4e4455-add8-4f9d-bdc1-77c027821bfa"
+    },
+    {
+      "id": "6e647c38-ee29-47c0-9305-328a190ab20a",
+      "name": "Code in JavaScript",
+      "parameters": {
+        "jsCode": "const text = $input.first().json.message.text;\n\n// Парсим поля из текста\nconst asset = {\n  name: '',\n  type: '',\n  shortDescription: '',\n  role: '',\n  formAndComposition: '',\n  colorAndMaterials: '',\n  architecturalDetails: '',\n  functionalElements: '',\n  styleElements: '',\n  generalStyle: '',\n  colorPalette: []\n};\n\nlet currentSection = '';\n\nconst lines = text.split('\\n');\n\nfor (const line of lines) {\n  const trimmed = line.trim();\n  if (!trimmed) continue;\n  \n  if (trimmed.startsWith('Название:')) {\n    asset.name = trimmed.replace('Название:', '').trim();\n  } else if (trimmed.startsWith('Тип объекта:')) {\n    asset.type = trimmed.replace('Тип объекта:', '').trim();\n  } else if (trimmed.startsWith('Краткое описание:')) {\n    currentSection = 'shortDescription';\n  } else if (trimmed.startsWith('Роль/назначение:')) {\n    currentSection = 'role';\n  } else if (trimmed.startsWith('Форма и композиция:')) {\n    currentSection = 'formAndComposition';\n  } else if (trimmed.startsWith('Цвет и материалы:')) {\n    currentSection = 'colorAndMaterials';\n  } else if (trimmed.startsWith('Архитектурные детали:')) {\n    currentSection = 'architecturalDetails';\n  } else if (trimmed.startsWith('Функциональные элементы:')) {\n    currentSection = 'functionalElements';\n  } else if (trimmed.startsWith('Ключевые элементы стиля:')) {\n    currentSection = 'styleElements';\n  } else if (trimmed.startsWith('Общая стилистика проекта:')) {\n    currentSection = 'generalStyle';\n  } else if (trimmed.startsWith('Цветовая палитра:')) {\n    currentSection = 'colorPalette';\n  } else if (trimmed.startsWith('Описание и адаптация:')) {\n    currentSection = '';\n  } else if (currentSection) {\n    if (currentSection === 'colorPalette') {\n      const match = trimmed.match(/(.+?)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*используется для\\s*(.+)/);\n      if (match) {\n        asset.colorPalette.push({\n          name: match[1].trim(),\n          hex: match[2],\n          usage: match[3].replace(/\\.$/, '').trim()\n        });\n      }\n    } else {\n      asset[currentSection] += (asset[currentSection] ? ' ' : '') + trimmed;\n    }\n  }\n}\n\nreturn [{ json: asset }];"
+      },
+      "position": [
+        256,
+        0
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "378a2d86-6625-4f84-ba6e-ee807ac5421f",
+      "name": "Code in JavaScript1",
+      "parameters": {
+        "jsCode": "const asset = $('Code in JavaScript').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst qnapPath = `//QNAP/ART/Assets/Buildings/${asset.name}/`;\nconst fileName = `${asset.name}_v001_${date}.png`;\n\n// Формируем описание по шаблону бага/техдолга\nconst jiraDescription = `Описание проблемы:\n\nТекущее состояние:\n${asset.shortDescription}\n\n${asset.role}\n\nОжидаемый результат:\nГотовый ассет \"${asset.name}\" согласно техническому заданию:\n- Форма и композиция: ${asset.formAndComposition}\n- Цвет и материалы: ${asset.colorAndMaterials}\n- Архитектурные детали: ${asset.architecturalDetails}\n- Функциональные элементы: ${asset.functionalElements}\n- Стилистика: ${asset.generalStyle}\n\nШаги воспроизведения:\n1. Использовать промт для AI-генерации (см. ниже)\n2. Проверить результат на соответствие ТЗ\n3. Сохранить в QNAP по указанному пути\n\nУстройство:\nТип ассета: ${asset.type}\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Соответствие стиль-гайду проекта\n\nНеобходимые материалы:\n\nПромт для AI-генерации:\n${aiPrompt}\n\n\nЦветовая палитра:\n${asset.colorPalette.map(c => `- ${c.name} (${c.hex}): ${c.usage}`).join('\\n')}`;\n\nreturn [{\n  json: {\n    summary: `[ART] ${asset.name}`,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n  }\n}];"
+      },
+      "position": [
+        736,
+        0
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "8c9a4be2-f107-41e6-847e-4b7e37d68ad5",
+      "name": "Create an issue",
+      "parameters": {
+        "additionalFields": {
+          "description": "={{ $json.description }}",
+          "priority": {
+            "__rl": true,
+            "cachedResultName": "Medium",
+            "mode": "list",
+            "value": "3"
+          }
+        },
+        "issueType": {
+          "__rl": true,
+          "cachedResultName": "Task",
+          "mode": "list",
+          "value": "10004"
+        },
+        "jiraVersion": "serverPat",
+        "project": {
+          "__rl": true,
+          "cachedResultName": "Last War",
+          "mode": "list",
+          "value": "10700"
+        },
+        "summary": "={{ $json.summary }}"
+      },
+      "position": [
+        992,
+        288
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "TeJoupiuKVAuyWb3",
+          "name": "GPT"
+        }
+      },
+      "id": "ff03f53d-75c9-4f74-a990-e6bbe43a78e0",
+      "name": "Message a model",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "=Напиши промт для AI-генерации на основе этого ТЗ:\n\nНазвание: {{ $json.name }}\nТип: {{ $json.type }}\n\nОписание: {{ $json.shortDescription }}\n\nФорма и композиция: {{ $json.formAndComposition }}\n\nЦвет и материалы: {{ $json.colorAndMaterials }}\n\nАрхитектурные детали: {{ $json.architecturalDetails }}\n\nФункциональные элементы: {{ $json.functionalElements }}\n\nСтилистика: {{ $json.generalStyle }}\n\nЦветовая палитра:\n{{ $json.colorPalette.map(c => c.name + ' (' + c.hex + '): ' + c.usage).join('\\n') }}"
+            },
+            {
+              "content": "Ты — эксперт по созданию промтов для AI-генерации изометрических 3D-ассетов для мобильных игр.\n\nТвоя задача: на основе технического задания (ТЗ) написать детальный промт на английском языке для генерации изображения.\n\nПРАВИЛА:\n1. Промт ТОЛЬКО на английском языке\n2. Начинай с типа объекта и стиля: \"Isometric 3D [тип объекта] for sci-fi mobile game\"\n3. Описывай визуальные характеристики конкретно и детально\n4. Всегда включай цветовую палитру с HEX-кодами\n5. Указывай технические требования: изометрия 30°, белый фон, изоляция объекта\n6. Используй ключевые слова для качества: \"high detail\", \"game-ready asset\", \"clean render\"\n7. Длина промта: 150-300 слов\n8. НЕ добавляй пояснений — только готовый промт\n\nСТРУКТУРА ПРОМТА:\n- Тип и стиль объекта\n- Основная форма и композиция\n- Материалы и текстуры\n- Цветовая палитра (HEX)\n- Освещение и эффекты\n- Технические требования\n\nСТИЛЬ ГЕНЕРАЦИИ:\n- Semi-realistic stylized casual 3D\n- Bright neon accents\n- Soft lighting with deep shadows\n- Clean, non-cluttered design",
+              "role": "system"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "position": [
+        400,
+        0
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "ViCyYncd7owwVwr5",
+          "name": "ArtPipelineAutomation_bot"
+        }
+      },
+      "id": "6ff09e1e-6047-4bda-9441-7197f24ab607",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "=Summary: {{ $json.summary }}"
+      },
+      "position": [
+        1424,
+        -96
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "87244753-4fdc-42d2-b4ab-bc341211251f"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "ViCyYncd7owwVwr5",
+          "name": "ArtPipelineAutomation_bot"
+        }
+      },
+      "id": "8c39da90-9cad-4be6-90aa-b6c1e8770ee6",
+      "name": "Send a text message1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "=Description: {{ $json.text }}"
+      },
+      "position": [
+        1424,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "87244753-4fdc-42d2-b4ab-bc341211251f"
+    },
+    {
+      "id": "8c9633c1-a534-4fa7-9c0f-4d99ca8343b0",
+      "name": "Code in JavaScript2",
+      "parameters": {
+        "jsCode": "const data = $input.first().json;\nconst maxLength = 4000; // Лимит Telegram 4096, берём с запасом\n\nconst summary = data.summary;\nconst description = data.description;\nconst fullText = 'Задача: ' + summary + '\\n\\n' + description;\n\n// Разбиваем текст на части\nconst parts = [];\nlet currentPart = '';\nconst lines = fullText.split('\\n');\n\nfor (let i = 0; i < lines.length; i++) {\n  const line = lines[i];\n  \n  if ((currentPart + '\\n' + line).length > maxLength) {\n    // Сохраняем текущую часть\n    if (currentPart.length > 0) {\n      parts.push(currentPart.trim());\n    }\n    currentPart = line;\n  } else {\n    currentPart = currentPart + (currentPart ? '\\n' : '') + line;\n  }\n}\n\n// Добавляем последнюю часть\nif (currentPart.length > 0) {\n  parts.push(currentPart.trim());\n}\n\n// Возвращаем массив сообщений\nconst messages = parts.map(function(part, index) {\n  return {\n    json: {\n      text: parts.length > 1 ? '(' + (index + 1) + '/' + parts.length + ')\\n\\n' + part : part,\n      partNumber: index + 1,\n      totalParts: parts.length,\n      summary: summary,\n      qnapPath: data.qnapPath,\n      assetType: data.assetType\n    }\n  };\n});\n\nreturn messages;"
+      },
+      "position": [
+        1088,
+        80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {
+    "Telegram Trigger": [
+      {
+        "json": {
+          "message": {
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1764091192,
+            "entities": [
+              {
+                "length": 7,
+                "offset": 2454,
+                "type": "hashtag"
+              },
+              {
+                "length": 7,
+                "offset": 2533,
+                "type": "hashtag"
+              },
+              {
+                "length": 7,
+                "offset": 2610,
+                "type": "hashtag"
+              },
+              {
+                "length": 7,
+                "offset": 2708,
+                "type": "hashtag"
+              }
+            ],
+            "from": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "is_bot": false,
+              "language_code": "ru",
+              "username": "hecox"
+            },
+            "message_id": 8,
+            "text": "Название: Building_GiantOrder\nТип объекта: Здание\n\nКраткое описание:\nВысокотехнологичный монумент, представляющий собой голографический проектор, который воссоздает анимированную эмблему элитного военного ордена. Символизирует честь и технологическое превосходство базы игрока.\n\nРоль/назначение:\nДекоративное здание-памятник для установки на базе игрока. Служит визуальным маркером высокого статуса и военных достижений. Не несет производственной функции.\n\nОписание и адаптация:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из массивного, усеченного пирамидального основания из темного композита. По периметру основания проходит яркая cyan-подсветка. На вершине платформы установлен сложный проекционный узел с тремя асимметрично расположенными линзами, которые генерируют крупную, парящую в воздухе голограмму. Голограмма изображает стилизованный щит с крыльями, анимированный легким мерцанием и потоками энергии.\n\nЦвет и материалы:\nОснование выполнено из матовых темно-серых композитных панелей с вкраплениями полированного металла. Проекционный узел изготовлен из титана с хромированными элементами. Голограмма выполнена в ярких энергетических цветах, контрастирующих с темным основанием.\n\nАрхитектурные детали:\nПоверхность основания имеет слоистую структуру с видимыми технологическими швами и разъемами, подсвеченными изнутри. На боковых гранях расположены небольшие вентиляционные решетки и голографические информационные дисплеи, отображающие статус монумента. Провода и кабели скрыты внутри корпуса, создавая чистый и цельный вид.\n\nФункциональные элементы:\nЦентральный проектор является ключевым элементом, линзы которого медленно вращаются, создавая динамику. Голографическая эмблема анимирована: по ее контуру пробегают энергетические импульсы. У подножия монумента расположены четыре небольших световых маркера, обозначающих его границы.\n\nКлючевые элементы стиля:\nМодульность и футуристичный дизайн. Яркая голограмма как основной визуальный акцент. Чистые формы и отсутствие беспорядка. Асимметрия в деталях проектора для придания динамичности. Мягкое освещение с глубокими тенями для подчеркивания объема. Изоляция на белом фоне.\n\nОбщая стилистика проекта:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\n\nЦветовая палитра:\nТемно-серый (#34495E) используется для основного корпуса и платформы-основания.\nГрафитовый (#5D6D7E) используется для акцентных панелей и технологических вставок.\nЦиан (#00FFFF) используется для неоновой подсветки контуров платформы и голографической эмблемы.\nБелый (#FFFFFF) используется для светящихся индикаторов и символов на информационных дисплеях."
+          },
+          "update_id": 412594918
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-25T14:18:44.442Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-25T14:18:44.442Z",
+      "workflowId": "Rcotd3IlEJw7xgce"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-11-25T17:25:39.000Z",
+  "versionId": "8129d9b9-9662-4f01-81bd-e6c2caaacf1c"
+}
