@@ -1341,28 +1341,28 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "6966c9a1-b442-46be-a0bd-d0bee8a98cce",
+      "id": "6cd99948-c59c-423c-a9ed-dfa24542c019",
       "name": "Google Gemini Chat Model",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        -320
+        -2704,
+        -1184
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     },
     {
-      "id": "dcaeb240-e894-4344-b8df-c9806a8d9d60",
+      "id": "aeb82efb-9be8-4b2d-ac8f-93d9f82038b4",
       "name": "When Executed by Another Workflow",
       "parameters": {
         "inputSource": "passthrough"
       },
       "position": [
-        -3088,
-        -512
+        -4304,
+        -1376
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1.1
@@ -1374,7 +1374,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "3e092864-1a25-4acd-8279-7a4623746013",
+      "id": "046587db-7f50-46c2-938a-a146ac8ca139",
       "name": "Create folder",
       "parameters": {
         "driveId": {
@@ -1394,14 +1394,14 @@
         "resource": "folder"
       },
       "position": [
-        -2384,
-        -512
+        -3600,
+        -1376
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "54436193-3c03-46cd-bc1e-2fc864558dfd",
+      "id": "b99da5da-e70c-4c1e-9634-86857bf39c0a",
       "name": "Loop Over Items",
       "parameters": {
         "options": {
@@ -1409,14 +1409,14 @@
         }
       },
       "position": [
-        -1744,
-        -512
+        -2960,
+        -1376
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "660f0a82-5c63-4b85-bcca-fbf36dfcd822",
+      "id": "b550675d-57d7-400d-8094-22b3bf3efa40",
       "maxTries": 5,
       "name": "Promt",
       "onError": "continueErrorOutput",
@@ -1429,8 +1429,8 @@
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
       },
       "position": [
-        -1488,
-        -512
+        -2704,
+        -1376
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1438,47 +1438,47 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "fd7effc6-0916-4aa9-82cc-2fef7f1771f9",
+      "id": "e10e5a54-8b1a-4e6a-a7f4-d79484a20bfb",
       "name": "Wait",
       "parameters": {
         "amount": 12
       },
       "position": [
-        -688,
-        -512
+        -1904,
+        -1376
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "c90ca2b9-bf3d-446f-9180-677a58726bcd"
     },
     {
-      "id": "02b7a1cf-379c-4af0-9927-1d817eb023f0",
+      "id": "9669bd2c-3677-4e77-88c9-6fa9e952cd8f",
       "name": "Formatted Date",
       "parameters": {
         "jsCode": "// Получаем исходную строку даты\nconst originalDateString = $input.first().json.currentDate;\n\n// Отсекаем информацию о часовом поясе и миллисекундах (берем первые 19 символов)\n// Это заставляет new Date() интерпретировать время \"как есть\", без конвертации\nconst localDateTimeString = originalDateString.substring(0, 19);\n\n// Создаем объект Date из строки без часового пояса\nconst date = new Date(localDateTimeString);\n\n// --- Дальнейший код остается без изменений ---\n\n// Форматирование даты (ДД.ММ.ГГГГ)\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0');\nconst year = date.getFullYear();\n\n// Форматирование времени (ЧЧ:ММ:СС)\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\n// Возвращаем различные форматы\nreturn [{\n  formattedDate: `${day}.${month}.${year}`,\n  formattedTime: `${hours}:${minutes}:${seconds}`,\n  formattedDateTime: `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`,\n  formattedDateTimeShort: `${day}.${month}.${year} ${hours}:${minutes}`\n}];"
       },
       "position": [
-        -2624,
-        -512
+        -3840,
+        -1376
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "92ee68ef-ddee-4d8b-afc6-a0d8292b41b1",
+      "id": "9928e900-98f6-4533-b1cc-adadd553a747",
       "name": "Structured Output Parser",
       "parameters": {
         "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
       },
       "position": [
-        -1296,
-        -320
+        -2512,
+        -1184
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "52658ce2-9ac1-43d2-9ecf-b6674adc6b89",
+      "id": "b47e01ea-529b-4bb9-8704-fb55351433e0",
       "maxTries": 5,
       "name": "Imagen 4",
       "parameters": {
@@ -1503,8 +1503,8 @@
         "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
-        -896,
-        -512
+        -2112,
+        -1376
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1512,7 +1512,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "e00f80e5-f86e-428b-af78-3ac55862d851",
+      "id": "434bfd97-028d-474c-843f-b4750806b0f5",
       "maxTries": 5,
       "name": "Queue",
       "onError": "continueErrorOutput",
@@ -1530,8 +1530,8 @@
         "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 4').item.json.request_id }}"
       },
       "position": [
-        -496,
-        -512
+        -1712,
+        -1376
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1539,7 +1539,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "2ec2eba6-c288-416a-b1d8-0c6a34279afe",
+      "id": "127fdb4a-1d5e-4dd3-90e6-3df7242edc38",
       "maxTries": 5,
       "name": "Url",
       "onError": "continueErrorOutput",
@@ -1548,8 +1548,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -272,
-        -512
+        -1488,
+        -1376
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1557,7 +1557,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "8fc01780-f11a-4be3-a864-05482bc72eb4",
+      "id": "0c450162-5455-4be9-9cb0-18cf8e62493f",
       "name": "Loop Over Items1",
       "parameters": {
         "options": {
@@ -1565,14 +1565,14 @@
         }
       },
       "position": [
-        624,
-        -352
+        -592,
+        -1216
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "acda7381-9eb4-4ac9-839d-550baac551e2",
+      "id": "f23184c4-8af7-4655-b51d-eaefefb88826",
       "maxTries": 5,
       "name": "Image",
       "parameters": {
@@ -1580,8 +1580,8 @@
         "url": "={{ $('Url').item.json.images[0].url }}"
       },
       "position": [
-        624,
-        -512
+        -592,
+        -1376
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1595,7 +1595,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "a0e4681e-a944-45f2-b72c-1f87a0045920",
+      "id": "c3d5dec9-0e57-4eec-b4dd-627a3717704a",
       "name": "All Icons",
       "parameters": {
         "fileId": {
@@ -1609,14 +1609,14 @@
         }
       },
       "position": [
-        -32,
-        -512
+        -1248,
+        -1376
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "fad2a31a-8917-4e84-a222-da9000526e29",
+      "id": "a456c1df-5208-4464-90e5-f3e448ff1f86",
       "name": ">70",
       "parameters": {
         "conditions": {
@@ -1643,8 +1643,8 @@
         "options": {}
       },
       "position": [
-        384,
-        -512
+        -832,
+        -1376
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1656,7 +1656,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "53460c17-8d3a-4705-81f3-73a4e13f5c23",
+      "id": "06b0a4ed-5eae-4418-b5be-097f9a6dcd67",
       "maxTries": 5,
       "name": "Rated",
       "onError": "continueErrorOutput",
@@ -1675,8 +1675,8 @@
         "text": "=Ты — эксперт по анализу flat иконок в современном плоском стиле дизайна. У тебя есть два отдельных файла изображений:\n\nПЕРВЫЙ ФАЙЛ содержит 10 якорных (эталонных) иконок, расположенных в сетке. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\nВТОРОЙ ФАЙЛ содержит 1 новую иконку, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую иконку (второй файл) в сравнении с якорными иконками (первый файл) и оценить её соответствие по следующим критериям:\n\n1. Стиль flat дизайна (0–15 баллов)\n   * Соответствие принципам плоского дизайна: отсутствие объёма, теней и градиентов, простые геометрические формы.\n\n2. Цветовая палитра (0–15 баллов)\n   * Использование ярких, насыщенных цветов с хорошим контрастом. Гармоничное сочетание оттенков.\n\n3. Контуры и обводка (0–10 баллов)\n   * Наличие чётких чёрных контуров средней толщины, обрамляющих основные элементы иконки.\n\n4. Простота форм (0–10 баллов)\n   * Использование простых, легко читаемых геометрических форм без излишней детализации.\n\n5. Читаемость и узнаваемость (0–15 баллов)\n   * Мгновенное распознавание объекта или концепции, которую представляет иконка.\n\n6. Композиция и баланс (0–10 баллов)\n   * Гармоничное расположение элементов, визуальный баланс и правильные пропорции.\n\n7. Единство стиля (0–10 баллов)\n   * Соответствие общему стилю эталонных иконок по манере исполнения и визуальному языку.\n\n8. Качество исполнения (0–10 баллов)\n   * Аккуратность линий, отсутствие артефактов, чистота исполнения.\n\n9. Масштабируемость (0–5 баллов)\n   * Сохранение читаемости при уменьшении размера, отсутствие слишком мелких деталей.\n\nФормат ответа:\n* Для каждого критерия — 2–3 предложения с комментарием и целое число баллов.\n* В конце — **ИТОГОВАЯ ОЦЕНКА: X/100**.\n\nВАЖНО:\n* Если иконка обрезана и хотя бы один её элемент не помещается в кадр, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям в **ИТОГОВАЯ ОЦЕНКА: 0/100**.\n* Если иконка видна полностью, проведи оценку по всем пунктам."
       },
       "position": [
-        176,
-        -512
+        -1040,
+        -1376
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -1690,21 +1690,21 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "07d3db40-d3d0-4669-b537-f7bcaa98fa07",
+      "id": "e2f58b9a-4e28-41de-a10f-7b6f79a2a46c",
       "name": "Google Gemini Chat Model1",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        464
+        -2704,
+        -400
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     },
     {
-      "id": "71f84088-bd8e-4b55-a6cb-e866c40d8b16",
+      "id": "947765f5-cabe-4c88-92f5-fed2987280a1",
       "maxTries": 5,
       "name": "Promt1",
       "onError": "continueErrorOutput",
@@ -1717,8 +1717,8 @@
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
       },
       "position": [
-        -1488,
-        -128
+        -2704,
+        -992
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1726,34 +1726,34 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "04b380f1-5c93-4c8b-89b9-cc197c703cea",
+      "id": "26073af4-e85b-4526-858b-2f2742c865fe",
       "name": "Wait1",
       "parameters": {
         "amount": 12
       },
       "position": [
-        -688,
-        -128
+        -1904,
+        -992
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "df0f9808-9f3a-4c4d-b4c6-37ba5e64de39"
     },
     {
-      "id": "b8d93cea-7f48-4986-a6e4-141851bebdff",
+      "id": "f70b6f3b-be62-4796-91c9-c6a5527cdb7f",
       "name": "Structured Output Parser1",
       "parameters": {
         "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
       },
       "position": [
-        -1296,
-        80
+        -2512,
+        -784
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "23f0a874-9af2-4959-b17e-7eb44de72f7f",
+      "id": "250d6ba0-aa79-4279-a08c-80af4946b865",
       "maxTries": 5,
       "name": "Imagen ",
       "parameters": {
@@ -1778,8 +1778,8 @@
         "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
-        -896,
-        -128
+        -2112,
+        -992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1787,7 +1787,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "95b50867-4d03-4272-97d0-d142b85f9fbd",
+      "id": "6c0882f0-78c1-4dbc-9dab-7d6bdcf47394",
       "maxTries": 5,
       "name": "Queue1",
       "onError": "continueErrorOutput",
@@ -1805,8 +1805,8 @@
         "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen ').item.json.request_id }}"
       },
       "position": [
-        -496,
-        -128
+        -1712,
+        -992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1814,7 +1814,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "73696526-a5cb-45a0-9062-1f94c320f372",
+      "id": "0eb002f9-a308-4cbd-9a0a-0191af369359",
       "maxTries": 5,
       "name": "Url1",
       "onError": "continueErrorOutput",
@@ -1823,8 +1823,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -272,
-        -128
+        -1488,
+        -992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1832,7 +1832,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "f4d31f10-d096-4f2f-9b1e-613a488599c2",
+      "id": "bca78a18-ad3f-4af4-b783-530912c93056",
       "name": "Loop Over Items2",
       "parameters": {
         "options": {
@@ -1840,14 +1840,14 @@
         }
       },
       "position": [
-        624,
-        48
+        -592,
+        -816
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "017a0c04-b205-49c2-a36b-d9f99b553051",
+      "id": "5b83b6bb-991b-41ad-a514-98eb3f565b1d",
       "maxTries": 5,
       "name": "Image1",
       "onError": "continueErrorOutput",
@@ -1856,8 +1856,8 @@
         "url": "={{ $('Url1').item.json.images[0].url }}"
       },
       "position": [
-        624,
-        -128
+        -592,
+        -992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1871,7 +1871,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "a1806fed-c4a3-451d-b26b-7989c8e5e4b2",
+      "id": "29a6d581-7bd9-4c8e-b3f9-8659349a1684",
       "name": "All Icons1",
       "parameters": {
         "fileId": {
@@ -1885,14 +1885,14 @@
         }
       },
       "position": [
-        -32,
-        -128
+        -1248,
+        -992
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "357434ee-aa48-457b-a790-f00941b910ca",
+      "id": "060e4815-c0ab-446a-8035-b8b8e1f7d42c",
       "name": ">",
       "parameters": {
         "conditions": {
@@ -1919,8 +1919,8 @@
         "options": {}
       },
       "position": [
-        384,
-        -128
+        -832,
+        -992
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1932,7 +1932,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "155c64cb-f1a0-4047-8a82-4df259254cf6",
+      "id": "fb1a2833-4a3f-4e22-a818-ccbb69132982",
       "maxTries": 5,
       "name": "Rated1",
       "onError": "continueErrorOutput",
@@ -1951,8 +1951,8 @@
         "text": "=Ты — эксперт по анализу flat иконок в современном плоском стиле дизайна. У тебя есть два отдельных файла изображений:\n\nПЕРВЫЙ ФАЙЛ содержит 10 якорных (эталонных) иконок, расположенных в сетке. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\nВТОРОЙ ФАЙЛ содержит 1 новую иконку, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую иконку (второй файл) в сравнении с якорными иконками (первый файл) и оценить её соответствие по следующим критериям:\n\n1. Стиль flat дизайна (0–15 баллов)\n   * Соответствие принципам плоского дизайна: отсутствие объёма, теней и градиентов, простые геометрические формы.\n\n2. Цветовая палитра (0–15 баллов)\n   * Использование ярких, насыщенных цветов с хорошим контрастом. Гармоничное сочетание оттенков.\n\n3. Контуры и обводка (0–10 баллов)\n   * Наличие чётких чёрных контуров средней толщины, обрамляющих основные элементы иконки.\n\n4. Простота форм (0–10 баллов)\n   * Использование простых, легко читаемых геометрических форм без излишней детализации.\n\n5. Читаемость и узнаваемость (0–15 баллов)\n   * Мгновенное распознавание объекта или концепции, которую представляет иконка.\n\n6. Композиция и баланс (0–10 баллов)\n   * Гармоничное расположение элементов, визуальный баланс и правильные пропорции.\n\n7. Единство стиля (0–10 баллов)\n   * Соответствие общему стилю эталонных иконок по манере исполнения и визуальному языку.\n\n8. Качество исполнения (0–10 баллов)\n   * Аккуратность линий, отсутствие артефактов, чистота исполнения.\n\n9. Масштабируемость (0–5 баллов)\n   * Сохранение читаемости при уменьшении размера, отсутствие слишком мелких деталей.\n\nФормат ответа:\n* Для каждого критерия — 2–3 предложения с комментарием и целое число баллов.\n* В конце — **ИТОГОВАЯ ОЦЕНКА: X/100**.\n\nВАЖНО:\n* Если иконка обрезана и хотя бы один её элемент не помещается в кадр, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям в **ИТОГОВАЯ ОЦЕНКА: 0/100**.\n* Если иконка видна полностью, проведи оценку по всем пунктам."
       },
       "position": [
-        176,
-        -128
+        -1040,
+        -992
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -1960,20 +1960,20 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "7adca536-a45b-4c73-ba01-ca9eb58bc55d",
+      "id": "aba5ed7e-f969-4950-9dcc-827a18e4790b",
       "name": "Merge",
       "parameters": {
         "numberInputs": 5
       },
       "position": [
-        1152,
-        224
+        -64,
+        -640
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
-      "id": "70e818fe-62c7-46a9-a09d-c6c578437d48",
+      "id": "c087f2aa-f5db-4f0c-8ec3-7ab19fe2794f",
       "maxTries": 5,
       "name": "Promt2",
       "onError": "continueErrorOutput",
@@ -1986,8 +1986,8 @@
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
       },
       "position": [
-        -1488,
-        272
+        -2704,
+        -592
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1995,34 +1995,34 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "7d91eece-229f-4c36-98f3-436b49444c5a",
+      "id": "10042c86-9307-4269-8f1e-498503b73fe1",
       "name": "Wait2",
       "parameters": {
         "amount": 12
       },
       "position": [
-        -688,
-        272
+        -1904,
+        -592
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "30823498-6141-4dfa-92bd-22d7baeef6e9"
     },
     {
-      "id": "44c738fa-d4f4-4fd4-876b-a5425fe4f056",
+      "id": "37fde3b2-3edd-43e0-8f3d-a2a4dac0445c",
       "name": "Structured Output Parser2",
       "parameters": {
         "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
       },
       "position": [
-        -1296,
-        464
+        -2512,
+        -400
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "3722a4e6-4191-4815-af44-64d38572fbab",
+      "id": "2761628d-e7cd-4184-aa9e-238e867c12d8",
       "maxTries": 5,
       "name": "Imagen 1",
       "parameters": {
@@ -2047,8 +2047,8 @@
         "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
-        -896,
-        272
+        -2112,
+        -592
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2056,7 +2056,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "b319821f-76f6-41ae-963a-859317dc6ab3",
+      "id": "0ba47a32-3d25-4a86-936e-7f92247bef5f",
       "maxTries": 5,
       "name": "Queue2",
       "onError": "continueErrorOutput",
@@ -2074,8 +2074,8 @@
         "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 1').item.json.request_id }}"
       },
       "position": [
-        -496,
-        272
+        -1712,
+        -592
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2083,7 +2083,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "de3ee8e6-b2dc-43cf-9b5d-321a1bc0261d",
+      "id": "981e03cb-b7eb-4dd4-857a-e491fd753fd1",
       "maxTries": 5,
       "name": "Url2",
       "onError": "continueErrorOutput",
@@ -2092,8 +2092,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -272,
-        272
+        -1488,
+        -592
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2101,7 +2101,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "cc54a907-c890-4f73-a6fc-9f1a101775f8",
+      "id": "a8fa46bb-e823-4d52-87a1-f119984b2992",
       "name": "Loop Over Items3",
       "parameters": {
         "options": {
@@ -2109,14 +2109,14 @@
         }
       },
       "position": [
-        624,
-        432
+        -592,
+        -432
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "c9098766-4063-44a2-963a-62ddc6d52aff",
+      "id": "be6c81a2-d3d7-4776-a668-4208d8ebd996",
       "maxTries": 5,
       "name": "Image2",
       "onError": "continueErrorOutput",
@@ -2125,8 +2125,8 @@
         "url": "={{ $('Url2').item.json.images[0].url }}"
       },
       "position": [
-        624,
-        272
+        -592,
+        -592
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2140,7 +2140,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "56ddbe13-1be0-4eac-a782-17a252abe095",
+      "id": "db963815-8a15-467e-a7ea-4c37aee01c07",
       "name": "All Icons2",
       "parameters": {
         "fileId": {
@@ -2154,14 +2154,14 @@
         }
       },
       "position": [
-        -32,
-        272
+        -1248,
+        -592
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "e258b67a-a6c8-486d-86e6-c4629e6571b6",
+      "id": "932cd99e-635f-4f98-85d4-e15b097b1478",
       "name": ">1",
       "parameters": {
         "conditions": {
@@ -2188,8 +2188,8 @@
         "options": {}
       },
       "position": [
-        384,
-        272
+        -832,
+        -592
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2201,7 +2201,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "3e02dbb0-6fbb-4494-9965-00743472c1b2",
+      "id": "81f95ded-8ce3-4873-8f1a-8ec75da7b49e",
       "maxTries": 5,
       "name": "Rated2",
       "onError": "continueErrorOutput",
@@ -2220,8 +2220,8 @@
         "text": "=Ты — эксперт по анализу flat иконок в современном плоском стиле дизайна. У тебя есть два отдельных файла изображений:\n\nПЕРВЫЙ ФАЙЛ содержит 10 якорных (эталонных) иконок, расположенных в сетке. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\nВТОРОЙ ФАЙЛ содержит 1 новую иконку, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую иконку (второй файл) в сравнении с якорными иконками (первый файл) и оценить её соответствие по следующим критериям:\n\n1. Стиль flat дизайна (0–15 баллов)\n   * Соответствие принципам плоского дизайна: отсутствие объёма, теней и градиентов, простые геометрические формы.\n\n2. Цветовая палитра (0–15 баллов)\n   * Использование ярких, насыщенных цветов с хорошим контрастом. Гармоничное сочетание оттенков.\n\n3. Контуры и обводка (0–10 баллов)\n   * Наличие чётких чёрных контуров средней толщины, обрамляющих основные элементы иконки.\n\n4. Простота форм (0–10 баллов)\n   * Использование простых, легко читаемых геометрических форм без излишней детализации.\n\n5. Читаемость и узнаваемость (0–15 баллов)\n   * Мгновенное распознавание объекта или концепции, которую представляет иконка.\n\n6. Композиция и баланс (0–10 баллов)\n   * Гармоничное расположение элементов, визуальный баланс и правильные пропорции.\n\n7. Единство стиля (0–10 баллов)\n   * Соответствие общему стилю эталонных иконок по манере исполнения и визуальному языку.\n\n8. Качество исполнения (0–10 баллов)\n   * Аккуратность линий, отсутствие артефактов, чистота исполнения.\n\n9. Масштабируемость (0–5 баллов)\n   * Сохранение читаемости при уменьшении размера, отсутствие слишком мелких деталей.\n\nФормат ответа:\n* Для каждого критерия — 2–3 предложения с комментарием и целое число баллов.\n* В конце — **ИТОГОВАЯ ОЦЕНКА: X/100**.\n\nВАЖНО:\n* Если иконка обрезана и хотя бы один её элемент не помещается в кадр, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям в **ИТОГОВАЯ ОЦЕНКА: 0/100**.\n* Если иконка видна полностью, проведи оценку по всем пунктам."
       },
       "position": [
-        176,
-        272
+        -1040,
+        -592
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -2235,7 +2235,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "0d9c2b1a-0807-4982-8cd1-5698cacf4a5d",
+      "id": "fe605241-9563-47da-9175-ef5ce8d22c01",
       "maxTries": 5,
       "name": "Upload file3",
       "parameters": {
@@ -2253,8 +2253,8 @@
         "options": {}
       },
       "position": [
-        848,
-        -512
+        -368,
+        -1376
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
@@ -2262,7 +2262,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "35cdfb5d-c7f5-4f7f-a500-87ea9cd3f3ca",
+      "id": "454152ac-831f-43ee-85e7-6348051aa9e3",
       "name": "Loop Over Items4",
       "parameters": {
         "options": {
@@ -2270,14 +2270,14 @@
         }
       },
       "position": [
-        -1072,
-        -352
+        -2288,
+        -1216
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "5f610cd7-bc70-455e-b764-0bf10e1a8ad3",
+      "id": "4b463645-d059-414a-87f9-ce7840d9fb7c",
       "name": "Loop Over Items5",
       "parameters": {
         "options": {
@@ -2285,14 +2285,14 @@
         }
       },
       "position": [
-        -1072,
-        48
+        -2288,
+        -816
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "89f54824-6f7c-46ec-bf3b-fd7b48f651fc",
+      "id": "3717c483-d0d6-4cfd-9148-3e444261ca0f",
       "name": "Loop Over Items6",
       "parameters": {
         "options": {
@@ -2300,14 +2300,14 @@
         }
       },
       "position": [
-        -1072,
-        432
+        -2288,
+        -432
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "730bbdea-9c95-41b6-b3a7-b98845ec23c6",
+      "id": "284f332e-6d0f-41f9-a4b5-e3acce426663",
       "name": "Loop Over Items7",
       "parameters": {
         "options": {
@@ -2315,14 +2315,14 @@
         }
       },
       "position": [
-        -496,
-        -352
+        -1712,
+        -1216
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "e5216201-545d-459a-af0c-641b6faeafc0",
+      "id": "e177c626-f4fc-46a9-9fd8-f84100999067",
       "name": "Loop Over Items8",
       "parameters": {
         "options": {
@@ -2330,14 +2330,14 @@
         }
       },
       "position": [
-        -496,
-        48
+        -1712,
+        -816
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "984c909a-6555-480b-a420-887a93db456d",
+      "id": "1adc3a34-98d5-4eb2-b384-6cb1de8b3454",
       "name": "Loop Over Items9",
       "parameters": {
         "options": {
@@ -2345,8 +2345,8 @@
         }
       },
       "position": [
-        -496,
-        432
+        -1712,
+        -432
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2358,7 +2358,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "28c291be-2065-4d86-a734-b9bfea54141b",
+      "id": "14ac9a94-6b34-4d47-b4f8-8a72ed7a9f85",
       "maxTries": 5,
       "name": "Upload file4",
       "parameters": {
@@ -2376,8 +2376,8 @@
         "options": {}
       },
       "position": [
-        848,
-        -128
+        -368,
+        -992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
@@ -2391,7 +2391,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "92b76b53-134b-4b79-a204-84157fa8e317",
+      "id": "a61b0e3e-b0d0-4390-876d-7296228647c0",
       "maxTries": 5,
       "name": "Upload file5",
       "parameters": {
@@ -2409,8 +2409,8 @@
         "options": {}
       },
       "position": [
-        848,
-        272
+        -368,
+        -592
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
@@ -2425,7 +2425,7 @@
         }
       },
       "executeOnce": true,
-      "id": "0cbc5164-e647-401c-8707-8f93059bbfb0",
+      "id": "97d45d4d-3d62-46d3-8c27-e6e593f15108",
       "maxTries": 5,
       "name": "Drive URL",
       "onError": "continueErrorOutput",
@@ -2455,8 +2455,8 @@
         "text": "=🔄    💠 *Создаю иконки!* \n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -2192,
-        -688
+        -3408,
+        -1552
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2472,7 +2472,7 @@
         }
       },
       "executeOnce": true,
-      "id": "9dfcdab2-70b2-4e06-8636-33d8558d2752",
+      "id": "5b05dcdd-ac30-48e1-b550-7cfc9c6f5e78",
       "maxTries": 5,
       "name": "Finish",
       "onError": "continueErrorOutput",
@@ -2502,8 +2502,8 @@
         "text": "=✅    💠 *Ваши иконки готовы!*\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1488,
-        -688
+        -2704,
+        -1552
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2519,7 +2519,7 @@
         }
       },
       "executeOnce": true,
-      "id": "afc9e91e-b0f5-48bb-918f-1487eeb08d8c",
+      "id": "a48c7d8d-546f-411f-bf84-7f5d1eed4a80",
       "maxTries": 5,
       "name": "Drive URL1",
       "onError": "continueRegularOutput",
@@ -2532,8 +2532,8 @@
         "text": "=🔄    💠 Создаю иконки!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1968,
-        -688
+        -3184,
+        -1552
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2549,7 +2549,7 @@
         }
       },
       "executeOnce": true,
-      "id": "34f88198-7b24-4187-9e35-793d738830da",
+      "id": "e6774766-e3fe-4ee5-a0cb-c1d305da0eaa",
       "maxTries": 5,
       "name": "Finish1",
       "onError": "continueRegularOutput",
@@ -2562,8 +2562,8 @@
         "text": "=✅    💠 Ваши иконки готовы!\n\nhttps://drive.google.com/drive/folders/{{ $json.id }}"
       },
       "position": [
-        -1264,
-        -688
+        -2480,
+        -1552
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2572,67 +2572,67 @@
       "webhookId": "377968c3-23cf-4225-8050-a88029323fa3"
     },
     {
-      "id": "f5c25b76-b64c-4293-86d1-f18922d537b7",
+      "id": "874b004c-cd23-4dd3-936b-f925124cf706",
       "name": "Remove",
       "parameters": {
         "jsCode": "// Получаем текст напрямую из Gemini API\nconst input = $('When Executed by Another Workflow').first().json.Tasks;\n\n// Логируем входные данные для отладки\nconsole.log('Input text:', input);\nconsole.log('Input type:', typeof input);\n\n// Проверяем, что input - это строка\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  console.log('Error: Input is not a string, received:', input);\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\n// Удаляем все \\r, \\n, \\t, заменяя на пробел\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\n\n// Заменяем маркеры \"•\" и \"●\" на дефис\ncleanedText = cleanedText.replace(/[•●]/g, '-');\n\n// Убираем лишние пробелы (больше одного подряд)\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      result: cleanedText,\n      original_length: result.length,\n      cleaned_length: cleanedText.length\n    }\n  }\n];"
       },
       "position": [
-        -2192,
-        -512
+        -3408,
+        -1376
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
       "executeOnce": true,
-      "id": "74bbdbc5-c39a-421f-9043-e9920e7c30c6",
+      "id": "0795f436-05c8-4906-adfd-f1f78d5c98d6",
       "name": "Split",
       "parameters": {
         "jsCode": "// Получаем текст из нового формата данных\nconst fullText = $input.first().json.result;$input.first().json.result\n\n// Логируем для отладки\nconsole.log('Input text length:', fullText.length);\nconsole.log('First 100 chars:', fullText.substring(0, 100));\n\n// Разделяем по разделителю \" --- \" (с пробелами)\nconst tasks = fullText.split(' --- ');\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task, index) => {\n  return {\n    task_number: index + 1,\n    task_content: task.trim(),\n    total_tasks: tasks.length,\n    content_length: task.trim().length,\n  };\n});\n\nconsole.log('Total tasks found:', result.length);\n\nreturn result;"
       },
       "position": [
-        -1968,
-        -512
+        -3184,
+        -1376
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "1d1bbc7b-cabf-4026-8ae0-671daafa94a7",
+      "id": "2dc4a9a8-d473-4a12-b33f-baf1deb31202",
       "name": "Clear Promt",
       "parameters": {
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1072,
-        -512
+        -2288,
+        -1376
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "d6ac939f-7979-4087-bf0c-22b614ba1b39",
+      "id": "06e5ccfe-0751-4005-a934-5eea5be88221",
       "name": "Clear Promt1",
       "parameters": {
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1072,
-        -128
+        -2288,
+        -992
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "id": "259b4bda-8767-40d1-9e94-cca8b8d53d75",
+      "id": "3b77c4ba-995b-4e39-bd42-5a4f2d8edf32",
       "name": "Clear Promt2",
       "parameters": {
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1072,
-        272
+        -2288,
+        -592
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2644,21 +2644,21 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "f38ebe3a-9ff9-49f8-8b2f-cbe172f226b9",
+      "id": "9c66c02f-f8d0-43a9-bab1-89f133502f54",
       "name": "Google Gemini Chat Model3",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        848
+        -2704,
+        -16
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     },
     {
-      "id": "a5a8390a-b21b-4ab0-935f-62fa95ff36cc",
+      "id": "5f7c314f-b9fc-4041-a84a-6f4975d018f2",
       "maxTries": 5,
       "name": "Promt3",
       "onError": "continueErrorOutput",
@@ -2671,8 +2671,8 @@
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
       },
       "position": [
-        -1488,
-        656
+        -2704,
+        -208
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2680,34 +2680,34 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "71780021-3d65-4fc5-9cb1-4961f5be3cb7",
+      "id": "84d8c5e2-722e-4e81-bd78-125b6924e52d",
       "name": "Wait5",
       "parameters": {
         "amount": 12
       },
       "position": [
-        -688,
-        656
+        -1904,
+        -208
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "a1a08924-3e54-4344-82fb-380937729098"
     },
     {
-      "id": "4b42db64-1419-4aa6-9ddc-cc0b43e5dac3",
+      "id": "260838e7-85ee-4f5c-9255-cdc8e79730f9",
       "name": "Structured Output Parser3",
       "parameters": {
         "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
       },
       "position": [
-        -1296,
-        848
+        -2512,
+        -16
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "8c411546-19bc-49e3-b2a2-44f53014af23",
+      "id": "7691d443-7781-427f-9f1d-0b0ce678452c",
       "maxTries": 5,
       "name": "Imagen 2",
       "parameters": {
@@ -2732,8 +2732,8 @@
         "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
-        -896,
-        656
+        -2112,
+        -208
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2741,7 +2741,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "dd3adf33-2064-4d14-b196-098bc8b4dd98",
+      "id": "36a5c4c5-2c08-4446-ad76-0334184c0776",
       "maxTries": 5,
       "name": "Queue3",
       "onError": "continueErrorOutput",
@@ -2759,8 +2759,8 @@
         "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 2').item.json.request_id }}"
       },
       "position": [
-        -496,
-        656
+        -1712,
+        -208
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2768,7 +2768,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "8db77334-3a8e-40a7-b6d7-3fc17c500fa9",
+      "id": "f01aa6e7-4c82-479d-bb45-f27958d6de1e",
       "maxTries": 5,
       "name": "Url3",
       "onError": "continueErrorOutput",
@@ -2777,8 +2777,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -272,
-        656
+        -1488,
+        -208
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2786,7 +2786,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "22b9af9c-56ad-4a1c-a8c0-0b155be730de",
+      "id": "c4056227-7c58-4246-ac5b-bc53862d1f0d",
       "name": "Loop Over Items10",
       "parameters": {
         "options": {
@@ -2794,14 +2794,14 @@
         }
       },
       "position": [
-        624,
-        816
+        -592,
+        -48
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "d3ced2d7-cf7f-481a-a543-0d0bffff1f5c",
+      "id": "18b912c3-84d7-43a0-93b3-18601c74e7a8",
       "maxTries": 5,
       "name": "Image3",
       "onError": "continueErrorOutput",
@@ -2810,8 +2810,8 @@
         "url": "={{ $('Url3').item.json.images[0].url }}"
       },
       "position": [
-        624,
-        656
+        -592,
+        -208
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -2825,7 +2825,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "3d9bedb2-dece-4738-bd1c-e6cd9eda56b2",
+      "id": "e89feba8-6467-4a85-b29b-ca748e29a96b",
       "name": "All Icons3",
       "parameters": {
         "fileId": {
@@ -2839,14 +2839,14 @@
         }
       },
       "position": [
-        -32,
-        656
+        -1248,
+        -208
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "b3522b38-e131-40ae-8097-285a67776c29",
+      "id": "4829d467-62d2-4f73-91d0-9425b7e83232",
       "name": ">2",
       "parameters": {
         "conditions": {
@@ -2873,8 +2873,8 @@
         "options": {}
       },
       "position": [
-        384,
-        656
+        -832,
+        -208
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -2886,7 +2886,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "935ed0f4-e2f6-4769-9395-1fb01cc8d653",
+      "id": "c4279832-3b77-40cb-9154-bcf641acf97b",
       "maxTries": 5,
       "name": "Rated3",
       "onError": "continueErrorOutput",
@@ -2905,8 +2905,8 @@
         "text": "=Ты — эксперт по анализу flat иконок в современном плоском стиле дизайна. У тебя есть два отдельных файла изображений:\n\nПЕРВЫЙ ФАЙЛ содержит 10 якорных (эталонных) иконок, расположенных в сетке. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\nВТОРОЙ ФАЙЛ содержит 1 новую иконку, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую иконку (второй файл) в сравнении с якорными иконками (первый файл) и оценить её соответствие по следующим критериям:\n\n1. Стиль flat дизайна (0–15 баллов)\n   * Соответствие принципам плоского дизайна: отсутствие объёма, теней и градиентов, простые геометрические формы.\n\n2. Цветовая палитра (0–15 баллов)\n   * Использование ярких, насыщенных цветов с хорошим контрастом. Гармоничное сочетание оттенков.\n\n3. Контуры и обводка (0–10 баллов)\n   * Наличие чётких чёрных контуров средней толщины, обрамляющих основные элементы иконки.\n\n4. Простота форм (0–10 баллов)\n   * Использование простых, легко читаемых геометрических форм без излишней детализации.\n\n5. Читаемость и узнаваемость (0–15 баллов)\n   * Мгновенное распознавание объекта или концепции, которую представляет иконка.\n\n6. Композиция и баланс (0–10 баллов)\n   * Гармоничное расположение элементов, визуальный баланс и правильные пропорции.\n\n7. Единство стиля (0–10 баллов)\n   * Соответствие общему стилю эталонных иконок по манере исполнения и визуальному языку.\n\n8. Качество исполнения (0–10 баллов)\n   * Аккуратность линий, отсутствие артефактов, чистота исполнения.\n\n9. Масштабируемость (0–5 баллов)\n   * Сохранение читаемости при уменьшении размера, отсутствие слишком мелких деталей.\n\nФормат ответа:\n* Для каждого критерия — 2–3 предложения с комментарием и целое число баллов.\n* В конце — **ИТОГОВАЯ ОЦЕНКА: X/100**.\n\nВАЖНО:\n* Если иконка обрезана и хотя бы один её элемент не помещается в кадр, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям в **ИТОГОВАЯ ОЦЕНКА: 0/100**.\n* Если иконка видна полностью, проведи оценку по всем пунктам."
       },
       "position": [
-        176,
-        656
+        -1040,
+        -208
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -2914,7 +2914,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "83d95a9b-bed8-43c6-9d00-ca2dc6f16bab",
+      "id": "ded65c2d-ec6d-4458-ac88-be78e3aebb45",
       "name": "Loop Over Items11",
       "parameters": {
         "options": {
@@ -2922,14 +2922,14 @@
         }
       },
       "position": [
-        -1072,
-        816
+        -2288,
+        -48
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "53130251-9df1-435b-8259-ec3cc8981f9c",
+      "id": "ce259036-9db8-42a7-aa6a-3d1cd3cba44b",
       "name": "Loop Over Items12",
       "parameters": {
         "options": {
@@ -2937,8 +2937,8 @@
         }
       },
       "position": [
-        -496,
-        816
+        -1712,
+        -48
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -2950,7 +2950,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "621b1cd6-6722-4193-ba10-064c252cd4a8",
+      "id": "0827c0c4-b5de-4585-a932-00da4d8a1e28",
       "maxTries": 5,
       "name": "Upload file",
       "parameters": {
@@ -2968,8 +2968,8 @@
         "options": {}
       },
       "position": [
-        848,
-        656
+        -368,
+        -208
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
@@ -2977,14 +2977,14 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "248d9606-0107-4477-9137-bb8b042fc52f",
+      "id": "33b81faf-ede4-474b-98e8-6ecfc8eea49a",
       "name": "Clear Promt3",
       "parameters": {
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1072,
-        656
+        -2288,
+        -208
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -2996,21 +2996,21 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "c660f636-fc05-42d7-8bbd-dcb9532348a3",
+      "id": "de615054-86f9-448e-9f02-66d4c511fe76",
       "name": "Google Gemini Chat Model4",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        1232
+        -2704,
+        384
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     },
     {
-      "id": "021db02f-a04f-43db-bf6b-74b485b384d3",
+      "id": "1c98f4e0-2797-4c3d-988d-329630dcc99d",
       "maxTries": 5,
       "name": "Promt4",
       "onError": "continueErrorOutput",
@@ -3023,8 +3023,8 @@
         "text": "=ТЗ:\n{{ $('Split').item.json.task_content }}"
       },
       "position": [
-        -1488,
-        1040
+        -2704,
+        192
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -3032,34 +3032,34 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "0949cfbf-7133-4fb2-aaaa-5d920c19ea03",
+      "id": "51adcae9-5505-47c0-9e9f-c32b5854500e",
       "name": "Wait6",
       "parameters": {
         "amount": 12
       },
       "position": [
-        -688,
-        1040
+        -1904,
+        192
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "729c6079-b6cf-4ff5-abec-e7a00f0bfa03"
     },
     {
-      "id": "4632617d-61f8-438d-ab13-ffabcff84f3c",
+      "id": "a023eece-65f7-46c2-944b-695dce373250",
       "name": "Structured Output Parser4",
       "parameters": {
         "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
       },
       "position": [
-        -1296,
-        1232
+        -2512,
+        384
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
     },
     {
-      "id": "dad7bd31-a4c9-4578-9218-065de0e83efe",
+      "id": "3adfddd3-9a17-4410-ac56-46c8c8d19280",
       "maxTries": 5,
       "name": "Imagen 3",
       "parameters": {
@@ -3084,8 +3084,8 @@
         "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
       },
       "position": [
-        -896,
-        1040
+        -2112,
+        192
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -3093,7 +3093,7 @@
       "waitBetweenTries": 2000
     },
     {
-      "id": "48a95c12-2f4f-4882-a342-6d9adbe3f019",
+      "id": "583e0d75-a778-47f8-b06d-e7bbf2932902",
       "maxTries": 5,
       "name": "Queue4",
       "onError": "continueErrorOutput",
@@ -3111,8 +3111,8 @@
         "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 3').item.json.request_id }}"
       },
       "position": [
-        -496,
-        1040
+        -1712,
+        192
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -3121,7 +3121,7 @@
     },
     {
       "executeOnce": false,
-      "id": "5df9b4a6-5c11-4ddd-8d87-29694f6541cc",
+      "id": "9e6f89aa-3e31-4bae-aa0c-122328892560",
       "maxTries": 5,
       "name": "Url4",
       "onError": "continueErrorOutput",
@@ -3130,8 +3130,8 @@
         "url": "={{ $json.images[0].url }}"
       },
       "position": [
-        -272,
-        1040
+        -1488,
+        192
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -3139,7 +3139,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "b3abe990-13db-49e5-8a90-66d353c2c64d",
+      "id": "da0bb3a4-bc3a-4c74-ab17-acb123b73f18",
       "name": "Loop Over Items13",
       "parameters": {
         "options": {
@@ -3147,14 +3147,14 @@
         }
       },
       "position": [
-        624,
-        1200
+        -592,
+        352
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "8e3fd291-c5e3-4b8f-a393-7f2c66ad0667",
+      "id": "90974859-6857-4f95-9d00-5badc0686dc4",
       "maxTries": 5,
       "name": "Image4",
       "onError": "continueErrorOutput",
@@ -3163,8 +3163,8 @@
         "url": "={{ $('Url4').item.json.images[0].url }}"
       },
       "position": [
-        624,
-        1040
+        -592,
+        192
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -3178,7 +3178,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "7618b00f-b49b-493f-acfb-d4fa33257062",
+      "id": "fcbe4eed-d8d0-4ff5-bee5-7b4c4e8a29fc",
       "name": "All Icons4",
       "parameters": {
         "fileId": {
@@ -3192,14 +3192,14 @@
         }
       },
       "position": [
-        -32,
-        1040
+        -1248,
+        192
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
-      "id": "3948c4d0-4761-4743-8503-38e6d6629cad",
+      "id": "f3ec1477-6bd7-497e-bee6-6767867907b8",
       "name": ">3",
       "parameters": {
         "conditions": {
@@ -3226,8 +3226,8 @@
         "options": {}
       },
       "position": [
-        384,
-        1040
+        -832,
+        192
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -3239,7 +3239,7 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "35c22669-6c38-4d2b-9f7f-3a5bef2353c8",
+      "id": "10fe0981-017f-4336-a229-f69a0cf451d6",
       "maxTries": 5,
       "name": "Rated4",
       "onError": "continueErrorOutput",
@@ -3258,8 +3258,8 @@
         "text": "=Ты — эксперт по анализу flat иконок в современном плоском стиле дизайна. У тебя есть два отдельных файла изображений:\n\nПЕРВЫЙ ФАЙЛ содержит 10 якорных (эталонных) иконок, расположенных в сетке. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\nВТОРОЙ ФАЙЛ содержит 1 новую иконку, сгенерированную нейросетью, которую необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать новую иконку (второй файл) в сравнении с якорными иконками (первый файл) и оценить её соответствие по следующим критериям:\n\n1. Стиль flat дизайна (0–15 баллов)\n   * Соответствие принципам плоского дизайна: отсутствие объёма, теней и градиентов, простые геометрические формы.\n\n2. Цветовая палитра (0–15 баллов)\n   * Использование ярких, насыщенных цветов с хорошим контрастом. Гармоничное сочетание оттенков.\n\n3. Контуры и обводка (0–10 баллов)\n   * Наличие чётких чёрных контуров средней толщины, обрамляющих основные элементы иконки.\n\n4. Простота форм (0–10 баллов)\n   * Использование простых, легко читаемых геометрических форм без излишней детализации.\n\n5. Читаемость и узнаваемость (0–15 баллов)\n   * Мгновенное распознавание объекта или концепции, которую представляет иконка.\n\n6. Композиция и баланс (0–10 баллов)\n   * Гармоничное расположение элементов, визуальный баланс и правильные пропорции.\n\n7. Единство стиля (0–10 баллов)\n   * Соответствие общему стилю эталонных иконок по манере исполнения и визуальному языку.\n\n8. Качество исполнения (0–10 баллов)\n   * Аккуратность линий, отсутствие артефактов, чистота исполнения.\n\n9. Масштабируемость (0–5 баллов)\n   * Сохранение читаемости при уменьшении размера, отсутствие слишком мелких деталей.\n\nФормат ответа:\n* Для каждого критерия — 2–3 предложения с комментарием и целое число баллов.\n* В конце — **ИТОГОВАЯ ОЦЕНКА: X/100**.\n\nВАЖНО:\n* Если иконка обрезана и хотя бы один её элемент не помещается в кадр, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям в **ИТОГОВАЯ ОЦЕНКА: 0/100**.\n* Если иконка видна полностью, проведи оценку по всем пунктам."
       },
       "position": [
-        176,
-        1040
+        -1040,
+        192
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -3267,7 +3267,7 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "88896c86-6682-4713-8679-caac99c0b98e",
+      "id": "7299c48b-95e3-4406-9077-9001b195c089",
       "name": "Loop Over Items14",
       "parameters": {
         "options": {
@@ -3275,14 +3275,14 @@
         }
       },
       "position": [
-        -1072,
-        1200
+        -2288,
+        352
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
-      "id": "09bcb4ff-58a5-4df5-a682-d268957fc87f",
+      "id": "e8022eb1-f195-4422-a60e-e3a958a7b469",
       "name": "Loop Over Items15",
       "parameters": {
         "options": {
@@ -3290,8 +3290,8 @@
         }
       },
       "position": [
-        -496,
-        1200
+        -1712,
+        352
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -3303,7 +3303,7 @@
           "name": "N8N Bot"
         }
       },
-      "id": "05093e79-b4de-40c3-b0df-12661e495be2",
+      "id": "f900d20f-23bb-4f00-b22b-f54f5bf8d186",
       "maxTries": 5,
       "name": "Upload file6",
       "parameters": {
@@ -3321,8 +3321,8 @@
         "options": {}
       },
       "position": [
-        848,
-        1040
+        -368,
+        192
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.googleDrive",
@@ -3330,21 +3330,21 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "0386a666-4b8f-406d-b070-e90f7c97b2fe",
+      "id": "262ff5e0-68fd-435c-bc17-5c02cb610400",
       "name": "Clear Promt4",
       "parameters": {
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1072,
-        1040
+        -2288,
+        192
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
       "executeOnce": true,
-      "id": "c7ca2107-3280-45d9-9bdd-5d060a6cbe85",
+      "id": "1a07f99b-44fc-4926-ad41-4d895e48161f",
       "name": "Date & Time1",
       "parameters": {
         "options": {
@@ -3352,137 +3352,137 @@
         }
       },
       "position": [
-        -2848,
-        -512
+        -4064,
+        -1376
       ],
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2
     },
     {
-      "id": "46339302-cfc2-408b-ba38-17f15b0f5aa4",
+      "id": "5b68816b-2628-4200-8db9-c93c968a18bb",
       "name": "Wait3",
       "parameters": {
         "amount": 10
       },
       "position": [
-        384,
-        -336
+        -832,
+        -1200
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
     },
     {
-      "id": "2b71455d-c940-4b22-854b-e01303d6ccbf",
+      "id": "ef1d1a98-ed73-4ece-9471-9a504496e224",
       "name": "Wait4",
       "parameters": {
         "amount": 10
       },
       "position": [
-        384,
-        64
+        -832,
+        -800
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
     },
     {
-      "id": "772dcc6d-d2bf-43d3-a3ca-23aa25f12b85",
+      "id": "aa4025ab-034f-4ab8-983e-508d079355ce",
       "name": "Wait7",
       "parameters": {
         "amount": 10
       },
       "position": [
-        384,
-        448
+        -832,
+        -416
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
     },
     {
-      "id": "9d1fd199-cd05-4813-b0d9-4207ea6b8e56",
+      "id": "90b1a047-40ce-4367-90c5-b43305cc2ed8",
       "name": "Wait8",
       "parameters": {
         "amount": 10
       },
       "position": [
-        384,
-        832
+        -832,
+        -32
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
     },
     {
-      "id": "c35bad03-f9e1-4828-9df8-9669a23c879d",
+      "id": "8501ec38-adee-434a-ae8e-6d23e83fe791",
       "name": "Wait9",
       "parameters": {
         "amount": 10
       },
       "position": [
-        384,
-        1216
+        -832,
+        368
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
     },
     {
-      "id": "333e4c51-0db5-4d62-ad2a-d7eb45b1a9be",
+      "id": "5cde2574-f5e3-41cd-9e75-a32b699cb583",
       "name": "Wait16",
       "parameters": {},
       "position": [
-        -32,
-        1216
+        -1248,
+        368
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
     },
     {
-      "id": "f93a68fa-e7cb-4572-93ec-f89af451d3c5",
+      "id": "29862820-7fc7-48a4-91be-03ff9b6a5284",
       "name": "Wait17",
       "parameters": {},
       "position": [
-        -32,
-        832
+        -1248,
+        -32
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
     },
     {
-      "id": "dd4b876d-7640-478c-8479-ebe20d264cbe",
+      "id": "597fabf2-1ea3-4e64-adb7-d8cacd23eabd",
       "name": "Wait18",
       "parameters": {},
       "position": [
-        -32,
-        448
+        -1248,
+        -416
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
     },
     {
-      "id": "73de0bcc-f5cd-4ef4-b6af-d537a5285454",
+      "id": "5304d8ac-fdbc-42c4-b066-f46f93a6efb4",
       "name": "Wait19",
       "parameters": {},
       "position": [
-        -32,
-        64
+        -1248,
+        -800
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
     },
     {
-      "id": "eff523ab-6589-4a91-87fa-8ac5b6768db5",
+      "id": "4706f386-5a77-43e2-8f61-0a8554b21a70",
       "name": "Wait20",
       "parameters": {},
       "position": [
-        -32,
-        -336
+        -1248,
+        -1200
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -3495,21 +3495,38 @@
           "name": "Gemini Ilya Owner"
         }
       },
-      "id": "f1bfb81f-0c73-4d48-b622-69ced00cd227",
+      "id": "dabab7af-a2ec-4283-b8f2-8756d3d9bbcc",
       "name": "Google Gemini Chat Model2",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        -1488,
-        80
+        -2704,
+        -784
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "Chat ID": [
+            "804687104"
+          ],
+          "File_name": [
+            "FLat_ТЗ.+Арт+_Пионер__fixed.pdf"
+          ],
+          "Tasks": "Название: Icon_MaliveiTechnique\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая специальную технологию или ресурс.\nРоль/назначение: UI иконка для вкладки \"Пионер-командир\", представляющая \"Технику Маливеи\".\nОписание и адаптация:\nФорма и композиция: Иконка выполнена в виде стилизованного технологического контейнера. Основу составляет прямоугольная форма с четкими, скошенными углами. Сверху расположен контрастный элемент в виде небольшой панели. Силуэт должен быть массивным и легко читаемым, с акцентом на геометрическую простоту.\nМатериалы и поверхности: Используются только однотонные плоские заливки. Основной корпус контейнера — ярко-зеленого цвета. Верхняя панель и мелкие акценты — желтые. Контурные и теневые части выполнены более темным оттенком зеленого для создания объема без градиентов.\nСвет и блики: Полностью отсутствуют.\nСветящиеся элементы: Ярко-зеленый и желтый цвета создают эффект свечения за счет своей насыщенности, но без использования glow-эффектов.\nДетализация: Минимальная. Фокус на крупных формах. Несколько тонких линий могут быть добавлены для обозначения панелей или швов, но они не должны перегружать композицию.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Ярко-зеленый (#39FF14) используется для основного корпуса. Желтый (#FFD700) используется для акцентной панели. Темно-зеленый (#008A00) используется для контуров и имитации тени.\n---\nНазвание: Icon_PionerReward\nТип объекта: Flat иконка\nКраткое описание: Иконка, изображающая набор наград: очки, монеты и бриллианты.\nРоль/назначение: UI иконка для вкладки \"Пропуск пионера\", символизирующая награду за участие в событии.\nОписание и адаптация:\nФорма и композиция: Композиция состоит из трех стилизованных объектов, расположенных друг на друге. В основании лежит прямоугольный контейнер (символизирующий очки). По центру — круглый объект (монета). Наверху — граненый кристалл (бриллиант). Элементы расположены с небольшим смещением для создания динамики и объема.\nМатериалы и поверхности: Все элементы выполнены в плоском векторном стиле. Контейнер — оранжевый. Монета — желтая. Кристалл — голубой. Используются только однотонные заливки.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Яркие, чистые цвета создают ощущение ценности и яркости без glow-эффектов.\nДетализация: Минимальная. Формы объектов упрощены до базовых геометрических фигур. Кристалл имеет несколько четких граней, обозначенных линиями или смежными плоскими формами разных оттенков голубого.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжевый (#FFA500) используется для контейнера. Желтый (#FFC700) используется для монеты. Голубой (#00BFFF) используется для кристалла.\n---\nНазвание: Icon_PionerChestReward\nТип объекта: Flat иконка\nКраткое описание: Иконка стилизованного сундука с наградами.\nРоль/назначение: UI иконка для вкладки \"Пионерская цель\", визуализирующая сундук с наградами.\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой сундук в ¾ ракурсе. Форма сундука — геометрическая, состоящая из прямоугольного основания и скругленной крышки. Силуэт четкий и массивный. Замочная скважина стилизована под простой круг или ромб.\nМатериалы и поверхности: Плоские однотонные заливки. Корпус сундука — оранжево-коричневый. Металлическая окантовка и замок — ярко-желтого цвета. Драгоценные камни, инкрустированные в окантовку, — бирюзовые круги.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Насыщенные цвета создают яркий и привлекательный образ. Бирюзовые элементы могут иметь более светлый оттенок для имитации свечения.\nДетализация: Упрощенная. Окантовка выполнена в виде простых прямоугольных полос. Детали, такие как петли или узоры, опущены в пользу чистоты формы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжево-коричневый (#D2691E) используется для корпуса сундука. Ярко-желтый (#FFFF00) используется для окантовки. Бирюзовый (#40E0D0) используется для декоративных камней.\n---\nНазвание: Icon_PionerFight\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая сражение или схватку.\nРоль/назначение: UI иконка для визуального представления задания \"Очистить квартал\".\nОписание и адаптация:\nФорма и композиция: Иконка состоит из двух скрещенных мечей или энергетических клинков, расположенных по диагонали. За ними находится простой круглый или щитообразный фон для контраста. Силуэт агрессивный и динамичный.\nМатериалы и поверхности: Плоские векторные заливки. Клинки — ярко-оранжевые. Фон — более темного оранжевого или коричневого цвета для создания глубины.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Ярко-оранжевый цвет клинков создает ощущение энергии и жара. В центре пересечения клинков можно добавить небольшую вспышку в виде четырехконечной звезды того же цвета.\nДетализация: Крайне минималистичная. Клинки представлены простыми вытянутыми треугольниками или ромбами. Рукояти стилизованы под небольшие прямоугольники.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Ярко-оранжевый (#FF4500) используется для клинков и вспышки. Темно-оранжевый (#CC5500) используется для фона.\n---\nНазвание: Icon_PionerPliers\nТип объекта: Flat иконка\nКраткое описание: Иконка инструмента (плоскогубцев).\nРоль/назначение: UI иконка для визуального представления задания \"Спасение Моники\".\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой стилизованное изображение плоскогубцев. Состоит из двух рукоятей, центрального шарнира и рабочих губок. Формы упрощены до базовой геометрии: рукояти — вытянутые прямоугольники со скруглениями, шарнир — круг, губки — два смыкающихся клиновидных элемента.\nМатериалы и поверхности: Полностью плоский стиль с однотонными заливками. Рукояти — насыщенного красного цвета. Металлические части (губки и шарнир) — светло-серого цвета.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются. Акцент сделан на контрасте цветов и чистоте силуэта.\nДетализация: Минимальная. Никаких текстур или мелких деталей. Четко разделены цветовые зоны рукоятей и металлической части для мгновенной узнаваемости.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Красный (#FF0000) используется для рукоятей. Светло-серый (#B0B0B0) используется для металлических частей.\n---\nНазвание: Icon_PionerRadar\nТип объекта: Flat иконка\nКраткое описание: Иконка радара или сканера.\nРоль/назначение: UI иконка для визуального представления задания \"Задача радара: План Моники\".\nОписание и адаптация:\nФорма и композиция: Иконка изображает стилизованный радар. Основа — круглый дисплей с концентрическими окружностями. В центре находится точка или небольшой символ. От центра исходит одна или несколько линий-индикаторов. Всё заключено в квадратную или круглую рамку.\nМатериалы и поверхности: Плоские однотонные заливки. Фон дисплея — темно-синий. Рамка, окружности и индикаторы — ярко-голубого (cyan) цвета.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Яркий голубой цвет на темном фоне создает эффект неонового свечения без использования glow-эффектов.\nДетализация: Упрощенная. Дисплей содержит 2-3 концентрических круга. В качестве цели на радаре используется простая точка или треугольник.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Темно-синий (#00008B) используется для фона дисплея. Ярко-голубой (#00FFFF) используется для рамки и индикаторов.\n---\nНазвание: Icon_PionerPoints\nТип объекта: Flat иконка\nКраткое описание: Иконка Токена Генезиса.\nРоль/назначение: UI иконка для визуализации валюты \"Токен Генезиса\" и представления задания \"Выполняйте задания Пионерская цель\".\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой стилизованную монету или токен. Основа — круг. В центре расположен символ, напоминающий букву 'P' или другой простой геометрический узор, вписанный в шестиугольник. Монета имеет толстую окантовку.\nМатериалы и поверхности: Исключительно плоские заливки. Основной цвет монеты — ярко-оранжевый. Окантовка и центральный символ — насыщенного желтого цвета.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Сочетание яркого оранжевого и желтого создает эффект ценности и энергии.\nДетализация: Минимальная. Центральный символ должен быть простым и легко читаемым. Окантовка выполнена в виде сплошного кольца.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжевый (#FFA500) используется для основного поля монеты. Желтый (#FFD700) используется для окантовки и центрального символа.\n---\nНазвание: Icon_WishesMalivei\nТип объекта: Flat иконка\nКраткое описание: Иконка, представляющая свиток или документ.\nРоль/назначение: UI иконка для задания \"Активно участвуйте в мероприятии 'Желание Моники'\".\nОписание и адаптация:\nФорма и композиция: Иконка изображает два перевязанных свитка или технологических чертежа. Формы свитков упрощены до прямоугольников со свернутыми краями. Они перевязаны лентой, форма которой также упрощена до нескольких пересекающихся полос.\nМатериалы и поверхности: Плоские однотонные заливки. Свитки — светло-коричневого или бежевого цвета. Лента — ярко-красного цвета.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются. Акцент на контрасте между цветом свитков и яркой лентой.\nДетализация: Минимальная. На свитках могут быть нанесены 2-3 горизонтальные линии для имитации текста. Свернутые края обозначены простыми дугами.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Бежевый (#F5F5DC) используется для свитков. Красный (#FF0000) используется для ленты.\n---\nНазвание: Icon_PionerArena\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая арену или поле боя.\nРоль/назначение: UI иконка для события \"Пионер\".\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой стилизованный щит или эмблему. В центре эмблемы изображена планета или сфера, опоясанная кольцом, как у Сатурна. На переднем плане сферы расположены два скрещенных меча или энергетических клинка.\nМатериалы и поверхности: Полностью плоские заливки. Сфера — синяя, кольцо — желтое. Клинки — оранжевые. Фон эмблемы — темно-красный.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Яркие цвета (желтый, оранжевый, синий) контрастируют с темным фоном, создавая яркий и заметный образ.\nДетализация: Упрощенная. Все элементы выполнены крупными, четкими формами без мелких деталей.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Темно-красный (#8B0000) используется для фона. Синий (#0000FF) используется для сферы. Желтый (#FFFF00) используется для кольца. Оранжевый (#FFA500) используется для клинков.\n---\nНазвание: Icon_PionerMoneyGrowth\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая рост количества монет (кредитов).\nРоль/назначение: UI иконка для визуализации увеличения валюты \"Кредиты\".\nОписание и адаптация:\nФорма и композиция: Иконка состоит из двух элементов: стилизованной монеты и стрелки, направленной вверх. Монета — простой круг с символом внутри (например, буква 'C' или знак доллара). Стрелка расположена позади или сбоку от монеты, имеет простую геометрическую форму.\nМатериалы и поверхности: Плоские однотонные заливки. Монета — ярко-желтая. Стрелка — зеленая, что ассоциируется с ростом.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Яркие и чистые цвета.\nДетализация: Минимальная. Символ на монете должен быть крупным и легко читаемым. Стрелка — простой треугольник или более сложная форма, но без лишних деталей.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Желтый (#FFD700) используется для монеты. Зеленый (#00FF00) используется для стрелки роста.\n---\nНазвание: Icon_PionerMetalGrowth\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая рост количества металла (стали).\nРоль/назначение: UI иконка для визуализации увеличения валюты \"Сталь\".\nОписание и адаптация:\nФорма и композиция: Иконка состоит из стопки стилизованных металлических слитков и зеленой стрелки, направленной вверх. Слитки изображены в виде трех трапеций, сложенных друг на друга со смещением. Стрелка расположена за стопкой.\nМатериалы и поверхности: Плоские однотонные заливки. Слитки — голубовато-серого цвета, имитирующего сталь. Стрелка — ярко-зеленая.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются. Контраст между холодным цветом металла и яркой зеленой стрелкой.\nДетализация: Упрощенная. Форма слитков четкая и геометрическая.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Голубовато-серый (#778899) используется для слитков. Ярко-зеленый (#00FF00) используется для стрелки роста.\n---\nНазвание: Icon_PionerFoodGrowth\nТип объекта: Flat иконка\nКраткое описание: Иконка, символизирующая рост количества еды (пайков).\nРоль/назначение: UI иконка для визуализации увеличения валюты \"Пайков\".\nОписание и адаптация:\nФорма и композиция: Иконка состоит из стилизованного изображения еды (например, консервная банка или хлеб) и зеленой стрелки, направленной вверх. Консервная банка изображается как простой цилиндр. Стрелка расположена за основным объектом.\nМатериалы и поверхности: Плоские однотонные заливки. Банка — светло-коричневая с желтой этикеткой. Стрелка — ярко-зеленая.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются.\nДетализация: Минимальная. Форма банки и этикетки максимально упрощена для легкого считывания.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Светло-коричневый (#D2B48C) используется для банки. Желтый (#FFFF00) используется для этикетки. Ярко-зеленый (#00FF00) используется для стрелки роста.\n---\nНазвание: Icon_PionerInfiniteChest\nТип объекта: Flat иконка\nКраткое описание: Иконка бесконечного сундука с наградами.\nРоль/назначение: UI иконка для визуализации сундука с наградами.\nОписание и адаптация:\nФорма и композиция: Иконка изображает открытый сундук, из которого исходит сияние. Сундук имеет простую геометрическую форму. Сияние можно изобразить в виде лучей или простого градиента (если допустимо) или, в строгом плоском стиле, в виде стилизованных многоугольников, выходящих из сундука.\nМатериалы и поверхности: Плоские однотонные заливки. Сундук — оранжево-коричневый с желтой окантовкой. Содержимое и сияние — ярко-желтого цвета.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Ярко-желтый цвет содержимого создает эффект свечения.\nДетализация: Минимальная. Форма сундука и его элементов упрощена. Акцент на ярком содержимом.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Оранжево-коричневый (#D2691E) используется для корпуса сундука. Ярко-желтый (#FFFF00) используется для окантовки и содержимого.\n---\nНазвание: Icon_PionerBattlePass\nТип объекта: Flat иконка\nКраткое описание: Арт для раздела \"Пропуск пионера\".\nРоль/назначение: Иллюстрация для раздела \"Пропуск пионера\".\nОписание и адаптация:\nФорма и композиция: Композиция включает несколько элементов: центральный объект в виде футуристического ящика или контейнера, окруженного наградами (монеты, кристаллы). На заднем плане могут быть декоративные элементы, такие как шестеренки или технологические узоры. Композиция динамичная, с ощущением изобилия.\nМатериалы и поверхности: Все элементы выполнены в плоском векторном стиле с однотонными заливками. Цветовая палитра яркая и контрастная: синий для контейнера, желтый для монет, бирюзовый для кристаллов, оранжевый для акцентов.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Яркие цвета создают ощущение ценности и привлекательности.\nДетализация: Средняя. Объекты остаются стилизованными и геометричными, но их больше, чем в простой иконке, и они формируют цельную иллюстрацию.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Синий (#4169E1) используется для центрального контейнера. Желтый (#FFD700) используется для монет. Бирюзовый (#40E0D0) используется для кристаллов. Оранжевый (#FFA500) используется для акцентов.\n---\nНазвание: Icon_PionerInfinityStar\nТип объекта: Flat иконка\nКраткое описание: Ярлык, информирующий о скидке или выгоде.\nРоль/назначение: UI элемент для показа выгоды, например, на кнопке покупки.\nОписание и адаптация:\nФорма и композиция: Иконка выполнена в форме многоконечной звезды или \"взрыва\", чтобы привлечь внимание. В центре звезды расположен текст (например, \"8000%\"). Форма звезды асимметричная и динамичная.\nМатериалы и поверхности: Плоские однотонные заливки. Звезда имеет несколько слоев: задний слой — красный, средний — оранжевый, передний — желтый, для создания эффекта глубины и яркости. Текст внутри — белый или черный для максимального контраста.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Сочетание красного, оранжевого и желтого создает очень яркий и заметный эффект.\nДетализация: Минимальная. Основное внимание уделяется форме звезды и читаемости текста.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Красный (#FF0000) используется для заднего слоя. Оранжевый (#FFA500) используется для среднего слоя. Желтый (#FFFF00) используется для переднего слоя. Белый (#FFFFFF) используется для текста.\n---\nНазвание: Icon_PionerGift\nТип объекта: Flat иконка\nКраткое описание: Арт подарочной коробки.\nРоль/назначение: Иконка для кнопки открытия окна \"Награды пионеров\".\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой подарочную коробку в ¾ ракурсе. Форма коробки — куб. Сверху расположен пышный бант. Ленты пересекают коробку крест-накрест. Все формы геометрические и упрощенные.\nМатериалы и поверхности: Плоские однотонные заливки. Коробка — ярко-красная. Ленты и бант — желтые.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются. Акцент на классическом сочетании красного и желтого, символизирующем подарок.\nДетализация: Упрощенная. Бант состоит из нескольких простых петель-овалов. Ленты — прямые полосы.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Красный (#DC143C) используется для коробки. Желтый (#FFD700) используется для лент и банта.\n---\nНазвание: Icon_PionerChestReward\nТип объекта: Flat иконка\nКраткое описание: Иконка, демонстрирующая содержимое награды.\nРоль/назначение: UI иконка для демонстрации наград.\nОписание и адаптация:\nФорма и композиция: Иконка представляет собой три вертикально расположенных карточки или контейнера с наградами. Каждая карточка имеет прямоугольную форму со скругленными углами и рамкой. Внутри каждой карточки — стилизованное изображение предмета.\nМатериалы и поверхности: Плоские однотонные заливки. Карточки могут иметь разные цвета фона для обозначения редкости (например, зеленый, синий, оранжевый). Рамки — светло-серые.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются.\nДетализация: Минимальная. Изображения предметов внутри карточек — это простые, легко узнаваемые силуэты.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Зеленый (#2E8B57) используется для фона одной карточки. Синий (#4682B4) используется для второй. Оранжевый (#FFA500) используется для третьей. Светло-серый (#D3D3D3) используется для рамок.\n---\nНазвание: Icon_PionerLock\nТип объекта: Flat иконка\nКраткое описание: Арт замка.\nРоль/назначение: UI иконка для показа закрытых наград и дней.\nОписание и адаптация:\nФорма и композиция: Иконка изображает стилизованный навесной замок. Состоит из прямоугольного или квадратного корпуса и полукруглой дужки сверху. В центре корпуса — замочная скважина в виде простого круга или вытянутого прямоугольника.\nМатериалы и поверхности: Плоские однотонные заливки. Корпус замка — желтый или золотой. Дужка — более темного оттенка желтого или светло-коричневого. Замочная скважина — черная.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются.\nДетализация: Максимально упрощенная. Акцент на узнаваемом силуэте замка.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Желтый (#FFD700) используется для корпуса замка. Темно-желтый (#DAA520) используется для дужки. Черный (#000000) используется для замочной скважины.\n---\nНазвание: Icon_PionerEvent\nТип объекта: Flat иконка\nКраткое описание: Значок ивента \"Пионер\".\nРоль/назначение: UI иконка для показа ивента на основном интерфейсе.\nОписание и адаптация:\nФорма и композиция: Иконка выполнена в виде геральдического щита или эмблемы. Эмблема имеет сложную форму с заостренными краями. В центре эмблемы расположен стилизованный элемент (например, звезда или символ 'P'). Под эмблемой — лента с надписью \"Пионер\".\nМатериалы и поверхности: Плоские однотонные заливки. Основной цвет эмблемы — зеленый. Окантовка и центральный символ — желтые. Лента — светло-желтая или бежевая.\nСвет и блики: Отсутствуют.\nСветящиеся элементы: Не используются.\nДетализация: Упрощенная. Текст на ленте может быть опущен или заменен простыми линиями в иконке маленького размера. Форма щита должна быть четкой и читаемой.\nОбщая стилистика проекта: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока или контраст с постапокалиптическим миром.\nЦветовая палитра: Зеленый (#008000) используется для эмблемы. Желтый (#FFFF00) используется для окантовки и символа. Бежевый (#F5F5DC) используется для ленты.",
+          "Username": [
+            "Ne_Foxik"
+          ]
+        }
+      }
+    ]
+  },
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1",
@@ -3534,6 +3551,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2025-11-20T14:04:58.000Z",
-  "versionId": "75141a92-e4a6-4e2b-88ba-a5cf761085b4"
+  "updatedAt": "2025-11-25T13:58:41.000Z",
+  "versionId": "cdf20fe7-2e07-4b0e-b43f-80abb346b9c0"
 }
