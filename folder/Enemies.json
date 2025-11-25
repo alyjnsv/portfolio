@@ -1,0 +1,851 @@
+{
+  "active": false,
+  "connections": {
+    ">70": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Image",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Clear Promt": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Imagen 4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create folder": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Remove",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Promt",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Promt",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload file3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Imagen 4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Finish",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Promt": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Clear Promt",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Queue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Rated": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": ">70",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Remove": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Split",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Split": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "index": 0,
+            "node": "Promt",
+            "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Upload file3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Url": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rated",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait20",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Queue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait20": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Url",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create folder",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-25T14:30:28.335Z",
+  "id": "DNendEMsSjmq1UIm",
+  "isArchived": false,
+  "meta": null,
+  "name": "Enemies",
+  "nodes": [
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "4eef9444-5ca1-42fc-8aac-5c047efe25db",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        128,
+        288
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "hRAj2zpF2zrDOqzg",
+          "name": "Google Drive account 3"
+        }
+      },
+      "id": "7f969d76-591a-4a6b-932c-05b01a05b75d",
+      "name": "Create folder",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "Icons",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1NJrIwD2x-RiZ-7v7cwkG-Go80y5jbS_B",
+          "mode": "list",
+          "value": "1NJrIwD2x-RiZ-7v7cwkG-Go80y5jbS_B"
+        },
+        "name": "={{ $now.format('dd.MM.yyyy') }} - {{ $('When Executed by Another Workflow').item.json.File_name.replace(/\\+/g, '_').replace('.pdf', '') }}",
+        "options": {},
+        "resource": "folder"
+      },
+      "position": [
+        -1184,
+        96
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "4c4acb6a-10ef-4677-81e2-bb68ecd2dc0a",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {
+          "reset": false
+        }
+      },
+      "position": [
+        -544,
+        96
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "c88a47ac-4999-4b75-af43-491a4f397505",
+      "maxTries": 5,
+      "name": "Promt",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=A full-body stylized 3D male character with a massive, broad-shouldered heroic build rendered in a cyberpunk sci-fi aesthetic. He stands in a confident wide stance, exuding dominance and strength. His facial expression is stern and unyielding, with a bald head and a lower face covered by a high-tech respirator mask featuring glowing cyan elements.\n\nHe wears heavy, segmented dark metallic armor with angular paneling and sharp contours, integrated with glowing neon-cyan energy lines across the chest, arms, and legs. The armor is made of reinforced exoskeleton plates with polished surfaces and visible mechanical joints, giving both a protective and intimidating appearance.\n\nHis right arm wields a tall industrial pole topped with a cracked rectangular sign, displaying a neon-pink \"X\" and a cyan stylized helmet icon, with fractured edges, dangling cables, and faint glowing circuitry. His left arm rests at his side, detailed with mechanical plating and illuminated accents.\n\nLighting is bright and specular, with strong contrasts emphasizing the polished armor surfaces and glowing energy lines. The background is pure white for maximum readability. Rendered in Fortnite/Overwatch-inspired stylized 3D, with clean silhouettes, exaggerated heroic proportions, and game-ready clarity in every detail."
+        },
+        "promptType": "define",
+        "text": "=ТЗ:\n{{ $('Loop Over Items').item.json.task_content }}"
+      },
+      "position": [
+        128,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "7962b49b-a774-4ca2-8088-6366807f79d5",
+      "name": "Wait",
+      "parameters": {
+        "amount": 12
+      },
+      "position": [
+        928,
+        96
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "c90ca2b9-bf3d-446f-9180-677a58726bcd"
+    },
+    {
+      "id": "70be2cf9-b45d-4385-9a03-ceabefcdbb63",
+      "name": "Structured Output Parser",
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"Name\": \"Название из ТЗ\",\n\t\"Promt\": \"составленый промт\"\n}"
+      },
+      "position": [
+        320,
+        288
+      ],
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "c2a9bf49-2f6d-4ce9-9426-321b29bb82fc",
+      "maxTries": 5,
+      "name": "Imagen 4",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"prompt\": \"{{ $json.ClearPromt }}\"\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/gemini-25-flash-image"
+      },
+      "position": [
+        720,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "68c55f24-e973-4aa0-b913-4c1996b4f6a5",
+      "maxTries": 5,
+      "name": "Queue",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/{{ $('Imagen 4').item.json.request_id }}"
+      },
+      "position": [
+        1120,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "57e70248-af7d-4581-b896-bb077c4aff82",
+      "maxTries": 5,
+      "name": "Url",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.images[0].url }}"
+      },
+      "position": [
+        1344,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "id": "c8be20be-fc55-4a0e-b9b6-b7c67f8438df",
+      "maxTries": 5,
+      "name": "Image",
+      "parameters": {
+        "options": {},
+        "url": "={{ $('Url').item.json.images[0].url }}"
+      },
+      "position": [
+        2240,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "id": "88292983-80df-4416-815f-97c435675cbf",
+      "name": ">70",
+      "parameters": {
+        "conditions": {
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "ae9887a6-88df-4858-8e7f-9112d5f7e4c4",
+              "leftValue": "={{ $json.content.parts[0].text.match(/ИТОГОВАЯ ОЦЕНКА:\\s*(\\d+)\\/100/)[1] }}",
+              "operator": {
+                "operation": "gte",
+                "type": "number"
+              },
+              "rightValue": 40
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          }
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "position": [
+        2000,
+        96
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "c8d91c4c-1970-4ba5-8207-cdb44b4faa50",
+      "maxTries": 5,
+      "name": "Rated",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "inputType": "binary",
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "models/gemini-2.5-pro",
+          "mode": "list",
+          "value": "models/gemini-2.5-pro"
+        },
+        "operation": "analyze",
+        "options": {},
+        "resource": "image",
+        "text": "=Ты — эксперт по анализу игровых врагов (биомеханоидов) в стилизованном 3D с элементами техно-хоррора и sci-fi-механики. У тебя есть два отдельных файла изображений:\n\n**ПЕРВЫЙ ФАЙЛ** содержит 9 якорных (эталонных) врагов-биомеханоидов, расположенных в два ряда. Это образцы стиля, качества и визуального исполнения, которые задают стандарт дизайна.\n\n**ВТОРОЙ ФАЙЛ** содержит 1 нового врага-биомеханоида, сгенерированного нейросетью, которого необходимо оценить на соответствие якорным образцам.\n\nТвоя задача: проанализировать нового врага (второй файл) в сравнении с якорными врагами (первый файл) и оценить его соответствие по следующим критериям:\n\n1. **Жанр** (0–100 баллов)\n\n   * Соответствие стилизованному 3D с элементами техно-хоррора и sci-fi-механики.\n\n2. **Концепция** (0–100 баллов)\n\n   * Образ гибрида машины и живого организма с элементами сбойного ИИ.\n\n3. **Силуэт** (0–100 баллов)\n\n   * Агрессивный, с выраженными биомеханическими деформациями, легко отличимый от героев.\n\n4. **Асимметрия** (0–100 баллов)\n\n   * Чёткая функциональная асимметрия (оружейный модуль, сенсорный блок, клешня и т.п. на одной стороне).\n\n5. **Искажённые пропорции** (0–100 баллов)\n\n   * Удлинённые или утолщённые конечности, деформированные торсы, встроенные механизмы.\n\n6. **Форма = Угроза** (0–100 баллов)\n\n   * Внешний вид сразу передаёт опасность и тип роли врага (быстрый, тяжёлый, дальнобойный).\n\n7. **Головы и лица** (0–100 баллов)\n\n   * Неестественные решения — маски, линзы, сенсоры, голограммы, скрытые лица.\n\n8. **Визуальный сбой** (0–100 баллов)\n\n   * Элементы фликера, разрывы между плотью и металлом, искажённые контуры.\n\n9. **Glow** (0–100 баллов)\n\n   * Локальное свечение сенсоров, узлов, встроенных устройств, протечек энергии.\n\n10. **Материалы** (0–100 баллов)\n\n    * Сочетание плоти, металла, биопластика, кабелей, стальных прожилок, гелевых покрытий.\n\n11. **Детализация** (0–100 баллов)\n\n    * Контролируемая, каждая деталь подчинена образу, нет случайных декоративных элементов.\n\n12. **Поза** (0–100 баллов)\n\n    * Агрессивная, динамичная, с готовностью к атаке, допускаются изломы корпуса.\n\n13. **Эмоциональный посыл** (0–100 баллов)\n\n    * Даже без лица враг передаёт угрозу позой, наклоном корпуса, направлением конечностей.\n\n14. **\"Паразитный интеллект\"** (0–100 баллов)\n\n    * Передаёт ощущение сбойной машины, подчинившей биологическое существо.\n\n15. **Встроенные механизмы** (0–100 баллов)\n\n    * Чётко читаемые антенны, турели, интегрированные дроны, техно-паразиты.\n\n16. **Техно-органические эффекты** (0–100 баллов)\n\n    * Перегрев, выбросы энергии, анимированные участки конструкции.\n\n17. **Читаемость силуэта** (0–100 баллов)\n\n    * Даже при множестве деталей силуэт остаётся понятным и уникальным.\n\n18. **Стилевое соответствие** (0–100 баллов)\n\n    * Отсутствие военной эстетики; сочетание техно-хоррора и sci-fi-брутальности.\n\n19. **Цветовая палитра** (0–100 баллов)\n\n    * Цвета под образ врага: тёмные/приглушённые с яркими светоакцентами или светлые при сохранении угрозы.\n\n20. **Готовность к 3D-анимации** (0–100 баллов)\n\n    * Конструкция учитывает подвижность суставов и модулей для анимации.\n\n**Формат ответа:**\n\n* Для каждого критерия — 1 короткое предложение с комментарием и целое число баллов.\n* В конце — *ИТОГОВАЯ ОЦЕНКА: X/100*.\n\n**ВАЖНО:**\n\n* Если враг (включая все части тела, конечности, оружие и элементы конструкции) не помещается в кадр и хотя бы один элемент обрезан, дальнейший анализ не проводится — выстави *0 баллов* по всем критериям и *ИТОГОВАЯ ОЦЕНКА: 0/100*.\n* Если враг виден полностью, проведи оценку по всем пунктам."
+      },
+      "position": [
+        1792,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "waitBetweenTries": 3000
+    },
+    {
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "hRAj2zpF2zrDOqzg",
+          "name": "Google Drive account 3"
+        }
+      },
+      "id": "1fbc19c9-e8b8-41df-ab13-61db30f56d7e",
+      "maxTries": 5,
+      "name": "Upload file3",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create folder').item.json.id }}"
+        },
+        "name": "={{ $('Promt').item.json.output.Name }}",
+        "options": {}
+      },
+      "position": [
+        2496,
+        272
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "waitBetweenTries": 3000
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HVtMEErMUBKHP63G",
+          "name": "Test ART"
+        }
+      },
+      "executeOnce": true,
+      "id": "407c0cee-0005-4542-98e0-24634a5bbd93",
+      "maxTries": 5,
+      "name": "Finish",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        },
+        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"] }}",
+        "text": "=✅ Ваши иконки готовы!\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
+      },
+      "position": [
+        -80,
+        -80
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "waitBetweenTries": 2000,
+      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
+    },
+    {
+      "id": "8e85f089-5f14-4a6f-978e-4ca599cffd01",
+      "name": "Remove",
+      "parameters": {
+        "jsCode": "// Получаем текст напрямую из Gemini API\nconst input = $('When Executed by Another Workflow').first().json.Tasks;\n\n// Логируем входные данные для отладки\nconsole.log('Input text:', input);\nconsole.log('Input type:', typeof input);\n\n// Проверяем, что input - это строка\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  console.log('Error: Input is not a string, received:', input);\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\n// Удаляем все \\r, \\n, \\t, заменяя на пробел\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\n\n// Заменяем маркеры \"•\" и \"●\" на дефис\ncleanedText = cleanedText.replace(/[•●]/g, '-');\n\n// Убираем лишние пробелы (больше одного подряд)\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      result: cleanedText,\n      original_length: result.length,\n      cleaned_length: cleanedText.length\n    }\n  }\n];"
+      },
+      "position": [
+        -992,
+        96
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "executeOnce": true,
+      "id": "e0def61b-de49-45c1-8f1f-9aea3821d01b",
+      "name": "Split",
+      "parameters": {
+        "jsCode": "// Получаем текст из нового формата данных\nconst fullText = $input.first().json.result;$input.first().json.result\n\n// Логируем для отладки\nconsole.log('Input text length:', fullText.length);\nconsole.log('First 100 chars:', fullText.substring(0, 100));\n\n// Разделяем по разделителю \" --- \" (с пробелами)\nconst tasks = fullText.split(' --- ');\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task, index) => {\n  return {\n    task_number: index + 1,\n    task_content: task.trim(),\n    total_tasks: tasks.length,\n    content_length: task.trim().length,\n  };\n});\n\nconsole.log('Total tasks found:', result.length);\n\nreturn result;"
+      },
+      "position": [
+        -768,
+        96
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "0d01c527-f147-4c7c-887f-d8e25761a96b",
+      "name": "Clear Promt",
+      "parameters": {
+        "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
+      },
+      "position": [
+        544,
+        96
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "59d8f594-7560-41ef-911d-719e33354096",
+      "name": "Wait3",
+      "parameters": {
+        "amount": 10
+      },
+      "position": [
+        2000,
+        272
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "9f9034c3-2fc9-4834-8763-11df218c1ab4"
+    },
+    {
+      "id": "835db0ea-8f8e-4128-a7ee-36050263145d",
+      "name": "Wait20",
+      "parameters": {},
+      "position": [
+        1584,
+        272
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "8aa469c4-0a03-45f7-aee9-6e1cc9f7d2c5"
+    },
+    {
+      "id": "11e05644-10df-4e69-82a8-fa26e755bc7f",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bb225492-c5bd-42bd-b8ba-6b41e19e2de6",
+              "name": "count",
+              "type": "number",
+              "value": "={{ $('If').item.json.count + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2256,
+        272
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "503fe0d2-1be9-40d7-a29f-e3c7af2bad0c",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5f90298f-db61-4d9d-a925-cf2f29239ae8",
+              "name": "count",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -336,
+        96
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a92bafc7-af0e-4ac8-90db-c4d26b943626",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "6d4f2211-47b4-412f-8486-b2d919d7eb74",
+              "leftValue": "={{ $json.count }}",
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": 10
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -128,
+        96
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "f2509e9a-81eb-480b-b16a-eda0d87953cf",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        432,
+        528
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "0007d760-6d25-4292-9dd0-244963032145",
+      "name": "When Executed by Another Workflow",
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "Tasks"
+            },
+            {
+              "name": "Chat ID"
+            },
+            {
+              "name": "File_name"
+            },
+            {
+              "name": "Username"
+            }
+          ]
+        }
+      },
+      "position": [
+        -1424,
+        96
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "Chat ID": "918851594",
+          "File_name": "ТЗ_Арт_Особые_операции_v10_20251120_090511.pdf",
+          "Tasks": "[Название задачи]\nСоздание иконки Icon_Specops_UndraftedMissionFlag\n\n[Цель]\nПолучить готовую игровую иконку для отображения заблокированного (непройденного) уровня на карте миссий, которая визуально передает неактивное состояние.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nИконка выполнена в форме стилизованного технологичного щита с четкими геометрическими линиями. В центре щита расположена пятиконечная звезда с фацетированными гранями, создающими эффект объема. Композиция строго симметрична и центрирована в рабочей зоне 420x420 px, обеспечивая ясный и читаемый силуэт.\n\nМатериалы и поверхности:\nПоверхности имитируют холодные, неактивные материалы. Основа щита выполнена из матового темно-серого металла. Звезда и окантовка щита сделаны из шлифованного серебристого металла с легкими бликами от внешнего источника света, но без внутреннего свечения.\n\nОсвещение и блики:\nОсвещение нейтральное, внешнее, создающее четкие блики на скошенных гранях звезды и окантовке щита. Полное отсутствие внутреннего свечения, неоновых элементов или glow-эффектов, чтобы подчеркнуть \"выключенное\", заблокированное состояние.\n\nДетализация:\nМинималистичный дизайн с акцентом на форме и материале. Основные детали — это четкая геометрия щита и объемная форма звезды. Мелкие текстуры или узоры отсутствуют, чтобы сохранить чистоту стиля.\n\nШаги выполнения:\n1. Создать 3D-модель иконки согласно концептуальному описанию.\n2. Применить материалы из указанной монохромной палитры.\n3. Настроить нейтральное внешнее освещение без добавления glow-эффектов.\n4. Проверить читаемость иконки на размере 32x32 px.\n5. Выполнить рендер на прозрачном фоне.\n6. Экспортировать в формате PNG с альфа-каналом.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, но без ярких неоновых акцентов для передачи неактивного состояния.\n\nПринадлежность к миру:\nТехнологическая база игрока — представляет собой неактивный элемент интерфейса в корпоративной системе.\n\nКлючевые визуальные особенности:\nЦентрированная композиция. Читаемый силуэт на малых размерах. Строгое отсутствие свечения для передачи неактивного состояния.\n\nЦветовая палитра:\nТемно-серый (#34495E) — используется для основного поля щита.\nСеребристый (#BDC3C7) — используется для центральной звезды и окантовки щита.\nГрафитовый (#2C3E50) — используется для создания глубины и теней на фасках.\n\nМатериалы и поверхности:\nШлифованный металл, матовые техно-поверхности, хром для бликов. Без грязи, царапин или износа.\n\nОсвещение:\nНейтральное внешнее освещение, подчеркивающее форму объекта. Без внутренних источников света, неонов и glow-эффектов.\n\n[Формат и технические параметры]\n\nФинальный размер: 512x512 px\nРабочая зона: 420x420 px (центрирована)\nФормат файла: PNG с альфа-каналом\nЦветовое пространство: sRGB\nТолщина контуров: 14 px (для окантовки)\nНейминг файла: Icon_Specops_UndraftedMissionFlag\n\n[Критерии приёмки]\n\nОценка бота качества >= 85%\nСоответствие техническим параметрам (размер 512x512, формат PNG).\nИконка четко передает неактивное/заблокированное состояние за счет отсутствия свечения и ярких цветов.\nЧитаемость силуэта на минимальном размере 32x32 px.\nИспользованы только цвета из указанной монохромной палитры.\nОтсутствие артефактов рендера.\nОдобрение арт-лида.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
+          "Username": "YyBlood"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-25T14:30:28.339Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-25T14:30:28.339Z",
+      "workflowId": "DNendEMsSjmq1UIm"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-25T14:34:45.000Z",
+  "versionId": "2043a9d6-3246-475a-a60a-be3bb36378a2"
+}
