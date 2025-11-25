@@ -1,0 +1,1643 @@
+{
+  "active": false,
+  "connections": {
+    "(Fake)Stub Manager Feedback": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "2 Update Request Employee Feedback.1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "2 Update Request Employee Feedback.1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "2 Audit employee_feedback_received1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Audit Log DEV": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Stub Employee Feedback",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Audit employee_feedback_received": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "(Fake)Stub Manager Feedback",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create a message": {
+      "main": [
+        []
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Audit employee_not_found",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Init Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Init Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Request List DEV",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Manual trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Set Test Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Request List DEV": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Audit Log DEV",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Set Test Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка сотрудника",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Stub Employee Feedback": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Request Employee Feedback.",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Request Employee Feedback.": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Audit employee_feedback_received",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Webhook Element": {
+      "main": [
+        []
+      ]
+    },
+    "Проверка сотрудника": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-25T07:11:52.885Z",
+  "id": "ZJF5DO5bypD0pFRO",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "SalaryReview Bot (DEV)",
+  "nodes": [
+    {
+      "id": "307433e2-c1ff-49ee-9bd5-88361add6108",
+      "name": "Manual trigger",
+      "parameters": {},
+      "position": [
+        -3632,
+        304
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "327115bf-dac5-4003-8070-4f3f957486a9",
+      "name": "Ai Error DEV",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "error_type",
+              "id": "error_type",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "raw_ai_output",
+              "id": "raw_ai_output",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {}
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "AI_Errors_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=929800952",
+          "mode": "list",
+          "value": 929800952
+        }
+      },
+      "position": [
+        -1216,
+        688
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "bd8ec15e-5b72-448f-877f-819a43bbd3fe",
+      "name": "Audit Log DEV",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "actor",
+              "id": "actor",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "action",
+              "id": "action",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "action": "request_created",
+            "actor": "bot",
+            "details": "=={{ $json.employee_matrix_user_id }}",
+            "request_id": "={{ $json.request_id }}",
+            "timestamp": "={{ new Date().toISOString() }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Audit_Log_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=858723787",
+          "mode": "list",
+          "value": 858723787
+        }
+      },
+      "position": [
+        -2368,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "disabled": true,
+      "id": "185bd849-6d88-495f-abf8-8b197f7a6167",
+      "name": "Employees DEV",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "employee_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_id",
+              "id": "employee_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "full_name",
+              "id": "full_name",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "matrix_user_id",
+              "id": "matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "matrix_username",
+              "id": "matrix_username",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_matrix_user_id",
+              "id": "manager_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "department",
+              "id": "department",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "current_salary",
+              "id": "current_salary",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "grade",
+              "id": "grade",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "работает в компании",
+              "id": "работает в компании",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "last_salary_change_at",
+              "id": "last_salary_change_at",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "current_salary": "текущая зарплата",
+            "department": "департамент",
+            "employee_id": "test--1",
+            "full_name": "Тест сотрудник1",
+            "grade": "грейд",
+            "last_salary_change_at": "последняя заработная плата",
+            "manager_matrix_user_id": "manager_matrix_user_id",
+            "matrix_user_id": "@test1:itcomp.org",
+            "matrix_username": "matrix_username1",
+            "работает в компании": "=={{ $json.is_active }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Employees_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        -1232,
+        48
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "6abfc9aa-013c-4609-a9a4-c1009ef4f5aa",
+      "name": "Set Test Request",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7948774a-64ff-4896-b698-5e85a35dc5f2",
+              "name": "employee_id",
+              "type": "string",
+              "value": "test-emp-1"
+            },
+            {
+              "id": "f2cf0798-ce79-4082-a94e-9700f648a598",
+              "name": "Имя",
+              "type": "string",
+              "value": "Test Employee"
+            },
+            {
+              "id": "d793977b-72c2-4946-ab5c-f015d2a95890",
+              "name": "matrix_user_id",
+              "type": "string",
+              "value": "@ivanov:itcomp.org"
+            },
+            {
+              "id": "9b492e29-b8b4-4c92-b2a1-d4f0bceea7e5",
+              "name": "matrix_username",
+              "type": "string",
+              "value": "test1"
+            },
+            {
+              "id": "498f80de-acf5-4b66-bfcc-2e8ed3cdbee4",
+              "name": "manager_matrix_user_id",
+              "type": "string",
+              "value": "@manager1:itcomp.org"
+            },
+            {
+              "id": "c4f90879-f540-4c7a-926c-a5ac05b761b9",
+              "name": "department",
+              "type": "string",
+              "value": "IT"
+            },
+            {
+              "id": "220f0664-73d1-4f54-adcf-e59415ecc8b4",
+              "name": "current_salary",
+              "type": "string",
+              "value": "100000"
+            },
+            {
+              "id": "2b68beab-01a5-4871-9e88-7112daeefb00",
+              "name": "grade",
+              "type": "string",
+              "value": "Middle"
+            },
+            {
+              "id": "58c92769-315b-4ad8-ab3a-fc77cd645d15",
+              "name": "is_active",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "0be7564a-1a4f-4705-bd5d-124f7df374bf",
+              "name": "last_salary_change_at",
+              "type": "string",
+              "value": "2025-11-25"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -3424,
+        304
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "c82b033c-ab1f-4e3a-ae01-a4a3e1f05d4f",
+      "name": "Проверка сотрудника",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "combineFilters": "OR",
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "matrix_user_id",
+              "lookupValue": "=={{ $json.matrix_user_id }}"
+            }
+          ]
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Employees_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        -3216,
+        304
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "c2722f2e-000e-4efb-a69f-c7f0d2d1134b",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a58d7b89-6517-4604-bf16-a9ce9f06e01d",
+              "leftValue": "=={{ $json.full_name }}",
+              "operator": {
+                "operation": "empty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": "null"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -2992,
+        304
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "disabled": true,
+      "id": "39133966-bc6e-4a57-b883-79722d0510b8",
+      "name": "Create a message",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "text": "Вашего профиля нет в базе сотрудников HR. Запрос невозможен"
+      },
+      "position": [
+        -2896,
+        80
+      ],
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "290655ee-d479-4024-97a0-976ee20eee6b",
+      "name": "Request List DEV",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_matrix_user_id",
+              "id": "employee_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_matrix_user_id",
+              "id": "manager_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "created_at",
+              "id": "created_at",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_feedback_text",
+              "id": "employee_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_feedback_text",
+              "id": "manager_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_performance_score",
+              "id": "ai_performance_score",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_alignment",
+              "id": "ai_alignment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_recommendation",
+              "id": "ai_recommendation",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hr_comment",
+              "id": "hr_comment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hrd_decision",
+              "id": "hrd_decision",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "last_update_at",
+              "id": "last_update_at",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "created_at": "=={{ $json.created_at }}",
+            "employee_matrix_user_id": "=={{ $json.employee_matrix_user_id }}",
+            "last_update_at": "=={{ $json.last_update_at }}",
+            "manager_matrix_user_id": "=={{ $json.manager_matrix_user_id }}",
+            "request_id": "=={{ $json.request_id }}",
+            "status": "=={{ $json.status }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Requests_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=1841427866",
+          "mode": "list",
+          "value": 1841427866
+        }
+      },
+      "position": [
+        -2560,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "734b843f-4f2f-4b8e-a7b3-3a96859b06ec",
+      "name": "Init Request",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f16a05b9-9cb7-4280-8f3d-0c74a243caf6",
+              "name": "request_id",
+              "type": "string",
+              "value": "=={{ 'req-' + Date.now() }}"
+            },
+            {
+              "id": "0a496502-2a68-4880-b620-9f54618d8e2f",
+              "name": "employee_matrix_user_id",
+              "type": "string",
+              "value": "=={{ $json.matrix_user_id }}"
+            },
+            {
+              "id": "413b073a-7b9c-48f8-8604-d262de02b516",
+              "name": "manager_matrix_user_id",
+              "type": "string",
+              "value": "=={{ $json.manager_matrix_user_id }}"
+            },
+            {
+              "id": "0332eacd-3337-46a9-84f5-e31e50e0d123",
+              "name": "created_at",
+              "type": "string",
+              "value": "=={{ new Date().toISOString() }}"
+            },
+            {
+              "id": "328d545d-a727-4652-9b85-68d0893cdec6",
+              "name": "status",
+              "type": "string",
+              "value": "employee_feedback_pending"
+            },
+            {
+              "id": "c4fa30f9-62ea-467f-a043-874895851202",
+              "name": "last_update_at",
+              "type": "string",
+              "value": "=={{ new Date().toISOString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -2768,
+        320
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "654abe2c-6d7c-46c0-a08b-99587eebd6ad",
+      "name": "Audit employee_not_found",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "actor",
+              "id": "actor",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "action",
+              "id": "action",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "action": "employee_not_found",
+            "actor": "bot",
+            "details": "={{ $json.matrix_user_id }}",
+            "request_id": "=\"\"",
+            "timestamp": "={{ new Date().toISOString() }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Audit_Log_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=858723787",
+          "mode": "list",
+          "value": 858723787
+        }
+      },
+      "position": [
+        -2672,
+        80
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "6326d284-c954-4c47-9952-dd836f864ea2",
+      "name": "Stub Employee Feedback",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1792919a-5145-4184-a9ed-0ea9bddae691",
+              "name": "employee_feedback_text",
+              "type": "string",
+              "value": "ТЕСТ фидбэк сотрудника"
+            },
+            {
+              "id": "2fa502aa-f151-493a-99e5-bd8438a5bd8b",
+              "name": "status",
+              "type": "string",
+              "value": "manager_feedback_pending"
+            },
+            {
+              "id": "720d5ea7-b9a6-4068-9222-9c52894bc87c",
+              "name": "last_update_at",
+              "type": "string",
+              "value": "={{ new Date().toISOString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -2176,
+        320
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "abeb822a-21f0-431d-a998-f43ffce911db",
+      "name": "Update Request Employee Feedback.",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_matrix_user_id",
+              "id": "employee_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_matrix_user_id",
+              "id": "manager_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "created_at",
+              "id": "created_at",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_feedback_text",
+              "id": "employee_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_feedback_text",
+              "id": "manager_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_performance_score",
+              "id": "ai_performance_score",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_alignment",
+              "id": "ai_alignment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_recommendation",
+              "id": "ai_recommendation",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hr_comment",
+              "id": "hr_comment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hrd_decision",
+              "id": "hrd_decision",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "last_update_at",
+              "id": "last_update_at",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "created_at": "=={{ $json.created_at }}",
+            "employee_feedback_text": "={{ $json.employee_feedback_text }}",
+            "employee_matrix_user_id": "={{ $json.employee_matrix_user_id }}",
+            "last_update_at": "={{ $json.last_update_at }}",
+            "manager_matrix_user_id": "={{ $json.manager_matrix_user_id }}",
+            "request_id": "={{ $json.request_id }}",
+            "status": "={{ $json.status }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Requests_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=1841427866",
+          "mode": "list",
+          "value": 1841427866
+        }
+      },
+      "position": [
+        -2000,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "643eb137-2bb0-43d4-9683-52f094f3448a",
+      "name": "Audit employee_feedback_received",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "actor",
+              "id": "actor",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "action",
+              "id": "action",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "action": "employee_feedback_received",
+            "actor": "employee",
+            "details": "feedback saved",
+            "request_id": "={{ $json.request_id }}",
+            "timestamp": "={{ new Date().toISOString() }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Audit_Log_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=858723787",
+          "mode": "list",
+          "value": 858723787
+        }
+      },
+      "position": [
+        -1824,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "disabled": true,
+      "id": "f3ae7db8-f192-4c97-9360-edaa0aae4f72",
+      "name": "Webhook Element",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "element_bot"
+      },
+      "position": [
+        -3632,
+        80
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "e4ea071f-94b5-45f5-99f5-c30c365ba3e1"
+    },
+    {
+      "id": "c89ca84e-de87-4785-8183-773becc6911e",
+      "name": "(Fake)Stub Manager Feedback",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d74d832b-7e9b-4ccc-986f-70f2ebd858ec",
+              "name": "manager_feedback_text",
+              "type": "string",
+              "value": "ТЕСТОВЫЙ фидбэк руководителя: подтверждаю рост вклада"
+            },
+            {
+              "id": "f81fc81a-40bc-4f66-a7db-5d26b568de70",
+              "name": "status",
+              "type": "string",
+              "value": "awaiting_ai"
+            },
+            {
+              "id": "ff676333-f603-4fad-b80e-0f4ba6be68f1",
+              "name": "last_update_at",
+              "type": "string",
+              "value": "=new Date().toISOString()"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1632,
+        320
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "6924d615-39db-4b9d-bb5d-52a3866ddc25",
+      "name": "2 Update Request Employee Feedback.1",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_matrix_user_id",
+              "id": "employee_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_matrix_user_id",
+              "id": "manager_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "created_at",
+              "id": "created_at",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_feedback_text",
+              "id": "employee_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_feedback_text",
+              "id": "manager_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_performance_score",
+              "id": "ai_performance_score",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_alignment",
+              "id": "ai_alignment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_recommendation",
+              "id": "ai_recommendation",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hr_comment",
+              "id": "hr_comment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hrd_decision",
+              "id": "hrd_decision",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "last_update_at",
+              "id": "last_update_at",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "created_at": "={{ $json.created_at }}",
+            "employee_feedback_text": "={{ $json.employee_feedback_text }}",
+            "employee_matrix_user_id": "={{ $json.employee_matrix_user_id }}",
+            "last_update_at": "={{ $json.last_update_at }}",
+            "manager_matrix_user_id": "={{ $json.manager_matrix_user_id }}",
+            "request_id": "={{ $json.request_id }}",
+            "status": "={{ $json.status }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Requests_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=1841427866",
+          "mode": "list",
+          "value": 1841427866
+        }
+      },
+      "position": [
+        -1456,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "272ccfe5-fa36-4c61-8d15-e83c98fd2c94",
+      "name": "2 Audit employee_feedback_received1",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "actor",
+              "id": "actor",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "action",
+              "id": "action",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "action": "manager_feedback_received",
+            "actor": "manager",
+            "details": "feedback saved",
+            "request_id": "={{ $json.request_id }}",
+            "timestamp": "={{ new Date().toISOString() }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Audit_Log_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=858723787",
+          "mode": "list",
+          "value": 858723787
+        }
+      },
+      "position": [
+        -1248,
+        320
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-25T07:11:52.887Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-25T07:11:52.887Z",
+      "workflowId": "ZJF5DO5bypD0pFRO"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-25T21:23:38.000Z",
+  "versionId": "32f34d98-8108-4fe6-9723-86af8aeffb51"
+}
