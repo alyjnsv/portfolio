@@ -12,12 +12,33 @@
         ]
       ]
     },
+    "2 Audit employee_feedback_received1": {
+      "main": [
+        []
+      ]
+    },
     "2 Update Request Employee Feedback.1": {
       "main": [
         [
           {
             "index": 0,
             "node": "2 Audit employee_feedback_received1",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "AI Evaluate SalaryReview",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Evaluate SalaryReview": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Подготовка AI-ответа",
             "type": "main"
           }
         ]
@@ -68,6 +89,24 @@
         ]
       ]
     },
+    "If AI parse ok": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновить заявку результатом ИИ",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "2 Ai Error DEV",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Init Request": {
       "main": [
         [
@@ -85,6 +124,46 @@
           {
             "index": 0,
             "node": "Set Test Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge Заявка + Сотрудник": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Сформировать текст карточки в чат #salary-review",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Evaluate SalaryReview",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Parse AI JSON": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If AI parse ok",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "If AI parse ok",
             "type": "main"
           }
         ]
@@ -139,12 +218,71 @@
         []
       ]
     },
+    "Аудит ai_eval_success": {
+      "main": [
+        []
+      ]
+    },
+    "Обновить заявку результатом ИИ": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Аудит ai_eval_success",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Получить данные сотрудника для карточки",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Merge Заявка + Сотрудник",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Подготовка AI-ответа": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse AI JSON",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Получить данные сотрудника для карточки": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge Заявка + Сотрудник",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Проверка сотрудника": {
       "main": [
         [
           {
             "index": 0,
             "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Сформировать текст карточки в чат #salary-review": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Отправить карточку в #salary-review",
             "type": "main"
           }
         ]
@@ -169,94 +307,6 @@
       ],
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "ArNMmpe0qZYEcloJ",
-          "name": "DEV Google Sheets account 2"
-        }
-      },
-      "id": "327115bf-dac5-4003-8070-4f3f957486a9",
-      "name": "Ai Error DEV",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "timestamp",
-              "id": "timestamp",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "request_id",
-              "id": "request_id",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "error_type",
-              "id": "error_type",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "raw_ai_output",
-              "id": "raw_ai_output",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "details",
-              "id": "details",
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {}
-        },
-        "documentId": {
-          "__rl": true,
-          "cachedResultName": "SalaryReview Bot (DEV)",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
-          "mode": "list",
-          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
-        },
-        "operation": "appendOrUpdate",
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "cachedResultName": "AI_Errors_DEV",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=929800952",
-          "mode": "list",
-          "value": 929800952
-        }
-      },
-      "position": [
-        -1216,
-        688
-      ],
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7
     },
     {
       "credentials": {
@@ -327,9 +377,9 @@
           "value": {
             "action": "request_created",
             "actor": "bot",
-            "details": "=={{ $json.employee_matrix_user_id }}",
+            "details": "={{ $json.employee_matrix_user_id }}",
             "request_id": "={{ $json.request_id }}",
-            "timestamp": "={{ new Date().toISOString() }}"
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
           }
         },
         "documentId": {
@@ -350,156 +400,8 @@
         }
       },
       "position": [
-        -2368,
-        320
-      ],
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7
-    },
-    {
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "ArNMmpe0qZYEcloJ",
-          "name": "DEV Google Sheets account 2"
-        }
-      },
-      "disabled": true,
-      "id": "185bd849-6d88-495f-abf8-8b197f7a6167",
-      "name": "Employees DEV",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "employee_id"
-          ],
-          "schema": [
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "employee_id",
-              "id": "employee_id",
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "full_name",
-              "id": "full_name",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "matrix_user_id",
-              "id": "matrix_user_id",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "matrix_username",
-              "id": "matrix_username",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "manager_matrix_user_id",
-              "id": "manager_matrix_user_id",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "department",
-              "id": "department",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "current_salary",
-              "id": "current_salary",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "grade",
-              "id": "grade",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "работает в компании",
-              "id": "работает в компании",
-              "required": false,
-              "type": "string"
-            },
-            {
-              "canBeUsedToMatch": true,
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "last_salary_change_at",
-              "id": "last_salary_change_at",
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "current_salary": "текущая зарплата",
-            "department": "департамент",
-            "employee_id": "test--1",
-            "full_name": "Тест сотрудник1",
-            "grade": "грейд",
-            "last_salary_change_at": "последняя заработная плата",
-            "manager_matrix_user_id": "manager_matrix_user_id",
-            "matrix_user_id": "@test1:itcomp.org",
-            "matrix_username": "matrix_username1",
-            "работает в компании": "=={{ $json.is_active }}"
-          }
-        },
-        "documentId": {
-          "__rl": true,
-          "cachedResultName": "SalaryReview Bot (DEV)",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
-          "mode": "list",
-          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
-        },
-        "operation": "appendOrUpdate",
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "cachedResultName": "Employees_DEV",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=0",
-          "mode": "list",
-          "value": "gid=0"
-        }
-      },
-      "position": [
-        -1232,
-        48
+        -3248,
+        592
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -668,8 +570,8 @@
         "text": "Вашего профиля нет в базе сотрудников HR. Запрос невозможен"
       },
       "position": [
-        -2896,
-        80
+        -2704,
+        288
       ],
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1
@@ -813,12 +715,12 @@
             }
           ],
           "value": {
-            "created_at": "=={{ $json.created_at }}",
-            "employee_matrix_user_id": "=={{ $json.employee_matrix_user_id }}",
-            "last_update_at": "=={{ $json.last_update_at }}",
-            "manager_matrix_user_id": "=={{ $json.manager_matrix_user_id }}",
-            "request_id": "=={{ $json.request_id }}",
-            "status": "=={{ $json.status }}"
+            "created_at": "={{ $json.created_at }}",
+            "employee_matrix_user_id": "={{ $json.employee_matrix_user_id }}",
+            "last_update_at": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n",
+            "manager_matrix_user_id": "={{ $json.manager_matrix_user_id }}",
+            "request_id": "={{ $json.request_id }}",
+            "status": "={{ $json.status }}"
           }
         },
         "documentId": {
@@ -839,8 +741,8 @@
         }
       },
       "position": [
-        -2560,
-        320
+        -3440,
+        592
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -855,25 +757,25 @@
               "id": "f16a05b9-9cb7-4280-8f3d-0c74a243caf6",
               "name": "request_id",
               "type": "string",
-              "value": "=={{ 'req-' + Date.now() }}"
+              "value": "={{ 'req-' + Date.now() }}"
             },
             {
               "id": "0a496502-2a68-4880-b620-9f54618d8e2f",
               "name": "employee_matrix_user_id",
               "type": "string",
-              "value": "=={{ $json.matrix_user_id }}"
+              "value": "={{ $json.matrix_user_id }}"
             },
             {
               "id": "413b073a-7b9c-48f8-8604-d262de02b516",
               "name": "manager_matrix_user_id",
               "type": "string",
-              "value": "=={{ $json.manager_matrix_user_id }}"
+              "value": "={{ $json.manager_matrix_user_id }}"
             },
             {
               "id": "0332eacd-3337-46a9-84f5-e31e50e0d123",
               "name": "created_at",
               "type": "string",
-              "value": "=={{ new Date().toISOString() }}"
+              "value": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
             },
             {
               "id": "328d545d-a727-4652-9b85-68d0893cdec6",
@@ -885,15 +787,15 @@
               "id": "c4fa30f9-62ea-467f-a043-874895851202",
               "name": "last_update_at",
               "type": "string",
-              "value": "=={{ new Date().toISOString() }}"
+              "value": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -2768,
-        320
+        -3648,
+        592
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -968,8 +870,7 @@
             "action": "employee_not_found",
             "actor": "bot",
             "details": "={{ $json.matrix_user_id }}",
-            "request_id": "=\"\"",
-            "timestamp": "={{ new Date().toISOString() }}"
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
           }
         },
         "documentId": {
@@ -990,8 +891,8 @@
         }
       },
       "position": [
-        -2672,
-        80
+        -2480,
+        288
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -1018,15 +919,15 @@
               "id": "720d5ea7-b9a6-4068-9222-9c52894bc87c",
               "name": "last_update_at",
               "type": "string",
-              "value": "={{ new Date().toISOString() }}"
+              "value": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -2176,
-        320
+        -3056,
+        592
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1169,10 +1070,10 @@
             }
           ],
           "value": {
-            "created_at": "=={{ $json.created_at }}",
+            "created_at": "={{ $json.created_at }}",
             "employee_feedback_text": "={{ $json.employee_feedback_text }}",
             "employee_matrix_user_id": "={{ $json.employee_matrix_user_id }}",
-            "last_update_at": "={{ $json.last_update_at }}",
+            "last_update_at": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n",
             "manager_matrix_user_id": "={{ $json.manager_matrix_user_id }}",
             "request_id": "={{ $json.request_id }}",
             "status": "={{ $json.status }}"
@@ -1196,8 +1097,8 @@
         }
       },
       "position": [
-        -2000,
-        320
+        -2880,
+        592
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -1273,7 +1174,7 @@
             "actor": "employee",
             "details": "feedback saved",
             "request_id": "={{ $json.request_id }}",
-            "timestamp": "={{ new Date().toISOString() }}"
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
           }
         },
         "documentId": {
@@ -1294,8 +1195,8 @@
         }
       },
       "position": [
-        -1824,
-        320
+        -2704,
+        592
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -1339,15 +1240,15 @@
               "id": "ff676333-f603-4fad-b80e-0f4ba6be68f1",
               "name": "last_update_at",
               "type": "string",
-              "value": "=new Date().toISOString()"
+              "value": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -1632,
-        320
+        -2512,
+        592
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1493,7 +1394,8 @@
             "created_at": "={{ $json.created_at }}",
             "employee_feedback_text": "={{ $json.employee_feedback_text }}",
             "employee_matrix_user_id": "={{ $json.employee_matrix_user_id }}",
-            "last_update_at": "={{ $json.last_update_at }}",
+            "last_update_at": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n",
+            "manager_feedback_text": "={{ $json.manager_feedback_text }}",
             "manager_matrix_user_id": "={{ $json.manager_matrix_user_id }}",
             "request_id": "={{ $json.request_id }}",
             "status": "={{ $json.status }}"
@@ -1517,8 +1419,8 @@
         }
       },
       "position": [
-        -1456,
-        320
+        -2336,
+        592
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
@@ -1594,7 +1496,7 @@
             "actor": "manager",
             "details": "feedback saved",
             "request_id": "={{ $json.request_id }}",
-            "timestamp": "={{ new Date().toISOString() }}"
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
           }
         },
         "documentId": {
@@ -1615,11 +1517,611 @@
         }
       },
       "position": [
-        -1248,
-        320
+        -2336,
+        816
       ],
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7
+    },
+    {
+      "id": "195d4da2-6db4-4c4c-a985-4232574aa813",
+      "name": "AI Evaluate SalaryReview",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "# Role: Ты агент AI-оценки пересмотра оклада в компании SoftInterMob.\n\n**Тебе поступают входные данные сотрудника и руководителя:**\n- [Фидбэк сотрудника]\n{{ $json.employee_feedback_text }}\n- [Фидбэк руководителя]\n{{ $json.manager_feedback_text }}\n\nОцени по внутренним правилам и верни только JSON по указанному контракту.\n\n# Task:\n1) Оценить итоговый performance сотрудника за последние 3–6 месяцев.\n2) Оценить согласованность позиций сотрудника и руководителя (alignment).\n3) Сформировать рекомендацию по пересмотру оклада с учётом правил компании.\n\n**Всегда возвращай ТОЛЬКО один JSON-объект в ОДНОЙ строке, БЕЗ пояснений и текста вокруг, строго по контракту:**\n{\n  \"ai_performance_score\": <число 0-100>,\n  \"ai_alignment\": \"high\" | \"medium\" | \"low\",\n  \"ai_recommendation\": \"approve_raise\" | \"keep_salary\" | \"reject_request\" | \"need_more_info\",\n  \"ai_comment\": \"<краткое объяснение решения>\"\n}\n\n**Требования:**\n- \"ai_performance_score\" должен быть числом (без строк, без процентов).\n- \"ai_alignment\" только одно из значений: \"high\", \"medium\", \"low\".\n- \"ai_recommendation\" только одно из значений: \"approve_raise\", \"keep_salary\", \"reject_request\", \"need_more_info\".\n- Если данных недостаточно (короткие ответы, нет фидбэка руководителя, сильные противоречия) — ставь \"ai_recommendation\": \"need_more_info\"."
+        },
+        "promptType": "define",
+        "text": "Как ты можешь мне помочь?"
+      },
+      "position": [
+        -2096,
+        592
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "oHy3wpAM2qUWYqMU",
+          "name": "OpenAi account"
+        }
+      },
+      "id": "113af4ae-18d5-4f94-b0d8-ce80cee18be0",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "gpt-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "maxRetries": 3,
+          "maxTokens": 1500,
+          "responseFormat": "json_object",
+          "temperature": 0.2
+        }
+      },
+      "position": [
+        -2096,
+        848
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "a2797327-2a23-4ac0-8b1e-ef71f6fcf9cc",
+      "name": "Parse AI JSON",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "jsCode": "// 1. Текущий элемент после ноды \"Подготовка AI-ответа\"\nconst current = $input.item.json;\n\n// 2. Базовые данные заявки до AI — берём из ноды\nconst base = $items(\"2 Update Request Employee Feedback.1\", 0, 0).json;\n\ntry {\n  const raw = current.ai_raw_output;\n\n  if (typeof raw !== 'string') {\n    throw new Error('ai_raw_output is not a string');\n  }\n\n  const parsed = JSON.parse(raw);\n\n  // Минимальная валидация\n  if (typeof parsed.ai_performance_score !== 'number') {\n    throw new Error('ai_performance_score must be a number');\n  }\n  if (!['high', 'medium', 'low'].includes(parsed.ai_alignment)) {\n    throw new Error('ai_alignment must be high|medium|low');\n  }\n  if (!['approve_raise', 'keep_salary', 'reject_request', 'need_more_info'].includes(parsed.ai_recommendation)) {\n    throw new Error('invalid ai_recommendation');\n  }\n\n  // Склеиваем: база заявки + результат AI\n  return {\n    json: {\n      ...base,\n      ai_performance_score: parsed.ai_performance_score,\n      ai_alignment: parsed.ai_alignment,\n      ai_recommendation: parsed.ai_recommendation,\n      ai_comment: parsed.ai_comment ?? '',\n    },\n  };\n\n} catch (error) {\n  throw new Error('AI_JSON_PARSE_ERROR: ' + (error.message || 'unknown error'));\n}\n",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -1584,
+        592
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "40deebb3-a929-4ea0-8427-433f7dfded88",
+      "name": "If AI parse ok",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a62af425-bed8-4764-8dfb-2ee97790856e",
+              "leftValue": "={{ $json.ai_recommendation }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": 0
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -1296,
+        592
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "d91de8fc-378b-48ea-9799-ebad43691b91",
+      "name": "2 Ai Error DEV",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "timestamp"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "error_type",
+              "id": "error_type",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "raw_ai_output",
+              "id": "raw_ai_output",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "details": "=AI JSON parse or validation failed",
+            "error_type": "=ai_json_parse_error",
+            "raw_ai_output": "={{ JSON.stringify($json) }}",
+            "request_id": "={{ $json.request_id || '' }}",
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "AI_Errors_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=929800952",
+          "mode": "list",
+          "value": 929800952
+        }
+      },
+      "position": [
+        -1296,
+        832
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "9beb1d10-7542-4e82-ac9c-7a2b37e14b20",
+      "name": "Подготовка AI-ответа",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ac57d1ec-0a12-43cd-95a1-77be6d61edb9",
+              "name": "ai_raw_output",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1776,
+        592
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "7fedbe14-db32-4752-92d0-3bd6a5185756",
+      "name": "Аудит ai_eval_success",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "timestamp",
+              "id": "timestamp",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "actor",
+              "id": "actor",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "action",
+              "id": "action",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "details",
+              "id": "details",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "action": "ai_eval_success",
+            "actor": "bot",
+            "details": "{{ 'score=' + $json.ai_performance_score + ', rec=' + $json.ai_recommendation }}",
+            "request_id": "={{ $json.request_id }}",
+            "timestamp": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Audit_Log_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=858723787",
+          "mode": "list",
+          "value": 858723787
+        }
+      },
+      "position": [
+        -864,
+        496
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "1fa4c72c-24c0-43a8-b0a1-bf5d25bfa3d4",
+      "name": "Получить данные сотрудника для карточки",
+      "parameters": {
+        "combineFilters": "OR",
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Employees_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        -864,
+        752
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "98d0efe1-fb10-4c97-9fa2-2dac741ed6e7",
+      "name": "Сформировать текст карточки в чат #salary-review",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d01b04d1-7958-4ca6-a829-36e85e13be0a",
+              "name": "card_text",
+              "type": "string",
+              "value": "={{\n(() => {\n  const r = $json; // объединённые данные заявки + сотрудника\n\n  return [\n    `Дата: ${r.created_at}`,\n    `Сотрудник: ${r.full_name} (${r.department}, грейд ${r.grade})`,\n    `Matrix: ${r.employee_matrix_user_id}`,\n    ``,\n    `Фидбэк сотрудника:`,\n    r.employee_feedback_text || '—',\n    ``,\n    `Фидбэк руководителя:`,\n    r.manager_feedback_text || '—',\n    ``,\n    `Фидбэк LLM:`,\n    `- performance_score: ${r.ai_performance_score}`,\n    `- alignment: ${r.ai_alignment}`,\n    `- recommendation: ${r.ai_recommendation}`,\n    r.ai_comment ? `Комментарий: ${r.ai_comment}` : '',\n    ``,\n    `Статус: ${r.status}`\n  ].filter(Boolean).join('\\n');\n})()\n}}\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -432,
+        592
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "disabled": true,
+      "id": "dce64a38-c4d4-41f2-b009-73ee66abe2fb",
+      "name": "Отправить карточку в #salary-review",
+      "parameters": {},
+      "position": [
+        -224,
+        592
+      ],
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ArNMmpe0qZYEcloJ",
+          "name": "DEV Google Sheets account 2"
+        }
+      },
+      "id": "c7c60120-05b5-4a99-9f21-e963a52c4758",
+      "name": "Обновить заявку результатом ИИ",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "request_id"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "request_id",
+              "id": "request_id",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_matrix_user_id",
+              "id": "employee_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_matrix_user_id",
+              "id": "manager_matrix_user_id",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "created_at",
+              "id": "created_at",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "employee_feedback_text",
+              "id": "employee_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "manager_feedback_text",
+              "id": "manager_feedback_text",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_performance_score",
+              "id": "ai_performance_score",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_alignment",
+              "id": "ai_alignment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "ai_recommendation",
+              "id": "ai_recommendation",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hr_comment",
+              "id": "hr_comment",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "hrd_decision",
+              "id": "hrd_decision",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "last_update_at",
+              "id": "last_update_at",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "ai_alignment": "={{ $json.ai_alignment }}",
+            "ai_performance_score": "={{ $json.ai_performance_score }}",
+            "ai_recommendation": "={{ $json.ai_recommendation }}",
+            "created_at": "{{ $json.created_at }}",
+            "employee_feedback_text": "{{ $json.employee_feedback_text }}",
+            "employee_matrix_user_id": "{{ $json.employee_matrix_user_id }}",
+            "hr_comment": "={{ $json.ai_comment }}",
+            "last_update_at": "={{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n",
+            "manager_feedback_text": "{{ $json.manager_feedback_text }}",
+            "manager_matrix_user_id": "{{ $json.manager_matrix_user_id }}",
+            "request_id": "{{ $json.request_id }}",
+            "status": "=awaiting_hrd"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "cachedResultName": "SalaryReview Bot (DEV)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit?usp=drivesdk",
+          "mode": "list",
+          "value": "1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ"
+        },
+        "operation": "appendOrUpdate",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Requests_DEV",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Sg6KDc9BPxw3WZM5OdjkmtjNeKeq9jxbXvz_6DabXZQ/edit#gid=1841427866",
+          "mode": "list",
+          "value": 1841427866
+        }
+      },
+      "position": [
+        -1072,
+        576
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "alwaysOutputData": false,
+      "id": "2e068f0a-cfd9-4a02-acb5-461b66143bd6",
+      "name": "Merge Заявка + Сотрудник",
+      "parameters": {
+        "advanced": true,
+        "joinMode": "enrichInput2",
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "employee_matrix_user_id",
+              "field2": "matrix_user_id"
+            }
+          ]
+        },
+        "mode": "combine",
+        "options": {}
+      },
+      "position": [
+        -640,
+        592
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "04933b30-1d29-47f1-8079-31aab4998154",
+      "name": "Sticky Note",
+      "parameters": {
+        "content": "Эталон timestamp. Необходим для того что бы в таблицу попадало актуальная дата и время по МСК.\n\n{{ (() => {\n  const now = new Date();\n  const mskOffsetMs = 3 * 60 * 60 * 1000; // +3 часа\n  const msk = new Date(now.getTime() + mskOffsetMs);\n  return msk.toISOString().slice(0, 16); // \"YYYY-MM-DDTHH:MM\"\n})() }}\n",
+        "height": 384,
+        "width": 576
+      },
+      "position": [
+        -1616,
+        -288
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
     }
   ],
   "pinData": {},
@@ -1638,6 +2140,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-25T21:23:38.000Z",
-  "versionId": "32f34d98-8108-4fe6-9723-86af8aeffb51"
+  "updatedAt": "2025-11-26T20:49:08.000Z",
+  "versionId": "906514c8-dd53-4f69-93da-be0358352fd3"
 }
