@@ -39,9 +39,31 @@
         ]
       ]
     },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Message a model1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Create an issue": {
       "main": [
         []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript3",
+            "type": "main"
+          }
+        ]
       ]
     },
     "Message a model": {
@@ -55,12 +77,45 @@
         ]
       ]
     },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Telegram Trigger": {
       "main": [
         [
           {
             "index": 0,
             "node": "Code in JavaScript",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -102,7 +157,7 @@
       "id": "6e647c38-ee29-47c0-9305-328a190ab20a",
       "name": "Code in JavaScript",
       "parameters": {
-        "jsCode": "const text = $input.first().json.message.text;\n\n// Парсим поля из текста\nconst asset = {\n  name: '',\n  type: '',\n  shortDescription: '',\n  role: '',\n  formAndComposition: '',\n  colorAndMaterials: '',\n  architecturalDetails: '',\n  functionalElements: '',\n  styleElements: '',\n  generalStyle: '',\n  colorPalette: []\n};\n\nlet currentSection = '';\n\nconst lines = text.split('\\n');\n\nfor (const line of lines) {\n  const trimmed = line.trim();\n  if (!trimmed) continue;\n  \n  if (trimmed.startsWith('Название:')) {\n    asset.name = trimmed.replace('Название:', '').trim();\n  } else if (trimmed.startsWith('Тип объекта:')) {\n    asset.type = trimmed.replace('Тип объекта:', '').trim();\n  } else if (trimmed.startsWith('Краткое описание:')) {\n    currentSection = 'shortDescription';\n  } else if (trimmed.startsWith('Роль/назначение:')) {\n    currentSection = 'role';\n  } else if (trimmed.startsWith('Форма и композиция:')) {\n    currentSection = 'formAndComposition';\n  } else if (trimmed.startsWith('Цвет и материалы:')) {\n    currentSection = 'colorAndMaterials';\n  } else if (trimmed.startsWith('Архитектурные детали:')) {\n    currentSection = 'architecturalDetails';\n  } else if (trimmed.startsWith('Функциональные элементы:')) {\n    currentSection = 'functionalElements';\n  } else if (trimmed.startsWith('Ключевые элементы стиля:')) {\n    currentSection = 'styleElements';\n  } else if (trimmed.startsWith('Общая стилистика проекта:')) {\n    currentSection = 'generalStyle';\n  } else if (trimmed.startsWith('Цветовая палитра:')) {\n    currentSection = 'colorPalette';\n  } else if (trimmed.startsWith('Описание и адаптация:')) {\n    currentSection = '';\n  } else if (currentSection) {\n    if (currentSection === 'colorPalette') {\n      const match = trimmed.match(/(.+?)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*используется для\\s*(.+)/);\n      if (match) {\n        asset.colorPalette.push({\n          name: match[1].trim(),\n          hex: match[2],\n          usage: match[3].replace(/\\.$/, '').trim()\n        });\n      }\n    } else {\n      asset[currentSection] += (asset[currentSection] ? ' ' : '') + trimmed;\n    }\n  }\n}\n\nreturn [{ json: asset }];"
+        "jsCode": "const rawText = $input.first().json.message.text;\n\n// Заменяем literal \\n на реальные переносы строк\nconst text = rawText.replace(/\\\\n/g, '\\n');\n\n// Определяем формат входных данных\nconst isNewFormat = text.indexOf('[Название задачи]') !== -1;\nconst isOldFormat = text.indexOf('Название:') !== -1 && text.indexOf('Тип объекта:') !== -1;\n\nlet asset = {\n  name: '',\n  type: '',\n  sections: [],\n  colorPalette: [],\n  rawText: text\n};\n\nif (isNewFormat) {\n  // Новый формат с [секциями]\n  const sectionRegex = /\\[([^\\]]+)\\]/g;\n  const parts = text.split(sectionRegex);\n  \n  for (let i = 1; i < parts.length; i += 2) {\n    const sectionName = parts[i].trim();\n    const sectionContent = (parts[i + 1] || '').trim();\n    \n    asset.sections.push({\n      name: sectionName,\n      content: sectionContent\n    });\n    \n    // Извлекаем название\n    if (sectionName === 'Название задачи') {\n      asset.name = sectionContent.split('\\n')[0].trim();\n    }\n    \n    // Извлекаем тип из названия\n    if (asset.name.indexOf('Icon_') === 0) {\n      asset.type = 'Иконка';\n    } else if (asset.name.indexOf('Building_') === 0) {\n      asset.type = 'Здание';\n    } else {\n      asset.type = 'Ассет';\n    }\n  }\n  \n  // Извлекаем цветовую палитру\n  const paletteMatch = text.match(/Цветовая палитра:([^[]+)/);\n  if (paletteMatch) {\n    const paletteText = paletteMatch[1];\n    const colorMatches = paletteText.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*([^\\n]+)/g);\n    if (colorMatches) {\n      colorMatches.forEach(function(match) {\n        const parts = match.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*(.+)/);\n        if (parts) {\n          asset.colorPalette.push({\n            name: parts[1].trim(),\n            hex: parts[2],\n            usage: parts[3].trim()\n          });\n        }\n      });\n    }\n  }\n  \n} else if (isOldFormat) {\n  // Старый формат с \"Название:\", \"Тип объекта:\" и т.д.\n  let currentSection = '';\n  const lines = text.split('\\n');\n  \n  const sectionMap = {\n    'Краткое описание:': 'shortDescription',\n    'Роль/назначение:': 'role',\n    'Форма и композиция:': 'formAndComposition',\n    'Цвет и материалы:': 'colorAndMaterials',\n    'Архитектурные детали:': 'architecturalDetails',\n    'Функциональные элементы:': 'functionalElements',\n    'Ключевые элементы стиля:': 'styleElements',\n    'Общая стилистика проекта:': 'generalStyle',\n    'Цветовая палитра:': 'colorPalette'\n  };\n  \n  asset.shortDescription = '';\n  asset.role = '';\n  asset.formAndComposition = '';\n  asset.colorAndMaterials = '';\n  asset.architecturalDetails = '';\n  asset.functionalElements = '';\n  asset.styleElements = '';\n  asset.generalStyle = '';\n  \n  for (let i = 0; i < lines.length; i++) {\n    const trimmed = lines[i].trim();\n    if (!trimmed) continue;\n    \n    if (trimmed.indexOf('Название:') === 0) {\n      asset.name = trimmed.replace('Название:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Тип объекта:') === 0) {\n      asset.type = trimmed.replace('Тип объекта:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Описание и адаптация:') === 0) {\n      currentSection = '';\n    } else {\n      // Проверяем секции\n      let foundSection = false;\n      for (let key in sectionMap) {\n        if (trimmed.indexOf(key) === 0) {\n          currentSection = sectionMap[key];\n          foundSection = true;\n          break;\n        }\n      }\n      \n      if (!foundSection && currentSection) {\n        if (currentSection === 'colorPalette') {\n          const match = trimmed.match(/(.+?)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*используется для\\s*(.+)/);\n          if (match) {\n            asset.colorPalette.push({\n              name: match[1].trim(),\n              hex: match[2],\n              usage: match[3].replace(/\\.$/, '').trim()\n            });\n          }\n        } else {\n          asset[currentSection] = asset[currentSection] + (asset[currentSection] ? ' ' : '') + trimmed;\n        }\n      }\n    }\n  }\n  \n  // Формируем sections для старого формата\n  asset.sections = [\n    { name: 'Описание', content: asset.shortDescription },\n    { name: 'Роль/назначение', content: asset.role },\n    { name: 'Форма и композиция', content: asset.formAndComposition },\n    { name: 'Цвет и материалы', content: asset.colorAndMaterials },\n    { name: 'Архитектурные детали', content: asset.architecturalDetails },\n    { name: 'Функциональные элементы', content: asset.functionalElements },\n    { name: 'Стилистика', content: asset.generalStyle }\n  ].filter(function(s) { return s.content; });\n  \n} else {\n  // Неизвестный формат - берём как есть\n  asset.name = 'Unknown_Asset';\n  asset.type = 'Ассет';\n  asset.sections = [{ name: 'Описание', content: text }];\n}\n\nreturn [{ json: asset }];"
       },
       "position": [
         256,
@@ -115,7 +170,7 @@
       "id": "378a2d86-6625-4f84-ba6e-ee807ac5421f",
       "name": "Code in JavaScript1",
       "parameters": {
-        "jsCode": "const asset = $('Code in JavaScript').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst qnapPath = `//QNAP/ART/Assets/Buildings/${asset.name}/`;\nconst fileName = `${asset.name}_v001_${date}.png`;\n\n// Формируем описание по шаблону бага/техдолга\nconst jiraDescription = `Описание проблемы:\n\nТекущее состояние:\n${asset.shortDescription}\n\n${asset.role}\n\nОжидаемый результат:\nГотовый ассет \"${asset.name}\" согласно техническому заданию:\n- Форма и композиция: ${asset.formAndComposition}\n- Цвет и материалы: ${asset.colorAndMaterials}\n- Архитектурные детали: ${asset.architecturalDetails}\n- Функциональные элементы: ${asset.functionalElements}\n- Стилистика: ${asset.generalStyle}\n\nШаги воспроизведения:\n1. Использовать промт для AI-генерации (см. ниже)\n2. Проверить результат на соответствие ТЗ\n3. Сохранить в QNAP по указанному пути\n\nУстройство:\nТип ассета: ${asset.type}\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Соответствие стиль-гайду проекта\n\nНеобходимые материалы:\n\nПромт для AI-генерации:\n${aiPrompt}\n\n\nЦветовая палитра:\n${asset.colorPalette.map(c => `- ${c.name} (${c.hex}): ${c.usage}`).join('\\n')}`;\n\nreturn [{\n  json: {\n    summary: `[ART] ${asset.name}`,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n  }\n}];"
+        "jsCode": "const asset = $('Code in JavaScript').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst typeFolder = asset.type === 'Иконка' ? 'Icons' : \n                   asset.type === 'Здание' ? 'Buildings' : 'Other';\nconst qnapPath = '//QNAP/ART/Assets/' + typeFolder + '/' + asset.name + '/';\nconst fileName = asset.name + '_v001_' + date + '.png';\n\n// Формируем цветовую палитру\nlet paletteText = '';\nif (asset.colorPalette && asset.colorPalette.length > 0) {\n  for (let i = 0; i < asset.colorPalette.length; i++) {\n    const c = asset.colorPalette[i];\n    paletteText = paletteText + '- ' + c.hex + ' (' + c.name + '): ' + c.usage + '\\n';\n  }\n}\n\n// Формируем описание ассета\nlet assetDescription = '';\nif (asset.shortDescription) {\n  assetDescription = asset.shortDescription;\n} else if (asset.sections && asset.sections.length > 0) {\n  assetDescription = asset.sections[0].content || '';\n}\n\n// Формируем техническое описание\nlet technicalDetails = '';\nif (asset.formAndComposition) {\n  technicalDetails = technicalDetails + '- Форма и композиция: ' + asset.formAndComposition + '\\n';\n}\nif (asset.colorAndMaterials) {\n  technicalDetails = technicalDetails + '- Цвет и материалы: ' + asset.colorAndMaterials + '\\n';\n}\nif (asset.architecturalDetails) {\n  technicalDetails = technicalDetails + '- Архитектурные детали: ' + asset.architecturalDetails + '\\n';\n}\nif (asset.functionalElements) {\n  technicalDetails = technicalDetails + '- Функциональные элементы: ' + asset.functionalElements + '\\n';\n}\n\n// Формируем description по шаблону ТЕХДОЛГА\nconst jiraDescription = 'Описание:\\n' +\n  assetDescription + '\\n' +\n  (asset.role ? '\\n' + asset.role + '\\n' : '') +\n  '\\nПричина появления:\\n' +\n  'Запрос от GD-отдела. Требуется новый ассет типа \"' + asset.type + '\".\\n' +\n  '\\nОжидаемый результат:\\n' +\n  'Готовый ассет \"' + asset.name + '\" согласно ТЗ:\\n' +\n  (technicalDetails ? technicalDetails : '') +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Формат: PNG с альфа-каналом\\n' +\n  '\\nШаги воспроизведения:\\n' +\n  '1. Использовать AI-промт для генерации (см. Необходимые материалы)\\n' +\n  '2. Проверить соответствие цветовой палитре и ТЗ\\n' +\n  '3. Сохранить в QNAP по указанному пути\\n' +\n  '4. Проверить отображение в тестовой сцене\\n' +\n  '\\nКритерии приёмки:\\n' +\n  '- Соответствие описанию и цветовой палитре\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Белый/прозрачный фон\\n' +\n  '- Качество изображения: высокое, без артефактов\\n' +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Одобрение арт-лида\\n' +\n  '\\nНеобходимые материалы:\\n' +\n  '\\nAI-промт:\\n' +\n  aiPrompt + '\\n' +\n  '\\nПуть QNAP:\\n' +\n  qnapPath + fileName + '\\n' +\n  (paletteText ? '\\nЦветовая палитра:\\n' + paletteText : '');\n\nreturn [{\n  json: {\n    summary: '[ART] ' + asset.name,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n    qnapPath: qnapPath + fileName\n  }\n}];"
       },
       "position": [
         736,
@@ -131,7 +186,6 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "disabled": true,
       "id": "8c9a4be2-f107-41e6-847e-4b7e37d68ad5",
       "name": "Create an issue",
       "parameters": {
@@ -146,9 +200,9 @@
         },
         "issueType": {
           "__rl": true,
-          "cachedResultName": "Task",
+          "cachedResultName": "Art",
           "mode": "list",
-          "value": "10004"
+          "value": "10302"
         },
         "jiraVersion": "serverPat",
         "project": {
@@ -160,8 +214,8 @@
         "summary": "={{ $json.summary }}"
       },
       "position": [
-        992,
-        288
+        1216,
+        240
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -198,7 +252,7 @@
         }
       },
       "position": [
-        400,
+        416,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -263,6 +317,137 @@
       "position": [
         1088,
         80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "b857eda8-9fe2-46c0-9582-cc716952247d",
+      "name": "When Executed by Another Workflow",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        0,
+        240
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "542d0486-21fd-44ab-87f5-89179069c95f",
+      "name": "Code in JavaScript3",
+      "parameters": {
+        "jsCode": "const rawText = $input.first().json.Task;\n\n// Заменяем literal \\n на реальные переносы строк\nconst text = rawText.replace(/\\\\n/g, '\\n');\n\n// Определяем формат входных данных\nconst isNewFormat = text.indexOf('[Название задачи]') !== -1;\nconst isOldFormat = text.indexOf('Название:') !== -1 && text.indexOf('Тип объекта:') !== -1;\n\nlet asset = {\n  name: '',\n  type: '',\n  sections: [],\n  colorPalette: [],\n  rawText: text\n};\n\nif (isNewFormat) {\n  // Новый формат с [секциями]\n  const sectionRegex = /\\[([^\\]]+)\\]/g;\n  const parts = text.split(sectionRegex);\n  \n  for (let i = 1; i < parts.length; i += 2) {\n    const sectionName = parts[i].trim();\n    const sectionContent = (parts[i + 1] || '').trim();\n    \n    asset.sections.push({\n      name: sectionName,\n      content: sectionContent\n    });\n    \n    // Извлекаем название\n    if (sectionName === 'Название задачи') {\n      asset.name = sectionContent.split('\\n')[0].trim();\n    }\n    \n    // Извлекаем тип из названия\n    if (asset.name.indexOf('Icon_') === 0) {\n      asset.type = 'Иконка';\n    } else if (asset.name.indexOf('Building_') === 0) {\n      asset.type = 'Здание';\n    } else {\n      asset.type = 'Ассет';\n    }\n  }\n  \n  // Извлекаем цветовую палитру\n  const paletteMatch = text.match(/Цветовая палитра:([^[]+)/);\n  if (paletteMatch) {\n    const paletteText = paletteMatch[1];\n    const colorMatches = paletteText.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*([^\\n]+)/g);\n    if (colorMatches) {\n      colorMatches.forEach(function(match) {\n        const parts = match.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*(.+)/);\n        if (parts) {\n          asset.colorPalette.push({\n            name: parts[1].trim(),\n            hex: parts[2],\n            usage: parts[3].trim()\n          });\n        }\n      });\n    }\n  }\n  \n} else if (isOldFormat) {\n  // Старый формат с \"Название:\", \"Тип объекта:\" и т.д.\n  let currentSection = '';\n  const lines = text.split('\\n');\n  \n  const sectionMap = {\n    'Краткое описание:': 'shortDescription',\n    'Роль/назначение:': 'role',\n    'Форма и композиция:': 'formAndComposition',\n    'Цвет и материалы:': 'colorAndMaterials',\n    'Архитектурные детали:': 'architecturalDetails',\n    'Функциональные элементы:': 'functionalElements',\n    'Ключевые элементы стиля:': 'styleElements',\n    'Общая стилистика проекта:': 'generalStyle',\n    'Цветовая палитра:': 'colorPalette'\n  };\n  \n  asset.shortDescription = '';\n  asset.role = '';\n  asset.formAndComposition = '';\n  asset.colorAndMaterials = '';\n  asset.architecturalDetails = '';\n  asset.functionalElements = '';\n  asset.styleElements = '';\n  asset.generalStyle = '';\n  \n  for (let i = 0; i < lines.length; i++) {\n    const trimmed = lines[i].trim();\n    if (!trimmed) continue;\n    \n    if (trimmed.indexOf('Название:') === 0) {\n      asset.name = trimmed.replace('Название:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Тип объекта:') === 0) {\n      asset.type = trimmed.replace('Тип объекта:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Описание и адаптация:') === 0) {\n      currentSection = '';\n    } else {\n      // Проверяем секции\n      let foundSection = false;\n      for (let key in sectionMap) {\n        if (trimmed.indexOf(key) === 0) {\n          currentSection = sectionMap[key];\n          foundSection = true;\n          break;\n        }\n      }\n      \n      if (!foundSection && currentSection) {\n        if (currentSection === 'colorPalette') {\n          const match = trimmed.match(/(.+?)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*используется для\\s*(.+)/);\n          if (match) {\n            asset.colorPalette.push({\n              name: match[1].trim(),\n              hex: match[2],\n              usage: match[3].replace(/\\.$/, '').trim()\n            });\n          }\n        } else {\n          asset[currentSection] = asset[currentSection] + (asset[currentSection] ? ' ' : '') + trimmed;\n        }\n      }\n    }\n  }\n  \n  // Формируем sections для старого формата\n  asset.sections = [\n    { name: 'Описание', content: asset.shortDescription },\n    { name: 'Роль/назначение', content: asset.role },\n    { name: 'Форма и композиция', content: asset.formAndComposition },\n    { name: 'Цвет и материалы', content: asset.colorAndMaterials },\n    { name: 'Архитектурные детали', content: asset.architecturalDetails },\n    { name: 'Функциональные элементы', content: asset.functionalElements },\n    { name: 'Стилистика', content: asset.generalStyle }\n  ].filter(function(s) { return s.content; });\n  \n} else {\n  // Неизвестный формат - берём как есть\n  asset.name = 'Unknown_Asset';\n  asset.type = 'Ассет';\n  asset.sections = [{ name: 'Описание', content: text }];\n}\n\nreturn [{ json: asset }];"
+      },
+      "position": [
+        416,
+        240
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "560a15c8-fa79-4749-bbab-10814be7f2fa",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        0,
+        432
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "4ee4793b-685e-4c58-9772-53d0fa0dba3b",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1071214-8f5c-4ffd-8f64-805b943525ab",
+              "name": "Task",
+              "type": "string",
+              "value": "Название: Building_GiantOrder\\nТип объекта: Здание\\n\\nКраткое описание:\\nВысокотехнологичный монумент, представляющий собой голографический проектор, который воссоздает анимированную эмблему элитного военного ордена. Символизирует честь и технологическое превосходство базы игрока.\\n\\nРоль/назначение:\\nДекоративное здание-памятник для установки на базе игрока. Служит визуальным маркером высокого статуса и военных достижений. Не несет производственной функции.\\n\\nОписание и адаптация:\\n\\nФорма и композиция:\\nСтрогая изометрическая проекция с углом 30 градусов. Монумент состоит из массивного, усеченного пирамидального основания из темного композита. По периметру основания проходит яркая cyan-подсветка. На вершине платформы установлен сложный проекционный узел с тремя асимметрично расположенными линзами, которые генерируют крупную, парящую в воздухе голограмму. Голограмма изображает стилизованный щит с крыльями, анимированный легким мерцанием и потоками энергии.\\n\\nЦвет и материалы:\\nОснование выполнено из матовых темно-серых композитных панелей с вкраплениями полированного металла. Проекционный узел изготовлен из титана с хромированными элементами. Голограмма выполнена в ярких энергетических цветах, контрастирующих с темным основанием.\\n\\nАрхитектурные детали:\\nПоверхность основания имеет слоистую структуру с видимыми технологическими швами и разъемами, подсвеченными изнутри. На боковых гранях расположены небольшие вентиляционные решетки и голографические информационные дисплеи, отображающие статус монумента. Провода и кабели скрыты внутри корпуса, создавая чистый и цельный вид.\\n\\nФункциональные элементы:\\nЦентральный проектор является ключевым элементом, линзы которого медленно вращаются, создавая динамику. Голографическая эмблема анимирована: по ее контуру пробегают энергетические импульсы. У подножия монумента расположены четыре небольших световых маркера, обозначающих его границы.\\n\\nКлючевые элементы стиля:\\nМодульность и футуристичный дизайн. Яркая голограмма как основной визуальный акцент. Чистые формы и отсутствие беспорядка. Асимметрия в деталях проектора для придания динамичности. Мягкое освещение с глубокими тенями для подчеркивания объема. Изоляция на белом фоне.\\n\\nОбщая стилистика проекта:\\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне, что подчеркивает его принадлежность к технологической базе игрока.\\n\\nЦветовая палитра:\\nТемно-серый (#34495E) используется для основного корпуса и платформы-основания.\\nГрафитовый (#5D6D7E) используется для акцентных панелей и технологических вставок.\\nЦиан (#00FFFF) используется для неоновой подсветки контуров платформы и голографической эмблемы.\\nБелый (#FFFFFF) используется для светящихся индикаторов и символов на информационных дисплеях.ыыы"
+            },
+            {
+              "id": "9a6af0e9-55ee-483e-bcab-8b1ef0172b79",
+              "name": "Estimate",
+              "type": "string",
+              "value": "3h"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        208,
+        240
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "0c012a30-e27e-402b-8320-57f7771a47e9",
+      "name": "Code in JavaScript4",
+      "parameters": {
+        "jsCode": "const asset = $('Code in JavaScript3').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst typeFolder = asset.type === 'Иконка' ? 'Icons' : \n                   asset.type === 'Здание' ? 'Buildings' : 'Other';\nconst qnapPath = '//QNAP/ART/Assets/' + typeFolder + '/' + asset.name + '/';\nconst fileName = asset.name + '_v001_' + date + '.png';\n\n// Формируем цветовую палитру\nlet paletteText = '';\nif (asset.colorPalette && asset.colorPalette.length > 0) {\n  for (let i = 0; i < asset.colorPalette.length; i++) {\n    const c = asset.colorPalette[i];\n    paletteText = paletteText + '- ' + c.hex + ' (' + c.name + '): ' + c.usage + '\\n';\n  }\n}\n\n// Формируем описание ассета\nlet assetDescription = '';\nif (asset.shortDescription) {\n  assetDescription = asset.shortDescription;\n} else if (asset.sections && asset.sections.length > 0) {\n  assetDescription = asset.sections[0].content || '';\n}\n\n// Формируем техническое описание\nlet technicalDetails = '';\nif (asset.formAndComposition) {\n  technicalDetails = technicalDetails + '- Форма и композиция: ' + asset.formAndComposition + '\\n';\n}\nif (asset.colorAndMaterials) {\n  technicalDetails = technicalDetails + '- Цвет и материалы: ' + asset.colorAndMaterials + '\\n';\n}\nif (asset.architecturalDetails) {\n  technicalDetails = technicalDetails + '- Архитектурные детали: ' + asset.architecturalDetails + '\\n';\n}\nif (asset.functionalElements) {\n  technicalDetails = technicalDetails + '- Функциональные элементы: ' + asset.functionalElements + '\\n';\n}\n\n// Формируем description по шаблону ТЕХДОЛГА\nconst jiraDescription = 'Описание:\\n' +\n  assetDescription + '\\n' +\n  (asset.role ? '\\n' + asset.role + '\\n' : '') +\n  '\\nПричина появления:\\n' +\n  'Запрос от GD-отдела. Требуется новый ассет типа \"' + asset.type + '\".\\n' +\n  '\\nОжидаемый результат:\\n' +\n  'Готовый ассет \"' + asset.name + '\" согласно ТЗ:\\n' +\n  (technicalDetails ? technicalDetails : '') +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Формат: PNG с альфа-каналом\\n' +\n  '\\nШаги воспроизведения:\\n' +\n  '1. Использовать AI-промт для генерации (см. Необходимые материалы)\\n' +\n  '2. Проверить соответствие цветовой палитре и ТЗ\\n' +\n  '3. Сохранить в QNAP по указанному пути\\n' +\n  '4. Проверить отображение в тестовой сцене\\n' +\n  '\\nКритерии приёмки:\\n' +\n  '- Соответствие описанию и цветовой палитре\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Белый/прозрачный фон\\n' +\n  '- Качество изображения: высокое, без артефактов\\n' +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Одобрение арт-лида\\n' +\n  '\\nНеобходимые материалы:\\n' +\n  '\\nAI-промт:\\n' +\n  aiPrompt + '\\n' +\n  '\\nПуть QNAP:\\n' +\n  qnapPath + fileName + '\\n' +\n  (paletteText ? '\\nЦветовая палитра:\\n' + paletteText : '');\n\nreturn [{\n  json: {\n    summary: '[ART] ' + asset.name,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n    qnapPath: qnapPath + fileName\n  }\n}];"
+      },
+      "position": [
+        992,
+        240
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "TeJoupiuKVAuyWb3",
+          "name": "GPT"
+        }
+      },
+      "id": "5db6ea8e-80dc-409b-8a6d-14c910ccf1e7",
+      "name": "Message a model1",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "=Напиши промт для AI-генерации на основе этого ТЗ:\n\nНазвание: {{ $json.name }}\nТип: {{ $json.type }}\n\nОписание: {{ $json.shortDescription }}\n\nФорма и композиция: {{ $json.formAndComposition }}\n\nЦвет и материалы: {{ $json.colorAndMaterials }}\n\nАрхитектурные детали: {{ $json.architecturalDetails }}\n\nФункциональные элементы: {{ $json.functionalElements }}\n\nСтилистика: {{ $json.generalStyle }}\n\nЦветовая палитра:\n{{ $json.colorPalette.map(c => c.name + ' (' + c.hex + '): ' + c.usage).join('\\n') }}"
+            },
+            {
+              "content": "Ты — эксперт по созданию промтов для AI-генерации изометрических 3D-ассетов для мобильных игр.\n\nТвоя задача: на основе технического задания (ТЗ) написать детальный промт на английском языке для генерации изображения.\n\nПРАВИЛА:\n1. Промт ТОЛЬКО на английском языке\n2. Начинай с типа объекта и стиля: \"Isometric 3D [тип объекта] for sci-fi mobile game\"\n3. Описывай визуальные характеристики конкретно и детально\n4. Всегда включай цветовую палитру с HEX-кодами\n5. Указывай технические требования: изометрия 30°, белый фон, изоляция объекта\n6. Используй ключевые слова для качества: \"high detail\", \"game-ready asset\", \"clean render\"\n7. Длина промта: 150-300 слов\n8. НЕ добавляй пояснений — только готовый промт\n\nСТРУКТУРА ПРОМТА:\n- Тип и стиль объекта\n- Основная форма и композиция\n- Материалы и текстуры\n- Цветовая палитра (HEX)\n- Освещение и эффекты\n- Технические требования\n\nСТИЛЬ ГЕНЕРАЦИИ:\n- Semi-realistic stylized casual 3D\n- Bright neon accents\n- Soft lighting with deep shadows\n- Clean, non-cluttered design",
+              "role": "system"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "position": [
+        656,
+        240
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "disabled": true,
+      "id": "a14f926e-ec3b-48e6-b01f-3bddd3c7c401",
+      "name": "Code in JavaScript5",
+      "parameters": {
+        "jsCode": "const asset = $('Code in JavaScript3').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst typeFolder = asset.type === 'Иконка' ? 'Icons' : \n                   asset.type === 'Здание' ? 'Buildings' : 'Other';\nconst qnapPath = '//QNAP/ART/Assets/' + typeFolder + '/' + asset.name + '/';\nconst fileName = asset.name + '_v001_' + date + '.png';\n\n// Формируем описание из секций\nlet sectionsText = '';\nfor (let i = 0; i < asset.sections.length; i++) {\n  const section = asset.sections[i];\n  if (section.content) {\n    sectionsText = sectionsText + '' + section.name + '\\n' + section.content + '\\n\\n';\n  }\n}\n\n// Формируем цветовую палитру\nlet paletteText = '';\nif (asset.colorPalette && asset.colorPalette.length > 0) {\n  paletteText = 'Цветовая палитра\\n';\n  for (let i = 0; i < asset.colorPalette.length; i++) {\n    const c = asset.colorPalette[i];\n    paletteText = paletteText + c.name + ' (' + c.hex + '): ' + c.usage + '\\n';\n  }\n  paletteText = paletteText + '\\n';\n}\n\n// Собираем финальное описание\nconst jiraDescription = sectionsText +\n  paletteText +\n  'Промт для AI-генерации\\n' +\n  aiPrompt + '\\n\\n' +\n  'Путь сохранения (QNAP)\\n' +\n  qnapPath + fileName;\n\nreturn [{\n  json: {\n    summary: '[ART] ' + asset.name,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n    qnapPath: qnapPath + fileName\n  }\n}];"
+      },
+      "position": [
+        992,
+        432
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -332,6 +517,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-25T17:25:39.000Z",
-  "versionId": "8129d9b9-9662-4f01-81bd-e6c2caaacf1c"
+  "updatedAt": "2025-11-26T22:03:30.000Z",
+  "versionId": "c8430114-2d50-4b07-a259-e1645a327f26"
 }
