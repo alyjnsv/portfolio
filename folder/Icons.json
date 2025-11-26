@@ -1328,7 +1328,6 @@
       "id": "2d27c67f-a288-4b16-8ab2-d4171f1908f2",
       "maxTries": 5,
       "name": "Promt",
-      "onError": "continueErrorOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
@@ -1483,7 +1482,7 @@
                 "operation": "gte",
                 "type": "number"
               },
-              "rightValue": 40
+              "rightValue": 70
             }
           ],
           "options": {
@@ -2218,8 +2217,8 @@
         "text": "=✅ Ваши иконки готовы!\n\nhttps://drive.google.com/drive/folders/{{ $('Create folder').item.json.id }}"
       },
       "position": [
-        -2496,
-        -1552
+        -2544,
+        -1568
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2261,7 +2260,7 @@
         "jsCode": "const input = $input.first().json.output.Promt;\n\nlet result = '';\nif (typeof input === 'string') {\n  result = input;\n} else {\n  return [{ json: { error: 'Invalid input type', received: input } }];\n}\n\nlet cleanedText = result.replace(/[\\r\\n\\t]+/g, ' ');\ncleanedText = cleanedText.replace(/[•●]/g, '-');\ncleanedText = cleanedText.replace(/\\\\/g, '');\ncleanedText = cleanedText.replace(/\\//g, '');\ncleanedText = cleanedText.replace(/\"/g, '');\ncleanedText = cleanedText.replace(/'/g, '');\ncleanedText = cleanedText.replace(/`/g, '');\ncleanedText = cleanedText.replace(/\\{/g, '');\ncleanedText = cleanedText.replace(/\\}/g, '');\ncleanedText = cleanedText.replace(/\\[/g, '');\ncleanedText = cleanedText.replace(/\\]/g, '');\ncleanedText = cleanedText.replace(/ +/g, ' ').trim();\n\nreturn [\n  {\n    json: {\n      ClearPromt: cleanedText,\n    }\n  }\n];"
       },
       "position": [
-        -1872,
+        -1904,
         -1376
       ],
       "type": "n8n-nodes-base.code",
@@ -3240,6 +3239,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-25T14:24:56.000Z",
-  "versionId": "1a5993b2-510f-47e2-aee3-ef0528c6a234"
+  "updatedAt": "2025-11-26T14:25:32.000Z",
+  "versionId": "a3e82aae-7012-44fc-85db-8d7fc468aebc"
 }
