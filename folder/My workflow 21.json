@@ -50,6 +50,17 @@
         ]
       ]
     },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Create an issue": {
       "main": [
         []
@@ -57,13 +68,7 @@
     },
     "Edit Fields": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript3",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "Message a model": {
@@ -173,7 +178,7 @@
         "jsCode": "const asset = $('Code in JavaScript').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst typeFolder = asset.type === 'Иконка' ? 'Icons' : \n                   asset.type === 'Здание' ? 'Buildings' : 'Other';\nconst qnapPath = '//QNAP/ART/Assets/' + typeFolder + '/' + asset.name + '/';\nconst fileName = asset.name + '_v001_' + date + '.png';\n\n// Формируем цветовую палитру\nlet paletteText = '';\nif (asset.colorPalette && asset.colorPalette.length > 0) {\n  for (let i = 0; i < asset.colorPalette.length; i++) {\n    const c = asset.colorPalette[i];\n    paletteText = paletteText + '- ' + c.hex + ' (' + c.name + '): ' + c.usage + '\\n';\n  }\n}\n\n// Формируем описание ассета\nlet assetDescription = '';\nif (asset.shortDescription) {\n  assetDescription = asset.shortDescription;\n} else if (asset.sections && asset.sections.length > 0) {\n  assetDescription = asset.sections[0].content || '';\n}\n\n// Формируем техническое описание\nlet technicalDetails = '';\nif (asset.formAndComposition) {\n  technicalDetails = technicalDetails + '- Форма и композиция: ' + asset.formAndComposition + '\\n';\n}\nif (asset.colorAndMaterials) {\n  technicalDetails = technicalDetails + '- Цвет и материалы: ' + asset.colorAndMaterials + '\\n';\n}\nif (asset.architecturalDetails) {\n  technicalDetails = technicalDetails + '- Архитектурные детали: ' + asset.architecturalDetails + '\\n';\n}\nif (asset.functionalElements) {\n  technicalDetails = technicalDetails + '- Функциональные элементы: ' + asset.functionalElements + '\\n';\n}\n\n// Формируем description по шаблону ТЕХДОЛГА\nconst jiraDescription = 'Описание:\\n' +\n  assetDescription + '\\n' +\n  (asset.role ? '\\n' + asset.role + '\\n' : '') +\n  '\\nПричина появления:\\n' +\n  'Запрос от GD-отдела. Требуется новый ассет типа \"' + asset.type + '\".\\n' +\n  '\\nОжидаемый результат:\\n' +\n  'Готовый ассет \"' + asset.name + '\" согласно ТЗ:\\n' +\n  (technicalDetails ? technicalDetails : '') +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Формат: PNG с альфа-каналом\\n' +\n  '\\nШаги воспроизведения:\\n' +\n  '1. Использовать AI-промт для генерации (см. Необходимые материалы)\\n' +\n  '2. Проверить соответствие цветовой палитре и ТЗ\\n' +\n  '3. Сохранить в QNAP по указанному пути\\n' +\n  '4. Проверить отображение в тестовой сцене\\n' +\n  '\\nКритерии приёмки:\\n' +\n  '- Соответствие описанию и цветовой палитре\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Белый/прозрачный фон\\n' +\n  '- Качество изображения: высокое, без артефактов\\n' +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Одобрение арт-лида\\n' +\n  '\\nНеобходимые материалы:\\n' +\n  '\\nAI-промт:\\n' +\n  aiPrompt + '\\n' +\n  '\\nПуть QNAP:\\n' +\n  qnapPath + fileName + '\\n' +\n  (paletteText ? '\\nЦветовая палитра:\\n' + paletteText : '');\n\nreturn [{\n  json: {\n    summary: '[ART] ' + asset.name,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n    qnapPath: qnapPath + fileName\n  }\n}];"
       },
       "position": [
-        736,
+        720,
         0
       ],
       "type": "n8n-nodes-base.code",
@@ -186,6 +191,7 @@
           "name": "Jira SW Task Buider"
         }
       },
+      "disabled": true,
       "id": "8c9a4be2-f107-41e6-847e-4b7e37d68ad5",
       "name": "Create an issue",
       "parameters": {
@@ -325,7 +331,16 @@
       "id": "b857eda8-9fe2-46c0-9582-cc716952247d",
       "name": "When Executed by Another Workflow",
       "parameters": {
-        "inputSource": "passthrough"
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "Task"
+            },
+            {
+              "name": "Estimate"
+            }
+          ]
+        }
       },
       "position": [
         0,
@@ -517,6 +532,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-26T22:03:30.000Z",
-  "versionId": "c8430114-2d50-4b07-a259-e1645a327f26"
+  "updatedAt": "2025-11-27T14:57:14.000Z",
+  "versionId": "82a16548-aea5-4bba-9941-0933c09e3854"
 }
