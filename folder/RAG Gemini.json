@@ -1,0 +1,854 @@
+{
+  "active": true,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "False": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Upload Document",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Import File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Insert row",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Convert to File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Import File": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "True",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "False",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Knowledge Base": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a file",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Обработка",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "True": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Upload Document": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обработка": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-27T06:54:28.839Z",
+  "id": "iTpLvxtUg0phMNzr",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "RAG Gemini",
+  "nodes": [
+    {
+      "id": "9a385a5c-8810-4a79-9ac9-fe7aca32364f",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -256,
+        -128
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "e67d8c01-6424-46ac-aa32-124343d39bf0",
+      "name": "HTTP Request",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "displayName",
+              "value": "ragtest"
+            }
+          ]
+        },
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            }
+          ]
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "sendQuery": true,
+        "url": "https://generativelanguage.googleapis.com/v1beta/fileSearchStores"
+      },
+      "position": [
+        -112,
+        -128
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ca14bdce-9cf7-4715-8a19-dd68f6229af4",
+      "name": "Insert row",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "FileSearchStore_name"
+          ],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "FileSearchStore_name",
+              "id": "FileSearchStore_name",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "FileSearchStore_name": "={{ $json.name }}"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Google_Rag_Ai",
+          "cachedResultUrl": "/projects/2ZQFKqpo7BMkilsl/datatables/N7O6GQ4MxCBwHVSj",
+          "mode": "list",
+          "value": "N7O6GQ4MxCBwHVSj"
+        },
+        "options": {}
+      },
+      "position": [
+        32,
+        -128
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "cd774983-2c70-4a48-9bb1-fcbd79176c4f",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        -624,
+        320
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "826c678d-279d-44e8-a197-39dbc106916a"
+    },
+    {
+      "id": "2e2bc88b-b89c-4dd8-afca-7e6215c567d5",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "cc98313b-bff2-48e3-a78d-7215870369a9",
+                    "leftValue": "={{ $json.message.document.file_name }}",
+                    "operator": {
+                      "operation": "exists",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Document",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "aa750961-e3cb-4b8e-b0ba-a94ad1da17db",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "contains",
+                      "type": "string"
+                    },
+                    "rightValue": "start"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "/start",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "a876aeb7-6ba2-4662-9099-63d37fb593cf",
+                    "leftValue": "={{ $json.message.text }}",
+                    "operator": {
+                      "operation": "exists",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Text",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -480,
+        304
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3
+    },
+    {
+      "id": "516051a5-536e-4210-bff1-9141a2125c32",
+      "name": "Upload Document",
+      "parameters": {
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "method": "POST",
+        "options": {},
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            }
+          ]
+        },
+        "sendBody": true,
+        "sendQuery": true,
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files"
+      },
+      "position": [
+        336,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "b36e94e7-e59e-4b47-8ea5-1467c4576676",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Google_Rag_Ai",
+          "cachedResultUrl": "/projects/2ZQFKqpo7BMkilsl/datatables/N7O6GQ4MxCBwHVSj",
+          "mode": "list",
+          "value": "N7O6GQ4MxCBwHVSj"
+        },
+        "limit": 1,
+        "operation": "get"
+      },
+      "position": [
+        480,
+        192
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "e4366820-f2f4-4396-a7b2-a5c2ae09568f",
+      "name": "Import File",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "file_name",
+              "value": "={{ $('Upload Document').item.json.file.name }}"
+            }
+          ]
+        },
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            }
+          ]
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "sendQuery": true,
+        "url": "=https://generativelanguage.googleapis.com/v1beta/{{ $json.FileSearchStore_name }}:importFile"
+      },
+      "position": [
+        624,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "e207a286-3173-4b1e-91fb-4f6fc93ba7ee",
+      "name": "True",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "debd9c26-01b5-44ea-9714-7fdc697b94f3",
+              "name": "msg",
+              "type": "string",
+              "value": "Файл Удачно Импортирован"
+            },
+            {
+              "id": "3a2f5c44-bb43-4d30-8668-35ca384e87c0",
+              "name": "chat_id",
+              "type": "string",
+              "value": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        752,
+        128
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "6364a41a-ab67-4eb4-81ce-5fca54d92d70",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.msg }}"
+      },
+      "position": [
+        944,
+        192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d6a1be7b-022a-49b1-9555-efbba260a7a9"
+    },
+    {
+      "id": "64ebe521-92d5-4d73-acba-bc0a55e9c2a0",
+      "name": "False",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "debd9c26-01b5-44ea-9714-7fdc697b94f3",
+              "name": "msg",
+              "type": "string",
+              "value": "Файл Импортирован Неудачно"
+            },
+            {
+              "id": "3a2f5c44-bb43-4d30-8668-35ca384e87c0",
+              "name": "chat_id",
+              "type": "string",
+              "value": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        752,
+        272
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "4496abbf-7a12-49cc-bf21-245b7b6c0ae8",
+      "name": "Обработка",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a83f10a9-3e81-4ce1-9cf6-a88fc6a055de",
+              "name": "chat_id",
+              "type": "string",
+              "value": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+            },
+            {
+              "id": "a8d7b98d-dbbc-4c8e-beae-97c09fc3cf8c",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $('Telegram Trigger').item.json.message.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        336,
+        400
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "4c590321-b086-435e-8fc1-12c8ac647d4c",
+      "name": "AI Agent",
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a help RAG agent. Your job is to answer the user'syour Knowledge Base tool to make sure all of your answers are grounded in truth. Please cite your source when you're giving your answers.\n\nWhen you are sending a query to the Knowledge Base tool, only send over text. No punctuation, quotation marks, or new lines."
+        },
+        "promptType": "define",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        480,
+        400
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
+        }
+      },
+      "id": "3f43e3e1-5248-478b-90fd-c5985706bd38",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        480,
+        576
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
+    },
+    {
+      "id": "62e4eba4-9c08-45d8-beba-e1c058957536",
+      "name": "Knowledge Base",
+      "parameters": {
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"{{ $json.text }}\"\n        }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/ragtest-cgzyg074wfsn\"\n        ]\n      }\n    }\n  ]\n}",
+        "method": "POST",
+        "options": {},
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            }
+          ]
+        },
+        "sendBody": true,
+        "sendQuery": true,
+        "specifyBody": "json",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+      },
+      "position": [
+        624,
+        576
+      ],
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "b61145cf-93fa-4ace-b173-db90520ef05f",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "=Для начала загрузите документ, после того как вам придёт сообщение, отправте свой запрос."
+      },
+      "position": [
+        336,
+        32
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d6a1be7b-022a-49b1-9555-efbba260a7a9"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "583ebf0f-418f-49f3-9755-cd4877cc97be",
+      "name": "Get a file",
+      "parameters": {
+        "additionalFields": {},
+        "fileId": "={{ $json.message.document.file_id }}",
+        "resource": "file"
+      },
+      "position": [
+        160,
+        192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "eb4532a0-fb51-43a5-b674-65ac95d66ecf"
+    },
+    {
+      "id": "5e7c1f5d-5eac-4534-95ed-4f1112ed037c",
+      "name": "Convert to File",
+      "parameters": {
+        "operation": "toText",
+        "options": {
+          "fileName": "=Ответ"
+        },
+        "sourceProperty": "output"
+      },
+      "position": [
+        1056,
+        560
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "e15f2233-65b4-4707-a0f2-cf648c6d75a9",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "f98bf7c5-83fb-4492-abb6-4bbbfd7863d5",
+              "leftValue": "={{ $json.output.length }}",
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": 1200
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        832,
+        400
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "f6f68ddb-fb30-4a14-bed1-847430c3da23",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Обработка').item.json.chat_id }}",
+        "text": "={{ $json.output }}"
+      },
+      "position": [
+        1056,
+        384
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d4c7ccd8-ac02-4598-a95c-8af7215081d3"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "0695530f-7845-4082-9d4c-3d902cd72f71",
+      "name": "Send a document",
+      "parameters": {
+        "additionalFields": {},
+        "binaryData": true,
+        "chatId": "={{ $('Обработка').item.json.chat_id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1232,
+        560
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d4c7ccd8-ac02-4598-a95c-8af7215081d3"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-27T06:54:28.843Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-27T06:54:28.843Z",
+      "workflowId": "iTpLvxtUg0phMNzr"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-11-27T08:05:04.000Z",
+  "versionId": "80d97c5a-285c-4c9f-bbc1-cff6e7279a44"
+}
