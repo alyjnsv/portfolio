@@ -1,0 +1,97 @@
+{
+  "active": false,
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Jira Issue",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-28T07:51:25.184Z",
+  "id": "jpKrBNdOd2Ht4zts",
+  "isArchived": false,
+  "meta": null,
+  "name": "JIRA updating",
+  "nodes": [
+    {
+      "id": "897f066a-8e97-4807-83d2-5773c25b59c4",
+      "name": "When Executed by Another Workflow",
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "key"
+            }
+          ]
+        }
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "f9359494-e567-4736-8d9c-4e6674f674db",
+      "name": "Update Jira Issue",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer MDE5NjU0NDczMDY5OnvC3Mvg1puNeualgtc8bVCL70kY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"fields\": {\n    \"reporter\": {\"name\": \"ai_task_builder\"}\n  }\n}",
+        "method": "PUT",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $json.key }}"
+      },
+      "position": [
+        208,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    }
+  ],
+  "pinData": {
+    "Update Jira Issue": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-28T07:51:25.186Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-28T07:51:25.186Z",
+      "workflowId": "jpKrBNdOd2Ht4zts"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-28T07:53:01.000Z",
+  "versionId": "6a457f23-4e93-4156-a0f6-375993624144"
+}
