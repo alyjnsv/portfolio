@@ -83,6 +83,11 @@
         ]
       ]
     },
+    "Edit Fields1": {
+      "main": [
+        []
+      ]
+    },
     "Message a model": {
       "main": [
         [
@@ -101,6 +106,22 @@
             "index": 0,
             "node": "Code in JavaScript4",
             "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Get an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
           }
         ]
       ]
@@ -118,7 +139,35 @@
     },
     "Update Jira Issue": {
       "main": [
-        []
+        [
+          {
+            "index": 0,
+            "node": "Update Jira Issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Jira Issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          }
+        ]
       ]
     },
     "When Executed by Another Workflow": {
@@ -258,7 +307,7 @@
           "mode": "list",
           "value": "10700"
         },
-        "summary": "={{ $('Code in JavaScript4').item.json.summary }}"
+        "summary": "=[Test]{{ $('Code in JavaScript4').item.json.summary }}"
       },
       "position": [
         -192,
@@ -379,6 +428,9 @@
             },
             {
               "name": "estimate"
+            },
+            {
+              "name": "chat_id"
             }
           ]
         }
@@ -524,7 +576,7 @@
             }
           ]
         },
-        "jsonBody": "={\n  \"fields\": {\n    \"timetracking\": {\"originalEstimate\": \"{{ $('When Executed by Another Workflow').item.json.estimate }}\"}\n  }\n}",
+        "jsonBody": "={\n  \"fields\": {\n    \"timetracking\": {\"originalEstimate\": \"{{ $('When Executed by Another Workflow').item.json.estimate }}\"},\n    \"reporter\": {\"name\": \"kublitskaia.i\"}\n  }\n}",
         "method": "PUT",
         "options": {},
         "sendBody": true,
@@ -546,17 +598,17 @@
           "name": "Jira SW AI Task Builder"
         }
       },
+      "disabled": true,
       "id": "70d7de84-1143-48c3-820a-5577f9dcf9ae",
       "name": "Get an issue",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "LW-22555",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
       "position": [
-        -336,
-        528
+        -576,
+        400
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -589,670 +641,114 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "id": "6a930925-8d44-47c7-b33c-049218994db0",
+      "name": "Update Jira Issue1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer MDE5NjU0NDczMDY5OnvC3Mvg1puNeualgtc8bVCL70kY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"issues\": [\"{{ $('Create an issue').item.json.key }}\"]\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/agile/1.0/sprint/355/issue"
+      },
+      "position": [
+        208,
+        240
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "b0c53461-8a13-4d61-a235-af4619030818",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('Create an issue').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do",
+            "mode": "list",
+            "value": "671"
+          }
+        }
+      },
+      "position": [
+        416,
+        240
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "0dcd8fe2-856f-4f49-b0ab-a1507757c383",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a60fa89d-7592-4fa5-b72f-8a70aca314b6",
+              "name": "task_id",
+              "type": "string",
+              "value": "={{ $('Create an issue').item.json.key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        832,
+        240
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "466d1f15-4738-4113-a451-3e41c09f7b09",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('When Executed by Another Workflow').first().json.chat_id }}",
+        "text": "=Задача создана\n\nhttps://jira.itcomp.space/browse/{{ $('Create an issue').item.json.key }}"
+      },
+      "position": [
+        624,
+        240
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e2697542-d0fb-408d-ac13-3e0bb87dc092"
     }
   ],
   "pinData": {
-    "Get an issue": [
-      {
-        "json": {
-          "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
-          "fields": {
-            "aggregateprogress": {
-              "percent": 100,
-              "progress": 7473,
-              "total": 7473
-            },
-            "aggregatetimeestimate": 0,
-            "aggregatetimeoriginalestimate": 7440,
-            "aggregatetimespent": 7473,
-            "archivedby": null,
-            "archiveddate": null,
-            "assignee": {
-              "active": true,
-              "avatarUrls": {
-                "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-              },
-              "displayName": "Dmitriy Malakhov",
-              "emailAddress": "malakhov.d@net.com",
-              "key": "JIRAUSER17045",
-              "name": "malakhov.d",
-              "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-              "timeZone": "Europe/Moscow"
-            },
-            "attachment": [
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176621/0LDDkTZ5F5u07hW_s0TAs.png",
-                "created": "2025-11-04T11:40:06.540+0000",
-                "filename": "0LDDkTZ5F5u07hW_s0TAs.png",
-                "id": "176621",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176621",
-                "size": 1202089,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176621/_thumb_176621.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176619/brMiB8iDZipAJac8ijNNe.png",
-                "created": "2025-11-04T11:40:06.473+0000",
-                "filename": "brMiB8iDZipAJac8ijNNe.png",
-                "id": "176619",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176619",
-                "size": 793049,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176619/_thumb_176619.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176617/Lz9Bz4QJSYX0xvr-Lmp3j.png",
-                "created": "2025-11-04T11:40:06.546+0000",
-                "filename": "Lz9Bz4QJSYX0xvr-Lmp3j.png",
-                "id": "176617",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176617",
-                "size": 1214562,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176617/_thumb_176617.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176620/rU3kbmlFDLPtPJQvU7E08.png",
-                "created": "2025-11-04T11:40:06.441+0000",
-                "filename": "rU3kbmlFDLPtPJQvU7E08.png",
-                "id": "176620",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176620",
-                "size": 746009,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176620/_thumb_176620.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176618/voyeCPUnH1TlKWiZdX8T1.png",
-                "created": "2025-11-04T11:40:06.461+0000",
-                "filename": "voyeCPUnH1TlKWiZdX8T1.png",
-                "id": "176618",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176618",
-                "size": 726249,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176618/_thumb_176618.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176616/%D0%A2%D0%B5%D1%81%D1%82%D1%8B+%D0%90%D0%98+-+2025-11-04T164033.807.png",
-                "created": "2025-11-04T11:41:52.319+0000",
-                "filename": "Тесты АИ - 2025-11-04T164033.807.png",
-                "id": "176616",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176616",
-                "size": 439685,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176616/_thumb_176616.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176615/%D0%A2%D0%B5%D1%81%D1%82%D1%8B+%D0%90%D0%98+-+2025-11-04T164036.811.png",
-                "created": "2025-11-04T11:41:52.321+0000",
-                "filename": "Тесты АИ - 2025-11-04T164036.811.png",
-                "id": "176615",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176615",
-                "size": 475046,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176615/_thumb_176615.png"
-              },
-              {
-                "author": {
-                  "active": true,
-                  "avatarUrls": {
-                    "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER17045&avatarId=16464",
-                    "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER17045&avatarId=16464",
-                    "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER17045&avatarId=16464",
-                    "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER17045&avatarId=16464"
-                  },
-                  "displayName": "Dmitriy Malakhov",
-                  "emailAddress": "malakhov.d@net.com",
-                  "key": "JIRAUSER17045",
-                  "name": "malakhov.d",
-                  "self": "https://jira.itcomp.space/rest/api/2/user?username=malakhov.d",
-                  "timeZone": "Europe/Moscow"
-                },
-                "content": "https://jira.itcomp.space/secure/attachment/176614/%D0%A2%D0%B5%D1%81%D1%82%D1%8B+%D0%90%D0%98+-+2025-11-04T164039.447.png",
-                "created": "2025-11-04T11:41:52.330+0000",
-                "filename": "Тесты АИ - 2025-11-04T164039.447.png",
-                "id": "176614",
-                "mimeType": "image/png",
-                "self": "https://jira.itcomp.space/rest/api/2/attachment/176614",
-                "size": 506375,
-                "thumbnail": "https://jira.itcomp.space/secure/thumbnail/176614/_thumb_176614.png"
-              }
-            ],
-            "comment": {
-              "comments": [],
-              "maxResults": 0,
-              "startAt": 0,
-              "total": 0
-            },
-            "components": [],
-            "created": "2025-11-04T08:28:11.207+0000",
-            "creator": {
-              "active": true,
-              "avatarUrls": {
-                "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER14887&avatarId=14239",
-                "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER14887&avatarId=14239",
-                "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER14887&avatarId=14239",
-                "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER14887&avatarId=14239"
-              },
-              "displayName": "Alexandr Bogatkin",
-              "emailAddress": "bogatkin.a@net.com",
-              "key": "JIRAUSER14887",
-              "name": "bogatkin.a",
-              "self": "https://jira.itcomp.space/rest/api/2/user?username=bogatkin.a",
-              "timeZone": "Europe/Moscow"
-            },
-            "customfield_10014": null,
-            "customfield_10015": null,
-            "customfield_10016": null,
-            "customfield_10018": null,
-            "customfield_10019": "0|i1f7ts:",
-            "customfield_10020": [
-              "com.atlassian.greenhopper.service.sprint.Sprint@40959636[activatedDate=2025-11-03T06:56:18.396Z,autoStartStop=false,completeDate=2025-11-10T06:12:55.918Z,endDate=2025-11-10T06:54:00.000Z,goal=,id=352,incompleteIssuesDestinationId=353,name=LW Спринт 65,rapidViewId=54,sequence=352,startDate=2025-11-03T06:54:00.000Z,state=CLOSED,synced=false]",
-              "com.atlassian.greenhopper.service.sprint.Sprint@36a1853e[activatedDate=2025-11-10T06:14:57.188Z,autoStartStop=false,completeDate=2025-11-17T08:45:45.784Z,endDate=2025-11-17T06:12:00.000Z,goal=,id=353,incompleteIssuesDestinationId=354,name=LW Спринт 66,rapidViewId=54,sequence=353,startDate=2025-11-10T06:12:00.000Z,state=CLOSED,synced=false]",
-              "com.atlassian.greenhopper.service.sprint.Sprint@193349be[activatedDate=2025-11-17T08:48:15.800Z,autoStartStop=false,completeDate=2025-11-24T05:59:59.288Z,endDate=2025-11-24T08:45:00.000Z,goal=,id=354,incompleteIssuesDestinationId=355,name=LW Спринт 67,rapidViewId=54,sequence=354,startDate=2025-11-17T08:45:00.000Z,state=CLOSED,synced=false]",
-              "com.atlassian.greenhopper.service.sprint.Sprint@4f188443[activatedDate=2025-11-24T06:01:55.925Z,autoStartStop=false,completeDate=<null>,endDate=2025-12-01T05:57:00.000Z,goal=,id=355,incompleteIssuesDestinationId=<null>,name=LW Спринт 68,rapidViewId=54,sequence=355,startDate=2025-11-24T05:57:00.000Z,state=ACTIVE,synced=false]"
-            ],
-            "customfield_10021": null,
-            "customfield_10022": null,
-            "customfield_10023": null,
-            "customfield_10036": null,
-            "customfield_10037": null,
-            "customfield_10038": null,
-            "customfield_10041": null,
-            "customfield_10042": null,
-            "customfield_10044": null,
-            "customfield_10052": null,
-            "customfield_10053": null,
-            "customfield_10055": null,
-            "customfield_10057": null,
-            "customfield_10058": null,
-            "customfield_10067": null,
-            "customfield_10068": null,
-            "customfield_10079": null,
-            "customfield_10086": null,
-            "customfield_10200": null,
-            "customfield_10201": null,
-            "customfield_10300": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@2e207488[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@65586a97[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2339f044[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5932a66[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@f943d61[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@381a4a8[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6fd6cf4c[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@730a08ca[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5d5b5cff[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@53f10718[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@a041e85[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@29eb1b57[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":true}}",
-            "customfield_10400": null,
-            "customfield_10401": null,
-            "customfield_10402": null,
-            "customfield_10403": null,
-            "customfield_10500": "0|hzzzzz:",
-            "customfield_10600": null,
-            "customfield_10601": null,
-            "customfield_10700": [
-              {
-                "disabled": false,
-                "id": "10104",
-                "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/10104",
-                "value": "2D Art"
-              }
-            ],
-            "customfield_11101": {
-              "allFinished": true,
-              "created": 1764260967330,
-              "durationAsString": "2h, 4m",
-              "durationAsStringBoard": "2h, 4m",
-              "durationAsStringCsv": "2h, 4m",
-              "fieldKey": "assignee",
-              "fieldName": "Assignee",
-              "fieldValuesMap": {
-                "empty": "empty"
-              },
-              "isAssigneeField": true,
-              "statusTimesMap": {
-                "3": {
-                  "allFinished": true,
-                  "created": 1764260967331,
-                  "durationAsString": "2h, 4m",
-                  "durationAsStringBoard": "2h, 4m",
-                  "durationAsStringCsv": "2h, 4m",
-                  "fieldTimes": [
-                    {
-                      "allFinished": true,
-                      "durationAsString": "2h, 4m",
-                      "durationAsStringBoard": "2h, 4m",
-                      "durationAsStringCsv": "2h, 4m",
-                      "fieldValue": "JIRAUSER17045",
-                      "timeDetails": [
-                        {
-                          "duration": 7473,
-                          "durationAsString": "2h, 4m",
-                          "durationAsStringBoard": "2h, 4m",
-                          "durationAsStringCsv": "2h, 4m",
-                          "end": 1762256516238,
-                          "finished": true,
-                          "start": 1762249042883
-                        }
-                      ],
-                      "totalDuration": 7473
-                    }
-                  ],
-                  "fieldValues": [
-                    "JIRAUSER17045"
-                  ],
-                  "statusId": "3",
-                  "totalDuration": 7473
-                }
-              },
-              "statuses": [
-                "3"
-              ],
-              "totalDuration": 7473
-            },
-            "customfield_11102": "TimeInStatus(running=true, updateTime=1764260967334, timeInStatus=876483)",
-            "customfield_11401": null,
-            "customfield_11402": null,
-            "customfield_11405": "",
-            "customfield_12400": null,
-            "customfield_12505": "h3. Финальный результат\r\n\r\nСгенерированы и откорректированы иконки навыка персонажа в размере *512х512*\r\nВсе изображения оптимизированы по весу, отлично читаются при различных размерах и соответствуют стилистике проекта.",
-            "customfield_12506": null,
-            "customfield_12600": null,
-            "customfield_12700": {
-              "allFinished": true,
-              "created": 1764260967337,
-              "durationAsString": "2 hours, 4 minutes, 33 seconds",
-              "durationAsStringBoard": "2 hours, 4 minutes, 33 seconds",
-              "durationAsStringCsv": "2 hours, 4 minutes, 33 seconds",
-              "fieldKey": "assignee",
-              "fieldName": "Assignee",
-              "fieldValuesMap": {
-                "empty": "empty"
-              },
-              "isAssigneeField": true,
-              "statusTimesMap": {
-                "3": {
-                  "allFinished": true,
-                  "created": 1764260967338,
-                  "durationAsString": "2 hours, 4 minutes, 33 seconds",
-                  "durationAsStringBoard": "2 hours, 4 minutes, 33 seconds",
-                  "durationAsStringCsv": "2 hours, 4 minutes, 33 seconds",
-                  "fieldTimes": [
-                    {
-                      "allFinished": true,
-                      "durationAsString": "2 hours, 4 minutes, 33 seconds",
-                      "durationAsStringBoard": "2 hours, 4 minutes, 33 seconds",
-                      "durationAsStringCsv": "2 hours, 4 minutes, 33 seconds",
-                      "fieldValue": "JIRAUSER17045",
-                      "timeDetails": [
-                        {
-                          "duration": 7473,
-                          "durationAsString": "2 hours, 4 minutes, 33 seconds",
-                          "durationAsStringBoard": "2 hours, 4 minutes, 33 seconds",
-                          "durationAsStringCsv": "2 hours, 4 minutes, 33 seconds",
-                          "end": 1762256516238,
-                          "finished": true,
-                          "start": 1762249042883
-                        }
-                      ],
-                      "totalDuration": 7473
-                    }
-                  ],
-                  "fieldValues": [
-                    "JIRAUSER17045"
-                  ],
-                  "statusId": "3",
-                  "totalDuration": 7473
-                }
-              },
-              "statuses": [
-                "3"
-              ],
-              "totalDuration": 7473
-            },
-            "customfield_12701": {
-              "allFinished": true,
-              "created": 1764260967334,
-              "durationAsString": "10d, 4h, 47m, 58s",
-              "durationAsStringBoard": "10d, 4h, 47m, 58s",
-              "durationAsStringCsv": "10d, 4h, 47m, 58s",
-              "fieldKey": "assignee",
-              "fieldName": "Assignee",
-              "fieldValuesMap": {
-                "empty": "empty"
-              },
-              "isAssigneeField": true,
-              "statusTimesMap": {
-                "3": {
-                  "allFinished": true,
-                  "created": 1764260967335,
-                  "durationAsString": "2h, 4m, 33s",
-                  "durationAsStringBoard": "2h, 4m, 33s",
-                  "durationAsStringCsv": "2h, 4m, 33s",
-                  "fieldTimes": [
-                    {
-                      "allFinished": true,
-                      "durationAsString": "2h, 4m, 33s",
-                      "durationAsStringBoard": "2h, 4m, 33s",
-                      "durationAsStringCsv": "2h, 4m, 33s",
-                      "fieldValue": "JIRAUSER17045",
-                      "timeDetails": [
-                        {
-                          "duration": 7473,
-                          "durationAsString": "2h, 4m, 33s",
-                          "durationAsStringBoard": "2h, 4m, 33s",
-                          "durationAsStringCsv": "2h, 4m, 33s",
-                          "end": 1762256516238,
-                          "finished": true,
-                          "start": 1762249042883
-                        }
-                      ],
-                      "totalDuration": 7473
-                    }
-                  ],
-                  "fieldValues": [
-                    "JIRAUSER17045"
-                  ],
-                  "statusId": "3",
-                  "totalDuration": 7473
-                },
-                "10004": {
-                  "allFinished": true,
-                  "created": 1764260967335,
-                  "durationAsString": "23m, 58s",
-                  "durationAsStringBoard": "23m, 58s",
-                  "durationAsStringCsv": "23m, 58s",
-                  "fieldTimes": [
-                    {
-                      "allFinished": true,
-                      "durationAsString": "23m, 58s",
-                      "durationAsStringBoard": "23m, 58s",
-                      "durationAsStringCsv": "23m, 58s",
-                      "fieldValue": "JIRAUSER17045",
-                      "timeDetails": [
-                        {
-                          "duration": 1438,
-                          "durationAsString": "23m, 58s",
-                          "durationAsStringBoard": "23m, 58s",
-                          "durationAsStringCsv": "23m, 58s",
-                          "end": 1762249042883,
-                          "finished": true,
-                          "start": 1762247604124
-                        }
-                      ],
-                      "totalDuration": 1438
-                    }
-                  ],
-                  "fieldValues": [
-                    "JIRAUSER17045"
-                  ],
-                  "statusId": "10004",
-                  "totalDuration": 1438
-                },
-                "10005": {
-                  "allFinished": true,
-                  "created": 1764260967335,
-                  "durationAsString": "10d, 2h, 19m, 27s",
-                  "durationAsStringBoard": "10d, 2h, 19m, 27s",
-                  "durationAsStringCsv": "10d, 2h, 19m, 27s",
-                  "fieldTimes": [
-                    {
-                      "allFinished": true,
-                      "durationAsString": "10d, 2h, 19m, 27s",
-                      "durationAsStringBoard": "10d, 2h, 19m, 27s",
-                      "durationAsStringCsv": "10d, 2h, 19m, 27s",
-                      "fieldValue": "JIRAUSER17045",
-                      "timeDetails": [
-                        {
-                          "duration": 296367,
-                          "durationAsString": "10d, 2h, 19m, 27s",
-                          "durationAsStringBoard": "10d, 2h, 19m, 27s",
-                          "durationAsStringCsv": "10d, 2h, 19m, 27s",
-                          "end": 1763384484093,
-                          "finished": true,
-                          "start": 1762256516238
-                        }
-                      ],
-                      "totalDuration": 296367
-                    }
-                  ],
-                  "fieldValues": [
-                    "JIRAUSER17045"
-                  ],
-                  "statusId": "10005",
-                  "totalDuration": 296367
-                }
-              },
-              "statuses": [
-                "10004",
-                "3",
-                "10005"
-              ],
-              "totalDuration": 305278
-            },
-            "customfield_12801": null,
-            "customfield_12804": null,
-            "customfield_12818": null,
-            "customfield_12921": {
-              "disabled": false,
-              "id": "13314",
-              "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/13314",
-              "value": "No"
-            },
-            "description": "h3. 🔎 Текущее состояние\r\n\r\nДля обозначения новых игровых механик отсутствуют соответствующие иконки. Текущий интерфейс не позволяет визуально идентифицировать эти элементы, что снижает удобство и визуальную связность UI.\r\nh3. 🎯 Ожидаемый результат\r\n\r\nТри читаемые и выразительные иконки, выполненные в едином стиле проекта, отражающие смысл и геймплейное назначение каждой сущности.\r\n----\r\n*Список иконок:*\r\n # *Icon_Artillery_Howitzer*\r\n_Гаубица_ — иконка должна отображать артиллерийское орудие, классической или футуристической формы. Возможны образы: дуло, снаряд, позиция стрельбы по дуге, механизированная платформа.\r\n\r\n # *Icon_Tech_MultiLoading*\r\n_Мультизагрузка_ — иконка логистической технологии. Могут быть использованы образы: несколько контейнеров, параллельная загрузка, стрелки загрузки, складские системы или иконка с мульти-секторами.\r\n\r\n # *Icon_Tech_BallisticBoost*\r\n_Баллистическое усиление_ — улучшение боевого оружия. Визуально: траектория полёта с усиленным следом, снаряд с энергетическим или взрывным эффектом, графическое усиление траектории/ударной силы.\r\n\r\n----\r\nh2. 📋 Шаги воспроизведения\r\n # Изучить визуальный стиль проекта и интерфейс, где будут использоваться иконки.\r\n\r\n # Сформировать визуальные концепты на основе описания выше.\r\n\r\n # Сгенерировать изображения через AI или вручную.\r\n\r\n # Провести ручную доработку:\r\n\r\n ** Повышение читаемости\r\n\r\n ** Удаление визуальных артефактов\r\n\r\n ** Балансировка композиции\r\n\r\n # Подготовить финальные файлы:\r\n\r\n ** PNG\r\n\r\n ** Прозрачный фон\r\n\r\n ** Размер: 512x512 пикселей\r\n\r\n ** Цветовое пространство: sRGB\r\n\r\n ** Названия файлов:\r\n\r\n *** {{Icon_Artillery_Howitzer.png}}\r\n\r\n *** {{Icon_Tech_MultiLoading.png}}\r\n\r\n *** {{Icon_Tech_BallisticBoost.png}}\r\n\r\n # Оптимизировать вес файлов.\r\n\r\n # Проверить соответствие критериям приёмки.\r\n\r\n # Разместить готовые иконки в Figma-доске \"Иконки и сплешы\".\r\n\r\n----\r\nh2. ✅ Критерии приемки\r\n\r\nНа основании документа «Критерии приёмки»:\r\n * Имена файлов на английском, с префиксом {{Icon_…}}\r\n\r\n * Размер: 512x512 пикселей (степень двойки)\r\n\r\n * Формат: PNG с прозрачностью\r\n\r\n * Цветовое пространство: sRGB\r\n\r\n * Минимальный вес\r\n\r\n * Без артефактов\r\n\r\n * Читаемость в уменьшенном масштабе\r\n\r\n * Соответствие стилистике проекта",
-            "duedate": null,
-            "environment": null,
-            "fixVersions": [],
-            "issuelinks": [],
-            "issuetype": {
-              "avatarId": 10311,
-              "description": "",
-              "iconUrl": "https://jira.itcomp.space/secure/viewavatar?size=xsmall&avatarId=10311&avatarType=issuetype",
-              "id": "10302",
-              "name": "Art",
-              "self": "https://jira.itcomp.space/rest/api/2/issuetype/10302",
-              "subtask": false
-            },
-            "labels": [],
-            "lastViewed": null,
-            "priority": {
-              "iconUrl": "https://jira.itcomp.space/images/icons/priorities/medium.svg",
-              "id": "3",
-              "name": "Medium",
-              "self": "https://jira.itcomp.space/rest/api/2/priority/3"
-            },
-            "progress": {
-              "percent": 100,
-              "progress": 7473,
-              "total": 7473
-            },
-            "project": {
-              "avatarUrls": {
-                "16x16": "https://jira.itcomp.space/secure/projectavatar?size=xsmall&avatarId=10324",
-                "24x24": "https://jira.itcomp.space/secure/projectavatar?size=small&avatarId=10324",
-                "32x32": "https://jira.itcomp.space/secure/projectavatar?size=medium&avatarId=10324",
-                "48x48": "https://jira.itcomp.space/secure/projectavatar?avatarId=10324"
-              },
-              "id": "10700",
-              "key": "LW",
-              "name": "Last War",
-              "projectCategory": {
-                "description": "Structure of game development",
-                "id": "10001",
-                "name": "Game Development",
-                "self": "https://jira.itcomp.space/rest/api/2/projectCategory/10001"
-              },
-              "projectTypeKey": "software",
-              "self": "https://jira.itcomp.space/rest/api/2/project/10700"
-            },
-            "reporter": {
-              "active": true,
-              "avatarUrls": {
-                "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER14887&avatarId=14239",
-                "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER14887&avatarId=14239",
-                "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER14887&avatarId=14239",
-                "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER14887&avatarId=14239"
-              },
-              "displayName": "Alexandr Bogatkin",
-              "emailAddress": "bogatkin.a@net.com",
-              "key": "JIRAUSER14887",
-              "name": "bogatkin.a",
-              "self": "https://jira.itcomp.space/rest/api/2/user?username=bogatkin.a",
-              "timeZone": "Europe/Moscow"
-            },
-            "resolution": null,
-            "resolutiondate": null,
-            "security": {
-              "description": "Default Level",
-              "id": "10003",
-              "name": "Viewer",
-              "self": "https://jira.itcomp.space/rest/api/2/securitylevel/10003"
-            },
-            "status": {
-              "description": "",
-              "iconUrl": "https://jira.itcomp.space/images/icons/statuses/generic.png",
-              "id": "10916",
-              "name": "Art Approve",
-              "self": "https://jira.itcomp.space/rest/api/2/status/10916",
-              "statusCategory": {
-                "colorName": "inprogress",
-                "id": 4,
-                "key": "indeterminate",
-                "name": "In Progress",
-                "self": "https://jira.itcomp.space/rest/api/2/statuscategory/4"
-              }
-            },
-            "subtasks": [],
-            "summary": "[ART] Генерация набора из 3 2D-иконок (иконки навыков)",
-            "timeestimate": 0,
-            "timeoriginalestimate": 7440,
-            "timespent": 7473,
-            "timetracking": {
-              "originalEstimate": "2h 4m",
-              "originalEstimateSeconds": 7440,
-              "remainingEstimate": "0m",
-              "remainingEstimateSeconds": 0,
-              "timeSpent": "2h 4m",
-              "timeSpentSeconds": 7473
-            },
-            "updated": "2025-11-24T06:00:41.126+0000",
-            "versions": [],
-            "watches": {
-              "isWatching": false,
-              "self": "https://jira.itcomp.space/rest/api/2/issue/LW-22555/watchers",
-              "watchCount": 1
-            },
-            "worklog": {
-              "maxResults": 20,
-              "startAt": 0,
-              "total": 1,
-              "worklogs": []
-            },
-            "workratio": 100
-          },
-          "id": "317996",
-          "key": "LW-22555",
-          "renderedFields": null,
-          "self": "https://jira.itcomp.space/rest/api/2/issue/317996"
-        }
-      }
-    ],
     "Telegram Trigger": [
       {
         "json": {
@@ -1303,7 +799,7 @@
     "When Executed by Another Workflow": [
       {
         "json": {
-          "Tasks": "[Название задачи]\nГенерация 3D-модели здания Building_RationFactory\n\n[Цель]\nПолучить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект.\n\n[Описание задачи / Что нужно сделать]\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Объект представляет собой высокотехнологичный агрокомплекс, состоящий из центрального управляющего модуля и двух примыкающих вертикальных гидропонных ферм. Основание — стандартная темная платформа с закругленными углами и яркой cyan-подсветкой по периметру. Центральный модуль имеет кубическую форму с белыми композитными панелями. Гидропонные фермы выполнены в виде прозрачных цилиндрических башен с видимыми ярусами светящихся зеленых растений внутри.\n\nАрхитектурные детали:\nФасад центрального модуля оснащен голографическим дисплеем, отображающим производственные циклы. Поверхность покрыта тонкими, светящимися линиями-схемами. Прозрачные башни гидропоники имеют внутреннюю структуру из металлических рам, по которым циркулирует питательный гель с неоновым зеленым свечением. На крыше центрального модуля расположена система климат-контроля с вентиляционными решетками.\n\nФункциональные элементы:\nСбоку от центрального модуля расположен автоматизированный конвейер, по которому готовые пайки в герметичных оранжевых контейнерах выгружаются на небольшую платформу выдачи. В основании гидропонных башен видны резервуары с питательной жидкостью и системами фильтрации.\n\nКлючевые элементы стиля:\nМодульность и функциональность. Чистые, стерильные поверхности без грязи и повреждений. Основной визуальный акцент создается за счет контраста белых матовых панелей, прозрачного стекла и ярких неоновых элементов (зеленые растения, оранжевые контейнеры, циан-подсветка).\n\nШаги выполнения:\n1. Создать 3D-модель агрокомплекса согласно концептуальному описанию.\n2. Применить материалы из указанной цветовой палитры.\n3. Настроить изометрическую проекцию 30 градусов.\n4. Добавить glow-эффекты для гидропонных ферм, подсветки платформы и индикаторов.\n5. Выполнить рендер на белом фоне.\n6. Проверить читаемость силуэта и функциональных элементов.\n7. Экспортировать в указанном формате.\n\n[Требования к стилю]\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистые формы, порядок, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальная форма для мгновенной идентификации функции здания.\n\nЦветовая палитра:\nБелый композит (#F0F3F4) — используется для основного корпуса центрального модуля.\nНеоновый зеленый (#2ECC71) — используется для подсветки растений в гидропонных башнях.\nАкцентный оранжевый (#E67E22) — используется для контейнеров с пайками и элементов конвейера.\nЦиан (#00FFFF) — используется для подсветки платформы-основания.\n\nМатериалы и поверхности:\nМатовые композитные панели, прозрачное стекло для башен, полированный металл для внутренних конструкций, светящиеся пластики.\n\nОсвещение:\nМягкое рассеянное освещение. Основная яркость исходит от встроенных glow-элементов. Глубокие, но не резкие тени.\n\n[Формат и технические параметры]\nФормат файла: FBX\nПолигонаж: до 15000 треугольников\nТекстуры: 2048x2048 px, PNG\nЦветовое пространство: sRGB\nРендер: белый фон, разрешение 1024x1024 px\nНейминг файла: Building_RationFactory\n\n[Критерии приёмки]\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат FBX, полигонаж до 15000, текстуры 2048x2048.\nКорректная изометрическая проекция 30 градусов.\nНаличие платформы-основания с cyan-подсветкой краев.\nИспользованы цвета из указанной палитры (HEX-коды соответствуют).\nЧитаемый и узнаваемый силуэт, передающий функцию производства еды.\nОтсутствие артефактов рендера и пересветов.\n\n[Ресурсы и ссылки]\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
+          "Tasks": "[Название задачи] Генерация 3D-модели здания Building_RationFactory [Цель] Получить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект. [Описание задачи / Что нужно сделать] Концептуальное описание: Форма и композиция: Строгая изометрическая проекция с углом 30 градусов. Объект представляет собой высокотехнологичный агрокомплекс, состоящий из центрального управляющего модуля и четырех примыкающих к нему цилиндрических био-куполов. Вся конструкция размещена на стандартной темной платформе с закругленными углами и яркой cyan-подсветкой по периметру. Центральный модуль имеет два уровня с плоской крышей, на которой расположена антенна связи. Архитектурные детали: Стены центрального модуля выполнены из гладких композитных панелей с вертикальными неоновыми вставками оранжевого цвета. Био-купола сделаны из сегментированного полупрозрачного стекла, через которое просматриваются ряды гидропонных установок со светящейся биомассой. Соединительные шлюзы между модулем и куполами оснащены герметичными дверями и панелями управления. Функциональные элементы: На фасаде центрального модуля расположен голографический дисплей, отображающий циклы производства и уровень запасов. Внешняя конвейерная система транспортирует готовые герметичные контейнеры с пайками от био-куполов к погрузочной платформе, расположенной сбоку от основного модуля. Вентиляционные решетки с внутренней подсветкой встроены в крышу центрального блока. Ключевые элементы стиля: Модульность и чистые геометрические формы. Четко читаемый силуэт, передающий функцию производства. Встроенная подсветка как основной источник яркости. Отсутствие беспорядка, грязи и хаотичных элементов. Изоляция на белом фоне. Шаги выполнения: 1. Создать 3D-модель здания согласно концептуальному описанию. 2. Применить материалы из указанной цветовой палитры. 3. Настроить изометрическую проекцию 30 градусов. 4. Добавить glow-эффекты для энергетических элементов и биомассы. 5. Выполнить рендер на белом фоне. 6. Проверить читаемость силуэта и модульных элементов. 7. Экспортировать в указанном формате. [Требования к стилю] Жанр и общая стилистика: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне. Принадлежность к миру: Технологическая база игрока — чистые формы, порядок, прогресс. Ключевые визуальные особенности: Строгая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальный силуэт для узнаваемости здания. Цветовая палитра: Жженый оранжевый (#D35400) — используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон. [Формат и технические параметры] Формат файла: FBX Полигонаж: до 15000 треугольников Текстуры: 2048x2048 px, PNG Цветовое пространство: sRGB Рендер: белый фон, разрешение 1024x1024 px Нейминг файла: Building_RationFactory [Критерии приёмки] Оценка бота качества >= 95% Соответствие техническим параметрам: формат FBX, полигонаж до 15000, текстуры 2048x2048. Корректная изометрическая проекция 30 градусов. Наличие платформы-основания с cyan-подсветкой краев. Использованы цвета из указанной палитры (HEX-коды соответствуют). Читаемый силуэт здания, функция производства легко угадывается. Отсутствие артефактов рендера и пересветов. Одобрение арт-лида. [Ресурсы и ссылки] Бот оценки качества: [уточнить у арт-лида] Figma-доска проекта: [уточнить у арт-лида] Стайлгайд проекта: [уточнить у арт-лида]",
           "estimate": "3h"
         }
       }
@@ -1324,6 +820,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-27T16:51:44.000Z",
-  "versionId": "3ef8799e-4eb0-4c79-8ece-7a33e36a54b8"
+  "updatedAt": "2025-11-28T13:31:05.000Z",
+  "versionId": "68c02b16-7947-4032-8d8e-98b2f03534b9"
 }
