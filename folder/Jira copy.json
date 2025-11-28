@@ -1,0 +1,475 @@
+{
+  "active": false,
+  "connections": {
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Message a model1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "set_mapping_fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create an issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Jira Issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message2": {
+      "main": [
+        []
+      ]
+    },
+    "Update Jira Issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Jira Issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Jira Issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "set_mapping_fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-28T13:35:04.440Z",
+  "id": "yorZkJ5Gs9k8p8M2",
+  "isArchived": false,
+  "meta": null,
+  "name": "Jira copy",
+  "nodes": [
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "c70309be-5afd-43db-8945-212073f1d2d3",
+      "name": "Create an issue",
+      "parameters": {
+        "additionalFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "=customfield_10700"
+                },
+                "fieldValue": "={{ $json.board_label }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_12921"
+                },
+                "fieldValue": "={{ $json['Need TA'] }}"
+              }
+            ]
+          },
+          "description": "={{ $('Code in JavaScript4').item.json.description }}",
+          "priority": {
+            "__rl": true,
+            "cachedResultName": "Medium",
+            "mode": "list",
+            "value": "3"
+          }
+        },
+        "issueType": {
+          "__rl": true,
+          "cachedResultName": "Art",
+          "mode": "list",
+          "value": "10302"
+        },
+        "jiraVersion": "serverPat",
+        "project": {
+          "__rl": true,
+          "cachedResultName": "Last War",
+          "mode": "list",
+          "value": "10700"
+        },
+        "summary": "=[Test]{{ $('Code in JavaScript4').item.json.summary }}"
+      },
+      "position": [
+        1248,
+        -16
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "cd66e97a-c2e0-4bd4-9778-ebb5628f81ab",
+      "name": "When Executed by Another Workflow",
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "Tasks"
+            },
+            {
+              "name": "estimate"
+            },
+            {
+              "name": "chat_id"
+            }
+          ]
+        }
+      },
+      "position": [
+        -128,
+        -16
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "3df56635-aa32-4130-8e72-019484ae01e8",
+      "name": "Code in JavaScript3",
+      "parameters": {
+        "jsCode": "const rawText = $input.first().json.Task;\n\n// Заменяем literal \\n на реальные переносы строк\nconst text = rawText.replace(/\\\\n/g, '\\n');\n\n// Определяем формат входных данных\nconst isNewFormat = text.indexOf('[Название задачи]') !== -1;\nconst isOldFormat = text.indexOf('Название:') !== -1 && text.indexOf('Тип объекта:') !== -1;\n\nlet asset = {\n  name: '',\n  type: '',\n  sections: [],\n  colorPalette: [],\n  rawText: text\n};\n\nif (isNewFormat) {\n  // Новый формат с [секциями]\n  const sectionRegex = /\\[([^\\]]+)\\]/g;\n  const parts = text.split(sectionRegex);\n  \n  for (let i = 1; i < parts.length; i += 2) {\n    const sectionName = parts[i].trim();\n    const sectionContent = (parts[i + 1] || '').trim();\n    \n    asset.sections.push({\n      name: sectionName,\n      content: sectionContent\n    });\n    \n    // Извлекаем название\n    if (sectionName === 'Название задачи') {\n      asset.name = sectionContent.split('\\n')[0].trim();\n    }\n    \n    // Извлекаем тип из названия\n    if (asset.name.indexOf('Icon_') === 0) {\n      asset.type = 'Иконка';\n    } else if (asset.name.indexOf('Building_') === 0) {\n      asset.type = 'Здание';\n    } else {\n      asset.type = 'Ассет';\n    }\n  }\n  \n  // Извлекаем цветовую палитру\n  const paletteMatch = text.match(/Цветовая палитра:([^[]+)/);\n  if (paletteMatch) {\n    const paletteText = paletteMatch[1];\n    const colorMatches = paletteText.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*([^\\n]+)/g);\n    if (colorMatches) {\n      colorMatches.forEach(function(match) {\n        const parts = match.match(/([А-Яа-яA-Za-z-]+)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*[-—]\\s*(.+)/);\n        if (parts) {\n          asset.colorPalette.push({\n            name: parts[1].trim(),\n            hex: parts[2],\n            usage: parts[3].trim()\n          });\n        }\n      });\n    }\n  }\n  \n} else if (isOldFormat) {\n  // Старый формат с \"Название:\", \"Тип объекта:\" и т.д.\n  let currentSection = '';\n  const lines = text.split('\\n');\n  \n  const sectionMap = {\n    'Краткое описание:': 'shortDescription',\n    'Роль/назначение:': 'role',\n    'Форма и композиция:': 'formAndComposition',\n    'Цвет и материалы:': 'colorAndMaterials',\n    'Архитектурные детали:': 'architecturalDetails',\n    'Функциональные элементы:': 'functionalElements',\n    'Ключевые элементы стиля:': 'styleElements',\n    'Общая стилистика проекта:': 'generalStyle',\n    'Цветовая палитра:': 'colorPalette'\n  };\n  \n  asset.shortDescription = '';\n  asset.role = '';\n  asset.formAndComposition = '';\n  asset.colorAndMaterials = '';\n  asset.architecturalDetails = '';\n  asset.functionalElements = '';\n  asset.styleElements = '';\n  asset.generalStyle = '';\n  \n  for (let i = 0; i < lines.length; i++) {\n    const trimmed = lines[i].trim();\n    if (!trimmed) continue;\n    \n    if (trimmed.indexOf('Название:') === 0) {\n      asset.name = trimmed.replace('Название:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Тип объекта:') === 0) {\n      asset.type = trimmed.replace('Тип объекта:', '').trim();\n      currentSection = '';\n    } else if (trimmed.indexOf('Описание и адаптация:') === 0) {\n      currentSection = '';\n    } else {\n      // Проверяем секции\n      let foundSection = false;\n      for (let key in sectionMap) {\n        if (trimmed.indexOf(key) === 0) {\n          currentSection = sectionMap[key];\n          foundSection = true;\n          break;\n        }\n      }\n      \n      if (!foundSection && currentSection) {\n        if (currentSection === 'colorPalette') {\n          const match = trimmed.match(/(.+?)\\s*\\((#[A-Fa-f0-9]{6})\\)\\s*используется для\\s*(.+)/);\n          if (match) {\n            asset.colorPalette.push({\n              name: match[1].trim(),\n              hex: match[2],\n              usage: match[3].replace(/\\.$/, '').trim()\n            });\n          }\n        } else {\n          asset[currentSection] = asset[currentSection] + (asset[currentSection] ? ' ' : '') + trimmed;\n        }\n      }\n    }\n  }\n  \n  // Формируем sections для старого формата\n  asset.sections = [\n    { name: 'Описание', content: asset.shortDescription },\n    { name: 'Роль/назначение', content: asset.role },\n    { name: 'Форма и композиция', content: asset.formAndComposition },\n    { name: 'Цвет и материалы', content: asset.colorAndMaterials },\n    { name: 'Архитектурные детали', content: asset.architecturalDetails },\n    { name: 'Функциональные элементы', content: asset.functionalElements },\n    { name: 'Стилистика', content: asset.generalStyle }\n  ].filter(function(s) { return s.content; });\n  \n} else {\n  // Неизвестный формат - берём как есть\n  asset.name = 'Unknown_Asset';\n  asset.type = 'Ассет';\n  asset.sections = [{ name: 'Описание', content: text }];\n}\n\nreturn [{ json: asset }];"
+      },
+      "position": [
+        288,
+        -16
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "8299e2cc-5440-4336-b517-835137df4507",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1071214-8f5c-4ffd-8f64-805b943525ab",
+              "name": "Task",
+              "type": "string",
+              "value": "={{ $json.Tasks }}"
+            },
+            {
+              "id": "9a6af0e9-55ee-483e-bcab-8b1ef0172b79",
+              "name": "Estimate",
+              "type": "string",
+              "value": "={{ $json.estimate }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        80,
+        -16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "41e49f4f-8d8d-4a98-ac69-f8856470112b",
+      "name": "Code in JavaScript4",
+      "parameters": {
+        "jsCode": "const asset = $('Code in JavaScript3').first().json;\nconst aiPrompt = $input.first().json.message.content;\n\n// Генерируем путь QNAP\nconst date = new Date().toISOString().split('T')[0].replace(/-/g, '');\nconst typeFolder = asset.type === 'Иконка' ? 'Icons' : \n                   asset.type === 'Здание' ? 'Buildings' : 'Other';\nconst qnapPath = '//QNAP/ART/Assets/' + typeFolder + '/' + asset.name + '/';\nconst fileName = asset.name + '_v001_' + date + '.png';\n\n// Формируем цветовую палитру\nlet paletteText = '';\nif (asset.colorPalette && asset.colorPalette.length > 0) {\n  for (let i = 0; i < asset.colorPalette.length; i++) {\n    const c = asset.colorPalette[i];\n    paletteText = paletteText + '- ' + c.hex + ' (' + c.name + '): ' + c.usage + '\\n';\n  }\n}\n\n// Формируем описание ассета\nlet assetDescription = '';\nif (asset.shortDescription) {\n  assetDescription = asset.shortDescription;\n} else if (asset.sections && asset.sections.length > 0) {\n  assetDescription = asset.sections[0].content || '';\n}\n\n// Формируем техническое описание\nlet technicalDetails = '';\nif (asset.formAndComposition) {\n  technicalDetails = technicalDetails + '- Форма и композиция: ' + asset.formAndComposition + '\\n';\n}\nif (asset.colorAndMaterials) {\n  technicalDetails = technicalDetails + '- Цвет и материалы: ' + asset.colorAndMaterials + '\\n';\n}\nif (asset.architecturalDetails) {\n  technicalDetails = technicalDetails + '- Архитектурные детали: ' + asset.architecturalDetails + '\\n';\n}\nif (asset.functionalElements) {\n  technicalDetails = technicalDetails + '- Функциональные элементы: ' + asset.functionalElements + '\\n';\n}\n\n// Формируем description по шаблону ТЕХДОЛГА\nconst jiraDescription = 'Описание:\\n' +\n  assetDescription + '\\n' +\n  (asset.role ? '\\n' + asset.role + '\\n' : '') +\n  '\\nПричина появления:\\n' +\n  'Запрос от GD-отдела. Требуется новый ассет типа \"' + asset.type + '\".\\n' +\n  '\\nОжидаемый результат:\\n' +\n  'Готовый ассет \"' + asset.name + '\" согласно ТЗ:\\n' +\n  (technicalDetails ? technicalDetails : '') +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Формат: PNG с альфа-каналом\\n' +\n  '\\nШаги воспроизведения:\\n' +\n  '1. Использовать AI-промт для генерации (см. Необходимые материалы)\\n' +\n  '2. Проверить соответствие цветовой палитре и ТЗ\\n' +\n  '3. Сохранить в QNAP по указанному пути\\n' +\n  '4. Проверить отображение в тестовой сцене\\n' +\n  '\\nКритерии приёмки:\\n' +\n  '- Соответствие описанию и цветовой палитре\\n' +\n  '- Изометрическая проекция 30°\\n' +\n  '- Белый/прозрачный фон\\n' +\n  '- Качество изображения: высокое, без артефактов\\n' +\n  '- Стилистика: semi-realistic casual 3D\\n' +\n  '- Одобрение арт-лида\\n' +\n  '\\nНеобходимые материалы:\\n' +\n  '\\nAI-промт:\\n' +\n  aiPrompt + '\\n' +\n  '\\nПуть QNAP:\\n' +\n  qnapPath + fileName + '\\n' +\n  (paletteText ? '\\nЦветовая палитра:\\n' + paletteText : '');\n\nreturn [{\n  json: {\n    summary: '[ART] ' + asset.name,\n    description: jiraDescription,\n    assetName: asset.name,\n    assetType: asset.type,\n    aiPrompt: aiPrompt,\n    qnapPath: qnapPath + fileName\n  }\n}];"
+      },
+      "position": [
+        864,
+        -16
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "kXYoO2wLcFLalff6",
+          "name": "OpenAi account 3"
+        }
+      },
+      "id": "642133f4-856a-466c-8c30-450febed6981",
+      "name": "Message a model1",
+      "parameters": {
+        "messages": {
+          "values": [
+            {
+              "content": "=Напиши промт для AI-генерации на основе этого ТЗ:\n\nНазвание: {{ $json.name }}\nТип: {{ $json.type }}\n\nОписание: {{ $json.shortDescription }}\n\nФорма и композиция: {{ $json.formAndComposition }}\n\nЦвет и материалы: {{ $json.colorAndMaterials }}\n\nАрхитектурные детали: {{ $json.architecturalDetails }}\n\nФункциональные элементы: {{ $json.functionalElements }}\n\nСтилистика: {{ $json.generalStyle }}\n\nЦветовая палитра:\n{{ $json.colorPalette.map(c => c.name + ' (' + c.hex + '): ' + c.usage).join('\\n') }}"
+            },
+            {
+              "content": "Ты — эксперт по созданию промтов для AI-генерации изометрических 3D-ассетов для мобильных игр.\n\nТвоя задача: на основе технического задания (ТЗ) написать детальный промт на английском языке для генерации изображения.\n\nПРАВИЛА:\n1. Промт ТОЛЬКО на английском языке\n2. Начинай с типа объекта и стиля: \"Isometric 3D [тип объекта] for sci-fi mobile game\"\n3. Описывай визуальные характеристики конкретно и детально\n4. Всегда включай цветовую палитру с HEX-кодами\n5. Указывай технические требования: изометрия 30°, белый фон, изоляция объекта\n6. Используй ключевые слова для качества: \"high detail\", \"game-ready asset\", \"clean render\"\n7. Длина промта: 150-300 слов\n8. НЕ добавляй пояснений — только готовый промт\n\nСТРУКТУРА ПРОМТА:\n- Тип и стиль объекта\n- Основная форма и композиция\n- Материалы и текстуры\n- Цветовая палитра (HEX)\n- Освещение и эффекты\n- Технические требования\n\nСТИЛЬ ГЕНЕРАЦИИ:\n- Semi-realistic stylized casual 3D\n- Bright neon accents\n- Soft lighting with deep shadows\n- Clean, non-cluttered design",
+              "role": "system"
+            }
+          ]
+        },
+        "modelId": {
+          "__rl": true,
+          "cachedResultName": "GPT-4.1",
+          "mode": "list",
+          "value": "gpt-4.1"
+        },
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "position": [
+        512,
+        -16
+      ],
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8
+    },
+    {
+      "id": "cb869d0e-648d-435b-b007-69182bc0a96a",
+      "name": "Update Jira Issue",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer MDE5NjU0NDczMDY5OnvC3Mvg1puNeualgtc8bVCL70kY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"fields\": {\n    \"timetracking\": {\"originalEstimate\": \"{{ $('When Executed by Another Workflow').item.json.estimate }}\"},\n    \"reporter\": {\"name\": \"kublitskaia.i\"}\n  }\n}",
+        "method": "PUT",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $json.key }}"
+      },
+      "position": [
+        1456,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "438904f4-d0f2-435e-ba12-e8ceed5ab081",
+      "name": "set_mapping_fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1bf72e24-217b-4e8e-bc92-dd62e76172d9",
+              "name": "board_label",
+              "type": "array",
+              "value": "[{         \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/10104\",         \"value\": \"2D Art\",         \"id\": \"10104\",         \"disabled\": false       }]"
+            },
+            {
+              "id": "6f09a272-d41b-437d-9417-5ffb8cf75d74",
+              "name": "Need TA",
+              "type": "object",
+              "value": "{       \"self\": \"https://jira.itcomp.org/rest/api/2/customFieldOption/13314\",       \"value\": \"No\",       \"id\": \"13314\",       \"disabled\": false     }"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1056,
+        -16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "9fcebf28-3809-4d2e-b7ec-69410f9c97ea",
+      "name": "Update Jira Issue1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer MDE5NjU0NDczMDY5OnvC3Mvg1puNeualgtc8bVCL70kY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"issues\": [\"{{ $('Create an issue').item.json.key }}\"]\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/agile/1.0/sprint/355/issue"
+      },
+      "position": [
+        1648,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "da228dae-7489-4295-a5e1-926e1b3c1ca1",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('Create an issue').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do",
+            "mode": "list",
+            "value": "671"
+          }
+        }
+      },
+      "position": [
+        1856,
+        -16
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
+        }
+      },
+      "id": "64761218-0dcf-4393-aad4-cc1dec80a421",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('When Executed by Another Workflow').first().json.chat_id }}",
+        "text": "=Задача создана\n\nhttps://jira.itcomp.space/browse/{{ $('Create an issue').item.json.key }}"
+      },
+      "position": [
+        2064,
+        -16
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e2697542-d0fb-408d-ac13-3e0bb87dc092"
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "Tasks": "[Название задачи] Генерация 3D-модели здания Building_RationFactory [Цель] Получить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект. [Описание задачи / Что нужно сделать] Концептуальное описание: Форма и композиция: Строгая изометрическая проекция с углом 30 градусов. Объект представляет собой высокотехнологичный агрокомплекс, состоящий из центрального управляющего модуля и четырех примыкающих к нему цилиндрических био-куполов. Вся конструкция размещена на стандартной темной платформе с закругленными углами и яркой cyan-подсветкой по периметру. Центральный модуль имеет два уровня с плоской крышей, на которой расположена антенна связи. Архитектурные детали: Стены центрального модуля выполнены из гладких композитных панелей с вертикальными неоновыми вставками оранжевого цвета. Био-купола сделаны из сегментированного полупрозрачного стекла, через которое просматриваются ряды гидропонных установок со светящейся биомассой. Соединительные шлюзы между модулем и куполами оснащены герметичными дверями и панелями управления. Функциональные элементы: На фасаде центрального модуля расположен голографический дисплей, отображающий циклы производства и уровень запасов. Внешняя конвейерная система транспортирует готовые герметичные контейнеры с пайками от био-куполов к погрузочной платформе, расположенной сбоку от основного модуля. Вентиляционные решетки с внутренней подсветкой встроены в крышу центрального блока. Ключевые элементы стиля: Модульность и чистые геометрические формы. Четко читаемый силуэт, передающий функцию производства. Встроенная подсветка как основной источник яркости. Отсутствие беспорядка, грязи и хаотичных элементов. Изоляция на белом фоне. Шаги выполнения: 1. Создать 3D-модель здания согласно концептуальному описанию. 2. Применить материалы из указанной цветовой палитры. 3. Настроить изометрическую проекцию 30 градусов. 4. Добавить glow-эффекты для энергетических элементов и биомассы. 5. Выполнить рендер на белом фоне. 6. Проверить читаемость силуэта и модульных элементов. 7. Экспортировать в указанном формате. [Требования к стилю] Жанр и общая стилистика: Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне. Принадлежность к миру: Технологическая база игрока — чистые формы, порядок, прогресс. Ключевые визуальные особенности: Строгая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальный силуэт для узнаваемости здания. Цветовая палитра: Жженый оранжевый (#D35400) — используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон. [Формат и технические параметры] Формат файла: FBX Полигонаж: до 15000 треугольников Текстуры: 2048x2048 px, PNG Цветовое пространство: sRGB Рендер: белый фон, разрешение 1024x1024 px Нейминг файла: Building_RationFactory [Критерии приёмки] Оценка бота качества >= 95% Соответствие техническим параметрам: формат FBX, полигонаж до 15000, текстуры 2048x2048. Корректная изометрическая проекция 30 градусов. Наличие платформы-основания с cyan-подсветкой краев. Использованы цвета из указанной палитры (HEX-коды соответствуют). Читаемый силуэт здания, функция производства легко угадывается. Отсутствие артефактов рендера и пересветов. Одобрение арт-лида. [Ресурсы и ссылки] Бот оценки качества: [уточнить у арт-лида] Figma-доска проекта: [уточнить у арт-лида] Стайлгайд проекта: [уточнить у арт-лида]",
+          "estimate": "3h"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-11-28T13:35:04.445Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
+      "role": "workflow:owner",
+      "updatedAt": "2025-11-28T13:35:04.445Z",
+      "workflowId": "yorZkJ5Gs9k8p8M2"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-28T13:35:30.000Z",
+  "versionId": "c69f016e-bc8b-4e87-ba15-dba7351d6338"
+}
