@@ -17,7 +17,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields1",
+            "node": "Edit Fields3",
             "type": "main"
           }
         ],
@@ -607,6 +607,17 @@
           {
             "index": 0,
             "node": "Loop Over Items1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -1627,7 +1638,7 @@
         }
       },
       "position": [
-        3136,
+        3344,
         3968
       ],
       "type": "n8n-nodes-base.switch",
@@ -1674,7 +1685,7 @@
         "options": {}
       },
       "position": [
-        2864,
+        3072,
         4064
       ],
       "type": "n8n-nodes-base.set",
@@ -1715,7 +1726,7 @@
       "name": "Merge2",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         2944
       ],
       "type": "n8n-nodes-base.merge",
@@ -1735,7 +1746,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         2864
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -1762,7 +1773,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3024
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -1775,7 +1786,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         2944
       ],
       "type": "n8n-nodes-base.code",
@@ -1861,7 +1872,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         2944
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -1873,7 +1884,7 @@
       "name": "Merge3",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         4784
       ],
       "type": "n8n-nodes-base.merge",
@@ -1893,7 +1904,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         4704
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -1906,7 +1917,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         4784
       ],
       "type": "n8n-nodes-base.code",
@@ -1918,7 +1929,7 @@
       "name": "Merge8",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         3680
       ],
       "type": "n8n-nodes-base.merge",
@@ -1938,7 +1949,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3600
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -1951,7 +1962,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         3680
       ],
       "type": "n8n-nodes-base.code",
@@ -1963,7 +1974,7 @@
       "name": "Merge9",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         4048
       ],
       "type": "n8n-nodes-base.merge",
@@ -1983,7 +1994,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3968
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -1996,7 +2007,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         4048
       ],
       "type": "n8n-nodes-base.code",
@@ -2008,7 +2019,7 @@
       "name": "Merge10",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         5168
       ],
       "type": "n8n-nodes-base.merge",
@@ -2028,7 +2039,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         5088
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2041,7 +2052,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         5168
       ],
       "type": "n8n-nodes-base.code",
@@ -2089,7 +2100,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3232
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2101,7 +2112,7 @@
       "name": "Merge11",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         3312
       ],
       "type": "n8n-nodes-base.merge",
@@ -2114,7 +2125,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         3312
       ],
       "type": "n8n-nodes-base.code",
@@ -2137,7 +2148,7 @@
         "options": {}
       },
       "position": [
-        4800,
+        5008,
         2768
       ],
       "type": "n8n-nodes-base.set",
@@ -2162,7 +2173,7 @@
         "text": "=📃 Созданные ТЗ для иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         2768
       ],
       "retryOnFail": true,
@@ -2201,7 +2212,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         2768
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2224,7 +2235,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         3504
       ],
       "type": "n8n-nodes-base.set",
@@ -2249,7 +2260,7 @@
         "text": "=📃 Созданные ТЗ для Персонажей:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         3504
       ],
       "retryOnFail": true,
@@ -2288,7 +2299,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         3504
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2311,7 +2322,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         3136
       ],
       "type": "n8n-nodes-base.set",
@@ -2336,7 +2347,7 @@
         "text": "=📃 Созданные ТЗ для Flat иконок:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         3136
       ],
       "retryOnFail": true,
@@ -2375,7 +2386,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         3136
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2398,7 +2409,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         3872
       ],
       "type": "n8n-nodes-base.set",
@@ -2423,7 +2434,7 @@
         "text": "=📃 Созданные ТЗ для Транспорта:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         3872
       ],
       "retryOnFail": true,
@@ -2462,7 +2473,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         3872
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2485,7 +2496,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         4608
       ],
       "type": "n8n-nodes-base.set",
@@ -2510,7 +2521,7 @@
         "text": "=📃 Созданные ТЗ для Зданий/Пропсов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         4608
       ],
       "retryOnFail": true,
@@ -2549,7 +2560,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4608
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2572,7 +2583,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         4992
       ],
       "type": "n8n-nodes-base.set",
@@ -2597,7 +2608,7 @@
         "text": "=📃 Созданные ТЗ для Врагов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         4992
       ],
       "retryOnFail": true,
@@ -2636,7 +2647,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4992
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -2690,7 +2701,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3392
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2717,7 +2728,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         3760
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2747,7 +2758,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         4128
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2774,7 +2785,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         4864
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2801,7 +2812,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         5248
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -2814,7 +2825,7 @@
         "jsCode": "// Получаем текст из поля Tasks\nconst fullText = $input.first().json.output;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
       },
       "position": [
-        2576,
+        2784,
         4064
       ],
       "type": "n8n-nodes-base.code",
@@ -3243,7 +3254,7 @@
       "name": "Merge",
       "parameters": {},
       "position": [
-        3824,
+        4032,
         4416
       ],
       "type": "n8n-nodes-base.merge",
@@ -3263,7 +3274,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         4336
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -3276,7 +3287,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        4000,
+        4208,
         4416
       ],
       "type": "n8n-nodes-base.code",
@@ -3299,7 +3310,7 @@
         "options": {}
       },
       "position": [
-        4784,
+        4992,
         4240
       ],
       "type": "n8n-nodes-base.set",
@@ -3324,7 +3335,7 @@
         "text": "=📃 Созданные ТЗ для UI:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        5008,
+        5216,
         4240
       ],
       "retryOnFail": true,
@@ -3363,7 +3374,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4240
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -3390,7 +3401,7 @@
         "options": {}
       },
       "position": [
-        3616,
+        3824,
         4496
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -3584,7 +3595,7 @@
         "text": "ТЗ не прошло проверку, идёт перегенерация"
       },
       "position": [
-        1616,
+        1824,
         4288
       ],
       "retryOnFail": true,
@@ -3727,7 +3738,7 @@
         }
       },
       "position": [
-        4224,
+        4432,
         4784
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -3804,7 +3815,7 @@
         }
       },
       "position": [
-        4224,
+        4432,
         5168
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -3881,7 +3892,7 @@
         }
       },
       "position": [
-        4224,
+        4432,
         4416
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -3958,7 +3969,7 @@
         }
       },
       "position": [
-        4208,
+        4416,
         4048
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4035,7 +4046,7 @@
         }
       },
       "position": [
-        4192,
+        4400,
         3680
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4112,7 +4123,7 @@
         }
       },
       "position": [
-        4208,
+        4416,
         3312
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4187,7 +4198,7 @@
         }
       },
       "position": [
-        4192,
+        4400,
         2944
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4284,7 +4295,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         3312
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4370,7 +4381,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         3680
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4456,7 +4467,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4048
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4542,7 +4553,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4416
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4628,7 +4639,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         4784
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4714,7 +4725,7 @@
         }
       },
       "position": [
-        4576,
+        4784,
         5168
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -4887,7 +4898,9 @@
             }
           ]
         },
-        "options": {}
+        "options": {
+          "ignoreConversionErrors": true
+        }
       },
       "position": [
         176,
@@ -5090,7 +5103,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         2944
       ],
       "retryOnFail": true,
@@ -5118,7 +5131,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         3312
       ],
       "retryOnFail": true,
@@ -5146,7 +5159,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         3680
       ],
       "retryOnFail": true,
@@ -5174,7 +5187,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         4048
       ],
       "retryOnFail": true,
@@ -5202,7 +5215,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         4416
       ],
       "retryOnFail": true,
@@ -5230,7 +5243,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         4784
       ],
       "retryOnFail": true,
@@ -5258,7 +5271,7 @@
         "text": "=Ошибка при генерации изображений"
       },
       "position": [
-        4784,
+        4992,
         5168
       ],
       "retryOnFail": true,
@@ -5266,90 +5279,38 @@
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+    },
+    {
+      "id": "21d52370-1c64-4743-a4d2-df738dc7cb33",
+      "name": "Edit Fields3",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ac49231e-b7db-444b-9055-e42ecbf2c63d",
+              "name": "output",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "id": "471a2b08-018d-4577-9082-20230aabe0e4",
+              "name": "count",
+              "type": "number",
+              "value": "={{ $('Edit Fields1').item.json.count }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1968,
+        4624
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {
-    "Analyze1": [
-      {
-        "json": {
-          "candidates": [
-            {
-              "content": {
-                "parts": [
-                  {
-                    "text": "```json\n{\n  \"assets\": [\n    {\n      \"id\": 1,\n      \"name\": \"Здание Поле (целое)\",\n      \"filename\": \"Building_RationFactory\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение небольшого промышленного здания в стилизованной графике. Здание имеет кубическую форму с плоской крышей. Основной цвет - золотисто-желтый, с серыми и коричневыми элементами. На крыше видны вентиляционные системы и небольшие постройки. Рядом со зданием расположены картонные коробки. Композиция показывает здание под углом, подчеркивая его объем.\",\n        \"key_elements\": [\"промышленное здание\", \"коробки\", \"вентиляция\", \"изометрия\"],\n        \"colors\": [\"золотой\", \"желтый\", \"серый\", \"коричневый\"],\n        \"materials\": [\"металл\", \"картон\", \"бетон\"],\n        \"style_notes\": \"Стилизованный реализм, low-poly, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид сбоку-сверху, здание расположено в центре кадра.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Еда\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-41. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Поле (целое). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Небольшое производственное здание, по производству пайков. Отличительные детали: Картонные коробки, какие-то небольшие поля.\",\n      \"goal\": \"Служит для производства ресурса \\\"Еда\\\"\",\n      \"metadata\": {\n        \"page\": 4,\n        \"row\": 1\n      }\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Здание Поле (разрушенное)\",\n      \"filename\": \"Building_RationFactoryDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного промышленного здания. Здание частично обрушено, видны следы пожара, дыма и повреждений. Стены имеют проломы, крыша провалилась. Вокруг разбросаны обломки, поврежденные коробки и видны следы гари. Цветовая палитра темнее, чем у целой версии, с преобладанием коричневых, серых и черных тонов.\",\n        \"key_elements\": [\"разрушенное здание\", \"обломки\", \"следы пожара\", \"разбитые коробки\"],\n        \"colors\": [\"коричневый\", \"серый\", \"черный\", \"темно-желтый\"],\n        \"materials\": [\"поврежденный металл\", \"бетонные обломки\", \"пепел\", \"обгоревший картон\"],\n        \"style_notes\": \"Стилизованный реализм, постапокалиптический, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид сбоку-сверху, фокус на разрушениях и поврежденных элементах.\"\n      },\n      \"context\": \"Назначение: Разрушенная версия Фабрики пайков. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-42. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Поле (разрушенное). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Отличительные детали: Картонные коробки разбиты, какие-то небольшие поля сожжены.\",\n      \"goal\": \"Разрушенная версия Фабрики пайков.\",\n      \"metadata\": {\n        \"page\": 5,\n        \"row\": 2\n      }\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Здание Железный рудник (целый)\",\n      \"filename\": \"Building_Foundry\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение металлургического завода в футуристическом стиле. Здание имеет сложную геометрию с трубами, резервуарами и конвейерами. Присутствуют светящиеся неоновые элементы синего цвета. Из одного из резервуаров вытекает раскаленный оранжевый металл. Основные цвета - темно-серый, синий и оранжевый.\",\n        \"key_elements\": [\"завод\", \"трубы\", \"резервуары\", \"расплавленный металл\", \"неоновые огни\"],\n        \"colors\": [\"темно-серый\", \"синий\", \"оранжевый\", \"металлик\"],\n        \"materials\": [\"металл\", \"сталь\", \"жидкий металл\"],\n        \"style_notes\": \"Научная фантастика, киберпанк, стилизованный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий производственный процесс и хай-тек архитектуру.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Металл\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-43. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Железный рудник (целый). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Металлургическая фабрика, с неоновым освещением и тд. Отличительные детали: Емкости с расплавленным металлом.\",\n      \"goal\": \"Служит для производства ресурса \\\"Металл\\\"\",\n      \"metadata\": {\n        \"page\": 6,\n        \"row\": 3\n      }\n    },\n    {\n      \"id\": 4,\n      \"name\": \"Здание Железный рудник (разрушенный)\",\n      \"filename\": \"Building_FoundryDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного металлургического завода. Конструкция повреждена, часть стен и крыши отсутствует. Неоновые элементы погасли или сломаны. Расплавленный металл вытек из резервуаров и застыл на земле в виде луж. Преобладают темные, обгоревшие текстуры.\",\n        \"key_elements\": [\"разрушенный завод\", \"обломки\", \"застывший металл\", \"поврежденные конструкции\"],\n        \"colors\": [\"темно-серый\", \"коричневый\", \"ржавый\", \"черный\"],\n        \"materials\": [\"обгоревший металл\", \"ржавчина\", \"бетонные обломки\"],\n        \"style_notes\": \"Постапокалиптический, научная фантастика, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, акцентирующий внимание на разрушениях и последствиях катастрофы.\"\n      },\n      \"context\": \"Назначение: Разрушенная версия Литейного цеха. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-44. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Железный рудник (разрушенный). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Отличительные детали: Емкости с расплавленным металлом пусты, металл растекся.\",\n      \"goal\": \"Разрушенная версия Литейного цеха\",\n      \"metadata\": {\n        \"page\": 7,\n        \"row\": 4\n      }\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Здание Учебная база (целая)\",\n      \"filename\": \"Building_RetrainingCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристического военного здания. Здание имеет строгую, угловатую архитектуру синего и серого цветов. На крыше расположена большая спутниковая тарелка или радар. Присутствуют светящиеся элементы и, возможно, голографические вывески. Стиль милитаристический и высокотехнологичный.\",\n        \"key_elements\": [\"военная база\", \"радар\", \"футуристическая архитектура\", \"неоновая подсветка\"],\n        \"colors\": [\"синий\", \"серый\", \"белый\", \"голубой\"],\n        \"materials\": [\"металл\", \"армированный бетон\", \"стекло\"],\n        \"style_notes\": \"Научная фантастика, милитари, хай-тек, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий монументальность и технологичность здания.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Опыт\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-45. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Учебная база (целая). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Военное административное здание по подготовке солдат. Отличительные детали: Возможны вывески, неоновая подсветка, милитаристские черты.\",\n      \"goal\": \"Служит для производства ресурса \\\"Опыт\\\"\",\n      \"metadata\": {\n        \"page\": 8,\n        \"row\": 5\n      }\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Здание Учебная база (разрушенная)\",\n      \"filename\": \"Building_RetrainingCenterDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенной военной базы. Здание сильно повреждено, часть стен обрушена, обнажая внутренние конструкции. Радар на крыше сломан. Вокруг разбросаны обломки. Светящиеся элементы не работают или искрят. Здание заросло мхом и растениями, что указывает на давность разрушения.\",\n        \"key_elements\": [\"разрушенная база\", \"обломки\", \"растения\", \"сломанный радар\", \"искрящая проводка\"],\n        \"colors\": [\"серый\", \"коричневый\", \"зеленый\", \"ржавый\"],\n        \"materials\": [\"бетон\", \"металл\", \"мох\", \"ржавчина\"],\n        \"style_notes\": \"Постапокалиптический, заброшенный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, создающий атмосферу запустения и разрухи.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Опыт\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-46. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Учебная база (целая). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Отличительные детали: Подцветка мигает и искрит, вывеска упала.\",\n      \"goal\": \"Служит для производства ресурса \\\"Опыт\\\"\",\n      \"metadata\": {\n        \"page\": 9,\n        \"row\": 6\n      }\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Здание Металлургический завод\",\n      \"filename\": \"Building_CrystalFarm\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристического завода или фабрики. Здание имеет сложную конструкцию с большой центральной частью и пристройками. На крыше виден большой светящийся синий кристалл или энергетический элемент. Цветовая гамма состоит из темно-серых, синих и фиолетовых оттенков, что придает ему технологичный вид.\",\n        \"key_elements\": [\"завод\", \"кристалл\", \"энергетический элемент\", \"футуристическая архитектура\"],\n        \"colors\": [\"темно-серый\", \"синий\", \"фиолетовый\", \"голубой\"],\n        \"materials\": [\"металл\", \"энергетический кристалл\", \"стекло\"],\n        \"style_notes\": \"Научная фантастика, хай-тек, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, с акцентом на центральный светящийся элемент.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Руда усиления\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-47. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Металлургический завод. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для производства ресурса \\\"Руда усиления\\\"\",\n      \"metadata\": {\n        \"page\": 10,\n        \"row\": 7\n      }\n    },\n    {\n      \"id\": 8,\n      \"name\": \"Здание Месторождение золота (целое)\",\n      \"filename\": \"Building_MiningFarm\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение здания, похожего на банк или монетный двор. Здание имеет золотой купол и классические архитектурные элементы, такие как колонны. Основные цвета - золотой и белый. Вокруг здания разбросаны золотые монеты или слитки. Стиль сочетает классику и фэнтези.\",\n        \"key_elements\": [\"здание с куполом\", \"золото\", \"монеты\", \"колонны\"],\n        \"colors\": [\"золотой\", \"белый\", \"желтый\"],\n        \"materials\": [\"золото\", \"мрамор\", \"металл\"],\n        \"style_notes\": \"Стилизованный, фэнтезийный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий богатство и ценность производимого ресурса.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Золото\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-48. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Месторождение золота (целое). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Немного неопрятная печатная фабрика по производству кредитов (валюты).\",\n      \"goal\": \"Служит для производства ресурса \\\"Золото\\\"\",\n      \"metadata\": {\n        \"page\": 11,\n        \"row\": 8\n      }\n    },\n    {\n      \"id\": 9,\n      \"name\": \"Здание Месторождение золота (разрушенная)\",\n      \"filename\": \"Building_MiningFarmDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного кирпичного здания. Остался только остов стен, крыша отсутствует. Стены имеют многочисленные проломы и повреждения. Вокруг видны обломки кирпича и мусор. Здание заросло травой и плющом, что говорит о его заброшенности.\",\n        \"key_elements\": [\"руины\", \"кирпичные стены\", \"обломки\", \"растительность\"],\n        \"colors\": [\"коричневый\", \"красный кирпич\", \"зеленый\", \"серый\"],\n        \"materials\": [\"кирпич\", \"дерево\", \"растительность\"],\n        \"style_notes\": \"Постапокалиптический, реалистичный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на руины, создающий ощущение упадка.\"\n      },\n      \"context\": \"Назначение: Служит для производства ресурса \\\"Золото\\\". Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-49. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Месторождение золота (целое). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Остов кирпичного здания.\",\n      \"goal\": \"Служит для производства ресурса \\\"Золото\\\"\",\n      \"metadata\": {\n        \"page\": 12,\n        \"row\": 9\n      }\n    },\n    {\n      \"id\": 10,\n      \"name\": \"Здание Мастерская материалов\",\n      \"filename\": \"Building_StampingWorkshop\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение промышленного цеха или мастерской. Здание имеет синюю крышу и серые стены. На крыше расположена большая вентиляционная система. Сбоку здания находится открытый навес, под которым видны ящики и оборудование. Стиль современный, промышленный.\",\n        \"key_elements\": [\"цех\", \"мастерская\", \"синяя крыша\", \"вентиляция\", \"ящики\"],\n        \"colors\": [\"серый\", \"синий\", \"коричневый\"],\n        \"materials\": [\"металл\", \"бетон\", \"дерево\"],\n        \"style_notes\": \"Стилизованный реализм, промышленный дизайн, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, демонстрирующий как внешнюю, так и частично внутреннюю структуру здания.\"\n      },\n      \"context\": \"Назначение: Служит для производства расходных материалов для снаряжения. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-410. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Мастерская материалов. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для производства расходных материалов для снаряжения\",\n      \"metadata\": {\n        \"page\": 13,\n        \"row\": 10\n      }\n    },\n    {\n      \"id\": 11,\n      \"name\": \"Здание Монумент\",\n      \"filename\": \"Building_HolographicMemorial\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для хранения информации о пройденных игровых событиях и достижениях игрока. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-411. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Монумент. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для хранения информации о пройденных игровых событиях и достижениях игрока\",\n      \"metadata\": {\n        \"page\": 14,\n        \"row\": 11\n      }\n    },\n    {\n      \"id\": 12,\n      \"name\": \"Здание Галерея украшений\",\n      \"filename\": \"Building_GalleryNeoArt\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для хранения информации об установленных украшениях (памятниках). Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-412. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Галерея украшений. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для хранения информации об установленных украшениях (памятниках)\",\n      \"metadata\": {\n        \"page\": 15,\n        \"row\": 12\n      }\n    },\n    {\n      \"id\": 13,\n      \"name\": \"Здание Хранилище монет\",\n      \"filename\": \"Building_CreditBank\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для защиты золота от кражи при нападении на базу. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-413. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хранилище монет. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для защиты золота от кражи при нападении на базу.\",\n      \"metadata\": {\n        \"page\": 16,\n        \"row\": 13\n      }\n    },\n    {\n      \"id\": 14,\n      \"name\": \"Здание Завод по производству компонентов дрона\",\n      \"filename\": \"Building_DroneAssemblyWorkshop\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для производства сундуков с компонентами для дрона. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-414. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Завод по производству компонентов дрона. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для производства сундуков с компонентами для дрона\",\n      \"metadata\": {\n        \"page\": 17,\n        \"row\": 14\n      }\n    },\n    {\n      \"id\": 15,\n      \"name\": \"Здание Хранилище еды\",\n      \"filename\": \"Building_RationWarehouse\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение серого бетонного склада или бункера. Здание имеет простую, утилитарную форму без окон. На крыше видны технические элементы, возможно, вентиляция. Рядом со зданием стоят коробки. Стиль современный, минималистичный, промышленный.\",\n        \"key_elements\": [\"склад\", \"бункер\", \"бетонное здание\", \"коробки\"],\n        \"colors\": [\"серый\", \"темно-серый\", \"коричневый\"],\n        \"materials\": [\"бетон\", \"металл\", \"картон\"],\n        \"style_notes\": \"Утилитарный, промышленный, стилизованный реализм, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий прочность и функциональность здания.\"\n      },\n      \"context\": \"Назначение: Служит для защиты еды от кражи при нападении на базу. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-415. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хранилище еды. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Небольшое серое бетонное здание без окон. Здание может быть аналогично хранилищу кредитов и металла. Отличительные детали: Около здания стоят коробки с пайками.\",\n      \"goal\": \"Служит для защиты еды от кражи при нападении на базу.\",\n      \"metadata\": {\n        \"page\": 18,\n        \"row\": 15\n      }\n    },\n    {\n      \"id\": 16,\n      \"name\": \"Здание Хранилище еды (Разрушенный)\",\n      \"filename\": \"Building_RationWarehouseDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного склада. Бетонные стены смяты и имеют проломы. Крыша частично обрушена. Вокруг здания разбросаны обломки и яркие пакеты с пайками. Общий вид создает впечатление катастрофы или взрыва.\",\n        \"key_elements\": [\"разрушенный склад\", \"обломки\", \"смятые стены\", \"пайки\"],\n        \"colors\": [\"серый\", \"коричневый\", \"разноцветные акценты\"],\n        \"materials\": [\"поврежденный бетон\", \"металлолом\", \"пластик\"],\n        \"style_notes\": \"Постапокалиптический, стилизованный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, фокус на хаосе и разрушениях.\"\n      },\n      \"context\": \"Назначение: Служит для защиты еды от кражи при нападении на базу. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-416. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хранилище еды. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Отличительные детали: Здание смято, разбросаны пакеты яркого цвета (пайки).\",\n      \"goal\": \"Служит для защиты еды от кражи при нападении на базу.\",\n      \"metadata\": {\n        \"page\": 19,\n        \"row\": 16\n      }\n    },\n    {\n      \"id\": 17,\n      \"name\": \"Здание Хранилище металла\",\n      \"filename\": \"Building_MetalWarehouse\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение открытого склада с большой крышей на опорах. Под крышей на паллетах сложены металлические слитки или листы. Здание имеет синюю крышу и серые опоры, создавая индустриальный вид.\",\n        \"key_elements\": [\"открытый склад\", \"навес\", \"паллеты\", \"металлические слитки\"],\n        \"colors\": [\"синий\", \"серый\", \"металлик\"],\n        \"materials\": [\"металл\", \"сталь\", \"бетон\"],\n        \"style_notes\": \"Промышленный, стилизованный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий содержимое склада.\"\n      },\n      \"context\": \"Назначение: Служит для защиты металла от кражи при нападении на базу. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-417. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хранилище металла. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Открытый склад с большой крышей и паллетами с металлом. Здание может быть аналогично хранилищу еды и кредитов.\",\n      \"goal\": \"Служит для защиты металла от кражи при нападении на базу.\",\n      \"metadata\": {\n        \"page\": 20,\n        \"row\": 17\n      }\n    },\n    {\n      \"id\": 18,\n      \"name\": \"Здание Хранилище металла (разрушенный)\",\n      \"filename\": \"Building_MetalWarehouseDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Ресурсное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного открытого склада. Крыша и опоры обрушены, конструкция искорежена. Металлические слитки с паллет разбросаны по земле. Местность вокруг покрыта растительностью, что указывает на заброшенность.\",\n        \"key_elements\": [\"разрушенный склад\", \"упавшие опоры\", \"разбросанный металл\", \"растительность\"],\n        \"colors\": [\"коричневый\", \"серый\", \"зеленый\", \"ржавый\"],\n        \"materials\": [\"ржавый металл\", \"бетонные обломки\", \"трава\"],\n        \"style_notes\": \"Постапокалиптический, заброшенный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий обломки и хаос на месте склада.\"\n      },\n      \"context\": \"Назначение: Разрушенная версия Склада металла. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-418. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хранилище металла (разрушенный). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: упавшие стены, разбитый палет и разбросанный металл.\",\n      \"goal\": \"Разрушенная версия Склада металла.\",\n      \"metadata\": {\n        \"page\": 21,\n        \"row\": 18\n      }\n    },\n    {\n      \"id\": 19,\n      \"name\": \"Здание Дом талантов\",\n      \"filename\": \"Building_SurvivorsCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Содержит информацию о выживших и повышает их способности. Через меню дома талантов можно отправлять работников на необходимые производственные здания. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-419. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Дом талантов. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Содержит информацию о выживших и повышает их способности. Через меню дома талантов можно отправлять работников на необходимые производственные здания\",\n      \"metadata\": {\n        \"page\": 22,\n        \"row\": 19\n      }\n    },\n    {\n      \"id\": 20,\n      \"name\": \"Здание Казармы\",\n      \"filename\": \"Building_Barracks\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение военной казармы. Это длинное одноэтажное здание с двускатной крышей. Здание имеет утилитарный дизайн, с несколькими окнами и входами. Сбоку от здания видна техника или оборудование. Цветовая гамма приглушенная, в основном серые и синие тона.\",\n        \"key_elements\": [\"казарма\", \"военное здание\", \"двускатная крыша\", \"утилитарный дизайн\"],\n        \"colors\": [\"серый\", \"синий\", \"темно-серый\"],\n        \"materials\": [\"металл\", \"бетон\"],\n        \"style_notes\": \"Милитари, стилизованный реализм, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид сбоку, показывающий всю длину здания.\"\n      },\n      \"context\": \"Назначение: Служит для производства боевых юнитов (тренировка юнитов). Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-420. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Казармы. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для производства боевых юнитов (тренировка юнитов)\",\n      \"metadata\": {\n        \"page\": 23,\n        \"row\": 20\n      }\n    },\n    {\n      \"id\": 21,\n      \"name\": \"Здание Разведывательный самолет\",\n      \"filename\": \"Building_ReconnaissanceDrone\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристического летательного аппарата, похожего на разведывательный дрон, на взлетной площадке. Дрон имеет аэродинамическую форму, сине-белую окраску и светящиеся элементы. Площадка под ним круглая, с разметкой. Стиль хай-тек, научно-фантастический.\",\n        \"key_elements\": [\"разведывательный дрон\", \"летательный аппарат\", \"взлетная площадка\", \"неоновые огни\"],\n        \"colors\": [\"синий\", \"белый\", \"серый\", \"голубой\"],\n        \"materials\": [\"металл\", \"композиты\", \"стекло\"],\n        \"style_notes\": \"Научная фантастика, хай-тек, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид сверху-сбоку, аппарат готов к взлету.\"\n      },\n      \"context\": \"Назначение: Нарративное здание для передачи игроку информации о происходящих вокруг базы событиях. Также используется для разведки баз противника на глобальной карте. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-421. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Разведывательный самолет. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Нарративное здание для передачи игроку информации о происходящих вокруг базы событиях. Также используется для разведки баз противника на глобальной карте.\",\n      \"metadata\": {\n        \"page\": 24,\n        \"row\": 21\n      }\n    },\n    {\n      \"id\": 22,\n      \"name\": \"Здание Госпиталь\",\n      \"filename\": \"Building_Hospital\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристического госпиталя. Здание имеет современный дизайн, сочетание белых и синих панелей. На крыше есть посадочная площадка для аэромедицинского транспорта. У входа стоит машина скорой помощи. На фасаде может быть медицинская эмблема (красный крест).\",\n        \"key_elements\": [\"госпиталь\", \"медицинский центр\", \"скорая помощь\", \"посадочная площадка\"],\n        \"colors\": [\"белый\", \"синий\", \"серый\", \"красный\"],\n        \"materials\": [\"металл\", \"стекло\", \"пластик\"],\n        \"style_notes\": \"Научная фантастика, футуризм, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, демонстрирующий здание и прилегающую территорию с машиной скорой помощи.\"\n      },\n      \"context\": \"Назначение: Служит для лечения раненых юнитов. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-422. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Госпиталь. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Футуристичное здание больницы/медицинского центра, может иметь вывеску с иконкой медицины. Отличительные детали: Машина скорой помощи у входа.\",\n      \"goal\": \"Служит для лечения раненых юнитов\",\n      \"metadata\": {\n        \"page\": 25,\n        \"row\": 22\n      }\n    },\n    {\n      \"id\": 23,\n      \"name\": \"Здание Госпиталь (Разрушенный)\",\n      \"filename\": \"Building_HospitalDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного госпиталя. Здание ветхое, с проломами в стенах и крыше. Медицинская эмблема повреждена и не горит. Территория вокруг заброшена, заросла травой. Машина скорой помощи отсутствует. Цветовая гамма темная и блёклая.\",\n        \"key_elements\": [\"разрушенный госпиталь\", \"обломки\", \"трещины\", \"заброшенность\"],\n        \"colors\": [\"серый\", \"коричневый\", \"зеленый\"],\n        \"materials\": [\"бетон\", \"ржавый металл\", \"разбитое стекло\"],\n        \"style_notes\": \"Постапокалиптический, заброшенный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, создающий атмосферу упадка и запустения.\"\n      },\n      \"context\": \"Назначение: Служит для лечения раненых юнитов. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-423. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Госпиталь. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Отличительные детали: иконка упала не горит, здание ветхое и заброшенное.\",\n      \"goal\": \"Служит для лечения раненых юнитов\",\n      \"metadata\": {\n        \"page\": 26,\n        \"row\": 23\n      }\n    },\n    {\n      \"id\": 24,\n      \"name\": \"Здание Военный полигон\",\n      \"filename\": \"Building_TrainingComplex\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Два изображения. Первое: изометрический вид небольшого военного здания, похожего на командный пункт или вышку, с синей крышей. Второе: пример размещения юнитов на большой размеченной площадке (полигоне). На площадке стоят отряды солдат и техники. Полигон окружен различными военными объектами.\",\n        \"key_elements\": [\"полигон\", \"командный пункт\", \"разметка\", \"солдаты\", \"техника\"],\n        \"colors\": [\"серый\", \"синий\", \"зеленый\", \"песочный\"],\n        \"materials\": [\"бетон\", \"металл\", \"асфальт\"],\n        \"style_notes\": \"Военная тематика, стилизованный реализм, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на полигон с высоты птичьего полета, демонстрирующий его масштаб и функциональность.\"\n      },\n      \"context\": \"Назначение: Служит точкой сбора для боевых юнитов, произведенных в казармах. Размер: 1х1 метр само здание, которое стоит на площадке сбоку. Площадка 6x6 метров. Доп инфо: На разметке должно умещаться 8 отрядов по 4 юнита ГК (3х3 метра). Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-424. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Военный полигон. Формат экспорта: PNG. Соотношение сторон: 1:1.\",\n      \"goal\": \"Служит точкой сбора для боевых юнитов, произведенных в казармах\",\n      \"metadata\": {\n        \"page\": 27,\n        \"row\": 24\n      }\n    },\n    {\n      \"id\": 25,\n      \"name\": \"Здание Фабрика снаряжений\",\n      \"filename\": \"Building_3DEquipmentFactory\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Технологическое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение высокотехнологичной фабрики. Здание имеет сложную многоуровневую структуру с синей крышей и серыми стенами. Видны различные механизмы, трубы и, возможно, роботизированные манипуляторы. Стиль футуристический и промышленный.\",\n        \"key_elements\": [\"фабрика\", \"конвейер\", \"роботы\", \"механизмы\", \"хай-тек\"],\n        \"colors\": [\"серый\", \"синий\", \"металлик\"],\n        \"materials\": [\"металл\", \"сталь\", \"пластик\"],\n        \"style_notes\": \"Научная фантастика, промышленный дизайн, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий сложность и технологичность производственного процесса.\"\n      },\n      \"context\": \"Назначение: Служит для производства снаряжения (оружие и экипировка) из расходников. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-425. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Фабрика снаряжений. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для производства снаряжения (оружие и экипировка) из расходников\",\n      \"metadata\": {\n        \"page\": 28,\n        \"row\": 25\n      }\n    },\n    {\n      \"id\": 26,\n      \"name\": \"Здание Вышка оповещения\",\n      \"filename\": \"Building_SatelliteDish\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение большой спутниковой тарелки, установленной на здании. Здание-основание выполнено в сине-серых тонах, сама тарелка большая и доминирует в композиции. Вокруг видны технические элементы и кабели. Стиль милитари и хай-тек.\",\n        \"key_elements\": [\"спутниковая тарелка\", \"радар\", \"вышка\", \"антенна\"],\n        \"colors\": [\"синий\", \"серый\", \"белый\"],\n        \"materials\": [\"металл\", \"пластик\"],\n        \"style_notes\": \"Научная фантастика, милитари, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, сфокусированный на большой антенне.\"\n      },\n      \"context\": \"Назначение: Служит для информирования о приближающихся вражеских отрядах и особых событиях. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-426. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Вышка оповещения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для информирования о приближающихся вражеских отрядах и особых событиях.\",\n      \"metadata\": {\n        \"page\": 29,\n        \"row\": 26\n      }\n    },\n    {\n      \"id\": 27,\n      \"name\": \"Здание Ракетный центр\",\n      \"filename\": \"Building_TechnicalCorporation\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение ракетной шахты или пусковой установки. Объект представляет собой цилиндрическую конструкцию, частично утопленную в землю. Верхняя часть открыта, внутри видна ракета. Вокруг расположены технические сооружения. Цветовая гамма серо-синяя.\",\n        \"key_elements\": [\"ракетная шахта\", \"пусковая установка\", \"ракета\", \"бункер\"],\n        \"colors\": [\"серый\", \"синий\", \"металлик\"],\n        \"materials\": [\"бетон\", \"металл\"],\n        \"style_notes\": \"Милитари, научная фантастика, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на пусковую установку, готовая к запуску.\"\n      },\n      \"context\": \"Назначение: Служит для усиления героев технической корпорации и вместимости войск. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-427. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Ракетный центр. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для усиления героев технической корпорации и вместимости войск\",\n      \"metadata\": {\n        \"page\": 30,\n        \"row\": 27\n      }\n    },\n    {\n      \"id\": 28,\n      \"name\": \"Здание Центр авиации\",\n      \"filename\": \"Building_StreetGangs\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для усиления героев банд улиц и повышения вместимости войск. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-428. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Центр авиации. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для усиления героев банд улиц и повышения вместимости войск\",\n      \"metadata\": {\n        \"page\": 31,\n        \"row\": 28\n      }\n    },\n    {\n      \"id\": 29,\n      \"name\": \"Здание Центр альянса\",\n      \"filename\": \"Building_AllianceCouncil\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение монументального здания, вероятно, штаб-квартиры. Здание имеет несколько этажей, синюю крышу и серые стены. Архитектура строгая, с элементами футуризма. На крыше установлены антенны и, возможно, флагшток.\",\n        \"key_elements\": [\"штаб-квартира\", \"административное здание\", \"антенны\", \"синяя крыша\"],\n        \"colors\": [\"серый\", \"синий\", \"белый\"],\n        \"materials\": [\"бетон\", \"металл\", \"стекло\"],\n        \"style_notes\": \"Футуристический, милитари, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий важность и официальный статус здания.\"\n      },\n      \"context\": \"Назначение: Служит для управления военными действиями в альянсе. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-429. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Центр альянса. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для управления военными действиями в альянсе\",\n      \"metadata\": {\n        \"page\": 32,\n        \"row\": 29\n      }\n    },\n    {\n      \"id\": 30,\n      \"name\": \"Здание Стена (Ворота)\",\n      \"filename\": \"Building_PerimeterGate\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристических ворот. Ворота состоят из двух массивных столбов и, возможно, энергетического барьера между ними. Конструкция выполнена в желто-оранжевых и серых тонах, с светящимися элементами. Стиль хай-тек и милитари.\",\n        \"key_elements\": [\"ворота\", \"энергетический барьер\", \"защитное сооружение\", \"столбы\"],\n        \"colors\": [\"желтый\", \"оранжевый\", \"серый\"],\n        \"materials\": [\"металл\", \"энергетическое поле\"],\n        \"style_notes\": \"Научная фантастика, милитари, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, фокус на воротах как на центральном элементе обороны.\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-431. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена (Ворота). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 33,\n        \"row\": 30\n      }\n    },\n    {\n      \"id\": 31,\n      \"name\": \"Здание\",\n      \"filename\": \"Building_Perimeter_Wall_netting_left\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-433. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена (Ворота). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 34,\n        \"row\": 31\n      }\n    },\n    {\n      \"id\": 32,\n      \"name\": \"Здание\",\n      \"filename\": \"Building_Perimeter_Wall_netting_right\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-435. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена (Ворота). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 35,\n        \"row\": 32\n      }\n    },\n    {\n      \"id\": 33,\n      \"name\": \"Здание Стена Граница базы 1\",\n      \"filename\": \"Building_Perimeter_tires\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение секции оборонительной стены, сделанной из автомобильных покрышек и других подручных материалов. Стена выглядит самодельной и укреплена деревянными балками. Стиль постапокалиптический, утилитарный.\",\n        \"key_elements\": [\"стена из покрышек\", \"баррикада\", \"деревянные балки\", \"самодельное укрепление\"],\n        \"colors\": [\"черный\", \"коричневый\", \"серый\"],\n        \"materials\": [\"резина\", \"дерево\", \"металл\"],\n        \"style_notes\": \"Постапокалиптический, 'сделай сам', изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на секцию стены.\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-437. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 1. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 36,\n        \"row\": 33\n      }\n    },\n    {\n      \"id\": 34,\n      \"name\": \"Здание Угловая часть периметральной стены вниз\",\n      \"filename\": \"Building_Perimeter_Wall_Corner_Down\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-439. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 2 (Угол). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 37,\n        \"row\": 34\n      }\n    },\n    {\n      \"id\": 35,\n      \"name\": \"Здание Угловая часть периметральной стены вправо\",\n      \"filename\": \"Building_Perimeter_Wall_Corner_Right\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-441. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 2 (Угол). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 38,\n        \"row\": 35\n      }\n    },\n    {\n      \"id\": 36,\n      \"name\": \"Здание Угловая часть периметральной стены вверх\",\n      \"filename\": \"Building_Perimeter_Wall_Corner_Up\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-443. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 2 (Угол). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 39,\n        \"row\": 36\n      }\n    },\n    {\n      \"id\": 37,\n      \"name\": \"Здание Угловая часть периметральной стены влево\",\n      \"filename\": \"Building_Perimeter_Wall_Corner_Left\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В таблице есть информация, но нет референса.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-445. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 2 (Угол). Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 40,\n        \"row\": 37\n      }\n    },\n    {\n      \"id\": 38,\n      \"name\": \"Здание Стена Разделитель\",\n      \"filename\": \"Building_Perimeter_Wall_Divider\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение секции модульной бетонной стены. Состоит из двух бетонных столбов, соединенных металлической секцией. Выглядит прочным и утилитарным.\",\n        \"key_elements\": [\"стена\", \"бетонные столбы\", \"разделитель\"],\n        \"colors\": [\"серый\", \"бежевый\"],\n        \"materials\": [\"бетон\", \"металл\"],\n        \"style_notes\": \"Утилитарный, военный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на отдельный сегмент стены.\"\n      },\n      \"context\": \"Назначение: Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\"). Размер: 1х1 метра. Доп инфо: Отрисовываются только ворота, для стены вокруг базы есть отдельное тз. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-447. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стена Граница базы 3. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для повышения пассивной защиты базы и управления обороной (приказ \\\"Состав обороны\\\")\",\n      \"metadata\": {\n        \"page\": 41,\n        \"row\": 38\n      }\n    },\n    {\n      \"id\": 39,\n      \"name\": \"Здание Радар\",\n      \"filename\": \"Building_Radar\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Открывает режим исследования окрестностей для поиска ценных ресурсов. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-448. Путь к иконке по фигме: Иконки - Здания и окружение - Здания. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает режим исследования окрестностей для поиска ценных ресурсов\",\n      \"metadata\": {\n        \"page\": 42,\n        \"row\": 39\n      }\n    },\n    {\n      \"id\": 40,\n      \"name\": \"Здание Танковый центр\",\n      \"filename\": \"Building_MilitaryCorporation\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение военного здания, похожего на танковый ангар или штаб. Здание имеет массивную конструкцию с большой эмблемой (возможно, орел или другая хищная птица) на фасаде. Цветовая схема сине-серая. Стиль строгий, милитаристический.\",\n        \"key_elements\": [\"военный штаб\", \"ангар\", \"эмблема\", \"танк\"],\n        \"colors\": [\"синий\", \"серый\", \"металлик\"],\n        \"materials\": [\"металл\", \"армированный бетон\"],\n        \"style_notes\": \"Милитари, научная фантастика, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий мощь и военное назначение здания.\"\n      },\n      \"context\": \"Назначение: Служит для усиления героев военной корпорации и вместимости войск. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-449. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Танковый центр. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для усиления героев военной корпорации и вместимости войск\",\n      \"metadata\": {\n        \"page\": 43,\n        \"row\": 40\n      }\n    },\n    {\n      \"id\": 41,\n      \"name\": \"Здание Хижина строителя\",\n      \"filename\": \"Building_ArchitectOffice\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение небольшого современного здания, похожего на офис строительной компании. Здание имеет желтые стены и серую крышу. Фасад украшен символикой (например, каска и молотки) и световыми элементами. Стиль современный и стилизованный.\",\n        \"key_elements\": [\"офис\", \"хижина строителя\", \"желтые стены\", \"строительная символика\"],\n        \"colors\": [\"желтый\", \"серый\", \"оранжевый\"],\n        \"materials\": [\"металл\", \"пластик\", \"стекло\"],\n        \"style_notes\": \"Стилизованный, современный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на компактное и яркое здание.\"\n      },\n      \"context\": \"Назначение: Служит для управления очередью строительства. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-450. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хижина строителя. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Стильное, небольшое здание строительной фирмы. Фасад украшен символикой и световыми элементами.\",\n      \"goal\": \"Служит для управления очередью строительства\",\n      \"metadata\": {\n        \"page\": 44,\n        \"row\": 41\n      }\n    },\n    {\n      \"id\": 42,\n      \"name\": \"Здание Хижина строителя (Разрушенное)\",\n      \"filename\": \"Building_ArchitectOfficeDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение руин здания на его фундаменте. От самого здания ничего не осталось, кроме основания и следов обрушения. Вокруг видны обломки и земляные работы. Территория заросла травой.\",\n        \"key_elements\": [\"руины\", \"фундамент\", \"обломки\", \"следы обрушения\"],\n        \"colors\": [\"серый\", \"коричневый\", \"зеленый\"],\n        \"materials\": [\"бетон\", \"земля\", \"трава\"],\n        \"style_notes\": \"Постапокалиптический, заброшенный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на пустое место, где раньше было здание.\"\n      },\n      \"context\": \"Назначение: Служит для управления очередью строительства. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-451. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Хижина строителя. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: фундамент размером со здания. следы обрушения.\",\n      \"goal\": \"Служит для управления очередью строительства\",\n      \"metadata\": {\n        \"page\": 45,\n        \"row\": 42\n      }\n    },\n    {\n      \"id\": 43,\n      \"name\": \"Здание Таверна\",\n      \"filename\": \"Building_RecruitmentCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение футуристического здания, вероятно, центра найма. Здание имеет оранжевые и серые цвета, с большой вывеской или эмблемой на фасаде. Архитектура современная, с военными элементами. На крыше есть техническое оборудование.\",\n        \"key_elements\": [\"центр найма\", \"таверна\", \"вывеска\", \"футуристическое здание\"],\n        \"colors\": [\"оранжевый\", \"серый\", \"синий\"],\n        \"materials\": [\"металл\", \"пластик\"],\n        \"style_notes\": \"Научная фантастика, милитари, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на здание с яркими цветовыми акцентами.\"\n      },\n      \"context\": \"Назначение: Служит для покупки карточек найма героев и выживших. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-452. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Таверна. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Военное здание найма из будущего.\",\n      \"goal\": \"Служит для покупки карточек найма героев и выживших\",\n      \"metadata\": {\n        \"page\": 46,\n        \"row\": 43\n      }\n    },\n    {\n      \"id\": 44,\n      \"name\": \"Здание Таверна (Разрушенное)\",\n      \"filename\": \"Building_RecruitmentCenterDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение руин здания на его фундаменте. От здания остался только фундамент и куча обломков, заросших травой и мхом. Показывает полное уничтожение объекта.\",\n        \"key_elements\": [\"руины\", \"фундамент\", \"обломки\", \"растительность\"],\n        \"colors\": [\"серый\", \"зеленый\", \"коричневый\"],\n        \"materials\": [\"бетон\", \"земля\", \"мох\", \"трава\"],\n        \"style_notes\": \"Постапокалиптический, заброшенный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на полностью разрушенное здание.\"\n      },\n      \"context\": \"Назначение: Служит для покупки карточек найма героев и выживших. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-453. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Таверна. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: фундамент размером со здания. следы обрушения.\",\n      \"goal\": \"Служит для покупки карточек найма героев и выживших\",\n      \"metadata\": {\n        \"page\": 47,\n        \"row\": 44\n      }\n    },\n    {\n      \"id\": 45,\n      \"name\": \"Здание Лавка\",\n      \"filename\": \"Building_UndergroundMarket\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Здание внутриигрового магазина. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-454. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Лавка. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Здание внутриигрового магазина\",\n      \"metadata\": {\n        \"page\": 48,\n        \"row\": 45\n      }\n    },\n    {\n      \"id\": 46,\n      \"name\": \"Здание Первый Центр Технологий\",\n      \"filename\": \"Building_TheFirstExperimentalCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Технологическое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение высокотехнологичного исследовательского центра. Здание имеет сферический стеклянный купол, под которым виден светящийся объект. Основание здания металлическое, синего цвета. Стиль очень футуристичный.\",\n        \"key_elements\": [\"исследовательский центр\", \"стеклянный купол\", \"светящийся объект\", \"лаборатория\"],\n        \"colors\": [\"синий\", \"голубой\", \"серый\", \"металлик\"],\n        \"materials\": [\"стекло\", \"металл\", \"энергия\"],\n        \"style_notes\": \"Научная фантастика, хай-тек, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, акцентирующий внимание на центральном куполе.\"\n      },\n      \"context\": \"Назначение: Открывает исследование технологий на базе игрока. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-455. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Первый Центр Технологий. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает исследование технологий на базе игрока\",\n      \"metadata\": {\n        \"page\": 49,\n        \"row\": 46\n      }\n    },\n    {\n      \"id\": 47,\n      \"name\": \"Здание Флаг\",\n      \"filename\": \"Building_FlagHologram\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Декоративное здание в центре базы. Здесь игрок может вывесить один из предложенных флагов стран. Размер: 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-456. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Флаг. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Декоративное здание в центре базы. Здесь игрок может вывесить один из предложенных флагов стран\",\n      \"metadata\": {\n        \"page\": 50,\n        \"row\": 47\n      }\n    },\n    {\n      \"id\": 48,\n      \"name\": \"Здание Спасательный отряд Сокол\",\n      \"filename\": \"Building_CobraDivision\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Открывает отдельный боевой режим - спецоперации. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-457. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Спасательный отряд Сокол. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает отдельный боевой режим - спецоперации\",\n      \"metadata\": {\n        \"page\": 51,\n        \"row\": 48\n      }\n    },\n    {\n      \"id\": 49,\n      \"name\": \"Здание Арена\",\n      \"filename\": \"Building_VirtualArena\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Открывает режим PVP-боев и временных испытаний. Размер: 4х4 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-458. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Арена. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает режим PVP-боев и временных испытаний\",\n      \"metadata\": {\n        \"page\": 52,\n        \"row\": 49\n      }\n    },\n    {\n      \"id\": 50,\n      \"name\": \"Здание Второй Центр Технологий\",\n      \"filename\": \"Building_SecondExperimentalCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Технологическое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение продвинутого исследовательского центра, похожего на предыдущий, но более сложного. Сферический купол стал больше, а светящийся объект внутри более детализирован. Основание здания также усложнилось, появились дополнительные элементы.\",\n        \"key_elements\": [\"продвинутый исследовательский центр\", \"большой купол\", \"сложная структура\", \"энергетическое ядро\"],\n        \"colors\": [\"синий\", \"голубой\", \"серебряный\"],\n        \"materials\": [\"стекло\", \"металл\", \"плазма\"],\n        \"style_notes\": \"Научная фантастика, хай-тек, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий технологический прогресс по сравнению с предыдущей версией.\"\n      },\n      \"context\": \"Назначение: Открывает исследование технологий на базе игрока (+позволяет вести несколько исследований одновременно). Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-459. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Второй Центр Технологий. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает исследование технологий на базе игрока (+позволяет вести несколько исследований одновременно)\",\n      \"metadata\": {\n        \"page\": 53,\n        \"row\": 50\n      }\n    },\n    {\n      \"id\": 51,\n      \"name\": \"Здание Второй Центр Технологий Разрушенный\",\n      \"filename\": \"Building_SecondExperimentalCenterDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Технологическое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного исследовательского центра. Стеклянный купол разбит, основание повреждено и обгорело. Видны следы взрыва или пожара. Вокруг разбросаны обломки. Цветовая палитра темная, с преобладанием коричневых и серых тонов.\",\n        \"key_elements\": [\"разрушенный центр\", \"разбитый купол\", \"обломки\", \"следы пожара\"],\n        \"colors\": [\"коричневый\", \"серый\", \"черный\"],\n        \"materials\": [\"обгоревший металл\", \"разбитое стекло\", \"бетонные обломки\"],\n        \"style_notes\": \"Постапокалиптический, научная фантастика, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, создающий картину катастрофы.\"\n      },\n      \"context\": \"Назначение: Открывает исследование технологий на базе игрока (+позволяет вести несколько исследований одновременно). Разрушенный. Размер: 3х3 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-460. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Второй Центр Технологий. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает исследование технологий на базе игрока (+позволяет вести несколько исследований одновременно). Разрушенный\",\n      \"metadata\": {\n        \"page\": 54,\n        \"row\": 51\n      }\n    },\n    {\n      \"id\": 52,\n      \"name\": \"Здание Центр беспилотников\",\n      \"filename\": \"Building_DroneControlCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Технологическое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для управления и усиления беспилотников в бою. Размер: 6х6 метра. Доп инфо: Содержит 1 дрон в размере 2х2 (дрон рисуется отдельно). Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-461. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Центр беспилотников. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для управления и усиления беспилотников в бою\",\n      \"metadata\": {\n        \"page\": 55,\n        \"row\": 52\n      }\n    },\n    {\n      \"id\": 53,\n      \"name\": \"Здание Центр Событий\",\n      \"filename\": \"Building_EventCenter\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение современного здания с большим цифровым экраном на фасаде. На экране отображается время '10:05'. Здание имеет кубическую форму, выполнено в коричневых и бежевых тонах. Стиль современный, информационный.\",\n        \"key_elements\": [\"здание с экраном\", \"цифровые часы\", \"информационный центр\"],\n        \"colors\": [\"коричневый\", \"бежевый\", \"синий\"],\n        \"materials\": [\"бетон\", \"стекло\", \"металл\"],\n        \"style_notes\": \"Современный, минималистичный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, фокус на большом экране.\"\n      },\n      \"context\": \"Назначение: Служит для отображения списка ближайших событий. Размер: 3х3 метра. Доп инфо: Содержит динамическое окно, которое отображает по умолчанию серверное время. Зайдя в здание отображение можно поменять на местное время. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-462. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Центр Событий. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для отображения списка ближайших событий\",\n      \"metadata\": {\n        \"page\": 56,\n        \"row\": 53\n      }\n    },\n    {\n      \"id\": 54,\n      \"name\": \"Здание Штаб 1 степень улучшения\",\n      \"filename\": \"Building_Headquarters1\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение простого одноэтажного здания, похожего на временный штаб или пост. Здание имеет деревянную крышу, стены из гофрированного металла. Углы укреплены мешками с песком. На крыше установлена антенна. У входа стоят коробки с боеприпасами. Стиль простой, полевой, военный.\",\n        \"key_elements\": [\"штаб\", \"мешки с песком\", \"антенна\", \"ящики с боеприпасами\"],\n        \"colors\": [\"коричневый\", \"серый\", \"бежевый\"],\n        \"materials\": [\"дерево\", \"металл\", \"мешковина\", \"песок\"],\n        \"style_notes\": \"Милитари, полевой лагерь, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на простое, функциональное здание.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-464. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 1 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Адаптация названия: Штаб. Описание LW: Одноэтажное здание с деревянной крышей. Имеет входную дверь и окно. На крыше расположена тренога антенны. Углы здания укреплены мешками с песком, в одном углу расположены коробки с боеприпасами.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 57,\n        \"row\": 54\n      }\n    },\n    {\n      \"id\": 55,\n      \"name\": \"Здание Штаб 2 степень улучшения\",\n      \"filename\": \"Building_Headquarters2\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение улучшенного штаба. Здание стало похоже на ангар с открытыми воротами, из которых виден танк. Крыша осталась деревянной. У входа появилось растение в горшке, вывеска и ящик с боеприпасами.\",\n        \"key_elements\": [\"штаб\", \"ангар\", \"танк\", \"открытые ворота\"],\n        \"colors\": [\"коричневый\", \"серый\", \"зеленый\"],\n        \"materials\": [\"дерево\", \"металл\", \"сталь\"],\n        \"style_notes\": \"Милитари, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, демонстрирующий улучшение и появление военной техники.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-466. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 2 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Одноэтажное здание, с деревянной крышей и открытыми воротами ангара из которого выглядывает тяжелая техника - танк. У главного входа здания стоит растение, на углу вывеска и ящик с боеприпасами.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 60,\n        \"row\": 55\n      }\n    },\n    {\n      \"id\": 56,\n      \"name\": \"Здание Штаб 3 степень улучшения\",\n      \"filename\": \"Building_Headquarters3\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение штаба, который стал полутораэтажным. Ворота заменены на дверь. Крыша и навес над дверью окрашены в синий цвет. Появились два окна, вентиляционные трубы и антенна на крыше. Задняя часть укреплена мешками с песком.\",\n        \"key_elements\": [\"штаб\", \"синяя крыша\", \"антенна\", \"вентиляционные трубы\", \"мешки с песком\"],\n        \"colors\": [\"синий\", \"серый\", \"коричневый\", \"бежевый\"],\n        \"materials\": [\"металл\", \"дерево\", \"мешковина\"],\n        \"style_notes\": \"Милитари, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий дальнейшее развитие и укрепление здания.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-468. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 3 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Полутораэтажное здание. Ворота заменены на дверь. Деревянные скаты крыши по углам прибиты гвоздями. Крыша здания и навес над дверью окрашены в синий цвет. У здания два окна, на крыше - вентиляционные трубы и антенна торчащая с задней стороны здания. У главного входа здания стоит растение, на углу ящики с боеприпасами, задняя часть здания укреплена мешками с песком.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 62,\n        \"row\": 56\n      }\n    },\n    {\n      \"id\": 57,\n      \"name\": \"Здание Штаб 4 степень улучшения\",\n      \"filename\": \"Building_Headquarters4\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение штаба, обнесенного забором. Дверь стала металлической и синей. К зданию пристроена лестница на второй этаж. На крыше появилась спутниковая тарелка. За забором стоит флагшток с флагом. Периметр усилен покрышками и ящиками.\",\n        \"key_elements\": [\"штаб\", \"забор\", \"лестница\", \"спутниковая тарелка\", \"флагшток\"],\n        \"colors\": [\"синий\", \"серый\", \"коричневый\"],\n        \"materials\": [\"металл\", \"дерево\", \"бетон\"],\n        \"style_notes\": \"Милитари, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на укрепленный и расширенный комплекс штаба.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-470. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 4 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Полутораэтажное здание. Дверь окрашена в синий цвет, материал из которого сделана дверь изменен на металл. Деревянные скаты крыши окрашены в синий цвет. У здания два окна, на крыше - вентиляционные трубы и тарелка антенна. К зданию приложена лестница. По периметру здания выставлен забор, на углу ящики с боеприпасами, покрышки колес. За забором стоит флагшток с флагом.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 64,\n        \"row\": 57\n      }\n    },\n    {\n      \"id\": 58,\n      \"name\": \"Здание Штаб 5 степень улучшения\",\n      \"filename\": \"Building_Headquarters5\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение двухэтажного штаба. Внешняя отделка изменена на металл. Дверь имеет круглый иллюминатор. Появились окна на втором этаже. На крыше установлена радарная антенна. Забор стал синим, сетчатым. В задней части здания видна антенна-шпилька.\",\n        \"key_elements\": [\"двухэтажный штаб\", \"металлическая отделка\", \"иллюминатор\", \"радарная антенна\", \"синий забор\"],\n        \"colors\": [\"синий\", \"серый\", \"металлик\"],\n        \"materials\": [\"металл\", \"стекло\"],\n        \"style_notes\": \"Милитари, хай-тек, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, показывающий переход к более технологичному виду.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-472. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 5 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Двухэтажное здание. Материал внешней отделки изменен на металл. Дверь имеет круглое иллюминаторное окно. Окна расположены на втором этаже, на крыше - вентиляционные трубы и радарная антенна с конструкцией направления. В задней части здания торчит антенна шпилька. По периметру здания забор окрашен в синий и внутри сделан в виде сетки. На углу ящики с боеприпасами, мешки с песком, покрышки колес. За забором стоит флагшток с флагом.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 66,\n        \"row\": 58\n      }\n    },\n    {\n      \"id\": 59,\n      \"name\": \"Здание Штаб 6 степень улучшения\",\n      \"filename\": \"Building_Headquarters6\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение двухэтажного штаба с более сложной архитектурой. Забор стал выше и бронзового цвета. Дверь и входная группа стали более массивными. Антенна на крыше усложнилась. У основания здания появились металлические декоративные части.\",\n        \"key_elements\": [\"двухэтажный штаб\", \"бронзовый забор\", \"массивная дверь\", \"сложная антенна\"],\n        \"colors\": [\"синий\", \"серый\", \"бронзовый\"],\n        \"materials\": [\"металл\", \"бетон\"],\n        \"style_notes\": \"Милитари, хай-тек, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, подчеркивающий усиление и технологичность.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-474. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 6 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Двухэтажное здание. Отличается от предыдущей степени: Забор выше и бронзового цвета. Дверь и входная группа более массивные, дверь глухая без окон. Антенна на крыше более сложной формы, дополнительная антенна выше и более технологичной формы. У основания здания появляются металлические декоративные части.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 68,\n        \"row\": 59\n      }\n    },\n    {\n      \"id\": 60,\n      \"name\": \"Здание Штаб 7 степень улучшения\",\n      \"filename\": \"Building_Headquarters7\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение многоэтажного штаба сложной формы. Появились раздвижные входные ворота. На крыше установлена пушка. Основание забора стало бетонным. Здание имеет множество декоративных деталей.\",\n        \"key_elements\": [\"многоэтажный штаб\", \"пушка на крыше\", \"раздвижные ворота\", \"бетонный забор\"],\n        \"colors\": [\"синий\", \"серый\", \"бронзовый\"],\n        \"materials\": [\"металл\", \"бетон\"],\n        \"style_notes\": \"Милитари, хай-тек, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на мощное, хорошо вооруженное и укрепленное здание.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-476. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 7 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Многоэтажное здание, сложной формы с раздвижными входными воротами. Множество декоративных деталей. На крыше здания установлена пушка. Основание забора становится бетонным.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 70,\n        \"row\": 60\n      }\n    },\n    {\n      \"id\": 61,\n      \"name\": \"Здание Штаб 8 степень улучшения\",\n      \"filename\": \"Building_Headquarters8\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение многоэтажного штаба. Пушка на крыше стала большего калибра. На фасаде появился золотой герб в виде птицы (орла). Ворота раздвигаются вверх и вниз. У ворот расположены прожекторы. Забор полностью бетонный.\",\n        \"key_elements\": [\"многоэтажный штаб\", \"большая пушка\", \"золотой герб\", \"прожекторы\", \"бетонный забор\"],\n        \"colors\": [\"синий\", \"серый\", \"золотой\"],\n        \"materials\": [\"металл\", \"бетон\", \"золото\"],\n        \"style_notes\": \"Милитари, хай-тек, апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, демонстрирующий максимальную мощь и статус.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-478. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 8 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Многоэтажное здание. Отличается от предыдущей степени: Пушка на крыше становится больше (больше калибр). На фасаде здания изображен золотой герб птица похожая на орла. Ворота раздвигаются вверх и вниз (не в стороны). У ворот расположены прожекторы. Забор полностью бетонный и больше выполняет роль фундамента здания.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 72,\n        \"row\": 61\n      }\n    },\n    {\n      \"id\": 62,\n      \"name\": \"Здание Штаб 9 степень улучшения\",\n      \"filename\": \"Building_Headquarters9\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение финальной версии штаба. Это многоэтажное, мощное здание-крепость. Пушка на крыше стала огромной. На фасаде виден золотой герб со звездой. Дверь имеет сложное задраивающее устройство. У ворот стоят более технологичные прожекторы. Забор окрашен в цвет здания и имеет декоративные элементы.\",\n        \"key_elements\": [\"штаб-крепость\", \"огромная пушка\", \"золотой герб\", \"технологичные прожекторы\"],\n        \"colors\": [\"синий\", \"серый\", \"золотой\"],\n        \"materials\": [\"металл\", \"бетон\", \"золото\"],\n        \"style_notes\": \"Милитари, хай-тек, финальный апгрейд, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид, представляющий собой вершину развития базы.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-480. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 9 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание LW: Многоэтажное здание. Отличается от предыдущей степени: Огромная пушка на крыше здания. На фасаде здания изображен золотой герб - явно проглядывается звезда на фоне полос. Дверь имеет задраивающее устройство. Прожекторы у ворот более технологичные. Забор окрашен по дизайну здания, добавлены декоративные элементы.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 75,\n        \"row\": 62\n      }\n    },\n    {\n      \"id\": 63,\n      \"name\": \"Здание Штаб (Разрушенный)\",\n      \"filename\": \"Building_HeadquartersDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение руин штаба. Здание сильно повреждено, видны следы пожара и обрушений. Часть стен и крыши отсутствует, обнажая внутренние конструкции. Вокруг разбросаны обломки. Цвета тусклые, преобладают серые и коричневые тона.\",\n        \"key_elements\": [\"разрушенный штаб\", \"руины\", \"обломки\", \"следы пожара\"],\n        \"colors\": [\"серый\", \"коричневый\", \"черный\", \"ржавый\"],\n        \"materials\": [\"бетон\", \"обгоревший металл\", \"ржавчина\"],\n        \"style_notes\": \"Постапокалиптический, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на разрушенное центральное здание базы.\"\n      },\n      \"context\": \"Назначение: Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы. Размер: 3х3 метра. Доп инфо: Здание имеет 9 грейдов. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-482. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Штаб 9 степень улучшения. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px. Описание адаптации: Внушительное здание военного штаба с чётким, строгим дизайном. Фасад отделан прочными, металлическими панелями, подсветкой, и усилен системой безопасности. Отличительные детали: Здание совершенствуется с каждым новым грейдом.\",\n      \"goal\": \"Основное здание базы. На него завязан прогресс остальных зданий. От уровня штаба зависят максимальный уровень героев, их здоровье и атака, также каждый уровень приносит бонус общей мощи базы.\",\n      \"metadata\": {\n        \"page\": 78,\n        \"row\": 63\n      }\n    },\n    {\n      \"id\": 64,\n      \"name\": \"Здание Зона отрядов\",\n      \"filename\": \"Building_SquadArea\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Оборонительное\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение парковочной зоны для военной техники. Представляет собой асфальтированную площадку с разметкой для парковки. На одном из мест стоит модель танка. По периметру могут быть защитные сооружения.\",\n        \"key_elements\": [\"парковочная зона\", \"разметка\", \"танк\", \"военная техника\"],\n        \"colors\": [\"серый\", \"желтый\", \"хаки\"],\n        \"materials\": [\"асфальт\", \"металл\"],\n        \"style_notes\": \"Утилитарный, военный, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на функциональную зону для размещения юнитов.\"\n      },\n      \"context\": \"Назначение: Зоны отрядов служат для расположения активных отрядов базы и управления ими. Размер: 8х7 метра. Доп инфо: На парковочных местах находятся модели техники в размере 2х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-483. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Зона отрядов. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Зоны отрядов служат для расположения активных отрядов базы и управления ими\",\n      \"metadata\": {\n        \"page\": 80,\n        \"row\": 64\n      }\n    },\n    {\n      \"id\": 65,\n      \"name\": \"Здание Секретный командный пункт\",\n      \"filename\": \"Building_CommandBunker\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для выполнения заданий на глобальной карте. Задания собираются в списки, откуда игрок может взять понравившиеся, либо обновить список и найти более выгодные. За выполнение миссий игрок получает фрагменты карты сокровищ, позволяющие получить награду за раскопки. Размер: 7х5 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-484. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Секретный командный пункт. Формат экспорта: PNG. Соотношение сторон: 1:1.\",\n      \"goal\": \"Служит для выполнения заданий на глобальной карте. Задания собираются в списки, откуда игрок может взять понравившиеся, либо обновить список и найти более выгодные. За выполнение миссий игрок получает фрагменты карты сокровищ, позволяющие получить награду за раскопки.\",\n      \"metadata\": {\n        \"page\": 81,\n        \"row\": 65\n      }\n    },\n    {\n      \"id\": 66,\n      \"name\": \"Здание Военный полигон (Разрушенный)\",\n      \"filename\": \"Building_TrainingComplexDestroyed\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изометрическое изображение разрушенного военного полигона. Площадка потрескалась, разметка стерлась. Командная вышка разрушена, вокруг видны обломки и следы пожара. Создается впечатление заброшенности и запустения.\",\n        \"key_elements\": [\"разрушенный полигон\", \"потрескавшийся асфальт\", \"разрушенная вышка\", \"обломки\"],\n        \"colors\": [\"серый\", \"коричневый\", \"черный\"],\n        \"materials\": [\"бетон\", \"металлолом\", \"пепел\"],\n        \"style_notes\": \"Постапокалиптический, изометрическая проекция.\",\n        \"composition\": \"Изометрический вид на заброшенный и разрушенный полигон.\"\n      },\n      \"context\": \"Описание адаптации: Широкий плац с разметкой и вышка с фонарем. Назначение: Служит точкой сбора для боевых юнитов, произведенных в казармах. Размер: 1х1 метр само здание, которое стоит на площадке сбоку. Площадка 3х3 метров. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-485. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Секретный командный пункт. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит точкой сбора для боевых юнитов, произведенных в казармах\",\n      \"metadata\": {\n        \"page\": 82,\n        \"row\": 66\n      }\n    },\n    {\n      \"id\": 67,\n      \"name\": \"Здание Стоянка грузовиков\",\n      \"filename\": \"Building_TruckParking\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Служит для запуска торговых грузовиков по глобальной карте. Размер: 12х8 метра. Кол-во мест: 4. Доп инфо: На данной стоянке будут распологатся грузовики междугородней торговли. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-487. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Стоянка грузовиков. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для запуска торговых грузовиков по глобальной карте\",\n      \"metadata\": {\n        \"page\": 83,\n        \"row\": 67\n      }\n    },\n    {\n      \"id\": 68,\n      \"name\": \"Здание Станция торговли\",\n      \"filename\": \"Building_TradingStation\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Особое\",\n      \"reference_image\": {\n        \"visual_description\": \"Изображение отсутствует. В ячейке для референса пустой квадрат.\",\n        \"key_elements\": [],\n        \"colors\": [],\n        \"materials\": [],\n        \"style_notes\": \"N/A\",\n        \"composition\": \"N/A\"\n      },\n      \"context\": \"Назначение: Открывает возможности междугородней торговли и управления грузовиками торговли. Размер: 12х8 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-488. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Станция торговли. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Открывает возможности междугородней торговли и управления грузовиками торговли\",\n      \"metadata\": {\n        \"page\": 84,\n        \"row\": 68\n      }\n    },\n    {\n      \"id\": 69,\n      \"name\": \"Здание Вооруженный грузовик\",\n      \"filename\": \"Building_SpidyLightScout\",\n      \"type\": \"Здание\",\n      \"subtype\": \"Военное\",\n      \"reference_image\": {\n        \"visual_description\": \"Коллаж из нескольких изображений, показывающих разные уровни улучшения военного грузовика. Начальный уровень - простой грузовик цвета хаки. С улучшениями на нем появляются броня, оружие (пулемет) и дополнительные модули. Финальная версия - это хорошо бронированная и вооруженная боевая машина.\",\n        \"key_elements\": [\"грузовик\", \"боевая машина\", \"пулемет\", \"броня\", \"улучшения\"],\n        \"colors\": [\"хаки\", \"зеленый\", \"серый\", \"песочный\"],\n        \"materials\": [\"металл\", \"сталь\", \"броня\"],\n        \"style_notes\": \"Милитари, стилизованный реализм, изометрическая проекция.\",\n        \"composition\": \"Несколько изометрических видов, демонстрирующих прогресс апгрейда техники.\"\n      },\n      \"context\": \"Назначение: Служит для пассивного накопления ресурсов. Размер: 4х2 метра. Ссылка на модель: www.figma.com/design/B6C4xmj4WYYFWIGVT6Tpq3/Геймдев-ассеты-Al?node-id=4748-2682&t=UE3Q4AfkjYlizmQj-489. Путь к иконке по фигме: Иконки - Здания и окружение - Здания - Вооруженный грузовик. Формат экспорта: PNG. Соотношение сторон: 1:1. Максимальный размер UI-элементов: Иконка: 512x512 px.\",\n      \"goal\": \"Служит для пассивного накопления ресурсов\",\n      \"metadata\": {\n        \"page\": 85,\n        \"row\": 69\n      }\n    }\n  ]\n}\n```"
-                  }
-                ],
-                "role": "model"
-              },
-              "finishReason": "STOP",
-              "index": 0
-            }
-          ],
-          "modelVersion": "gemini-2.5-pro",
-          "responseId": "5YQpaaC7E7HgxN8P_cLVGA",
-          "usageMetadata": {
-            "cacheTokensDetails": [
-              {
-                "modality": "TEXT",
-                "tokenCount": 559
-              },
-              {
-                "modality": "DOCUMENT",
-                "tokenCount": 21015
-              }
-            ],
-            "cachedContentTokenCount": 21574,
-            "candidatesTokenCount": 33903,
-            "promptTokenCount": 22514,
-            "promptTokensDetails": [
-              {
-                "modality": "TEXT",
-                "tokenCount": 584
-              },
-              {
-                "modality": "DOCUMENT",
-                "tokenCount": 21930
-              }
-            ],
-            "thoughtsTokenCount": 3469,
-            "totalTokenCount": 59886
-          }
-        }
-      }
-    ],
-    "Send \"PDF\"": [
-      {
-        "json": {
-          "ok": true,
-          "result": {
-            "chat": {
-              "first_name": "Timofey",
-              "id": 918851594,
-              "last_name": "Uchiha",
-              "type": "private",
-              "username": "timofeyuchiha"
-            },
-            "date": 1764328087,
-            "entities": [
-              {
-                "length": 47,
-                "offset": 42,
-                "type": "bold"
-              }
-            ],
-            "from": {
-              "first_name": "test art",
-              "id": 8560351119,
-              "is_bot": true,
-              "username": "testarttesttzbot"
-            },
-            "message_id": 107,
-            "text": "⚡️ Анализ и составление ТЗ для файла:\n\n➡️ ТЗ_Арт_Адаптация_зданий_v68_20251127_132848.pdf"
-          }
-        }
-      }
-    ],
     "Technical Task10": [
       {
         "json": {
@@ -5384,6 +5345,37 @@
         }
       }
     ],
+    "Telegram Trigger1": [
+      {
+        "json": {
+          "message": {
+            "chat": {
+              "first_name": "Алина",
+              "id": 449677275,
+              "type": "private",
+              "username": "lina_glu"
+            },
+            "date": 1764616189,
+            "document": {
+              "file_id": "BQACAgIAAxkBAAOWaS3n_VgcSs6Bs4IzPjokcOA9Nd8AAjSMAAKIlWlJpt7a4RFP9t42BA",
+              "file_name": "ТЗ_Арт_Адаптация_зданий_v69_20251201_190149.pdf",
+              "file_size": 4847207,
+              "file_unique_id": "AgADNIwAAoiVaUk",
+              "mime_type": "application/pdf"
+            },
+            "from": {
+              "first_name": "Алина",
+              "id": 449677275,
+              "is_bot": false,
+              "language_code": "ru",
+              "username": "lina_glu"
+            },
+            "message_id": 150
+          },
+          "update_id": 218862795
+        }
+      }
+    ],
     "When clicking ‘Execute workflow’": [
       {
         "json": {}
@@ -5405,6 +5397,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-30T15:20:41.000Z",
-  "versionId": "cbd36626-9bb9-4191-ab89-57ee99d285ae"
+  "updatedAt": "2025-12-02T06:15:08.000Z",
+  "versionId": "8b060dcd-12b8-46d0-87c7-31bac29d1a1b"
 }
