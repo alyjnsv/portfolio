@@ -17,7 +17,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields1",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -136,6 +136,17 @@
           {
             "index": 0,
             "node": "Edit Fields10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -710,7 +721,7 @@
         "options": {}
       },
       "position": [
-        -2208,
+        -2000,
         1376
       ],
       "type": "n8n-nodes-base.set",
@@ -751,7 +762,7 @@
       "name": "Merge3",
       "parameters": {},
       "position": [
-        -1552,
+        -1344,
         1376
       ],
       "type": "n8n-nodes-base.merge",
@@ -771,7 +782,7 @@
         "options": {}
       },
       "position": [
-        -1760,
+        -1552,
         1296
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -784,7 +795,7 @@
         "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
       },
       "position": [
-        -1376,
+        -1168,
         1376
       ],
       "type": "n8n-nodes-base.code",
@@ -835,7 +846,7 @@
         "options": {}
       },
       "position": [
-        -592,
+        -384,
         1200
       ],
       "type": "n8n-nodes-base.set",
@@ -860,7 +871,7 @@
         "text": "=📃 Созданные ТЗ для Зданий/Пропсов:\n\n{{ $json.doc_link }}"
       },
       "position": [
-        -368,
+        -160,
         1200
       ],
       "retryOnFail": true,
@@ -899,7 +910,7 @@
         }
       },
       "position": [
-        -800,
+        -592,
         1200
       ],
       "type": "n8n-nodes-base.googleDrive",
@@ -953,7 +964,7 @@
         "options": {}
       },
       "position": [
-        -1760,
+        -1552,
         1456
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -966,7 +977,7 @@
         "jsCode": "// Получаем текст из поля Tasks\nconst fullText = $input.first().json.output;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
       },
       "position": [
-        -2496,
+        -2288,
         1376
       ],
       "type": "n8n-nodes-base.code",
@@ -1296,7 +1307,7 @@
         }
       },
       "position": [
-        -1152,
+        -944,
         1376
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -1419,7 +1430,7 @@
         "jsCode": "// Получаем текст из нового формата данных\nconst fullText = $('Array All3').first().json.Tasks;\n\n// Логируем для отладки\nconsole.log('Input text length:', fullText.length);\nconsole.log('First 100 chars:', fullText.substring(0, 100));\n\n// Разделяем по разделителю \" --- \" (с пробелами)\nconst tasks = fullText.split(' --- ');\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task, index) => {\n  return {\n    task_number: index + 1,\n    task_content: task.trim(),\n    total_tasks: tasks.length,\n    content_length: task.trim().length,\n  };\n});\n\nconsole.log('Total tasks found:', result.length);\n\nreturn result;"
       },
       "position": [
-        -800,
+        -592,
         1376
       ],
       "type": "n8n-nodes-base.code",
@@ -1571,7 +1582,7 @@
         "text": "ТЗ не прошло проверку, идёт перегенерация"
       },
       "position": [
-        -3296,
+        -3088,
         1552
       ],
       "retryOnFail": true,
@@ -1926,7 +1937,7 @@
         }
       },
       "position": [
-        -592,
+        -384,
         1376
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -1954,6 +1965,35 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "webhookId": "25b344e7-e6ca-4ee9-bc67-49680a148ac5"
+    },
+    {
+      "id": "95d1c7d2-0873-4696-aee7-d43f889502d4",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c9a27004-dd16-4d8d-a9fe-fdfbd2e6a2d2",
+              "name": "output",
+              "type": "string",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "id": "bcb37947-6c16-4bfc-a519-a48d158090b0",
+              "name": "count",
+              "type": "number",
+              "value": "={{ $('If1').item.json.count }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -2944,
+        1888
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {
@@ -2135,6 +2175,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-30T15:25:52.000Z",
-  "versionId": "d113aa70-e1fa-4e3f-ba19-b4321a966e94"
+  "updatedAt": "2025-12-02T06:50:21.000Z",
+  "versionId": "17d92882-736a-4818-8474-ba8116247442"
 }
