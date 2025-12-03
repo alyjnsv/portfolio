@@ -1,12 +1,39 @@
 {
   "active": true,
   "connections": {
-    "Create a room": {
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP — Скачать файл (binary)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get many messages": {
       "main": [
         [
           {
             "index": 0,
             "node": "If",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP — Скачать файл (binary)": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge",
             "type": "main"
           }
         ]
@@ -17,25 +44,24 @@
         [
           {
             "index": 0,
-            "node": "Message a model",
+            "node": "Merge",
             "type": "main"
           }
         ]
       ]
     },
-    "If1": {
+    "If2": {
       "main": [
-        [],
         [
           {
             "index": 0,
-            "node": "Create a room",
+            "node": "Code in JavaScript",
             "type": "main"
           }
         ]
       ]
     },
-    "Message a model": {
+    "Merge": {
       "main": [
         [
           {
@@ -51,7 +77,7 @@
         [
           {
             "index": 0,
-            "node": "If1",
+            "node": "Get many messages",
             "type": "main"
           }
         ]
@@ -75,48 +101,14 @@
         "path": "Artlog_bot"
       },
       "position": [
-        -5280,
-        912
+        -4880,
+        896
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "e4ea071f-94b5-45f5-99f5-c30c365ba3e1"
     },
     {
-      "id": "82a5f88b-bf61-4510-814f-3102476b597e",
-      "name": "If1",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "c2acefe6-9b6d-4870-baa7-49468230c893",
-              "leftValue": "={{ $json.body.message.body }}",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "!ZI8aFiQUN41goqvpa87P922_fiWB9UH0ty71z6tHqAo"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        -5024,
-        912
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
       "id": "28f22cb5-8a7f-4bb7-9ff9-ea2c188f8d33",
       "name": "Call 'My workflow 16'",
       "parameters": {
@@ -134,7 +126,7 @@
         }
       },
       "position": [
-        -3712,
+        -3120,
         896
       ],
       "type": "n8n-nodes-base.executeWorkflow",
@@ -149,13 +141,12 @@
           "conditions": [
             {
               "id": "c7d806a5-84c2-4406-b1a7-eb4d8995eb65",
-              "leftValue": "",
+              "leftValue": "m.text",
               "operator": {
-                "name": "filter.operator.equals",
                 "operation": "equals",
                 "type": "string"
               },
-              "rightValue": ""
+              "rightValue": "={{ $json.content.msgtype }}"
             }
           ],
           "options": {
@@ -168,45 +159,11 @@
         "options": {}
       },
       "position": [
-        -4352,
+        -4144,
         896
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
-    },
-    {
-      "credentials": {
-        "openAiApi": {
-          "id": "kXYoO2wLcFLalff6",
-          "name": "OpenAi account 3"
-        }
-      },
-      "disabled": true,
-      "id": "46da8fc1-bed8-41a3-ba18-c269f3bb9a92",
-      "name": "Message a model",
-      "parameters": {
-        "builtInTools": {},
-        "modelId": {
-          "__rl": true,
-          "cachedResultName": "CHATGPT-4O-LATEST",
-          "mode": "list",
-          "value": "chatgpt-4o-latest"
-        },
-        "options": {},
-        "responses": {
-          "values": [
-            {
-              "content": "д"
-            }
-          ]
-        }
-      },
-      "position": [
-        -4112,
-        864
-      ],
-      "type": "@n8n/n8n-nodes-langchain.openAi",
-      "typeVersion": 2
     },
     {
       "credentials": {
@@ -215,19 +172,103 @@
           "name": "Matrix Main Bot"
         }
       },
-      "id": "9cd57a93-0a13-41bf-82b9-30e6eb96a7de",
-      "name": "Create a room",
+      "id": "abb342dd-c1ff-44c9-b771-2492641b6081",
+      "name": "Get many messages",
       "parameters": {
-        "resource": "room",
-        "roomAlias": "testiktest21",
-        "roomName": "123tsettset"
+        "limit": 2,
+        "operation": "getAll",
+        "otherOptions": {},
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU"
       },
       "position": [
-        -4800,
+        -4592,
         896
       ],
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1
+    },
+    {
+      "id": "f6876514-6f0f-44e2-8669-5ab608b3224c",
+      "name": "Code in JavaScript",
+      "parameters": {
+        "jsCode": "const out = [];\nfor (const item of $input.all()) {\n  const { json } = item;\n  const mxcUrl = json.content?.url;\n\n  if (!mxcUrl || !mxcUrl.startsWith('mxc://')) {\n    out.push({ json });\n    continue;\n  }\n\n  const match = mxcUrl.match(/^mxc:\\/\\/([^\\/]+)\\/(.+)$/);\n  if (!match) {\n    out.push({ json });\n    continue;\n  }\n\n  const [_, server, mediaId] = match;\n  // ВАЖНО: используем оригинальный сервер из MXC, а не жёстко прописанный!\n  const baseUrl = `https://${server}`;\n  const downloadUrl = `https://matrix.itcomp.org/_matrix/client/v1/media/download/${server}/${mediaId}?allow_remote=true`;\n\n  out.push({\n    json: {\n      ...json,\n      downloadUrl\n    }\n  });\n}\nreturn out;"
+      },
+      "position": [
+        -3904,
+        1056
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "9bce209c-8fb9-4568-94cd-ce051e9f6317",
+      "name": "HTTP — Скачать файл (binary)",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        },
+        "url": "={{ $json.downloadUrl }}"
+      },
+      "position": [
+        -3600,
+        1056
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "317cbe00-7bec-4b42-9d02-ad1f177201ba",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e653a16b-240b-447e-9ee3-b7dc59070523",
+              "leftValue": "={{ $json.content.msgtype }}",
+              "operator": {
+                "operation": "contains",
+                "type": "string"
+              },
+              "rightValue": "=m.file"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -4128,
+        1072
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "a6531be7-475e-4552-944e-179443d7ba4d",
+      "name": "Merge",
+      "parameters": {
+        "combineBy": "combineAll",
+        "mode": "combine",
+        "options": {}
+      },
+      "position": [
+        -3456,
+        896
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
     }
   ],
   "pinData": {
@@ -306,6 +347,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-28T16:08:34.000Z",
-  "versionId": "aedee425-6b5d-4429-8e06-7373e8ce47bf"
+  "updatedAt": "2025-12-03T13:30:22.000Z",
+  "versionId": "b5dc287f-5bec-49be-b7f9-d6b9e6e4663a"
 }
