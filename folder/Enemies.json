@@ -96,6 +96,17 @@
         ]
       ]
     },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Finish2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Edit Fields2": {
       "main": [
         [
@@ -402,13 +413,7 @@
     },
     "When clicking ‘Execute workflow’": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Finish7",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "share link1": {
@@ -416,7 +421,7 @@
         [
           {
             "index": 0,
-            "node": "Finish2",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -455,7 +460,7 @@
       "credentials": {
         "telegramApi": {
           "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
+          "name": "Test ART автоматика"
         }
       },
       "executeOnce": true,
@@ -521,7 +526,7 @@
         "options": {}
       },
       "position": [
-        3440,
+        3856,
         1200
       ],
       "type": "n8n-nodes-base.set",
@@ -866,7 +871,7 @@
             },
             {
               "name": "progress",
-              "value": "=-3D assets/LW/AIgen-Jira/Здания базы-{{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}"
+              "value": "=-3D assets/LW/AIgen-Jira/Здания базы-{{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}/{{ $('Url1').item.json.images[0].file_name }}"
             }
           ]
         },
@@ -907,7 +912,7 @@
         "url": "={{ $('Url1').item.json.images[0].url }}"
       },
       "position": [
-        3264,
+        3680,
         1200
       ],
       "retryOnFail": true,
@@ -920,8 +925,8 @@
       "name": "When clicking ‘Execute workflow’",
       "parameters": {},
       "position": [
-        -1696,
-        784
+        2720,
+        976
       ],
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1
@@ -1072,11 +1077,11 @@
             },
             {
               "name": "path",
-              "value": "=/3D assets/LW/AIgen-Jira/Здания базы/"
+              "value": "=/3D assets/LW/AIgen-Jira/Здания базы/{{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}"
             },
             {
               "name": "file_name",
-              "value": "={{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}"
+              "value": "={{ $('Url1').item.json.images[0].file_name }}"
             },
             {
               "name": "option",
@@ -1110,7 +1115,7 @@
       "credentials": {
         "telegramApi": {
           "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
+          "name": "Test ART автоматика"
         }
       },
       "executeOnce": true,
@@ -1126,7 +1131,7 @@
         "text": "=✅ Ссылка на изображения!\n\n{{ $json.links[0].link_url }}"
       },
       "position": [
-        3072,
+        3488,
         1200
       ],
       "retryOnFail": true,
@@ -1336,7 +1341,7 @@
       "credentials": {
         "telegramApi": {
           "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
+          "name": "Test ART автоматика"
         }
       },
       "executeOnce": true,
@@ -1598,9 +1603,46 @@
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1.1
+    },
+    {
+      "id": "4596358d-e4be-43f6-b455-b766119356df",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3b1ead0c-8b00-4ede-96e0-ac262d318102",
+              "name": "link",
+              "type": "string",
+              "value": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        3104,
+        1200
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {
+    "Call 'Jira'": [
+      {
+        "json": {
+          "task_id": "LW-25981"
+        }
+      }
+    ],
+    "Edit Fields4": [
+      {
+        "json": {
+          "count": 1
+        }
+      }
+    ],
     "When Executed by Another Workflow": [
       {
         "json": {
@@ -1610,11 +1652,6 @@
           "Username": "timofeyuchiha",
           "estimate": "3h"
         }
-      }
-    ],
-    "When clicking ‘Execute workflow’": [
-      {
-        "json": {}
       }
     ]
   },
@@ -1633,6 +1670,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-28T14:44:01.000Z",
-  "versionId": "dc099529-4499-43a9-b390-08a9307da7b9"
+  "updatedAt": "2025-12-03T20:47:34.000Z",
+  "versionId": "396d4369-b565-428f-9d5a-b3f1bc36aaaf"
 }
