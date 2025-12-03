@@ -96,6 +96,17 @@
         ]
       ]
     },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Edit Fields2": {
       "main": [
         [
@@ -151,12 +162,12 @@
         ]
       ]
     },
-    "Finish2": {
+    "Get an issue": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Image5",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -169,6 +180,17 @@
             "index": 0,
             "node": "Promt1",
             "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
           }
         ]
       ]
@@ -338,6 +360,28 @@
         ]
       ]
     },
+    "Update an issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Image5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Url1": {
       "main": [
         [
@@ -416,7 +460,7 @@
         [
           {
             "index": 0,
-            "node": "Finish2",
+            "node": "Get an issue",
             "type": "main"
           }
         ]
@@ -455,7 +499,7 @@
       "credentials": {
         "telegramApi": {
           "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
+          "name": "Test ART автоматика"
         }
       },
       "executeOnce": true,
@@ -521,8 +565,8 @@
         "options": {}
       },
       "position": [
-        3776,
-        1440
+        4736,
+        1424
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -907,8 +951,8 @@
         "url": "={{ $('Url1').item.json.images[0].url }}"
       },
       "position": [
-        3600,
-        1440
+        4560,
+        1424
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
@@ -1072,11 +1116,11 @@
             },
             {
               "name": "path",
-              "value": "=/3D assets/LW/AIgen-Jira/Здания базы/"
+              "value": "=/3D assets/LW/AIgen-Jira/Здания базы/{{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}"
             },
             {
               "name": "file_name",
-              "value": "={{ $now.format('dd.MM.yyyy') }}-{{ $('AI Agent').item.json.output }}"
+              "value": "={{ $('Url1').item.json.images[0].file_name }}"
             },
             {
               "name": "option",
@@ -1105,35 +1149,6 @@
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
-        }
-      },
-      "executeOnce": true,
-      "id": "12fa6070-def8-4e5a-b4de-4775d6f92c6a",
-      "maxTries": 5,
-      "name": "Finish2",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json['Chat ID'] }}",
-        "text": "=✅ Ссылка на изображения!\n\n{{ $json.links[0].link_url }}"
-      },
-      "position": [
-        3408,
-        1440
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
     },
     {
       "credentials": {
@@ -1336,7 +1351,7 @@
       "credentials": {
         "telegramApi": {
           "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
+          "name": "Test ART автоматика"
         }
       },
       "executeOnce": true,
@@ -1598,9 +1613,573 @@
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
       "typeVersion": 1,
       "waitBetweenTries": 3000
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "9d955b67-1682-462c-af8b-0e3a4f38462d",
+      "name": "Get an issue",
+      "notes": "{{ $('Call \\'Jira\\'').item.json.task_id }}",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        3440,
+        1440
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "2ad1d4ac-6426-4e2e-8710-e3b51153e266",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c3ad83c1-775c-482a-8836-3c2c12de2efa",
+              "name": "description",
+              "type": "string",
+              "value": "={{ $json.fields.description.replaceAll('//QNAP/ART/Assets/Other/Генерация 3D-модели здания Building_RationFactory/Генерация 3D-модели здания Building_RationFactory_v001_20251203.png', $('share link1').first().json.links[0].link_url) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        3648,
+        1440
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "d744ebbe-6f80-41fb-b53b-9940c72a2784",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "description": "={{ $('Edit Fields').item.json.description }}",
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "TL Approve",
+            "mode": "list",
+            "value": "861"
+          }
+        }
+      },
+      "position": [
+        4048,
+        1440
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "015438ff-341c-4cf2-ad0d-83184070b7ca",
+      "name": "Update an issue1",
+      "parameters": {
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Art Approve",
+            "mode": "list",
+            "value": "871"
+          }
+        }
+      },
+      "position": [
+        4256,
+        1440
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "f413cf64-4fd7-49c5-8519-a5b8ab263018",
+      "name": "HTTP Request",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "{\n  \"fields\": {\n    \"customfield_12505\": \"значение\"\n  },\n  \"transition\": {\n    \"id\": \"31\"\n  }\n}",
+        "method": "PUT",
+        "nodeCredentialType": "jiraSoftwareServerPatApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('Call \\'Jira\\'').first().json.task_id }}"
+      },
+      "position": [
+        3840,
+        1440
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
     }
   ],
   "pinData": {
+    "Edit Fields": [
+      {
+        "json": {
+          "description": "Описание:\nГенерация 3D-модели здания Building_RationFactory\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Генерация 3D-модели здания Building_RationFactory\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D building asset for sci-fi mobile game: \"Ration Factory\". Semi-realistic stylized casual 3D, game-ready asset. The main structure is a compact, modular factory with a central rectangular core, featuring smooth matte composite panels in vibrant orange (#D35400). Attached to the core are accent panels and storage containers in carrot orange (#E67E22), arranged symmetrically for visual balance. Several dome-shaped bioreactors made of semi-transparent glass rise from the roof, glowing with amber light (#F39C12) to showcase luminous biomass inside. Neon strips in dark orange (#FF8C00) run along the facade, conveyor belts, and airlocks, creating dynamic highlights and a futuristic vibe. Metallic elements with a subtle sheen accentuate the conveyor system and entry points, contrasting with the matte surfaces. The overall silhouette is clean and geometric, with rounded corners and minimal clutter, emphasizing functional design. Color palette: orange (#D35400), carrot (#E67E22), amber (#F39C12), dark orange neon (#FF8C00), neutral metallic gray, and clear glass. Lighting is soft and diffused, casting deep shadows for depth, with brightness focused on glowing and neon elements. Render the building at a 30° isometric angle, isolated on a pure white background. High detail, clean render, suitable for mobile game asset integration.\n\nПуть QNAP:\nhttps://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_c93h94ki66m523s2q6vu14365z8558g0\n\nЦветовая палитра:\n- #D35400 (оранжевый): используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон.\n"
+        }
+      }
+    ],
+    "Get an issue": [
+      {
+        "json": {
+          "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+          "fields": {
+            "aggregateprogress": {
+              "percent": 0,
+              "progress": 0,
+              "total": 10800
+            },
+            "aggregatetimeestimate": 10800,
+            "aggregatetimeoriginalestimate": 10800,
+            "aggregatetimespent": null,
+            "archivedby": null,
+            "archiveddate": null,
+            "assignee": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=16",
+                "24x24": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=24",
+                "32x32": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=32",
+                "48x48": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=48"
+              },
+              "displayName": "AI Task Builder",
+              "emailAddress": "bot@techspaceapp.com",
+              "key": "JIRAUSER16461",
+              "name": "ai_task_builder",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=ai_task_builder",
+              "timeZone": "Europe/Moscow"
+            },
+            "attachment": [],
+            "comment": {
+              "comments": [],
+              "maxResults": 0,
+              "startAt": 0,
+              "total": 0
+            },
+            "components": [],
+            "created": "2025-12-03T14:30:08.961+0000",
+            "creator": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=16",
+                "24x24": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=24",
+                "32x32": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=32",
+                "48x48": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=48"
+              },
+              "displayName": "AI Task Builder",
+              "emailAddress": "bot@techspaceapp.com",
+              "key": "JIRAUSER16461",
+              "name": "ai_task_builder",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=ai_task_builder",
+              "timeZone": "Europe/Moscow"
+            },
+            "customfield_10014": null,
+            "customfield_10015": null,
+            "customfield_10016": null,
+            "customfield_10018": null,
+            "customfield_10019": "0|i1id34:",
+            "customfield_10020": [
+              "com.atlassian.greenhopper.service.sprint.Sprint@46a492ee[activatedDate=2025-12-01T05:32:20.852Z,autoStartStop=false,completeDate=<null>,endDate=2025-12-08T05:28:00.000Z,goal=,id=356,incompleteIssuesDestinationId=<null>,name=LW Спринт 69,rapidViewId=54,sequence=356,startDate=2025-12-01T05:28:00.000Z,state=ACTIVE,synced=false]"
+            ],
+            "customfield_10021": null,
+            "customfield_10022": null,
+            "customfield_10023": null,
+            "customfield_10036": null,
+            "customfield_10037": null,
+            "customfield_10038": null,
+            "customfield_10041": null,
+            "customfield_10042": null,
+            "customfield_10044": null,
+            "customfield_10052": null,
+            "customfield_10053": null,
+            "customfield_10055": null,
+            "customfield_10057": null,
+            "customfield_10058": null,
+            "customfield_10067": null,
+            "customfield_10068": null,
+            "customfield_10079": null,
+            "customfield_10086": null,
+            "customfield_10200": null,
+            "customfield_10201": null,
+            "customfield_10300": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@41a6a33f[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@76085d26[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b5c43b1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5f89c291[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@96dd8f2[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@2bf963e4[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2231ece1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@33bd2f7c[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5470dbb1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@34766498[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@190dd013[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@4391da81[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":true}}",
+            "customfield_10400": null,
+            "customfield_10401": null,
+            "customfield_10402": null,
+            "customfield_10403": null,
+            "customfield_10500": null,
+            "customfield_10600": null,
+            "customfield_10601": null,
+            "customfield_10700": [
+              {
+                "disabled": false,
+                "id": "10104",
+                "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/10104",
+                "value": "2D Art"
+              }
+            ],
+            "customfield_11101": {
+              "allFinished": false,
+              "created": 1764773367156,
+              "durationAsString": "19m",
+              "durationAsStringBoard": "19m",
+              "durationAsStringCsv": "19m",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764773367156,
+                  "durationAsString": "19m",
+                  "durationAsStringBoard": "19m",
+                  "durationAsStringCsv": "19m",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "19m",
+                      "durationAsStringBoard": "19m",
+                      "durationAsStringCsv": "19m",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 1155,
+                          "durationAsString": "19m",
+                          "durationAsStringBoard": "19m",
+                          "durationAsStringCsv": "19m",
+                          "end": 1764773367156,
+                          "finished": false,
+                          "start": 1764772211798
+                        }
+                      ],
+                      "totalDuration": 1155
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 1155
+                }
+              },
+              "statuses": [
+                "3"
+              ],
+              "totalDuration": 1155
+            },
+            "customfield_11102": "TimeInStatus(running=true, updateTime=1764773367159, timeInStatus=1155)",
+            "customfield_11401": null,
+            "customfield_11402": null,
+            "customfield_11405": "",
+            "customfield_12400": null,
+            "customfield_12505": null,
+            "customfield_12506": null,
+            "customfield_12600": null,
+            "customfield_12700": {
+              "allFinished": false,
+              "created": 1764773367162,
+              "durationAsString": "19 minutes, 15 seconds",
+              "durationAsStringBoard": "19 minutes, 15 seconds",
+              "durationAsStringCsv": "19 minutes, 15 seconds",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764773367163,
+                  "durationAsString": "19 minutes, 15 seconds",
+                  "durationAsStringBoard": "19 minutes, 15 seconds",
+                  "durationAsStringCsv": "19 minutes, 15 seconds",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "19 minutes, 15 seconds",
+                      "durationAsStringBoard": "19 minutes, 15 seconds",
+                      "durationAsStringCsv": "19 minutes, 15 seconds",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 1155,
+                          "durationAsString": "19 minutes, 15 seconds",
+                          "durationAsStringBoard": "19 minutes, 15 seconds",
+                          "durationAsStringCsv": "19 minutes, 15 seconds",
+                          "end": 1764773367163,
+                          "finished": false,
+                          "start": 1764772211798
+                        }
+                      ],
+                      "totalDuration": 1155
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 1155
+                }
+              },
+              "statuses": [
+                "3"
+              ],
+              "totalDuration": 1155
+            },
+            "customfield_12701": {
+              "allFinished": false,
+              "created": 1764773367159,
+              "durationAsString": "19m, 16s",
+              "durationAsStringBoard": "19m, 16s",
+              "durationAsStringCsv": "19m, 16s",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764773367160,
+                  "durationAsString": "19m, 15s",
+                  "durationAsStringBoard": "19m, 15s",
+                  "durationAsStringCsv": "19m, 15s",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "19m, 15s",
+                      "durationAsStringBoard": "19m, 15s",
+                      "durationAsStringCsv": "19m, 15s",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 1155,
+                          "durationAsString": "19m, 15s",
+                          "durationAsStringBoard": "19m, 15s",
+                          "durationAsStringCsv": "19m, 15s",
+                          "end": 1764773367160,
+                          "finished": false,
+                          "start": 1764772211798
+                        }
+                      ],
+                      "totalDuration": 1155
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 1155
+                },
+                "10004": {
+                  "allFinished": true,
+                  "created": 1764773367160,
+                  "durationAsString": "1s",
+                  "durationAsStringBoard": "1s",
+                  "durationAsStringCsv": "1s",
+                  "fieldTimes": [
+                    {
+                      "allFinished": true,
+                      "durationAsString": "1s",
+                      "durationAsStringBoard": "1s",
+                      "durationAsStringCsv": "1s",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 1,
+                          "durationAsString": "1s",
+                          "durationAsStringBoard": "1s",
+                          "durationAsStringCsv": "1s",
+                          "end": 1764772211798,
+                          "finished": true,
+                          "start": 1764772210245
+                        }
+                      ],
+                      "totalDuration": 1
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "10004",
+                  "totalDuration": 1
+                }
+              },
+              "statuses": [
+                "10004",
+                "3"
+              ],
+              "totalDuration": 1156
+            },
+            "customfield_12801": null,
+            "customfield_12804": null,
+            "customfield_12818": null,
+            "customfield_12921": {
+              "disabled": false,
+              "id": "13314",
+              "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/13314",
+              "value": "No"
+            },
+            "description": "Описание:\nГенерация 3D-модели здания Building_RationFactory\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Генерация 3D-модели здания Building_RationFactory\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D building asset for sci-fi mobile game: \"Ration Factory\". Semi-realistic stylized casual 3D, game-ready asset. The main structure is a compact, modular factory with a central rectangular core, featuring smooth matte composite panels in vibrant orange (#D35400). Attached to the core are accent panels and storage containers in carrot orange (#E67E22), arranged symmetrically for visual balance. Several dome-shaped bioreactors made of semi-transparent glass rise from the roof, glowing with amber light (#F39C12) to showcase luminous biomass inside. Neon strips in dark orange (#FF8C00) run along the facade, conveyor belts, and airlocks, creating dynamic highlights and a futuristic vibe. Metallic elements with a subtle sheen accentuate the conveyor system and entry points, contrasting with the matte surfaces. The overall silhouette is clean and geometric, with rounded corners and minimal clutter, emphasizing functional design. Color palette: orange (#D35400), carrot (#E67E22), amber (#F39C12), dark orange neon (#FF8C00), neutral metallic gray, and clear glass. Lighting is soft and diffused, casting deep shadows for depth, with brightness focused on glowing and neon elements. Render the building at a 30° isometric angle, isolated on a pure white background. High detail, clean render, suitable for mobile game asset integration.\n\nПуть QNAP:\n//QNAP/ART/Assets/Other/Генерация 3D-модели здания Building_RationFactory/Генерация 3D-модели здания Building_RationFactory_v001_20251203.png\n\nЦветовая палитра:\n- #D35400 (оранжевый): используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон.\n",
+            "duedate": null,
+            "environment": null,
+            "fixVersions": [],
+            "issuelinks": [],
+            "issuetype": {
+              "avatarId": 10311,
+              "description": "",
+              "iconUrl": "https://jira.itcomp.space/secure/viewavatar?size=xsmall&avatarId=10311&avatarType=issuetype",
+              "id": "10302",
+              "name": "Art",
+              "self": "https://jira.itcomp.space/rest/api/2/issuetype/10302",
+              "subtask": false
+            },
+            "labels": [],
+            "lastViewed": null,
+            "priority": {
+              "iconUrl": "https://jira.itcomp.space/images/icons/priorities/medium.svg",
+              "id": "3",
+              "name": "Medium",
+              "self": "https://jira.itcomp.space/rest/api/2/priority/3"
+            },
+            "progress": {
+              "percent": 0,
+              "progress": 0,
+              "total": 10800
+            },
+            "project": {
+              "avatarUrls": {
+                "16x16": "https://jira.itcomp.space/secure/projectavatar?size=xsmall&avatarId=10324",
+                "24x24": "https://jira.itcomp.space/secure/projectavatar?size=small&avatarId=10324",
+                "32x32": "https://jira.itcomp.space/secure/projectavatar?size=medium&avatarId=10324",
+                "48x48": "https://jira.itcomp.space/secure/projectavatar?avatarId=10324"
+              },
+              "id": "10700",
+              "key": "LW",
+              "name": "Last War",
+              "projectCategory": {
+                "description": "Structure of game development",
+                "id": "10001",
+                "name": "Game Development",
+                "self": "https://jira.itcomp.space/rest/api/2/projectCategory/10001"
+              },
+              "projectTypeKey": "software",
+              "self": "https://jira.itcomp.space/rest/api/2/project/10700"
+            },
+            "reporter": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER11418&avatarId=11347",
+                "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER11418&avatarId=11347",
+                "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER11418&avatarId=11347",
+                "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER11418&avatarId=11347"
+              },
+              "displayName": "Iana Kublitskaia",
+              "emailAddress": "yana.kub21@gmail.com",
+              "key": "JIRAUSER11418",
+              "name": "kublitskaia.i",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=kublitskaia.i",
+              "timeZone": "Europe/Moscow"
+            },
+            "resolution": null,
+            "resolutiondate": null,
+            "security": {
+              "description": "Default Level",
+              "id": "10003",
+              "name": "Viewer",
+              "self": "https://jira.itcomp.space/rest/api/2/securitylevel/10003"
+            },
+            "status": {
+              "description": "This issue is being actively worked on at the moment by the assignee.",
+              "iconUrl": "https://jira.itcomp.space/images/icons/statuses/inprogress.png",
+              "id": "3",
+              "name": "In Progress",
+              "self": "https://jira.itcomp.space/rest/api/2/status/3",
+              "statusCategory": {
+                "colorName": "inprogress",
+                "id": 4,
+                "key": "indeterminate",
+                "name": "In Progress",
+                "self": "https://jira.itcomp.space/rest/api/2/statuscategory/4"
+              }
+            },
+            "subtasks": [],
+            "summary": "[Test][ART] Генерация 3D-модели здания Building_RationFactory",
+            "timeestimate": 10800,
+            "timeoriginalestimate": 10800,
+            "timespent": null,
+            "timetracking": {
+              "originalEstimate": "3h",
+              "originalEstimateSeconds": 10800,
+              "remainingEstimate": "3h",
+              "remainingEstimateSeconds": 10800
+            },
+            "updated": "2025-12-03T14:30:11.797+0000",
+            "versions": [],
+            "watches": {
+              "isWatching": true,
+              "self": "https://jira.itcomp.space/rest/api/2/issue/LW-25970/watchers",
+              "watchCount": 1
+            },
+            "worklog": {
+              "maxResults": 20,
+              "startAt": 0,
+              "total": 0,
+              "worklogs": []
+            },
+            "workratio": 0
+          },
+          "id": "336444",
+          "key": "LW-25970",
+          "renderedFields": null,
+          "self": "https://jira.itcomp.space/rest/api/2/issue/336444"
+        }
+      }
+    ],
+    "HTTP Request": [
+      {
+        "json": {}
+      }
+    ],
     "When Executed by Another Workflow": [
       {
         "json": {
@@ -1633,6 +2212,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-28T14:45:55.000Z",
-  "versionId": "6ab38965-a457-4f78-b1a9-26565a64dc26"
+  "updatedAt": "2025-12-03T20:48:24.000Z",
+  "versionId": "376e615f-ade6-4dca-8654-8e9e5ab6530b"
 }
