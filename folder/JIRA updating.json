@@ -1,6 +1,17 @@
 {
   "active": false,
   "connections": {
+    "Update Jira Issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "When Executed by Another Workflow": {
       "main": [
         [
@@ -16,7 +27,9 @@
   "createdAt": "2025-11-28T07:51:25.184Z",
   "id": "jpKrBNdOd2Ht4zts",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "JIRA updating",
   "nodes": [
     {
@@ -68,6 +81,34 @@
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "ad06ed55-8bc4-4057-81e6-276cbd47074f",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('When Executed by Another Workflow').item.json.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "671"
+          }
+        }
+      },
+      "position": [
+        416,
+        0
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -92,6 +133,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-28T07:53:01.000Z",
-  "versionId": "6a457f23-4e93-4156-a0f6-375993624144"
+  "updatedAt": "2025-12-03T15:47:56.000Z",
+  "versionId": "ef1c7032-11f7-4140-a57a-97f5a43dae40"
 }
