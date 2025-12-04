@@ -112,7 +112,7 @@
         [
           {
             "index": 0,
-            "node": "If1",
+            "node": "If",
             "type": "main"
           }
         ]
@@ -134,7 +134,7 @@
         [
           {
             "index": 0,
-            "node": "If1",
+            "node": "If",
             "type": "main"
           }
         ]
@@ -178,7 +178,7 @@
         [
           {
             "index": 0,
-            "node": "Promt1",
+            "node": "Promt",
             "type": "ai_languageModel"
           }
         ]
@@ -195,12 +195,12 @@
         ]
       ]
     },
-    "If1": {
+    "If": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Promt1",
+            "node": "Promt",
             "type": "main"
           }
         ],
@@ -224,23 +224,23 @@
         ]
       ]
     },
-    "Image5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Imagen ": {
       "main": [
         [
           {
             "index": 0,
             "node": "Wait1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Link": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue",
             "type": "main"
           }
         ]
@@ -280,7 +280,7 @@
         ]
       ]
     },
-    "Promt1": {
+    "Promt": {
       "main": [
         [
           {
@@ -354,7 +354,7 @@
         [
           {
             "index": 0,
-            "node": "Promt1",
+            "node": "Promt",
             "type": "ai_outputParser"
           }
         ]
@@ -376,7 +376,7 @@
         [
           {
             "index": 0,
-            "node": "Image5",
+            "node": "Edit Fields5",
             "type": "main"
           }
         ]
@@ -460,7 +460,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -497,53 +497,6 @@
   },
   "name": "Icons",
   "nodes": [
-    {
-      "id": "86c25367-7b5f-43a4-b67f-b6de77da88e1",
-      "name": "Edit Fields5",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "db8f9989-a3da-4f53-baf9-caa85974dbb6",
-              "name": "=data_{{ $('Loop Over Items1').item.json.task_number }}",
-              "type": "binary",
-              "value": "data"
-            },
-            {
-              "id": "37599569-5689-4f80-9b2e-519c0d30c496",
-              "name": "Prompt",
-              "type": "string",
-              "value": "={{ $('Promt1').item.json.output.Promt }}"
-            },
-            {
-              "id": "fff30c38-ad7b-4b77-abf2-56c703833247",
-              "name": "count",
-              "type": "number",
-              "value": "={{ $('If1').item.json.count + 1 }}"
-            },
-            {
-              "id": "d536cfe5-b81b-441d-a67f-7fb9a906da6c",
-              "name": "comment",
-              "type": "string",
-              "value": "={{ $json.content.parts[0].text }}"
-            },
-            {
-              "id": "2f869ca4-7ad0-4ab2-aff9-44a3db214fdb",
-              "name": "filename",
-              "type": "string",
-              "value": "={{ $('AI Agent').item.json.output }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        1760,
-        528
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
     {
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -871,7 +824,7 @@
             },
             {
               "name": "sid",
-              "value": "={{ $json.authSid }}"
+              "value": "={{ $('Code').item.json.authSid }}"
             },
             {
               "name": "dest_path",
@@ -908,23 +861,6 @@
       },
       "position": [
         16,
-        528
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
-    },
-    {
-      "id": "c0ef8a4b-40c3-40f9-b02c-99b65ec6313d",
-      "maxTries": 5,
-      "name": "Image5",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('Url1').item.json.images[0].url }}"
-      },
-      "position": [
-        1584,
         528
       ],
       "retryOnFail": true,
@@ -1036,7 +972,7 @@
             }
           ],
           "value": {
-            "key": "={{ $('If1').item.json.task_id }}"
+            "key": "={{ $('If').item.json.task_id }}"
           }
         }
       },
@@ -1057,7 +993,7 @@
               "id": "bb225492-c5bd-42bd-b8ba-6b41e19e2de6",
               "name": "count",
               "type": "number",
-              "value": "={{ $('If1').item.json.count + 1 }}"
+              "value": "={{ $('If').item.json.count + 1 }}"
             },
             {
               "id": "f8383be5-864e-41e5-a95b-9b46020621e7",
@@ -1157,28 +1093,6 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
-    },
-    {
-      "id": "5aae13bc-79ac-4755-844e-d88462ef86e1",
-      "maxTries": 5,
-      "name": "Promt1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "hasOutputParser": true,
-        "options": {
-          "systemMessage": "=Ты AI agent, который создает промты для генерации плоских игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации минималистичной черно-белой иконки в стиле casual game UI.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Плоская черно-белая стилизованная иконка\n- Простой фронтальный ракурс для максимальной читаемости\n- Жирные четкие линии и минимальный графический дизайн\n- Только черные и белые области, БЕЗ градиентов, теней и цветов\n- Высокий контраст и четкий силуэт\n- Чистый векторный стиль\n- Строго геометрические формы\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Основную форму из \"Форма и композиция\"\n- Ключевые элементы для узнаваемости\n- Символические детали\n- Роль/назначение для понимания функции\n\n2. УПРОСТИ ДЛЯ FLAT ДИЗАЙНА:\n- Уведомления: круг с исходящими дугами/волнами\n- Поддержка: щит с символом вопроса\n- Очистка: круговые стрелки refresh\n- Медицина: четкие кресты\n- Время: циферблаты с сегментами\n- Информация: буква \"i\" в кольцах\n- Управление: символы +/- в квадратах\n\n3. ДОБАВЬ СИМВОЛИЧЕСКИЕ ЭЛЕМЕНТЫ:\n- Волны/дуги для сигналов и связи\n- Геометрические линии для технологичности\n- Простые формы для быстрой читаемости\n- Контрастные области для четкости силуэта\n\n4. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A flat black and white stylized game icon of [название из ТЗ] shown from a simple front angle with bold clean lines and minimal graphic design the main element is [упрощенное описание основной формы] [ключевые геометрические детали] [символические элементы для усиления функции] the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- МАКСИМАЛЬНО упрощай формы до геометрических примитивов\n- Сохраняй ТОЛЬКО самые узнаваемые элементы\n- Используй символические детали (волны, стрелки, линии)\n- Обеспечь читаемость на очень малых размерах\n- Никаких эффектов свечения или объема\n- Всегда отдельно выводи Название из ТЗ"
-        },
-        "promptType": "define",
-        "text": "=ТЗ:\n{{ $('Loop Over Items1').item.json.task_content }}"
-      },
-      "position": [
-        -3232,
-        416
-      ],
-      "retryOnFail": true,
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2,
-      "waitBetweenTries": 5000
     },
     {
       "id": "a7cf6d16-ff59-4f1b-be84-fdaff3efb8ba",
@@ -1431,7 +1345,7 @@
               "id": "bb225492-c5bd-42bd-b8ba-6b41e19e2de6",
               "name": "count",
               "type": "number",
-              "value": "={{ $('If1').item.json.count + 1 }}"
+              "value": "={{ $('If').item.json.count + 1 }}"
             },
             {
               "id": "e713e00d-88be-4ca0-915e-4f90d3a12759",
@@ -1443,7 +1357,7 @@
               "id": "774f8d7c-c702-4242-8c99-538885b57f12",
               "name": "prompt",
               "type": "string",
-              "value": "={{ $('Promt1').item.json.output.Promt }}"
+              "value": "={{ $('Promt').item.json.output.Promt }}"
             }
           ]
         },
@@ -1478,39 +1392,6 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "058150e1-13dd-4247-88d1-3cc1f61fad24",
-      "name": "If1",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "6d4f2211-47b4-412f-8486-b2d919d7eb74",
-              "leftValue": "={{ $json.count }}",
-              "operator": {
-                "operation": "lte",
-                "type": "number"
-              },
-              "rightValue": 10
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        -3488,
-        416
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
     },
     {
       "id": "87e38768-ef8b-40f6-8f1f-1012c4cd8bf0",
@@ -1594,88 +1475,12 @@
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "c5865e04-b068-49c4-89af-d86477afc1cf",
-      "name": "Get an issue",
-      "notes": "{{ $('Call \\'Jira\\'').item.json.task_id }}",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        560,
-        528
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "8914a5e8-7e9b-41f5-8512-6e64e00d8309",
-      "name": "Edit Fields",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "c3ad83c1-775c-482a-8836-3c2c12de2efa",
-              "name": "description",
-              "type": "string",
-              "value": "={{ $json.fields.description.replaceAll('//QNAP/', $('share link1').first().json.links[0].link_url) }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        768,
-        528
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "fVJt68N6D6vmqd2x",
-          "name": "Jira SW AI Task Builder"
-        }
-      },
-      "id": "dcd533df-f5b2-4984-8e04-528f0f18cfc3",
-      "name": "Update an issue",
-      "parameters": {
-        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "description": "={{ $('Edit Fields').item.json.description }}",
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "TL Approve",
-            "mode": "list",
-            "value": "861"
-          }
-        }
-      },
-      "position": [
-        1168,
-        528
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "fVJt68N6D6vmqd2x",
-          "name": "Jira SW AI Task Builder"
-        }
-      },
       "id": "518c45bf-661b-4024-bf5e-a6ba948b3613",
       "name": "Get an issue1",
       "notes": "{{ $('Call \\'Jira\\'').item.json.task_id }}\nLW-25549",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "=LW-25979",
+        "issueKey": "=CORE-73093",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
@@ -1685,61 +1490,6 @@
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "fVJt68N6D6vmqd2x",
-          "name": "Jira SW AI Task Builder"
-        }
-      },
-      "id": "ba19def5-6901-4a4e-84f4-e790c4e28b0b",
-      "name": "Update an issue1",
-      "parameters": {
-        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Art Approve",
-            "mode": "list",
-            "value": "871"
-          }
-        }
-      },
-      "position": [
-        1376,
-        528
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "fVJt68N6D6vmqd2x",
-          "name": "Jira SW AI Task Builder"
-        }
-      },
-      "id": "521c5d8f-e8cd-4110-be12-a321532ad7ec",
-      "name": "HTTP Request",
-      "parameters": {
-        "authentication": "predefinedCredentialType",
-        "jsonBody": "{\n  \"fields\": {\n    \"customfield_12505\": \"значение\"\n  },\n  \"transition\": {\n    \"id\": \"31\"\n  }\n}",
-        "method": "PUT",
-        "nodeCredentialType": "jiraSoftwareServerPatApi",
-        "options": {},
-        "sendBody": true,
-        "specifyBody": "json",
-        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('Call \\'Jira\\'').first().json.task_id }}"
-      },
-      "position": [
-        960,
-        528
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
     },
     {
       "credentials": {
@@ -1769,48 +1519,305 @@
       "typeVersion": 1.2,
       "waitBetweenTries": 2000,
       "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
+    },
+    {
+      "id": "f62cf4dd-f64e-40d2-ab85-cc101318c8ec",
+      "name": "Edit Fields5",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "37599569-5689-4f80-9b2e-519c0d30c496",
+              "name": "Prompt",
+              "type": "string",
+              "value": "={{ $('Promt').first().json.output.Promt }}"
+            },
+            {
+              "id": "fff30c38-ad7b-4b77-abf2-56c703833247",
+              "name": "count",
+              "type": "number",
+              "value": "={{ $('If').item.json.count + 1 }}"
+            },
+            {
+              "id": "d536cfe5-b81b-441d-a67f-7fb9a906da6c",
+              "name": "comment",
+              "type": "string",
+              "value": "={{ $('Rated1').item.json.content.parts[0].text }}"
+            },
+            {
+              "id": "2f869ca4-7ad0-4ab2-aff9-44a3db214fdb",
+              "name": "filename",
+              "type": "string",
+              "value": "={{ $('AI Agent').item.json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1968,
+        528
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "f1c1aa3d-4a17-47e9-93bf-bf19e85db580",
+      "name": "Get an issue",
+      "notes": "{{ $('Call \\'Jira\\'').item.json.task_id }}",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        752,
+        528
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "a3c31546-20f4-4f24-9f48-2e6b983cb192",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "description": "={{ $('Edit Fields').item.json.description }}",
+          "statusId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "861"
+          }
+        }
+      },
+      "position": [
+        1360,
+        528
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "e3627cf6-2f59-46a5-93a1-10d3cb09b887",
+      "name": "Update an issue1",
+      "parameters": {
+        "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Art Approve",
+            "mode": "list",
+            "value": "871"
+          }
+        }
+      },
+      "position": [
+        1568,
+        528
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "d08d98d4-4d7e-4a1d-a833-ee24fddb9f13",
+      "name": "HTTP Request",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"fields\": {\n    \"customfield_12505\": {{ JSON.stringify($json.customfield_12505) }}\n  },\n  \"transition\": {\n    \"id\": \"31\"\n  }\n}",
+        "method": "PUT",
+        "nodeCredentialType": "jiraSoftwareServerPatApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('Call \\'Jira\\'').first().json.task_id }}"
+      },
+      "position": [
+        1152,
+        528
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "executeOnce": true,
+      "id": "d8988db1-5f0f-4fe8-bff8-854b1a3c8c1c",
+      "name": "Link",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6f547bbf-f5eb-4bc9-94a8-9a730086b540",
+              "name": "url",
+              "type": "string",
+              "value": "={{ $json.links[0].link_url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        560,
+        528
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "b2f933df-b25a-430f-b1ab-17a183394e7b",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c3ad83c1-775c-482a-8836-3c2c12de2efa",
+              "name": "description",
+              "type": "string",
+              "value": "={{ $json.fields.description.replaceAll('\\n\\nПуть QNAP:\\n', '') }}"
+            },
+            {
+              "id": "053eb7cc-dddd-4c14-8ea9-8ec19e11f514",
+              "name": "customfield_12505",
+              "type": "string",
+              "value": "=Путь QNAP:\n{{ String($json.fields.customfield_12505).replaceAll('Путь QNAP:\\n', '') }}\n{{ $('Link').first().json.url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        960,
+        528
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "5aae13bc-79ac-4755-844e-d88462ef86e1",
+      "maxTries": 5,
+      "name": "Promt",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Ты AI agent, который создает промты для генерации плоских игровых иконок на основе технического задания (ТЗ). Твоя задача - проанализировать предоставленное ТЗ и создать детальный промт для генерации минималистичной черно-белой иконки в стиле casual game UI.\n\nОБЯЗАТЕЛЬНЫЕ ЭЛЕМЕНТЫ СТИЛИСТИКИ:\n- Плоская черно-белая стилизованная иконка\n- Простой фронтальный ракурс для максимальной читаемости\n- Жирные четкие линии и минимальный графический дизайн\n- Только черные и белые области, БЕЗ градиентов, теней и цветов\n- Высокий контраст и четкий силуэт\n- Чистый векторный стиль\n- Строго геометрические формы\n\nАНАЛИЗ ТЗ И АДАПТАЦИЯ:\n\n1. ИЗВЛЕКИ ИЗ ТЗ:\n- Название (всегда указано после \"Название:\")\n- Основную форму из \"Форма и композиция\"\n- Ключевые элементы для узнаваемости\n- Символические детали\n- Роль/назначение для понимания функции\n\n2. УПРОСТИ ДЛЯ FLAT ДИЗАЙНА:\n- Уведомления: круг с исходящими дугами/волнами\n- Поддержка: щит с символом вопроса\n- Очистка: круговые стрелки refresh\n- Медицина: четкие кресты\n- Время: циферблаты с сегментами\n- Информация: буква \"i\" в кольцах\n- Управление: символы +/- в квадратах\n\n3. ДОБАВЬ СИМВОЛИЧЕСКИЕ ЭЛЕМЕНТЫ:\n- Волны/дуги для сигналов и связи\n- Геометрические линии для технологичности\n- Простые формы для быстрой читаемости\n- Контрастные области для четкости силуэта\n\n4. СОЗДАЙ ПРОМТ СЛЕДУЯ СТРУКТУРЕ:\n\"A flat black and white stylized game icon of [название из ТЗ] shown from a simple front angle with bold clean lines and minimal graphic design the main element is [упрощенное описание основной формы] [ключевые геометрические детали] [символические элементы для усиления функции] the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background\"\n\nВАЖНЫЕ ПРАВИЛА:\n- МАКСИМАЛЬНО упрощай формы до геометрических примитивов\n- Сохраняй ТОЛЬКО самые узнаваемые элементы\n- Используй символические детали (волны, стрелки, линии)\n- Обеспечь читаемость на очень малых размерах\n- Никаких эффектов свечения или объема\n- Всегда отдельно выводи Название из ТЗ"
+        },
+        "promptType": "define",
+        "text": "=ТЗ:\n{{ $('Loop Over Items1').item.json.task_content }}"
+      },
+      "position": [
+        -3232,
+        416
+      ],
+      "retryOnFail": true,
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "058150e1-13dd-4247-88d1-3cc1f61fad24",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "6d4f2211-47b4-412f-8486-b2d919d7eb74",
+              "leftValue": "={{ $json.count }}",
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": 10
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -3488,
+        416
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
     }
   ],
   "pinData": {
     "AI Agent": [
       {
         "json": {
-          "output": "Создание иконки Icon_Specops_UndraftedMissionFlag"
+          "output": "Создание иконки Icon_Specops_CompletedMissionFlag"
         }
       }
     ],
     "Auth QNAP1": [
       {
         "json": {
-          "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<QDocRoot version=\"1.0\">\n<doQuick><![CDATA[]]></doQuick><is_booting><![CDATA[0]]></is_booting><mediaReady><![CDATA[1]]></mediaReady><shutdown_info><type><![CDATA[-1]]></type><timestamp><![CDATA[0]]></timestamp><duration><![CDATA[0]]></duration></shutdown_info>\n<pw_status><![CDATA[0]]></pw_status><authPassed><![CDATA[1]]></authPassed><SMBFW><![CDATA[0]]></SMBFW><hero_model><![CDATA[0]]></hero_model><qts_mode_type><![CDATA[0]]></qts_mode_type><user_enable><![CDATA[1]]></user_enable><user_account_expiry><![CDATA[0]]></user_account_expiry><authSid><![CDATA[3pfwjwij]]></authSid><role_delegation></role_delegation>\n<isAdmin><![CDATA[0]]></isAdmin><userid><![CDATA[1483]]></userid><userType><![CDATA[local]]></userType><user_pw_change><![CDATA[1]]></user_pw_change><username><![CDATA[N8N_User]]></username><groupname><![CDATA[everyone]]></groupname><ts><![CDATA[6227936]]></ts><fwNotice><![CDATA[0]]></fwNotice><title><![CDATA[]]></title><content><![CDATA[]]></content><psType><![CDATA[1]]></psType><standard_massage><![CDATA[]]></standard_massage><standard_color><![CDATA[#ffffff]]></standard_color><standard_size><![CDATA[12px]]></standard_size><standard_bg_style><![CDATA[fill]]></standard_bg_style><showVersion><![CDATA[0]]></showVersion><show_link><![CDATA[1]]></show_link><cuid><![CDATA[085d3ed202b2d50898c6fb53ab11d670]]></cuid><auth_method><![CDATA[ck]]></auth_method><mfa_support></mfa_support>\n<function_support><![CDATA[redirect_url,xs-auth-redirect,passwordless_login,multi_2sv,app_privilege]]></function_support></QDocRoot>\n"
+          "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<QDocRoot version=\"1.0\">\n<doQuick><![CDATA[]]></doQuick><is_booting><![CDATA[0]]></is_booting><mediaReady><![CDATA[1]]></mediaReady><shutdown_info><type><![CDATA[-1]]></type><timestamp><![CDATA[0]]></timestamp><duration><![CDATA[0]]></duration></shutdown_info>\n<pw_status><![CDATA[0]]></pw_status><authPassed><![CDATA[1]]></authPassed><SMBFW><![CDATA[0]]></SMBFW><hero_model><![CDATA[0]]></hero_model><qts_mode_type><![CDATA[0]]></qts_mode_type><user_enable><![CDATA[1]]></user_enable><user_account_expiry><![CDATA[0]]></user_account_expiry><authSid><![CDATA[ri12bhgd]]></authSid><role_delegation></role_delegation>\n<isAdmin><![CDATA[0]]></isAdmin><userid><![CDATA[1483]]></userid><userType><![CDATA[local]]></userType><user_pw_change><![CDATA[1]]></user_pw_change><username><![CDATA[N8N_User]]></username><groupname><![CDATA[everyone]]></groupname><ts><![CDATA[6227936]]></ts><fwNotice><![CDATA[0]]></fwNotice><title><![CDATA[]]></title><content><![CDATA[]]></content><psType><![CDATA[1]]></psType><standard_massage><![CDATA[]]></standard_massage><standard_color><![CDATA[#ffffff]]></standard_color><standard_size><![CDATA[12px]]></standard_size><standard_bg_style><![CDATA[fill]]></standard_bg_style><showVersion><![CDATA[0]]></showVersion><show_link><![CDATA[1]]></show_link><cuid><![CDATA[085d3ed202b2d50898c6fb53ab11d670]]></cuid><auth_method><![CDATA[ck]]></auth_method><mfa_support></mfa_support>\n<function_support><![CDATA[redirect_url,xs-auth-redirect,passwordless_login,multi_2sv,app_privilege]]></function_support></QDocRoot>\n"
         }
       }
     ],
     "Call 'Jira'": [
       {
         "json": {
-          "task_id": "LW-25979"
+          "task_id": "LW-26111"
         }
       }
     ],
     "Clear Promt1": [
       {
         "json": {
-          "ClearPromt": "A flat black and white stylized game icon of an undrafted mission flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a geometric shield with a bold five-pointed star in the center the strong geometric shapes of the shield and the central star represent a mission objective the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background"
+          "ClearPromt": "A flat black and white stylized game icon of a Completed Mission Flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a simple geometric shield with a large solid five-pointed star inside the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background"
         }
       }
     ],
     "Code": [
       {
         "json": {
-          "authSid": "3pfwjwij"
+          "authSid": "ri12bhgd"
         }
       }
     ],
     "Edit Fields": [
       {
         "json": {
-          "description": "Описание:\nГенерация 3D-модели здания Building_RationFactory\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Генерация 3D-модели здания Building_RationFactory\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D building asset for sci-fi mobile game: \"Ration Factory\". Semi-realistic stylized casual 3D, game-ready asset. The main structure is a compact, modular factory with a central rectangular core, featuring smooth matte composite panels in vibrant orange (#D35400). Attached to the core are accent panels and storage containers in carrot orange (#E67E22), arranged symmetrically for visual balance. Several dome-shaped bioreactors made of semi-transparent glass rise from the roof, glowing with amber light (#F39C12) to showcase luminous biomass inside. Neon strips in dark orange (#FF8C00) run along the facade, conveyor belts, and airlocks, creating dynamic highlights and a futuristic vibe. Metallic elements with a subtle sheen accentuate the conveyor system and entry points, contrasting with the matte surfaces. The overall silhouette is clean and geometric, with rounded corners and minimal clutter, emphasizing functional design. Color palette: orange (#D35400), carrot (#E67E22), amber (#F39C12), dark orange neon (#FF8C00), neutral metallic gray, and clear glass. Lighting is soft and diffused, casting deep shadows for depth, with brightness focused on glowing and neon elements. Render the building at a 30° isometric angle, isolated on a pure white background. High detail, clean render, suitable for mobile game asset integration.\n\nПуть QNAP:\nhttps://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_c93h94ki66m523s2q6vu14365z8558g0\n\nЦветовая палитра:\n- #D35400 (оранжевый): используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон.\n"
+          "customfield_12505": "Путь QNAP:\nnull\nhttps://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_4g0815ll29ll2pprr0x604z34cf800fj",
+          "description": "Описание:\nСоздание иконки Icon_Specops_CompletedMissionFlag\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Создание иконки Icon_Specops_CompletedMissionFlag\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D mission flag icon for sci-fi mobile game, semi-realistic stylized casual 3D, bright neon accents. The icon features a central cyan star (#00FFFF) emitting a soft, radiant glow, set within a holographic shield base shaped as a sleek, angular badge. The shield is constructed from dark violet holographic panels (#31004a) with subtle transparency and layered digital artifacts, giving a futuristic, high-tech appearance. Thin electric blue (#7DF9FF) glitch effects and contour highlights trace the shield’s edges, adding dynamic energy and a sense of digital movement. The central star is crisp and luminous, with gentle gradients and a soft neon aura, while the shield’s surface reflects clean, pure neon energy. No physical textures—surfaces are smooth, glassy, and slightly reflective, emphasizing the holographic material. The composition is balanced and symmetrical, with the star as the focal point and shield elements framing it harmoniously. Color palette: Cyan (#00FFFF), Dark Violet (#31004a), Electric Blue (#7DF9FF). Lighting: Internal glow from the star, soft neon illumination, high contrast between lit and shadowed areas, no external light sources. Effects: Subtle digital glitches, gentle bloom around neon elements, clean render with no background clutter. Technical requirements: isometric view at 30°, isolated object on a pure white background, high detail, game-ready asset, clean render, no additional props or text.//QNAP/\n\n\nЦветовая палитра:\n- #00FFFF (Циан): используется для центральной звезды и её свечения. Темный Фиолетовый (#31004a) — используется для основы голографического щита. Электрический Синий (#7DF9FF) — используется для глитч-эффектов и тонкой контурной подсветки щита. Материалы и поверхности: Голографические панели, чистая неоновая энергия, цифровые артефакты. Освещение: Внутреннее свечение от центрального элемента, без внешних источников света. Мягкий неоновый свет с высоким контрастом.\n"
         }
       }
     ],
@@ -1829,10 +1836,10 @@
             "aggregateprogress": {
               "percent": 0,
               "progress": 0,
-              "total": 10800
+              "total": 1800
             },
-            "aggregatetimeestimate": 10800,
-            "aggregatetimeoriginalestimate": 10800,
+            "aggregatetimeestimate": 1800,
+            "aggregatetimeoriginalestimate": 1800,
             "aggregatetimespent": null,
             "archivedby": null,
             "archiveddate": null,
@@ -1859,7 +1866,7 @@
               "total": 0
             },
             "components": [],
-            "created": "2025-12-03T14:30:08.961+0000",
+            "created": "2025-12-04T10:30:35.689+0000",
             "creator": {
               "active": true,
               "avatarUrls": {
@@ -1879,9 +1886,9 @@
             "customfield_10015": null,
             "customfield_10016": null,
             "customfield_10018": null,
-            "customfield_10019": "0|i1id34:",
+            "customfield_10019": "0|i1igug:",
             "customfield_10020": [
-              "com.atlassian.greenhopper.service.sprint.Sprint@46a492ee[activatedDate=2025-12-01T05:32:20.852Z,autoStartStop=false,completeDate=<null>,endDate=2025-12-08T05:28:00.000Z,goal=,id=356,incompleteIssuesDestinationId=<null>,name=LW Спринт 69,rapidViewId=54,sequence=356,startDate=2025-12-01T05:28:00.000Z,state=ACTIVE,synced=false]"
+              "com.atlassian.greenhopper.service.sprint.Sprint@50087887[activatedDate=2025-12-01T05:32:20.852Z,autoStartStop=false,completeDate=<null>,endDate=2025-12-08T05:28:00.000Z,goal=,id=356,incompleteIssuesDestinationId=<null>,name=LW Спринт 69,rapidViewId=54,sequence=356,startDate=2025-12-01T05:28:00.000Z,state=ACTIVE,synced=false]"
             ],
             "customfield_10021": null,
             "customfield_10022": null,
@@ -1903,7 +1910,7 @@
             "customfield_10086": null,
             "customfield_10200": null,
             "customfield_10201": null,
-            "customfield_10300": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@41a6a33f[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@76085d26[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b5c43b1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5f89c291[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@96dd8f2[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@2bf963e4[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2231ece1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@33bd2f7c[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@5470dbb1[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@34766498[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@190dd013[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@4391da81[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":true}}",
+            "customfield_10300": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@65620f55[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b56b0d2[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@394e7f5[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5d1a0775[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@542373f7[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@6850b0ad[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@4cdf591d[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@41f3de5c[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@e80a15e[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@63b8bdfb[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@55191720[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@ac732e1[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":true}}",
             "customfield_10400": null,
             "customfield_10401": null,
             "customfield_10402": null,
@@ -1921,10 +1928,10 @@
             ],
             "customfield_11101": {
               "allFinished": false,
-              "created": 1764773367156,
-              "durationAsString": "19m",
-              "durationAsStringBoard": "19m",
-              "durationAsStringCsv": "19m",
+              "created": 1764844301160,
+              "durationAsString": "1m",
+              "durationAsStringBoard": "1m",
+              "durationAsStringCsv": "1m",
               "fieldKey": "assignee",
               "fieldName": "Assignee",
               "fieldValuesMap": {
@@ -1934,44 +1941,44 @@
               "statusTimesMap": {
                 "3": {
                   "allFinished": false,
-                  "created": 1764773367156,
-                  "durationAsString": "19m",
-                  "durationAsStringBoard": "19m",
-                  "durationAsStringCsv": "19m",
+                  "created": 1764844301161,
+                  "durationAsString": "1m",
+                  "durationAsStringBoard": "1m",
+                  "durationAsStringCsv": "1m",
                   "fieldTimes": [
                     {
                       "allFinished": false,
-                      "durationAsString": "19m",
-                      "durationAsStringBoard": "19m",
-                      "durationAsStringCsv": "19m",
+                      "durationAsString": "1m",
+                      "durationAsStringBoard": "1m",
+                      "durationAsStringCsv": "1m",
                       "fieldValue": "JIRAUSER16461",
                       "timeDetails": [
                         {
-                          "duration": 1155,
-                          "durationAsString": "19m",
-                          "durationAsStringBoard": "19m",
-                          "durationAsStringCsv": "19m",
-                          "end": 1764773367156,
+                          "duration": 62,
+                          "durationAsString": "1m",
+                          "durationAsStringBoard": "1m",
+                          "durationAsStringCsv": "1m",
+                          "end": 1764844301161,
                           "finished": false,
-                          "start": 1764772211798
+                          "start": 1764844238752
                         }
                       ],
-                      "totalDuration": 1155
+                      "totalDuration": 62
                     }
                   ],
                   "fieldValues": [
                     "JIRAUSER16461"
                   ],
                   "statusId": "3",
-                  "totalDuration": 1155
+                  "totalDuration": 62
                 }
               },
               "statuses": [
                 "3"
               ],
-              "totalDuration": 1155
+              "totalDuration": 62
             },
-            "customfield_11102": "TimeInStatus(running=true, updateTime=1764773367159, timeInStatus=1155)",
+            "customfield_11102": "TimeInStatus(running=true, updateTime=1764844301164, timeInStatus=62)",
             "customfield_11401": null,
             "customfield_11402": null,
             "customfield_11405": "",
@@ -1981,10 +1988,10 @@
             "customfield_12600": null,
             "customfield_12700": {
               "allFinished": false,
-              "created": 1764773367162,
-              "durationAsString": "19 minutes, 15 seconds",
-              "durationAsStringBoard": "19 minutes, 15 seconds",
-              "durationAsStringCsv": "19 minutes, 15 seconds",
+              "created": 1764844301168,
+              "durationAsString": "1 minute, 2 seconds",
+              "durationAsStringBoard": "1 minute, 2 seconds",
+              "durationAsStringCsv": "1 minute, 2 seconds",
               "fieldKey": "assignee",
               "fieldName": "Assignee",
               "fieldValuesMap": {
@@ -1994,49 +2001,49 @@
               "statusTimesMap": {
                 "3": {
                   "allFinished": false,
-                  "created": 1764773367163,
-                  "durationAsString": "19 minutes, 15 seconds",
-                  "durationAsStringBoard": "19 minutes, 15 seconds",
-                  "durationAsStringCsv": "19 minutes, 15 seconds",
+                  "created": 1764844301169,
+                  "durationAsString": "1 minute, 2 seconds",
+                  "durationAsStringBoard": "1 minute, 2 seconds",
+                  "durationAsStringCsv": "1 minute, 2 seconds",
                   "fieldTimes": [
                     {
                       "allFinished": false,
-                      "durationAsString": "19 minutes, 15 seconds",
-                      "durationAsStringBoard": "19 minutes, 15 seconds",
-                      "durationAsStringCsv": "19 minutes, 15 seconds",
+                      "durationAsString": "1 minute, 2 seconds",
+                      "durationAsStringBoard": "1 minute, 2 seconds",
+                      "durationAsStringCsv": "1 minute, 2 seconds",
                       "fieldValue": "JIRAUSER16461",
                       "timeDetails": [
                         {
-                          "duration": 1155,
-                          "durationAsString": "19 minutes, 15 seconds",
-                          "durationAsStringBoard": "19 minutes, 15 seconds",
-                          "durationAsStringCsv": "19 minutes, 15 seconds",
-                          "end": 1764773367163,
+                          "duration": 62,
+                          "durationAsString": "1 minute, 2 seconds",
+                          "durationAsStringBoard": "1 minute, 2 seconds",
+                          "durationAsStringCsv": "1 minute, 2 seconds",
+                          "end": 1764844301169,
                           "finished": false,
-                          "start": 1764772211798
+                          "start": 1764844238752
                         }
                       ],
-                      "totalDuration": 1155
+                      "totalDuration": 62
                     }
                   ],
                   "fieldValues": [
                     "JIRAUSER16461"
                   ],
                   "statusId": "3",
-                  "totalDuration": 1155
+                  "totalDuration": 62
                 }
               },
               "statuses": [
                 "3"
               ],
-              "totalDuration": 1155
+              "totalDuration": 62
             },
             "customfield_12701": {
               "allFinished": false,
-              "created": 1764773367159,
-              "durationAsString": "19m, 16s",
-              "durationAsStringBoard": "19m, 16s",
-              "durationAsStringCsv": "19m, 16s",
+              "created": 1764844301164,
+              "durationAsString": "1m, 3s",
+              "durationAsStringBoard": "1m, 3s",
+              "durationAsStringCsv": "1m, 3s",
               "fieldKey": "assignee",
               "fieldName": "Assignee",
               "fieldValuesMap": {
@@ -2046,40 +2053,40 @@
               "statusTimesMap": {
                 "3": {
                   "allFinished": false,
-                  "created": 1764773367160,
-                  "durationAsString": "19m, 15s",
-                  "durationAsStringBoard": "19m, 15s",
-                  "durationAsStringCsv": "19m, 15s",
+                  "created": 1764844301165,
+                  "durationAsString": "1m, 2s",
+                  "durationAsStringBoard": "1m, 2s",
+                  "durationAsStringCsv": "1m, 2s",
                   "fieldTimes": [
                     {
                       "allFinished": false,
-                      "durationAsString": "19m, 15s",
-                      "durationAsStringBoard": "19m, 15s",
-                      "durationAsStringCsv": "19m, 15s",
+                      "durationAsString": "1m, 2s",
+                      "durationAsStringBoard": "1m, 2s",
+                      "durationAsStringCsv": "1m, 2s",
                       "fieldValue": "JIRAUSER16461",
                       "timeDetails": [
                         {
-                          "duration": 1155,
-                          "durationAsString": "19m, 15s",
-                          "durationAsStringBoard": "19m, 15s",
-                          "durationAsStringCsv": "19m, 15s",
-                          "end": 1764773367160,
+                          "duration": 62,
+                          "durationAsString": "1m, 2s",
+                          "durationAsStringBoard": "1m, 2s",
+                          "durationAsStringCsv": "1m, 2s",
+                          "end": 1764844301165,
                           "finished": false,
-                          "start": 1764772211798
+                          "start": 1764844238752
                         }
                       ],
-                      "totalDuration": 1155
+                      "totalDuration": 62
                     }
                   ],
                   "fieldValues": [
                     "JIRAUSER16461"
                   ],
                   "statusId": "3",
-                  "totalDuration": 1155
+                  "totalDuration": 62
                 },
                 "10004": {
                   "allFinished": true,
-                  "created": 1764773367160,
+                  "created": 1764844301165,
                   "durationAsString": "1s",
                   "durationAsStringBoard": "1s",
                   "durationAsStringCsv": "1s",
@@ -2096,9 +2103,9 @@
                           "durationAsString": "1s",
                           "durationAsStringBoard": "1s",
                           "durationAsStringCsv": "1s",
-                          "end": 1764772211798,
+                          "end": 1764844238752,
                           "finished": true,
-                          "start": 1764772210245
+                          "start": 1764844237146
                         }
                       ],
                       "totalDuration": 1
@@ -2115,7 +2122,7 @@
                 "10004",
                 "3"
               ],
-              "totalDuration": 1156
+              "totalDuration": 63
             },
             "customfield_12801": null,
             "customfield_12804": null,
@@ -2126,7 +2133,7 @@
               "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/13314",
               "value": "No"
             },
-            "description": "Описание:\nГенерация 3D-модели здания Building_RationFactory\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Генерация 3D-модели здания Building_RationFactory\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D building asset for sci-fi mobile game: \"Ration Factory\". Semi-realistic stylized casual 3D, game-ready asset. The main structure is a compact, modular factory with a central rectangular core, featuring smooth matte composite panels in vibrant orange (#D35400). Attached to the core are accent panels and storage containers in carrot orange (#E67E22), arranged symmetrically for visual balance. Several dome-shaped bioreactors made of semi-transparent glass rise from the roof, glowing with amber light (#F39C12) to showcase luminous biomass inside. Neon strips in dark orange (#FF8C00) run along the facade, conveyor belts, and airlocks, creating dynamic highlights and a futuristic vibe. Metallic elements with a subtle sheen accentuate the conveyor system and entry points, contrasting with the matte surfaces. The overall silhouette is clean and geometric, with rounded corners and minimal clutter, emphasizing functional design. Color palette: orange (#D35400), carrot (#E67E22), amber (#F39C12), dark orange neon (#FF8C00), neutral metallic gray, and clear glass. Lighting is soft and diffused, casting deep shadows for depth, with brightness focused on glowing and neon elements. Render the building at a 30° isometric angle, isolated on a pure white background. High detail, clean render, suitable for mobile game asset integration.\n\nПуть QNAP:\n//QNAP/ART/Assets/Other/Генерация 3D-модели здания Building_RationFactory/Генерация 3D-модели здания Building_RationFactory_v001_20251203.png\n\nЦветовая палитра:\n- #D35400 (оранжевый): используется для основного корпуса центрального модуля. Морковный (#E67E22) — используется для акцентных панелей и контейнеров с пайками. Янтарный (#F39C12) — используется для светящейся биомассы внутри куполов. Темный оранжевый (#FF8C00) — используется для неоновой подсветки на фасаде и конвейерной ленте. Материалы и поверхности: Основа из матовых композитных панелей. Полупрозрачное стекло для куполов. Металлические акценты с легким блеском на конвейере и шлюзах. Освещение: Мягкое рассеянное освещение с глубокими тенями. Яркость создается в основном за счет glow-элементов и встроенной подсветки. Чистый белый фон.\n",
+            "description": "Описание:\nСоздание иконки Icon_Specops_CompletedMissionFlag\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Создание иконки Icon_Specops_CompletedMissionFlag\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D mission flag icon for sci-fi mobile game, semi-realistic stylized casual 3D, bright neon accents. The icon features a central cyan star (#00FFFF) emitting a soft, radiant glow, set within a holographic shield base shaped as a sleek, angular badge. The shield is constructed from dark violet holographic panels (#31004a) with subtle transparency and layered digital artifacts, giving a futuristic, high-tech appearance. Thin electric blue (#7DF9FF) glitch effects and contour highlights trace the shield’s edges, adding dynamic energy and a sense of digital movement. The central star is crisp and luminous, with gentle gradients and a soft neon aura, while the shield’s surface reflects clean, pure neon energy. No physical textures—surfaces are smooth, glassy, and slightly reflective, emphasizing the holographic material. The composition is balanced and symmetrical, with the star as the focal point and shield elements framing it harmoniously. Color palette: Cyan (#00FFFF), Dark Violet (#31004a), Electric Blue (#7DF9FF). Lighting: Internal glow from the star, soft neon illumination, high contrast between lit and shadowed areas, no external light sources. Effects: Subtle digital glitches, gentle bloom around neon elements, clean render with no background clutter. Technical requirements: isometric view at 30°, isolated object on a pure white background, high detail, game-ready asset, clean render, no additional props or text.\n\nПуть QNAP:\n//QNAP/\n\n\nЦветовая палитра:\n- #00FFFF (Циан): используется для центральной звезды и её свечения. Темный Фиолетовый (#31004a) — используется для основы голографического щита. Электрический Синий (#7DF9FF) — используется для глитч-эффектов и тонкой контурной подсветки щита. Материалы и поверхности: Голографические панели, чистая неоновая энергия, цифровые артефакты. Освещение: Внутреннее свечение от центрального элемента, без внешних источников света. Мягкий неоновый свет с высоким контрастом.\n",
             "duedate": null,
             "environment": null,
             "fixVersions": [],
@@ -2151,7 +2158,7 @@
             "progress": {
               "percent": 0,
               "progress": 0,
-              "total": 10800
+              "total": 1800
             },
             "project": {
               "avatarUrls": {
@@ -2210,21 +2217,21 @@
               }
             },
             "subtasks": [],
-            "summary": "[Test][ART] Генерация 3D-модели здания Building_RationFactory",
-            "timeestimate": 10800,
-            "timeoriginalestimate": 10800,
+            "summary": "[Test][ART] Создание иконки Icon_Specops_CompletedMissionFlag",
+            "timeestimate": 1800,
+            "timeoriginalestimate": 1800,
             "timespent": null,
             "timetracking": {
-              "originalEstimate": "3h",
-              "originalEstimateSeconds": 10800,
-              "remainingEstimate": "3h",
-              "remainingEstimateSeconds": 10800
+              "originalEstimate": "30m",
+              "originalEstimateSeconds": 1800,
+              "remainingEstimate": "30m",
+              "remainingEstimateSeconds": 1800
             },
-            "updated": "2025-12-03T14:30:11.797+0000",
+            "updated": "2025-12-04T10:30:38.751+0000",
             "versions": [],
             "watches": {
               "isWatching": true,
-              "self": "https://jira.itcomp.space/rest/api/2/issue/LW-25970/watchers",
+              "self": "https://jira.itcomp.space/rest/api/2/issue/LW-26111/watchers",
               "watchCount": 1
             },
             "worklog": {
@@ -2235,10 +2242,10 @@
             },
             "workratio": 0
           },
-          "id": "336444",
-          "key": "LW-25970",
+          "id": "337054",
+          "key": "LW-26111",
           "renderedFields": null,
-          "self": "https://jira.itcomp.space/rest/api/2/issue/336444"
+          "self": "https://jira.itcomp.space/rest/api/2/issue/337054"
         }
       }
     ],
@@ -2252,18 +2259,18 @@
         "binary": {
           "data": {
             "data": "filesystem-v2",
-            "directory": "files/b/0a84d493",
+            "directory": "files/b/0a84f049",
             "fileExtension": "png",
-            "fileName": "e2jWZ7aj4meTEOO64hQRW.png",
-            "fileSize": "267 kB",
+            "fileName": "WXudAUe28W94V4GPGMsG8.png",
+            "fileSize": "774 kB",
             "fileType": "image",
-            "id": "filesystem-v2:workflows/RanmSo3XptdcmS0k/executions/86477/binary_data/1d8f6036-50a8-4687-911c-5c9541a0dac6",
+            "id": "filesystem-v2:workflows/RanmSo3XptdcmS0k/executions/87038/binary_data/76d4b280-05fc-4e57-a73d-da8bff29ed41",
             "mimeType": "image/png"
           }
         },
         "json": {
           "build": "20251121",
-          "status": 1,
+          "status": 33,
           "success": "true",
           "version": "5.5.6.5129"
         }
@@ -2272,24 +2279,31 @@
     "Imagen ": [
       {
         "json": {
-          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1/cancel",
+          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1/cancel",
           "logs": null,
           "metrics": {},
           "queue_position": 0,
-          "request_id": "c51ad638-7041-4fd9-8865-e8b0b33fb1c1",
-          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1",
+          "request_id": "2e52b8b9-0259-4cff-bf98-ba7baaa1ced1",
+          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1",
           "status": "IN_QUEUE",
-          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1/status"
+          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1/status"
         }
       }
     ],
-    "Promt1": [
+    "Link": [
+      {
+        "json": {
+          "url": "https://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_4g0815ll29ll2pprr0x604z34cf800fj"
+        }
+      }
+    ],
+    "Promt": [
       {
         "json": {
           "output": {
-            "Name": "Icon_Specops_UndraftedMissionFlag",
-            "Promt": "A flat black and white stylized game icon of an undrafted mission flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a geometric shield with a bold five-pointed star in the center the strong geometric shapes of the shield and the central star represent a mission objective the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background",
-            "Type": "Flat icon"
+            "Name": "Icon_Specops_CompletedMissionFlag",
+            "Promt": "A flat black and white stylized game icon of a Completed Mission Flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a simple geometric shield with a large solid five-pointed star inside the design uses only solid black and white shapes no shading no gradients no colors strong silhouette high contrast clean vector style flat graphic casual game UI element isolated on a plain background",
+            "Type": "Иконка"
           }
         }
       }
@@ -2297,14 +2311,14 @@
     "Queue1": [
       {
         "json": {
-          "description": "Here is the stylized game icon you requested: \nA flat black and white stylized game icon of an undrafted mission flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a geometric shield with a bold five-pointed star in the center the\n\n\nhttps://pfst.cf2.poecdn.net/base/image/99880816b98a547b461093ea11dda6f1ce0934e5e363f2980241060116cf128a?w=1024&h=1024",
+          "description": "\nA flat black and white stylized game icon of a Completed Mission Flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a simple geometric shield with a large solid five-pointed star inside _image_1\n\n\nhttps://pfst.cf2.poecdn.net/base/image/3fce37a6e6b7450706b1c76bdacb90f3a6c2dfc756d6be36d1832ad504e86e84?w=1024&h=1024",
           "images": [
             {
               "content_type": "image/png",
-              "file_name": "e2jWZ7aj4meTEOO64hQRW.png",
+              "file_name": "WXudAUe28W94V4GPGMsG8.png",
               "file_size": null,
               "height": null,
-              "url": "https://v3b.fal.media/files/b/0a84d493/e2jWZ7aj4meTEOO64hQRW.png",
+              "url": "https://v3b.fal.media/files/b/0a84f049/WXudAUe28W94V4GPGMsG8.png",
               "width": null
             }
           ]
@@ -2317,7 +2331,7 @@
           "content": {
             "parts": [
               {
-                "text": "Хорошо, я проанализирую предоставленную иконку.\n\n**Важное примечание:** Файл с 10 якорными (эталонными) иконками не был предоставлен. Поэтому оценка по критериям «Цветовая палитра» и «Единство стиля» будет условной, так как мне не с чем сравнивать новую иконку. Я проведу анализ на основе общих принципов flat-дизайна и предположений о стиле, заданном в описании.\n\n***\n\n### Анализ иконки\n\n**1. Стиль flat дизайна: 15/15**\nИконка полностью соответствует принципам плоского дизайна. В ней отсутствуют градиенты, тени, объём и другие псевдотрёхмерные эффекты, а все элементы выполнены с помощью простых геометрических форм и заливок.\n\n**2. Цветовая палитра: 5/15**\nИконка является монохромной (чёрно-белой), что обеспечивает максимальный контраст. Однако в задании указано, что для эталонного стиля характерно использование «ярких, насыщенных цветов», чему данное изображение не соответствует. Балл снижен из-за этого несоответствия предполагаемой палитре.\n\n**3. Контуры и обводка: 9/10**\nКонтуры чёткие, равномерной толщины, они эффективно обрамляют все ключевые элементы — щит и звезду. Толщина обводки выглядит сбалансированной и современной, что способствует хорошей читаемости.\n\n**4. Простота форм: 10/10**\nИзображение построено на основе базовых и легко узнаваемых форм: классический щит и пятиконечная звезда. Отсутствуют лишние детали, что делает иконку лаконичной и понятной.\n\n**5. Читаемость и узнаваемость: 15/15**\nСимвол щита со звездой является универсальным и мгновенно распознаваемым. Он легко ассоциируется с понятиями защиты, безопасности, качества, награды или статуса.\n\n**6. Композиция и баланс: 10/10**\nКомпозиция идеально сбалансирована: звезда расположена по центру щита, а диагональное разделение фона на две части придаёт иконке динамики, не нарушая гармонии. Пропорции элементов выдержаны верно.\n\n**7. Единство стиля: 5/10**\nЭта оценка является условной, поскольку эталонные иконки отсутствуют. Судя по качеству исполнения и использованию чётких контуров, иконка, вероятно, могла бы вписаться в единый набор, но без прямого сравнения дать точную оценку невозможно.\n\n**8. Качество исполнения: 10/10**\nТехническое исполнение безупречно. Линии ровные и чистые, без пикселизации, артефактов или неровностей на изгибах. Все элементы выглядят аккуратно и профессионально.\n\n**9. Масштабируемость: 5/5**\nБлагодаря простоте форм, отсутствию мелких деталей и чётким контурам, иконка будет отлично читаться и сохранять свою узнаваемость даже при сильном уменьшении размера.\n\n***\n\n### **ИТОГОВАЯ ОЦЕНКА: 84/100**"
+                "text": "Так как файл с якорными иконками не был предоставлен, я проведу анализ, основываясь на описании требуемого стиля из задания («flat дизайн», «яркие, насыщенные цвета», «чёткие чёрные контуры»). Иконка на изображении видна полностью, поэтому я приступаю к детальной оценке.\n\n***\n\n### Анализ новой иконки\n\n**1. Стиль flat дизайна (15/15 баллов)**\nИконка полностью соответствует принципам плоского дизайна. В ней отсутствуют градиенты, тени, объём или любые другие псевдо-3D эффекты, а все элементы выполнены с помощью простых двухмерных форм.\n\n**2. Цветовая палитра (0/15 баллов)**\nСогласно заданию, эталонный стиль предполагает использование «ярких, насыщенных цветов». Данная иконка является монохромной (чёрно-белой), что кардинально расходится с этим требованием. Соответствие цветовой палитре полностью отсутствует.\n\n**3. Контуры и обводка (10/10 баллов)**\nИконка имеет чёткие, равномерные чёрные контуры средней толщины, которые обрамляют все ключевые элементы — щит, звезду и флаг. Это в точности соответствует описанию стиля якорных иконок.\n\n**4. Простота форм (10/10 баллов)**\nФормы, использованные в иконке (щит, пятиконечная звезда, развевающийся флаг), являются простыми, геометричными и легко считываемыми. Отсутствует излишняя детализация, что характерно для качественного плоского дизайна.\n\n**5. Читаемость и узнаваемость (15/15 баллов)**\nИконка мгновенно доносит свою идею. Надпись \"MISSION COMPLETE\" в сочетании с символами награды (щит и звезда) не оставляет сомнений в значении — успешное завершение задачи или достижение.\n\n**6. Композиция и баланс (10/10 баллов)**\nЭлементы иконки гармонично скомпонованы и сбалансированы. Флаг расположен ровно над щитом, а звезда — в его центре, что создаёт ощущение стабильности и визуальной завершённости.\n\n**7. Единство стиля (3/10 баллов)**\nХотя иконка соответствует эталонному стилю по части контуров и простоты форм, полное отсутствие цвета является критическим стилистическим расхождением. Если бы эталонные иконки были цветными, данное изображение выбивалось бы из общего ряда.\n\n**8. Качество исполнения (10/10 баллов)**\nТехническое исполнение безупречно. Линии ровные и чёткие, без артефактов, пикселизации или неровностей. Иконка выглядит профессионально и аккуратно.\n\n**9. Масштабируемость (3/5 баллов)**\nОсновные формы (щит, звезда) будут отлично читаться в любом размере. Однако наличие текста \"MISSION COMPLETE\" снижает масштабируемость: при сильном уменьшении надпись станет нечитаемой и превратится в две чёрные полосы.\n\n***\n\n**ИТОГОВАЯ ОЦЕНКА: 76/100**"
               }
             ],
             "role": "model"
@@ -2327,29 +2341,43 @@
         }
       }
     ],
+    "Update an issue": [
+      {
+        "json": {
+          "success": true
+        }
+      }
+    ],
+    "Update an issue1": [
+      {
+        "json": {
+          "success": true
+        }
+      }
+    ],
     "Url1": [
       {
         "binary": {
           "data": {
             "data": "filesystem-v2",
-            "directory": "files/b/0a84d493",
+            "directory": "files/b/0a84f049",
             "fileExtension": "png",
-            "fileName": "e2jWZ7aj4meTEOO64hQRW.png",
-            "fileSize": "267 kB",
+            "fileName": "WXudAUe28W94V4GPGMsG8.png",
+            "fileSize": "774 kB",
             "fileType": "image",
-            "id": "filesystem-v2:workflows/RanmSo3XptdcmS0k/executions/86477/binary_data/213ac86e-0b70-423b-abbb-de1a871490e0",
+            "id": "filesystem-v2:workflows/RanmSo3XptdcmS0k/executions/87008/binary_data/ee44d576-5f4d-44da-b396-ce9f67651138",
             "mimeType": "image/png"
           }
         },
         "json": {
-          "description": "Here is the stylized game icon you requested: \nA flat black and white stylized game icon of an undrafted mission flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a geometric shield with a bold five-pointed star in the center the\n\n\nhttps://pfst.cf2.poecdn.net/base/image/99880816b98a547b461093ea11dda6f1ce0934e5e363f2980241060116cf128a?w=1024&h=1024",
+          "description": "\nA flat black and white stylized game icon of a Completed Mission Flag shown from a simple front angle with bold clean lines and minimal graphic design the main element is a simple geometric shield with a large solid five-pointed star inside _image_1\n\n\nhttps://pfst.cf2.poecdn.net/base/image/3fce37a6e6b7450706b1c76bdacb90f3a6c2dfc756d6be36d1832ad504e86e84?w=1024&h=1024",
           "images": [
             {
               "content_type": "image/png",
-              "file_name": "e2jWZ7aj4meTEOO64hQRW.png",
+              "file_name": "WXudAUe28W94V4GPGMsG8.png",
               "file_size": null,
               "height": null,
-              "url": "https://v3b.fal.media/files/b/0a84d493/e2jWZ7aj4meTEOO64hQRW.png",
+              "url": "https://v3b.fal.media/files/b/0a84f049/WXudAUe28W94V4GPGMsG8.png",
               "width": null
             }
           ]
@@ -2359,25 +2387,25 @@
     "Wait1": [
       {
         "json": {
-          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1/cancel",
+          "cancel_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1/cancel",
           "logs": null,
           "metrics": {},
           "queue_position": 0,
-          "request_id": "c51ad638-7041-4fd9-8865-e8b0b33fb1c1",
-          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1",
+          "request_id": "2e52b8b9-0259-4cff-bf98-ba7baaa1ced1",
+          "response_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1",
           "status": "IN_QUEUE",
-          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/c51ad638-7041-4fd9-8865-e8b0b33fb1c1/status"
+          "status_url": "https://queue.fal.run/fal-ai/gemini-25-flash-image/requests/2e52b8b9-0259-4cff-bf98-ba7baaa1ced1/status"
         }
       }
     ],
     "When Executed by Another Workflow": [
       {
         "json": {
-          "Chat ID": "918851594",
-          "File_name": "ТЗ_Арт_Особые_операции_v10_20251120_090511.pdf",
-          "Tasks": "[Название задачи]\nСоздание иконки Icon_Specops_UndraftedMissionFlag\n\n[Цель]\nПолучить готовую игровую иконку для отображения заблокированного (непройденного) уровня на карте миссий, которая визуально передает неактивное состояние.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nИконка выполнена в форме стилизованного технологичного щита с четкими геометрическими линиями. В центре щита расположена пятиконечная звезда с фацетированными гранями, создающими эффект объема. Композиция строго симметрична и центрирована в рабочей зоне 420x420 px, обеспечивая ясный и читаемый силуэт.\n\nМатериалы и поверхности:\nПоверхности имитируют холодные, неактивные материалы. Основа щита выполнена из матового темно-серого металла. Звезда и окантовка щита сделаны из шлифованного серебристого металла с легкими бликами от внешнего источника света, но без внутреннего свечения.\n\nОсвещение и блики:\nОсвещение нейтральное, внешнее, создающее четкие блики на скошенных гранях звезды и окантовке щита. Полное отсутствие внутреннего свечения, неоновых элементов или glow-эффектов, чтобы подчеркнуть \"выключенное\", заблокированное состояние.\n\nДетализация:\nМинималистичный дизайн с акцентом на форме и материале. Основные детали — это четкая геометрия щита и объемная форма звезды. Мелкие текстуры или узоры отсутствуют, чтобы сохранить чистоту стиля.\n\nШаги выполнения:\n1. Создать 3D-модель иконки согласно концептуальному описанию.\n2. Применить материалы из указанной монохромной палитры.\n3. Настроить нейтральное внешнее освещение без добавления glow-эффектов.\n4. Проверить читаемость иконки на размере 32x32 px.\n5. Выполнить рендер на прозрачном фоне.\n6. Экспортировать в формате PNG с альфа-каналом.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, но без ярких неоновых акцентов для передачи неактивного состояния.\n\nПринадлежность к миру:\nТехнологическая база игрока — представляет собой неактивный элемент интерфейса в корпоративной системе.\n\nКлючевые визуальные особенности:\nЦентрированная композиция. Читаемый силуэт на малых размерах. Строгое отсутствие свечения для передачи неактивного состояния.\n\nЦветовая палитра:\nТемно-серый (#34495E) — используется для основного поля щита.\nСеребристый (#BDC3C7) — используется для центральной звезды и окантовки щита.\nГрафитовый (#2C3E50) — используется для создания глубины и теней на фасках.\n\nМатериалы и поверхности:\nШлифованный металл, матовые техно-поверхности, хром для бликов. Без грязи, царапин или износа.\n\nОсвещение:\nНейтральное внешнее освещение, подчеркивающее форму объекта. Без внутренних источников света, неонов и glow-эффектов.\n\n[Формат и технические параметры]\n\nФинальный размер: 512x512 px\nРабочая зона: 420x420 px (центрирована)\nФормат файла: PNG с альфа-каналом\nЦветовое пространство: sRGB\nТолщина контуров: 14 px (для окантовки)\nНейминг файла: Icon_Specops_UndraftedMissionFlag\n\n[Критерии приёмки]\n\nОценка бота качества >= 85%\nСоответствие техническим параметрам (размер 512x512, формат PNG).\nИконка четко передает неактивное/заблокированное состояние за счет отсутствия свечения и ярких цветов.\nЧитаемость силуэта на минимальном размере 32x32 px.\nИспользованы только цвета из указанной монохромной палитры.\nОтсутствие артефактов рендера.\nОдобрение арт-лида.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
+          "Chat ID": "283991341",
+          "File_name": "ГДД_ФЛАГ.pdf",
+          "Tasks": "[Название задачи]\nСоздание иконки Icon_Specops_CompletedMissionFlag\n\n[Цель]\nПолучить игровую иконку для отображения завершенной миссии в интерфейсе пользователя, символизирующую цифровой трофей в сетевой системе корпорации.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nИконка выполнена в виде стилизованного футуристического щита, в центре которого расположена крупная пятиконечная звезда. Композиция строго центрирована в рабочей зоне 420x420 px, что обеспечивает акцент на ключевом элементе — звезде. Форма щита имеет четкие геометрические очертания, подчеркивающие технологичность.\n\nМатериалы и поверхности:\nЩит выполнен из полупрозрачного темного материала с видимой на поверхности гексагональной сеткой, имитирующей голографическую панель. Звезда представляет собой объект из чистой неоновой энергии, без твердой поверхности.\n\nОсвещение и блики:\nОсновным источником света является внутренняя эманация неоновой звезды. Отсутствуют внешние источники освещения и глянцевые блики. Свечение от звезды создает мягкий ореол и подсвечивает контуры щита изнутри.\n\nСветящиеся элементы:\nЦентральная звезда ярко светится неоновым светом и окружена цифровыми глитч-артефактами (хроматическая аберрация, короткие пиксельные сдвиги). Внешний контур щита имеет тонкую, едва заметную неоновую обводку.\n\nДетализация:\nГлитч-эффекты вокруг звезды являются ключевой деталью, подчеркивающей цифровое происхождение трофея. Гексагональная сетка на щите должна быть достаточно контрастной для считывания, но не перетягивать на себя внимание от звезды.\n\nШаги выполнения:\n1. Создать иконку согласно концептуальному описанию.\n2. Применить цвета из указанной палитры проекта.\n3. Добавить glow-эффекты для звезды и контуров.\n4. Интегрировать глитч-артефакты вокруг центральной звезды.\n5. Проверить читаемость иконки на размере 32x32 px.\n6. Экспортировать в указанном формате с альфа-каналом.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\nПринадлежность к миру:\nТехнологическая база игрока — объект воспринимается как цифровой артефакт из корпоративной сети.\n\nКлючевые визуальные особенности:\nЦентрированная композиция, четкий и читаемый силуэт, акцент на ярком неоновом свечении и цифровых глитч-эффектах.\n\nЦветовая палитра:\nНеоновый Циан (#00FFFF) — используется для центральной звезды и её свечения.\nТемный Фиолетовый (#31004a) — используется для основы голографического щита.\nЭлектрический Синий (#7DF9FF) — используется для глитч-эффектов и тонкой контурной подсветки щита.\n\nМатериалы и поверхности:\nГолографические панели, чистая неоновая энергия, цифровые артефакты.\n\nОсвещение:\nВнутреннее свечение от центрального элемента, без внешних источников света. Мягкий неоновый свет с высоким контрастом.\n\n[Формат и технические параметры]\n\nФинальный размер: 512x512 px\nРабочая зона: 420x420 px (центрирована)\nФормат файла: PNG с альфа-каналом\nЦветовое пространство: sRGB\nТолщина контуров: 14 px\nНейминг файла: Icon_Specops_CompletedMissionFlag\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, размер 512x512 px\nСоответствие цветовой палитре (использованы указанные HEX-коды)\nЧитаемость силуэта и центрального элемента на минимальном размере 32x32 px\nНаличие выраженных glow- и глитч-эффектов\nОдобрение арт-лида\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
           "Username": "YyBlood",
-          "estimate": "3h"
+          "estimate": "30m"
         }
       }
     ],
@@ -2392,14 +2420,14 @@
           "count": 0,
           "creator": "N8N_User",
           "expire_time": 0,
-          "host": "https://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_c93h94ki66m523s2q6vu14365z8558g0",
+          "host": "https://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_4g0815ll29ll2pprr0x604z34cf800fj",
           "limit": 0,
-          "link_name": "03.12.2025-Создание иконки Icon_Specops_UndraftedMissionFlag",
+          "link_name": "WXudAUe28W94V4GPGMsG8.png",
           "links": [
             {
-              "filename": "/3D assets/LW/AIgen-Jira/Здания базы//03.12.2025-Создание иконки Icon_Specops_UndraftedMissionFlag",
-              "link_url": "https://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_c93h94ki66m523s2q6vu14365z8558g0",
-              "ssid": "c25e93eb21c844e1a3db57575a6213c3"
+              "filename": "/3D assets/LW/AIgen-Jira/Здания базы/04.12.2025-Создание иконки Icon_Specops_CompletedMissionFlag/WXudAUe28W94V4GPGMsG8.png",
+              "link_url": "https://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_4g0815ll29ll2pprr0x604z34cf800fj",
+              "ssid": "8f2914fe84ba4cbcb7f147d44df565be"
             }
           ],
           "misc": "00000001",
@@ -2407,7 +2435,7 @@
           "option": 1,
           "port": "",
           "protocol": "http",
-          "ssid": "c25e93eb21c844e1a3db57575a6213c3",
+          "ssid": "8f2914fe84ba4cbcb7f147d44df565be",
           "status": 1,
           "total": 1
         }
@@ -2416,8 +2444,9 @@
     "Загрузка1": [
       {
         "json": {
-          "status": 3,
-          "success": "true"
+          "name": "WXudAUe28W94V4GPGMsG8.png",
+          "size": "773984",
+          "status": 1
         }
       }
     ],
@@ -2425,7 +2454,7 @@
       {
         "json": {
           "build": "20251121",
-          "status": 1,
+          "status": 33,
           "success": "true",
           "version": "5.5.6.5129"
         }
@@ -2447,6 +2476,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-03T20:50:20.000Z",
-  "versionId": "a8ed3437-6e88-4995-9fd2-deec3de34058"
+  "updatedAt": "2025-12-04T11:21:15.000Z",
+  "versionId": "4936ddde-bd25-445f-9e05-4fd5139b7296"
 }
