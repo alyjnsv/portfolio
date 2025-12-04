@@ -1,0 +1,679 @@
+{
+  "active": false,
+  "connections": {
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Replace Me",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get a repository",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Техническое Задание1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "info1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "build status": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "info1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Техническое Задание1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-04T09:51:41.925Z",
+  "id": "6vO7ADIRRloCBFpu",
+  "isArchived": false,
+  "meta": null,
+  "name": "AutoPril_Automatic",
+  "nodes": [
+    {
+      "id": "5735895b-ab71-4599-b06b-3a92be559b6a",
+      "name": "Техническое Задание1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e005882d-be4f-483f-aa02-2b684b020c3b",
+              "name": "TechTask",
+              "type": "string",
+              "value": "={{ $json.TZ }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1840,
+        352
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "de7c8443-a911-4e53-8f5c-3af3ccddaafc",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1d0e288-b992-4944-ba54-09f3814924d8",
+              "name": "prompt",
+              "type": "string",
+              "value": "={{ $json.output.prompt }}"
+            },
+            {
+              "id": "fce702eb-ed3b-4ada-825e-27450b75b40f",
+              "name": "dirName",
+              "type": "string",
+              "value": "={{ $json.output.dirName }}"
+            },
+            {
+              "id": "56b7216d-34fc-47d8-91de-ca3590836fdf",
+              "name": "command",
+              "type": "string",
+              "value": "=cursor-agent -p --force --model opus-4.5 prompt.txt"
+            },
+            {
+              "id": "38f612ca-0831-4290-abcb-a8c940a0d90e",
+              "name": "ticket",
+              "type": "string",
+              "value": "={{ $json.output.metadata.ticket }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -736,
+        352
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "857afbfa-5eb2-4465-ae91-810a23721a25",
+      "name": "HTTP Request7",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "prompt",
+              "value": "={{ $json.prompt }}"
+            },
+            {
+              "name": "dirName",
+              "value": "={{ $json.dirName }}"
+            },
+            {
+              "name": "command",
+              "value": "={{ $json.command }}"
+            },
+            {
+              "name": "=workerId",
+              "value": "={{ $json.workerId }}"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
+      },
+      "position": [
+        192,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "4f64a54c-aec4-4b5e-b1f2-a6415c1af583",
+      "name": "HTTP Request6",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "runDir",
+              "value": "={{ $json.runDir }}"
+            },
+            {
+              "name": "=runSlug",
+              "value": "={{ $json.runSlug }}"
+            },
+            {
+              "name": "={{ $json.status }}",
+              "value": "={{ $json.buildErrorLogsText }}"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
+      },
+      "position": [
+        2512,
+        288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "d9bd91b9-0243-4c6e-b70b-ec04728afdf1",
+      "name": "Edit Fields2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ebb81ec6-86c8-4ad9-9cd8-fe8147a50da4",
+              "name": "runDir",
+              "type": "string",
+              "value": "={{ $json.body.runDir }}"
+            },
+            {
+              "id": "562ecc6f-b225-4651-a3a7-96ac304125ad",
+              "name": "runSlug",
+              "type": "string",
+              "value": "={{ $json.body.runSlug }}"
+            },
+            {
+              "id": "cb479cf4-1106-47c9-b834-7c9a04661db9",
+              "name": "status",
+              "type": "string",
+              "value": "={{ $json.body.status }}"
+            },
+            {
+              "id": "f9197738-d1a9-4415-8012-3495e5f1647a",
+              "name": "buildErrorLogsText",
+              "type": "string",
+              "value": "={{ $json.body.buildErrorLogsText }}"
+            },
+            {
+              "id": "35631231-9f57-4cb9-acaa-624e800170c8",
+              "name": "repositoryUrl",
+              "type": "string",
+              "value": "={{ $json.body.repositoryUrl }}"
+            },
+            {
+              "id": "719ece31-ab2b-486f-a8c0-c8bf5ffa9b52",
+              "name": "error",
+              "type": "string",
+              "value": "={{ $json.body.error }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1808,
+        176
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "4cb68f74-3881-413d-a997-24e8850fd861",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "10fffcf9-6d0a-41f7-8394-ad405463120f",
+              "leftValue": "={{ $json.status }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Success"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2176,
+        224
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "disabled": true,
+      "id": "a6645d73-ccd7-4784-937f-055e861eefd2",
+      "name": "Get a repository",
+      "parameters": {
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "url",
+          "value": "="
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "resource": "repository"
+      },
+      "position": [
+        2512,
+        128
+      ],
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "webhookId": "db8c7015-1007-49ab-8a5d-d3808ad64bd9"
+    },
+    {
+      "id": "430fd4eb-f289-40ca-81ad-739717c247a1",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        -1328,
+        112
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "4578466a-f0e4-4069-acc2-43d0a99869a7",
+      "name": "Merge",
+      "parameters": {
+        "combineBy": "combineByPosition",
+        "mode": "combine",
+        "options": {}
+      },
+      "position": [
+        -288,
+        336
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "58a9082c-8ae6-4713-9738-eaa197e48e5b",
+      "name": "Edit Fields3",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f50429b9-5cd3-4ba4-ba3f-8c8e6eaf4b2b",
+              "name": "workerId",
+              "type": "string",
+              "value": "={{ $json.workerId }}"
+            },
+            {
+              "id": "8f1eb0ac-e01a-4d0c-9de5-27af859a0960",
+              "name": "prompt",
+              "type": "string",
+              "value": "={{ $json.prompt }}"
+            },
+            {
+              "id": "089161ce-89f4-45d3-bae4-bf7479db5f5c",
+              "name": "dirName",
+              "type": "string",
+              "value": "={{ $json.dirName }}"
+            },
+            {
+              "id": "9b6b444c-3ab7-4d03-96fd-44d6d80cf0b5",
+              "name": "command",
+              "type": "string",
+              "value": "cursor-agent -p --force --model opus-4.5 prompt.txt"
+            },
+            {
+              "id": "87a1101d-0399-480f-b78a-397d48ad0186",
+              "name": "ticket",
+              "type": "string",
+              "value": "={{ $json.ticket }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -80,
+        336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "ef9075b2-0f99-4bf5-b9ba-d7195c80ff4a",
+      "name": "build status",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "cursor_git"
+      },
+      "position": [
+        1424,
+        176
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "106dca18-a9e5-4ca8-89a0-5e6e958420a7"
+    },
+    {
+      "id": "5a208e6d-2b9b-46db-a7e1-b7ca14a07a72",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "tzar",
+          "cachedResultUrl": "/projects/4R7gJOzeAMmeCUFM/datatables/4KhnuvglQpfjGecY",
+          "mode": "list",
+          "value": "4KhnuvglQpfjGecY"
+        },
+        "operation": "get"
+      },
+      "position": [
+        -2352,
+        336
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "5704f2c4-42c9-47cc-a178-176112188640",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -2144,
+        336
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "d4a12485-996f-4880-84ee-ce9020b0158c",
+      "name": "Replace Me",
+      "parameters": {},
+      "position": [
+        2512,
+        576
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "ef148e2c-1f23-4005-9bba-bde065dd924d",
+      "name": "info1",
+      "parameters": {
+        "options": {},
+        "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
+      },
+      "position": [
+        -1168,
+        112
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "e968c6c2-46fd-47d7-b167-188323875325",
+      "name": "Code in JavaScript1",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
+      },
+      "position": [
+        -944,
+        112
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "aafc4b0b-8de7-4841-9297-e66d88f87035",
+      "name": "No Operation, do nothing1",
+      "parameters": {},
+      "position": [
+        -1840,
+        576
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "a73e9ff9-7bdf-43cd-81f2-ad3333a2d54b",
+      "name": "No Operation, do nothing2",
+      "parameters": {},
+      "position": [
+        -2144,
+        576
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "86049bc0-7828-4fd2-81ea-59c6df3b76df",
+      "name": "Wait2",
+      "parameters": {
+        "amount": 10,
+        "unit": "minutes"
+      },
+      "position": [
+        -736,
+        224
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "ef209bad-d486-47a3-8e13-a2e10d5fc38e"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-04T09:51:41.927Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-04T09:51:41.927Z",
+      "workflowId": "6vO7ADIRRloCBFpu"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-12-04T11:02:17.000Z",
+  "versionId": "5039fd99-e4eb-4229-87f2-5329b31e2f10"
+}
