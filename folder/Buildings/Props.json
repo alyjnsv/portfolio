@@ -239,17 +239,6 @@
         ]
       ]
     },
-    "Edit Fields6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Finish1": {
       "main": [
         [
@@ -367,23 +356,23 @@
         ]
       ]
     },
-    "Image5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Imagen 4": {
       "main": [
         [
           {
             "index": 0,
             "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Link": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue",
             "type": "main"
           }
         ]
@@ -651,7 +640,7 @@
         [
           {
             "index": 0,
-            "node": "Image5",
+            "node": "Edit Fields5",
             "type": "main"
           }
         ]
@@ -735,7 +724,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields6",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -746,7 +735,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields6",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -757,7 +746,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields6",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -768,7 +757,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields6",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -779,7 +768,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Fields6",
+            "node": "Link",
             "type": "main"
           }
         ]
@@ -1211,7 +1200,7 @@
       },
       "position": [
         3392,
-        384
+        352
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1636,53 +1625,6 @@
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
       "typeVersion": 1,
       "waitBetweenTries": 3000
-    },
-    {
-      "id": "6b6c4cd8-45c1-47f3-b4e4-2a2c17bff722",
-      "name": "Edit Fields5",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "db8f9989-a3da-4f53-baf9-caa85974dbb6",
-              "name": "=data_{{ $('Loop Over Items').item.json.task_number }}",
-              "type": "binary",
-              "value": "data"
-            },
-            {
-              "id": "37599569-5689-4f80-9b2e-519c0d30c496",
-              "name": "Prompt",
-              "type": "string",
-              "value": "={{ $('Promt').item.json.output.Promt }}"
-            },
-            {
-              "id": "fff30c38-ad7b-4b77-abf2-56c703833247",
-              "name": "count",
-              "type": "number",
-              "value": "={{ $('If').item.json.count + 1 }}"
-            },
-            {
-              "id": "d536cfe5-b81b-441d-a67f-7fb9a906da6c",
-              "name": "comment",
-              "type": "string",
-              "value": "={{ $json.content.parts[0].text }}"
-            },
-            {
-              "id": "2f869ca4-7ad0-4ab2-aff9-44a3db214fdb",
-              "name": "filename",
-              "type": "string",
-              "value": "={{ $('AI Agent').item.json.output }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        6576,
-        352
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
     },
     {
       "credentials": {
@@ -2555,7 +2497,7 @@
             },
             {
               "name": "sid",
-              "value": "={{ $json.authSid }}"
+              "value": "={{ $('Code').item.json.authSid }}"
             },
             {
               "name": "dest_path",
@@ -2610,7 +2552,7 @@
             },
             {
               "name": "sid",
-              "value": "={{ $json.authSid }}"
+              "value": "={{ $('Code3').item.json.authSid }}"
             },
             {
               "name": "dest_path",
@@ -2665,7 +2607,7 @@
             },
             {
               "name": "sid",
-              "value": "={{ $json.authSid }}"
+              "value": "={{ $('Code4').item.json.authSid }}"
             },
             {
               "name": "dest_path",
@@ -2720,7 +2662,7 @@
             },
             {
               "name": "sid",
-              "value": "={{ $json.authSid }}"
+              "value": "={{ $('Code5').item.json.authSid }}"
             },
             {
               "name": "dest_path",
@@ -2825,23 +2767,6 @@
       },
       "position": [
         4592,
-        352
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "waitBetweenTries": 3000
-    },
-    {
-      "id": "d10a67e1-8e3b-41bc-ad8f-23f60d51de07",
-      "maxTries": 5,
-      "name": "Image5",
-      "parameters": {
-        "options": {},
-        "url": "={{ $('Url').item.json.images[0].url }}"
-      },
-      "position": [
-        6400,
         352
       ],
       "retryOnFail": true,
@@ -3231,7 +3156,7 @@
     {
       "executeOnce": true,
       "id": "555305bd-0385-46d7-9b97-d783657712cf",
-      "name": "Edit Fields6",
+      "name": "Link",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -3253,13 +3178,54 @@
       "typeVersion": 3.4
     },
     {
+      "id": "9ec0f939-c9f4-42ee-a2a2-1814cc99391b",
+      "name": "Edit Fields5",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "37599569-5689-4f80-9b2e-519c0d30c496",
+              "name": "Prompt",
+              "type": "string",
+              "value": "={{ $('Promt').first().json.output.Promt }}"
+            },
+            {
+              "id": "fff30c38-ad7b-4b77-abf2-56c703833247",
+              "name": "count",
+              "type": "number",
+              "value": "={{ $('If').item.json.count + 1 }}"
+            },
+            {
+              "id": "d536cfe5-b81b-441d-a67f-7fb9a906da6c",
+              "name": "comment",
+              "type": "string",
+              "value": "={{ $('Rated1').item.json.content.parts[0].text }}"
+            },
+            {
+              "id": "2f869ca4-7ad0-4ab2-aff9-44a3db214fdb",
+              "name": "filename",
+              "type": "string",
+              "value": "={{ $('AI Agent').item.json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        6704,
+        352
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
       "credentials": {
         "jiraSoftwareServerPatApi": {
           "id": "fVJt68N6D6vmqd2x",
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "054b25eb-7fed-45b5-98e9-e966af375f87",
+      "id": "de277975-54cd-4449-bfa9-516de0f1496d",
       "name": "Get an issue",
       "notes": "{{ $('Call \\'Jira\\'').item.json.task_id }}",
       "parameters": {
@@ -3269,7 +3235,7 @@
         "operation": "get"
       },
       "position": [
-        5424,
+        5488,
         352
       ],
       "type": "n8n-nodes-base.jira",
@@ -3282,7 +3248,7 @@
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "428b8f63-5b21-4a55-9975-ae7e11bea3b5",
+      "id": "6b4eedae-c212-41a9-9f97-5109a1519d6c",
       "name": "Update an issue",
       "parameters": {
         "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
@@ -3292,14 +3258,13 @@
           "description": "={{ $('Edit Fields3').item.json.description }}",
           "statusId": {
             "__rl": true,
-            "cachedResultName": "TL Approve",
             "mode": "list",
             "value": "861"
           }
         }
       },
       "position": [
-        6032,
+        6096,
         352
       ],
       "type": "n8n-nodes-base.jira",
@@ -3312,7 +3277,7 @@
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "9a214d54-7a66-4348-8913-099861e85825",
+      "id": "e5013acd-db34-499d-afee-973b6feac04f",
       "name": "Update an issue1",
       "parameters": {
         "issueKey": "={{ $('Call \\'Jira\\'').first().json.task_id }}",
@@ -3328,7 +3293,7 @@
         }
       },
       "position": [
-        6240,
+        6304,
         352
       ],
       "type": "n8n-nodes-base.jira",
@@ -3341,11 +3306,11 @@
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "ac416bbb-257a-43cb-ad93-a1a99e15ae0a",
+      "id": "19ddc4d6-9724-492c-b771-6e875facd890",
       "name": "HTTP Request",
       "parameters": {
         "authentication": "predefinedCredentialType",
-        "jsonBody": "{\n  \"fields\": {\n    \"customfield_12505\": \"значение\"\n  },\n  \"transition\": {\n    \"id\": \"31\"\n  }\n}",
+        "jsonBody": "={\n  \"fields\": {\n    \"customfield_12505\": {{ JSON.stringify($json.customfield_12505) }}\n  },\n  \"transition\": {\n    \"id\": \"31\"\n  }\n}",
         "method": "PUT",
         "nodeCredentialType": "jiraSoftwareServerPatApi",
         "options": {},
@@ -3354,14 +3319,14 @@
         "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('Call \\'Jira\\'').first().json.task_id }}"
       },
       "position": [
-        5824,
+        5888,
         352
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
     },
     {
-      "id": "de8c16d5-d99b-465c-912c-fe4e5bcfa0ba",
+      "id": "707bda0e-6c2d-4977-933e-cbebc1676099",
       "name": "Edit Fields3",
       "parameters": {
         "assignments": {
@@ -3370,14 +3335,20 @@
               "id": "c3ad83c1-775c-482a-8836-3c2c12de2efa",
               "name": "description",
               "type": "string",
-              "value": "={{ $json.fields.description.replaceAll('//QNAP/', $('Edit Fields6').first().json.links[0].link_url) }}"
+              "value": "={{ $json.fields.description.replaceAll('\\n\\nПуть QNAP:\\n', '') }}"
+            },
+            {
+              "id": "053eb7cc-dddd-4c14-8ea9-8ec19e11f514",
+              "name": "customfield_12505",
+              "type": "string",
+              "value": "=Путь QNAP:\n{{ String($json.fields.customfield_12505).replaceAll('Путь QNAP:\\n', '') }}\n{{ $('Link1').first().json.url }}"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        5632,
+        5696,
         352
       ],
       "type": "n8n-nodes-base.set",
@@ -3385,13 +3356,461 @@
     }
   ],
   "pinData": {
+    "Edit Fields3": [
+      {
+        "json": {
+          "customfield_12505": "Путь QNAP:\nnull\nhttps://www.myqnapcloud.com/smartshare/7954f051n6p8st026u227170_4g0815ll29ll2pprr0x604z34cf800fj",
+          "description": "Описание:\nСоздание иконки Icon_Specops_CompletedMissionFlag\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Создание иконки Icon_Specops_CompletedMissionFlag\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D mission flag icon for sci-fi mobile game, semi-realistic stylized casual 3D, bright neon accents. The icon features a central cyan star (#00FFFF) emitting a soft, radiant glow, set within a holographic shield base shaped as a sleek, angular badge. The shield is constructed from dark violet holographic panels (#31004a) with subtle transparency and layered digital artifacts, giving a futuristic, high-tech appearance. Thin electric blue (#7DF9FF) glitch effects and contour highlights trace the shield’s edges, adding dynamic energy and a sense of digital movement. The central star is crisp and luminous, with gentle gradients and a soft neon aura, while the shield’s surface reflects clean, pure neon energy. No physical textures—surfaces are smooth, glassy, and slightly reflective, emphasizing the holographic material. The composition is balanced and symmetrical, with the star as the focal point and shield elements framing it harmoniously. Color palette: Cyan (#00FFFF), Dark Violet (#31004a), Electric Blue (#7DF9FF). Lighting: Internal glow from the star, soft neon illumination, high contrast between lit and shadowed areas, no external light sources. Effects: Subtle digital glitches, gentle bloom around neon elements, clean render with no background clutter. Technical requirements: isometric view at 30°, isolated object on a pure white background, high detail, game-ready asset, clean render, no additional props or text.//QNAP/\n\n\nЦветовая палитра:\n- #00FFFF (Циан): используется для центральной звезды и её свечения. Темный Фиолетовый (#31004a) — используется для основы голографического щита. Электрический Синий (#7DF9FF) — используется для глитч-эффектов и тонкой контурной подсветки щита. Материалы и поверхности: Голографические панели, чистая неоновая энергия, цифровые артефакты. Освещение: Внутреннее свечение от центрального элемента, без внешних источников света. Мягкий неоновый свет с высоким контрастом.\n"
+        }
+      }
+    ],
+    "Get an issue": [
+      {
+        "json": {
+          "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+          "fields": {
+            "aggregateprogress": {
+              "percent": 0,
+              "progress": 0,
+              "total": 1800
+            },
+            "aggregatetimeestimate": 1800,
+            "aggregatetimeoriginalestimate": 1800,
+            "aggregatetimespent": null,
+            "archivedby": null,
+            "archiveddate": null,
+            "assignee": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=16",
+                "24x24": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=24",
+                "32x32": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=32",
+                "48x48": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=48"
+              },
+              "displayName": "AI Task Builder",
+              "emailAddress": "bot@techspaceapp.com",
+              "key": "JIRAUSER16461",
+              "name": "ai_task_builder",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=ai_task_builder",
+              "timeZone": "Europe/Moscow"
+            },
+            "attachment": [],
+            "comment": {
+              "comments": [],
+              "maxResults": 0,
+              "startAt": 0,
+              "total": 0
+            },
+            "components": [],
+            "created": "2025-12-04T10:30:35.689+0000",
+            "creator": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=16",
+                "24x24": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=24",
+                "32x32": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=32",
+                "48x48": "https://www.gravatar.com/avatar/950298b79a48105c1051be7e6e5a43d4?d=mm&s=48"
+              },
+              "displayName": "AI Task Builder",
+              "emailAddress": "bot@techspaceapp.com",
+              "key": "JIRAUSER16461",
+              "name": "ai_task_builder",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=ai_task_builder",
+              "timeZone": "Europe/Moscow"
+            },
+            "customfield_10014": null,
+            "customfield_10015": null,
+            "customfield_10016": null,
+            "customfield_10018": null,
+            "customfield_10019": "0|i1igug:",
+            "customfield_10020": [
+              "com.atlassian.greenhopper.service.sprint.Sprint@50087887[activatedDate=2025-12-01T05:32:20.852Z,autoStartStop=false,completeDate=<null>,endDate=2025-12-08T05:28:00.000Z,goal=,id=356,incompleteIssuesDestinationId=<null>,name=LW Спринт 69,rapidViewId=54,sequence=356,startDate=2025-12-01T05:28:00.000Z,state=ACTIVE,synced=false]"
+            ],
+            "customfield_10021": null,
+            "customfield_10022": null,
+            "customfield_10023": null,
+            "customfield_10036": null,
+            "customfield_10037": null,
+            "customfield_10038": null,
+            "customfield_10041": null,
+            "customfield_10042": null,
+            "customfield_10044": null,
+            "customfield_10052": null,
+            "customfield_10053": null,
+            "customfield_10055": null,
+            "customfield_10057": null,
+            "customfield_10058": null,
+            "customfield_10067": null,
+            "customfield_10068": null,
+            "customfield_10079": null,
+            "customfield_10086": null,
+            "customfield_10200": null,
+            "customfield_10201": null,
+            "customfield_10300": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@65620f55[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6b56b0d2[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@394e7f5[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5d1a0775[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@542373f7[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@6850b0ad[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@4cdf591d[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@41f3de5c[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@e80a15e[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@63b8bdfb[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@55191720[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@ac732e1[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":true}}",
+            "customfield_10400": null,
+            "customfield_10401": null,
+            "customfield_10402": null,
+            "customfield_10403": null,
+            "customfield_10500": null,
+            "customfield_10600": null,
+            "customfield_10601": null,
+            "customfield_10700": [
+              {
+                "disabled": false,
+                "id": "10104",
+                "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/10104",
+                "value": "2D Art"
+              }
+            ],
+            "customfield_11101": {
+              "allFinished": false,
+              "created": 1764844301160,
+              "durationAsString": "1m",
+              "durationAsStringBoard": "1m",
+              "durationAsStringCsv": "1m",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764844301161,
+                  "durationAsString": "1m",
+                  "durationAsStringBoard": "1m",
+                  "durationAsStringCsv": "1m",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "1m",
+                      "durationAsStringBoard": "1m",
+                      "durationAsStringCsv": "1m",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 62,
+                          "durationAsString": "1m",
+                          "durationAsStringBoard": "1m",
+                          "durationAsStringCsv": "1m",
+                          "end": 1764844301161,
+                          "finished": false,
+                          "start": 1764844238752
+                        }
+                      ],
+                      "totalDuration": 62
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 62
+                }
+              },
+              "statuses": [
+                "3"
+              ],
+              "totalDuration": 62
+            },
+            "customfield_11102": "TimeInStatus(running=true, updateTime=1764844301164, timeInStatus=62)",
+            "customfield_11401": null,
+            "customfield_11402": null,
+            "customfield_11405": "",
+            "customfield_12400": null,
+            "customfield_12505": null,
+            "customfield_12506": null,
+            "customfield_12600": null,
+            "customfield_12700": {
+              "allFinished": false,
+              "created": 1764844301168,
+              "durationAsString": "1 minute, 2 seconds",
+              "durationAsStringBoard": "1 minute, 2 seconds",
+              "durationAsStringCsv": "1 minute, 2 seconds",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764844301169,
+                  "durationAsString": "1 minute, 2 seconds",
+                  "durationAsStringBoard": "1 minute, 2 seconds",
+                  "durationAsStringCsv": "1 minute, 2 seconds",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "1 minute, 2 seconds",
+                      "durationAsStringBoard": "1 minute, 2 seconds",
+                      "durationAsStringCsv": "1 minute, 2 seconds",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 62,
+                          "durationAsString": "1 minute, 2 seconds",
+                          "durationAsStringBoard": "1 minute, 2 seconds",
+                          "durationAsStringCsv": "1 minute, 2 seconds",
+                          "end": 1764844301169,
+                          "finished": false,
+                          "start": 1764844238752
+                        }
+                      ],
+                      "totalDuration": 62
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 62
+                }
+              },
+              "statuses": [
+                "3"
+              ],
+              "totalDuration": 62
+            },
+            "customfield_12701": {
+              "allFinished": false,
+              "created": 1764844301164,
+              "durationAsString": "1m, 3s",
+              "durationAsStringBoard": "1m, 3s",
+              "durationAsStringCsv": "1m, 3s",
+              "fieldKey": "assignee",
+              "fieldName": "Assignee",
+              "fieldValuesMap": {
+                "empty": "empty"
+              },
+              "isAssigneeField": true,
+              "statusTimesMap": {
+                "3": {
+                  "allFinished": false,
+                  "created": 1764844301165,
+                  "durationAsString": "1m, 2s",
+                  "durationAsStringBoard": "1m, 2s",
+                  "durationAsStringCsv": "1m, 2s",
+                  "fieldTimes": [
+                    {
+                      "allFinished": false,
+                      "durationAsString": "1m, 2s",
+                      "durationAsStringBoard": "1m, 2s",
+                      "durationAsStringCsv": "1m, 2s",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 62,
+                          "durationAsString": "1m, 2s",
+                          "durationAsStringBoard": "1m, 2s",
+                          "durationAsStringCsv": "1m, 2s",
+                          "end": 1764844301165,
+                          "finished": false,
+                          "start": 1764844238752
+                        }
+                      ],
+                      "totalDuration": 62
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "3",
+                  "totalDuration": 62
+                },
+                "10004": {
+                  "allFinished": true,
+                  "created": 1764844301165,
+                  "durationAsString": "1s",
+                  "durationAsStringBoard": "1s",
+                  "durationAsStringCsv": "1s",
+                  "fieldTimes": [
+                    {
+                      "allFinished": true,
+                      "durationAsString": "1s",
+                      "durationAsStringBoard": "1s",
+                      "durationAsStringCsv": "1s",
+                      "fieldValue": "JIRAUSER16461",
+                      "timeDetails": [
+                        {
+                          "duration": 1,
+                          "durationAsString": "1s",
+                          "durationAsStringBoard": "1s",
+                          "durationAsStringCsv": "1s",
+                          "end": 1764844238752,
+                          "finished": true,
+                          "start": 1764844237146
+                        }
+                      ],
+                      "totalDuration": 1
+                    }
+                  ],
+                  "fieldValues": [
+                    "JIRAUSER16461"
+                  ],
+                  "statusId": "10004",
+                  "totalDuration": 1
+                }
+              },
+              "statuses": [
+                "10004",
+                "3"
+              ],
+              "totalDuration": 63
+            },
+            "customfield_12801": null,
+            "customfield_12804": null,
+            "customfield_12818": null,
+            "customfield_12921": {
+              "disabled": false,
+              "id": "13314",
+              "self": "https://jira.itcomp.space/rest/api/2/customFieldOption/13314",
+              "value": "No"
+            },
+            "description": "Описание:\nСоздание иконки Icon_Specops_CompletedMissionFlag\n\nПричина появления:\nЗапрос от GD-отдела. Требуется новый ассет типа \"Ассет\".\n\nОжидаемый результат:\nГотовый ассет \"Создание иконки Icon_Specops_CompletedMissionFlag\" согласно ТЗ:\n- Стилистика: semi-realistic casual 3D\n- Изометрическая проекция 30°\n- Формат: PNG с альфа-каналом\n\nШаги воспроизведения:\n1. Использовать AI-промт для генерации (см. Необходимые материалы)\n2. Проверить соответствие цветовой палитре и ТЗ\n3. Сохранить в QNAP по указанному пути\n4. Проверить отображение в тестовой сцене\n\nКритерии приёмки:\n- Соответствие описанию и цветовой палитре\n- Изометрическая проекция 30°\n- Белый/прозрачный фон\n- Качество изображения: высокое, без артефактов\n- Стилистика: semi-realistic casual 3D\n- Одобрение арт-лида\n\nНеобходимые материалы:\n\nAI-промт:\nIsometric 3D mission flag icon for sci-fi mobile game, semi-realistic stylized casual 3D, bright neon accents. The icon features a central cyan star (#00FFFF) emitting a soft, radiant glow, set within a holographic shield base shaped as a sleek, angular badge. The shield is constructed from dark violet holographic panels (#31004a) with subtle transparency and layered digital artifacts, giving a futuristic, high-tech appearance. Thin electric blue (#7DF9FF) glitch effects and contour highlights trace the shield’s edges, adding dynamic energy and a sense of digital movement. The central star is crisp and luminous, with gentle gradients and a soft neon aura, while the shield’s surface reflects clean, pure neon energy. No physical textures—surfaces are smooth, glassy, and slightly reflective, emphasizing the holographic material. The composition is balanced and symmetrical, with the star as the focal point and shield elements framing it harmoniously. Color palette: Cyan (#00FFFF), Dark Violet (#31004a), Electric Blue (#7DF9FF). Lighting: Internal glow from the star, soft neon illumination, high contrast between lit and shadowed areas, no external light sources. Effects: Subtle digital glitches, gentle bloom around neon elements, clean render with no background clutter. Technical requirements: isometric view at 30°, isolated object on a pure white background, high detail, game-ready asset, clean render, no additional props or text.\n\nПуть QNAP:\n//QNAP/\n\n\nЦветовая палитра:\n- #00FFFF (Циан): используется для центральной звезды и её свечения. Темный Фиолетовый (#31004a) — используется для основы голографического щита. Электрический Синий (#7DF9FF) — используется для глитч-эффектов и тонкой контурной подсветки щита. Материалы и поверхности: Голографические панели, чистая неоновая энергия, цифровые артефакты. Освещение: Внутреннее свечение от центрального элемента, без внешних источников света. Мягкий неоновый свет с высоким контрастом.\n",
+            "duedate": null,
+            "environment": null,
+            "fixVersions": [],
+            "issuelinks": [],
+            "issuetype": {
+              "avatarId": 10311,
+              "description": "",
+              "iconUrl": "https://jira.itcomp.space/secure/viewavatar?size=xsmall&avatarId=10311&avatarType=issuetype",
+              "id": "10302",
+              "name": "Art",
+              "self": "https://jira.itcomp.space/rest/api/2/issuetype/10302",
+              "subtask": false
+            },
+            "labels": [],
+            "lastViewed": null,
+            "priority": {
+              "iconUrl": "https://jira.itcomp.space/images/icons/priorities/medium.svg",
+              "id": "3",
+              "name": "Medium",
+              "self": "https://jira.itcomp.space/rest/api/2/priority/3"
+            },
+            "progress": {
+              "percent": 0,
+              "progress": 0,
+              "total": 1800
+            },
+            "project": {
+              "avatarUrls": {
+                "16x16": "https://jira.itcomp.space/secure/projectavatar?size=xsmall&avatarId=10324",
+                "24x24": "https://jira.itcomp.space/secure/projectavatar?size=small&avatarId=10324",
+                "32x32": "https://jira.itcomp.space/secure/projectavatar?size=medium&avatarId=10324",
+                "48x48": "https://jira.itcomp.space/secure/projectavatar?avatarId=10324"
+              },
+              "id": "10700",
+              "key": "LW",
+              "name": "Last War",
+              "projectCategory": {
+                "description": "Structure of game development",
+                "id": "10001",
+                "name": "Game Development",
+                "self": "https://jira.itcomp.space/rest/api/2/projectCategory/10001"
+              },
+              "projectTypeKey": "software",
+              "self": "https://jira.itcomp.space/rest/api/2/project/10700"
+            },
+            "reporter": {
+              "active": true,
+              "avatarUrls": {
+                "16x16": "https://jira.itcomp.space/secure/useravatar?size=xsmall&ownerId=JIRAUSER11418&avatarId=11347",
+                "24x24": "https://jira.itcomp.space/secure/useravatar?size=small&ownerId=JIRAUSER11418&avatarId=11347",
+                "32x32": "https://jira.itcomp.space/secure/useravatar?size=medium&ownerId=JIRAUSER11418&avatarId=11347",
+                "48x48": "https://jira.itcomp.space/secure/useravatar?ownerId=JIRAUSER11418&avatarId=11347"
+              },
+              "displayName": "Iana Kublitskaia",
+              "emailAddress": "yana.kub21@gmail.com",
+              "key": "JIRAUSER11418",
+              "name": "kublitskaia.i",
+              "self": "https://jira.itcomp.space/rest/api/2/user?username=kublitskaia.i",
+              "timeZone": "Europe/Moscow"
+            },
+            "resolution": null,
+            "resolutiondate": null,
+            "security": {
+              "description": "Default Level",
+              "id": "10003",
+              "name": "Viewer",
+              "self": "https://jira.itcomp.space/rest/api/2/securitylevel/10003"
+            },
+            "status": {
+              "description": "This issue is being actively worked on at the moment by the assignee.",
+              "iconUrl": "https://jira.itcomp.space/images/icons/statuses/inprogress.png",
+              "id": "3",
+              "name": "In Progress",
+              "self": "https://jira.itcomp.space/rest/api/2/status/3",
+              "statusCategory": {
+                "colorName": "inprogress",
+                "id": 4,
+                "key": "indeterminate",
+                "name": "In Progress",
+                "self": "https://jira.itcomp.space/rest/api/2/statuscategory/4"
+              }
+            },
+            "subtasks": [],
+            "summary": "[Test][ART] Создание иконки Icon_Specops_CompletedMissionFlag",
+            "timeestimate": 1800,
+            "timeoriginalestimate": 1800,
+            "timespent": null,
+            "timetracking": {
+              "originalEstimate": "30m",
+              "originalEstimateSeconds": 1800,
+              "remainingEstimate": "30m",
+              "remainingEstimateSeconds": 1800
+            },
+            "updated": "2025-12-04T10:30:38.751+0000",
+            "versions": [],
+            "watches": {
+              "isWatching": true,
+              "self": "https://jira.itcomp.space/rest/api/2/issue/LW-26111/watchers",
+              "watchCount": 1
+            },
+            "worklog": {
+              "maxResults": 20,
+              "startAt": 0,
+              "total": 0,
+              "worklogs": []
+            },
+            "workratio": 0
+          },
+          "id": "337054",
+          "key": "LW-26111",
+          "renderedFields": null,
+          "self": "https://jira.itcomp.space/rest/api/2/issue/337054"
+        }
+      }
+    ],
+    "HTTP Request": [
+      {
+        "json": {}
+      }
+    ],
+    "Update an issue": [
+      {
+        "json": {
+          "success": true
+        }
+      }
+    ],
+    "Update an issue1": [
+      {
+        "json": {
+          "success": true
+        }
+      }
+    ],
     "When Executed by Another Workflow": [
       {
         "json": {
-          "Chat ID": "918851594",
-          "File_name": "file_10.pdf",
-          "Tasks": "[Название задачи]\nГенерация 2D-модели здания Building_RationFactory\n\n[Цель]\nПолучить готовую 2D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Здание представляет собой высокотехнологичный агропромышленный комплекс. Основание — стандартная квадратная платформа с закругленными углами и cyan-подсветкой по периметру. Композиция состоит из центрального двухэтажного перерабатывающего модуля и двух примыкающих к нему боковых блоков-биореакторов. Биореакторы выполнены из полупрозрачного материала, сквозь который видно мягкое оранжевое свечение от гидропонных систем.\n\nАрхитектурные детали:\nФасады выполнены из чистых композитных панелей без следов износа. Поверхность центрального модуля имеет вертикальные технологические швы с интегрированной неоновой подсветкой. На крыше расположены вентиляционные системы и голографический проектор, отображающий символ еды. Боковые модули-биореакторы соединены с центральным блоком системой герметичных труб для транспортировки биомассы.\n\nФункциональные элементы:\nНа переднем фасаде расположена конвейерная лента, по которой движутся стандартизированные контейнеры с готовыми пайками к точке выгрузки. Точка выгрузки обозначена светящимся голографическим маркером. Внутри биореакторов видны стилизованные многоуровневые гидропонные фермы. Центральный модуль имеет видимое энергетическое ядро, пульсирующее теплым оранжевым светом.\n\nКлючевые элементы стиля:\nМодульность и функциональность дизайна. Чистые поверхности и строгие геометрические формы. Активное использование встроенной подсветки и голографических элементов для индикации функции здания. Отсутствие грязи, ржавчины или повреждений.\n\nШаги выполнения:\n1. Создать 2D-модель здания согласно концептуальному описанию\n2. Применить материалы из указанной цветовой палитры для ресурсных зданий\n3. Настроить изометрическую проекцию 30 градусов\n4. Добавить glow-эффекты для энергетических элементов, голограмм и подсветки платформы\n5. Выполнить рендер на белом фоне\n6. Проверить читаемость силуэта и функциональных элементов\n7. Экспортировать в указанном формате\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистые формы, порядок, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальная верхушка или фасад для узнаваемости функции здания.\n\nЦветовая палитра:\nБазовый тёмный (#D35400) — используется для основного корпуса здания и несущих конструкций\nСредний акцентный (#E67E22) — используется для акцентных панелей технологических модулей и труб\nСветлый акцентный (#F39C12) — используется для вспомогательного оборудования и рамок биореакторов\nНеоновая подсветка (#FF8C00) — используется для неоновой подсветки энергетических линий и внутреннего свечения биореакторов\n\nМатериалы и поверхности:\nОснова из матовых композитных панелей в теплой оранжевой палитре. Технологические поверхности без бликов и грязи. Полупрозрачный материал для биореакторов.\n\nОсвещение:\nМягкое рассеянное освещение с глубокими тенями для подчеркивания формы. Яркость создается за счет glow-элементов и встроенной подсветки. Рендер на чистом белом фоне.\n\n[Формат и технические параметры]\n\nФормат файла: PNG с прозрачным фоном\nРазмер: 1024x1024 px\nПолигонаж (для исходной 3D-модели): до 15000 треугольников\nЦветовое пространство: sRGB\nРендер: высокое качество, отсутствие шумов и артефактов\nНейминг файла: Building_RationFactory\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, разрешение 1024x1024 px\nКорректная изометрическая проекция 30 градусов\nНаличие платформы-основания с cyan-подсветкой краев\nИспользованы цвета из указанной палитры для ресурсных зданий (HEX-коды соответствуют)\nЧитаемый силуэт здания — функция производства еды должна быть понятна\nОтсутствие артефактов рендера, шумов и \"лесенок\" на краях\nОдобрение арт-лида\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
-          "Username": "timofeyuchiha",
+          "Chat ID": "283991341",
+          "File_name": "4здания_тест.pdf",
+          "Tasks": "[Название задачи]\nГенерация 2D-модели здания Building_Foundry\n\n[Цель]\nПолучить готовую 2D-модель ресурсного здания для производства ресурса \"Металл\", интегрируемую в карту базы игрока как высокотехнологичный плавильный комплекс.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Здание представляет собой многоуровневый автоматизированный комплекс. Основание — массивная квадратная платформа с закругленными углами и cyan-подсветкой по периметру. Центральную часть занимает герметичная плавильная камера цилиндрической формы, выполненная из темного композита. Вокруг камеры расположены четыре роботизированных манипулятора, подающие сырье. Верхний уровень занимают системы охлаждения и вывода готовой продукции.\n\nАрхитектурные детали:\nВнешние стены покрыты гладкими панелями без швов. Вдоль корпуса проходят вертикальные энергетические кондуиты с ярким оранжевым свечением. На фасаде размещены голографические дисплеи, отображающие температуру в камере и производственный цикл. Сквозь армированное стекло в верхней части камеры видно свечение расплавленной массы, удерживаемой магнитным полем.\n\nФункциональные элементы:\nЦентральная плавильная камера является фокусной точкой и излучает интенсивное оранжевое свечение. Роботизированные манипуляторы периодически движутся, имитируя загрузку. На боковой части здания расположен конвейер для выгрузки стандартизированных металлических слитков. Вентиляционные решетки на крыше имеют внутреннюю подсветку.\n\nКлючевые элементы стиля:\nМодульность и функциональный дизайн. Чистые формы без грязи и повреждений. Яркие неоновые элементы как основной источник света. Четкий, читаемый силуэт. Изоляция на прозрачном фоне.\n\nШаги выполнения:\n1. Создать 2D-модель здания согласно концептуальному описанию.\n2. Применить материалы из указанной цветовой палитры.\n3. Настроить изометрическую проекцию 30 градусов.\n4. Добавить glow-эффекты для энергетических элементов и плавильной камеры.\n5. Выполнить рендер на прозрачном фоне.\n6. Проверить читаемость силуэта и функциональных элементов.\n7. Экспортировать в указанном формате.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, используя яркие неоновые акценты на чистых формах.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистые формы, порядок, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для основного корпуса здания и несущих конструкций.\nМорковный (#E67E22) — используется для акцентных панелей и роботизированных манипуляторов.\nЯнтарный (#F39C12) — используется для вспомогательного оборудования и конвейера.\nТемный оранжевый (#FF8C00) — используется для неоновой подсветки, свечения из камеры и голографических дисплеев.\n\nМатериалы и поверхности:\nОснова из матовых композитных панелей. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском.\n\nОсвещение:\nМягкое рассеянное освещение. Яркость создается за счет glow-элементов и встроенной подсветки.\n\n[Формат и технические параметры]\n\nФормат файла: PNG\nРазмер изображения: 512x512 px\nСоотношение сторон: 1:1\nЦветовое пространство: sRGB\nФон: прозрачный\nНейминг файла: Building_Foundry\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, размер 512x512 px, прозрачный фон.\nКорректная изометрическая проекция 30 градусов.\nНаличие платформы-основания с cyan-подсветкой.\nИспользованы цвета из указанной палитры (HEX-коды соответствуют).\nЧитаемый силуэт здания, функция плавильни узнаваема.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]\n---\n[Название задачи]\nГенерация 2D-модели здания Building_RetrainingCenter\n\n[Цель]\nПолучить готовую 2D-модель ресурсного здания для производства ресурса \"Опыт\", выполненную в виде футуристического тренировочного центра для солдат.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Здание имеет минималистичную кубическую форму с асимметричными выступающими модулями. Основание — стандартная квадратная платформа с cyan-подсветкой. Главный фасад выполнен из смарт-стекла, через которое просматриваются силуэты тренировочных голограмм.\n\nАрхитектурные детали:\nКорпус покрыт гладкими белыми и светло-серыми композитными панелями. На боковых стенах расположены вертикальные каналы передачи данных с пульсирующей оранжевой подсветкой. На крыше установлена компактная антенна связи и несколько вентиляционных систем. Над входом размещена голографическая вывеска с символом, обозначающим \"опыт\" или \"тренировку\".\n\nФункциональные элементы:\nОдин из боковых модулей представляет собой открытую тренировочную площадку с голографическими барьерами и мишенями. Сквозь панорамное окно виден центральный зал с симуляторами. Периодически по стенам пробегают световые индикаторы, символизирующие потоки данных.\n\nКлючевые элементы стиля:\nФункциональный милитари-дизайн, чистота и технологичность. Отсутствие декоративных элементов, не несущих функции. Четкие линии и геометрические формы. Изоляция на прозрачном фоне.\n\nШаги выполнения:\n1. Создать 2D-модель здания согласно концептуальному описанию.\n2. Применить материалы из указанной цветовой палитры.\n3. Настроить изометрическую проекцию 30 градусов.\n4. Добавить свечение для голограмм и каналов передачи данных.\n5. Выполнить рендер на прозрачном фоне.\n6. Проверить читаемость силуэта и ключевых элементов (голограммы, антенна).\n7. Экспортировать в указанном формате.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, с акцентом на чистые формы и технологические элементы.\n\nПринадлежность к миру:\nТехнологическая база игрока — порядок, функциональность, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Минималистичная модульная архитектура. Платформа-основание с подсветкой краев.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для акцентных панелей и элементов на фасаде.\nМорковный (#E67E22) — используется для голографических мишеней и барьеров.\nЯнтарный (#F39C12) — используется для вспомогательных технических модулей.\nТемный оранжевый (#FF8C00) — используется для неоновой подсветки инфо-каналов и вывески.\n\nМатериалы и поверхности:\nМатовые композитные панели, смарт-стекло, металлические рамы. Поверхности чистые, без износа.\n\nОсвещение:\nНейтральное, рассеянное освещение. Основные акценты света создаются за счет внутренних источников и подсветки.\n\n[Формат и технические параметры]\n\nФормат файла: PNG\nРазмер изображения: 512x512 px\nСоотношение сторон: 1:1\nЦветовое пространство: sRGB\nФон: прозрачный\nНейминг файла: Building_RetrainingCenter\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, размер 512x512 px, прозрачный фон.\nКорректная изометрическая проекция 30 градусов.\nНаличие платформы-основания с cyan-подсветкой.\nИспользованы цвета из указанной палитры (HEX-коды соответствуют).\nЧитаемый силуэт, функция тренировочного центра узнаваема.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]\n---\n[Название задачи]\nГенерация 2D-модели здания Building_CrystalFarm\n\n[Цель]\nПолучить готовую 2D-модель ресурсного здания для производства \"Руды усиления\", представленную в виде высокотехнологичной фермы по выращиванию энергетических кристаллов.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Здание состоит из центрального высокого герметичного блока и двух симметричных низких боковых модулей. Основание — стандартная квадратная платформа с cyan-подсветкой. Центральный блок имеет шестиугольную форму и прозрачную верхнюю часть, под которой выращивается кристалл.\n\nАрхитектурные детали:\nКорпус выполнен из темных композитных материалов. От боковых модулей к центральному блоку идут толстые энергетические кабели с яркой оранжевой пульсацией. Прозрачный купол центрального блока выполнен из армированного гексагонального стекла. На стенах боковых модулей расположены панели управления с голографическими индикаторами.\n\nФункциональные элементы:\nВ центре под куполом расположен растущий энергетический кристалл, который является главным источником света и фокусной точкой. От основания к кристаллу направлены три энергетических эмиттера, создающих видимые лучи. На боковых модулях расположены теплообменники с подсвеченными вентиляторами.\n\nКлючевые элементы стиля:\nФутуристичный промышленный дизайн. Контраст между темным, массивным корпусом и ярким, светящимся кристаллом. Чистые, геометрически правильные формы. Изоляция на прозрачном фоне.\n\nШаги выполнения:\n1. Создать 2D-модель здания согласно концептуальному описанию.\n2. Применить материалы из указанной цветовой палитры.\n3. Настроить изометрическую проекцию 30 градусов.\n4. Добавить интенсивное свечение для кристалла и энергетических линий.\n5. Выполнить рендер на прозрачном фоне.\n6. Проверить читаемость силуэта, особенно центрального кристалла.\n7. Экспортировать в указанном формате.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, с яркими неоновыми акцентами.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистота, порядок, высокие технологии.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Центральная композиция с фокусом на светящемся элементе. Платформа-основание с подсветкой.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для основного корпуса здания.\nМорковный (#E67E22) — используется для акцентных панелей и кабелей.\nЯнтарный (#F39C12) — используется для энергетических эмиттеров и вспомогательных элементов.\nТемный оранжевый (#FF8C00) — используется для свечения кристалла, энергетических лучей и голограмм.\n\nМатериалы и поверхности:\nМатовые композитные панели для корпуса, армированное стекло для купола. Поверхности чистые, без дефектов.\n\nОсвещение:\nДраматическое освещение, где основной источник света — центральный кристалл. Глубокие тени на корпусе для контраста.\n\n[Формат и технические параметры]\n\nФормат файла: PNG\nРазмер изображения: 512x512 px\nСоотношение сторон: 1:1\nЦветовое пространство: sRGB\nФон: прозрачный\nНейминг файла: Building_CrystalFarm\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, размер 512x512 px, прозрачный фон.\nКорректная изометрическая проекция 30 градусов.\nНаличие платформы-основания с cyan-подсветкой.\nИспользованы цвета из указанной палитры (HEX-коды соответствуют).\nЧитаемый силуэт, яркий кристалл как фокусная точка.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]\n---\n[Название задачи]\nГенерация 2D-модели здания Building_MiningFarm\n\n[Цель]\nПолучить готовую 2D-модель ресурсного здания для производства ресурса \"Золото\", выполненную в виде футуристической фабрики по эмиссии цифровой валюты.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Здание имеет приземистую, устойчивую гексагональную форму, символизирующую надежность и безопасность. Основание — стандартная квадратная платформа с cyan-подсветкой. В центре крыши расположена сферическая конструкция — ядро эмиссии.\n\nАрхитектурные детали:\nКорпус покрыт многослойными бронепанелями из темного композита. По периметру здания расположены мощные системы охлаждения с подсвеченными вентиляционными решетками. От основания к ядру эмиссии на крыше идут бронированные кабели передачи данных с оранжевой подсветкой.\n\nФункциональные элементы:\nЦентральное ядро эмиссии представляет собой полупрозрачную сферу, внутри которой вращаются голографические символы валюты и потоки данных. Сфера излучает мягкое, пульсирующее оранжевое свечение. На одной из стен здания находится защищенный терминал вывода с голографическим дисплеем, показывающим текущий баланс.\n\nКлючевые элементы стиля:\nДизайн, вдохновленный идеей цифрового банка или \"майнинг-фермы\". Ощущение безопасности, мощности и высокой технологии. Неопрятные элементы отсутствуют, фабрика чистая и автоматизированная.\n\nШаги выполнения:\n1. Создать 2D-модель здания согласно концептуальному описанию.\n2. Применить материалы из указанной цветовой палитры.\n3. Настроить изометрическую проекцию 30 градусов.\n4. Добавить свечение для ядра эмиссии, кабелей и голограмм.\n5. Выполнить рендер на прозрачном фоне.\n6. Проверить читаемость силуэта и центральной сферы.\n7. Экспортировать в указанном формате.\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 2D-стилизацией, с акцентом на чистые формы и неоновые элементы.\n\nПринадлежность к миру:\nТехнологическая база игрока — порядок, прогресс, высокие технологии.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Массивная, устойчивая форма. Платформа-основание с подсветкой. Светящаяся сфера как центральный элемент.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для бронепанелей корпуса.\nМорковный (#E67E22) — используется для акцентных элементов и систем охлаждения.\nЯнтарный (#F39C12) — используется для голографических символов валюты.\nТемный оранжевый (#FF8C00) — используется для основного свечения ядра эмиссии и подсветки кабелей.\n\nМатериалы и поверхности:\nМатовые многослойные бронепанели. Глянцевые поверхности для сферы. Чистые поверхности без износа.\n\nОсвещение:\nОсновной источник света — ядро эмиссии на крыше. Мягкое рассеянное освещение для остальной части здания.\n\n[Формат и технические параметры]\n\nФормат файла: PNG\nРазмер изображения: 512x512 px\nСоотношение сторон: 1:1\nЦветовое пространство: sRGB\nФон: прозрачный\nНейминг файла: Building_MiningFarm\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат PNG, размер 512x512 px, прозрачный фон.\nКорректная изометрическая проекция 30 градусов.\nНаличие платформы-основания с cyan-подсветкой.\nИспользованы цвета из указанной палитры (HEX-коды соответствуют).\nЧитаемый силуэт, функция производства валюты интуитивно понятна.\n\n[Ресурсы и ссылки]\n\nБот оценки качества: [уточнить у арт-лида]\nFigma-доска проекта: [уточнить у арт-лида]\nСтайлгайд проекта: [уточнить у арт-лида]",
+          "Username": "YyBlood",
           "estimate": "40m"
         }
       }
@@ -3417,6 +3836,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-03T20:46:46.000Z",
-  "versionId": "738dc394-a488-4874-ad36-0081555ce22a"
+  "updatedAt": "2025-12-04T13:01:04.000Z",
+  "versionId": "7305fd94-9ce1-4902-9719-54b2e470cec7"
 }
