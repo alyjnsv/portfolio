@@ -335,6 +335,28 @@
         ]
       ]
     },
+    "HTTP Request41": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait54",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request42": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Kling AI1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "HTTP Request5": {
       "main": [
         [
@@ -374,6 +396,46 @@
           {
             "index": 0,
             "node": "Wait12",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request41",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "take video",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait13",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kling AI1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait13",
             "type": "main"
           }
         ]
@@ -561,6 +623,17 @@
             "index": 0,
             "node": "Генератор сценарного шаблона4",
             "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Status Kling AI1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
           }
         ]
       ]
@@ -781,6 +854,28 @@
           {
             "index": 0,
             "node": "HTTP Request18",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait13": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status Kling AI1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait54": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request42",
             "type": "main"
           }
         ]
@@ -3295,6 +3390,220 @@
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
+    },
+    {
+      "id": "3e73852d-34ae-4604-93d2-7d0fad7fec13",
+      "name": "HTTP Request41",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"prompt\": \"{{ $('Начало').item.json.message.content.Prompt }}\",\n  \"image_urls\": [\n    \"{{ $json.url }}\"\n  ]\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://queue.fal.run/fal-ai/nano-banana/edit"
+      },
+      "position": [
+        -400,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "b256b199-fcbe-4946-92c8-cd7dcbf46588",
+      "name": "HTTP Request42",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
+            }
+          ]
+        },
+        "options": {},
+        "sendHeaders": true,
+        "url": "=https://queue.fal.run/fal-ai/nano-banana/requests/{{ $json.request_id }}"
+      },
+      "position": [
+        -112,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "cc21ed7e-3a70-4905-9e16-64aa168c3b90",
+      "name": "Wait54",
+      "parameters": {
+        "amount": 3,
+        "unit": "minutes"
+      },
+      "position": [
+        -256,
+        -272
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "51413960-1af5-413f-8a69-e1343e209142"
+    },
+    {
+      "id": "ec7d8670-397f-4839-ba66-849c88aacaa8",
+      "name": "Status Kling AI1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBR0xNaEgzRjNhQ1BrRU1MQ0RyRW10TWJCa05IRTltRyIsImlhdCI6MTc2MzEwMjY1NywibmJmIjoxNzYzMTAyNjUyLCJleHAiOjE3NjMyODI2NTd9.B-gwSLmCwhMK7XjzO7fFk64qWYtPoOJE8CVerybxLoA"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://api-singapore.klingai.com/v1/videos/text2video/{{ $json.data.task_id }}"
+      },
+      "position": [
+        320,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "912f80f8-be18-42d0-a9cc-67059a5595f6",
+      "name": "Kling AI1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBR0xNaEgzRjNhQ1BrRU1MQ0RyRW10TWJCa05IRTltRyIsImlhdCI6MTc2MzM3MTI3MSwibmJmIjoxNzYzMzcxMjY2LCJleHAiOjE3NjYwNDk2NzF9.K9PlVY8kWKRGcK2TqxTWxwvO-NkZHYGHzyeIkAZKvrs"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model_name\": \"kling-v2-5-turbo\",\n  \"mode\": \"pro\",\n  \"duration\": \"10\",\n  \"image\": \"{{ $json.images[0].url }}\",\n  \"prompt\": \"{{ $('Начальная анимация.').item.json.message.content.Anim }}\",\n  \"cfg_scale\": 0.5\n}",
+        "method": "POST",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api-singapore.klingai.com/v1/videos/image2video"
+      },
+      "position": [
+        32,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "250dbf9c-4b76-4474-a242-191c25c61df2",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e8084667-4a9b-486b-a2dc-ccdde7895c9f",
+              "leftValue": "={{ $json.data.task_status }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "processing"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        464,
+        -272
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "a449ce72-0fc6-45f4-baf5-2d7738cbe9d0",
+      "name": "take video",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.data.task_result.videos[0].url }}"
+      },
+      "position": [
+        608,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "09f83c1d-5e13-4a79-a842-3bcd006c2c5d",
+      "name": "Wait13",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        176,
+        -272
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "82450daa-b8fb-4dff-9c53-b75de8b83f8e"
+    },
+    {
+      "id": "6db63c35-2bdd-4c18-a86d-fdf7345420aa",
+      "name": "HTTP Request9",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "inputDataFieldName": "data",
+              "name": "file",
+              "parameterType": "formBinaryData"
+            },
+            {
+              "name": "upload_preset",
+              "value": "ml_default"
+            }
+          ]
+        },
+        "contentType": "multipart-form-data",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "https://api.cloudinary.com/v1_1/dkkkutodd/image/upload"
+      },
+      "position": [
+        -608,
+        -272
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
     }
   ],
   "pinData": {
@@ -3347,6 +3656,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-11-25T13:09:02.000Z",
-  "versionId": "405dd5f4-a211-42c7-abdc-44d23c8ca980"
+  "updatedAt": "2025-12-05T10:51:59.000Z",
+  "versionId": "6ec35a79-dd22-46d0-aa3c-1c894038e89e"
 }
