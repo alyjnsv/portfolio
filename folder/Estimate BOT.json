@@ -6,7 +6,7 @@
         [
           {
             "index": 0,
-            "node": "Send \"...\"",
+            "node": "Send",
             "type": "main"
           }
         ]
@@ -88,7 +88,7 @@
         ]
       ]
     },
-    "Send \"...\"": {
+    "Send": {
       "main": [
         [
           {
@@ -106,17 +106,6 @@
             "index": 0,
             "node": "AI Agent",
             "type": "ai_outputParser"
-          }
-        ]
-      ]
-    },
-    "Telegram Trigger1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Проверка ТЗ",
-            "type": "main"
           }
         ]
       ]
@@ -308,29 +297,6 @@
     },
     {
       "credentials": {
-        "telegramApi": {
-          "id": "9Rpk8SKXe7INqYmV",
-          "name": "Test ARTRag"
-        }
-      },
-      "id": "a9d1eefc-f860-4f59-a95c-371d6107c981",
-      "name": "Telegram Trigger1",
-      "parameters": {
-        "additionalFields": {},
-        "updates": [
-          "message"
-        ]
-      },
-      "position": [
-        208,
-        704
-      ],
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.2,
-      "webhookId": "685b2660-5539-4de4-8a8e-cb87b7511a4d"
-    },
-    {
-      "credentials": {
         "googlePalmApi": {
           "id": "OE9cIjhzVtc73YQt",
           "name": "Gemini WORK"
@@ -424,13 +390,7 @@
               "name": "Tasks"
             },
             {
-              "name": "Chat ID"
-            },
-            {
               "name": "File_name"
-            },
-            {
-              "name": "Username"
             }
           ]
         }
@@ -498,34 +458,6 @@
       "typeVersion": 1.3
     },
     {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART"
-        }
-      },
-      "executeOnce": true,
-      "id": "25eb7807-9175-4da7-b880-8782ffc66660",
-      "maxTries": 5,
-      "name": "Send \"...\"",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json[\"Chat ID\"] }}",
-        "text": "=ТЗ эстимейт:\n{{ $json.output.asset_type }}\n{{ $json.output.production_method }}\n{{ $json.output.estimate_human }}"
-      },
-      "position": [
-        288,
-        -96
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
-    },
-    {
       "id": "dc6bcd87-f369-4a66-909a-4029fff802ce",
       "name": "Edit Fields",
       "parameters": {
@@ -547,6 +479,29 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "d98ef203-f549-4e14-8632-52a6ddeca326",
+      "name": "Send",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=ТЗ эстимейт:\n{{ $json.output.asset_type }}\n{{ $json.output.production_method }}\n{{ $json.output.estimate_human }}"
+      },
+      "position": [
+        304,
+        -96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -576,6 +531,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-25T13:54:13.000Z",
-  "versionId": "8c06ee3b-35b2-48b5-96e2-1bd4bea4f70b"
+  "updatedAt": "2025-12-05T12:10:21.000Z",
+  "versionId": "66bf5326-80cb-44ac-8fcc-66d1e4888806"
 }
