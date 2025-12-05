@@ -88,6 +88,17 @@
         []
       ]
     },
+    "Finish": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Message a model": {
       "main": [
         [
@@ -110,17 +121,6 @@
           {
             "index": 0,
             "node": "Get an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Send a text message2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -175,7 +175,7 @@
         [
           {
             "index": 0,
-            "node": "Send a text message2",
+            "node": "Finish",
             "type": "main"
           }
         ]
@@ -439,9 +439,6 @@
             },
             {
               "name": "estimate"
-            },
-            {
-              "name": "chat_id"
             }
           ]
         }
@@ -739,31 +736,6 @@
     },
     {
       "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "id": "466d1f15-4738-4113-a451-3e41c09f7b09",
-      "name": "Send a text message2",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json.chat_id }}",
-        "text": "=Задача создана\n\nhttps://jira.itcomp.space/browse/{{ $('Create an issue').item.json.key }}"
-      },
-      "position": [
-        848,
-        400
-      ],
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "webhookId": "e2697542-d0fb-408d-ac13-3e0bb87dc092"
-    },
-    {
-      "credentials": {
         "jiraSoftwareServerPatApi": {
           "id": "fVJt68N6D6vmqd2x",
           "name": "Jira SW AI Task Builder"
@@ -790,6 +762,29 @@
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "14d96f6f-5a18-4f25-b297-c0e132637195",
+      "name": "Finish",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=Задача создана\n\nhttps://jira.itcomp.space/browse/{{ $('Create an issue').item.json.key }}"
+      },
+      "position": [
+        848,
+        400
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -865,6 +860,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-04T08:24:59.000Z",
-  "versionId": "38d432f9-50bf-4803-b75e-2d9c01f2a57b"
+  "updatedAt": "2025-12-05T12:15:24.000Z",
+  "versionId": "e397b457-a307-42e8-89e4-05b9127d6233"
 }
