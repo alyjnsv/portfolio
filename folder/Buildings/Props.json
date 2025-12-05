@@ -239,7 +239,7 @@
         ]
       ]
     },
-    "Finish1": {
+    "Finish": {
       "main": [
         [
           {
@@ -295,7 +295,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Finish",
             "type": "main"
           }
         ]
@@ -383,12 +383,12 @@
         [
           {
             "index": 0,
-            "node": "Finish",
+            "node": "Append row in sheet",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Append row in sheet",
+            "node": "Finish2",
             "type": "main"
           }
         ],
@@ -703,17 +703,6 @@
           {
             "index": 0,
             "node": "Remove",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "When clicking ‘Execute workflow’": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Finish",
             "type": "main"
           }
         ]
@@ -1124,35 +1113,6 @@
       "waitBetweenTries": 3000
     },
     {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "ab74c923-7627-4410-bb95-e058b7185a4e",
-      "maxTries": 5,
-      "name": "Finish",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json['Chat ID'] }}",
-        "text": "=✅ Ваши изображения готовы!"
-      },
-      "position": [
-        576,
-        96
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
-    {
       "id": "cd1d604a-6c63-450a-b97c-b1f765147905",
       "name": "Remove",
       "parameters": {
@@ -1356,35 +1316,6 @@
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1.1
-    },
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "8733eeb1-90bc-41c7-9ee9-2a799f4af2e6",
-      "maxTries": 5,
-      "name": "Finish1",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"] }}",
-        "text": "=Автоматическая генерация провалилась для задачи https://jira.itcomp.space/browse/{{ $('If').item.json.task_id }}"
-      },
-      "position": [
-        1104,
-        784
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
     },
     {
       "id": "acb5e8ad-d556-4a06-b750-e4eedd1b8663",
@@ -2775,17 +2706,6 @@
       "waitBetweenTries": 3000
     },
     {
-      "id": "4cefbc7e-656b-4b44-88fa-c6979dcaa6e1",
-      "name": "When clicking ‘Execute workflow’",
-      "parameters": {},
-      "position": [
-        -432,
-        -32
-      ],
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1
-    },
-    {
       "id": "ad7e100b-fe91-4d8f-b3de-52290964f692",
       "name": "Call 'Jira'",
       "parameters": {
@@ -3353,6 +3273,52 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "f4be027b-2602-49d7-92ed-a938ad982c54",
+      "name": "Finish2",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=✅ Ваши изображения готовы!"
+      },
+      "position": [
+        576,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "950c9756-cd99-4a3f-8aaa-143e5359443e",
+      "name": "Finish",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=Автоматическая генерация провалилась для задачи https://jira.itcomp.space/browse/{{ $('If').item.json.task_id }}"
+      },
+      "position": [
+        1104,
+        784
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -3814,11 +3780,6 @@
           "estimate": "40m"
         }
       }
-    ],
-    "When clicking ‘Execute workflow’": [
-      {
-        "json": {}
-      }
     ]
   },
   "settings": {
@@ -3836,6 +3797,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-04T13:01:04.000Z",
-  "versionId": "7305fd94-9ce1-4902-9719-54b2e470cec7"
+  "updatedAt": "2025-12-05T12:22:57.000Z",
+  "versionId": "a6436815-68e4-4bf7-bc18-d0ff232f9421"
 }
