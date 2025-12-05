@@ -12,6 +12,28 @@
         ]
       ]
     },
+    "Board of SysAdmins Completed": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue Completed",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Board of SysAdmins Failed": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue Failed",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Board of SysAdmins Fix": {
       "main": [
         [
@@ -23,59 +45,12 @@
         ]
       ]
     },
-    "Board of SysAdmins Fix1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update an issue Fix1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Board of SysAdmins In progress": {
       "main": [
         [
           {
             "index": 0,
             "node": "Update an issue in progress",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Merge",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get many workflows",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Stop and Error",
             "type": "main"
           }
         ]
@@ -117,45 +92,12 @@
         ]
       ]
     },
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields1": {
-      "main": [
-        [
-          {
-            "index": 1,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Edit Fields2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "If",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "HTTP Request7",
+            "node": "Switch",
             "type": "main"
           }
         ]
@@ -234,41 +176,12 @@
         []
       ]
     },
-    "HTTP Request7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Replace Me",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "HTTP Request8": {
       "main": [
         [
           {
             "index": 0,
             "node": "Board of SysAdmins In progress",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins Fix1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins Fix",
             "type": "main"
           }
         ]
@@ -296,72 +209,12 @@
         ]
       ]
     },
-    "Merge": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "No Operation, do nothing": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "No Operation, do nothing1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "No Operation, do nothing2": {
-      "main": [
-        []
-      ]
-    },
     "No document": {
       "main": [
         [
           {
             "index": 0,
             "node": "Update an issue error",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Replace Me": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Schedule Trigger": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info1",
             "type": "main"
           }
         ]
@@ -374,6 +227,52 @@
             "index": 0,
             "node": "Edit date",
             "type": "ai_outputParser"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Completed",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Completed",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Fix",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Fix",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Failed",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins Failed",
+            "type": "main"
           }
         ]
       ]
@@ -433,11 +332,6 @@
         ]
       ]
     },
-    "Wait2": {
-      "main": [
-        []
-      ]
-    },
     "Wait3": {
       "main": [
         [
@@ -471,50 +365,12 @@
         ]
       ]
     },
-    "info": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "info status": {
       "main": [
         [
           {
             "index": 0,
             "node": "Code in JavaScript2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "info1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Техническое Задание1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -529,92 +385,6 @@
   },
   "name": "AutoPril",
   "nodes": [
-    {
-      "disabled": true,
-      "id": "32f60bf7-0aec-447e-9641-1e2443b8063b",
-      "name": "Schedule Trigger",
-      "parameters": {
-        "rule": {
-          "interval": [
-            {
-              "expression": "*/5 * * * *",
-              "field": "cronExpression"
-            }
-          ]
-        }
-      },
-      "position": [
-        -496,
-        -112
-      ],
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2
-    },
-    {
-      "disabled": true,
-      "id": "b4ca6090-5db4-45e5-b48b-e2a6daed2b53",
-      "name": "info1",
-      "parameters": {
-        "options": {},
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
-      },
-      "position": [
-        -288,
-        -112
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "disabled": true,
-      "id": "2e0ae5f3-3a5a-496c-9466-fc5f44b0c310",
-      "name": "Code in JavaScript1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
-      },
-      "position": [
-        -96,
-        -112
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "12f0bf4b-5a3b-4979-9fd6-203809568285",
-      "name": "Stop and Error",
-      "parameters": {
-        "errorMessage": "Нет свободных idle workers."
-      },
-      "position": [
-        64,
-        32
-      ],
-      "type": "n8n-nodes-base.stopAndError",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "n8nApi": {
-          "id": "PZoYJumKALkQCXMd",
-          "name": "n8n account"
-        }
-      },
-      "disabled": true,
-      "id": "a4f35915-192b-4b13-b458-c5b649c37020",
-      "name": "Get many workflows",
-      "parameters": {
-        "filters": {},
-        "requestOptions": {}
-      },
-      "position": [
-        112,
-        -208
-      ],
-      "type": "n8n-nodes-base.n8n",
-      "typeVersion": 1
-    },
     {
       "id": "35f65449-d38e-4d4e-b3f2-cd93a35cb819",
       "name": "Webhook",
@@ -631,109 +401,6 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "fa94999a-0dcb-478c-a9ba-b931c30beae2"
-    },
-    {
-      "disabled": true,
-      "id": "df121d44-52ac-4259-9e50-7b9d2c0efbac",
-      "name": "Техническое Задание1",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "e005882d-be4f-483f-aa02-2b684b020c3b",
-              "name": "TechTask",
-              "type": "string",
-              "value": "={{ $json.TZ }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        7152,
-        2080
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "disabled": true,
-      "id": "94d3511d-bd4f-4e40-a688-4c3ee1b389c3",
-      "name": "Edit Fields1",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "a1d0e288-b992-4944-ba54-09f3814924d8",
-              "name": "prompt",
-              "type": "string",
-              "value": "={{ $json.TechTask }}"
-            },
-            {
-              "id": "fce702eb-ed3b-4ada-825e-27450b75b40f",
-              "name": "dirName",
-              "type": "string",
-              "value": "={{ $json.output.dirName }}"
-            },
-            {
-              "id": "56b7216d-34fc-47d8-91de-ca3590836fdf",
-              "name": "command",
-              "type": "string",
-              "value": "=cursor-agent -p --force --model opus-4.5 prompt.txt"
-            },
-            {
-              "id": "38f612ca-0831-4290-abcb-a8c940a0d90e",
-              "name": "ticket",
-              "type": "string",
-              "value": "={{ $json.output.metadata.ticket }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        7328,
-        2064
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "disabled": true,
-      "id": "79fc4663-850a-4eef-b480-65449b040389",
-      "name": "HTTP Request7",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "prompt",
-              "value": "={{ $json.prompt }}"
-            },
-            {
-              "name": "dirName",
-              "value": "={{ $json.dirName }}"
-            },
-            {
-              "name": "command",
-              "value": "={{ $json.command }}"
-            },
-            {
-              "name": "=workerId",
-              "value": "={{ $json.workerId }}"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
-      },
-      "position": [
-        8304,
-        1888
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
     },
     {
       "id": "4c0383e7-d7cd-4cda-b5c2-94cbbba1877c",
@@ -827,115 +494,6 @@
       "typeVersion": 3.4
     },
     {
-      "id": "2d402075-0324-4d2d-9834-21a1fcce03fc",
-      "name": "If",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "10fffcf9-6d0a-41f7-8394-ad405463120f",
-              "leftValue": "={{ $json.status }}",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "completed"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        832,
-        2560
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "disabled": true,
-      "id": "7dee1103-0217-4c69-bc01-6a4d18740e7e",
-      "name": "No Operation, do nothing",
-      "parameters": {},
-      "position": [
-        7312,
-        1792
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "3eb76269-bcc1-4019-ac6d-1c2e4f5d172c",
-      "name": "Merge",
-      "parameters": {
-        "combineBy": "combineByPosition",
-        "mode": "combine",
-        "options": {}
-      },
-      "position": [
-        7824,
-        2048
-      ],
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.2
-    },
-    {
-      "disabled": true,
-      "id": "38173bd5-7d19-435f-b0eb-38446f045ec9",
-      "name": "Edit Fields3",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "f50429b9-5cd3-4ba4-ba3f-8c8e6eaf4b2b",
-              "name": "workerId",
-              "type": "string",
-              "value": "={{ $json.workerId }}"
-            },
-            {
-              "id": "8f1eb0ac-e01a-4d0c-9de5-27af859a0960",
-              "name": "prompt",
-              "type": "string",
-              "value": "={{ $json.prompt }}"
-            },
-            {
-              "id": "089161ce-89f4-45d3-bae4-bf7479db5f5c",
-              "name": "dirName",
-              "type": "string",
-              "value": "={{ $json.dirName }}"
-            },
-            {
-              "id": "9b6b444c-3ab7-4d03-96fd-44d6d80cf0b5",
-              "name": "command",
-              "type": "string",
-              "value": "cursor-agent -p --force --model opus-4.5 prompt.txt"
-            },
-            {
-              "id": "87a1101d-0399-480f-b78a-397d48ad0186",
-              "name": "ticket",
-              "type": "string",
-              "value": "={{ $json.ticket }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        8032,
-        1888
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
       "id": "58f173a4-6ffc-4761-9034-2e7e79165322",
       "name": "build status",
       "parameters": {
@@ -950,88 +508,6 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "106dca18-a9e5-4ca8-89a0-5e6e958420a7"
-    },
-    {
-      "disabled": true,
-      "id": "2939f026-70d8-4480-87c6-d302c36dbed3",
-      "name": "Replace Me",
-      "parameters": {},
-      "position": [
-        9808,
-        2480
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "0024f95c-dec8-4fda-a62c-a8e0c02d0eb9",
-      "name": "No Operation, do nothing1",
-      "parameters": {},
-      "position": [
-        10400,
-        2848
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "a7cc27e7-5e2a-4d8d-8855-c5ef136cc85b",
-      "name": "No Operation, do nothing2",
-      "parameters": {},
-      "position": [
-        5168,
-        2752
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "e8717099-ac54-400f-9076-4d2f3803a209",
-      "name": "Wait2",
-      "parameters": {
-        "amount": 10,
-        "unit": "minutes"
-      },
-      "position": [
-        7872,
-        1904
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "ef209bad-d486-47a3-8e13-a2e10d5fc38e"
-    },
-    {
-      "disabled": true,
-      "id": "b16791c4-81c5-4ade-a545-dbbdbad826d7",
-      "name": "info",
-      "parameters": {
-        "options": {},
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
-      },
-      "position": [
-        7440,
-        1792
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "disabled": true,
-      "id": "368ab0c2-6d1c-4a62-8642-2781d9c31880",
-      "name": "Code in JavaScript",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
-      },
-      "position": [
-        7664,
-        1792
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
     },
     {
       "credentials": {
@@ -1103,91 +579,6 @@
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "399de4e2-fd2c-4ab9-b379-643f37ecfbf5",
-      "name": "HTTP Request",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "prompt",
-              "value": "={{ $json.prompt }}"
-            },
-            {
-              "name": "dirName",
-              "value": "={{ $json.dirName }}"
-            },
-            {
-              "name": "command",
-              "value": "={{ $json.command }}"
-            },
-            {
-              "name": "=workerId",
-              "value": "={{ $json.workerId }}"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
-      },
-      "position": [
-        5520,
-        2320
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "disabled": true,
-      "id": "786f76e1-731e-46ed-80b8-db736902e2c3",
-      "name": "Edit Fields",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "f50429b9-5cd3-4ba4-ba3f-8c8e6eaf4b2b",
-              "name": "workerId",
-              "type": "string",
-              "value": "={{ $json.workerId }}"
-            },
-            {
-              "id": "8f1eb0ac-e01a-4d0c-9de5-27af859a0960",
-              "name": "prompt",
-              "type": "string",
-              "value": "={{ $json.prompt }}"
-            },
-            {
-              "id": "089161ce-89f4-45d3-bae4-bf7479db5f5c",
-              "name": "dirName",
-              "type": "string",
-              "value": "={{ $json.dirName }}"
-            },
-            {
-              "id": "9b6b444c-3ab7-4d03-96fd-44d6d80cf0b5",
-              "name": "command",
-              "type": "string",
-              "value": "cursor-agent -p --force --model opus-4.5 prompt.txt"
-            },
-            {
-              "id": "87a1101d-0399-480f-b78a-397d48ad0186",
-              "name": "ticket",
-              "type": "string",
-              "value": "={{ $json.ticket }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        5248,
-        2320
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
     },
     {
       "id": "b16279c1-753f-4c3b-9321-4135279243b4",
@@ -1641,7 +1032,7 @@
                   "mode": "id",
                   "value": "customfield_13502"
                 },
-                "fieldValue": "={{ $json.sys_admin_board.value }}"
+                "fieldValue": "={{ $json.sys_admin_board }}"
               },
               {
                 "fieldId": {
@@ -1673,16 +1064,17 @@
       "name": "Document?",
       "parameters": {
         "conditions": {
-          "combinator": "and",
+          "combinator": "or",
           "conditions": [
             {
-              "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
-              "leftValue": "={{ $json.error }}",
+              "id": "7dd7a335-2481-4445-8176-d14f0b6c0db5",
+              "leftValue": "={{ $json.fields.attachment[0] }}",
               "operator": {
-                "operation": "notEquals",
-                "type": "string"
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "object"
               },
-              "rightValue": "=invalid syntax"
+              "rightValue": ""
             }
           ],
           "options": {
@@ -1731,8 +1123,260 @@
       "webhookId": "85e0fad4-4acd-48bd-a1f4-e44f9e75f8ab"
     },
     {
+      "id": "cb0ba1e3-2cc5-459b-9b3f-e6a60e8fa320",
+      "name": "Wait3",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        2048,
+        2064
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "65daceac-d5b8-41eb-a4e1-e7064cfcd62d"
+    },
+    {
+      "id": "74b2c55c-ef2a-40cc-a60e-8055c24a0a35",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "fb42f290-d823-45b0-a197-cc3b1c402f0f",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Completed"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Completed",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8af72c53-b085-4138-8549-20f7f9d0f30d",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "completed"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "completed",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "d6608020-218e-459a-92ef-a42305f6a9ab",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Fixing"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Fixing",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "ad80d763-4fdb-40ce-a1e2-65cec498a9d3",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "fixing"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "fixing",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "2b998d83-cb53-4e14-b4a1-dc84c3ca47f8",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "failed"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "failed",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "6eb5dbc7-225f-4dc0-956d-78bd46013576",
+                    "leftValue": "={{ $json.status }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Failed"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "Failed",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        832,
+        2544
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "c207f270-7ac8-4a9a-a632-aeebb8198800",
+      "name": "Update an issue Failed",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields2').item.json.runSlug }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_13502"
+                },
+                "fieldValue": "={{ $json.sys_admin_board }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_13503"
+                },
+                "fieldValue": "={{ $('Edit Fields2').item.json.iteration }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Cancelled-Admin",
+            "mode": "list",
+            "value": "221"
+          }
+        }
+      },
+      "position": [
+        1296,
+        2816
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "5b0c7652-2c21-4938-aa8f-ff3c982e6f2f",
+      "name": "Board of SysAdmins Failed",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
+              "name": "sys_admin_board",
+              "type": "object",
+              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"failed\",       \"id\": \"13805\",       \"disabled\": false     }"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1136,
+        2816
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
       "id": "25bdc8b5-124d-4cc7-a5bf-0272a45e5ced",
-      "name": "Board of SysAdmins Fix1",
+      "name": "Board of SysAdmins Completed",
       "parameters": {
         "assignments": {
           "assignments": [
@@ -1761,7 +1405,7 @@
         }
       },
       "id": "39dbc4f4-4499-49b0-aca2-69bc078ff32d",
-      "name": "Update an issue Fix1",
+      "name": "Update an issue Completed",
       "parameters": {
         "issueKey": "={{ $('Edit Fields2').item.json.runSlug }}",
         "jiraVersion": "serverPat",
@@ -1809,105 +1453,6 @@
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "id": "cb0ba1e3-2cc5-459b-9b3f-e6a60e8fa320",
-      "name": "Wait3",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2048,
-        2064
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "65daceac-d5b8-41eb-a4e1-e7064cfcd62d"
-    },
-    {
-      "id": "74b2c55c-ef2a-40cc-a60e-8055c24a0a35",
-      "name": "Switch",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "fb42f290-d823-45b0-a197-cc3b1c402f0f",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              }
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "d6608020-218e-459a-92ef-a42305f6a9ab",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              }
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "2b998d83-cb53-4e14-b4a1-dc84c3ca47f8",
-                    "leftValue": "",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              }
-            }
-          ]
-        }
-      },
-      "position": [
-        832,
-        2720
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.3
     }
   ],
   "pinData": {},
@@ -1930,6 +1475,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2025-12-04T16:03:09.000Z",
-  "versionId": "bea594a2-48f3-4d55-b2dd-b033ed657112"
+  "updatedAt": "2025-12-05T16:55:07.000Z",
+  "versionId": "fd1a7f8d-b085-4064-b055-b7e9f473a737"
 }
