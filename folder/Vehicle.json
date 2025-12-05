@@ -151,7 +151,7 @@
         ]
       ]
     },
-    "Finish1": {
+    "Finish2": {
       "main": [
         [
           {
@@ -207,7 +207,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Finish2",
             "type": "main"
           }
         ]
@@ -251,12 +251,12 @@
         [
           {
             "index": 0,
-            "node": "Finish7",
+            "node": "Append row in sheet",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Append row in sheet",
+            "node": "Finish",
             "type": "main"
           }
         ],
@@ -446,13 +446,7 @@
     },
     "When clicking ‘Execute workflow’": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Finish7",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "share link1": {
@@ -495,35 +489,6 @@
   "meta": null,
   "name": "Vehicle",
   "nodes": [
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "b65a0968-0bf9-44d5-b543-63def1f55713",
-      "maxTries": 5,
-      "name": "Finish1",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"] }}",
-        "text": "=Автоматическая генерация провалилась"
-      },
-      "position": [
-        -496,
-        1840
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
     {
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1284,35 +1249,6 @@
       "typeVersion": 2.2
     },
     {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "4cc48aa4-75b6-4509-a15a-187fe1d4508f",
-      "maxTries": 5,
-      "name": "Finish7",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json['Chat ID'] }}",
-        "text": "=✅ Ваши изображения готовы!"
-      },
-      "position": [
-        -1024,
-        1152
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
-    {
       "id": "6b8aabeb-0ac2-4269-b2a7-071db1f62050",
       "name": "Remove1",
       "parameters": {
@@ -1750,6 +1686,52 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "e3ab7bbf-8e37-4d27-b7dc-ba3ba3621322",
+      "name": "Finish2",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=Автоматическая генерация провалилась для задачи https://jira.itcomp.space/browse/{{ $('If1').item.json.task_id }}"
+      },
+      "position": [
+        -496,
+        1840
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "8c0769ba-0e95-41a7-aa20-ba5032b24b5c",
+      "name": "Finish",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=✅ Ваши изображения готовы!"
+      },
+      "position": [
+        -1024,
+        1136
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -2240,6 +2222,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-04T13:02:08.000Z",
-  "versionId": "dcc4c6ac-4ba7-4fd4-84f0-5f398ab4456a"
+  "updatedAt": "2025-12-05T12:21:26.000Z",
+  "versionId": "7c92d156-2758-4973-a49a-6580f88a1283"
 }
