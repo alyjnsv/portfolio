@@ -151,7 +151,7 @@
         ]
       ]
     },
-    "Finish1": {
+    "Finish2": {
       "main": [
         [
           {
@@ -207,7 +207,7 @@
         [
           {
             "index": 0,
-            "node": "Finish1",
+            "node": "Finish2",
             "type": "main"
           }
         ]
@@ -251,12 +251,12 @@
         [
           {
             "index": 0,
-            "node": "Finish7",
+            "node": "Append row in sheet",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Append row in sheet",
+            "node": "Finish",
             "type": "main"
           }
         ],
@@ -489,35 +489,6 @@
   "meta": null,
   "name": "Enemies",
   "nodes": [
-    {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "9d6ddc34-9776-4a09-8bd9-096f8a768b25",
-      "maxTries": 5,
-      "name": "Finish1",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').item.json[\"Chat ID\"] }}",
-        "text": "=Автоматическая генерация провалилась"
-      },
-      "position": [
-        -160,
-        1600
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
     {
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1278,35 +1249,6 @@
       "typeVersion": 2.2
     },
     {
-      "credentials": {
-        "telegramApi": {
-          "id": "HVtMEErMUBKHP63G",
-          "name": "Test ART автоматика"
-        }
-      },
-      "executeOnce": true,
-      "id": "49be227f-e632-49d1-90d2-20340a5e6e9d",
-      "maxTries": 5,
-      "name": "Finish7",
-      "parameters": {
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        },
-        "chatId": "={{ $('When Executed by Another Workflow').first().json['Chat ID'] }}",
-        "text": "=✅ Ваши изображения готовы!"
-      },
-      "position": [
-        -688,
-        912
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "waitBetweenTries": 2000,
-      "webhookId": "27883e1d-57d5-4040-a55f-401ee4ad38e8"
-    },
-    {
       "id": "69c01fac-d751-4509-a2e4-ec12a452a1f6",
       "name": "Remove1",
       "parameters": {
@@ -1744,6 +1686,52 @@
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "6a04ca79-492a-4b3b-8d7c-d83aae06f137",
+      "name": "Finish",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=✅ Ваши изображения готовы!"
+      },
+      "position": [
+        -688,
+        880
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "b0b6bc7b-41fd-47a8-b2bc-85d9981142d9",
+      "name": "Finish2",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=Автоматическая генерация провалилась для задачи https://jira.itcomp.space/browse/{{ $('If1').item.json.task_id }}"
+      },
+      "position": [
+        -160,
+        1600
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -2243,6 +2231,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-04T13:01:38.000Z",
-  "versionId": "f6b54dee-a9f4-4b92-a86f-3a79d76302e3"
+  "updatedAt": "2025-12-05T12:23:58.000Z",
+  "versionId": "b22560d0-94d9-4232-ad54-9d1016e330ce"
 }
