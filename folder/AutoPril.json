@@ -571,7 +571,7 @@
       "name": "Code in JavaScript2",
       "onError": "continueErrorOutput",
       "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
+        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Список РАЗРЕШЁННЫХ воркеров (whitelist)\nconst allowedWorkers = ['anydesk-3', 'anydesk-4', 'anydesk-5', 'anydesk-6', 'anydesk-9', 'anydesk-11'];\n\n// Фильтруем воркеры: idle И входит в whitelist\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  allowedWorkers.includes(w.workerId)\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров из списка: ' + allowedWorkers.join(', '));\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
       },
       "position": [
         976,
@@ -1068,22 +1068,22 @@
           "conditions": [
             {
               "id": "7dd7a335-2481-4445-8176-d14f0b6c0db5",
-              "leftValue": "={{ $json.fields.attachment[0] }}",
+              "leftValue": "={{ $json.fields.attachment.length }}",
               "operator": {
-                "operation": "notEmpty",
-                "singleValue": true,
-                "type": "object"
+                "operation": "gt",
+                "type": "number"
               },
-              "rightValue": ""
+              "rightValue": 0
             }
           ],
           "options": {
             "caseSensitive": true,
             "leftValue": "",
-            "typeValidation": "strict",
+            "typeValidation": "loose",
             "version": 2
           }
         },
+        "looseTypeValidation": true,
         "options": {}
       },
       "position": [
@@ -1457,6 +1457,8 @@
   ],
   "pinData": {},
   "settings": {
+    "availableInMCP": false,
+    "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1"
   },
   "shared": [
@@ -1475,6 +1477,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2025-12-05T16:55:07.000Z",
-  "versionId": "fd1a7f8d-b085-4064-b055-b7e9f473a737"
+  "updatedAt": "2025-12-06T15:40:54.739Z",
+  "versionId": "0a3c5aaf-1915-49dc-bfbf-4872386a275f"
 }
