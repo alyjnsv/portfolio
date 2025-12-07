@@ -571,7 +571,7 @@
       "name": "Code in JavaScript2",
       "onError": "continueErrorOutput",
       "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Список РАЗРЕШЁННЫХ воркеров (whitelist)\nconst allowedWorkers = ['anydesk-3', 'anydesk-4', 'anydesk-5', 'anydesk-6', 'anydesk-9', 'anydesk-11'];\n\n// Фильтруем воркеры: idle И входит в whitelist\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  allowedWorkers.includes(w.workerId)\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров из списка: ' + allowedWorkers.join(', '));\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
+        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Список РАЗРЕШЁННЫХ воркеров (whitelist)\nconst allowedWorkers = ['anydesk-1', 'anydesk-3', 'anydesk-4', 'anydesk-5', 'anydesk-6', 'anydesk-9', 'anydesk-11'];\n\n// Фильтруем воркеры: idle И входит в whitelist\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  allowedWorkers.includes(w.workerId)\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров из списка: ' + allowedWorkers.join(', '));\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
       },
       "position": [
         976,
@@ -1477,6 +1477,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2025-12-06T15:40:54.739Z",
-  "versionId": "0a3c5aaf-1915-49dc-bfbf-4872386a275f"
+  "updatedAt": "2025-12-07T11:19:47.000Z",
+  "versionId": "ca32fd14-3186-4a18-b5f2-e8cd49180b50"
 }
