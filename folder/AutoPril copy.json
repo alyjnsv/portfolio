@@ -1,6 +1,28 @@
 {
   "active": false,
   "connections": {
+    "Anydesk-12": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Anydesk-13": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Board of SysAdmins": {
       "main": [
         [
@@ -89,42 +111,6 @@
         ]
       ]
     },
-    "Code in JavaScript": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update Status and Desktop1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update Status and Desktop",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Wait4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Code in JavaScript2": {
       "main": [
         [
@@ -161,19 +147,19 @@
         ]
       ]
     },
-    "Document?1": {
+    "Document?2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get file1",
+            "node": "Get file2",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "No document1",
+            "node": "No document2",
             "type": "main"
           }
         ]
@@ -185,6 +171,17 @@
           {
             "index": 0,
             "node": "Switch1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
             "type": "main"
           }
         ]
@@ -219,24 +216,6 @@
         ]
       ]
     },
-    "Edit date1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Info collect1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Edit date1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "File extract": {
       "main": [
         [
@@ -249,12 +228,12 @@
         []
       ]
     },
-    "File extract1": {
+    "File extract2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Document?1",
+            "node": "Document?2",
             "type": "main"
           }
         ]
@@ -271,12 +250,12 @@
         ]
       ]
     },
-    "Get an issue1": {
+    "Get an issue2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "File extract1",
+            "node": "File extract2",
             "type": "main"
           }
         ]
@@ -293,12 +272,12 @@
         ]
       ]
     },
-    "Get file1": {
+    "Get file2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Tech-task1",
+            "node": "Tech-task2",
             "type": "main"
           }
         ]
@@ -315,17 +294,6 @@
         ]
       ]
     },
-    "Get row(s)": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Task?",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
@@ -337,22 +305,6 @@
           {
             "index": 0,
             "node": "Edit date",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model1": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Structured Output Parser1",
-            "type": "ai_languageModel"
-          },
-          {
-            "index": 0,
-            "node": "Edit date1",
             "type": "ai_languageModel"
           }
         ]
@@ -408,33 +360,16 @@
         ]
       ]
     },
-    "Insert issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info status1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Is there a queue?": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get an issue1",
+            "node": "Board of SysAdmins1",
             "type": "main"
           }
         ],
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "Jira Status + Issue key": {
@@ -443,6 +378,29 @@
           {
             "index": 0,
             "node": "Get an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Update row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
             "type": "main"
           }
         ]
@@ -459,12 +417,30 @@
         ]
       ]
     },
-    "No document1": {
+    "No document2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Update an issue error1",
+            "node": "Update an issue error2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "PC?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка задачи Jira",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
             "type": "main"
           }
         ]
@@ -475,7 +451,34 @@
         [
           {
             "index": 0,
-            "node": "Get queue",
+            "node": "Проверка свободных ПК",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Anydesk-13",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Anydesk-12",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue Completed1",
             "type": "main"
           }
         ]
@@ -487,17 +490,6 @@
           {
             "index": 0,
             "node": "Edit date",
-            "type": "ai_outputParser"
-          }
-        ]
-      ]
-    },
-    "Structured Output Parser1": {
-      "ai_outputParser": [
-        [
-          {
-            "index": 0,
-            "node": "Edit date1",
             "type": "ai_outputParser"
           }
         ]
@@ -549,12 +541,30 @@
         ]
       ]
     },
+    "Task-key?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление Jira Task",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Task?": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Insert issue",
+            "node": "Занести таску в БД",
             "type": "main"
           }
         ],
@@ -578,23 +588,45 @@
         ]
       ]
     },
-    "Tech-task1": {
+    "Tech-task2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait5",
+            "node": "Проверка дубликата",
             "type": "main"
           }
         ]
       ]
     },
-    "Update Status and Desktop1": {
+    "Update an issue Completed": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait6",
+            "node": "Обновление Jira Task1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue Completed1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление Jira Task3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue Failed": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление Jira Task2",
             "type": "main"
           }
         ]
@@ -616,6 +648,11 @@
         ]
       ]
     },
+    "Update an issue in progress": {
+      "main": [
+        []
+      ]
+    },
     "Update an issue working": {
       "main": [
         [
@@ -632,7 +669,18 @@
         [
           {
             "index": 0,
-            "node": "Edit date1",
+            "node": "Info collect1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
             "type": "main"
           }
         ]
@@ -660,56 +708,12 @@
         ]
       ]
     },
-    "Wait2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info status1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Wait3": {
       "main": [
         [
           {
             "index": 0,
             "node": "Board of SysAdmins",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info status2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Wait6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "info status2",
             "type": "main"
           }
         ]
@@ -731,18 +735,18 @@
         [
           {
             "index": 0,
-            "node": "Get row(s)",
+            "node": "Get an issue2",
             "type": "main"
           }
         ]
       ]
     },
-    "When clicking ‘Execute workflow’": {
+    "Webhook2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "HTTP Request6",
+            "node": "Edit Fields1",
             "type": "main"
           }
         ]
@@ -761,13 +765,7 @@
     },
     "build status1": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields",
-            "type": "main"
-          }
-        ]
+        []
       ]
     },
     "info status": {
@@ -781,23 +779,116 @@
         ]
       ]
     },
-    "info status1": {
+    "status task": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Code in JavaScript",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
       ]
     },
-    "info status2": {
+    "Занести таску в БД": {
+      "main": [
+        []
+      ]
+    },
+    "Обновление Jira Task": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Code in JavaScript1",
+            "node": "Обновление статуса ПК",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновление Jira Task1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление статуса ПК1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновление Jira Task2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление статуса ПК2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновление Jira Task3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Обновление статуса ПК3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновление статуса ПК": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get queue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновление статуса ПК3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Delete row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка дубликата": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Task?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка задачи Jira": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Task-key?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Проверка свободных ПК": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "PC?",
             "type": "main"
           }
         ]
@@ -822,8 +913,8 @@
         "responseMode": "lastNode"
       },
       "position": [
-        528,
-        1328
+        240,
+        -192
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -837,8 +928,8 @@
         "url": "http://89.149.94.222:3435/status"
       },
       "position": [
-        2496,
-        1920
+        2208,
+        400
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
@@ -896,8 +987,8 @@
         "options": {}
       },
       "position": [
-        672,
-        1824
+        384,
+        304
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -929,8 +1020,8 @@
         "options": {}
       },
       "position": [
-        832,
-        1824
+        544,
+        304
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -944,8 +1035,8 @@
         "path": "a56fe52f-9284-4883-81a5-8175cf9d0f8f"
       },
       "position": [
-        528,
-        1824
+        240,
+        304
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -967,8 +1058,8 @@
         "operation": "get"
       },
       "position": [
-        1296,
-        1328
+        1008,
+        -192
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1002,8 +1093,8 @@
         "options": {}
       },
       "position": [
-        1152,
-        1328
+        864,
+        -192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1016,8 +1107,8 @@
         "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
       },
       "position": [
-        976,
-        1328
+        688,
+        -192
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -1030,48 +1121,8 @@
         "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
       },
       "position": [
-        832,
-        1328
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "id": "579bb927-9254-4713-b5dc-e58018748dac",
-      "name": "HTTP Request8",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "prompt",
-              "value": "=test"
-            },
-            {
-              "name": "dirName",
-              "value": "=test"
-            },
-            {
-              "name": "command",
-              "value": "=cursor-agent -p --force --model opus-4.5 prompt.txt"
-            },
-            {
-              "name": "=workerId",
-              "value": "=anydesk-12"
-            },
-            {
-              "name": "ticket",
-              "value": "=DEV-0001"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "https://89.149.94.222:3434/ws"
-      },
-      "position": [
-        3872,
-        3376
+        544,
+        -192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
@@ -1111,8 +1162,8 @@
         "options": {}
       },
       "position": [
-        2752,
-        1328
+        2464,
+        -192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1134,8 +1185,8 @@
         "options": {}
       },
       "position": [
-        2192,
-        1328
+        1904,
+        -192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1158,8 +1209,8 @@
         "options": {}
       },
       "position": [
-        1440,
-        1328
+        1152,
+        -192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1181,8 +1232,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        1760,
-        1328
+        1472,
+        -192
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1204,8 +1255,8 @@
         "options": {}
       },
       "position": [
-        1760,
-        1472
+        1472,
+        -48
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1245,8 +1296,8 @@
         }
       },
       "position": [
-        1904,
-        1472
+        1616,
+        -48
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1260,8 +1311,8 @@
         "options": {}
       },
       "position": [
-        1904,
-        1328
+        1616,
+        -192
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -1280,8 +1331,8 @@
         "text": "=Вот моё ТЗ, перепиши его мне для cursor:\n{{ $('Tech-task').item.json['tech-task'] }}"
       },
       "position": [
-        2480,
-        1328
+        2192,
+        -192
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 3
@@ -1295,8 +1346,8 @@
         "jsonSchemaExample": "{\n  \"prompt\": \"string\",\n  \"dirName\": \"string\"\n}"
       },
       "position": [
-        2480,
-        1504
+        2192,
+        -16
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3
@@ -1316,8 +1367,8 @@
         "options": {}
       },
       "position": [
-        2480,
-        1600
+        2192,
+        80
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -1359,8 +1410,8 @@
         }
       },
       "position": [
-        2336,
-        1328
+        2048,
+        -192
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1375,7 +1426,7 @@
       "id": "e55c9c81-495b-4bea-858a-05118f83c4c6",
       "name": "Update an issue in progress",
       "parameters": {
-        "issueKey": "={{ $('Jira Status + Issue key').item.json.body.issue_key }}",
+        "issueKey": "={{ $('Get queue').item.json.issue }}",
         "jiraVersion": "serverPat",
         "operation": "update",
         "updateFields": {
@@ -1400,8 +1451,8 @@
         }
       },
       "position": [
-        4160,
-        3376
+        3808,
+        3136
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1423,8 +1474,8 @@
         "options": {}
       },
       "position": [
-        4016,
-        3376
+        3648,
+        3136
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1446,8 +1497,8 @@
         "options": {}
       },
       "position": [
-        1136,
-        1904
+        848,
+        384
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1495,8 +1546,8 @@
         }
       },
       "position": [
-        1296,
-        1904
+        1008,
+        384
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1528,8 +1579,8 @@
         "options": {}
       },
       "position": [
-        1600,
-        1328
+        1312,
+        -192
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -1542,8 +1593,8 @@
         "unit": "minutes"
       },
       "position": [
-        688,
-        1328
+        400,
+        -192
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1556,8 +1607,8 @@
         "unit": "minutes"
       },
       "position": [
-        976,
-        1504
+        688,
+        -16
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1580,8 +1631,8 @@
         "options": {}
       },
       "position": [
-        1136,
-        1744
+        848,
+        224
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -1637,8 +1688,8 @@
         }
       },
       "position": [
-        1296,
-        1744
+        1008,
+        224
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -1650,8 +1701,8 @@
         "amount": 60
       },
       "position": [
-        2048,
-        1328
+        1760,
+        -192
       ],
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1663,317 +1714,16 @@
       "parameters": {
         "httpMethod": "POST",
         "options": {},
-        "path": "a5913213-1ef9-404a-9726-f57e0ee65457",
+        "path": "tested_jira",
         "responseMode": "lastNode"
       },
       "position": [
         1600,
-        2896
+        2688
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "a5913213-1ef9-404a-9726-f57e0ee65457"
-    },
-    {
-      "id": "1b552025-33af-4791-9d66-7b161dc3adfc",
-      "name": "Insert issue",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "issue",
-              "id": "issue",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "prompt",
-              "id": "prompt",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "desktop",
-              "id": "desktop",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "status",
-              "id": "status",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "issue": "={{ $json.body.issue_key }}",
-            "prompt": "={{ $json.body.description }}"
-          }
-        },
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "options": {}
-      },
-      "position": [
-        2192,
-        2896
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "4dbbfbb2-dabd-493a-a256-3a31efb2e739",
-      "name": "Code in JavaScript",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
-      },
-      "position": [
-        2512,
-        2896
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "disabled": true,
-      "id": "b09a1223-835d-44b3-b7c4-a4cd5db40d5a",
-      "name": "info status1",
-      "parameters": {
-        "options": {},
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
-      },
-      "position": [
-        2368,
-        2896
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "disabled": true,
-      "id": "2670e827-9778-49ae-8fed-71c2b1fafa63",
-      "name": "Wait2",
-      "parameters": {
-        "unit": "minutes"
-      },
-      "position": [
-        2512,
-        3072
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "7a72d751-4e1d-450b-a970-309755f2d6f6"
-    },
-    {
-      "id": "42b9cd36-651f-4dd8-8eac-0e4d672d1acb",
-      "name": "Update Status and Desktop",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [],
-          "value": {}
-        },
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "operation": "update",
-        "options": {}
-      },
-      "position": [
-        3296,
-        2896
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "id": "0a5f47f5-4181-4f09-a4e3-1df40f01a556",
-      "name": "Code in JavaScript1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "jsCode": "// Получаем все входные элементы\nconst allItems = $input.all();\n\n// Берём первый (и, скорее всего, единственный) элемент\nconst rootItem = allItems[0]?.json;\n\n// Проверяем структуру\nif (!rootItem || !Array.isArray(rootItem.workers)) {\n  throw new Error('Неверный формат: ожидается объект с полем \"workers\" (массив)');\n}\n\n// Фильтруем воркеры: idle и не worker-8080\nconst eligibleWorkers = rootItem.workers.filter(w => \n  w.status === 'idle' && \n  w.workerId !== 'worker-8080'\n);\n\nif (eligibleWorkers.length === 0) {\n  throw new Error('Нет доступных воркеров, кроме worker-8080');\n}\n\n// Берём первый подходящий (или случайный — по желанию)\nconst selected = eligibleWorkers[0];\n\nreturn {\n  json: {\n    workerId: selected.workerId,\n    wsUrl: (selected.wsUrl || '').trim()\n  }\n};"
-      },
-      "position": [
-        3136,
-        2896
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "eb6b556e-d1ab-4002-92b5-2f2de60a2c0a",
-      "name": "info status2",
-      "parameters": {
-        "options": {},
-        "url": "https://amusing-hope-production-bb8f.up.railway.app/status"
-      },
-      "position": [
-        2992,
-        2896
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "id": "14ac7180-b9ec-435e-bb7c-bdc0d388e2aa",
-      "name": "Wait4",
-      "parameters": {
-        "unit": "minutes"
-      },
-      "position": [
-        3136,
-        3072
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "7a72d751-4e1d-450b-a970-309755f2d6f6"
-    },
-    {
-      "id": "e492fad3-4c9e-450a-94d1-8058a8da21d8",
-      "name": "Update Status and Desktop1",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "issue",
-              "id": "issue",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "prompt",
-              "id": "prompt",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "desktop",
-              "id": "desktop",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "status",
-              "id": "status",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "desktop": "anydesk-7",
-            "status": "queue"
-          }
-        },
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "issue",
-              "keyValue": "={{ $json.issue }}"
-            }
-          ]
-        },
-        "operation": "update",
-        "options": {}
-      },
-      "position": [
-        2688,
-        2896
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "id": "543b048e-5c29-451b-bcca-3795c6549b60",
-      "name": "Sticky Note",
-      "parameters": {
-        "color": 3,
-        "content": "# Retry",
-        "height": 80,
-        "width": 150
-      },
-      "position": [
-        2880,
-        2800
-      ],
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
-    },
-    {
-      "id": "d244501d-1843-4d5f-a5fd-5cc8c20e4816",
-      "name": "Sticky Note1",
-      "parameters": {
-        "color": 3,
-        "content": "# Check Status Desktop",
-        "height": 80,
-        "width": 406
-      },
-      "position": [
-        2096,
-        2800
-      ],
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
     },
     {
       "id": "1be3b48b-178e-4456-b6b0-fb8c36f2af6b",
@@ -1981,13 +1731,16 @@
       "parameters": {
         "rule": {
           "interval": [
-            {}
+            {
+              "field": "minutes",
+              "minutesInterval": 3
+            }
           ]
         }
       },
       "position": [
-        1824,
-        3376
+        1616,
+        3136
       ],
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3
@@ -2006,8 +1759,8 @@
         "filters": {
           "conditions": [
             {
-              "keyName": "status",
-              "keyValue": "queue"
+              "keyName": "desktop",
+              "keyValue": "={{ $json.Workers }}"
             }
           ]
         },
@@ -2015,32 +1768,10 @@
         "operation": "get"
       },
       "position": [
-        1984,
-        3376
+        2672,
+        3136
       ],
       "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "4338ff61-817f-422e-ab05-000a70b1324a",
-      "name": "Get an issue1",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $json.body.issue_key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        2272,
-        3376
-      ],
-      "type": "n8n-nodes-base.jira",
       "typeVersion": 1
     },
     {
@@ -2053,13 +1784,13 @@
               "id": "f50429b9-5cd3-4ba4-ba3f-8c8e6eaf4b2b",
               "name": "workerId",
               "type": "string",
-              "value": "={{ $('Code in JavaScript2').item.json.workerId }}"
+              "value": "={{ $('Get queue').item.json.issue }}"
             },
             {
               "id": "8f1eb0ac-e01a-4d0c-9de5-27af859a0960",
               "name": "prompt",
               "type": "string",
-              "value": "={{ $('Tech-task1').item.json['tech-task'] }}"
+              "value": "={{ $('Get queue').item.json.prompt }}"
             },
             {
               "id": "9b6b444c-3ab7-4d03-96fd-44d6d80cf0b5",
@@ -2071,15 +1802,21 @@
               "id": "87a1101d-0399-480f-b78a-397d48ad0186",
               "name": "ticket",
               "type": "string",
-              "value": "={{ $('Jira Status + Issue key').item.json.body.issue_key }}"
+              "value": "={{ $('Get queue').item.json.issue }}"
+            },
+            {
+              "id": "f7587e2a-2e15-481f-a466-ba84ef1aa711",
+              "name": "ipport",
+              "type": "string",
+              "value": "={{ $('Проверка свободных ПК').item.json.ipport }}"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        3728,
-        3376
+        3296,
+        3136
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2101,193 +1838,11 @@
         "options": {}
       },
       "position": [
-        3168,
-        3376
+        2992,
+        3136
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "id": "33c3df78-0296-4440-ad6b-0b5901b3a3b5",
-      "name": "File extract1",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "56413c60-4d3e-4af3-8ca2-66e00958424e",
-              "name": "fields.attachment[0]",
-              "type": "object",
-              "value": "={{ $json.fields.attachment[0] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        2416,
-        3376
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "6600744d-1e38-4408-bb6a-7e3531c31f7a",
-      "name": "Get file1",
-      "parameters": {
-        "attachmentId": "={{ $json.fields.attachment[0].id }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        2736,
-        3376
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "f9ad67c1-aa7a-4103-bcd4-cd45fe1a4f89",
-      "name": "No document1",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
-              "name": "sys_admin_board",
-              "type": "object",
-              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"error_n8n\",       \"id\": \"13807\",       \"disabled\": false     }"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        2736,
-        3520
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "9ec05fae-c489-453e-9728-ad13b9ff6f56",
-      "name": "Update an issue error1",
-      "parameters": {
-        "issueKey": "={{ $('Jira Status + Issue key').item.json.body.issue_key }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "customFieldsUi": {
-            "customFieldsValues": [
-              {
-                "fieldId": {
-                  "__rl": true,
-                  "mode": "id",
-                  "value": "=customfield_13502"
-                },
-                "fieldValue": "={{ $json.sys_admin_board }}"
-              }
-            ]
-          },
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Backlog-Admin",
-            "mode": "list",
-            "value": "141"
-          }
-        }
-      },
-      "position": [
-        2880,
-        3520
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "feb591ca-0596-43b6-9d13-b82678cae426",
-      "name": "Tech-task1",
-      "parameters": {
-        "destinationKey": "tech-task",
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        2880,
-        3376
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "disabled": true,
-      "id": "880c2982-b9f4-469f-acc0-be8f5da310e8",
-      "name": "Edit date1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "hasOutputParser": true,
-        "options": {
-          "systemMessage": "=Ты — опытный AI-архитектор и инженер iOS-приложений. \nТвоя задача: по входному ТЗ генерировать готовый, структурированный и максимально полный промпт для Cursor, который сможет создать рабочий проект с архитектурой, модулями, API, UI, тестами и CI/CD.\n\nCursor должен иметь полный контекст и не должен задавать уточняющих вопросов.\nКаждый сгенерированный тобой промпт обязан содержать всю информацию, достаточную для немедленного начала разработки. \n\nПравила генерации:\n\n1. **Определение типа проекта и стека**\n   - Сам выбираешь тип приложения: мобильное (iOS/Android), web, desktop или CLI.\n   - Сам определяешь стек и архитектуру: язык, фреймворки, базы данных, паттерны, CI/CD инструменты.\n   - Все выборы должны быть финальными и полными — чтобы Cursor не задавал вопросов.\n\n2. **Структура итогового промпта**\n   Итоговый промпт для Cursor должен включать:\n   - Общую информацию: название проекта, цель, платформы, целевые OS версии.\n   - Архитектурный стиль: VIPER/MVVM/Clean Architecture и почему выбран.\n   - Полную структуру директорий: Models, ViewModels, Views, Services, Repositories, Network, Persistence, Utilities, Resources, Tests.\n   - Полные описания всех модулей и их ответственность.\n   - Полные API-контракты, URL, эндпоинты, модели данных, примеры запросов и ответов.\n   - UI-описание: экраны, навигация, состояния, макеты, интеракции.\n   - Локальное хранилище: формат, таблицы, схемы, ключи.\n   - Все зависимости: библиотеки, менеджеры пакетов, версии.\n   - Основной алгоритм работы приложения.\n   - Пошаговый план разработки, который Cursor должен выполнить.\n   - Полный перечень файлов, которые Cursor должен создать.\n   - Полное описание тестов: unit-тесты, UI-тесты.\n   - Полный CI/CD pipeline: lint, build, tests, deploy.\n   - Конвенции кодирования, стиль, правила именования, комментарии.\n   - Любую другую информацию, которая может потребоваться — без пропусков.\n   - Убедись что все файлы на которые есть ссылки в .xcodeproj существуют на диске\n\n3. **Инструкции для Cursor**\n   Итоговый prompt ВСЕГДА содержит:\n   - Прямую команду: *«Не задавай вопросов и не проси уточнений.»*\n   - Чёткое требование: *«Сразу приступай к созданию файлов проекта по описанию.»*\n   - Формулировку: *«Все данные и спецификации уже окончательные.»*\n   - Правило: *«Если в проекте чего-то нет — создай сам согласно архитектуре.\n\n  Создай файл project.yml (или ИмяПроекта.yml) для XcodeGen:\n- name: ИмяПроекта\n- targets: с указанием sources, dependencies, settings\n- Не создавай .xcodeproj напрямую!.  Если созданы .pod выполни команду обязательно создай .xcodeworkspace*\n- все \n\n4. **Вывод**\n   Агент всегда возвращает строго JSON:\n\n{\n  \"prompt\": \"<длинный полный текст задания для Cursor>\",\n  \"dirName\": \"<короткое осмысленное имя проекта, kebab-case>\"\n}\n\nТребования:\n- prompt должен быть максимально подробным и раскрывать всё, чтобы Cursor мог выполнить задачу без вопросов.\n- dirName и ticket генерируй автоматически, исходя из входного ТЗ.\n- Никогда не выводи текст вне JSON.\n- Стиль — конкретный, техничный, полный, без неопределённостей.\n- Промпт должен давать Cursor максимальную автономность.\n- В конце выполни это:\n1. Сделай 5 полных проходов по всему коду: на каждом проходе находи любые ошибки (синтаксис, логика, импорты, типы, обработка ошибок и т.п.) и сразу их исправляй. После каждого прохода код должен оставаться рабочим.\n2 Затем 5 раз проверь соответствие кода ТЗ: сравни реализацию с техническим заданием. Любой функционал, который отсутствует или реализован не по ТЗ, — допиши или исправь.\n3 После этого 5 раз проверь всю работу библиотек, API и ключей: убедись, что все библиотеки, API вызываются корректно, все ключи, ID, SKU и другие параметры вставлены и используются правильно.\n4 Когда всё выше сделано, ещё 5 раз пройди весь код проекта и исправь любые оставшиеся проблемы, несоответствия ТЗ или некорректное поведение.\n\n5. **Пример**\n   Вход: \"Создать iOS-приложение аналог Google Переводчика\"\n   Выход: JSON с полями prompt, dirName, command, metadata — как указано выше."
-        },
-        "promptType": "define",
-        "text": "=Вот моё ТЗ, перепиши его мне для cursor:\n{{ $('Tech-task1').item.json['tech-task'] }}"
-      },
-      "position": [
-        3456,
-        3376
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 3
-    },
-    {
-      "disabled": true,
-      "id": "d207c109-76b0-4230-8611-45261500d430",
-      "name": "Structured Output Parser1",
-      "parameters": {
-        "autoFix": true,
-        "jsonSchemaExample": "{\n  \"prompt\": \"string\",\n  \"dirName\": \"string\"\n}"
-      },
-      "position": [
-        3456,
-        3552
-      ],
-      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
-      "typeVersion": 1.3
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "disabled": true,
-      "id": "f0bef5f8-6bbe-432e-965b-250b6ebef5a9",
-      "name": "Google Gemini Chat Model1",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        3456,
-        3648
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
     },
     {
       "credentials": {
@@ -2299,7 +1854,7 @@
       "id": "2a065ca2-738e-4513-b989-5226a4a87cb0",
       "name": "Update an issue working1",
       "parameters": {
-        "issueKey": "={{ $('Jira Status + Issue key').item.json.body.issue_key }}",
+        "issueKey": "={{ $('Get queue').item.json.issue }}",
         "jiraVersion": "serverPat",
         "operation": "update",
         "updateFields": {
@@ -2319,65 +1874,18 @@
                   "mode": "id",
                   "value": "=customfield_13501"
                 },
-                "fieldValue": "={{ $('Code in JavaScript2').item.json.workerId }}"
+                "fieldValue": "={{ $('Get queue').item.json.desktop }}"
               }
             ]
           }
         }
       },
       "position": [
-        3312,
-        3376
+        3136,
+        3136
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "id": "4f71d464-f202-4c32-b9ae-6a8baa4e4725",
-      "name": "Document?1",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
-              "leftValue": "={{ $json.error }}",
-              "operator": {
-                "operation": "notEquals",
-                "type": "string"
-              },
-              "rightValue": "=invalid syntax"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        2576,
-        3376
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "id": "df6b6e6b-8614-49d1-b494-659af6fe5f54",
-      "name": "Wait5",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        3024,
-        3376
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "e5995bb9-eb63-4a85-8935-a957cd0e30a6"
     },
     {
       "id": "4a4e5944-3f86-4005-be39-901129aee475",
@@ -2389,8 +1897,8 @@
         "width": 550
       },
       "position": [
-        2880,
-        3264
+        2256,
+        2992
       ],
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1
@@ -2406,7 +1914,7 @@
               "id": "94ff2920-dc1c-4ff1-b30c-dbc330e8932e",
               "leftValue": "={{ $json.status }}",
               "operator": {
-                "operation": "equals",
+                "operation": "notEquals",
                 "type": "string"
               },
               "rightValue": "queue"
@@ -2422,22 +1930,11 @@
         "options": {}
       },
       "position": [
-        2128,
-        3376
+        2816,
+        3136
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
-    },
-    {
-      "id": "5fbc375b-25a4-454a-b9ac-8325d8b2d0d5",
-      "name": "No Operation, do nothing",
-      "parameters": {},
-      "position": [
-        2272,
-        3536
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
     },
     {
       "credentials": {
@@ -2446,7 +1943,6 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "disabled": true,
       "id": "0a75aca2-fc8f-4d81-9673-64addd672941",
       "name": "Update an issue Failed",
       "parameters": {
@@ -2476,21 +1972,20 @@
           },
           "statusId": {
             "__rl": true,
-            "cachedResultName": "Bot Fix-Admin",
+            "cachedResultName": "Cancelled-Admin",
             "mode": "list",
-            "value": "191"
+            "value": "221"
           }
         }
       },
       "position": [
-        2592,
-        4192
+        2368,
+        3888
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
     },
     {
-      "disabled": true,
       "id": "f2228357-115c-47f5-9e51-1a620f8ee9b9",
       "name": "Board of SysAdmins Failed",
       "parameters": {
@@ -2507,14 +2002,13 @@
         "options": {}
       },
       "position": [
-        2432,
-        4192
+        2208,
+        3888
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "disabled": true,
       "id": "85de8c72-8788-4788-af5c-0b8caca46696",
       "name": "Board of SysAdmins Completed",
       "parameters": {
@@ -2531,8 +2025,8 @@
         "options": {}
       },
       "position": [
-        2432,
-        3856
+        2208,
+        3552
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2544,7 +2038,6 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "disabled": true,
       "id": "00db50c3-af62-4928-839b-9aa484ba6b85",
       "name": "Update an issue Completed",
       "parameters": {
@@ -2589,14 +2082,13 @@
         }
       },
       "position": [
-        2592,
-        3856
+        2368,
+        3552
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
     },
     {
-      "disabled": true,
       "id": "a958d24c-4ddc-4e89-b451-c7893c826ed7",
       "name": "HTTP Request",
       "parameters": {
@@ -2622,14 +2114,13 @@
         "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
       },
       "position": [
-        2768,
-        4016
+        2544,
+        3712
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
     },
     {
-      "disabled": true,
       "id": "e79e8987-cb88-4f80-a7fa-fecf50d999c4",
       "name": "Edit Fields",
       "parameters": {
@@ -2663,7 +2154,7 @@
               "id": "35631231-9f57-4cb9-acaa-624e800170c8",
               "name": "repositoryUrl",
               "type": "string",
-              "value": "={{ $json.body.repositoryUrl }}"
+              "value": "={{ $json.body.folderUrl }}"
             },
             {
               "id": "719ece31-ab2b-486f-a8c0-c8bf5ffa9b52",
@@ -2682,8 +2173,8 @@
         "options": {}
       },
       "position": [
-        1968,
-        3936
+        1744,
+        3632
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2698,15 +2189,14 @@
         "path": "cursor_git"
       },
       "position": [
-        1824,
-        3936
+        1264,
+        4032
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "106dca18-a9e5-4ca8-89a0-5e6e958420a7"
     },
     {
-      "disabled": true,
       "id": "e85f9487-c50b-47de-92e8-9ba350aef36c",
       "name": "Board of SysAdmins Fix2",
       "parameters": {
@@ -2723,8 +2213,8 @@
         "options": {}
       },
       "position": [
-        2432,
-        4016
+        2208,
+        3712
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -2736,7 +2226,6 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "disabled": true,
       "id": "58e02bda-4d6c-42a5-8ecf-d5abf96c9e2d",
       "name": "Update an issue Fix2",
       "parameters": {
@@ -2773,14 +2262,13 @@
         }
       },
       "position": [
-        2592,
-        4016
+        2368,
+        3712
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
     },
     {
-      "disabled": true,
       "id": "7a833737-f653-4962-910e-5bf2e2d6a4ee",
       "name": "Switch1",
       "parameters": {
@@ -2940,14 +2428,13 @@
         }
       },
       "position": [
-        2128,
-        3920
+        1904,
+        3616
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3
     },
     {
-      "disabled": true,
       "id": "8b7c0eb6-da04-4427-9672-6d73e24f0ae3",
       "name": "Sticky Note3",
       "parameters": {
@@ -2957,100 +2444,10 @@
         "width": 230
       },
       "position": [
-        2208,
-        3744
+        1936,
+        3984
       ],
       "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
-    },
-    {
-      "disabled": true,
-      "id": "d9e9ed7b-fe98-4951-b0e9-116f50e8147a",
-      "name": "Wait6",
-      "parameters": {
-        "amount": 1,
-        "unit": "minutes"
-      },
-      "position": [
-        2832,
-        2896
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "efa4f956-f858-417e-8652-8cd845c47f9d"
-    },
-    {
-      "id": "948c6b2d-83ce-4fb3-a043-ed3ef1e89b5d",
-      "name": "When clicking ‘Execute workflow’",
-      "parameters": {},
-      "position": [
-        2288,
-        1920
-      ],
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1
-    },
-    {
-      "id": "2445eb98-38d6-4d69-9fad-706c08992446",
-      "name": "HTTP Request7",
-      "parameters": {
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "runDir",
-              "value": "={{ $json.runDir }}"
-            },
-            {
-              "name": "=runSlug",
-              "value": "={{ $json.runSlug }}"
-            },
-            {
-              "name": "={{ $json.status }}",
-              "value": "={{ $json.buildErrorLogsText }}"
-            }
-          ]
-        },
-        "method": "POST",
-        "options": {},
-        "sendBody": true,
-        "url": "ws://89.149.94.222:3435/ws"
-      },
-      "position": [
-        2848,
-        2128
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3
-    },
-    {
-      "alwaysOutputData": true,
-      "id": "b9eabcc2-7393-4188-8776-a33e82e4d192",
-      "name": "Get row(s)",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "issue",
-              "keyValue": "={{ $json.body.issue_key }}d"
-            }
-          ]
-        },
-        "limit": 1,
-        "operation": "get"
-      },
-      "position": [
-        1808,
-        2896
-      ],
-      "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
     },
     {
@@ -3058,8 +2455,8 @@
       "name": "No Operation, do nothing1",
       "parameters": {},
       "position": [
-        2192,
-        3040
+        2928,
+        2832
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -3092,49 +2489,1372 @@
         "options": {}
       },
       "position": [
-        1968,
-        2896
+        2752,
+        2688
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "b9eabcc2-7393-4188-8776-a33e82e4d192",
+      "name": "Проверка дубликата",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
+            }
+          ]
+        },
+        "limit": 1,
+        "operation": "get"
+      },
+      "position": [
+        2592,
+        2688
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "1b552025-33af-4791-9d66-7b161dc3adfc",
+      "name": "Занести таску в БД",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
+            "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
+            "status": "queue"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "options": {}
+      },
+      "position": [
+        2928,
+        2688
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "ac0d5c1e-3e23-44c4-8cac-95ee05e614f5",
+      "name": "Проверка свободных ПК",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Status",
+              "keyValue": "idle"
+            }
+          ]
+        },
+        "limit": 1,
+        "operation": "get"
+      },
+      "position": [
+        1792,
+        3136
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "81e4cb7b-930a-41c9-bec4-061b90b82cad",
+      "name": "Проверка задачи Jira",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "status",
+              "keyValue": "queue"
+            }
+          ]
+        },
+        "limit": 1,
+        "operation": "get"
+      },
+      "position": [
+        2080,
+        3136
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "2a6e6fc8-97ed-4b5e-8875-caf8cf76a3ce",
+      "name": "Обновление Jira Task",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "desktop": "={{ $('Проверка свободных ПК').item.json.Workers }}",
+            "status": "=Working"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $json.issue }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2368,
+        3136
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "d984255f-ef4e-4aee-8591-d8fba307ef06",
+      "name": "Обновление статуса ПК",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Workers",
+              "id": "Workers",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Status": "Working"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Workers",
+              "keyValue": "={{ $json.desktop }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2512,
+        3136
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "8ff13c51-0ae4-47e4-9703-c03ec10a123e",
+      "name": "Get an issue2",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        1792,
+        2688
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "25738721-97ba-4768-acf5-4a940fe78cb9",
+      "name": "File extract2",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56413c60-4d3e-4af3-8ca2-66e00958424e",
+              "name": "fields.attachment[0]",
+              "type": "object",
+              "value": "={{ $json.fields.attachment[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1936,
+        2688
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "48903527-55c0-4241-9915-baacc020d689",
+      "name": "Get file2",
+      "parameters": {
+        "attachmentId": "={{ $json.fields.attachment[0].id }}",
+        "download": true,
+        "jiraVersion": "serverPat",
+        "operation": "get",
+        "resource": "issueAttachment"
+      },
+      "position": [
+        2256,
+        2688
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "5ccd3289-ec1c-4193-9d4e-2ea0f773650c",
+      "name": "No document2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
+              "name": "sys_admin_board",
+              "type": "object",
+              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"error_n8n\",       \"id\": \"13807\",       \"disabled\": false     }"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2256,
+        2832
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "85604e7b-9538-41cf-8bdc-b003a5722a11",
+      "name": "Update an issue error2",
+      "parameters": {
+        "issueKey": "={{ $('Jira Status + Issue key').item.json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "=customfield_13502"
+                },
+                "fieldValue": "={{ $json.sys_admin_board }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Backlog-Admin",
+            "mode": "list",
+            "value": "141"
+          }
+        }
+      },
+      "position": [
+        2400,
+        2832
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "f5935dea-2862-47d8-8d90-6249ff59700c",
+      "name": "Tech-task2",
+      "parameters": {
+        "destinationKey": "tech-task",
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        2400,
+        2688
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "e48d3b1a-f67d-470f-8244-2871f02dce38",
+      "name": "Document?2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
+              "leftValue": "={{ $json.error }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "=invalid syntax"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2096,
+        2688
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "5fd9d397-94e3-464f-a70d-cc649de8afd0",
+      "name": "HTTP Request8",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "prompt",
+              "value": "={{ $json.prompt }}"
+            },
+            {
+              "name": "dirName",
+              "value": "={{ $json.dirName }}"
+            },
+            {
+              "name": "command",
+              "value": "={{ $json.command }}"
+            },
+            {
+              "name": "=workerId",
+              "value": "={{ $('Проверка свободных ПК').item.json.Workers }}"
+            },
+            {
+              "name": "ticket",
+              "value": "={{ $json.ticket }}"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "url": "=http://{{ $json.ipport }}/incoming/n8n"
+      },
+      "position": [
+        3472,
+        3136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "0b95140a-588d-43c5-bf80-8b958ef7d1f1",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        1936,
+        3344
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "efee4c6e-83f1-4bac-bbd3-789826c84c93",
+      "name": "PC?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "ccccb302-791c-4bb0-a096-aa16efa2da25",
+              "leftValue": "={{ $json.Workers }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1936,
+        3136
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "d0435909-4785-4b85-a795-a61dcbb629cc",
+      "name": "Task-key?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "ccccb302-791c-4bb0-a096-aa16efa2da25",
+              "leftValue": "={{ $json.status }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "queue"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2224,
+        3136
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "4c97af1a-ff4b-4bb2-985e-34d87b66ebf9",
+      "name": "No Operation, do nothing2",
+      "parameters": {},
+      "position": [
+        2224,
+        3344
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "f9155e33-2ac3-476e-91ea-4e85ae35262d",
+      "name": "status task",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "cursor_git_test"
+      },
+      "position": [
+        1584,
+        3632
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "106dca18-a9e5-4ca8-89a0-5e6e958420a7"
+    },
+    {
+      "id": "543b048e-5c29-451b-bcca-3795c6549b60",
+      "name": "Sticky Note",
+      "parameters": {
+        "color": 3,
+        "content": "# Retry",
+        "height": 80,
+        "width": 150
+      },
+      "position": [
+        2928,
+        2336
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "5e28c29e-02be-4fc5-b423-ac0c17dfcc93",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        2304,
+        2336
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "57d7dd3d-dc53-49b3-9604-ace9210623a3",
+      "name": "Merge",
+      "parameters": {},
+      "position": [
+        2160,
+        2336
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "ce320195-9179-4e50-b3e6-70e88b6797f8",
+      "name": "Anydesk-13",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "options": {},
+        "url": "http://89.149.94.222:3435/status"
+      },
+      "position": [
+        1888,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "3fc6a960-390e-48ce-9fe3-82d6f917b859",
+      "name": "Update row(s)",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Workers",
+              "id": "Workers",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Status": "={{ $json.server.status }}",
+            "Workers": "={{ $json.server.workerId }}"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Workers",
+              "keyValue": "={{ $json.server.workerId }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2512,
+        2336
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "889b8694-afc5-4a1c-8ddf-d6c17233401f",
+      "name": "Anydesk-12",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "options": {},
+        "url": "http://89.149.94.222:3434/status"
+      },
+      "position": [
+        1888,
+        2416
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "disabled": true,
+      "id": "b0750ae5-02c1-4658-bd63-c776311cdfe5",
+      "name": "Schedule Trigger1",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 10
+            }
+          ]
+        }
+      },
+      "position": [
+        1600,
+        2368
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "b72aeef8-a816-4fae-9915-3a2f88dcc8cb",
+      "name": "Webhook2",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "not_jira"
+      },
+      "position": [
+        1632,
+        2048
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "b7339506-a31c-42a5-b527-1923db0016b9"
+    },
+    {
+      "id": "6718a078-59fd-420f-a882-9ea4d430b96d",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6bc8e899-414c-4e4f-ae22-86782512fffb",
+              "name": "Task",
+              "type": "string",
+              "value": "=Задача Jira {{ $json.body.issue_key }} работает уже два часа!\nПроверьте удалённый {{ $json.body.serial_num_pc }}!"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1776,
+        2048
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "NLhEZxpzsvVUM6lD",
+          "name": "BotReporter"
+        }
+      },
+      "id": "97589f1b-e132-4279-a441-66f2c73af7a7",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "751365965",
+        "text": "={{ $json.Task }}"
+      },
+      "position": [
+        1936,
+        2048
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "26e65528-2e0a-4364-849a-ac3418d6157b"
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "fa107fa2-f2a8-40fa-bb86-3d05ef9feceb",
+      "name": "Update an issue Completed1",
+      "parameters": {
+        "issueKey": "={{ $('Webhook2').item.json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Backlog-Admin",
+            "mode": "list",
+            "value": "141"
+          }
+        }
+      },
+      "position": [
+        2096,
+        2048
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "a25a8e4c-5569-4782-807c-f72102091cef",
+      "name": "Обновление Jira Task1",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "desktop": "=-",
+            "status": "=Done"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Edit Fields').item.json.runSlug }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2544,
+        3552
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "6b4b028d-6260-442d-8522-2169f7cd5f4c",
+      "name": "Обновление статуса ПК1",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Workers",
+              "id": "Workers",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Status": "idle"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Workers",
+              "keyValue": "={{ $('status task').item.json.body.workerId }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2720,
+        3552
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "e922870e-fb4c-491d-88f1-ad5901c08eea",
+      "name": "Обновление Jira Task2",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "desktop": "=-",
+            "status": "=Failed"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Edit Fields').item.json.runSlug }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2544,
+        3888
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "8a778266-c8b8-4244-9dca-1f174099d33a",
+      "name": "Обновление статуса ПК2",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Workers",
+              "id": "Workers",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Status": "idle"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Workers",
+              "keyValue": "={{ $('status task').item.json.body.workerId }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2720,
+        3888
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "0e36d85c-5bfb-465f-b8fe-3761c44426b3",
+      "name": "Обновление Jira Task3",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "desktop": "=-",
+            "status": "=Failed"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Webhook2').item.json.body.issue_key }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2272,
+        2048
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "c0052c15-6c43-494f-bdb3-31fb3997329a",
+      "name": "Обновление статуса ПК3",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Workers",
+              "id": "Workers",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Status": "idle"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Workers",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/iRSNunEllKS6J79Z",
+          "mode": "list",
+          "value": "iRSNunEllKS6J79Z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Workers",
+              "keyValue": "={{ $('Webhook2').item.json.body.serial_num_pc }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2448,
+        2048
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "f06d8445-db8d-4fad-a169-db2c41351192",
+      "name": "Delete row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Webhook2').item.json.body.issue_key }}"
+            }
+          ]
+        },
+        "operation": "deleteRows",
+        "options": {}
+      },
+      "position": [
+        2608,
+        2048
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
     }
   ],
   "pinData": {
-    "Webhook1": [
+    "Webhook2": [
       {
         "json": {
           "body": {
-            "description": "test-test",
-            "issue_key": "DEV-1"
+            "issue_key": "DEV-9162",
+            "serial_num_pc": "anydesk-11"
           },
-          "executionMode": "test",
+          "executionMode": "production",
           "headers": {
-            "accept": "*/*",
+            "accept": "application/json, application/javascript, text/javascript",
             "accept-encoding": "gzip, br",
-            "cache-control": "no-cache",
             "cdn-loop": "cloudflare; loops=1; subreqs=1",
-            "cf-connecting-ip": "178.66.128.162",
+            "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
-            "cf-ipcountry": "RU",
-            "cf-ray": "9a93fc798623f103-DME",
+            "cf-ipcountry": "DE",
+            "cf-ray": "9aab6bb6d35c3a9c-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "288",
-            "content-type": "multipart/form-data; boundary=--------------------------558827710940325647449476",
+            "content-length": "53",
+            "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "postman-token": "59bba8bd-8d2e-406d-bc80-336fb5eedc59",
-            "user-agent": "PostmanRuntime/7.45.0",
-            "x-forwarded-for": "178.66.128.162, 172.71.184.24",
+            "x-forwarded-for": "135.181.186.107, 172.68.193.204",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
             "x-is-trusted": "yes",
-            "x-real-ip": "178.66.128.162"
+            "x-real-ip": "135.181.186.107"
           },
           "params": {},
           "query": {},
-          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook-test/a5913213-1ef9-404a-9726-f57e0ee65457"
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/not_jira"
         }
       }
     ],
@@ -3238,10 +3958,13 @@
   "staticData": {
     "node:Schedule Trigger": {
       "recurrenceRules": []
+    },
+    "node:Schedule Trigger1": {
+      "recurrenceRules": []
     }
   },
   "tags": [],
-  "triggerCount": 4,
-  "updatedAt": "2025-12-05T14:00:31.000Z",
-  "versionId": "54726a46-a3f5-4f74-a9cf-7ecece5fa7f8"
+  "triggerCount": 6,
+  "updatedAt": "2025-12-08T16:32:29.000Z",
+  "versionId": "93adbf2e-428d-4dae-94ec-521300f05f92"
 }
