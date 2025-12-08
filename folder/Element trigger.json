@@ -17,11 +17,6 @@
         [
           {
             "index": 0,
-            "node": "If",
-            "type": "main"
-          },
-          {
-            "index": 0,
             "node": "If2",
             "type": "main"
           }
@@ -32,19 +27,8 @@
       "main": [
         [
           {
-            "index": 1,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If": {
-      "main": [
-        [
-          {
             "index": 0,
-            "node": "Merge",
+            "node": "Call 'Element ART BOT'",
             "type": "main"
           }
         ]
@@ -56,17 +40,6 @@
           {
             "index": 0,
             "node": "Code in JavaScript",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Merge": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Call 'Element ART BOT'",
             "type": "main"
           }
         ]
@@ -109,39 +82,6 @@
       "webhookId": "e4ea071f-94b5-45f5-99f5-c30c365ba3e1"
     },
     {
-      "id": "52c5df11-9af0-4756-aa8b-96f3339344f6",
-      "name": "If",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "c7d806a5-84c2-4406-b1a7-eb4d8995eb65",
-              "leftValue": "m.text",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "={{ $json.content.msgtype }}"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        -4144,
-        896
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
       "credentials": {
         "matrixApi": {
           "id": "8zaMKEVQX7KwyTVm",
@@ -151,7 +91,7 @@
       "id": "abb342dd-c1ff-44c9-b771-2492641b6081",
       "name": "Get many messages",
       "parameters": {
-        "limit": 2,
+        "limit": 1,
         "operation": "getAll",
         "otherOptions": {},
         "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU"
@@ -236,21 +176,6 @@
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
-    },
-    {
-      "id": "a6531be7-475e-4552-944e-179443d7ba4d",
-      "name": "Merge",
-      "parameters": {
-        "combineBy": "combineAll",
-        "mode": "combine",
-        "options": {}
-      },
-      "position": [
-        -3456,
-        896
-      ],
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.2
     },
     {
       "id": "28f22cb5-8a7f-4bb7-9ff9-ea2c188f8d33",
@@ -359,6 +284,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-05T12:28:03.000Z",
-  "versionId": "6d52ed8e-ece1-4d74-a518-b7783c70c2bb"
+  "updatedAt": "2025-12-08T06:46:35.000Z",
+  "versionId": "41fbc0b1-28f6-4de1-81b6-0a5c2c7b131b"
 }
