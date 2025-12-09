@@ -1,0 +1,405 @@
+{
+  "active": false,
+  "connections": {
+    "Delete row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Insert row",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 1,
+            "node": "Merge",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Delete row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Insert row": {
+      "main": [
+        []
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get row(s)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-09T07:30:34.849Z",
+  "id": "v7s8FsO3vR46u9sy",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 23",
+  "nodes": [
+    {
+      "id": "7ea4eea1-b85d-484c-acd1-706f561a9091",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a15305fd-e17f-4b74-8c0d-22d628f96d8a",
+              "name": "jiraTask",
+              "type": "string",
+              "value": "DEV-5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        32,
+        -32
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "8bd2eda3-7826-44e6-8b28-54d5be21fb0d",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "865b818f-7f3f-4a26-b0fb-a42a3f21e7e3",
+              "name": "workerId",
+              "type": "string",
+              "value": "anydesk-4"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        80,
+        288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "6f1a8523-460a-4692-b53e-ed408b2b88c7",
+      "name": "Merge",
+      "parameters": {
+        "combineBy": "combineByPosition",
+        "mode": "combine",
+        "options": {}
+      },
+      "position": [
+        1440,
+        272
+      ],
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2
+    },
+    {
+      "id": "b082fd1b-db88-4a07-ab0c-1e8952ea2339",
+      "name": "Insert row",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "TaskId"
+          ],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "TaskId",
+              "id": "TaskId",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "TaskId": "={{ $json.jiraTask }}"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "tzar",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/vOKdmPZGdaBfpJTW",
+          "mode": "list",
+          "value": "vOKdmPZGdaBfpJTW"
+        },
+        "options": {}
+      },
+      "position": [
+        208,
+        -32
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "54055658-df29-4fc4-888c-5046aa76b062",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        496,
+        -32
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "fb97527a-f402-4268-9cef-f8a1e79db0a0",
+      "name": "Delete row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "tzar",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/vOKdmPZGdaBfpJTW",
+          "mode": "list",
+          "value": "vOKdmPZGdaBfpJTW"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "TaskId",
+              "keyValue": "={{ $json.TaskId }}"
+            }
+          ]
+        },
+        "operation": "deleteRows",
+        "options": {}
+      },
+      "position": [
+        1120,
+        -32
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "a7d6c71c-214f-4685-8d9f-beebde4af009",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "tzar",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/vOKdmPZGdaBfpJTW",
+          "mode": "list",
+          "value": "vOKdmPZGdaBfpJTW"
+        },
+        "limit": 1,
+        "operation": "get"
+      },
+      "position": [
+        896,
+        -32
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "93a36879-3cfc-40ef-b5b6-ab21fad4b074",
+      "name": "Webhook",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "eea3be97-d724-4851-9f0f-1530157bb215"
+      },
+      "position": [
+        -336,
+        -32
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "eea3be97-d724-4851-9f0f-1530157bb215"
+    },
+    {
+      "id": "1d3978c1-a995-4cfb-88f1-5eba797f5d65",
+      "name": "Sticky Note",
+      "parameters": {
+        "content": "Джира отправляет таску"
+      },
+      "position": [
+        -576,
+        -96
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "bca8aa79-a6f1-4312-beb1-f34e42d6f152",
+      "name": "Sticky Note1",
+      "parameters": {
+        "content": "Записывается в в таблицу"
+      },
+      "position": [
+        96,
+        -240
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "4fcdb16d-aad7-4ac6-a869-4c4e51aeba36",
+      "name": "Webhook1",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "eea3be97-d724-4851-9f0f-1530157bb215"
+      },
+      "position": [
+        -320,
+        288
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "eea3be97-d724-4851-9f0f-1530157bb215"
+    },
+    {
+      "id": "833bdc12-f31a-4f4a-9812-156ceda01930",
+      "name": "Sticky Note2",
+      "parameters": {
+        "content": "Курсор отправляет статус"
+      },
+      "position": [
+        -576,
+        272
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "6d5a50b1-ebd4-4e30-8485-5b4ec8e397e8",
+      "name": "Sticky Note3",
+      "parameters": {
+        "content": "Воркер берет первую задачу"
+      },
+      "position": [
+        816,
+        128
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "27a8c312-1789-4aef-8bb3-285af0b22cd7",
+      "name": "Sticky Note4",
+      "parameters": {
+        "content": "Сформироваронная пара\nворкер айди - таска"
+      },
+      "position": [
+        1408,
+        464
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "67c26c42-6505-4990-8cd7-f6ad3805c0df",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        -688,
+        80
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-09T07:30:34.852Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-09T07:30:34.852Z",
+      "workflowId": "v7s8FsO3vR46u9sy"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-09T07:46:56.000Z",
+  "versionId": "7956f2a5-b22d-4fe3-b157-66af985ec97e"
+}
