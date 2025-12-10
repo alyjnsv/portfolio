@@ -373,7 +373,7 @@
         [
           {
             "index": 0,
-            "node": "Switch1",
+            "node": "Доступы",
             "type": "main"
           }
         ]
@@ -407,6 +407,59 @@
           {
             "index": 0,
             "node": "Merge2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Доступы": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "send message - Нет доступа",
             "type": "main"
           }
         ]
@@ -467,8 +520,8 @@
         ]
       },
       "position": [
-        -2160,
-        -720
+        -2640,
+        -704
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
@@ -833,16 +886,18 @@
         }
       },
       "id": "7e6c313b-0196-4641-8e88-d32a7926a687",
+      "maxTries": 2,
       "name": "Get a file1",
       "parameters": {
         "additionalFields": {},
-        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[3].file_id }}",
+        "fileId": "={{ $('Telegram Trigger').item.json.message.photo[3] ? $('Telegram Trigger').item.json.message.photo[3].file_id : $('Telegram Trigger').item.json.message.photo[2].file_id }}",
         "resource": "file"
       },
       "position": [
         -784,
         -1456
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "0fafd7de-b816-4cde-a1d8-34bcbe6de8a3"
@@ -1362,6 +1417,7 @@
       "typeVersion": 2
     },
     {
+      "disabled": true,
       "id": "6da9c38b-2941-457e-bcee-46314ad5d823",
       "name": "Error Trigger",
       "parameters": {},
@@ -1379,6 +1435,7 @@
           "name": "Errors_and_fails_bot (Ruslan Anisimov)"
         }
       },
+      "disabled": true,
       "executeOnce": true,
       "id": "9bbd454a-d916-4e1d-b8a4-ca8aa8fa9dcb",
       "name": "Error",
@@ -1422,6 +1479,207 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "fb97a248-191d-4878-81d6-f11fd1ab724f"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "95CfLYIml2nM2C3X",
+          "name": "@ImgGenService_bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "e78b0b87-dce3-4312-bcf5-acad1aa20561",
+      "name": "send message - Нет доступа",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        },
+        "chatId": "={{ $(\"Telegram Trigger\").first().json.message.chat.id }}",
+        "text": "=⛔ Нет доступа"
+      },
+      "position": [
+        -2112,
+        -448
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "fb97a248-191d-4878-81d6-f11fd1ab724f"
+    },
+    {
+      "executeOnce": false,
+      "id": "d594699b-57fd-42b5-991e-abd02f312cf8",
+      "name": "Доступы",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "536385bd-2127-4065-9ce7-75b3bb22de40",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "Celestiallord1403"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4a5fdce8-e331-4238-9658-e3abd7feea46",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "=alyonadyomina"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8aee15e3-fbe7-4c1d-a299-02c3eade327e",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "SingularityArt"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "1ae50093-1235-4272-9ff7-a9b5b4c67f15",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "=misha_waugh"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "b552c571-5ed6-458b-84fc-f8b14bf7c7b5",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "lina_glu"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "9059cd63-ec20-4010-8250-5bb52afed19f",
+                    "leftValue": "={{ $json.message.from.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "gipoo0"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              }
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "19296e84-7819-430e-b86f-a323a999ee80",
+                    "leftValue": "={{ $json.message.chat.username }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.message.chat.username }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                }
+              },
+              "outputKey": "нет доступа",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -2400,
+        -784
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3
     }
   ],
   "pinData": {
@@ -1429,31 +1687,47 @@
       {
         "json": {
           "message": {
-            "caption": "добавь все объекты в один кадр",
+            "caption": "MAIN DESCRIPTION: Reinforced isometric command center, Grade 2, with taller core, upgraded perimeter modules, array of communication dishes. Increased technological density.\n\nSTYLE: isometric sci-fi 3D render, clean stylized AAA mobile, smooth materials, soft shading, glowing accents\n\nCOLOR PALETTE: white + steel gray base, increased cyan emissive lines, soft teal shadows, bright blue glow\n\nMATERIALS: smooth metal, matte composite, glossy accents, neon cyan strips\n\nLIGHTING: soft GI, subtle AO, gentle bloom on emissive areas, stronger glow\n\nDETAILING: clean geometry, external structural bracing, complex panel arrangements, clear silhouette, modular blocks, no dirt\n\nCAMERA: isometric 3/4 view, 50° angle, centered composition\n\nPROHIBITIONS: no realism, no text, no dirt, no characters, no noise, no UI",
             "chat": {
-              "first_name": "Ruslan",
-              "id": 6689839309,
+              "first_name": "Dima",
+              "id": 505139904,
               "type": "private",
-              "username": "SingularityArt"
+              "username": "Celestiallord1403"
             },
-            "date": 1765202060,
-            "document": {
-              "file_id": "BQACAgIAAxkBAAICoWk22Iu4n_V-UMZMIupUJFeoKj5_AAJuiwACCwm4Saa2k3P6XDXpNgQ",
-              "file_name": "Pictures.zip",
-              "file_size": 2936549,
-              "file_unique_id": "AgADbosAAgsJuEk",
-              "mime_type": "application/zip"
-            },
+            "date": 1765370347,
             "from": {
-              "first_name": "Ruslan",
-              "id": 6689839309,
+              "first_name": "Dima",
+              "id": 505139904,
               "is_bot": false,
-              "language_code": "en",
-              "username": "SingularityArt"
+              "language_code": "ru",
+              "username": "Celestiallord1403"
             },
-            "message_id": 673
+            "message_id": 1787,
+            "photo": [
+              {
+                "file_id": "AgACAgIAAxkBAAIG9Wk5Zed7sEJ92CSwmdkcbvV_1j6uAAJDDGsb6IDQSWBplLvYvBusAQADAgADcwADNgQ",
+                "file_size": 1215,
+                "file_unique_id": "AQADQwxrG-iA0El4",
+                "height": 90,
+                "width": 89
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIG9Wk5Zed7sEJ92CSwmdkcbvV_1j6uAAJDDGsb6IDQSWBplLvYvBusAQADAgADbQADNgQ",
+                "file_size": 11335,
+                "file_unique_id": "AQADQwxrG-iA0Ely",
+                "height": 320,
+                "width": 315
+              },
+              {
+                "file_id": "AgACAgIAAxkBAAIG9Wk5Zed7sEJ92CSwmdkcbvV_1j6uAAJDDGsb6IDQSWBplLvYvBusAQADAgADeAADNgQ",
+                "file_size": 19510,
+                "file_unique_id": "AQADQwxrG-iA0El9",
+                "height": 532,
+                "width": 524
+              }
+            ]
           },
-          "update_id": 49704533
+          "update_id": 49704816
         }
       }
     ]
@@ -1489,6 +1763,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-12-09T07:59:52.000Z",
-  "versionId": "f0374224-f455-47b9-8903-56442841163b"
+  "updatedAt": "2025-12-10T13:58:17.000Z",
+  "versionId": "e7b3df58-4cb3-4f49-a53c-92df95baf4d5"
 }
