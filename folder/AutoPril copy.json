@@ -1,6 +1,17 @@
 {
   "active": true,
   "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Info collect3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Anydesk-12": {
       "main": [
         [
@@ -155,6 +166,17 @@
         ]
       ]
     },
+    "Board of SysAdmins In progress2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue in progress2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Board of SysAdmins1": {
       "main": [
         [
@@ -253,6 +275,17 @@
         ]
       ]
     },
+    "Document?4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Split Out",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Edit Fields": {
       "main": [
         [
@@ -315,6 +348,17 @@
         ]
       ]
     },
+    "Extract from File1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "File extract": {
       "main": [
         [
@@ -344,6 +388,17 @@
           {
             "index": 0,
             "node": "Document?3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "File extract4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Document?4",
             "type": "main"
           }
         ]
@@ -393,6 +448,17 @@
         ]
       ]
     },
+    "Get an issue4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "File extract4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get file": {
       "main": [
         [
@@ -421,6 +487,17 @@
           {
             "index": 0,
             "node": "Extract from File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get file4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File1",
             "type": "main"
           }
         ]
@@ -520,6 +597,17 @@
           {
             "index": 0,
             "node": "Respond to Webhook1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Info collect3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to Webhook2",
             "type": "main"
           }
         ]
@@ -627,6 +715,17 @@
         ]
       ]
     },
+    "Respond to Webhook2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Board of SysAdmins In progress2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Schedule Trigger": {
       "main": [
         []
@@ -654,6 +753,17 @@
           {
             "index": 0,
             "node": "Update an issue Completed1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get file4",
             "type": "main"
           }
         ]
@@ -805,24 +915,6 @@
         ]
       ]
     },
-    "Task?": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Занести таску в БД",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Tech-task": {
       "main": [
         [
@@ -839,7 +931,7 @@
         [
           {
             "index": 0,
-            "node": "Проверка дубликата",
+            "node": "Занести таску в БД",
             "type": "main"
           }
         ]
@@ -1091,6 +1183,17 @@
         []
       ]
     },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "build status": {
       "main": [
         [
@@ -1245,17 +1348,6 @@
           {
             "index": 0,
             "node": "Delete row(s)",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Проверка дубликата": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Task?",
             "type": "main"
           }
         ]
@@ -2841,82 +2933,6 @@
       "typeVersion": 1
     },
     {
-      "id": "74e7b050-8f99-45d3-a5d4-7e3851a2ef1b",
-      "name": "No Operation, do nothing1",
-      "parameters": {},
-      "position": [
-        2928,
-        2832
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "id": "8d16f929-e65b-4fe1-801c-7c627440bbb7",
-      "name": "Task?",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "ccccb302-791c-4bb0-a096-aa16efa2da25",
-              "leftValue": "={{ $json.issue }}",
-              "operator": {
-                "operation": "empty",
-                "singleValue": true,
-                "type": "string"
-              },
-              "rightValue": ""
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        2752,
-        2688
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "alwaysOutputData": true,
-      "id": "b9eabcc2-7393-4188-8776-a33e82e4d192",
-      "name": "Проверка дубликата",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "issue",
-              "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
-            }
-          ]
-        },
-        "limit": 1,
-        "operation": "get"
-      },
-      "position": [
-        2592,
-        2688
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
       "id": "1b552025-33af-4791-9d66-7b161dc3adfc",
       "name": "Занести таску в БД",
       "parameters": {
@@ -2983,7 +2999,7 @@
         "options": {}
       },
       "position": [
-        2928,
+        2592,
         2688
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -5794,6 +5810,309 @@
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "4eda6c35-7b76-4674-a046-8efe545c079b",
+      "name": "Info collect3",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f50429b9-5cd3-4ba4-ba3f-8c8e6eaf4b2b",
+              "name": "workerId",
+              "type": "string",
+              "value": "=DEV-9416"
+            },
+            {
+              "id": "8f1eb0ac-e01a-4d0c-9de5-27af859a0960",
+              "name": "prompt",
+              "type": "string",
+              "value": "=DEV-9416"
+            },
+            {
+              "id": "87a1101d-0399-480f-b78a-397d48ad0186",
+              "name": "ticket",
+              "type": "string",
+              "value": "=DEV-9416"
+            },
+            {
+              "id": "ce156297-0f1a-48f2-b5b0-feca412ce796",
+              "name": "status",
+              "type": "string",
+              "value": "=DEV-9416"
+            },
+            {
+              "id": "468ed622-f0cb-4e1a-909a-4f0c6208445f",
+              "name": "data 0",
+              "type": "string",
+              "value": "={{ $json.data[0] }}"
+            },
+            {
+              "id": "9b94141c-0e0e-4b11-afda-5b075cdcb00b",
+              "name": "data 1",
+              "type": "string",
+              "value": "={{ $json.data[1] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        11072,
+        5360
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "d9f827c9-857b-46f6-ac41-930ac0fe5df1",
+      "name": "Update an issue in progress2",
+      "parameters": {
+        "issueKey": "={{ $('Info collect3').item.json.ticket }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "=customfield_13502"
+                },
+                "fieldValue": "={{ $json.sys_admin_board }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Development-Admin",
+            "mode": "list",
+            "value": "171"
+          }
+        }
+      },
+      "position": [
+        11536,
+        5360
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "9928de21-e506-4aec-add9-c32593863e15",
+      "name": "Board of SysAdmins In progress2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
+              "name": "sys_admin_board",
+              "type": "object",
+              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"working\",       \"id\": \"13803\",       \"disabled\": false     }"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        11376,
+        5360
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "disabled": true,
+      "id": "b3329f46-fe23-4d1c-8055-7d78418ad416",
+      "name": "Respond to Webhook2",
+      "parameters": {
+        "options": {},
+        "respondWith": "json",
+        "responseBody": "={\n  \"task_id\": \"{{ $('Info collect3').item.json.ticket }}\",\n  \"worker_id\": \"{{ $('Info collect3').item.json.workerId }}\",\n  \"status\": \"{{ $('Info collect3').item.json.status }}\",\n  \"prompt\": \"{{ $json.data }}\"\n}"
+      },
+      "position": [
+        11216,
+        5360
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "a9dd3434-22c0-4c13-82c9-63acc8d0f9d0",
+      "name": "Get an issue4",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "=DEV-9416",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        10096,
+        5360
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "943a051c-2a1b-44b1-9e6e-e4d7ac11a51e",
+      "name": "File extract4",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56413c60-4d3e-4af3-8ca2-66e00958424e",
+              "name": "fields.attachment[0]",
+              "type": "object",
+              "value": "={{ $json.fields.attachment[0] }}"
+            },
+            {
+              "id": "b3ce4996-f999-4a92-8c58-8a90fe0f9e31",
+              "name": "fields.attachment[1]",
+              "type": "object",
+              "value": "={{ $json.fields.attachment[1] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        10240,
+        5360
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "1c390166-281b-4fc7-acfe-0b462be25e6c",
+      "name": "Get file4",
+      "parameters": {
+        "attachmentId": "={{ $json.id }}",
+        "download": true,
+        "jiraVersion": "serverPat",
+        "operation": "get",
+        "resource": "issueAttachment"
+      },
+      "position": [
+        10672,
+        5360
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "e9cd9ee1-65fc-458a-8243-cfd6f909d3d7",
+      "name": "Document?4",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
+              "leftValue": "={{ $json.error }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "=invalid syntax"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        10384,
+        5360
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "6347f6a9-d270-4b51-8b63-15e6b72829c7",
+      "name": "Extract from File1",
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "position": [
+        10800,
+        5360
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "93fd40c2-07b3-4348-97fb-7b4e8a62642a",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        9936,
+        5360
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "94f25739-f2bf-4dc6-9de8-e618b43e13f5",
+      "name": "Split Out",
+      "parameters": {
+        "fieldToSplitOut": "fields.attachment",
+        "options": {}
+      },
+      "position": [
+        10528,
+        5360
+      ],
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1
+    },
+    {
+      "id": "ec74f62c-3a82-41b0-aebb-ba8847472ec3",
+      "name": "Aggregate",
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        10944,
+        5360
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -5802,8 +6121,8 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "DEV-9353",
-            "serial_num_pc": "anydesk-6"
+            "issue_key": "DEV-9416",
+            "serial_num_pc": "anydesk-4"
           },
           "executionMode": "production",
           "headers": {
@@ -5813,17 +6132,17 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "DE",
-            "cf-ray": "9ab31b51d2fae92d-DME",
+            "cf-ray": "9abafbb635dc9293-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "content-length": "73",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.184.9",
+            "x-forwarded-for": "135.181.186.107, 172.70.243.31",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
@@ -6011,6 +6330,6 @@
   },
   "tags": [],
   "triggerCount": 5,
-  "updatedAt": "2025-12-09T15:49:00.000Z",
-  "versionId": "de5a84f5-6757-426e-b67a-47c9bd8b02eb"
+  "updatedAt": "2025-12-10T14:35:34.000Z",
+  "versionId": "0d9a9687-453d-433e-9d6d-c1714b107b89"
 }
