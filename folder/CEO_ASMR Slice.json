@@ -128,45 +128,45 @@
         ]
       ]
     },
-    "Create Video1": {
+    "Convert to img": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait for Veo",
+            "node": "Upload file2",
             "type": "main"
           }
         ]
       ]
     },
-    "Create Video2": {
+    "Convert to img1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait for Veo4",
+            "node": "Upload file",
             "type": "main"
           }
         ]
       ]
     },
-    "Create Video3": {
+    "Convert to img2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait for Veo5",
+            "node": "Upload file3",
             "type": "main"
           }
         ]
       ]
     },
-    "Create Video4": {
+    "Convert to img3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Wait for Veo6",
+            "node": "Upload file4",
             "type": "main"
           }
         ]
@@ -270,50 +270,6 @@
         ]
       ]
     },
-    "Get Video1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Append or update row in sheet1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get Video2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Append or update row in sheet2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get Video3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Append or update row in sheet3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get Video4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Append or update row in sheet4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get row(s) in sheet": {
       "main": [
         [
@@ -358,6 +314,24 @@
           {
             "index": 0,
             "node": "Append or update row in sheet5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "take video1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait14",
             "type": "main"
           }
         ]
@@ -453,6 +427,104 @@
         ]
       ]
     },
+    "If6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "take video",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "take video2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait15",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "take video3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Wait16",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kling AI": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait14",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kling AI1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kling AI2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait15",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kling AI3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait16",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Loop Over Items1": {
       "main": [
         [],
@@ -460,90 +532,6 @@
           {
             "index": 0,
             "node": "Генератор сценарного шаблона",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items10": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait for Veo",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items11": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценария2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items12": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценария3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items13": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценария4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items14": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait for Veo4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items15": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait for Veo5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Loop Over Items16": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Wait for Veo6",
             "type": "main"
           }
         ]
@@ -657,24 +645,56 @@
         ]
       ]
     },
-    "Loop Over Items9": {
-      "main": [
-        [],
-        [
-          {
-            "index": 0,
-            "node": "Генератор сценария1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Merge": {
       "main": [
         [
           {
             "index": 0,
             "node": "Get row(s) in sheet1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Nano-banana": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ready?1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Nano-banana1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ready?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Nano-banana2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ready?2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Nano-banana3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ready?3",
             "type": "main"
           }
         ]
@@ -850,6 +870,78 @@
         ]
       ]
     },
+    "Ready?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to img1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Nano-banana1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Ready?1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to img",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Nano-banana",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Ready?2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to img2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Nano-banana2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Ready?3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to img3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Nano-banana3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Schedule Trigger": {
       "main": [
         [
@@ -920,6 +1012,50 @@
         ]
       ]
     },
+    "Status Kling AI": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status Kling AI1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status Kling AI2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status Kling AI3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Structured Output Parser": {
       "ai_outputParser": [
         [
@@ -975,101 +1111,12 @@
         ]
       ]
     },
-    "Switch": {
+    "Upload file": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get Video1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items10",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items9",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Switch1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get Video2",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items14",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items11",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Switch2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get Video3",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items15",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items12",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Switch3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get Video4",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items16",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items13",
+            "node": "Kling AI",
             "type": "main"
           }
         ]
@@ -1086,45 +1133,45 @@
         ]
       ]
     },
-    "Wait for Veo": {
+    "Upload file2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "status",
+            "node": "Kling AI1",
             "type": "main"
           }
         ]
       ]
     },
-    "Wait for Veo4": {
+    "Upload file3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "status1",
+            "node": "Kling AI2",
             "type": "main"
           }
         ]
       ]
     },
-    "Wait for Veo5": {
+    "Upload file4": {
       "main": [
         [
           {
             "index": 0,
-            "node": "status2",
+            "node": "Kling AI3",
             "type": "main"
           }
         ]
       ]
     },
-    "Wait for Veo6": {
+    "Wait": {
       "main": [
         [
           {
             "index": 0,
-            "node": "status3",
+            "node": "Status Kling AI1",
             "type": "main"
           }
         ]
@@ -1136,6 +1183,39 @@
           {
             "index": 0,
             "node": "Get Final Video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait14": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status Kling AI",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait15": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status Kling AI2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait16": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status Kling AI3",
             "type": "main"
           }
         ]
@@ -1207,73 +1287,45 @@
         ]
       ]
     },
-    "status": {
+    "take video": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Switch",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Switch",
+            "node": "Append or update row in sheet2",
             "type": "main"
           }
         ]
       ]
     },
-    "status1": {
+    "take video1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Switch1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Switch1",
+            "node": "Append or update row in sheet1",
             "type": "main"
           }
         ]
       ]
     },
-    "status2": {
+    "take video2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Switch2",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Switch2",
+            "node": "Append or update row in sheet3",
             "type": "main"
           }
         ]
       ]
     },
-    "status3": {
+    "take video3": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Switch3",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Switch3",
+            "node": "Append or update row in sheet4",
             "type": "main"
           }
         ]
@@ -1284,7 +1336,7 @@
         [
           {
             "index": 0,
-            "node": "Create Video1",
+            "node": "Nano-banana1",
             "type": "main"
           }
         ],
@@ -1302,7 +1354,7 @@
         [
           {
             "index": 0,
-            "node": "Create Video2",
+            "node": "Nano-banana",
             "type": "main"
           }
         ]
@@ -1313,7 +1365,7 @@
         [
           {
             "index": 0,
-            "node": "Create Video3",
+            "node": "Nano-banana2",
             "type": "main"
           }
         ]
@@ -1324,7 +1376,7 @@
         [
           {
             "index": 0,
-            "node": "Create Video4",
+            "node": "Nano-banana3",
             "type": "main"
           }
         ]
@@ -1647,7 +1699,7 @@
         "mode": "delete"
       },
       "position": [
-        -512,
+        -1296,
         512
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryManager",
@@ -1661,7 +1713,7 @@
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        80,
+        -704,
         192
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
@@ -1674,7 +1726,7 @@
         "jsonSchemaExample": "{\n    \"title\": \"Название\"\n}"
       },
       "position": [
-        -1152,
+        -1936,
         720
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
@@ -1699,7 +1751,7 @@
         "options": {}
       },
       "position": [
-        -1312,
+        -2096,
         720
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -1714,7 +1766,7 @@
         "sessionKey": "sesionasmrslicename"
       },
       "position": [
-        -1232,
+        -2016,
         720
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
@@ -1739,7 +1791,7 @@
         "options": {}
       },
       "position": [
-        0,
+        -784,
         192
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -1754,7 +1806,7 @@
         "sessionKey": "sesionasmrslicename"
       },
       "position": [
-        -512,
+        -1296,
         720
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
@@ -1773,7 +1825,7 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который режут должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        0,
+        -784,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1792,7 +1844,7 @@
         "text": "Дай название фильма или сериала"
       },
       "position": [
-        -1312,
+        -2096,
         512
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -1829,7 +1881,7 @@
         "options": {}
       },
       "position": [
-        448,
+        -336,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -1863,7 +1915,7 @@
         "options": {}
       },
       "position": [
-        752,
+        -32,
         0
       ],
       "retryOnFail": true,
@@ -1879,7 +1931,7 @@
         }
       },
       "position": [
-        912,
+        128,
         0
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -1921,7 +1973,7 @@
         }
       },
       "position": [
-        -1008,
+        -1792,
         512
       ],
       "type": "n8n-nodes-base.googleSheets",
@@ -1957,7 +2009,7 @@
         }
       },
       "position": [
-        -848,
+        -1632,
         512
       ],
       "type": "n8n-nodes-base.if",
@@ -1972,7 +2024,7 @@
         }
       },
       "position": [
-        -848,
+        -1632,
         656
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2060,7 +2112,7 @@
         }
       },
       "position": [
-        -688,
+        -1472,
         512
       ],
       "retryOnFail": false,
@@ -2075,7 +2127,7 @@
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        96,
+        -688,
         528
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
@@ -2100,7 +2152,7 @@
         "options": {}
       },
       "position": [
-        0,
+        -784,
         528
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2119,7 +2171,7 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который режут должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        0,
+        -784,
         336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2156,7 +2208,7 @@
         "options": {}
       },
       "position": [
-        448,
+        -336,
         336
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -2190,7 +2242,7 @@
         "options": {}
       },
       "position": [
-        752,
+        -32,
         336
       ],
       "retryOnFail": true,
@@ -2206,7 +2258,7 @@
         }
       },
       "position": [
-        912,
+        128,
         336
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2220,7 +2272,7 @@
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        80,
+        -704,
         896
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
@@ -2245,7 +2297,7 @@
         "options": {}
       },
       "position": [
-        0,
+        -784,
         896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2264,7 +2316,7 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который режут должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        0,
+        -784,
         688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2301,7 +2353,7 @@
         "options": {}
       },
       "position": [
-        448,
+        -336,
         688
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -2335,7 +2387,7 @@
         "options": {}
       },
       "position": [
-        752,
+        -32,
         688
       ],
       "retryOnFail": true,
@@ -2351,7 +2403,7 @@
         }
       },
       "position": [
-        912,
+        128,
         688
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2365,7 +2417,7 @@
         "jsonSchemaExample": "{\n  \"Scene\": \"[One sentence with the scene description]\",\n  \"Character\": \"[Name or type]\", \n  \"Action\": \"[Slicing or cutting with a themed knife description, e.g., slices with a futuristic knife]\",\n  \"Object\": \"[Name]\",\n  \"Location\": \"[Name]\"\n}"
       },
       "position": [
-        80,
+        -704,
         1248
       ],
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
@@ -2390,7 +2442,7 @@
         "options": {}
       },
       "position": [
-        0,
+        -784,
         1248
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2409,7 +2461,7 @@
         "text": "=Напиши в стиле фильма\\сериала и не повторяйся: {{ $('Жанры').item.json.output.title }}\nВажно! Предметы который режут должен быть узнаваемым или прям из фильма\\сериала"
       },
       "position": [
-        0,
+        -784,
         1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2446,7 +2498,7 @@
         "options": {}
       },
       "position": [
-        448,
+        -336,
         1056
       ],
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -2480,7 +2532,7 @@
         "options": {}
       },
       "position": [
-        752,
+        -32,
         1056
       ],
       "retryOnFail": true,
@@ -2496,7 +2548,7 @@
         }
       },
       "position": [
-        912,
+        128,
         1056
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -2514,7 +2566,7 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        1376,
+        592,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2539,7 +2591,7 @@
         "options": {}
       },
       "position": [
-        1376,
+        592,
         192
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2557,7 +2609,7 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields1').item.json.Scene }}"
       },
       "position": [
-        1072,
+        288,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2575,7 +2627,7 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX:\n{{ $('Генератор сценария1').item.json.output }}\nВыдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        1680,
+        896,
         0
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2592,7 +2644,7 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        1376,
+        592,
         336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2617,7 +2669,7 @@
         "options": {}
       },
       "position": [
-        1376,
+        592,
         528
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2634,7 +2686,7 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields2').item.json.Scene }}"
       },
       "position": [
-        1072,
+        288,
         336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2651,7 +2703,7 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX:\n{{ $('Генератор сценария2').item.json.output }}\nВыдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        1680,
+        896,
         336
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2668,7 +2720,7 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        1376,
+        592,
         688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2693,7 +2745,7 @@
         "options": {}
       },
       "position": [
-        1376,
+        592,
         896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2710,7 +2762,7 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields3').item.json.Scene }}"
       },
       "position": [
-        1072,
+        288,
         688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2727,7 +2779,7 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX:\n{{ $('Генератор сценария3').item.json.output }}\nВыдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        1680,
+        896,
         688
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2744,7 +2796,7 @@
         "text": "=Напиши промт:{{ $json.output }}"
       },
       "position": [
-        1376,
+        592,
         1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2769,7 +2821,7 @@
         "options": {}
       },
       "position": [
-        1376,
+        592,
         1248
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -2786,7 +2838,7 @@
         "text": "=Мне нужен сценарий, но сделай сценарий так чтобы не нарушал авторские права но было максимально похоже на: {{ $('Edit Fields4').item.json.Scene }}"
       },
       "position": [
-        1072,
+        288,
         1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -2803,249 +2855,11 @@
         "text": "=Напиши промт для Veo 3, добавь еще SFX:\n{{ $('Генератор сценария4').item.json.output }}\nВыдай только промт, без новых строк, только точки и запятые, без любых кавычек и без любых скобок, тире тоже нельзя и двоеточие. Промт должен быть на английском"
       },
       "position": [
-        1680,
+        896,
         1056
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2
-    },
-    {
-      "id": "44591327-c9e8-4450-88eb-97f85cad79eb",
-      "name": "Create Video1",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"aspect_ratio\": \"16:9\",\n  \"duration\": \"8s\",\n  \"enhance_prompt\": true,\n  \"generate_audio\": true\n}",
-        "method": "POST",
-        "options": {
-          "batching": {
-            "batch": {
-              "batchInterval": 2000,
-              "batchSize": 1
-            }
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/veo3.1"
-      },
-      "position": [
-        1968,
-        0
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "ca8b683c-d2fb-4144-9211-786a226a3305",
-      "name": "Get Video1",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $('status').item.json.request_id }}"
-      },
-      "position": [
-        2544,
-        0
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "c8b9f24b-0cd4-4322-8616-0fbc6fbc280c",
-      "name": "Wait for Veo",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2112,
-        0
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "bad915ed-8eea-4ad5-aac5-ee28237aabd8"
-    },
-    {
-      "id": "f0dd17a1-9cb9-4fec-b99e-ced81376fa08",
-      "name": "Create Video2",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"aspect_ratio\": \"16:9\",\n  \"duration\": \"8s\",\n  \"enhance_prompt\": true,\n  \"generate_audio\": true\n}",
-        "method": "POST",
-        "options": {
-          "batching": {
-            "batch": {
-              "batchInterval": 2000,
-              "batchSize": 1
-            }
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/veo3.1"
-      },
-      "position": [
-        1968,
-        336
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "58c0b6f6-8e0b-4048-8db2-ec64f54bea6f",
-      "name": "Get Video2",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $('status1').item.json.request_id }}"
-      },
-      "position": [
-        2544,
-        336
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "15eeeb74-a27e-4ac6-a23b-c5aa4a229f17",
-      "name": "Wait for Veo4",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2128,
-        336
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "be171d1e-008f-44ef-ac18-f22e7e60bd54"
-    },
-    {
-      "id": "fc04d5d6-b12a-40ec-b8d4-41581480799b",
-      "name": "Create Video3",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"aspect_ratio\": \"16:9\",\n  \"duration\": \"8s\",\n  \"enhance_prompt\": true,\n  \"generate_audio\": true\n}",
-        "method": "POST",
-        "options": {
-          "batching": {
-            "batch": {
-              "batchInterval": 2000,
-              "batchSize": 1
-            }
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/veo3.1"
-      },
-      "position": [
-        1968,
-        688
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "a1568380-9ce4-4b80-bc8c-fd7f2587eea7",
-      "name": "Wait for Veo5",
-      "parameters": {
-        "amount": "=60"
-      },
-      "position": [
-        2128,
-        688
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "6a246471-eadb-4ea7-b0e6-ef19a4ab1cc1"
-    },
-    {
-      "id": "3bb8c55b-e4ef-441c-8df7-0d6ea9d28360",
-      "name": "Create Video4",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.replace(/\\n/g, '').replace(/\"/g, '') }}\",\n  \"aspect_ratio\": \"16:9\",\n  \"duration\": \"8s\",\n  \"enhance_prompt\": true,\n  \"generate_audio\": true\n}",
-        "method": "POST",
-        "options": {
-          "batching": {
-            "batch": {
-              "batchInterval": 2000,
-              "batchSize": 1
-            }
-          }
-        },
-        "sendBody": true,
-        "sendHeaders": true,
-        "specifyBody": "json",
-        "url": "https://queue.fal.run/fal-ai/veo3.1"
-      },
-      "position": [
-        1968,
-        1056
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "0964b7ad-e149-4be2-8eb5-16282447edf4",
-      "name": "Wait for Veo6",
-      "parameters": {
-        "amount": 60
-      },
-      "position": [
-        2128,
-        1056
-      ],
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
-      "webhookId": "1d0b985c-bbf8-42f8-afa9-19803f249ab5"
     },
     {
       "id": "1314d9bb-9101-49aa-8ed7-3d92d1dd39ea",
@@ -3156,7 +2970,7 @@
         "options": {}
       },
       "position": [
-        288,
+        -496,
         0
       ],
       "type": "n8n-nodes-base.set",
@@ -3179,7 +2993,7 @@
         "options": {}
       },
       "position": [
-        288,
+        -496,
         336
       ],
       "type": "n8n-nodes-base.set",
@@ -3202,7 +3016,7 @@
         "options": {}
       },
       "position": [
-        288,
+        -496,
         688
       ],
       "type": "n8n-nodes-base.set",
@@ -3225,7 +3039,7 @@
         "options": {}
       },
       "position": [
-        288,
+        -496,
         1056
       ],
       "type": "n8n-nodes-base.set",
@@ -3320,21 +3134,6 @@
       "typeVersion": 4.6
     },
     {
-      "id": "22059ad0-4799-4dd6-936c-b9cea3622437",
-      "name": "Loop Over Items9",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2592,
-        128
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
       "id": "3d0399aa-283b-4286-83f0-a18768b9f02e",
       "name": "Simple Memory1",
       "parameters": {
@@ -3343,626 +3142,11 @@
         "sessionKey": "sliceitem"
       },
       "position": [
-        -208,
+        -992,
         512
       ],
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3
-    },
-    {
-      "id": "4c70c71a-a075-41ad-86dd-8609f8ed9970",
-      "name": "Switch",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "COMPLETED"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Ready",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "IN_PROGRESS"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Retry",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
-                    "leftValue": "",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Error",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        2400,
-        0
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
-    },
-    {
-      "id": "f324c9ed-09b2-49bc-b2c3-113feb9d19c5",
-      "name": "Loop Over Items10",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2400,
-        128
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "alwaysOutputData": false,
-      "id": "0242ec76-fe07-4fe8-b622-de63670a5bf2",
-      "name": "status",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $json.request_id }}/status"
-      },
-      "position": [
-        2256,
-        0
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "78b6ff5c-2e95-484e-a74b-5a0db084115a",
-      "name": "Loop Over Items11",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2544,
-        464
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "ab8d44c6-39a0-412a-bd8c-22c85ad8a663",
-      "name": "Switch1",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "COMPLETED"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Ready",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "IN_PROGRESS"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Retry",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
-                    "leftValue": "",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Error",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        2400,
-        336
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
-    },
-    {
-      "id": "5f2c9295-e0d8-4ec9-b215-9700eb8990ac",
-      "name": "Loop Over Items14",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2400,
-        464
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "alwaysOutputData": false,
-      "id": "59715f40-56f7-439b-b61b-7a5ee95f7903",
-      "name": "status1",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $json.request_id }}/status"
-      },
-      "position": [
-        2272,
-        336
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "d46a9cd2-7c6f-449c-b907-8eb9b1bdc237",
-      "name": "Get Video3",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $('status2').item.json.request_id }}"
-      },
-      "position": [
-        2544,
-        688
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "fa1e0a92-96aa-4e47-b75a-2468a70b381a",
-      "name": "Loop Over Items12",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2544,
-        816
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "2c02cae8-48cd-4e33-b63a-5a706e756857",
-      "name": "Switch2",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "COMPLETED"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Ready",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "IN_PROGRESS"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Retry",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
-                    "leftValue": "",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Error",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        2400,
-        688
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
-    },
-    {
-      "id": "bbf08a64-e5aa-48d5-bfce-150848b0af8e",
-      "name": "Loop Over Items15",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2400,
-        816
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "alwaysOutputData": false,
-      "id": "1d17f383-2c5a-4bdc-abb5-217970bafdc8",
-      "name": "status2",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $json.request_id }}/status"
-      },
-      "position": [
-        2272,
-        688
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "612f7d24-4af0-4b29-bff9-010bd0cf063d",
-      "name": "Get Video4",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $('status3').item.json.request_id }}"
-      },
-      "position": [
-        2544,
-        1056
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
-    },
-    {
-      "id": "3834f5df-a216-49a6-be5d-50464a00fd92",
-      "name": "Loop Over Items13",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2544,
-        1184
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "6381fa68-7917-4320-929e-42de33f4ce45",
-      "name": "Switch3",
-      "parameters": {
-        "options": {},
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "61c5c306-3b26-45ac-abec-e214b428ce21",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "COMPLETED"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Ready",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "f5ebac8c-ca33-4a30-a2d3-fc5b00ac7697",
-                    "leftValue": "={{ $json.status }}",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": "IN_PROGRESS"
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Retry",
-              "renameOutput": true
-            },
-            {
-              "conditions": {
-                "combinator": "and",
-                "conditions": [
-                  {
-                    "id": "8edea1be-e201-4600-835c-18bff9cb4042",
-                    "leftValue": "",
-                    "operator": {
-                      "name": "filter.operator.equals",
-                      "operation": "equals",
-                      "type": "string"
-                    },
-                    "rightValue": ""
-                  }
-                ],
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 2
-                }
-              },
-              "outputKey": "Error",
-              "renameOutput": true
-            }
-          ]
-        }
-      },
-      "position": [
-        2400,
-        1056
-      ],
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.2
-    },
-    {
-      "id": "5ca7a3a5-2dd0-42a9-88a3-e9005d117d7f",
-      "name": "Loop Over Items16",
-      "parameters": {
-        "options": {
-          "reset": true
-        }
-      },
-      "position": [
-        2400,
-        1184
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "alwaysOutputData": false,
-      "id": "4d58ea80-900a-46fb-9005-c96226ac56d9",
-      "name": "status3",
-      "onError": "continueErrorOutput",
-      "parameters": {
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Key 9d5b4a75-345f-42fd-90e3-64600b221a94:ccc10f3728e40ecdcda0750a60b6f222"
-            }
-          ]
-        },
-        "options": {},
-        "sendHeaders": true,
-        "url": "=https://queue.fal.run/fal-ai/veo3.1/requests/{{ $json.request_id }}/status"
-      },
-      "position": [
-        2272,
-        1056
-      ],
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2
     },
     {
       "credentials": {
@@ -4497,7 +3681,7 @@
         }
       },
       "position": [
-        -1504,
+        -2288,
         512
       ],
       "type": "n8n-nodes-base.scheduleTrigger",
@@ -4631,7 +3815,7 @@
         "unit": "minutes"
       },
       "position": [
-        -672,
+        -1456,
         928
       ],
       "type": "n8n-nodes-base.wait",
@@ -4647,7 +3831,7 @@
         }
       },
       "position": [
-        -672,
+        -1456,
         800
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -4704,6 +3888,918 @@
       ],
       "type": "n8n-nodes-upload-post.uploadPost",
       "typeVersion": 1
+    },
+    {
+      "id": "2f6a9a01-5dc4-48c5-8951-0ed629ffec87",
+      "maxTries": 5,
+      "name": "Nano-banana1",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={{ $json }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+      },
+      "position": [
+        1296,
+        -16
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 1000
+    },
+    {
+      "id": "bad853ff-18a2-488f-bbc3-4b97a1331ce6",
+      "name": "Convert to img1",
+      "parameters": {
+        "operation": "toBinary",
+        "options": {},
+        "sourceProperty": "candidates[0].content.parts[1].inlineData.data"
+      },
+      "position": [
+        1632,
+        -16
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "f2e82d21-4abf-48be-b387-b9620a480925",
+      "name": "Upload file",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "Video",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT",
+          "mode": "list",
+          "value": "1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT"
+        },
+        "name": "={{ $('Loop Over Items').all()[$runIndex].json.sceneIndex }}",
+        "options": {}
+      },
+      "position": [
+        1776,
+        -16
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "b906f438-4a8f-4189-9022-97a598327628",
+      "name": "Ready?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "109230f1-8c59-40fa-9979-04d01474561c",
+              "leftValue": "={{ $json.candidates[0].finishMessage }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "Unable to show the generated image. The model could not generate the image based on the prompt provided. You will not be charged for this request. Try rephrasing the prompt. If you think this was an error, [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting)."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1440,
+        -16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "b39554ec-c8f9-4da2-a822-c849e9318b91",
+      "name": "Status Kling AI",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://api-singapore.klingai.com/v1/videos/text2video/{{ $json.data.task_id }}"
+      },
+      "position": [
+        2208,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "6a294381-fb7d-4da1-8c60-014962d2e007",
+      "name": "Kling AI",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model_name\": \"kling-v2-5-turbo\",\n  \"mode\": \"pro\",\n  \"duration\": \"10\",\n  \"image\": \"{{ $('Nano-banana1').item.json.candidates[0].content.parts[1].inlineData.data }}\",\n  \"prompt\": \"{{ $('Генерация промпта для Kling o1').first().json.output.replace(/[{}\"]/g, '') }}\",\n  \"cfg_scale\": 0.8\n}",
+        "method": "POST",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api-singapore.klingai.com/v1/videos/image2video"
+      },
+      "position": [
+        1920,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "5b8cb336-bbb7-4db1-9e0e-47aaa0f63cfc",
+      "name": "Wait14",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        2064,
+        -16
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "82450daa-b8fb-4dff-9c53-b75de8b83f8e"
+    },
+    {
+      "id": "4b503d39-7c01-4973-b6f8-adc9b565885c",
+      "name": "take video1",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.data.task_result.videos[0].url }}"
+      },
+      "position": [
+        2496,
+        -16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "bc2587ed-cb7e-4b48-bb0f-2c3a0d2a7c71",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e8084667-4a9b-486b-a2dc-ccdde7895c9f",
+              "leftValue": "={{ $json.data.task_status }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "processing"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2352,
+        -16
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "fd880ebd-f49f-4900-9fa4-e6c01fb2863c",
+      "maxTries": 5,
+      "name": "Nano-banana",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={{ $json }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+      },
+      "position": [
+        1296,
+        336
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 1000
+    },
+    {
+      "id": "18715935-b425-4668-b4d2-bb885f39f7a0",
+      "name": "Convert to img",
+      "parameters": {
+        "operation": "toBinary",
+        "options": {},
+        "sourceProperty": "candidates[0].content.parts[1].inlineData.data"
+      },
+      "position": [
+        1632,
+        336
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "c5575530-c562-4738-9f7f-11bf81c7a8b1",
+      "name": "Upload file2",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "Video",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT",
+          "mode": "list",
+          "value": "1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT"
+        },
+        "name": "={{ $('Loop Over Items').all()[$runIndex].json.sceneIndex }}",
+        "options": {}
+      },
+      "position": [
+        1776,
+        336
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "6894396c-eb77-4bae-b3b7-66b90290290d",
+      "name": "Ready?1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "109230f1-8c59-40fa-9979-04d01474561c",
+              "leftValue": "={{ $json.candidates[0].finishMessage }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "Unable to show the generated image. The model could not generate the image based on the prompt provided. You will not be charged for this request. Try rephrasing the prompt. If you think this was an error, [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting)."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1440,
+        336
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "3fa8f761-a1ec-4c50-ae71-2cc64192c196",
+      "name": "Status Kling AI1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://api-singapore.klingai.com/v1/videos/text2video/{{ $json.data.task_id }}"
+      },
+      "position": [
+        2208,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "72d13aa0-689e-4181-ba5d-0ede4fdd7bce",
+      "name": "Kling AI1",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model_name\": \"kling-v2-5-turbo\",\n  \"mode\": \"pro\",\n  \"duration\": \"10\",\n  \"image\": \"{{ $('Nano-banana').item.json.candidates[0].content.parts[1].inlineData.data }}\",\n  \"prompt\": \"{{ $('Генерация промпта для Kling o1').first().json.output.replace(/[{}\"]/g, '') }}\",\n  \"cfg_scale\": 0.8\n}",
+        "method": "POST",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api-singapore.klingai.com/v1/videos/image2video"
+      },
+      "position": [
+        1920,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "dc318e0c-7177-4036-a51f-1bb5b9590083",
+      "name": "Wait",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        2064,
+        336
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "82450daa-b8fb-4dff-9c53-b75de8b83f8e"
+    },
+    {
+      "id": "8c642a3f-e283-4543-8df6-11530c47d36e",
+      "name": "If6",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e8084667-4a9b-486b-a2dc-ccdde7895c9f",
+              "leftValue": "={{ $json.data.task_status }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "processing"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2352,
+        336
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "f3567d37-adea-4ee9-ac34-c23ab6013c78",
+      "name": "take video",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.data.task_result.videos[0].url }}"
+      },
+      "position": [
+        2496,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "67afa70e-b0b2-4322-bc06-f5f52cad0e60",
+      "maxTries": 5,
+      "name": "Nano-banana2",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={{ $json }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+      },
+      "position": [
+        1296,
+        688
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 1000
+    },
+    {
+      "id": "74d88011-fbb4-469f-b919-7133bf9c8fd7",
+      "name": "Convert to img2",
+      "parameters": {
+        "operation": "toBinary",
+        "options": {},
+        "sourceProperty": "candidates[0].content.parts[1].inlineData.data"
+      },
+      "position": [
+        1632,
+        688
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "c0a7d367-7606-482b-a0e9-4d948e7b8aa6",
+      "name": "Upload file3",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "Video",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT",
+          "mode": "list",
+          "value": "1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT"
+        },
+        "name": "={{ $('Loop Over Items').all()[$runIndex].json.sceneIndex }}",
+        "options": {}
+      },
+      "position": [
+        1776,
+        688
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "eda50ad7-365b-4e3e-ba1e-c3ce24ed61b8",
+      "name": "Ready?2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "109230f1-8c59-40fa-9979-04d01474561c",
+              "leftValue": "={{ $json.candidates[0].finishMessage }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "Unable to show the generated image. The model could not generate the image based on the prompt provided. You will not be charged for this request. Try rephrasing the prompt. If you think this was an error, [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting)."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1440,
+        688
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "45d121e1-0e49-4e3d-a094-f668f5410dae",
+      "name": "Status Kling AI2",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://api-singapore.klingai.com/v1/videos/text2video/{{ $json.data.task_id }}"
+      },
+      "position": [
+        2208,
+        688
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "dfb644a7-7bec-4552-ad30-d4baa0e00b50",
+      "name": "Kling AI2",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model_name\": \"kling-v2-5-turbo\",\n  \"mode\": \"pro\",\n  \"duration\": \"10\",\n  \"image\": \"{{ $('Nano-banana2').item.json.candidates[0].content.parts[1].inlineData.data }}\",\n  \"prompt\": \"{{ $('Генерация промпта для Kling o1').first().json.output.replace(/[{}\"]/g, '') }}\",\n  \"cfg_scale\": 0.8\n}",
+        "method": "POST",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api-singapore.klingai.com/v1/videos/image2video"
+      },
+      "position": [
+        1920,
+        688
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "a069fe11-281b-4dad-b5c5-d3cb7d1693a2",
+      "name": "Wait15",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        2064,
+        688
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "82450daa-b8fb-4dff-9c53-b75de8b83f8e"
+    },
+    {
+      "id": "dfcd4c14-7b39-4013-944b-098310152bbf",
+      "name": "If7",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e8084667-4a9b-486b-a2dc-ccdde7895c9f",
+              "leftValue": "={{ $json.data.task_status }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "processing"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2352,
+        688
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "e4e524c0-5909-44ce-a9a0-29c5e912b4e0",
+      "name": "take video2",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.data.task_result.videos[0].url }}"
+      },
+      "position": [
+        2496,
+        688
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "10f1eaff-2df7-4636-9918-316bea19a195",
+      "maxTries": 5,
+      "name": "Nano-banana3",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-goog-api-key",
+              "value": "AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={{ $json }}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+      },
+      "position": [
+        1296,
+        1056
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 1000
+    },
+    {
+      "id": "2c8fc4e2-4920-43f3-88bb-5d80af35fc89",
+      "name": "Convert to img3",
+      "parameters": {
+        "operation": "toBinary",
+        "options": {},
+        "sourceProperty": "candidates[0].content.parts[1].inlineData.data"
+      },
+      "position": [
+        1632,
+        1056
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "cbbe69aa-3c3c-4d08-a314-34aef3d04d06",
+      "name": "Upload file4",
+      "parameters": {
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "cachedResultName": "Video",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT",
+          "mode": "list",
+          "value": "1Vpgnx6ZDaZ093NmPDAeATh3kXHJggjqT"
+        },
+        "name": "={{ $('Loop Over Items').all()[$runIndex].json.sceneIndex }}",
+        "options": {}
+      },
+      "position": [
+        1776,
+        1056
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "id": "10a38cdc-1984-4426-ad37-eabb6e9912cb",
+      "name": "Ready?3",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "109230f1-8c59-40fa-9979-04d01474561c",
+              "leftValue": "={{ $json.candidates[0].finishMessage }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "Unable to show the generated image. The model could not generate the image based on the prompt provided. You will not be charged for this request. Try rephrasing the prompt. If you think this was an error, [send feedback](https://ai.google.dev/gemini-api/docs/troubleshooting)."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1440,
+        1056
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "524832b2-9918-4322-922b-4e72ef47c654",
+      "name": "Status Kling AI3",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendHeaders": true,
+        "url": "=https://api-singapore.klingai.com/v1/videos/text2video/{{ $json.data.task_id }}"
+      },
+      "position": [
+        2208,
+        1056
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "38d0af1c-c4d0-4fd3-b6fd-2b4f283c1720",
+      "name": "Kling AI3",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBOVFNckZoOU1DcjNnVFlFOGZwQ2VkM0VHVERFeVlhRCIsImlhdCI6MTc2NTQ2MzY0NCwibmJmIjoxNzY1NDYzNjM5LCJleHAiOjE3NjU2NDM2NDR9.1an2aFSmv9kLjliI8fuhKkCog1w__o5JBYd_UKSGSKI"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model_name\": \"kling-v2-5-turbo\",\n  \"mode\": \"pro\",\n  \"duration\": \"10\",\n  \"image\": \"{{ $('Nano-banana3').item.json.candidates[0].content.parts[1].inlineData.data }}\",\n  \"prompt\": \"{{ $('Генерация промпта для Kling o1').first().json.output.replace(/[{}\"]/g, '') }}\",\n  \"cfg_scale\": 0.8\n}",
+        "method": "POST",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api-singapore.klingai.com/v1/videos/image2video"
+      },
+      "position": [
+        1920,
+        1056
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "38a67fe4-77e7-4064-be1a-971ff3016625",
+      "name": "Wait16",
+      "parameters": {
+        "amount": 60
+      },
+      "position": [
+        2064,
+        1056
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "82450daa-b8fb-4dff-9c53-b75de8b83f8e"
+    },
+    {
+      "id": "9ce9aea2-4856-408e-b0e1-b6432c366eac",
+      "name": "If8",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e8084667-4a9b-486b-a2dc-ccdde7895c9f",
+              "leftValue": "={{ $json.data.task_status }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "processing"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2352,
+        1056
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "74b4ab2f-4cc3-4ad9-9428-2a03921cd14e",
+      "name": "take video3",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.data.task_result.videos[0].url }}"
+      },
+      "position": [
+        2496,
+        1056
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
     }
   ],
   "pinData": {},
@@ -4733,6 +4829,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2025-11-25T13:09:06.000Z",
-  "versionId": "58acd40c-8a2e-420e-b758-daeb67324eca"
+  "updatedAt": "2025-12-12T11:52:41.000Z",
+  "versionId": "8c3f3f96-a0de-46cd-8857-3a46d01416fa"
 }
