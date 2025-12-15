@@ -31,6 +31,13 @@
             "node": "Call 'Element ART BOT'",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Error",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -125,6 +132,7 @@
       },
       "id": "9bce209c-8fb9-4568-94cd-ce051e9f6317",
       "name": "HTTP — Скачать файл (binary)",
+      "onError": "continueErrorOutput",
       "parameters": {
         "authentication": "genericCredentialType",
         "genericAuthType": "httpBearerAuth",
@@ -202,6 +210,29 @@
       ],
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "ecee67c7-d04c-4c3e-89ca-97c9f7db0f4c",
+      "name": "Error",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=Ошибка при скачивании файла"
+      },
+      "position": [
+        -3312,
+        1280
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     }
   ],
   "pinData": {
@@ -209,33 +240,33 @@
       {
         "json": {
           "body": {
-            "author": "zaitsev.t",
+            "author": "trofimov.m",
             "message": {
-              "body": "data.pdf",
-              "event_id": "$RnGrFjJE3H410yjrp-C_zp8czqOZ411_bAcnNWl8pwA",
-              "sender": "@zaitsev.t:itcomp.site",
-              "server_timestamp": 1764937636654,
+              "body": "ТЗ Арт Адаптация зданий-v69-20251215_123141.pdf",
+              "event_id": "$rHOs8p01f63HFi3RGqlzl1Vt8jpH_KHhXR_KAoAc5eQ",
+              "sender": "@trofimov.m:itcomp.site",
+              "server_timestamp": 1765802100324,
               "source": {
                 "content": {
-                  "body": "data.pdf",
+                  "body": "ТЗ Арт Адаптация зданий-v69-20251215_123141.pdf",
                   "info": {
                     "mimetype": "application/pdf",
-                    "size": 182607
+                    "size": 4846972
                   },
                   "m.mentions": {},
                   "msgtype": "m.file",
-                  "url": "mxc://itcomp.site/TmCEhyZmvaLtwzJPcMNBiCrJ"
+                  "url": "mxc://itcomp.site/OMSkJRIQpaRqiHkMAeeLHbIH"
                 },
-                "event_id": "$RnGrFjJE3H410yjrp-C_zp8czqOZ411_bAcnNWl8pwA",
-                "origin_server_ts": 1764937636654,
-                "sender": "@zaitsev.t:itcomp.site",
+                "event_id": "$rHOs8p01f63HFi3RGqlzl1Vt8jpH_KHhXR_KAoAc5eQ",
+                "origin_server_ts": 1765802100324,
+                "sender": "@trofimov.m:itcomp.site",
                 "type": "m.room.message",
                 "unsigned": {
                   "membership": "join"
                 }
               },
               "transaction_id": null,
-              "url": "mxc://itcomp.site/TmCEhyZmvaLtwzJPcMNBiCrJ"
+              "url": "mxc://itcomp.site/OMSkJRIQpaRqiHkMAeeLHbIH"
             },
             "room": "art-log"
           },
@@ -247,18 +278,18 @@
             "cf-connecting-ip": "64.227.10.101",
             "cf-ew-via": "15",
             "cf-ipcountry": "US",
-            "cf-ray": "9a9389684627c329-EWR",
+            "cf-ray": "9ae5fa79c7594a2b-EWR",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "670",
+            "content-length": "952",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
             "user-agent": "Python/3.12 aiohttp/3.11.12",
-            "x-forwarded-for": "64.227.10.101, 162.158.62.57",
+            "x-forwarded-for": "64.227.10.101, 172.71.203.101",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "64.227.10.101"
           },
@@ -284,6 +315,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-08T06:46:35.000Z",
-  "versionId": "41fbc0b1-28f6-4de1-81b6-0a5c2c7b131b"
+  "updatedAt": "2025-12-15T12:39:10.000Z",
+  "versionId": "0a19eb4b-ee99-4945-82d0-787a227e5fcb"
 }
