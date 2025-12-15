@@ -1212,7 +1212,7 @@
         "options": {}
       },
       "position": [
-        -6384,
+        -6416,
         1680
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -1482,8 +1482,8 @@
         "text": "=⚡️ Анализ и составление ТЗ для файла:\n\n➡️ *{{ $('Telegram Trigger1').item.json.message.document.file_name }}*"
       },
       "position": [
-        -6400,
-        1280
+        -6480,
+        1088
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.telegram",
@@ -2342,13 +2342,13 @@
         "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
       },
       "position": [
-        -5968,
+        -6000,
         1680
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "waitBetweenTries": 2000
+      "waitBetweenTries": 5000
     },
     {
       "id": "25d1c920-6ec6-45ac-98da-4b76b3072437",
@@ -2417,7 +2417,7 @@
         "options": {}
       },
       "position": [
-        -6176,
+        -6208,
         1680
       ],
       "type": "n8n-nodes-base.set",
@@ -2598,7 +2598,7 @@
         "jsCode": "// Параметры\nconst CHUNK_SIZE = 20;\n\n// Функция разделения массива на части\nfunction splitArray(array, chunkSize) {\n  const chunks = [];\n  for (let i = 0; i < array.length; i += chunkSize) {\n    chunks.push(array.slice(i, i + chunkSize));\n  }\n  return chunks;\n}\n\n// Получаем JSON строку\nlet jsonString = $input.first().json.candidates[0].content.parts[0].text;\n\n// Парсим JSON\nlet dataArray;\ntry {\n  // ИСПРАВЛЕНИЕ: Убираем markdown форматирование (```json и ```)\n  if (typeof jsonString === 'string') {\n    // Удаляем ```json в начале и ``` в конце\n    jsonString = jsonString.replace(/```json\\s*/g, '').replace(/```\\s*/g, '').trim();\n  }\n  \n  dataArray = JSON.parse(jsonString);\n  \n  // Если это объект с полем \"assets\", извлекаем массив\n  if (dataArray.assets && Array.isArray(dataArray.assets)) {\n    dataArray = dataArray.assets;\n  }\n} catch (error) {\n  throw new Error('Ошибка парсинга JSON: ' + error.message);\n}\n\n// Проверяем, что это массив\nif (!Array.isArray(dataArray)) {\n  throw new Error('Данные должны быть массивом');\n}\n\n// Разделяем на части\nconst chunks = splitArray(dataArray, CHUNK_SIZE);\n\n// Формируем выходные данные для n8n\nconst output = chunks.map((chunk, index) => ({\n  json: {\n    data: chunk\n  }\n}));\n\nreturn output;"
       },
       "position": [
-        -5728,
+        -5760,
         1680
       ],
       "type": "n8n-nodes-base.code",
@@ -4091,7 +4091,7 @@
         "text": "=⚡️ Анализ и составление ТЗ для файла:\n➡️ {{ $json.content.body }}"
       },
       "position": [
-        -6592,
+        -6416,
         1440
       ],
       "type": "n8n-nodes-base.matrix",
@@ -4104,7 +4104,7 @@
         "inputSource": "passthrough"
       },
       "position": [
-        -7344,
+        -6720,
         1680
       ],
       "type": "n8n-nodes-base.executeWorkflowTrigger",
@@ -4125,7 +4125,7 @@
         "text": "=📛 {{ $json.error.message }}"
       },
       "position": [
-        -5712,
+        -5744,
         1872
       ],
       "retryOnFail": true,
@@ -4429,6 +4429,20 @@
         }
       }
     ],
+    "Create a message": [
+      {
+        "json": {
+          "event_id": "$5S1i7m6XDdVOBRTnmqlTj6PTA2axuAeDoCSD4NFXs1k"
+        }
+      }
+    ],
+    "Send \"...\"": [
+      {
+        "json": {
+          "event_id": "$4NK86uaI8uRVoDygyg-ElxxNW2zCczoT1giaxtWGnFw"
+        }
+      }
+    ],
     "When Executed by Another Workflow": [
       {
         "binary": {
@@ -4436,33 +4450,33 @@
             "data": "filesystem-v2",
             "fileExtension": "pdf",
             "fileName": "data.pdf",
-            "fileSize": "1.44 MB",
+            "fileSize": "1.81 MB",
             "fileType": "pdf",
-            "id": "filesystem-v2:workflows/8hAL1P83T3KgVt6U/executions/95355/binary_data/42a5879f-85c6-44c4-84b5-47c540c5dfce",
+            "id": "filesystem-v2:workflows/8hAL1P83T3KgVt6U/executions/127018/binary_data/229b0465-2530-42da-8167-7dea1282c7ba",
             "mimeType": "application/pdf"
           }
         },
         "json": {
           "content": {
-            "body": "ТЗ Арт Здания и окружение Глобальная карта-v26-20251207_145220.pdf",
+            "body": "ТЗ Арт Здания и окружение Глобальная карта-v26-20251207_145220.pdf.pdf",
             "info": {
               "mimetype": "application/pdf",
-              "size": 1444204
+              "size": 1807100
             },
             "m.mentions": {},
             "msgtype": "m.file",
-            "url": "mxc://itcomp.site/JzMUQCjfTMuQXdpGdceykFRe"
+            "url": "mxc://itcomp.site/KTbZbDbixCEKkTNUsZbardnK"
           },
-          "downloadUrl": "https://matrix.itcomp.org/_matrix/client/v1/media/download/itcomp.site/JzMUQCjfTMuQXdpGdceykFRe?allow_remote=true",
-          "event_id": "$zaGKIctLwdrluiTaVNmoDUbeAhnxwGQGS_Bywib3Isk",
-          "origin_server_ts": 1765357727982,
+          "downloadUrl": "https://matrix.itcomp.org/_matrix/client/v1/media/download/itcomp.site/KTbZbDbixCEKkTNUsZbardnK?allow_remote=true",
+          "event_id": "$w8foKCLa__S1kEhBFw-WN8R6EjmeH9BKQhQ87JaPKA0",
+          "origin_server_ts": 1765802360235,
           "room_id": "!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
-          "sender": "@glushkova.a:itcomp.site",
+          "sender": "@trofimov.m:itcomp.site",
           "type": "m.room.message",
           "unsigned": {
             "membership": "join"
           },
-          "user_id": "@glushkova.a:itcomp.site"
+          "user_id": "@trofimov.m:itcomp.site"
         }
       }
     ],
@@ -4530,6 +4544,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-12T13:38:20.000Z",
-  "versionId": "3320492f-7d89-4718-8388-8c61407d4042"
+  "updatedAt": "2025-12-15T14:19:04.000Z",
+  "versionId": "a893ba82-e38b-4d80-8ea5-e08308de740d"
 }
