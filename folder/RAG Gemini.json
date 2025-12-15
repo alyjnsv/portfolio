@@ -23,6 +23,17 @@
         ]
       ]
     },
+    "Download file1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "False": {
       "main": [
         [
@@ -121,6 +132,17 @@
             "index": 0,
             "node": "AI Agent",
             "type": "ai_tool"
+          }
+        ]
+      ]
+    },
+    "Search files and folders": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Download file1",
+            "type": "main"
           }
         ]
       ]
@@ -666,7 +688,7 @@
       "id": "62e4eba4-9c08-45d8-beba-e1c058957536",
       "name": "Knowledge Base",
       "parameters": {
-        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"{{ $json.text }}\"\n        }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/ragtest-cgzyg074wfsn\"\n        ]\n      }\n    }\n  ]\n}",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"{{ $json.text }}\"\n        }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/gddrag-oa2tjetn7ps8\"\n        ]\n      }\n    }\n  ]\n}",
         "method": "POST",
         "options": {},
         "queryParameters": {
@@ -706,7 +728,7 @@
         "text": "=Для начала загрузите документ, после того как вам придёт сообщение, отправте свой запрос."
       },
       "position": [
-        336,
+        272,
         32
       ],
       "type": "n8n-nodes-base.telegram",
@@ -831,6 +853,64 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "d4c7ccd8-ac02-4598-a95c-8af7215081d3"
+    },
+    {
+      "disabled": true,
+      "id": "a82b2323-78be-442b-88d2-906ef8dbd28b",
+      "name": "Download file1",
+      "parameters": {
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "operation": "download",
+        "options": {}
+      },
+      "position": [
+        -496,
+        64
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
+    },
+    {
+      "disabled": true,
+      "id": "49067f42-ba9a-4b51-bf5a-00ee2126f248",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        -336,
+        96
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "disabled": true,
+      "id": "f43a6254-48a7-4162-b4d0-b5c415625007",
+      "name": "Search files and folders",
+      "parameters": {
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "cachedResultName": "Функциональная док-ия (не актуализировано)",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YOJZeSUW98cpWLtokQ7pGEDFg4F2prhy",
+            "mode": "list",
+            "value": "1YOJZeSUW98cpWLtokQ7pGEDFg4F2prhy"
+          }
+        },
+        "options": {},
+        "resource": "fileFolder"
+      },
+      "position": [
+        -704,
+        64
+      ],
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3
     }
   ],
   "pinData": {},
@@ -849,6 +929,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-11-27T08:05:04.000Z",
-  "versionId": "80d97c5a-285c-4c9f-bbc1-cff6e7279a44"
+  "updatedAt": "2025-12-15T18:39:14.000Z",
+  "versionId": "bb01ecdf-8cef-4fb2-82dc-9dffe670ca4e"
 }
