@@ -69,6 +69,13 @@
             "node": "Update Jira Issue",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "error message3",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -145,6 +152,13 @@
             "node": "Update Jira Issue1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "error message3",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -154,6 +168,13 @@
           {
             "index": 0,
             "node": "Update an issue",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "error message3",
             "type": "main"
           }
         ]
@@ -167,6 +188,13 @@
             "node": "Update an issue1",
             "type": "main"
           }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "error message3",
+            "type": "main"
+          }
         ]
       ]
     },
@@ -176,6 +204,13 @@
           {
             "index": 0,
             "node": "Finish",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "error message3",
             "type": "main"
           }
         ]
@@ -275,6 +310,7 @@
       },
       "id": "4be20315-59df-4df7-a54e-7f1b9499a877",
       "name": "Create an issue",
+      "onError": "continueErrorOutput",
       "parameters": {
         "additionalFields": {
           "customFieldsUi": {
@@ -571,6 +607,7 @@
     {
       "id": "213a3200-585e-4c26-bc18-6ac91e14b7d9",
       "name": "Update Jira Issue",
+      "onError": "continueErrorOutput",
       "parameters": {
         "headerParameters": {
           "parameters": [
@@ -654,6 +691,7 @@
     {
       "id": "6a930925-8d44-47c7-b33c-049218994db0",
       "name": "Update Jira Issue1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "headerParameters": {
           "parameters": [
@@ -691,6 +729,7 @@
       },
       "id": "b0c53461-8a13-4d61-a235-af4619030818",
       "name": "Update an issue",
+      "onError": "continueErrorOutput",
       "parameters": {
         "issueKey": "={{ $('Create an issue').item.json.key }}",
         "jiraVersion": "serverPat",
@@ -743,6 +782,7 @@
       },
       "id": "35b2d0b7-2771-49ed-9994-e04971e63a0e",
       "name": "Update an issue1",
+      "onError": "continueErrorOutput",
       "parameters": {
         "issueKey": "={{ $('Create an issue').item.json.key }}",
         "jiraVersion": "serverPat",
@@ -780,6 +820,29 @@
       "position": [
         848,
         400
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.matrix",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "matrixApi": {
+          "id": "8zaMKEVQX7KwyTVm",
+          "name": "Matrix Main Bot"
+        }
+      },
+      "executeOnce": true,
+      "id": "ef0bcb04-5f20-4809-ae6e-84921c428c01",
+      "name": "error message3",
+      "parameters": {
+        "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+        "text": "=❗️Ошибка в изменении статуса задачи в Jira\n{{ $json.error.message }}\n{{ $json.error.description }}"
+      },
+      "position": [
+        -192,
+        672
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.matrix",
@@ -842,6 +905,13 @@
           "estimate": "40m"
         }
       }
+    ],
+    "error message3": [
+      {
+        "json": {
+          "event_id": "$zIdNbE-kVo7v0xPwyfJmNEBdt2zvkBLmdVVAh4FBQbY"
+        }
+      }
     ]
   },
   "settings": {
@@ -859,6 +929,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-08T07:46:45.000Z",
-  "versionId": "c41eafc7-1675-4842-a653-b363c212f198"
+  "updatedAt": "2025-12-15T09:12:35.000Z",
+  "versionId": "ac622503-6649-4d20-963f-a90f1f64a0c3"
 }
