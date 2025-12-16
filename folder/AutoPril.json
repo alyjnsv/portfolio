@@ -514,6 +514,17 @@
         ]
       ]
     },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Google Gemini Chat Model": {
       "ai_languageModel": [
         [
@@ -559,6 +570,24 @@
           {
             "index": 0,
             "node": "Board of SysAdmins Fix",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Занести таску в БД",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Обновить БД",
             "type": "main"
           }
         ]
@@ -931,7 +960,7 @@
         [
           {
             "index": 0,
-            "node": "Занести таску в БД",
+            "node": "Get row(s)",
             "type": "main"
           }
         ]
@@ -1270,11 +1299,6 @@
             "type": "main"
           }
         ]
-      ]
-    },
-    "Занести таску в БД": {
-      "main": [
-        []
       ]
     },
     "Обновление Jira Task": {
@@ -2948,79 +2972,6 @@
         3984
       ],
       "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1
-    },
-    {
-      "id": "1b552025-33af-4791-9d66-7b161dc3adfc",
-      "name": "Занести таску в БД",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "issue",
-              "id": "issue",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "prompt",
-              "id": "prompt",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "desktop",
-              "id": "desktop",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "status",
-              "id": "status",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
-            "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
-            "status": "queue"
-          }
-        },
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
-          "mode": "list",
-          "value": "Va31kefsCYKVgRux"
-        },
-        "options": {}
-      },
-      "position": [
-        2592,
-        2688
-      ],
-      "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
     },
     {
@@ -6142,6 +6093,224 @@
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
+    },
+    {
+      "id": "152c802b-b720-4f3e-882d-f7a94517dd19",
+      "name": "Занести таску в БД",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
+            "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
+            "status": "queue"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "options": {}
+      },
+      "position": [
+        2912,
+        2688
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "0a3908d7-fa98-4c2e-b907-2e512612087a",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
+            }
+          ]
+        },
+        "operation": "get"
+      },
+      "position": [
+        2592,
+        2688
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "0b152b7c-f40f-4c52-b02d-4ad8025d617c",
+      "name": "Обновить БД",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
+            "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
+            "status": "queue"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/Va31kefsCYKVgRux",
+          "mode": "list",
+          "value": "Va31kefsCYKVgRux"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $json.issue }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        2912,
+        2816
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "ce6ae58e-3988-49af-a1d3-87127d4a19ab",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4ca79493-703d-4065-85d9-196cc985b42a",
+              "leftValue": "={{ $json.issue }}",
+              "operator": {
+                "operation": "empty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2752,
+        2688
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
     }
   ],
   "pinData": {
@@ -6287,6 +6456,6 @@
   },
   "tags": [],
   "triggerCount": 5,
-  "updatedAt": "2025-12-15T07:57:02.000Z",
-  "versionId": "61ea8829-d73c-45fc-96d8-3475eaf7094b"
+  "updatedAt": "2025-12-16T07:49:27.000Z",
+  "versionId": "b9512645-3d9e-4c79-b2f5-9b97bf7602c0"
 }
