@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "AI Agent1": {
       "main": [
@@ -65,6 +65,11 @@
             "type": "main"
           }
         ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        []
       ]
     },
     "HTTP Request": {
@@ -228,25 +233,27 @@
       ]
     }
   },
-  "createdAt": "2025-12-16T09:15:42.265Z",
-  "id": "8QfHWvn8tbmMpANX",
+  "createdAt": "2025-11-27T06:54:28.839Z",
+  "id": "iTpLvxtUg0phMNzr",
   "isArchived": false,
-  "meta": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "RAG Gemini",
   "nodes": [
     {
-      "id": "9a15d0af-c422-400e-9cdd-ca46f74a6d45",
+      "id": "9a385a5c-8810-4a79-9ac9-fe7aca32364f",
       "name": "When clicking ‘Execute workflow’",
       "parameters": {},
       "position": [
-        -352,
-        -464
+        -256,
+        -128
       ],
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1
     },
     {
-      "id": "62e500b0-a416-49f0-af95-23cf1760e847",
+      "id": "e67d8c01-6424-46ac-aa32-124343d39bf0",
       "name": "HTTP Request",
       "parameters": {
         "bodyParameters": {
@@ -281,14 +288,14 @@
         "url": "https://generativelanguage.googleapis.com/v1beta/fileSearchStores"
       },
       "position": [
-        -208,
-        -464
+        -112,
+        -128
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "95423909-4a70-47ca-84c7-8aa13bee7ad3",
+      "id": "ca14bdce-9cf7-4715-8a19-dd68f6229af4",
       "name": "Insert row",
       "parameters": {
         "columns": {
@@ -324,8 +331,8 @@
         "options": {}
       },
       "position": [
-        -64,
-        -464
+        32,
+        -128
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -333,11 +340,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "9659198d-e580-4896-82ba-c4d39ccb8a13",
+      "id": "cd774983-2c70-4a48-9bb1-fcbd79176c4f",
       "name": "Telegram Trigger",
       "parameters": {
         "additionalFields": {},
@@ -346,15 +353,15 @@
         ]
       },
       "position": [
-        -752,
-        192
+        -624,
+        320
       ],
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "webhookId": "826c678d-279d-44e8-a197-39dbc106916a"
     },
     {
-      "id": "0fb5df5b-4cfb-427a-af29-4e0b61bbe116",
+      "id": "2e2bc88b-b89c-4dd8-afca-7e6215c567d5",
       "name": "Switch",
       "parameters": {
         "options": {},
@@ -438,14 +445,14 @@
         }
       },
       "position": [
-        -608,
-        176
+        -480,
+        304
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3
     },
     {
-      "id": "610bd4f5-416a-4dd7-a72a-d3eb76584115",
+      "id": "516051a5-536e-4210-bff1-9141a2125c32",
       "name": "Upload Document",
       "parameters": {
         "contentType": "binaryData",
@@ -465,14 +472,14 @@
         "url": "https://generativelanguage.googleapis.com/upload/v1beta/files"
       },
       "position": [
-        208,
-        64
+        336,
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "d4d9ee43-cac4-4d2e-80be-a78319b0a759",
+      "id": "b36e94e7-e59e-4b47-8ea5-1467c4576676",
       "name": "Get row(s)",
       "parameters": {
         "dataTableId": {
@@ -486,14 +493,14 @@
         "operation": "get"
       },
       "position": [
-        352,
-        64
+        480,
+        192
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
     },
     {
-      "id": "51cd4846-31bc-419d-8a5c-9bbccc8448a5",
+      "id": "e4366820-f2f4-4396-a7b2-a5c2ae09568f",
       "name": "Import File",
       "onError": "continueErrorOutput",
       "parameters": {
@@ -529,14 +536,14 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/{{ $json.FileSearchStore_name }}:importFile"
       },
       "position": [
-        496,
-        64
+        624,
+        192
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2
     },
     {
-      "id": "a16de707-d51c-4fa8-8009-da3c40404901",
+      "id": "e207a286-3173-4b1e-91fb-4f6fc93ba7ee",
       "name": "True",
       "parameters": {
         "assignments": {
@@ -558,8 +565,8 @@
         "options": {}
       },
       "position": [
-        624,
-        0
+        752,
+        128
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -567,11 +574,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "98088146-c671-4216-8779-0f746c55e567",
+      "id": "6364a41a-ab67-4eb4-81ce-5fca54d92d70",
       "name": "Send a text message",
       "parameters": {
         "additionalFields": {
@@ -581,15 +588,15 @@
         "text": "={{ $json.msg }}"
       },
       "position": [
-        816,
-        64
+        944,
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "d6a1be7b-022a-49b1-9555-efbba260a7a9"
     },
     {
-      "id": "bc7210de-e97a-488a-931b-0ee2c607ff4d",
+      "id": "64ebe521-92d5-4d73-acba-bc0a55e9c2a0",
       "name": "False",
       "parameters": {
         "assignments": {
@@ -611,14 +618,14 @@
         "options": {}
       },
       "position": [
-        624,
-        144
+        752,
+        272
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
     },
     {
-      "id": "b24e67b4-cec9-496d-afd5-be70c8c67eb2",
+      "id": "4496abbf-7a12-49cc-bf21-245b7b6c0ae8",
       "name": "Обработка",
       "parameters": {
         "assignments": {
@@ -640,8 +647,8 @@
         "options": {}
       },
       "position": [
-        208,
-        272
+        336,
+        400
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -649,25 +656,25 @@
     {
       "credentials": {
         "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
+          "id": "OE9cIjhzVtc73YQt",
+          "name": "Gemini WORK"
         }
       },
-      "id": "5b96be6b-f22b-49d6-98e2-6117854f56f8",
+      "id": "3f43e3e1-5248-478b-90fd-c5985706bd38",
       "name": "Google Gemini Chat Model",
       "parameters": {
         "modelName": "models/gemini-2.5-pro",
         "options": {}
       },
       "position": [
-        496,
-        784
+        624,
+        912
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     },
     {
-      "id": "66157676-f60b-459a-8ef1-5176dc79c483",
+      "id": "62e4eba4-9c08-45d8-beba-e1c058957536",
       "name": "Knowledge Base",
       "parameters": {
         "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"{{ $json.text }}\"\n        }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/gddrag-oa2tjetn7ps8\"\n        ]\n      }\n    }\n  ]\n}",
@@ -687,8 +694,8 @@
         "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
       },
       "position": [
-        912,
-        896
+        1040,
+        1024
       ],
       "type": "n8n-nodes-base.httpRequestTool",
       "typeVersion": 4.2
@@ -696,11 +703,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "125b6a1b-f842-4bb8-bfeb-e62b8cb3118f",
+      "id": "b61145cf-93fa-4ace-b173-db90520ef05f",
       "name": "Send a text message2",
       "parameters": {
         "additionalFields": {
@@ -710,8 +717,8 @@
         "text": "=Для начала загрузите документ, после того как вам придёт сообщение, отправте свой запрос."
       },
       "position": [
-        144,
-        -96
+        272,
+        32
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -720,11 +727,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "d6688380-b679-4727-bbc4-b53486238776",
+      "id": "583ebf0f-418f-49f3-9755-cd4877cc97be",
       "name": "Get a file",
       "parameters": {
         "additionalFields": {},
@@ -732,32 +739,32 @@
         "resource": "file"
       },
       "position": [
-        32,
-        64
+        160,
+        192
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "eb4532a0-fb51-43a5-b674-65ac95d66ecf"
     },
     {
-      "id": "6248396f-53c4-4297-b872-56f79a81d90b",
+      "id": "5e7c1f5d-5eac-4534-95ed-4f1112ed037c",
       "name": "Convert to File",
       "parameters": {
         "operation": "toText",
         "options": {
-          "fileName": "=Ответ.txt"
+          "fileName": "=Ответ"
         },
         "sourceProperty": "output"
       },
       "position": [
-        928,
-        432
+        1056,
+        560
       ],
       "type": "n8n-nodes-base.convertToFile",
       "typeVersion": 1.1
     },
     {
-      "id": "0187821f-b6b0-470f-9ee1-f00ba294f38b",
+      "id": "e15f2233-65b4-4707-a0f2-cf648c6d75a9",
       "name": "If",
       "parameters": {
         "conditions": {
@@ -783,8 +790,8 @@
         "options": {}
       },
       "position": [
-        704,
-        272
+        832,
+        400
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -792,11 +799,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "e758ae3a-9390-4a2f-b937-6d17ed1fce96",
+      "id": "f6f68ddb-fb30-4a14-bed1-847430c3da23",
       "name": "Send a text message3",
       "parameters": {
         "additionalFields": {
@@ -806,8 +813,8 @@
         "text": "={{ $json.output }}"
       },
       "position": [
-        928,
-        256
+        1056,
+        384
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -816,11 +823,11 @@
     {
       "credentials": {
         "telegramApi": {
-          "id": "f7PtENrO0GVBo099",
-          "name": "RAGTest"
+          "id": "9Rpk8SKXe7INqYmV",
+          "name": "Test ARTRag"
         }
       },
-      "id": "c4c3c76f-b2dc-4cf3-8e7e-47c351dd7f3f",
+      "id": "0695530f-7845-4082-9d4c-3d902cd72f71",
       "name": "Send a document",
       "parameters": {
         "additionalFields": {},
@@ -829,8 +836,8 @@
         "operation": "sendDocument"
       },
       "position": [
-        1104,
-        432
+        1232,
+        560
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -838,7 +845,7 @@
     },
     {
       "disabled": true,
-      "id": "5f36d22c-845f-4e3a-b03e-f309df7f6d7d",
+      "id": "a82b2323-78be-442b-88d2-906ef8dbd28b",
       "name": "Download file1",
       "parameters": {
         "fileId": {
@@ -850,29 +857,29 @@
         "options": {}
       },
       "position": [
-        -720,
-        -416
+        -496,
+        64
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
     },
     {
       "disabled": true,
-      "id": "79a2d68b-2c1e-4909-b93f-276b3d039979",
+      "id": "49067f42-ba9a-4b51-bf5a-00ee2126f248",
       "name": "Loop Over Items",
       "parameters": {
         "options": {}
       },
       "position": [
-        -560,
-        -384
+        -336,
+        96
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
     },
     {
       "disabled": true,
-      "id": "be32a272-afb5-4d4d-92ce-d6678723af8e",
+      "id": "f43a6254-48a7-4162-b4d0-b5c415625007",
       "name": "Search files and folders",
       "parameters": {
         "filter": {
@@ -888,8 +895,8 @@
         "resource": "fileFolder"
       },
       "position": [
-        -928,
-        -416
+        -704,
+        64
       ],
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3
@@ -897,11 +904,11 @@
     {
       "credentials": {
         "openAiApi": {
-          "id": "oHy3wpAM2qUWYqMU",
-          "name": "OpenAi account"
+          "id": "kXYoO2wLcFLalff6",
+          "name": "OpenAi account 3"
         }
       },
-      "id": "834c1674-3741-440f-9ca6-fdfd5d475272",
+      "id": "4eddf3ea-059f-4efe-b1a8-48cd124f641a",
       "name": "OpenAI Chat Model",
       "parameters": {
         "builtInTools": {},
@@ -914,14 +921,14 @@
         "options": {}
       },
       "position": [
-        688,
-        896
+        816,
+        1024
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.3
     },
     {
-      "id": "94e93a83-5c62-42de-868e-7a9edd4d9049",
+      "id": "647195af-53b4-4991-b768-8acea5b7e923",
       "name": "AI Agent1",
       "parameters": {
         "options": {
@@ -931,28 +938,11 @@
         "text": "={{ $json.text }}"
       },
       "position": [
-        400,
-        272
+        528,
+        400
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 3
-    },
-    {
-      "disabled": true,
-      "id": "a3834fa7-139a-4629-84bf-34bec2337652",
-      "name": "element",
-      "parameters": {
-        "httpMethod": "POST",
-        "options": {},
-        "path": "element_gd"
-      },
-      "position": [
-        -1152,
-        608
-      ],
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 2.1,
-      "webhookId": "a71edbb7-150d-4fec-89c5-2517ff613f97"
     }
   ],
   "pinData": {},
@@ -961,16 +951,16 @@
   },
   "shared": [
     {
-      "createdAt": "2025-12-16T09:15:42.268Z",
-      "projectId": "etE7eo3TEFjYCdjX",
+      "createdAt": "2025-11-27T06:54:28.843Z",
+      "projectId": "2ZQFKqpo7BMkilsl",
       "role": "workflow:owner",
-      "updatedAt": "2025-12-16T09:15:42.268Z",
-      "workflowId": "8QfHWvn8tbmMpANX"
+      "updatedAt": "2025-11-27T06:54:28.843Z",
+      "workflowId": "iTpLvxtUg0phMNzr"
     }
   ],
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-16T12:06:59.000Z",
-  "versionId": "cb0cdc74-be31-4b6e-9d91-0583eee0e6d3"
+  "updatedAt": "2025-12-16T09:15:28.000Z",
+  "versionId": "94151465-20ef-45ee-9190-15dbcf092379"
 }
