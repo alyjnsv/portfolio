@@ -6,7 +6,7 @@
         [
           {
             "index": 0,
-            "node": "Convert to File",
+            "node": "Markdown",
             "type": "main"
           }
         ]
@@ -30,17 +30,6 @@
             "index": 0,
             "node": "Code in JavaScript",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent",
-            "type": "ai_languageModel"
           }
         ]
       ]
@@ -394,6 +383,17 @@
         ]
       ]
     },
+    "Get an issue3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "arcihve extractor",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get an issue4": {
       "main": [
         [
@@ -487,13 +487,24 @@
         [
           {
             "index": 0,
-            "node": "AI Agent",
+            "node": "Get an issue1",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Get an issue1",
+            "node": "Get an issue3",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -551,6 +562,17 @@
           {
             "index": 0,
             "node": "Respond to Webhook2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to File",
             "type": "main"
           }
         ]
@@ -623,6 +645,11 @@
             "type": "main"
           }
         ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        []
       ]
     },
     "Respond to Webhook2": {
@@ -875,6 +902,17 @@
     "When clicking ‘Execute workflow’": {
       "main": [
         []
+      ]
+    },
+    "arcihve extractor": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
       ]
     },
     "task_get": {
@@ -2762,7 +2800,7 @@
               "displayName": "desktop",
               "id": "desktop",
               "readOnly": false,
-              "removed": true,
+              "removed": false,
               "required": false,
               "type": "string"
             },
@@ -2778,6 +2816,7 @@
             }
           ],
           "value": {
+            "desktop": "-",
             "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
             "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
             "status": "queue"
@@ -2979,7 +3018,7 @@
               "displayName": "desktop",
               "id": "desktop",
               "readOnly": false,
-              "removed": true,
+              "removed": false,
               "required": false,
               "type": "string"
             },
@@ -2995,6 +3034,7 @@
             }
           ],
           "value": {
+            "desktop": "-",
             "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
             "prompt": "={{ $('Tech-task2').item.json['tech-task'] }}",
             "status": "queue"
@@ -3206,6 +3246,12 @@
               "name": "Refresh Token",
               "type": "string",
               "value": "={{ $json.fields.customfield_10124 }}"
+            },
+            {
+              "id": "582afd61-383b-4e89-b86a-a21b0010fa18",
+              "name": "Content",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_10056 }}"
             }
           ]
         },
@@ -3389,7 +3435,7 @@
               "displayName": "desktop",
               "id": "desktop",
               "readOnly": false,
-              "removed": true,
+              "removed": false,
               "required": false,
               "type": "string"
             },
@@ -3442,13 +3488,25 @@
               "removed": false,
               "required": false,
               "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Content",
+              "id": "Content",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
             }
           ],
           "value": {
             "APPKey": "={{ $('File extract').item.json.APPKey }}",
             "APPSecret": "={{ $('File extract').item.json.APPSecret }}",
+            "Content": "={{ $('File extract').item.json.Content }}",
             "DropBox": "={{ $('File extract').item.json.Dropbox }}",
             "RefreshToken": "={{ $('File extract').item.json['Refresh Token'] }}",
+            "desktop": "-",
             "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
             "prompt": "={{ $('Tech-task').item.json['tech-task'] }}",
             "status": "queue"
@@ -3569,7 +3627,7 @@
               "displayName": "desktop",
               "id": "desktop",
               "readOnly": false,
-              "removed": true,
+              "removed": false,
               "required": false,
               "type": "string"
             },
@@ -3622,13 +3680,25 @@
               "removed": false,
               "required": false,
               "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Content",
+              "id": "Content",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
             }
           ],
           "value": {
             "APPKey": "={{ $('File extract').item.json.APPKey }}",
             "APPSecret": "={{ $('File extract').item.json.APPSecret }}",
+            "Content": "={{ $('File extract').item.json.Content }}",
             "DropBox": "={{ $('File extract').item.json.Dropbox }}",
             "RefreshToken": "={{ $('File extract').item.json['Refresh Token'] }}",
+            "desktop": "-",
             "issue": "={{ $('Webhook1').item.json.body.issue_key }}",
             "prompt": "={{ $('Tech-task').item.json['tech-task'] }}",
             "status": "queue"
@@ -3817,7 +3887,7 @@
         "options": {}
       },
       "position": [
-        976,
+        1680,
         512
       ],
       "type": "n8n-nodes-base.if",
@@ -3849,10 +3919,10 @@
       "id": "4de4656a-2f40-4642-b8d2-204dbc50ee46",
       "name": "Вытаскиваем все файлы1",
       "parameters": {
-        "jsCode": "const item = $json;\n\n// здесь attachments — ОБЪЕКТЫ, где ещё можно посмотреть filename/content\nconst attachments = item.fields?.attachment || [];\n\n// выкидываем всё, где в имени/ссылке есть \"dropbox\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n  return !text.includes('dropbox');\n});\n\n// и только после этого оставляем чистый массив id\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds,   // один ключ, внутри массив ID без dropbox\n  },\n};\n"
+        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('promt');\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
       },
       "position": [
-        336,
+        1040,
         656
       ],
       "type": "n8n-nodes-base.code",
@@ -3875,7 +3945,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        496,
+        1200,
         656
       ],
       "type": "n8n-nodes-base.jira",
@@ -3932,12 +4002,15 @@
       "id": "f51362df-fb0c-4234-91b8-5e5b9cd7d45d",
       "name": "AI Agent",
       "parameters": {
-        "options": {},
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": ""
+        },
         "promptType": "define",
-        "text": "=Добавь это в конце этого текста: {{ $('Extract from File').item.json.data }} Вот это:\nAPP Key: {{ $json.APPKey }}\nAPP Secret: {{ $json.APPSecret }}\nRefresh Token:{{ $json.RefreshToken }}\n\nВАЖНО! Не пиши ничего больше, только отредактируй текст."
+        "text": "=Необходимо обновить некоторые разделы в этом тексте, а именно Dropbox api - App Key, APP Secret, APP Secret, Refresh Token, Content. Обновить путь к контенту, структуру контента на dropbox, категории immaping, структура JSON данных, Maping ключей по категориям, swift модели, архетиктура загрузки,загрузчик dropbox, парсер контента, кардинатор, испольвование в UI, краткая справка, полное пути к JSON файлу, всё остальное ты не трогаешь в промпте, оставляешь как есть:\n{{ $('Extract from File').item.json.data }} \n\nВот данные:\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nОтредактируй так-же структуру контента:\n{{ $json.fileNames }}\n\nВАЖНО! Не пиши ничего больше, только адаптируй текст, на выходе отдай весь текст кроме вводных данных.\nВАЖНО!! Обязательно перепроверь, остались-ли эти данные: \"После того как ты всё проверил и сделал необходимо сделать 5 проверок всего исходного кода на правильность реализации согласно этому техническому заданию. Учти, что Приложение использует данные с Dropbox, а не захардкоженные данные. После этого необходимо сделать ещё 5 проверок всего исходного кода на предмет багов, ошибок и исправить их, если есть. После этого необходимо сделать ещё 5 проверок всего исходного кода на работоспособность и правильность реализации.\"."
       },
       "position": [
-        176,
+        720,
         352
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -3987,60 +4060,18 @@
         "operation": "get"
       },
       "position": [
-        176,
+        880,
         656
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
     },
     {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "id": "a12e279b-0ff8-4ea2-aa3f-298f9dfa06d7",
-      "name": "Anthropic Chat Model",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Sonnet 4.5",
-          "mode": "list",
-          "value": "claude-sonnet-4-5-20250929"
-        },
-        "options": {}
-      },
-      "position": [
-        176,
-        528
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
-    },
-    {
-      "id": "c4249647-8bc3-4cf2-aa57-d60aa345decc",
-      "name": "Convert to File",
-      "parameters": {
-        "operation": "toText",
-        "options": {
-          "fileName": "={{ $('Get an attachment from an issue').item.json.filename }}"
-        },
-        "sourceProperty": "output"
-      },
-      "position": [
-        512,
-        352
-      ],
-      "type": "n8n-nodes-base.convertToFile",
-      "typeVersion": 1.1
-    },
-    {
       "id": "b9054846-10dd-492b-86ad-a332825ff833",
       "name": "Merge",
       "parameters": {},
       "position": [
-        784,
+        1488,
         512
       ],
       "type": "n8n-nodes-base.merge",
@@ -4081,7 +4112,7 @@
         }
       },
       "position": [
-        1984,
+        2688,
         512
       ],
       "type": "n8n-nodes-base.jira",
@@ -4104,7 +4135,7 @@
         "options": {}
       },
       "position": [
-        1824,
+        2528,
         512
       ],
       "type": "n8n-nodes-base.set",
@@ -4118,7 +4149,7 @@
         "options": {}
       },
       "position": [
-        1184,
+        1888,
         512
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -4138,7 +4169,7 @@
         "options": {}
       },
       "position": [
-        1344,
+        2048,
         512
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -4151,7 +4182,7 @@
         "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
       },
       "position": [
-        1504,
+        2208,
         512
       ],
       "type": "n8n-nodes-base.code",
@@ -4163,14 +4194,137 @@
       "parameters": {
         "options": {},
         "respondWith": "json",
-        "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['0'] }}\",\n  \"data_1\": \"{{ $json['1'] }}\"\n}"
+        "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['1'] }}\",\n  \"data_1\": \"{{ $json['0'] }}\"\n}"
       },
       "position": [
-        1664,
+        2368,
         512
       ],
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4
+    },
+    {
+      "id": "98993a28-1757-49bd-95f9-83a83cf5a41e",
+      "name": "Compression",
+      "parameters": {},
+      "position": [
+        -1168,
+        768
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "b5eaeb68-c0bf-484d-804e-b56e02fe7ce4",
+      "name": "arcihve extractor",
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst fileNames = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    if (typeof content !== 'string') continue;\n\n    const lowerContent = content.toLowerCase();\n\n    // Ищем readme или content\n    if (!lowerContent.includes('readme') && !lowerContent.includes('content')) {\n      continue;\n    }\n\n    let fileName =\n      att.fileName ||\n      att.filename ||\n      att.name ||\n      '';\n\n    // Если имени нет — вытаскиваем из URL/строки\n    if (!fileName) {\n      const clean = content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop() || '';\n    }\n\n    if (!fileName) fileName = 'unknown';\n\n    fileNames.push(fileName);\n  }\n}\n\n// Один item на выходе\nreturn [\n  {\n    json: {\n      fileNames, // массив всех найденных имён\n      count: fileNames.length,\n    }\n  }\n];\n"
+      },
+      "position": [
+        512,
+        352
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "bd4de6e1-c579-43b2-b826-7537e87c7d45",
+      "name": "Get an issue3",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        368,
+        352
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "7b15787f-edc6-4736-8651-72e843cbfa12",
+      "name": "Markdown",
+      "parameters": {
+        "html": "={{ $json.output }}",
+        "options": {}
+      },
+      "position": [
+        1024,
+        352
+      ],
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1
+    },
+    {
+      "id": "1751bd4a-f7f0-429f-a7ac-446f0f62d28b",
+      "name": "Convert to File",
+      "parameters": {
+        "operation": "toText",
+        "options": {},
+        "sourceProperty": "data"
+      },
+      "position": [
+        1200,
+        352
+      ],
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "openAiApi": {
+          "id": "TeJoupiuKVAuyWb3",
+          "name": "GPT"
+        }
+      },
+      "id": "7fe5ee42-88fb-4d32-9a28-c4f50b32106e",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "builtInTools": {},
+        "model": {
+          "__rl": true,
+          "cachedResultName": "o1",
+          "mode": "list",
+          "value": "o1"
+        },
+        "options": {}
+      },
+      "position": [
+        624,
+        576
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "df5929c7-a25c-451a-bbb7-bbcccd886c6a",
+      "name": "Google Gemini Chat Model",
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "position": [
+        720,
+        528
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -4179,8 +4333,8 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "DEV-9505",
-            "serial_num_pc": "anydesk-1"
+            "issue_key": "DEV-9521",
+            "serial_num_pc": "null"
           },
           "executionMode": "production",
           "headers": {
@@ -4189,24 +4343,57 @@
             "cdn-loop": "cloudflare; loops=1; subreqs=1",
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
-            "cf-ipcountry": "DE",
-            "cf-ray": "9ae744b3b250dbcb-FRA",
+            "cf-ipcountry": "FI",
+            "cf-ray": "9aed196b230ce953-DME",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "73",
+            "content-length": "68",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.144.94",
+            "x-forwarded-for": "135.181.186.107, 172.68.10.20",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
           "params": {},
           "query": {},
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
+        }
+      }
+    ],
+    "task_get": [
+      {
+        "json": {
+          "body": {},
+          "executionMode": "production",
+          "headers": {
+            "accept": "application/json, multipart/form-data, text/plain, text/markdown",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "46.235.72.49",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "KZ",
+            "cf-ray": "9aee5659e50e9a50-WAW",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-for": "46.235.72.49, 172.64.200.149",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-is-trusted": "yes",
+            "x-real-ip": "46.235.72.49"
+          },
+          "params": {},
+          "query": {
+            "status": "idle",
+            "worker_id": "anydesk-1"
+          },
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/task_get_test"
         }
       }
     ]
@@ -4232,6 +4419,6 @@
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2025-12-15T16:22:20.000Z",
-  "versionId": "57beb8bc-600b-4878-bbf5-ff98c721842e"
+  "updatedAt": "2025-12-16T14:51:07.000Z",
+  "versionId": "da4e9e8e-2c57-4ca5-8fda-10e8e485ce9c"
 }
