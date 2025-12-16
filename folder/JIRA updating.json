@@ -92,7 +92,7 @@
       "id": "ad06ed55-8bc4-4057-81e6-276cbd47074f",
       "name": "Update an issue",
       "parameters": {
-        "issueKey": "={{ $('When Executed by Another Workflow').item.json.json.key }}",
+        "issueKey": "={{ $('When Executed by Another Workflow').item.json.key }}",
         "jiraVersion": "serverPat",
         "operation": "update",
         "updateFields": {
@@ -112,9 +112,11 @@
     }
   ],
   "pinData": {
-    "Update Jira Issue": [
+    "When Executed by Another Workflow": [
       {
-        "json": {}
+        "json": {
+          "key": "LW-27463"
+        }
       }
     ]
   },
@@ -133,6 +135,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-03T15:47:56.000Z",
-  "versionId": "ef1c7032-11f7-4140-a57a-97f5a43dae40"
+  "updatedAt": "2025-12-16T15:48:44.000Z",
+  "versionId": "da4177a9-d1d3-46d9-aac4-1e5d5a5f2ee3"
 }
