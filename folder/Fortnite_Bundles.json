@@ -1,0 +1,609 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Output",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Bria": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Bria",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Build Output": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Is CSV?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Download": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fetch API": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Process Bundles",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Has Image?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Finalize": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Has Image?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Resize",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Is CSV?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fetch API",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Parse Bria": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Download",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Process Bundles": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Bria",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Resize": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Finalize",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Config",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ZIP": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-17T12:41:32.809Z",
+  "id": "mUwyBW3hRARHxbKL",
+  "isArchived": false,
+  "meta": null,
+  "name": "Fortnite_Bundles",
+  "nodes": [
+    {
+      "id": "bf232b31-e8e0-403d-b037-f25b3f84175a",
+      "name": "Trigger",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -2528,
+        1104
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "203461ba-0fba-4a61-bc86-2ee8a319748e",
+      "name": "Config",
+      "parameters": {
+        "jsCode": "const input = $json;\nreturn [{ json: { chat_id: input.chat_id, count: input.config?.bundles?.count || 50, bria_token: input.bria_token }}];"
+      },
+      "position": [
+        -2320,
+        1104
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "66646dfd-d536-492b-b963-e1cde3edd811",
+      "name": "Notify",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "text": "Processing Bundles..."
+      },
+      "position": [
+        -2128,
+        1104
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "966ab021-c9a3-4397-ab04-e33322170ad9"
+    },
+    {
+      "id": "35b99ccf-ae02-45bf-b5bd-b3363d74c0f5",
+      "name": "Fetch API",
+      "parameters": {
+        "options": {
+          "timeout": 120000
+        },
+        "url": "https://fortnite-api.com/v2/cosmetics/br"
+      },
+      "position": [
+        -1920,
+        1104
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "3b28e4ad-3129-40d3-848d-fa3a87a1fece",
+      "name": "Process Bundles",
+      "parameters": {
+        "jsCode": "const cosmetics = $json.data || [];\nconst config = $('Config').first().json;\n\nconst skins = cosmetics.filter(i => i.type?.value === 'outfit' && i.images?.icon).sort(() => Math.random() - 0.5);\nconst emotes = cosmetics.filter(i => i.type?.value === 'emote' && i.images?.icon).sort(() => Math.random() - 0.5);\nconst items = cosmetics.filter(i => ['glider','backpack','contrail'].includes(i.type?.value) && i.images?.icon).sort(() => Math.random() - 0.5);\nconst weapons = cosmetics.filter(i => ['pickaxe','wrap'].includes(i.type?.value) && i.images?.icon).sort(() => Math.random() - 0.5);\n\nconst bundles = [];\nconst used = { s: new Set(), e: new Set(), i: new Set(), w: new Set() };\n\nfor (let b = 0; b < config.count; b++) {\n  const skin = skins.find(x => !used.s.has(x.id));\n  const emote = emotes.find(x => !used.e.has(x.id));\n  const item = items.find(x => !used.i.has(x.id));\n  const weapon = weapons.find(x => !used.w.has(x.id));\n  \n  if (!skin || !emote || !item || !weapon) break;\n  \n  used.s.add(skin.id); used.e.add(emote.id); used.i.add(item.id); used.w.add(weapon.id);\n  \n  bundles.push({\n    id: `bundle_${b}`,\n    name: `${skin.name} Bundle`,\n    rarity: (skin.rarity?.value || 'rare').toLowerCase(),\n    image_url: skin.images.icon,\n    img_file: `bundle_${b}.png`,\n    elements: [\n      { type: 'skin', id: skin.id },\n      { type: 'emote', id: emote.id },\n      { type: 'item', id: item.id },\n      { type: 'weapon', id: weapon.id }\n    ],\n    _chat_id: config.chat_id,\n    _bria: config.bria_token\n  });\n}\n\nreturn bundles.map(b => ({ json: b }));"
+      },
+      "position": [
+        -1728,
+        1104
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "bbb32d4d-2c4c-4664-bab3-12c85d64a7dc",
+      "name": "Bria",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_token",
+              "value": "=130a9262fe6349b9bc9fd2dfbd2fd2d8"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={ \"image\": \"{{ $json.image_url }}\", \"sync\": true }",
+        "method": "POST",
+        "options": {
+          "timeout": 60000
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://engine.prod.bria-api.com/v2/image/edit/remove_background"
+      },
+      "position": [
+        -1520,
+        1104
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "fcd6a0ef-67fe-4ffc-831c-f9fa7ce4ec89",
+      "name": "Parse Bria",
+      "parameters": {
+        "jsCode": "const items=$('Process Bundles').all(); const meta=items[$itemIndex]?.json||{}; const r=$json;\nreturn{json:{...meta,processed_url:r.result?.image_url||r.image_url||meta.image_url}};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -1328,
+        1104
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "77991c6a-b30b-4d80-9b1e-1b126c8fab69",
+      "name": "Download",
+      "parameters": {
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 30000
+        },
+        "url": "={{ $json.processed_url }}"
+      },
+      "position": [
+        -1120,
+        1104
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "11a01013-7568-4b49-b9b3-79361430e801",
+      "name": "Filter",
+      "parameters": {
+        "jsCode": "const items=$('Parse Bria').all(); const meta=items[$itemIndex]?.json||{}; const bin=$input.item.binary;\nif(!bin||!Object.keys(bin).length)return{json:{...meta,_skip:true}};\nconst k=Object.keys(bin)[0]; return{json:meta,binary:{image:{...bin[k],fileName:meta.img_file,mimeType:'image/png'}}};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -928,
+        1104
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "163c1595-f38d-45c0-98f9-976720f079aa",
+      "name": "Has Image?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json._skip }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -720,
+        1104
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "continueOnFail": true,
+      "id": "5f834d9b-85c5-49bd-9c32-03294dcbb54a",
+      "name": "Resize",
+      "parameters": {
+        "dataPropertyName": "image",
+        "height": 650,
+        "operation": "resize",
+        "options": {},
+        "width": 480
+      },
+      "position": [
+        -528,
+        1008
+      ],
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1
+    },
+    {
+      "id": "c989e684-4e28-481d-9347-f7d700d7434d",
+      "name": "Finalize",
+      "parameters": {
+        "jsCode": "const items=$('Has Image?').all().filter(i=>!i.json._skip); const meta=items[$itemIndex]?.json||{}; const bin=$input.item.binary||{};\nconst newBin={}; if(bin.image)newBin.image={...bin.image,fileName:meta.img_file,mimeType:'image/png'};\nreturn{json:meta,binary:newBin};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -320,
+        1008
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "ac156959-9a90-47d3-9315-4cef95d1b03a",
+      "name": "Aggregate",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "items",
+        "options": {}
+      },
+      "position": [
+        -128,
+        1008
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "1a43f947-3eac-4b9e-abb9-89c717532fa3",
+      "name": "Build Output",
+      "parameters": {
+        "jsCode": "const items=$json.items||[]; const finalItems=$('Finalize').all(); let chatId=items[0]?._chat_id||0;\nconst csv=['id,name,rarity,image,skin_id,emote_id,item_id,weapon_id'];\nfor(const i of items){\n  const el=i.elements||[];\n  csv.push(`${i.id},\"${(i.name||'').replace(/\"/g,'')}\",${i.rarity},${i.img_file},${el.find(x=>x.type==='skin')?.id||''},${el.find(x=>x.type==='emote')?.id||''},${el.find(x=>x.type==='item')?.id||''},${el.find(x=>x.type==='weapon')?.id||''}`);\n}\nconst binData={},keys=[]; for(const f of finalItems){if(f.binary?.image){binData[f.json.img_file]=f.binary.image;keys.push(f.json.img_file);}}\nreturn[\n  {json:{type:'csv',chat_id:chatId,count:items.length},binary:{file:{data:Buffer.from(csv.join('\\n')).toString('base64'),mimeType:'text/csv',fileName:'bundles.csv'}}},\n  {json:{type:'zip',chat_id:chatId,count:items.length,keys:keys.join(',')},binary:binData}\n];"
+      },
+      "position": [
+        80,
+        1008
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "3496d908-e2dc-4a25-8270-97bac4a75f2a",
+      "name": "Is CSV?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "e1d257be-e072-495b-8b2a-f19d510376e8",
+              "leftValue": "={{ $json.type }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "csv"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        288,
+        1008
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "9d32b74b-37bf-4e17-b3cb-9a8e78ada99d",
+      "name": "Send CSV",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=BUNDLES ({{ $json.count }})"
+        },
+        "binaryData": true,
+        "binaryPropertyName": "file",
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        480,
+        896
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e9d5e19a-5572-48f0-8ed9-254a40dd6643"
+    },
+    {
+      "id": "d5b2ef92-6e88-47a4-85cb-d64b3a75ad78",
+      "name": "ZIP",
+      "parameters": {
+        "binaryPropertyName": "={{ $json.keys }}",
+        "fileName": "bundles.zip",
+        "operation": "compress"
+      },
+      "position": [
+        480,
+        1104
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "be0ff27e-7b2a-4802-bbe6-7d612dbd3078",
+      "name": "Send ZIP",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=BUNDLES ({{ $json.count }})"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        688,
+        1104
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "b6466641-467c-4e19-bd81-9ccb50481053"
+    }
+  ],
+  "pinData": {
+    "Trigger": [
+      {
+        "json": {
+          "ok": true,
+          "result": {
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1765975534,
+            "entities": [
+              {
+                "length": 41,
+                "offset": 144,
+                "type": "italic"
+              },
+              {
+                "length": 3,
+                "offset": 185,
+                "type": "text_link",
+                "url": "https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620"
+              }
+            ],
+            "from": {
+              "first_name": "testn8nbot",
+              "id": 8556384331,
+              "is_bot": true,
+              "username": "testn8n44bot"
+            },
+            "link_preview_options": {
+              "is_disabled": true
+            },
+            "message_id": 122,
+            "text": "🎮 Fortnite Orchestrator\n\n📋 Sections:\n• Skins: 50\n• Emotes: 50\n• Items: 50\n• Weapons: 50\n• Bundles: 50\n• XP Maps: 50\n\n⏳ Starting workflows...\n\nThis message was sent automatically with n8n"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-17T12:41:32.815Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-17T12:41:32.815Z",
+      "workflowId": "mUwyBW3hRARHxbKL"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-17T13:50:51.658Z",
+  "versionId": "70414250-20db-414c-9792-f7c0cd42117b"
+}
