@@ -1,5 +1,2004 @@
 {
   "active": true,
+  "activeVersion": {
+    "authors": "TIMOFEI ZAITSEV",
+    "connections": {
+      "AI Agent4": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "AI Agent5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Aggregate": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Analyze1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send \"...\"5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Array All3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Call 'Estimate BOT'",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Array Chat ID15": {
+        "main": [
+          [
+            {
+              "index": 1,
+              "node": "Merge3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Array Tasks3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Merge3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Call 'Estimate BOT'": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Create Technical Task10",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Split",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields5",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send \"...\"4",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Split1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Create Technical Task10": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields10",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields10": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Technical Task10",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields12": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Analyze1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields15": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Aggregate",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Loop Over Items1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields4": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent4",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Embeddings OpenAI1": {
+        "ai_embedding": [
+          [
+            {
+              "index": 0,
+              "node": "Pinecone Vector Store",
+              "type": "ai_embedding"
+            }
+          ]
+        ]
+      },
+      "Embeddings OpenAI2": {
+        "ai_embedding": [
+          [
+            {
+              "index": 0,
+              "node": "Pinecone Vector Store2",
+              "type": "ai_embedding"
+            }
+          ]
+        ]
+      },
+      "Embeddings OpenAI3": {
+        "ai_embedding": [
+          [
+            {
+              "index": 0,
+              "node": "Pinecone Vector Store3",
+              "type": "ai_embedding"
+            }
+          ]
+        ]
+      },
+      "Extract from File1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields12",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get a file1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Extract from File1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent4",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model2": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent5",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model3": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "Проверка ТЗ",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Loop Over Items1",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send \"...\"2",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "AI Agent5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Проверка ТЗ",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send \"...\"3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send \"PDF\"",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Get a file1",
+              "type": "main"
+            }
+          ],
+          []
+        ]
+      },
+      "Loop Over Items1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields15",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "count",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Merge3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Array All3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "OpenRouter Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "Structured Output Parser1",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "Output1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Array Tasks3",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Array Chat ID15",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Pinecone Vector Store": {
+        "ai_tool": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent4",
+              "type": "ai_tool"
+            }
+          ]
+        ]
+      },
+      "Pinecone Vector Store2": {
+        "ai_tool": [
+          [
+            {
+              "index": 0,
+              "node": "Проверка ТЗ",
+              "type": "ai_tool"
+            }
+          ]
+        ]
+      },
+      "Pinecone Vector Store3": {
+        "ai_tool": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent5",
+              "type": "ai_tool"
+            }
+          ]
+        ]
+      },
+      "Split": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "JIRA",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Split1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Output1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Structured Output Parser1": {
+        "ai_outputParser": [
+          [
+            {
+              "index": 0,
+              "node": "Проверка ТЗ",
+              "type": "ai_outputParser"
+            }
+          ]
+        ]
+      },
+      "Switch2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "If3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Telegram Trigger1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Switch2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "When clicking ‘Execute workflow’": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields15",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "count": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Проверка ТЗ": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields4",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "AI Agent5",
+              "type": "main"
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2025-12-02T06:50:21.057Z",
+    "description": null,
+    "name": null,
+    "nodes": [
+      {
+        "id": "f415bc5d-18e6-4c7d-ae87-11fd5b14e8e7",
+        "name": "Switch2",
+        "parameters": {
+          "options": {},
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "0077b372-4ce6-4f93-b4d1-39fa51c1f1fa",
+                      "leftValue": "={{ $('Telegram Trigger1').item.json.message.text }}",
+                      "operator": {
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "/start"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  }
+                },
+                "outputKey": "/start",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "21b715cd-d457-4ffd-9258-3f51fb7f42f4",
+                      "leftValue": "={{ $json.message.document }}",
+                      "operator": {
+                        "operation": "exists",
+                        "singleValue": true,
+                        "type": "object"
+                      },
+                      "rightValue": ""
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  }
+                },
+                "outputKey": "document",
+                "renameOutput": true
+              }
+            ]
+          }
+        },
+        "position": [
+          -7856,
+          1360
+        ],
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.3
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "0fc7d607-546d-41ea-8429-965103257998",
+        "name": "Send a text message",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "HTML"
+          },
+          "chatId": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}",
+          "text": "Отправьте документы"
+        },
+        "position": [
+          -7552,
+          1200
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "df43ba07-1cdc-40ce-8938-e6d37bf439e0"
+      },
+      {
+        "id": "3876b1b9-0da4-4b51-a801-978a4ed9ca17",
+        "name": "Extract from File1",
+        "parameters": {
+          "operation": "binaryToPropery",
+          "options": {}
+        },
+        "position": [
+          -7024,
+          1360
+        ],
+        "type": "n8n-nodes-base.extractFromFile",
+        "typeVersion": 1
+      },
+      {
+        "id": "4f594624-a7db-445f-9429-262610b21b4a",
+        "name": "Output1",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "17895308-b399-4ec8-a93d-8446285b1b0a",
+                "name": "Tasks",
+                "type": "string",
+                "value": "={{ $json.task_content }}"
+              },
+              {
+                "id": "208402e6-83f2-42b3-9b2e-4922145e8d7f",
+                "name": "Username",
+                "type": "string",
+                "value": "={{ $('Telegram Trigger1').first().json.message?.chat?.username || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.username }}"
+              },
+              {
+                "id": "4938c796-a723-4f3c-b756-762c09e572c9",
+                "name": "Chat ID",
+                "type": "string",
+                "value": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}"
+              },
+              {
+                "id": "4547a164-9221-4555-88ce-e73d0c3d3211",
+                "name": "File_name",
+                "type": "string",
+                "value": "={{ $('Telegram Trigger1').first().json.message.document.file_name }}"
+              },
+              {
+                "id": "6f1dad92-4368-4f54-ab7a-fe2f46db5e4c",
+                "name": "Type",
+                "type": "string",
+                "value": "={{ $('Edit Fields15').first().json.type }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -2000,
+          1376
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "3653ac4b-838a-460e-8319-afccacc9ce80",
+        "maxTries": 5,
+        "name": "Send \"PDF\"",
+        "onError": "continueRegularOutput",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "Markdown"
+          },
+          "chatId": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}",
+          "text": "=⚡️ Анализ и составление ТЗ для файла:\n\n➡️ *{{ $('Telegram Trigger1').item.json.message.document.file_name }}*"
+        },
+        "position": [
+          -7232,
+          1200
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "08cc0e07-f5c6-4b69-8f4b-89acde2b24ff"
+      },
+      {
+        "executeOnce": true,
+        "id": "40cb5b70-719c-4ff7-8688-72d35408c154",
+        "name": "Merge3",
+        "parameters": {},
+        "position": [
+          -1344,
+          1376
+        ],
+        "type": "n8n-nodes-base.merge",
+        "typeVersion": 3.2
+      },
+      {
+        "id": "dc7705ac-fbef-4f04-a3f4-237218365acf",
+        "name": "Array Tasks3",
+        "parameters": {
+          "fieldsToAggregate": {
+            "fieldToAggregate": [
+              {
+                "fieldToAggregate": "Tasks"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -1552,
+          1296
+        ],
+        "type": "n8n-nodes-base.aggregate",
+        "typeVersion": 1
+      },
+      {
+        "id": "c9737681-27e4-433c-8415-0cba42bd1638",
+        "name": "Array All3",
+        "parameters": {
+          "jsCode": "const items = $input.all();\nconst tasks = items.map((item) => item?.json?.Tasks).flat().filter(task => task);\nconst chatIds = items.map((item) => item?.json[\"Chat ID\"]).flat().filter(id => id);\nconst fileNames = items.map((item) => item?.json?.File_name).flat().filter(name => name);\nconst usernames = items.map((item) => item?.json?.Username).flat().filter(user => user);\nconst tasksString = tasks.join('\\n---\\n');\n\nreturn [{\n  Tasks: tasksString,\n  \"Chat ID\": chatIds,\n  \"File_name\": fileNames,\n  \"Username\": usernames\n}];"
+        },
+        "position": [
+          -1168,
+          1376
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "executeOnce": true,
+        "id": "8873a869-be23-4d30-a97f-2313b7518d93",
+        "maxTries": 5,
+        "name": "Send \"...\"4",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}",
+          "text": "=📛 Ошибка в стуктуре документа, необходимо загружать по одному файлу"
+        },
+        "position": [
+          -6160,
+          1552
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+      },
+      {
+        "id": "3dfa4dcb-1ac1-4d9d-b604-aa6c23b25175",
+        "name": "Edit Fields10",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "11db2e72-2079-48ee-8219-c68ed7bac46c",
+                "name": "doc_link",
+                "type": "string",
+                "value": "=https://drive.google.com/file/d/{{ $json.id }}/view?usp=sharing"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -384,
+          1200
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "8345d20b-4deb-4175-ba55-61b79e08d1e5",
+        "maxTries": 5,
+        "name": "Technical Task10",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "HTML"
+          },
+          "chatId": "={{ $('Array All3').first().json[\"Chat ID\"][0] }}",
+          "text": "=📃 Созданные ТЗ для Зданий/Пропсов:\n\n{{ $json.doc_link }}"
+        },
+        "position": [
+          -160,
+          1200
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+      },
+      {
+        "credentials": {
+          "googleDriveOAuth2Api": {
+            "id": "hRAj2zpF2zrDOqzg",
+            "name": "Google Drive account 3"
+          }
+        },
+        "id": "3721640c-fc92-4921-bd60-cd9b5b5529b8",
+        "name": "Create Technical Task10",
+        "parameters": {
+          "content": "={{ $('Array All3').item.json.Tasks }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "folderId": {
+            "__rl": true,
+            "cachedResultName": "no",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1Huns1AuLdgZ3tvppfISJaSLGwBe1S4Kd",
+            "mode": "list",
+            "value": "1Huns1AuLdgZ3tvppfISJaSLGwBe1S4Kd"
+          },
+          "name": "=ТЗ лист Зданий/Пропсов {{ $now.format('dd.MM.yyyy') }}",
+          "operation": "createFromText",
+          "options": {
+            "convertToGoogleDocument": false
+          }
+        },
+        "position": [
+          -592,
+          1200
+        ],
+        "type": "n8n-nodes-base.googleDrive",
+        "typeVersion": 3
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "65e67d0b-6725-48fb-aeb2-5b613a8cf749",
+        "maxTries": 5,
+        "name": "Send \"...\"5",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger1').item.json.message?.chat?.id || $('Telegram Trigger1').item.json.callback_query?.message?.chat?.id }}",
+          "text": "=📛 {{ $json.error.message }}"
+        },
+        "position": [
+          -6368,
+          1552
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+      },
+      {
+        "executeOnce": true,
+        "id": "07909b6d-6dd9-46ea-801f-6e78dcecc814",
+        "name": "Array Chat ID15",
+        "parameters": {
+          "fieldsToAggregate": {
+            "fieldToAggregate": [
+              {
+                "fieldToAggregate": "Chat ID"
+              },
+              {
+                "fieldToAggregate": "File_name"
+              },
+              {
+                "fieldToAggregate": "Username"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -1552,
+          1456
+        ],
+        "type": "n8n-nodes-base.aggregate",
+        "typeVersion": 1
+      },
+      {
+        "id": "f18d9b88-5bdf-4607-ae77-7400e1808e1e",
+        "name": "Split1",
+        "parameters": {
+          "jsCode": "// Получаем текст из поля Tasks\nconst fullText = $input.first().json.output;\n\n// Проверяем, что данные получены\nif (!fullText) {\n  console.log('Поле Tasks не найдено или пустое');\n  return [];\n}\n\n// Разделяем по разделителю ---\nconst tasks = fullText.split('---').map(task => task.trim()).filter(task => task.length > 0);\n\nconsole.log(`Найдено задач: ${tasks.length}`);\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task) => {\n  return {\n    task_content: task\n  };\n});\n\nreturn result;"
+        },
+        "position": [
+          -2288,
+          1376
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "OE9cIjhzVtc73YQt",
+            "name": "Gemini WORK"
+          }
+        },
+        "id": "aca47667-6632-404f-a539-9d9e8c3ca37e",
+        "name": "Analyze1",
+        "onError": "continueErrorOutput",
+        "parameters": {
+          "authentication": "predefinedCredentialType",
+          "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": {{ JSON.stringify($json.prompt) }}\n        },\n        {\n          \"inline_data\": {\n            \"mime_type\": \"application/pdf\",\n            \"data\": \"{{ $('Extract from File1').item.json.data }}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n",
+          "method": "POST",
+          "nodeCredentialType": "googlePalmApi",
+          "options": {},
+          "sendBody": true,
+          "specifyBody": "json",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+        },
+        "position": [
+          -6608,
+          1360
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "waitBetweenTries": 2000
+      },
+      {
+        "id": "2cab0a7e-6f02-4fc7-971e-925472e23e32",
+        "name": "AI Agent4",
+        "parameters": {
+          "options": {
+            "systemMessage": "=# Asset TZ Generation Agent - System Prompt\n\n## РОЛЬ И ЦЕЛЬ\n\nТы — эксперт тимлид 3D-художников, который создаёт детальные технические задания (ТЗ) для игровых ассетов.\n\nТвоя задача: на основе данных об ассетах из JSON и контекста из RAG базы создать полное, структурированное ТЗ, которое пройдёт автоматическую проверку качества и позволит художнику выполнить задачу без додумывания.\n\n---\n\n## ВХОДНЫЕ ДАННЫЕ\n\nТы получишь JSON массив с данными об множестве ассетов. Объекты внутри массива выглядят так:\n\n{\n  \"id\": 1,\n  \"name\": \"Название ассета\",\n  \"filename\": \"AssetFileName\",\n  \"type\": \"Building | Character | Enemy | Vehicle | Props | Icon | FlatIcon | UI\",\n  \"subtype\": \"Подтип если есть\",\n  \"reference_image\": {\n    \"visual_description\": \"Детальное описание референса\",\n    \"key_elements\": [\"элемент1\", \"элемент2\"],\n    \"colors\": [\"цвет1\", \"цвет2\"],\n    \"materials\": [\"материал1\", \"материал2\"],\n    \"style_notes\": \"Стилистические особенности\",\n    \"composition\": \"Описание композиции\"\n  },\n  \"context\": \"Дополнительный контекст\",\n  \"goal\": \"Функциональное назначение\"\n}\n\n---\n\n## ПРОЦЕСС РАБОТЫ\n\n### ШАГ 1: ЗАПРОС КОНТЕКСТА ИЗ RAG\n\nПеред созданием ТЗ ты ОБЯЗАН запросить из подключённого инструмента Pinecone Vector Store следующую информацию:\n\nОбязательные запросы:\n1. \"стандарт нейминга для ассетов и игровых сущностей\" — принципы определения типа сущностей\n2. \"нарратив игры\" — общий контекст мира\n3. \"стиль-гайд проекта\" — визуальная концепция\n4. \"правила уникализации для {type}\" — принципы переосмысления\n5. \"технические стандарты {type}\" — технические требования (размеры, форматы, полигонаж)\n6. \"шаблон описания {type}\" — структура описания\n7. \"цветовая палитра {type}\" — цвета с HEX-кодами\n8. \"критерии приёмки {type}\" — условия для проверки результата\n9. \"ресурсы и ссылки проекта\" — Figma, Confluence, боты оценки\n\nДополнительные запросы (по необходимости):\n10. \"примеры {type}\" — референсы других ассетов этого типа\n11. \"связанные ассеты {name}\" — если есть семейство объектов\n12. \"материалы для {type}\" — специфика материалов\n13. \"роль {subtype}\" — если это персонаж или враг с ролью\n\nFallback при отсутствии данных в Pinecone:\n- Для технических параметров — использовать дефолтные значения из этого промпта\n- Для ссылок — указать \"[уточнить у арт-лида]\"\n- Всегда генерировать полную структуру ТЗ\n\n### ШАГ 2: АНАЛИЗ АРХЕТИПА И ФУНКЦИИ\n\nНа основе полученных данных определи:\n\n1. АРХЕТИП — к какой категории относится объект, абстрагируясь от внешнего вида\n   - Пример: На референсе плоскогубцы → архетип \"инструмент\"\n   - Пример: На референсе автобус → архетип \"транспорт\"\n\n2. ЧИСТАЯ ФУНКЦИЯ — для чего объект нужен в игре\n   - Пример: \"маркер квестового задания\"\n   - Пример: \"непроходимое препятствие\"\n   - Пример: \"источник ресурсов\"\n\n3. ПРИНАДЛЕЖНОСТЬ К МИРУ\n   - Технологичная база игрока (порядок, прогресс, чистота)\n   - Постапокалиптический мир (хаос, разрушение, обломки)\n   - Или гибрид (трофейная техника, модифицированные обломки)\n\n### ШАГ 3: УНИКАЛИЗАЦИЯ (КРИТИЧЕСКИ ВАЖНО)\n\nДЛЯ ВСЕХ ТИПОВ КРОМЕ Icon и FlatIcon:\n\nТы ОБЯЗАН полностью переосмыслить объект с референса в стилистику проекта.\n\nЗАПРЕЩЕНО:\n- Описывать референс как есть\n- Копировать внешний вид с референса\n- Упоминать бытовые предметы, не вписывающиеся в sci-fi\n- Писать \"как на референсе\", \"похожий на\", \"по образцу\"\n\nТРЕБУЕТСЯ:\n- Создать НОВУЮ визуальную концепцию с нуля\n- Мыслить как концепт-дизайнер\n- Переводить бытовые понятия в технологические\n- Использовать контекст из RAG (нарратив, стиль-гайд)\n\nКлючевые вопросы для уникализации:\n\n1. Принадлежность:\n   - База игрока: чистые формы, яркий неон, голограммы?\n   - Разрушенный мир: обломки, ржавчина, сбоящий неон?\n\n2. Материалы и Формы:\n   - Полированный металл и стекло или обломки старой техники?\n   - Формы гладкие и функциональные или хаотичные и поврежденные?\n\n3. Технологический элемент:\n   - Как используется неон? Ровные энергетические линии или мерцающие провода?\n\n4. Принцип Действия:\n   - Как функция реализуется через технологии?\n   - Барьер = голографическое поле или стена из дроидов?\n   - Маркер = светящийся технологичный артефакт?\n\nИСКЛЮЧЕНИЕ — ДЛЯ Icon и FlatIcon:\nДля иконок используй визуальную информацию с референса как базу, но адаптируй в стилистику проекта (цвета, материалы, glow-эффекты).\n\n### ШАГ 4: ФОРМИРОВАНИЕ ТЗ\n\nСформируй ТЗ строго по структуре из раздела \"СТРУКТУРА ВЫВОДА\", заполняя все обязательные блоки.\n\n---\n\n## СТРУКТУРА ВЫВОДА\n\nТЗ для каждого ассета должно содержать ровно 7 блоков в следующем порядке:\n\n[Название задачи]\n[Цель]\n[Описание задачи / Что нужно сделать]\n[Требования к стилю]\n[Формат и технические параметры]\n[Критерии приёмки]\n[Ресурсы и ссылки]\n\n---\n\n### БЛОК 1: [Название задачи]\n\nФормат: [Тип действия] + [Тип объекта] + [filename]\n\nПримеры:\n- Генерация 3D-модели здания Building_RationFactory\n- Создание 3D-модели персонажа Character_Scout\n- Создание иконки Icon_Energy\n- Создание плоской иконки FlatIcon_Shield\n\n### БЛОК 2: [Цель]\n\nФормулировка конечного результата — что должно получиться после выполнения задачи.\n\nСтруктура: Получить [что именно] для [где используется / зачем нужно].\n\nПримеры:\n- Получить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока\n- Получить игровую иконку энергии для отображения в интерфейсе ресурсов\n- Получить 3D-модель вражеского юнита для использования в боевых сценах\n\n### БЛОК 3: [Описание задачи / Что нужно сделать]\n\nСодержит две части:\n\nЧАСТЬ А — Концептуальное описание:\nДетальное описание визуальной концепции объекта. Структура зависит от типа объекта (см. раздел \"СПЕЦИФИКА ПО ТИПАМ\").\n\nЧАСТЬ Б — Шаги выполнения:\nПронумерованный список конкретных действий.\n\nПример шагов для 3D-модели:\n1. Создать 3D-модель согласно концептуальному описанию\n2. Применить материалы из указанной цветовой палитры\n3. Настроить освещение согласно требованиям стиля\n4. Выполнить рендер на белом фоне\n5. Экспортировать в указанном формате\n6. Проверить читаемость силуэта\n\nПример шагов для иконки:\n1. Создать иконку согласно концептуальному описанию\n2. Применить цвета из палитры проекта\n3. Добавить glow-эффекты согласно требованиям\n4. Проверить читаемость на размере 32x32 px\n5. Экспортировать в указанном формате\n\n### БЛОК 4: [Требования к стилю]\n\nМинимум 3 конкретных стилевых требования. Включает:\n\n1. Жанр и общая стилистика:\n   Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\n2. Принадлежность к миру:\n   [Технологическая база игрока / Постапокалиптический мир / Гибридное происхождение]\n\n3. Ключевые визуальные особенности:\n   [Изометрия 30° / Центрированная композиция / Читаемый силуэт / и т.д. — зависит от типа]\n\n4. Цветовая палитра (минимум 3 цвета с HEX-кодами):\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n\n5. Материалы и поверхности:\n   [Описание материалов из RAG или специфики типа]\n\n6. Освещение:\n   [Требования к освещению и рендеру]\n\n### БЛОК 5: [Формат и технические параметры]\n\nМинимум 3 технических требования. Данные брать из RAG по запросу \"технические стандарты {type}\".\n\nДля 3D-моделей (Building, Character, Enemy, Vehicle, Props):\n- Формат файла: [FBX / OBJ / другой из RAG]\n- Полигонаж: [лимит из RAG или дефолт]\n- Текстуры: [размер, формат]\n- Цветовое пространство: sRGB\n- Нейминг файла: [filename из входных данных]\n- Рендер: белый фон, разрешение [из RAG]\n\nДля Icon:\n- Финальный размер: 512x512 px\n- Рабочая зона: 420x420 px (центрирована)\n- Формат файла: PNG с альфа-каналом\n- Цветовое пространство: sRGB\n- Толщина контуров (если есть): 14 px\n- Нейминг файла: [filename из входных данных]\n\nДля FlatIcon:\n- Финальный размер: 512x512 px\n- Рабочая зона: 420x420 px (центрирована)\n- Формат файла: PNG с альфа-каналом / SVG\n- Только два цвета: чёрный и белый\n- Толщина обводки: строго 14 px\n- Без градиентов, теней, полутонов\n- Нейминг файла: [filename из входных данных]\n\nДля UI:\n- Размеры элемента: [из RAG]\n- Формат файла: [PNG / SVG / из RAG]\n- Состояния: активное, неактивное, заблокированное\n- Нейминг файла: [filename из входных данных]\n\n### БЛОК 6: [Критерии приёмки]\n\nМинимум 3 измеримых условия для проверки результата. Данные брать из RAG по запросу \"критерии приёмки {type}\".\n\nУниверсальные критерии (адаптировать под тип):\n- Оценка бота качества >= [**порог всегда 95**]%\n- Соответствие техническим параметрам (размер, формат, нейминг)\n- Соответствие цветовой палитре (использованы указанные HEX-коды)\n- Читаемость силуэта на минимальном размере [для иконок: 32x32 px]\n- Отсутствие артефактов рендера и пересветов\n- Одобрение арт-лида\n\nДополнительные критерии по типам:\n\nДля Building/Props:\n- Корректная изометрическая проекция 30°\n- Наличие платформы-основания с подсветкой\n\nДля Character/Enemy:\n- Читаемый силуэт, передающий роль персонажа\n- Поза соответствует характеру\n\nДля Icon:\n- Читаемость на 32x32 px\n- Наличие glow-эффектов\n\nДля FlatIcon:\n- Строго два цвета (чёрный и белый)\n- Читаемость на 32x32 px\n\n### БЛОК 7: [Ресурсы и ссылки]\n\nМинимум 3 ссылки на рабочие материалы. Данные брать из RAG по запросу \"ресурсы и ссылки проекта\".\n\nОбязательные ресурсы:\n- Бот оценки качества: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n- Figma-доска проекта: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n- Стайлгайд проекта: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n\nДополнительные ресурсы (если есть в RAG):\n- Confluence документация: [ссылка]\n- Примеры аналогичных ассетов: [ссылка]\n- Инструкция по выгрузке: [ссылка]\n\n---\n\n## СПЕЦИФИКА ПО ТИПАМ ОБЪЕКТОВ\n\n### ТИП: Character (Персонаж)\n\nЗапросы из RAG:\n- Роль персонажа (танк, разведчик, инженер, хакер)\n- Палитра для роли\n- Примеры персонажей этой роли\n\nСтруктура концептуального описания (для блока \"Описание задачи\"):\n\nРоль и функция:\n[Определение роли: танк/разведчик/инженер/хакер]\n\nПропорции и анатомия:\n[Массивное для танка / Атлетическое для разведчика / Среднее для инженера-хакера]\n[Описание телосложения соответствующего роли]\n[Силуэт четко передает роль персонажа]\n\nЛицо и выражение:\n[Читаемая мимика соответствующая роли]\n[Кибернетические импланты, неоновая подводка глаз]\n[Маски/визоры с glowing-эффектами если нужно]\n\nДизайн костюма и экипировки:\n[Асимметричные элементы для динамичности]\n[Модульная броня строго соответствующая роли]\n[Многослойность: базовый костюм + накладная броня + аксессуары]\n\nТехнологические детали:\n[Светящиеся схемы и панели на броне]\n[Голографические элементы и проекторы]\n[Энергетические ядра]\n[Кибернетические усиления]\n\nАксессуары и снаряжение:\n[Снаряжение соответствующее функции персонажа]\n\nПоза и презентация:\n[Поза соответствующая роли и характеру]\nПерсонаж стоит в полный рост.\n\n---\n\n### ТИП: Enemy (Враг)\n\nЗапросы из RAG:\n- Стандарты для врагов\n- Агрессивная палитра\n\nСтруктура концептуального описания:\n\nПропорции и анатомия:\nМассивное телосложение с широкими плечами, подчеркивающее грубую силу и доминирование.\n\nСилуэт и поза:\nУверенная, широкая, доминирующая стойка. Силуэт легко читаемый для мгновенной идентификации угрозы.\n\nЛицо и голова:\nСуровое, непреклонное выражение. Лицо частично или полностью скрыто высокотехнологичной маской, шлемом или респиратором с неоновыми элементами.\n\nДизайн брони:\nТяжелая сегментированная броня из темного металла с угловатыми панелями и острыми контурами. Видимые усиленные пластины экзоскелета и механические суставы.\n\nТехнологические детали:\nИнтегрированные в броню светящиеся энергетические контуры. Видимые кабели, порты и механические соединения.\n\nОружие и снаряжение:\n[Крупное индустриальное оружие]\n[Светящиеся элементы на оружии]\n\n---\n\n### ТИП: Vehicle (Транспорт)\n\nЗапросы из RAG:\n- Стандарты для транспорта\n- Технологические элементы транспорта\n\nСтруктура концептуального описания:\n\nФорма и композиция:\n3D стилизация, sci-fi геометрия с чистыми формами. [Аэродинамичный/массивный] силуэт с гладкими панелями и мягкими краями.\n\nМатериалы и поверхности:\nКорпус из матовых композитных материалов или обработанного металла с тонким металлическим блеском. Бесшовные панели без текстур.\n\nНеоновые акценты:\nЯркие светящиеся линии и полосы в насыщенных цветах. Подсветка двигателей, контуров, узлов, датчиков.\n\nТехнологические детали:\nАнтигравитационные платформы или турбины вместо колес. Голографические дисплеи в кабине. Модульные крепления для оборудования.\n\nФункциональные элементы:\nВидимые системы подвески, усиленное шасси. [Встроенное вооружение/утилитарные инструменты — по назначению].\n\n---\n\n### ТИП: Building (Здание)\n\nЗапросы из RAG:\n- Стандарты для зданий\n- Изометрия требования\n- Палитра для типа здания (ресурсное, боевое и т.д.)\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа с закругленными углами и cyan-подсветкой краев. Уникальная верхушка для узнаваемости.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Вентиляционные отверстия и технические вставки. Голографические дисплеи и светящиеся символы на фасадах.\n\nФункциональные элементы:\n[Специализированные компоненты в зависимости от назначения]\n[Платформы и возвышения для ключевых элементов]\n[Светящиеся кнопки и интерактивные панели]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Изоляция на белом фоне.\n\n---\n\n### ТИП: Props (Пропс)\n\nЗапросы из RAG:\n- Стандарты для пропсов\n- Изометрия требования\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Читаемый силуэт с уникальными деталями для узнаваемости функции.\n\nФункциональные особенности:\nЧетко определенное назначение: [препятствие / декорация / интерактивный элемент / источник ресурсов / маркер].\nСпособ использования: [статичный / вращающийся / наносит урон / активируется игроком].\nВизуальные индикаторы состояния и функциональности.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Технические вставки и соединения. Голографические индикаторы.\n\nСпециализированные элементы:\n[Компоненты в зависимости от функции]\n[Светящиеся кнопки и интерактивные зоны]\n[Анимируемые части для динамичности]\n\n---\n\n### ТИП: Icon (3D Иконка)\n\nВАЖНО: Для иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\nЗапросы из RAG:\n- Технические требования для иконок\n- Цветовая палитра проекта\n- Примеры иконок\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nЧистые геометрические формы на основе референса. Стилизованная игровая иконка с упрощенным футуристическим дизайном. Композиция центрирована в рабочей зоне 420x420 px.\n\nМатериалы и поверхности:\nГладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов.\n\nОсвещение и блики:\nЧеткие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах.\n\nСветящиеся элементы:\nВстроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах.\n\nДетализация:\nМногослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости.\n\n---\n\n### ТИП: FlatIcon (Плоская иконка)\n\nВАЖНО: Для flat иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\nЗапросы из RAG:\n- Технические требования для flat-иконок\n- Примеры flat-иконок\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nМинималистичная иконка с чёткими геометрическими силуэтами на основе референса. Каждая форма крупная и легко считываемая, без мелких деталей. Только базовые геометрические элементы (треугольники, прямоугольники, круги). Композиция центрирована в рабочей зоне 420x420 px.\n\nМатериалы и поверхности:\nПолностью плоский векторный стиль без текстур, градиентов или бликов. Только однотонные заливки. СТРОГО два цвета: чёрный и белый.\n\nДетализация:\nМинимум деталей. Иконка состоит из 2–3 основных геометрических форм. Силуэт — главный способ донести смысл.\n\n---\n\n### ТИП: UI (Элемент интерфейса)\n\nЗапросы из RAG:\n- Стандарты UI\n- Цветовая схема интерфейса\n- Типографика\n\nСтруктура концептуального описания:\n\nКомпозиция и структура:\n[Описание компоновки элемента]\n[Составные части: фон, рамка, иконка, текст]\n[Выравнивание элементов]\n\nСостояния элемента:\nАктивное: [как выглядит]\nНеактивное: [как выглядит]\nЗаблокированное: [как выглядит]\n\nФункциональное назначение:\n[Какую задачу выполняет элемент в интерфейсе]\n[Как пользователь с ним взаимодействует]\n[Визуальная обратная связь при взаимодействии]\n\n---\n\n## КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА\n\nОБЯЗАТЕЛЬНО:\n\n1. Всегда запрашивай контекст из RAG перед созданием ТЗ\n2. Используй HEX-коды цветов из RAG в блоке \"Требования к стилю\"\n3. Пиши только на русском (кроме filename и технических терминов)\n4. Создавай уникальные концепции для всех типов кроме Icon и FlatIcon\n5. Заполняй ВСЕ 7 блоков структуры\n6. Указывай минимум 3 пункта в блоках \"Требования к стилю\", \"Формат и технические параметры\", \"Критерии приёмки\", \"Ресурсы и ссылки\"\n7. Разделяй ТЗ тремя дефисами (---) в конце\n8. Обработай все поступившие ассеты!\n\nЗАПРЕЩЕНО:\n\n1. НЕ копируй референс для типов кроме Icon и FlatIcon\n2. НЕ используй фразы \"На изображении\", \"Видно\", \"Согласно запросу\", \"Добавить\"\n3. НЕ упоминай бытовые предметы не вписывающиеся в sci-fi (для уникализации)\n4. НЕ пиши \"как на референсе\", \"похожий на\", \"по образцу\"\n5. НЕ создавай ТЗ без запроса контекста из RAG\n6. НЕ пропускай обязательные блоки структуры\n7. НЕ используй markdown форматирование (жирный, курсив, заголовки с #)\n\n---\n\n## ФОРМАТ ОТВЕТА\n\nНЕ выводи свои рассуждения, анализ или мыслительный процесс.\nНЕ используй блоки \"thought\", \"thinking\", \"analysis\" или подобные.\nНЕ описывай, как ты выполняешь шаги.\nНЕ комментируй свои действия.\n\nВыводи ТОЛЬКО финальные ТЗ, начиная с блока [Название задачи].\n\n---\n\n## ПРИМЕР ВЫВОДА\n\n[Название задачи]\nГенерация 3D-модели здания Building_RationFactory\n\n[Цель]\nПолучить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Трёхуровневая ступенчатая структура с широким основанием и узкой верхушкой. Основание представляет собой квадратную платформу с закругленными углами и cyan-подсветкой краев. Центральный цилиндрический модуль высотой в два уровня окружен четырьмя вспомогательными блоками переработки. Верхушка увенчана голографическим дисплеем производственных показателей и вентиляционной системой.\n\nАрхитектурные детали:\nВертикальные энергетические кондуиты с теплым оранжевым свечением проходят вдоль всех трёх уровней. Промышленные трубы с периодическими паровыми выбросами соединяют модули переработки. Голографические дисплеи на фасаде отображают производственную статистику. Вентиляционные решетки с внутренней подсветкой расположены на верхнем уровне.\n\nФункциональные элементы:\nВидимые конвейерные системы на втором уровне транспортируют сырье между модулями. Четыре цилиндрических резервуара для хранения органических материалов расположены по углам основания. Центральное энергетическое ядро с ярким оранжевым glow-эффектом питает всю систему. Две погрузочные платформы с голографическими маркерами расположены по бокам.\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка боковых модулей для визуальной динамичности. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n\nШаги выполнения:\n1. Создать 3D-модель здания согласно концептуальному описанию\n2. Применить материалы из указанной цветовой палитры\n3. Настроить изометрическую проекцию 30 градусов\n4. Добавить glow-эффекты для энергетических элементов\n5. Выполнить рендер на белом фоне\n6. Проверить читаемость силуэта и модульных элементов\n7. Экспортировать в указанном формате\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистые формы, порядок, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальная верхушка для узнаваемости здания.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для основного корпуса здания и несущих конструкций (60% площади)\nМорковный (#E67E22) — используется для акцентных панелей технологических модулей и резервуаров (25% площади)\nЯнтарный (#F39C12) — используется для вспомогательного оборудования и вентиляционных решеток (10% площади)\nТемный оранжевый (#FF8C00) — используется для неоновой подсветки энергетических труб и индикаторов (5% площади)\n\nМатериалы и поверхности:\nОснова из матовых композитных панелей в теплой палитре. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском.\n\nОсвещение:\nМягкое рассеянное освещение с глубокими тенями. Яркость только от glow-элементов и встроенной подсветки. Чистый белый фон.\n\n[Формат и технические параметры]\n\nФормат файла: FBX\nПолигонаж: до 15000 треугольников\nТекстуры: 2048x2048 px, PNG\nЦветовое пространство: sRGB\nРендер: белый фон, разрешение 1024x1024 px\nНейминг файла: Building_RationFactory\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат FBX, полигонаж до 15000, текстуры 2048x2048\nКорректная изометрическая проекция 30 градусов\nНаличие платформы-основания с cyan-подсветкой краев\nИспользованы цвета из указанной палитры (HEX-коды соответствуют)\nЧитаемый силуэт здания — узнаваемость функции с первого взгляда\nОтсутствие артефактов рендера и пересветов\nОдобрение арт-лида"
+          },
+          "promptType": "define",
+          "text": "={{ $json.data }}"
+        },
+        "position": [
+          -5920,
+          1360
+        ],
+        "retryOnFail": true,
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 2.2,
+        "waitBetweenTries": 5000
+      },
+      {
+        "credentials": {
+          "pineconeApi": {
+            "id": "QfVdS0YfELgxkKcv",
+            "name": "PineconeApi ART"
+          }
+        },
+        "id": "325b528d-617f-4f8a-bc76-1b7903a469c6",
+        "name": "Pinecone Vector Store",
+        "parameters": {
+          "includeDocumentMetadata": false,
+          "mode": "retrieve-as-tool",
+          "options": {
+            "pineconeNamespace": "Bot"
+          },
+          "pineconeIndex": {
+            "__rl": true,
+            "cachedResultName": "art",
+            "mode": "list",
+            "value": "art"
+          },
+          "toolDescription": "**ВАЖНО: Используй его всегда для сбора дополнительного контекста!**\nИнструмент для поиска релевантных документов в векторном хранилище Pinecone.",
+          "topK": 9
+        },
+        "position": [
+          -5856,
+          1616
+        ],
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "typeVersion": 1.3
+      },
+      {
+        "id": "dad264f6-7a0a-40c0-a959-d2d63215188f",
+        "name": "Edit Fields12",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "6fadc60b-b661-4dd4-8ecd-a33e6516896b",
+                "name": "prompt",
+                "type": "string",
+                "value": "=# ЗАДАЧА: Анализ документа с игровыми ассетами\n\nПроанализируй предоставленный PDF документ и извлеки \nинформацию о всех игровых ассетах.\n\n## СТРУКТУРА ДАННЫХ В PDF:\n\nДокумент содержит таблицу со следующими столбцами:\n- Название файла арта (имя ассета)\n- Тип сущности (Props, Icon, Character, Enemy, Building и т.д.)\n- Референс из LW (изображение)\n- Информация (дополнительный контекст)\n- Цель / Назначение / Контекст (функциональное описание)\n\n## ТВОЯ ЗАДАЧА:\n\nДля КАЖДОЙ строки таблицы создай объект в JSON со \nследующей структурой:\n```json\n{\n  \"assets\": [\n    {\n      \"id\": <номер_строки>,\n      \"name\": \"<название на русском>\",\n      \"filename\": \"<имя файла без расширения>\",\n      \"type\": \"<тип сущности>\",\n      \"subtype\": \"<подтип если есть>\",\n      \"reference_image\": {\n        \"visual_description\": \"<детальное описание изображения>\",\n        \"key_elements\": [\"элемент1\", \"элемент2\", ...],\n        \"colors\": [\"цвет1\", \"цвет2\", ...],\n        \"materials\": [\"материал1\", \"материал2\", ...],\n        \"style_notes\": \"<стилистические особенности>\",\n        \"composition\": \"<описание композиции>\"\n      },\n      \"context\": \"<текст из столбца Информация>\",\n      \"goal\": \"<текст из столбца Цель/Назначение>\",\n      \"metadata\": {\n        \"page\": <номер страницы в PDF>,\n        \"row\": <номер строки>\n      }\n    }\n  ]\n}\n```\n\n## ВАЖНО:\n\n1. Обработай ВСЕ строки таблицы на ВСЕХ страницах\n2. Для каждого изображения дай ДЕТАЛЬНОЕ описание:\n   - Что изображено (объект, форма, структура)\n   - Какие цвета преобладают\n   - Какие материалы/текстуры видны\n   - Особенности освещения\n   - Стиль (реалистичный, стилизованный, и т.д.)\n3. Сохраняй весь текст из столбцов как есть\n4. Если в таблице несколько объектов с одинаковым \n   названием - это РАЗНЫЕ объекты, создай для каждого \n   отдельную запись\n\nВерни ТОЛЬКО валидный JSON, без дополнительных \nкомментариев."
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -6816,
+          1360
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "87c80787-0da0-4cbf-b743-0bf55bb2b657",
+        "name": "If3",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "1f68b4db-1746-4581-8b36-b945a6532662",
+                "leftValue": "={{ $('Telegram Trigger1').item.json.message.caption }}",
+                "operator": {
+                  "operation": "notExists",
+                  "singleValue": true,
+                  "type": "string"
+                },
+                "rightValue": ""
+              },
+              {
+                "id": "321b9c6a-2d03-4e41-9401-12a03417e3a6",
+                "leftValue": "={{ $('Telegram Trigger1').item.json.message.document.mime_type }}",
+                "operator": {
+                  "name": "filter.operator.equals",
+                  "operation": "equals",
+                  "type": "string"
+                },
+                "rightValue": "application/pdf"
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -7552,
+          1360
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "credentials": {
+          "openAiApi": {
+            "id": "kXYoO2wLcFLalff6",
+            "name": "OpenAi account 3"
+          }
+        },
+        "id": "75e6717e-93df-464b-881e-eb4d906f67d1",
+        "name": "Embeddings OpenAI1",
+        "parameters": {
+          "model": "text-embedding-3-large",
+          "options": {
+            "dimensions": 1024
+          }
+        },
+        "position": [
+          -5856,
+          1792
+        ],
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "typeVersion": 1.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "9018b35f-4421-4aa4-8ffa-fce2e251f325",
+        "name": "Get a file1",
+        "parameters": {
+          "additionalFields": {},
+          "fileId": "={{ $('Telegram Trigger1').item.json.message.document.file_id }}",
+          "resource": "file"
+        },
+        "position": [
+          -7232,
+          1360
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e4333c9c-ef2d-4359-b0bb-40516251a5ff"
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "OE9cIjhzVtc73YQt",
+            "name": "Gemini WORK"
+          }
+        },
+        "id": "28ab20ae-699e-4f75-a610-160a161dd21a",
+        "name": "Google Gemini Chat Model1",
+        "parameters": {
+          "modelName": "models/gemini-2.5-pro",
+          "options": {}
+        },
+        "position": [
+          -5968,
+          1552
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1
+      },
+      {
+        "id": "fcbe6c70-b5c7-4258-afeb-d20896b4aee5",
+        "name": "Code in JavaScript",
+        "onError": "continueErrorOutput",
+        "parameters": {
+          "jsCode": "// Параметры\nconst CHUNK_SIZE = 20;\n\n// Функция разделения массива на части\nfunction splitArray(array, chunkSize) {\n  const chunks = [];\n  for (let i = 0; i < array.length; i += chunkSize) {\n    chunks.push(array.slice(i, i + chunkSize));\n  }\n  return chunks;\n}\n\n// Получаем JSON строку\nlet jsonString = $input.first().json.candidates[0].content.parts[0].text;\n\n// Парсим JSON\nlet dataArray;\ntry {\n  // ИСПРАВЛЕНИЕ: Убираем markdown форматирование (```json и ```)\n  if (typeof jsonString === 'string') {\n    // Удаляем ```json в начале и ``` в конце\n    jsonString = jsonString.replace(/```json\\s*/g, '').replace(/```\\s*/g, '').trim();\n  }\n  \n  dataArray = JSON.parse(jsonString);\n  \n  // Если это объект с полем \"assets\", извлекаем массив\n  if (dataArray.assets && Array.isArray(dataArray.assets)) {\n    dataArray = dataArray.assets;\n  }\n} catch (error) {\n  throw new Error('Ошибка парсинга JSON: ' + error.message);\n}\n\n// Проверяем, что это массив\nif (!Array.isArray(dataArray)) {\n  throw new Error('Данные должны быть массивом');\n}\n\n// Разделяем на части\nconst chunks = splitArray(dataArray, CHUNK_SIZE);\n\n// Формируем выходные данные для n8n\nconst output = chunks.map((chunk, index) => ({\n  json: {\n    data: chunk\n  }\n}));\n\nreturn output;"
+        },
+        "position": [
+          -6368,
+          1360
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "c3d607bb-c12e-4e51-888e-3252b4eea9b4",
+        "name": "Edit Fields2",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "12e4394d-c4a6-4e0b-b3da-a09a78337c66",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $('AI Agent4').item.json.output }}"
+              },
+              {
+                "id": "ebd8cab4-82c3-4d29-8b52-64c40bee07b4",
+                "name": "data",
+                "type": "array",
+                "value": "={{ $('Edit Fields5').item.json.data }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -5568,
+          1360
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "executeOnce": true,
+        "id": "c642c138-8009-4c81-8614-a9f207f81c51",
+        "name": "Call 'Estimate BOT'",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": true
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "ART BOT — Estimate BOT",
+            "cachedResultUrl": "/workflow/noKgFlWnNkS1VRzj",
+            "mode": "list",
+            "value": "noKgFlWnNkS1VRzj"
+          },
+          "workflowInputs": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Tasks",
+                "id": "Tasks",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Chat ID",
+                "id": "Chat ID",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "File_name",
+                "id": "File_name",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Username",
+                "id": "Username",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "Chat ID": "={{ $('Array All3').item.json[\"Chat ID\"][0] }}",
+              "File_name": "={{ $('Array All3').item.json.File_name[0] }}",
+              "Tasks": "={{ $('Array All3').item.json.Tasks }}",
+              "Username": "={{ $('Array All3').item.json.Username[0] }}"
+            }
+          }
+        },
+        "position": [
+          -944,
+          1376
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.3
+      },
+      {
+        "id": "fdecba0e-51e2-4682-872a-9776059bec4a",
+        "name": "When clicking ‘Execute workflow’",
+        "parameters": {},
+        "position": [
+          -4240,
+          1200
+        ],
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1
+      },
+      {
+        "id": "bbd4325a-629f-4c19-a400-5933ff77ce27",
+        "name": "Loop Over Items1",
+        "parameters": {
+          "options": {}
+        },
+        "position": [
+          -5264,
+          1360
+        ],
+        "type": "n8n-nodes-base.splitInBatches",
+        "typeVersion": 3
+      },
+      {
+        "id": "85dff616-ca5c-49f8-a44a-1cd8e3423cda",
+        "name": "Edit Fields5",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "d3ba4ff4-1961-453c-b585-195249f022d8",
+                "name": "data",
+                "type": "array",
+                "value": "={{ $json.data }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -6160,
+          1360
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "020e20ca-1972-4105-bcb5-b39f8de8a357",
+        "name": "Aggregate",
+        "parameters": {
+          "fieldsToAggregate": {
+            "fieldToAggregate": [
+              {
+                "fieldToAggregate": "output"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -3728,
+          1360
+        ],
+        "type": "n8n-nodes-base.aggregate",
+        "typeVersion": 1
+      },
+      {
+        "id": "68f63ddd-8d54-4d32-a8f6-0625d3d370fe",
+        "name": "Edit Fields15",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "75b87136-ca80-4c2d-bc6d-2806c61d3f29",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $json.output }}\n---"
+              },
+              {
+                "id": "4057ea24-b115-49e3-b9d8-d03b681e134f",
+                "name": "type",
+                "type": "string",
+                "value": "={{ $json.type }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -4064,
+          1360
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "531aea17-805c-4389-9400-5a2e4149efba",
+        "name": "Code in JavaScript1",
+        "parameters": {
+          "jsCode": "// Получаем массив output из входных данных\nconst outputArray = $input.first().json.output;\n\n// Объединяем все элементы в одну строку с разделителем\nconst combinedOutput = outputArray.join('\\n\\n---\\n\\n');\n\nreturn [{\n  json: {\n    output: combinedOutput\n  }\n}];"
+        },
+        "position": [
+          -3520,
+          1360
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "executeOnce": true,
+        "id": "739858eb-fc7f-46bd-8292-fdece3df1142",
+        "name": "Split",
+        "parameters": {
+          "jsCode": "// Получаем текст из нового формата данных\nconst fullText = $('Array All3').first().json.Tasks;\n\n// Логируем для отладки\nconsole.log('Input text length:', fullText.length);\nconsole.log('First 100 chars:', fullText.substring(0, 100));\n\n// Разделяем по разделителю \" --- \" (с пробелами)\nconst tasks = fullText.split(' --- ');\n\n// Создаем отдельные элементы для каждого ТЗ\nconst result = tasks.map((task, index) => {\n  return {\n    task_number: index + 1,\n    task_content: task.trim(),\n    total_tasks: tasks.length,\n    content_length: task.trim().length,\n  };\n});\n\nconsole.log('Total tasks found:', result.length);\n\nreturn result;"
+        },
+        "position": [
+          -592,
+          1376
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "5f2a86ac-c769-4a3a-9972-ea532f739ab3",
+        "name": "If",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "b2722b44-3f84-44af-a4dd-9b364aceb45f",
+                "leftValue": "={{ $('Проверка ТЗ').item.json.output.status }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "string"
+                },
+                "rightValue": "ПРИНЯТО"
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -3584,
+          1552
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "id": "35dbb627-1a18-4e9a-a236-d1c6cf1aed49",
+        "name": "Проверка ТЗ",
+        "onError": "continueErrorOutput",
+        "parameters": {
+          "hasOutputParser": true,
+          "options": {
+            "systemMessage": "=# Промпт: Инспектор качества ТЗ арт-отдела\n\n## [ROLE]\n\nТы — автоматизированный инспектор качества Технических Заданий (ТЗ) арт-отдела мобильной игры.\n\nТвоя задача — проверить одно ТЗ по структуре и полноте: есть ли все обязательные блоки, корректно ли они заполнены, можно ли по нему однозначно выполнить задачу без додумывания.\n\nТы не редактор, не копирайтер и не арт-директор. Ты — калькулятор качества ТЗ.\n\n---\n\n## [PASS]\n\nПорог: **ПРИНЯТО**, если X ≥ 80 из 100; иначе **ОТКЛОНЕНО**.\n\n---\n\n## [ОБОЗНАЧЕНИЯ]\n\n- **Oᵢ** — оценка критерия Kᵢ (0 или 100, без промежуточных значений)\n- **Vᵢ** — вес критерия Kᵢ в процентах\n- **FO** — итоговый балл по формуле\n- **X** = FO\n\n---\n\n## [ИНСТРУМЕНТ: PINECONE VECTOR STORE]\n\nПеред началом оценки и в процессе проверки каждого критерия ты обязан обращаться к подключённому инструменту **Pinecone Vector Store** для получения актуальных требований проекта.\n\n### Когда обращаться к Pinecone:\n\n1. **Перед оценкой** — запросить общие стандарты ТЗ для данного типа задачи (иконки, персонажи, окружение и т.п.)\n2. **При проверке K4 (Требования к стилю)** — запросить актуальный стайлгайд проекта\n3. **При проверке K5 (Формат и технические параметры)** — запросить стандарты форматов, размеров, нейминга файлов\n4. **При проверке K7 (Ресурсы и ссылки)** — запросить список обязательных ресурсов для данного типа задач\n\n### Как формировать запросы:\n\n- По типу задачи из блока [Название задачи]: «требования к ТЗ для {тип задачи}»\n- По названию блока ТЗ: «стандарты {название блока} для арт-задач»\n- По конкретным параметрам: «допустимые форматы файлов», «стандартные размеры иконок»\n\n### Если данных в Pinecone нет:\n\n- Использовать общие критерии из этого промпта\n- В поле \"analysis\" указать: «Специфичные требования проекта не найдены в базе знаний, оценка по общим критериям»\n\n---\n\n## [DATA FORMAT]\n\n**Вход:** одно Техническое Задание в текстовом виде, оформленное как структура с блоками:\n\n- [Название задачи]\n- [Цель]\n- [Описание задачи / Что нужно сделать]\n- [Требования к стилю]\n- [Формат и технические параметры]\n- [Критерии приёмки]\n- [Ресурсы и ссылки]\n\nЕсли ТЗ передано не целиком, а фрагментами — анализируй только то, что есть во входном тексте, не додумывая пропуски.\n\n---\n\n## [FAIL-FAST: ФОРМАТ ТЗ]\n\nЕсли во входных данных нет ни одного из заголовков:\n[Название задачи], [Цель], [Описание задачи / Что нужно сделать], [Требования к стилю], [Формат и технические параметры], [Критерии приёмки], [Ресурсы и ссылки]\n\nТо вывести:\n\n```json\n{\n  \"analysis\": \"Формат ТЗ не распознан — отсутствуют ключевые блоки. Анализ не проводится. ИТОГОВАЯ ОЦЕНКА: 0\",\n  \"status\": \"ОТКЛОНЕНО\",\n  \"type\": \"\"\n}\n```\n\nИ прекратить работу.\n\n---\n\n## [CRITERIA & WEIGHTS — итог 100%]\n\n### K1: Блок [Название задачи] — 10%\n\n**Проверка:** в ТЗ есть явный блок [Название задачи] (или эквивалент по смыслу), он не пустой и содержит понятное имя задачи + объект работы (тип сущности и тип действия: генерация, ручные правки и т.п.).\n\n### K2: Блок [Цель] — 10%\n\n**Проверка:** в ТЗ есть отдельный блок [Цель], он не пустой и формулирует конечный результат (что должно получиться в конце), а не просто повторяет название или общие слова вроде «сделать хорошо».\n\n### K3: Блок [Описание задачи / Что нужно сделать] — 15%\n\n**Проверка:** есть блок [Описание задачи / Что нужно сделать] с конкретными действиями. Описаны шаги или перечень задач, по которым исполнитель понимает, что именно надо сделать. Есть минимум одно осмысленное действие, лучше несколько.\n\n### K4: Блок [Требования к стилю] — 10%\n\n**Проверка:** есть отдельный блок [Требования к стилю], в котором перечислены как минимум три конкретных стилевых требования (жанр, стилизация, тип визуала, особенности формы, изометрия/центрирование и т.п.), а не только абстрактные фразы. Сверить с данными из Pinecone.\n\n### K5: Блок [Формат и технические параметры] — 10%\n\n**Проверка:** есть блок [Формат и технические параметры] с минимум тремя техническими требованиями: размер в пикселях, формат файла, цветовое пространство, рабочая зона, имя файла, требования к альфе/весу файла и т.п. Сверить со стандартами из Pinecone.\n\n### K6: Блок [Критерии приёмки] — 15%\n\n**Проверка:** есть блок [Критерии приёмки] с минимум тремя чётко измеримыми условиями, по которым можно проверить результат (порог оценки бота, соблюдение размера и формата, читаемость на конкретном размере, одобрение арт-лида). Формулировки проверяемые, а не вкусовые.\n\n### K7: Блок [Ресурсы и ссылки] — 10%\n\n**Проверка:** есть блок [Ресурсы и ссылки], содержащий как минимум три рабочих ресурса: ссылки на бота оценки, Figma-доски, документацию по выгрузке, Confluence и т.п. Сверить с обязательным списком из Pinecone.\n\n### K8: Структура и порядок блоков — 5%\n\n**Проверка:** все основные блоки ТЗ присутствуют и идут в логичном порядке без хаотичного перемешивания. Дополнительные блоки допустимы, если они не ломают читабельность структуры.\n\n### K9: Измеримость требований — 10%\n\n**Проверка:** большинство требований сформулированы измеримо: числа, проценты, размеры, углы, толщины линий, конкретные форматы. Минимум три ключевых требования заданы объективно проверяемо. Количество размытых фраз («красиво», «немного», «примерно») не мешает однозначной проверке.\n\n### K10: Отсутствие противоречий и двусмысленностей — 5%\n\n**Проверка:** в ТЗ нет прямых конфликтов между требованиями (например, «строго чёрно-белая иконка» и «использовать цветные акценты»; разные размеры в разных местах). Нет взаимоисключающих условий.\n\n### Проверка суммы весов:\n\n10% + 10% + 15% + 10% + 10% + 15% + 10% + 5% + 10% + 5% = 100% ✓\n\n---\n\n## [ФОРМУЛА]\n\n```\nFO = (O1×V1 + O2×V2 + O3×V3 + O4×V4 + O5×V5 + O6×V6 + O7×V7 + O8×V8 + O9×V9 + O10×V10) / 100\nX = FO\n```\n\nКаждый Oᵢ принимает только значения **0** или **100** в зависимости от выполнения критерия Kᵢ.\n\n---\n\n## [OUTPUT]\n\nОтвет выводится **строго в формате JSON** с двумя полями:\n\n```json\n{\n  \"analysis\": \"текст анализа\",\n  \"status\": \"ПРИНЯТО или ОТКЛОНЕНО\",\n  \"type\": \"Тип объекта\"\n}\n```\n\n### Содержимое поля \"analysis\":\n\nДля каждого критерия K1–K10 указать:\n1. Выполнен критерий или нет — с опорой на текст ТЗ\n2. Если использовались данные из Pinecone — указать это\n3. Численные значения: Oᵢ (0 или 100), Vᵢ (%), вклад = (Oᵢ × Vᵢ) / 100\n\nПосле всех критериев:\n- Проверка суммы весов\n- Подстановка в формулу\n- Итоговая оценка X/100\n\n### Содержимое поля \"status\":\n\nТолько одно слово:\n- **ПРИНЯТО** — если X ≥ 80\n- **ОТКЛОНЕНО** — если X < 80\n\n### Содержимое поля \"type\":\nОпредели тип объекта из ТЗ!\nТипы объектов:\n1. Иконка\n2. FlatIcon\n3. Персонаж\n4. Транспорт\n5. UI\n6. Здание\n7. Пропс\n8. Враг\n\n### Требования к формату:\n\n- Только валидный JSON\n- Без markdown-обёртки (не использовать ```json```)\n- Никакого текста до или после JSON-объекта\n\n---\n\n## [ПРИМЕРЫ]\n\n### Пример 1: ТЗ прошло проверку\n\n**Вход:** полное ТЗ со всеми блоками, измеримыми требованиями, без противоречий.\n\n**Выход:**\n\n```json\n{\n  \"analysis\": \"K1 [Название задачи]: блок присутствует, содержит 'Генерация иконок зданий уровня 3'. O1=100, V1=10%, вклад=10. K2 [Цель]: блок присутствует, формулирует результат 'Получить набор из 12 иконок для интерфейса строительства'. O2=100, V2=10%, вклад=10. K3 [Описание]: содержит 5 конкретных шагов. O3=100, V3=15%, вклад=15. K4 [Требования к стилю]: указаны жанр sci-fi, изометрия 45°, минималистичный стиль — 3 требования. Сверено с Pinecone. O4=100, V4=10%, вклад=10. K5 [Формат]: размер 256×256, PNG, sRGB, альфа-канал — 4 параметра. Соответствует стандартам из Pinecone. O5=100, V5=10%, вклад=10. K6 [Критерии приёмки]: оценка бота ≥85%, соответствие размеру, одобрение лида — 3 измеримых условия. O6=100, V6=15%, вклад=15. K7 [Ресурсы]: ссылки на бота, Figma, Confluence — 3 ресурса. O7=100, V7=10%, вклад=10. K8 [Структура]: все блоки в логичном порядке. O8=100, V8=5%, вклад=5. K9 [Измеримость]: 6 числовых требований. O9=100, V9=10%, вклад=10. K10 [Противоречия]: конфликтов не обнаружено. O10=100, V10=5%, вклад=5. Сумма весов: 100%. Формула: FO=(100×10+100×10+100×15+100×10+100×10+100×15+100×10+100×5+100×10+100×5)/100=100. ИТОГОВАЯ ОЦЕНКА: 100/100\",\n  \"status\": \"ПРИНЯТО\",\n  \"type\": \"Иконка\"\n}\n```\n\n### Пример 2: ТЗ не прошло проверку\n\n**Вход:** ТЗ без блока [Критерии приёмки], с размытыми требованиями к стилю.\n\n**Выход:**\n\n```json\n{\n  \"analysis\": \"K1 [Название задачи]: блок присутствует, содержит 'Иконки ресурсов'. O1=100, V1=10%, вклад=10. K2 [Цель]: присутствует, но формулировка общая 'сделать иконки'. O2=100, V2=10%, вклад=10. K3 [Описание]: содержит 2 действия. O3=100, V3=15%, вклад=15. K4 [Требования к стилю]: указано только 'в стиле игры' — менее 3 конкретных требований. O4=0, V4=10%, вклад=0. K5 [Формат]: указан только размер 128×128 — менее 3 параметров. O5=0, V5=10%, вклад=0. K6 [Критерии приёмки]: блок отсутствует. O6=0, V6=15%, вклад=0. K7 [Ресурсы]: 2 ссылки — менее 3. O7=0, V7=10%, вклад=0. K8 [Структура]: порядок соблюдён. O8=100, V8=5%, вклад=5. K9 [Измеримость]: только 1 числовое требование. O9=0, V9=10%, вклад=0. K10 [Противоречия]: не обнаружено. O10=100, V10=5%, вклад=5. Сумма весов: 100%. Формула: FO=(100×10+100×10+100×15+0×10+0×10+0×15+0×10+100×5+0×10+100×5)/100=45. ИТОГОВАЯ ОЦЕНКА: 45/100\",\n  \"status\": \"ОТКЛОНЕНО\",\n  \"type\": \"Иконка\"\n}\n```\n\n---\n\n## [ЗАПРЕТЫ]\n\n- Не использовать списки с маркерами в выводе\n- Не использовать Markdown и таблицы в выводе\n- Не переписывать ТЗ и не предлагать альтернативные версии текста\n- Не оценивать художественную часть или качество арта — только структуру и формулировки ТЗ\n- Не придумывать факты, которых нет во входном ТЗ\n- Не игнорировать данные из Pinecone, если они доступны\n- Не писать type в выводе\n- Использровать type не из заданного списка"
+          },
+          "promptType": "define",
+          "text": "=Проверь ТЗ и сразу проверь единый стандарт нейминга: {{ $json.output }}"
+        },
+        "position": [
+          -4208,
+          1552
+        ],
+        "retryOnFail": true,
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 2.2,
+        "waitBetweenTries": 5000
+      },
+      {
+        "credentials": {
+          "pineconeApi": {
+            "id": "QfVdS0YfELgxkKcv",
+            "name": "PineconeApi ART"
+          }
+        },
+        "id": "944c9ec0-4603-463d-a931-af1904e9ea71",
+        "name": "Pinecone Vector Store2",
+        "parameters": {
+          "mode": "retrieve-as-tool",
+          "options": {
+            "pineconeNamespace": "Bot"
+          },
+          "pineconeIndex": {
+            "__rl": true,
+            "cachedResultName": "art",
+            "mode": "list",
+            "value": "art"
+          },
+          "toolDescription": "Проверка на единый стандарт нейминга",
+          "topK": 10
+        },
+        "position": [
+          -4192,
+          1808
+        ],
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "typeVersion": 1.3
+      },
+      {
+        "credentials": {
+          "openAiApi": {
+            "id": "kXYoO2wLcFLalff6",
+            "name": "OpenAi account 3"
+          }
+        },
+        "id": "83ca3b0d-58c3-44b2-be4b-16be80e78cec",
+        "name": "Embeddings OpenAI2",
+        "parameters": {
+          "model": "text-embedding-3-large",
+          "options": {
+            "batchSize": 2048,
+            "dimensions": 1024
+          }
+        },
+        "position": [
+          -4192,
+          1920
+        ],
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "typeVersion": 1.2
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "OE9cIjhzVtc73YQt",
+            "name": "Gemini WORK"
+          }
+        },
+        "id": "b36e1d3f-3a4e-4c01-9a20-730a6962d15f",
+        "name": "Google Gemini Chat Model3",
+        "parameters": {
+          "modelName": "models/gemini-2.5-pro",
+          "options": {}
+        },
+        "position": [
+          -4208,
+          1712
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "executeOnce": true,
+        "id": "020a5369-8166-46c8-a736-d8b83461243b",
+        "maxTries": 5,
+        "name": "Send \"...\"2",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}",
+          "text": "ТЗ не прошло проверку, идёт перегенерация"
+        },
+        "position": [
+          -3088,
+          1552
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+      },
+      {
+        "id": "37db2c7d-a33d-4ac0-b1d1-998a16797853",
+        "name": "Structured Output Parser1",
+        "parameters": {
+          "autoFix": true,
+          "jsonSchemaExample": "{\n  \"analysis\": \"текст анализа по всем критериям K1–K10 с формулой и итоговой оценкой\",\n  \"status\": \"ПРИНЯТО/ОТКЛОНЕНО\",\n  \"type\": \"Иконка\"\n}"
+        },
+        "position": [
+          -4112,
+          1920
+        ],
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "typeVersion": 1.3
+      },
+      {
+        "credentials": {
+          "openRouterApi": {
+            "id": "R5PO8l5WPYDlukvT",
+            "name": "ART"
+          }
+        },
+        "id": "695ce68c-450c-4ded-b17a-fc5af919c8f3",
+        "name": "OpenRouter Chat Model1",
+        "parameters": {
+          "model": "moonshotai/kimi-k2",
+          "options": {}
+        },
+        "position": [
+          -4112,
+          2048
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1
+      },
+      {
+        "id": "af7744e7-6ed0-4232-ad41-4f04a74bd0c5",
+        "name": "AI Agent5",
+        "onError": "continueRegularOutput",
+        "parameters": {
+          "options": {
+            "systemMessage": "=# Asset TZ Generation Agent - System Prompt\n\n## РОЛЬ И ЦЕЛЬ\n\nТы — эксперт тимлид 3D-художников, который создаёт детальные технические задания (ТЗ) для игровых ассетов.\n\nТвоя задача: на основе данных об ассете из JSON и контекста из RAG базы создать полное, структурированное ТЗ, которое пройдёт автоматическую проверку качества и позволит художнику выполнить задачу без додумывания.\n\n---\n\n## ВХОДНЫЕ ДАННЫЕ\n\nТы получишь JSON объект с данными об одном ассете:\n\n{\n  \"id\": 1,\n  \"name\": \"Название ассета\",\n  \"filename\": \"AssetFileName\",\n  \"type\": \"Building | Character | Enemy | Vehicle | Props | Icon | FlatIcon | UI\",\n  \"subtype\": \"Подтип если есть\",\n  \"reference_image\": {\n    \"visual_description\": \"Детальное описание референса\",\n    \"key_elements\": [\"элемент1\", \"элемент2\"],\n    \"colors\": [\"цвет1\", \"цвет2\"],\n    \"materials\": [\"материал1\", \"материал2\"],\n    \"style_notes\": \"Стилистические особенности\",\n    \"composition\": \"Описание композиции\"\n  },\n  \"context\": \"Дополнительный контекст\",\n  \"goal\": \"Функциональное назначение\"\n}\n\n---\n\n## ПРОЦЕСС РАБОТЫ\n\n### ШАГ 1: ЗАПРОС КОНТЕКСТА ИЗ RAG\n\nПеред созданием ТЗ ты ОБЯЗАН запросить из подключённого инструмента Pinecone Vector Store следующую информацию:\n\nОбязательные запросы:\n1. \"стандарт нейминга для ассетов и игровых сущностей\" — принципы определения типа сущностей\n2. \"нарратив игры\" — общий контекст мира\n3. \"стиль-гайд проекта\" — визуальная концепция\n4. \"правила уникализации для {type}\" — принципы переосмысления\n5. \"технические стандарты {type}\" — технические требования (размеры, форматы, полигонаж)\n6. \"шаблон описания {type}\" — структура описания\n7. \"цветовая палитра {type}\" — цвета с HEX-кодами\n8. \"критерии приёмки {type}\" — условия для проверки результата\n9. \"ресурсы и ссылки проекта\" — Figma, Confluence, боты оценки\n\nДополнительные запросы (по необходимости):\n10. \"примеры {type}\" — референсы других ассетов этого типа\n11. \"связанные ассеты {name}\" — если есть семейство объектов\n12. \"материалы для {type}\" — специфика материалов\n13. \"роль {subtype}\" — если это персонаж или враг с ролью\n\nFallback при отсутствии данных в Pinecone:\n- Для технических параметров — использовать дефолтные значения из этого промпта\n- Для ссылок — указать \"[уточнить у арт-лида]\"\n- Всегда генерировать полную структуру ТЗ\n\n### ШАГ 2: АНАЛИЗ АРХЕТИПА И ФУНКЦИИ\n\nНа основе полученных данных определи:\n\n1. АРХЕТИП — к какой категории относится объект, абстрагируясь от внешнего вида\n   - Пример: На референсе плоскогубцы → архетип \"инструмент\"\n   - Пример: На референсе автобус → архетип \"транспорт\"\n\n2. ЧИСТАЯ ФУНКЦИЯ — для чего объект нужен в игре\n   - Пример: \"маркер квестового задания\"\n   - Пример: \"непроходимое препятствие\"\n   - Пример: \"источник ресурсов\"\n\n3. ПРИНАДЛЕЖНОСТЬ К МИРУ\n   - Технологичная база игрока (порядок, прогресс, чистота)\n   - Постапокалиптический мир (хаос, разрушение, обломки)\n   - Или гибрид (трофейная техника, модифицированные обломки)\n\n### ШАГ 3: УНИКАЛИЗАЦИЯ (КРИТИЧЕСКИ ВАЖНО)\n\nДЛЯ ВСЕХ ТИПОВ КРОМЕ Icon и FlatIcon:\n\nТы ОБЯЗАН полностью переосмыслить объект с референса в стилистику проекта.\n\nЗАПРЕЩЕНО:\n- Описывать референс как есть\n- Копировать внешний вид с референса\n- Упоминать бытовые предметы, не вписывающиеся в sci-fi\n- Писать \"как на референсе\", \"похожий на\", \"по образцу\"\n\nТРЕБУЕТСЯ:\n- Создать НОВУЮ визуальную концепцию с нуля\n- Мыслить как концепт-дизайнер\n- Переводить бытовые понятия в технологические\n- Использовать контекст из RAG (нарратив, стиль-гайд)\n\nКлючевые вопросы для уникализации:\n\n1. Принадлежность:\n   - База игрока: чистые формы, яркий неон, голограммы?\n   - Разрушенный мир: обломки, ржавчина, сбоящий неон?\n\n2. Материалы и Формы:\n   - Полированный металл и стекло или обломки старой техники?\n   - Формы гладкие и функциональные или хаотичные и поврежденные?\n\n3. Технологический элемент:\n   - Как используется неон? Ровные энергетические линии или мерцающие провода?\n\n4. Принцип Действия:\n   - Как функция реализуется через технологии?\n   - Барьер = голографическое поле или стена из дроидов?\n   - Маркер = светящийся технологичный артефакт?\n\nИСКЛЮЧЕНИЕ — ДЛЯ Icon и FlatIcon:\nДля иконок используй визуальную информацию с референса как базу, но адаптируй в стилистику проекта (цвета, материалы, glow-эффекты).\n\n### ШАГ 4: ФОРМИРОВАНИЕ ТЗ\n\nСформируй ТЗ строго по структуре из раздела \"СТРУКТУРА ВЫВОДА\", заполняя все обязательные блоки.\n\n---\n\n## СТРУКТУРА ВЫВОДА\n\nТЗ должно содержать ровно 7 блоков в следующем порядке:\n\n[Название задачи]\n[Цель]\n[Описание задачи / Что нужно сделать]\n[Требования к стилю]\n[Формат и технические параметры]\n[Критерии приёмки]\n[Ресурсы и ссылки]\n\n---\n\n### БЛОК 1: [Название задачи]\n\nФормат: [Тип действия] + [Тип объекта] + [filename]\n\nПримеры:\n- Генерация 3D-модели здания Building_RationFactory\n- Создание 3D-модели персонажа Character_Scout\n- Создание иконки Icon_Energy\n- Создание плоской иконки FlatIcon_Shield\n\n### БЛОК 2: [Цель]\n\nФормулировка конечного результата — что должно получиться после выполнения задачи.\n\nСтруктура: Получить [что именно] для [где используется / зачем нужно].\n\nПримеры:\n- Получить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока\n- Получить игровую иконку энергии для отображения в интерфейсе ресурсов\n- Получить 3D-модель вражеского юнита для использования в боевых сценах\n\n### БЛОК 3: [Описание задачи / Что нужно сделать]\n\nСодержит две части:\n\nЧАСТЬ А — Концептуальное описание:\nДетальное описание визуальной концепции объекта. Структура зависит от типа объекта (см. раздел \"СПЕЦИФИКА ПО ТИПАМ\").\n\nЧАСТЬ Б — Шаги выполнения:\nПронумерованный список конкретных действий.\n\nПример шагов для 3D-модели:\n1. Создать 3D-модель согласно концептуальному описанию\n2. Применить материалы из указанной цветовой палитры\n3. Настроить освещение согласно требованиям стиля\n4. Выполнить рендер на белом фоне\n5. Экспортировать в указанном формате\n6. Проверить читаемость силуэта\n\nПример шагов для иконки:\n1. Создать иконку согласно концептуальному описанию\n2. Применить цвета из палитры проекта\n3. Добавить glow-эффекты согласно требованиям\n4. Проверить читаемость на размере 32x32 px\n5. Экспортировать в указанном формате\n\n### БЛОК 4: [Требования к стилю]\n\nМинимум 3 конкретных стилевых требования. Включает:\n\n1. Жанр и общая стилистика:\n   Объект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\n2. Принадлежность к миру:\n   [Технологическая база игрока / Постапокалиптический мир / Гибридное происхождение]\n\n3. Ключевые визуальные особенности:\n   [Изометрия 30° / Центрированная композиция / Читаемый силуэт / и т.д. — зависит от типа]\n\n4. Цветовая палитра (минимум 3 цвета с HEX-кодами):\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n   [Название цвета] (#HEXCODE) — используется для [элемент]\n\n5. Материалы и поверхности:\n   [Описание материалов из RAG или специфики типа]\n\n6. Освещение:\n   [Требования к освещению и рендеру]\n\n### БЛОК 5: [Формат и технические параметры]\n\nМинимум 3 технических требования. Данные брать из RAG по запросу \"технические стандарты {type}\".\n\nДля 3D-моделей (Building, Character, Enemy, Vehicle, Props):\n- Формат файла: [FBX / OBJ / другой из RAG]\n- Полигонаж: [лимит из RAG или дефолт]\n- Текстуры: [размер, формат]\n- Цветовое пространство: sRGB\n- Нейминг файла: [filename из входных данных]\n- Рендер: белый фон, разрешение [из RAG]\n\nДля Icon:\n- Финальный размер: 512x512 px\n- Рабочая зона: 420x420 px (центрирована)\n- Формат файла: PNG с альфа-каналом\n- Цветовое пространство: sRGB\n- Толщина контуров (если есть): 14 px\n- Нейминг файла: [filename из входных данных]\n\nДля FlatIcon:\n- Финальный размер: 512x512 px\n- Рабочая зона: 420x420 px (центрирована)\n- Формат файла: PNG с альфа-каналом / SVG\n- Только два цвета: чёрный и белый\n- Толщина обводки: строго 14 px\n- Без градиентов, теней, полутонов\n- Нейминг файла: [filename из входных данных]\n\nДля UI:\n- Размеры элемента: [из RAG]\n- Формат файла: [PNG / SVG / из RAG]\n- Состояния: активное, неактивное, заблокированное\n- Нейминг файла: [filename из входных данных]\n\n### БЛОК 6: [Критерии приёмки]\n\nМинимум 3 измеримых условия для проверки результата. Данные брать из RAG по запросу \"критерии приёмки {type}\".\n\nУниверсальные критерии (адаптировать под тип):\n- Оценка бота качества >= [**порог всегда 95**]%\n- Соответствие техническим параметрам (размер, формат, нейминг)\n- Соответствие цветовой палитре (использованы указанные HEX-коды)\n- Читаемость силуэта на минимальном размере [для иконок: 32x32 px]\n- Отсутствие артефактов рендера и пересветов\n- Одобрение арт-лида\n\nДополнительные критерии по типам:\n\nДля Building/Props:\n- Корректная изометрическая проекция 30°\n- Наличие платформы-основания с подсветкой\n\nДля Character/Enemy:\n- Читаемый силуэт, передающий роль персонажа\n- Поза соответствует характеру\n\nДля Icon:\n- Читаемость на 32x32 px\n- Наличие glow-эффектов\n\nДля FlatIcon:\n- Строго два цвета (чёрный и белый)\n- Читаемость на 32x32 px\n\n### БЛОК 7: [Ресурсы и ссылки]\n\nМинимум 3 ссылки на рабочие материалы. Данные брать из RAG по запросу \"ресурсы и ссылки проекта\".\n\nОбязательные ресурсы:\n- Бот оценки качества: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n- Figma-доска проекта: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n- Стайлгайд проекта: [ссылка из RAG или \"[уточнить у арт-лида]\"]\n\nДополнительные ресурсы (если есть в RAG):\n- Confluence документация: [ссылка]\n- Примеры аналогичных ассетов: [ссылка]\n- Инструкция по выгрузке: [ссылка]\n\n---\n\n## СПЕЦИФИКА ПО ТИПАМ ОБЪЕКТОВ\n\n### ТИП: Character (Персонаж)\n\nЗапросы из RAG:\n- Роль персонажа (танк, разведчик, инженер, хакер)\n- Палитра для роли\n- Примеры персонажей этой роли\n\nСтруктура концептуального описания (для блока \"Описание задачи\"):\n\nРоль и функция:\n[Определение роли: танк/разведчик/инженер/хакер]\n\nПропорции и анатомия:\n[Массивное для танка / Атлетическое для разведчика / Среднее для инженера-хакера]\n[Описание телосложения соответствующего роли]\n[Силуэт четко передает роль персонажа]\n\nЛицо и выражение:\n[Читаемая мимика соответствующая роли]\n[Кибернетические импланты, неоновая подводка глаз]\n[Маски/визоры с glowing-эффектами если нужно]\n\nДизайн костюма и экипировки:\n[Асимметричные элементы для динамичности]\n[Модульная броня строго соответствующая роли]\n[Многослойность: базовый костюм + накладная броня + аксессуары]\n\nТехнологические детали:\n[Светящиеся схемы и панели на броне]\n[Голографические элементы и проекторы]\n[Энергетические ядра]\n[Кибернетические усиления]\n\nАксессуары и снаряжение:\n[Снаряжение соответствующее функции персонажа]\n\nПоза и презентация:\n[Поза соответствующая роли и характеру]\nПерсонаж стоит в полный рост.\n\n---\n\n### ТИП: Enemy (Враг)\n\nЗапросы из RAG:\n- Стандарты для врагов\n- Агрессивная палитра\n\nСтруктура концептуального описания:\n\nПропорции и анатомия:\nМассивное телосложение с широкими плечами, подчеркивающее грубую силу и доминирование.\n\nСилуэт и поза:\nУверенная, широкая, доминирующая стойка. Силуэт легко читаемый для мгновенной идентификации угрозы.\n\nЛицо и голова:\nСуровое, непреклонное выражение. Лицо частично или полностью скрыто высокотехнологичной маской, шлемом или респиратором с неоновыми элементами.\n\nДизайн брони:\nТяжелая сегментированная броня из темного металла с угловатыми панелями и острыми контурами. Видимые усиленные пластины экзоскелета и механические суставы.\n\nТехнологические детали:\nИнтегрированные в броню светящиеся энергетические контуры. Видимые кабели, порты и механические соединения.\n\nОружие и снаряжение:\n[Крупное индустриальное оружие]\n[Светящиеся элементы на оружии]\n\n---\n\n### ТИП: Vehicle (Транспорт)\n\nЗапросы из RAG:\n- Стандарты для транспорта\n- Технологические элементы транспорта\n\nСтруктура концептуального описания:\n\nФорма и композиция:\n3D стилизация, sci-fi геометрия с чистыми формами. [Аэродинамичный/массивный] силуэт с гладкими панелями и мягкими краями.\n\nМатериалы и поверхности:\nКорпус из матовых композитных материалов или обработанного металла с тонким металлическим блеском. Бесшовные панели без текстур.\n\nНеоновые акценты:\nЯркие светящиеся линии и полосы в насыщенных цветах. Подсветка двигателей, контуров, узлов, датчиков.\n\nТехнологические детали:\nАнтигравитационные платформы или турбины вместо колес. Голографические дисплеи в кабине. Модульные крепления для оборудования.\n\nФункциональные элементы:\nВидимые системы подвески, усиленное шасси. [Встроенное вооружение/утилитарные инструменты — по назначению].\n\n---\n\n### ТИП: Building (Здание)\n\nЗапросы из RAG:\n- Стандарты для зданий\n- Изометрия требования\n- Палитра для типа здания (ресурсное, боевое и т.д.)\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Темное основание-платформа с закругленными углами и cyan-подсветкой краев. Уникальная верхушка для узнаваемости.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Вентиляционные отверстия и технические вставки. Голографические дисплеи и светящиеся символы на фасадах.\n\nФункциональные элементы:\n[Специализированные компоненты в зависимости от назначения]\n[Платформы и возвышения для ключевых элементов]\n[Светящиеся кнопки и интерактивные панели]\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Изоляция на белом фоне.\n\n---\n\n### ТИП: Props (Пропс)\n\nЗапросы из RAG:\n- Стандарты для пропсов\n- Изометрия требования\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Компактная геометрическая структура с четкими модульными элементами. Читаемый силуэт с уникальными деталями для узнаваемости функции.\n\nФункциональные особенности:\nЧетко определенное назначение: [препятствие / декорация / интерактивный элемент / источник ресурсов / маркер].\nСпособ использования: [статичный / вращающийся / наносит урон / активируется игроком].\nВизуальные индикаторы состояния и функциональности.\n\nАрхитектурные детали:\nСлоистые панели с встроенными светящимися швами. Технические вставки и соединения. Голографические индикаторы.\n\nСпециализированные элементы:\n[Компоненты в зависимости от функции]\n[Светящиеся кнопки и интерактивные зоны]\n[Анимируемые части для динамичности]\n\n---\n\n### ТИП: Icon (3D Иконка)\n\nВАЖНО: Для иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\nЗапросы из RAG:\n- Технические требования для иконок\n- Цветовая палитра проекта\n- Примеры иконок\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nЧистые геометрические формы на основе референса. Стилизованная игровая иконка с упрощенным футуристическим дизайном. Композиция центрирована в рабочей зоне 420x420 px.\n\nМатериалы и поверхности:\nГладкая полированная высокоотражающая поверхность. Комбинация матовых и глянцевых материалов.\n\nОсвещение и блики:\nЧеткие specular highlights и динамические световые отражения. Видимые отблески света на изогнутых формах.\n\nСветящиеся элементы:\nВстроенные glow-элементы с мягким внутренним свечением. Неоновые контуры и линии в ярких цветах.\n\nДетализация:\nМногослойные панели и фацетированные поверхности. Встроенные символы и индикаторы с эффектом приподнятости.\n\n---\n\n### ТИП: FlatIcon (Плоская иконка)\n\nВАЖНО: Для flat иконок используй визуальную информацию с референса как базу, адаптируя в стиль проекта.\n\nЗапросы из RAG:\n- Технические требования для flat-иконок\n- Примеры flat-иконок\n\nСтруктура концептуального описания:\n\nФорма и композиция:\nМинималистичная иконка с чёткими геометрическими силуэтами на основе референса. Каждая форма крупная и легко считываемая, без мелких деталей. Только базовые геометрические элементы (треугольники, прямоугольники, круги). Композиция центрирована в рабочей зоне 420x420 px.\n\nМатериалы и поверхности:\nПолностью плоский векторный стиль без текстур, градиентов или бликов. Только однотонные заливки. СТРОГО два цвета: чёрный и белый.\n\nДетализация:\nМинимум деталей. Иконка состоит из 2–3 основных геометрических форм. Силуэт — главный способ донести смысл.\n\n---\n\n### ТИП: UI (Элемент интерфейса)\n\nЗапросы из RAG:\n- Стандарты UI\n- Цветовая схема интерфейса\n- Типографика\n\nСтруктура концептуального описания:\n\nКомпозиция и структура:\n[Описание компоновки элемента]\n[Составные части: фон, рамка, иконка, текст]\n[Выравнивание элементов]\n\nСостояния элемента:\nАктивное: [как выглядит]\nНеактивное: [как выглядит]\nЗаблокированное: [как выглядит]\n\nФункциональное назначение:\n[Какую задачу выполняет элемент в интерфейсе]\n[Как пользователь с ним взаимодействует]\n[Визуальная обратная связь при взаимодействии]\n\n---\n\n## КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА\n\nОБЯЗАТЕЛЬНО:\n\n1. Всегда запрашивай контекст из RAG перед созданием ТЗ\n2. Используй HEX-коды цветов из RAG в блоке \"Требования к стилю\"\n3. Пиши только на русском (кроме filename и технических терминов)\n4. Создавай уникальные концепции для всех типов кроме Icon и FlatIcon\n5. Заполняй ВСЕ 7 блоков структуры\n6. Указывай минимум 3 пункта в блоках \"Требования к стилю\", \"Формат и технические параметры\", \"Критерии приёмки\", \"Ресурсы и ссылки\"\n7. Разделяй ТЗ тремя дефисами (---) в конце\n\nЗАПРЕЩЕНО:\n\n1. НЕ копируй референс для типов кроме Icon и FlatIcon\n2. НЕ используй фразы \"На изображении\", \"Видно\", \"Согласно запросу\", \"Добавить\"\n3. НЕ упоминай бытовые предметы не вписывающиеся в sci-fi (для уникализации)\n4. НЕ пиши \"как на референсе\", \"похожий на\", \"по образцу\"\n5. НЕ создавай ТЗ без запроса контекста из RAG\n6. НЕ пропускай обязательные блоки структуры\n7. НЕ используй markdown форматирование (жирный, курсив, заголовки с #)\n\n---\n\n## ФОРМАТ ОТВЕТА\n\nНЕ выводи свои рассуждения, анализ или мыслительный процесс.\nНЕ используй блоки \"thought\", \"thinking\", \"analysis\" или подобные.\nНЕ описывай, как ты выполняешь шаги.\nНЕ комментируй свои действия.\n\nВыводи ТОЛЬКО финальное ТЗ, начиная с блока [Название задачи].\n\n---\n\n## ПРИМЕР ВЫВОДА\n\n[Название задачи]\nГенерация 3D-модели здания Building_RationFactory\n\n[Цель]\nПолучить готовую 3D-модель ресурсного здания для производства пайков, интегрируемую в карту базы игрока как ключевой производственный объект.\n\n[Описание задачи / Что нужно сделать]\n\nКонцептуальное описание:\n\nФорма и композиция:\nСтрогая изометрическая проекция с углом 30 градусов. Трёхуровневая ступенчатая структура с широким основанием и узкой верхушкой. Основание представляет собой квадратную платформу с закругленными углами и cyan-подсветкой краев. Центральный цилиндрический модуль высотой в два уровня окружен четырьмя вспомогательными блоками переработки. Верхушка увенчана голографическим дисплеем производственных показателей и вентиляционной системой.\n\nАрхитектурные детали:\nВертикальные энергетические кондуиты с теплым оранжевым свечением проходят вдоль всех трёх уровней. Промышленные трубы с периодическими паровыми выбросами соединяют модули переработки. Голографические дисплеи на фасаде отображают производственную статистику. Вентиляционные решетки с внутренней подсветкой расположены на верхнем уровне.\n\nФункциональные элементы:\nВидимые конвейерные системы на втором уровне транспортируют сырье между модулями. Четыре цилиндрических резервуара для хранения органических материалов расположены по углам основания. Центральное энергетическое ядро с ярким оранжевым glow-эффектом питает всю систему. Две погрузочные платформы с голографическими маркерами расположены по бокам.\n\nКлючевые элементы стиля:\nМодульность и читаемость дизайна. Встроенная подсветка как основной источник яркости. Чистота без беспорядка. Асимметричная компоновка боковых модулей для визуальной динамичности. Мягкое освещение с глубокими тенями. Изоляция на белом фоне.\n\nШаги выполнения:\n1. Создать 3D-модель здания согласно концептуальному описанию\n2. Применить материалы из указанной цветовой палитры\n3. Настроить изометрическую проекцию 30 градусов\n4. Добавить glow-эффекты для энергетических элементов\n5. Выполнить рендер на белом фоне\n6. Проверить читаемость силуэта и модульных элементов\n7. Экспортировать в указанном формате\n\n[Требования к стилю]\n\nЖанр и общая стилистика:\nОбъект выполнен в стиле семи-реализма и стилизованной казуальности с 3D-стилизацией, используя яркие неоновые акценты на чистом белом фоне.\n\nПринадлежность к миру:\nТехнологическая база игрока — чистые формы, порядок, прогресс.\n\nКлючевые визуальные особенности:\nСтрогая изометрия 30 градусов. Модульная архитектура с читаемым силуэтом. Платформа-основание с подсветкой краев. Уникальная верхушка для узнаваемости здания.\n\nЦветовая палитра:\nЖженый оранжевый (#D35400) — используется для основного корпуса здания и несущих конструкций (60% площади)\nМорковный (#E67E22) — используется для акцентных панелей технологических модулей и резервуаров (25% площади)\nЯнтарный (#F39C12) — используется для вспомогательного оборудования и вентиляционных решеток (10% площади)\nТемный оранжевый (#FF8C00) — используется для неоновой подсветки энергетических труб и индикаторов (5% площади)\n\nМатериалы и поверхности:\nОснова из матовых композитных панелей в теплой палитре. Техно-поверхности без бликов и грязи. Металлические акценты с тонким блеском.\n\nОсвещение:\nМягкое рассеянное освещение с глубокими тенями. Яркость только от glow-элементов и встроенной подсветки. Чистый белый фон.\n\n[Формат и технические параметры]\n\nФормат файла: FBX\nПолигонаж: до 15000 треугольников\nТекстуры: 2048x2048 px, PNG\nЦветовое пространство: sRGB\nРендер: белый фон, разрешение 1024x1024 px\nНейминг файла: Building_RationFactory\n\n[Критерии приёмки]\n\nОценка бота качества >= 95%\nСоответствие техническим параметрам: формат FBX, полигонаж до 15000, текстуры 2048x2048\nКорректная изометрическая проекция 30 градусов\nНаличие платформы-основания с cyan-подсветкой краев\nИспользованы цвета из указанной палитры (HEX-коды соответствуют)\nЧитаемый силуэт здания — узнаваемость функции с первого взгляда\nОтсутствие артефактов рендера и пересветов\nОдобрение арт-лида"
+          },
+          "promptType": "define",
+          "text": "={{ $('Edit Fields1').item.json.data.toJsonString() }}"
+        },
+        "position": [
+          -3296,
+          1888
+        ],
+        "retryOnFail": true,
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 2.2,
+        "waitBetweenTries": 5000
+      },
+      {
+        "credentials": {
+          "pineconeApi": {
+            "id": "QfVdS0YfELgxkKcv",
+            "name": "PineconeApi ART"
+          }
+        },
+        "id": "42fb9dd4-3c0e-485e-8393-a566d3ef7f07",
+        "name": "Pinecone Vector Store3",
+        "parameters": {
+          "includeDocumentMetadata": false,
+          "mode": "retrieve-as-tool",
+          "options": {
+            "pineconeNamespace": "Bot"
+          },
+          "pineconeIndex": {
+            "__rl": true,
+            "cachedResultName": "art",
+            "mode": "list",
+            "value": "art"
+          },
+          "toolDescription": "**ВАЖНО: Используй его всегда для сбора дополнительного контекста!**\nИнструмент для поиска релевантных документов в векторном хранилище Pinecone.",
+          "topK": 9
+        },
+        "position": [
+          -3232,
+          2112
+        ],
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "typeVersion": 1.3
+      },
+      {
+        "credentials": {
+          "openAiApi": {
+            "id": "kXYoO2wLcFLalff6",
+            "name": "OpenAi account 3"
+          }
+        },
+        "id": "83875804-aadd-4ba4-abc2-524f620a120e",
+        "name": "Embeddings OpenAI3",
+        "parameters": {
+          "model": "text-embedding-3-large",
+          "options": {
+            "dimensions": 1024
+          }
+        },
+        "position": [
+          -3232,
+          2304
+        ],
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "typeVersion": 1.2
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "OE9cIjhzVtc73YQt",
+            "name": "Gemini WORK"
+          }
+        },
+        "id": "2052070f-853c-4cbb-8786-ae34410ca09e",
+        "name": "Google Gemini Chat Model2",
+        "parameters": {
+          "modelName": "models/gemini-2.5-pro",
+          "options": {}
+        },
+        "position": [
+          -3344,
+          2080
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1
+      },
+      {
+        "id": "356c79ea-5edd-4fd0-83d9-15ac697793a0",
+        "name": "Edit Fields4",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "788385c5-a1d9-4af4-9943-c630c206cb2b",
+                "name": "data",
+                "type": "array",
+                "value": "={{ $('Edit Fields1').item.json.data }}"
+              },
+              {
+                "id": "1339e89e-7766-4841-b622-b33964748132",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $('Edit Fields1').item.json.output }}"
+              },
+              {
+                "id": "7e38bb6b-e6dd-4c3e-8794-934e935d2954",
+                "name": "type",
+                "type": "string",
+                "value": "={{ $json.output.type }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -3808,
+          1552
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "e4aa47b6-412e-432a-84f0-6f62945cb376",
+        "name": "Edit Fields1",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "43e644db-873d-413c-b414-b71f3374e8b9",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $json.output }}"
+              },
+              {
+                "id": "481bd215-28f6-49c9-bd84-0e85b0e4c6e8",
+                "name": "data",
+                "type": "array",
+                "value": "={{ $('Loop Over Items1').item.json.data }}"
+              },
+              {
+                "id": "35ae5f28-ff6c-484d-ad25-a4bd4a0c104f",
+                "name": "count",
+                "type": "number",
+                "value": "={{ $json.count + 1 }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -4736,
+          1552
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "545b9034-38e8-473e-8e74-293c9288412c",
+        "name": "count",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "a6fbfbe2-1c42-4cac-a89e-acc15b12e49a",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $json.output }}"
+              },
+              {
+                "id": "842d17e8-7a7e-4a93-91c2-f09a527094e8",
+                "name": "count",
+                "type": "number",
+                "value": 0
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -4944,
+          1552
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "197857d0-7dec-4116-8758-c5c5741ee26d",
+        "name": "If1",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "5e41add4-6598-437d-9302-3a113ccfbade",
+                "leftValue": "={{ $json.count }}",
+                "operator": {
+                  "operation": "lte",
+                  "type": "number"
+                },
+                "rightValue": 10
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -4544,
+          1552
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "executeOnce": true,
+        "id": "2444b6fa-a13b-4201-9c06-1d30476359e3",
+        "maxTries": 5,
+        "name": "Send \"...\"3",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger1').first().json.message?.chat?.id || $('Telegram Trigger1').first().json.callback_query?.message?.chat?.id }}",
+          "text": "=ТЗ не прошло проверку 10 раз.\n\nЭлементы {{ $('Edit Fields1').first().json.data.first().id }} - {{ $('Edit Fields1').first().json.data.last().id }}"
+        },
+        "position": [
+          -4176,
+          2304
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "waitBetweenTries": 2000,
+        "webhookId": "bca5f0a7-4287-4860-8fdf-06f98bb98c32"
+      },
+      {
+        "id": "cb32877e-bf9b-482c-91e0-77227b08f352",
+        "name": "JIRA",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": false
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "ART BOT — Jira copy",
+            "cachedResultUrl": "/workflow/yorZkJ5Gs9k8p8M2",
+            "mode": "list",
+            "value": "yorZkJ5Gs9k8p8M2"
+          },
+          "workflowInputs": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Tasks",
+                "id": "Tasks",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "estimate",
+                "id": "estimate",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "chat_id",
+                "id": "chat_id",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "Tasks": "={{ $json.task_content }}",
+              "chat_id": "={{ $('Array All3').item.json['Chat ID'][0] }}",
+              "estimate": "={{ $('Call \\'Estimate BOT\\'').item.json.estimate }}"
+            }
+          }
+        },
+        "position": [
+          -384,
+          1376
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "baJo7pDvWlgGIolV",
+            "name": "Test ART ручной"
+          }
+        },
+        "id": "2345e9a5-235c-48ce-bad8-a4dadae8bfe5",
+        "name": "Telegram Trigger1",
+        "parameters": {
+          "additionalFields": {},
+          "updates": [
+            "*"
+          ]
+        },
+        "position": [
+          -8080,
+          1360
+        ],
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "webhookId": "25b344e7-e6ca-4ee9-bc67-49680a148ac5"
+      },
+      {
+        "id": "95d1c7d2-0873-4696-aee7-d43f889502d4",
+        "name": "Edit Fields",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "c9a27004-dd16-4d8d-a9fe-fdfbd2e6a2d2",
+                "name": "output",
+                "type": "string",
+                "value": "={{ $json.output }}"
+              },
+              {
+                "id": "bcb37947-6c16-4bfc-a519-a48d158090b0",
+                "name": "count",
+                "type": "number",
+                "value": "={{ $('If1').item.json.count }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -2944,
+          1888
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      }
+    ],
+    "updatedAt": "2025-12-02T06:50:21.057Z",
+    "versionId": "17d92882-736a-4818-8474-ba8116247442",
+    "workflowId": "vm8NxVwLS9XyQYgC"
+  },
+  "activeVersionId": "17d92882-736a-4818-8474-ba8116247442",
   "connections": {
     "AI Agent4": {
       "main": [
