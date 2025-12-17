@@ -1,0 +1,544 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Output",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Build Output": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Is CSV?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Download1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fetch API": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Process Weapons",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Has Image?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Finalize": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Has Image?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Resize",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Is CSV?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fetch API",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Process Weapons": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Download1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Resize": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Finalize",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Config",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ZIP": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-17T12:41:20.356Z",
+  "id": "X7NC5m69f9TsZWeh",
+  "isArchived": false,
+  "meta": null,
+  "name": "Fortnite_Weapons",
+  "nodes": [
+    {
+      "id": "4a2f0a15-3eab-40c5-b932-177f011291ac",
+      "name": "Trigger",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -1344,
+        1216
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "7e73f9ba-4831-4ab0-96ca-3ce54a1d7cd4",
+      "name": "Config",
+      "parameters": {
+        "jsCode": "const input = $json;\nreturn [{ json: { chat_id: input.chat_id, count: input.config?.weapons?.count || 50 }}];"
+      },
+      "position": [
+        -1136,
+        1216
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "c1c3f5ce-b3e0-467c-a3de-b79b1c005cfb",
+      "name": "Notify",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "text": "Processing Weapons..."
+      },
+      "position": [
+        -944,
+        1216
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "b78dc3e5-821c-4e5c-8d13-adc00df56ef0"
+    },
+    {
+      "continueOnFail": true,
+      "id": "e7c1754c-c3d0-4bb4-b501-e5a16b1709c0",
+      "name": "Resize",
+      "parameters": {
+        "dataPropertyName": "image",
+        "height": 650,
+        "operation": "resize",
+        "options": {},
+        "width": 480
+      },
+      "position": [
+        272,
+        1120
+      ],
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1
+    },
+    {
+      "id": "5fe1e2cb-4cd1-4827-ae8c-a798ee52dece",
+      "name": "Finalize",
+      "parameters": {
+        "jsCode": "const items=$('Has Image?').all().filter(i=>!i.json._skip); const meta=items[$itemIndex]?.json||{}; const bin=$input.item.binary||{};\nconst newBin={}; if(bin.image)newBin.image={...bin.image,fileName:meta.img_file,mimeType:'image/png'};\nreturn{json:meta,binary:newBin};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        464,
+        1120
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6cf2cc38-dd58-441a-a893-ff08ce1916a7",
+      "name": "Aggregate",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "items",
+        "options": {}
+      },
+      "position": [
+        672,
+        1120
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "52379d67-ee06-43bd-9c6a-75ddd3dc1198",
+      "name": "Build Output",
+      "parameters": {
+        "jsCode": "const items=$json.items||[]; const finalItems=$('Finalize').all(); let chatId=items[0]?._chat_id||0;\nconst csv=['id,name,rarity,image']; for(const i of items)csv.push(`${i.id},\"${(i.name||'').replace(/\"/g,'')}\",${i.rarity},${i.img_file}`);\nconst binData={},keys=[]; for(const f of finalItems){if(f.binary?.image){binData[f.json.img_file]=f.binary.image;keys.push(f.json.img_file);}}\nreturn[\n  {json:{type:'csv',chat_id:chatId,count:items.length},binary:{file:{data:Buffer.from(csv.join('\\n')).toString('base64'),mimeType:'text/csv',fileName:'weapons.csv'}}},\n  {json:{type:'zip',chat_id:chatId,count:items.length,keys:keys.join(',')},binary:binData}\n];"
+      },
+      "position": [
+        864,
+        1120
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "e5cf60c0-a885-4432-9d63-32c35eeca35c",
+      "name": "Is CSV?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "ef869d87-cfbf-4b02-a782-3f87e6ce1a14",
+              "leftValue": "={{ $json.type }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "csv"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1072,
+        1120
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "5bac24ef-993e-4b52-be74-933cd8ed9619",
+      "name": "Send CSV",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=WEAPONS ({{ $json.count }})"
+        },
+        "binaryData": true,
+        "binaryPropertyName": "file",
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1264,
+        1008
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "2223696a-2d4c-4f7a-8ac2-c3bc17cbf22e"
+    },
+    {
+      "id": "876578bc-5257-44a6-a9bc-ae9e430de487",
+      "name": "ZIP",
+      "parameters": {
+        "binaryPropertyName": "={{ $json.keys }}",
+        "fileName": "weapons.zip",
+        "operation": "compress"
+      },
+      "position": [
+        1264,
+        1216
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "bc3cf631-2b1f-4f83-969d-9f2fca6498e8",
+      "name": "Send ZIP",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=WEAPONS ({{ $json.count }})"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Trigger').last().json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1472,
+        1216
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "34a504cc-5705-4e56-b54c-cf85f4d8b2ca"
+    },
+    {
+      "id": "26e2e0a2-4af4-477b-960f-4ccd1d1d4a83",
+      "name": "Fetch API",
+      "parameters": {
+        "options": {
+          "timeout": 60000
+        },
+        "url": "https://fortnite-api.com/v2/cosmetics/br"
+      },
+      "position": [
+        -752,
+        1216
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "continueOnFail": true,
+      "id": "85173716-82df-4a75-a6cb-52eb9ad807c8",
+      "name": "Download1",
+      "parameters": {
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 30000
+        },
+        "url": "={{ $json.image_url }}"
+      },
+      "position": [
+        -352,
+        1216
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "9ebf9669-9b67-431a-8f6b-3b87f9bd4288",
+      "name": "Process Weapons",
+      "parameters": {
+        "jsCode": "// Use Fortnite API instead - get ranged weapons from cosmetics\nconst cosmetics = $json.data || [];\nconst config = $('Config').first().json;\n\nconst RARITIES = ['common','uncommon','rare','epic','legendary','other'];\nconst normalize = r => { const v=(r?.value||'other').toLowerCase(); return RARITIES.slice(0,5).includes(v)?v:'other'; };\n\n// Get items that look like weapons: pickaxe, wrap, etc\nconst weapons = [];\n\n// Option 1: Use pickaxes as \"melee weapons\"\nconst pickaxes = cosmetics.filter(i => i.type?.value === 'pickaxe' && i.images?.icon);\nfor (let i = 0; i < Math.min(pickaxes.length, config.count); i++) {\n  const p = pickaxes[i];\n  weapons.push({\n    id: `weapon_${i}`,\n    name: p.name || `Weapon ${i}`,\n    rarity: normalize(p.rarity),\n    type: 'melee',\n    image_url: p.images.icon,\n    img_file: `weapon_${i}.png`,\n    _chat_id: config.chat_id\n  });\n}\n\n// If not enough, add wraps\nif (weapons.length < config.count) {\n  const wraps = cosmetics.filter(i => i.type?.value === 'wrap' && i.images?.icon);\n  for (let i = 0; weapons.length < config.count && i < wraps.length; i++) {\n    const w = wraps[i];\n    weapons.push({\n      id: `weapon_${weapons.length}`,\n      name: w.name || `Weapon ${weapons.length}`,\n      rarity: normalize(w.rarity),\n      type: 'ranged',\n      image_url: w.images.icon,\n      img_file: `weapon_${weapons.length}.png`,\n      _chat_id: config.chat_id\n    });\n  }\n}\n\n// Shuffle and select by rarity\nconst shuffled = weapons.sort(() => Math.random() - 0.5);\nconst byRarity = {}; for(const r of RARITIES) byRarity[r]=[];\nfor(const w of shuffled) byRarity[w.rarity].push(w);\n\nconst selected = [], used = new Set();\nfor(const r of RARITIES){ let c=0; for(const w of byRarity[r]){ if(c>=10||used.has(w.id))continue; selected.push(w);used.add(w.id);c++; }}\nfor(const w of shuffled){ if(selected.length>=config.count)break; if(!used.has(w.id)){selected.push(w);used.add(w.id);} }\n\nreturn selected.map(w => ({ json: w }));"
+      },
+      "position": [
+        -560,
+        1216
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "31eb8db0-7859-4710-962d-1d3f6644a737",
+      "name": "Has Image?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1e0dd85c-ab0d-4eff-830f-52fe4648974c",
+              "leftValue": "={{ $json._skip }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        48,
+        1216
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "11f52b58-9703-488f-98d9-1a6f0197f0b7",
+      "name": "Filter",
+      "parameters": {
+        "jsCode": "const items=$('Process Weapons').all(); const meta=items[$itemIndex]?.json||{}; const bin=$input.item.binary;\nif(!bin||!Object.keys(bin).length)return{json:{...meta,_skip:true}};\nconst k=Object.keys(bin)[0]; return{json:meta,binary:{image:{...bin[k],fileName:meta.img_file,mimeType:'image/png'}}};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -160,
+        1216
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {
+    "Trigger": [
+      {
+        "json": {
+          "ok": true,
+          "result": {
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1765975534,
+            "entities": [
+              {
+                "length": 41,
+                "offset": 144,
+                "type": "italic"
+              },
+              {
+                "length": 3,
+                "offset": 185,
+                "type": "text_link",
+                "url": "https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620"
+              }
+            ],
+            "from": {
+              "first_name": "testn8nbot",
+              "id": 8556384331,
+              "is_bot": true,
+              "username": "testn8n44bot"
+            },
+            "link_preview_options": {
+              "is_disabled": true
+            },
+            "message_id": 122,
+            "text": "🎮 Fortnite Orchestrator\n\n📋 Sections:\n• Skins: 50\n• Emotes: 50\n• Items: 50\n• Weapons: 50\n• Bundles: 50\n• XP Maps: 50\n\n⏳ Starting workflows...\n\nThis message was sent automatically with n8n"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-17T12:41:20.362Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-17T12:41:20.362Z",
+      "workflowId": "X7NC5m69f9TsZWeh"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-17T13:50:25.471Z",
+  "versionId": "e45b7287-b672-43a7-ba65-6775b0df65d8"
+}
