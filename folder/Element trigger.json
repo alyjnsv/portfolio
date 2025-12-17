@@ -1,5 +1,243 @@
 {
   "active": true,
+  "activeVersion": {
+    "authors": "TIMOFEI ZAITSEV",
+    "connections": {
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "HTTP — Скачать файл (binary)",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get many messages": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "HTTP — Скачать файл (binary)": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Call 'Element ART BOT'",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Error",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Webhook": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Get many messages",
+              "type": "main"
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2025-12-15T12:39:10.477Z",
+    "description": null,
+    "name": null,
+    "nodes": [
+      {
+        "id": "685770d5-8045-4ffa-b6a3-8bfa7dce1b58",
+        "name": "Webhook",
+        "parameters": {
+          "httpMethod": "POST",
+          "options": {},
+          "path": "Artlog_bot"
+        },
+        "position": [
+          -4880,
+          896
+        ],
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "webhookId": "e4ea071f-94b5-45f5-99f5-c30c365ba3e1"
+      },
+      {
+        "credentials": {
+          "matrixApi": {
+            "id": "8zaMKEVQX7KwyTVm",
+            "name": "Matrix Main Bot"
+          }
+        },
+        "id": "abb342dd-c1ff-44c9-b771-2492641b6081",
+        "name": "Get many messages",
+        "parameters": {
+          "limit": 1,
+          "operation": "getAll",
+          "otherOptions": {},
+          "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU"
+        },
+        "position": [
+          -4592,
+          896
+        ],
+        "type": "n8n-nodes-base.matrix",
+        "typeVersion": 1
+      },
+      {
+        "id": "f6876514-6f0f-44e2-8669-5ab608b3224c",
+        "name": "Code in JavaScript",
+        "parameters": {
+          "jsCode": "const out = [];\nfor (const item of $input.all()) {\n  const { json } = item;\n  const mxcUrl = json.content?.url;\n\n  if (!mxcUrl || !mxcUrl.startsWith('mxc://')) {\n    out.push({ json });\n    continue;\n  }\n\n  const match = mxcUrl.match(/^mxc:\\/\\/([^\\/]+)\\/(.+)$/);\n  if (!match) {\n    out.push({ json });\n    continue;\n  }\n\n  const [_, server, mediaId] = match;\n  // ВАЖНО: используем оригинальный сервер из MXC, а не жёстко прописанный!\n  const baseUrl = `https://${server}`;\n  const downloadUrl = `https://matrix.itcomp.org/_matrix/client/v1/media/download/${server}/${mediaId}?allow_remote=true`;\n\n  out.push({\n    json: {\n      ...json,\n      downloadUrl\n    }\n  });\n}\nreturn out;"
+        },
+        "position": [
+          -3904,
+          1056
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "httpBearerAuth": {
+            "id": "nSLJTuOtJ3zU6f80",
+            "name": "Bearer Auth Main Bot"
+          }
+        },
+        "id": "9bce209c-8fb9-4568-94cd-ce051e9f6317",
+        "name": "HTTP — Скачать файл (binary)",
+        "onError": "continueErrorOutput",
+        "parameters": {
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpBearerAuth",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "file"
+              }
+            }
+          },
+          "url": "={{ $json.downloadUrl }}"
+        },
+        "position": [
+          -3600,
+          1056
+        ],
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "317cbe00-7bec-4b42-9d02-ad1f177201ba",
+        "name": "If2",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "e653a16b-240b-447e-9ee3-b7dc59070523",
+                "leftValue": "={{ $json.content.msgtype }}",
+                "operator": {
+                  "operation": "contains",
+                  "type": "string"
+                },
+                "rightValue": "=m.file"
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -4128,
+          1072
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "id": "28f22cb5-8a7f-4bb7-9ff9-ea2c188f8d33",
+        "name": "Call 'Element ART BOT'",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": false
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "ART BOT — Element ART BOT",
+            "cachedResultUrl": "/workflow/LKIfqsOmEtGED3gh",
+            "mode": "list",
+            "value": "LKIfqsOmEtGED3gh"
+          },
+          "workflowInputs": {
+            "mappingMode": "defineBelow",
+            "value": {}
+          }
+        },
+        "position": [
+          -3120,
+          896
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.3
+      },
+      {
+        "credentials": {
+          "matrixApi": {
+            "id": "8zaMKEVQX7KwyTVm",
+            "name": "Matrix Main Bot"
+          }
+        },
+        "executeOnce": true,
+        "id": "ecee67c7-d04c-4c3e-89ca-97c9f7db0f4c",
+        "name": "Error",
+        "parameters": {
+          "roomId": "=!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
+          "text": "=Ошибка при скачивании файла"
+        },
+        "position": [
+          -3312,
+          1280
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.matrix",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      }
+    ],
+    "updatedAt": "2025-12-15T12:39:10.477Z",
+    "versionId": "0a19eb4b-ee99-4945-82d0-787a227e5fcb",
+    "workflowId": "8hAL1P83T3KgVt6U"
+  },
+  "activeVersionId": "0a19eb4b-ee99-4945-82d0-787a227e5fcb",
   "connections": {
     "Code in JavaScript": {
       "main": [
