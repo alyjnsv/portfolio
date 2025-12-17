@@ -1,0 +1,485 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Output1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Build Output1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Is CSV?1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Config1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "DL Video1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fetch API1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Process Emotes1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Has Video?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Is CSV?1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fetch API1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Parse Video": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Has Video?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Process Emotes1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "DL Video1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Config1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ZIP1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send ZIP1",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-17T12:40:36.056Z",
+  "id": "PSCQddvfDbmkWTGr",
+  "isArchived": false,
+  "meta": null,
+  "name": "Fortnite_Emotes",
+  "nodes": [
+    {
+      "id": "f291a3b4-61e3-489f-ad85-e8bb02c454d2",
+      "name": "Trigger",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -1568,
+        1136
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "3871669c-8f8d-4f86-b5dd-aaa290876825",
+      "name": "Parse Video",
+      "parameters": {
+        "jsCode": "const items = $('Process Emotes1').all();\nconst meta = items[$itemIndex]?.json || {};\nconst bin = $input.item.binary || {};\n\nif (!bin || !Object.keys(bin).length) {\n  return { json: { ...meta, _skip: true } };\n}\n\nconst k = Object.keys(bin)[0];\nreturn {\n  json: { ...meta, has_video: true },\n  binary: { video: { ...bin[k], fileName: meta.vid_file, mimeType: 'video/mp4' } }\n};",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -336,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "fbb955c4-8aa6-4a71-97a9-b3430083b167",
+      "name": "Has Video?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json._skip }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -128,
+        1136
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "d669970d-7974-4bb9-9c8b-14c167517b30",
+      "name": "Config1",
+      "parameters": {
+        "jsCode": "const input = $json;\nreturn [{ json: {\n  chat_id: input.chat_id,\n  count: input.config?.emotes?.count || 50\n}}];"
+      },
+      "position": [
+        -1328,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "1d52fd0b-dff2-4bba-abf6-293d10188a2b",
+      "name": "Notify1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "text": "Processing Emotes..."
+      },
+      "position": [
+        -1136,
+        1136
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "9ce32ee6-1746-4dc2-9f62-2251859ec7cd"
+    },
+    {
+      "id": "100db0ea-e0d6-4f53-a247-3667347e8f4b",
+      "name": "Fetch API1",
+      "parameters": {
+        "options": {
+          "timeout": 120000
+        },
+        "url": "https://fortnite-api.com/v2/cosmetics/br"
+      },
+      "position": [
+        -928,
+        1136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "510f6eec-fdff-4a46-a2f5-7a55f7598701",
+      "name": "Process Emotes1",
+      "parameters": {
+        "jsCode": "const cosmetics = $json.data || [];\nconst config = $('Config1').first().json;\nconst chatId = config.chat_id;\nconst count = config.count;\n\nconst RARITIES = ['common','uncommon','rare','epic','legendary','other'];\nconst normalize = r => {\n  const v = (r?.value || 'other').toLowerCase();\n  if (RARITIES.slice(0,5).includes(v)) return v;\n  return 'other';\n};\n\nconst emotes = cosmetics.filter(i => i.type?.value === 'emote');\n\nconst byRarity = {};\nfor (const r of RARITIES) byRarity[r] = [];\nfor (const e of emotes) byRarity[normalize(e.rarity)].push(e);\n\nconst selected = [];\nconst used = new Set();\n\nfor (const r of RARITIES) {\n  const pool = byRarity[r].sort(() => Math.random() - 0.5);\n  let c = 0;\n  for (const e of pool) {\n    if (c >= 10) break;\n    selected.push(e); used.add(e.id); c++;\n  }\n}\n\nconst remaining = emotes.filter(e => !used.has(e.id)).sort(() => Math.random() - 0.5);\nfor (const e of remaining) {\n  if (selected.length >= count) break;\n  selected.push(e);\n}\n\nreturn selected.map((e, i) => {\n  const numId = e.id.replace(/\\D/g, '') || i;\n  return {\n    json: {\n      id: e.id,\n      name: e.name || '',\n      rarity: normalize(e.rarity),\n      vid_file: `${e.id}.mp4`,\n      vid_url: `https://fnggcdn.com/items/${numId}/video.mp4`,\n      _idx: i,\n      _chat_id: chatId\n    }\n  };\n});"
+      },
+      "position": [
+        -736,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "ab561275-161e-426f-b393-370e63007584",
+      "name": "DL Video1",
+      "parameters": {
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 60000
+        },
+        "url": "={{ $json.vid_url }}"
+      },
+      "position": [
+        -528,
+        1136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "893a06fd-914c-419c-8cb4-f7530920b232",
+      "name": "Aggregate1",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "items",
+        "options": {}
+      },
+      "position": [
+        64,
+        1040
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "8826e97c-a89e-4e9e-848c-927aebb49ccf",
+      "name": "Build Output1",
+      "parameters": {
+        "jsCode": "// В Build Output замени код на:\nconst items = $json.items || [];\nconst videoItems = $('Has Video?').all().filter(i => !i.json._skip);\nlet chatId = items[0]?._chat_id || 0;\n\n// Build CSV\nconst csv = ['id,name,rarity,video'];\nfor (const item of items) {\n  if (!item._skip) {\n    csv.push(`${item.id},\"${(item.name||'').replace(/\"/g,'')}\",${item.rarity},${item.vid_file}`);\n  }\n}\n\n// Split into chunks of 25 videos\nconst CHUNK_SIZE = 25;\nconst outputs = [];\n\n// First: CSV file\noutputs.push({ \n  json: { type: 'csv', chat_id: chatId, count: videoItems.length }, \n  binary: { file: { data: Buffer.from(csv.join('\\n')).toString('base64'), mimeType: 'text/csv', fileName: 'emotes.csv' } } \n});\n\n// Then: Multiple ZIPs\nlet chunkIndex = 1;\nfor (let i = 0; i < videoItems.length; i += CHUNK_SIZE) {\n  const chunk = videoItems.slice(i, i + CHUNK_SIZE);\n  const binData = {};\n  const keys = [];\n  \n  for (const f of chunk) {\n    if (f.binary?.video) {\n      binData[f.json.vid_file] = f.binary.video;\n      keys.push(f.json.vid_file);\n    }\n  }\n  \n  if (keys.length > 0) {\n    outputs.push({ \n      json: { type: 'zip', chat_id: chatId, count: keys.length, part: chunkIndex, keys: keys.join(',') }, \n      binary: binData \n    });\n    chunkIndex++;\n  }\n}\n\nreturn outputs;"
+      },
+      "position": [
+        272,
+        1040
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "4416ebe8-6945-4964-a7dc-2684ab963535",
+      "name": "Is CSV?1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "88bc08b2-6afb-4d9c-93fc-11e04dfacf9a",
+              "leftValue": "={{ $json.type }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "csv"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        464,
+        1040
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "58685583-ed1c-499b-a223-20e241b9310d",
+      "name": "Send CSV1",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=EMOTES ({{ $json.count }} videos)"
+        },
+        "binaryData": true,
+        "binaryPropertyName": "file",
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        672,
+        928
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e23d93bd-0cde-42c9-b357-294bf0bb3184"
+    },
+    {
+      "id": "a86a117a-022f-4ea5-9134-6c8f7674481c",
+      "name": "ZIP1",
+      "parameters": {
+        "binaryPropertyName": "={{ $json.keys }}",
+        "fileName": "emotes.zip",
+        "operation": "compress"
+      },
+      "position": [
+        672,
+        1136
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "cff6b33a-d796-4e33-9a5c-0964156f5ff4",
+      "name": "Send ZIP1",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=EMOTES ({{ $json.count }} videos)"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        864,
+        1136
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "26dee73a-9ce3-4434-9438-cac5e7725f21"
+    }
+  ],
+  "pinData": {
+    "Trigger": [
+      {
+        "json": {
+          "ok": true,
+          "result": {
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1765975534,
+            "entities": [
+              {
+                "length": 41,
+                "offset": 144,
+                "type": "italic"
+              },
+              {
+                "length": 3,
+                "offset": 185,
+                "type": "text_link",
+                "url": "https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620"
+              }
+            ],
+            "from": {
+              "first_name": "testn8nbot",
+              "id": 8556384331,
+              "is_bot": true,
+              "username": "testn8n44bot"
+            },
+            "link_preview_options": {
+              "is_disabled": true
+            },
+            "message_id": 122,
+            "text": "🎮 Fortnite Orchestrator\n\n📋 Sections:\n• Skins: 50\n• Emotes: 50\n• Items: 50\n• Weapons: 50\n• Bundles: 50\n• XP Maps: 50\n\n⏳ Starting workflows...\n\nThis message was sent automatically with n8n"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-17T12:40:36.060Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-17T12:40:36.060Z",
+      "workflowId": "PSCQddvfDbmkWTGr"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-17T13:49:23.112Z",
+  "versionId": "005632b7-d8c9-45dc-9729-36367f332634"
+}
