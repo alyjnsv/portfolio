@@ -965,12 +965,30 @@
           ]
         ]
       },
-      "Есть таска?": {
+      "Есть пк?": {
         "main": [
           [
             {
               "index": 0,
               "node": "Update Workers Task + Status",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Есть таска?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Есть пк?",
               "type": "main"
             }
           ],
@@ -984,7 +1002,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-17T13:57:26.847Z",
+    "createdAt": "2025-12-18T13:37:26.585Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1011,7 +1029,7 @@
           "operation": "get"
         },
         "position": [
-          -2544,
+          -2528,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -1093,7 +1111,7 @@
           "options": {}
         },
         "position": [
-          -2224,
+          -2016,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -1126,7 +1144,7 @@
           "options": {}
         },
         "position": [
-          -2384,
+          -2368,
           192
         ],
         "type": "n8n-nodes-base.if",
@@ -1137,8 +1155,8 @@
         "name": "No Operation, do nothing3",
         "parameters": {},
         "position": [
-          -2224,
-          336
+          -2368,
+          320
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -1218,7 +1236,7 @@
           "options": {}
         },
         "position": [
-          -2064,
+          -1856,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -1241,7 +1259,7 @@
           "options": {}
         },
         "position": [
-          -1120,
+          -912,
           176
         ],
         "type": "n8n-nodes-base.set",
@@ -1284,7 +1302,7 @@
           }
         },
         "position": [
-          -960,
+          -752,
           176
         ],
         "type": "n8n-nodes-base.jira",
@@ -1313,7 +1331,7 @@
           "operation": "get"
         },
         "position": [
-          -2864,
+          -2848,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -1977,7 +1995,7 @@
           "options": {}
         },
         "position": [
-          -480,
+          -272,
           176
         ],
         "type": "n8n-nodes-base.if",
@@ -2007,7 +2025,7 @@
           "responseMode": "responseNode"
         },
         "position": [
-          -3184,
+          -3168,
           192
         ],
         "type": "n8n-nodes-base.webhook",
@@ -2115,7 +2133,7 @@
           }
         },
         "position": [
-          -2704,
+          -2688,
           176
         ],
         "type": "n8n-nodes-base.switch",
@@ -2138,7 +2156,7 @@
           "options": {}
         },
         "position": [
-          -2544,
+          -2528,
           464
         ],
         "type": "n8n-nodes-base.set",
@@ -2179,7 +2197,7 @@
           }
         },
         "position": [
-          -2384,
+          -2368,
           464
         ],
         "type": "n8n-nodes-base.jira",
@@ -2259,7 +2277,7 @@
           "options": {}
         },
         "position": [
-          -2224,
+          -2208,
           464
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -2417,7 +2435,7 @@
           "operation": "get"
         },
         "position": [
-          -800,
+          -592,
           176
         ],
         "type": "n8n-nodes-base.jira",
@@ -2851,7 +2869,7 @@
           "options": {}
         },
         "position": [
-          -3024,
+          -3008,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -3011,7 +3029,7 @@
           "options": {}
         },
         "position": [
-          -320,
+          -112,
           176
         ],
         "type": "n8n-nodes-base.splitOut",
@@ -3024,7 +3042,7 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          -640,
+          -432,
           176
         ],
         "type": "n8n-nodes-base.code",
@@ -3047,7 +3065,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          -160,
+          48,
           176
         ],
         "type": "n8n-nodes-base.jira",
@@ -3061,7 +3079,7 @@
           "options": {}
         },
         "position": [
-          0,
+          208,
           176
         ],
         "type": "n8n-nodes-base.extractFromFile",
@@ -3081,7 +3099,7 @@
           "options": {}
         },
         "position": [
-          160,
+          368,
           176
         ],
         "type": "n8n-nodes-base.aggregate",
@@ -3094,7 +3112,7 @@
           "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
         },
         "position": [
-          320,
+          528,
           176
         ],
         "type": "n8n-nodes-base.code",
@@ -3109,7 +3127,7 @@
           "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['0'] }}\",\n  \"data_1\": \"{{ $json['1'] }}\"\n}"
         },
         "position": [
-          480,
+          688,
           176
         ],
         "type": "n8n-nodes-base.respondToWebhook",
@@ -3696,7 +3714,7 @@
           "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    // content должен быть строкой и содержать 'dropbox'\n    if (typeof content === 'string' && content.toLowerCase().includes('dropbox')) {\n      result.push({\n        json: {\n          content,\n          attachment: att,\n          sourceKey: 'fields.attachment.content',\n        }\n      });\n    }\n  }\n}\n\nreturn result;\n"
         },
         "position": [
-          -624,
+          -416,
           480
         ],
         "type": "n8n-nodes-base.code",
@@ -3719,7 +3737,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          -448,
+          -240,
           480
         ],
         "type": "n8n-nodes-base.jira",
@@ -3748,7 +3766,7 @@
           "operation": "get"
         },
         "position": [
-          -1872,
+          -1664,
           192
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -3771,7 +3789,7 @@
           "options": {}
         },
         "position": [
-          -1120,
+          -912,
           480
         ],
         "type": "n8n-nodes-base.set",
@@ -3814,7 +3832,7 @@
           }
         },
         "position": [
-          -960,
+          -752,
           480
         ],
         "type": "n8n-nodes-base.jira",
@@ -3847,7 +3865,7 @@
           "options": {}
         },
         "position": [
-          1680,
+          1888,
           512
         ],
         "type": "n8n-nodes-base.if",
@@ -3869,7 +3887,7 @@
           "operation": "get"
         },
         "position": [
-          -800,
+          -592,
           480
         ],
         "type": "n8n-nodes-base.jira",
@@ -3882,7 +3900,7 @@
           "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('promt');\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
         },
         "position": [
-          896,
+          1104,
           656
         ],
         "type": "n8n-nodes-base.code",
@@ -3905,7 +3923,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          1200,
+          1408,
           656
         ],
         "type": "n8n-nodes-base.jira",
@@ -3938,7 +3956,7 @@
           "options": {}
         },
         "position": [
-          -1696,
+          -1488,
           192
         ],
         "type": "n8n-nodes-base.if",
@@ -3952,7 +3970,7 @@
           "options": {}
         },
         "position": [
-          -288,
+          -80,
           480
         ],
         "type": "n8n-nodes-base.extractFromFile",
@@ -3971,7 +3989,7 @@
           "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
         },
         "position": [
-          912,
+          1120,
           352
         ],
         "type": "@n8n/n8n-nodes-langchain.agent",
@@ -3999,7 +4017,7 @@
           "operation": "get"
         },
         "position": [
-          -112,
+          96,
           480
         ],
         "type": "n8n-nodes-base.dataTable",
@@ -4021,7 +4039,7 @@
           "operation": "get"
         },
         "position": [
-          560,
+          768,
           656
         ],
         "type": "n8n-nodes-base.jira",
@@ -4032,7 +4050,7 @@
         "name": "Merge",
         "parameters": {},
         "position": [
-          1488,
+          1696,
           512
         ],
         "type": "n8n-nodes-base.merge",
@@ -4046,7 +4064,7 @@
           "options": {}
         },
         "position": [
-          1888,
+          2096,
           512
         ],
         "type": "n8n-nodes-base.extractFromFile",
@@ -4066,7 +4084,7 @@
           "options": {}
         },
         "position": [
-          2048,
+          2256,
           512
         ],
         "type": "n8n-nodes-base.aggregate",
@@ -4079,7 +4097,7 @@
           "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
         },
         "position": [
-          2208,
+          2416,
           512
         ],
         "type": "n8n-nodes-base.code",
@@ -4094,7 +4112,7 @@
           "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['1'] }}\",\n  \"data_1\": \"{{ $json['0'] }}\"\n}"
         },
         "position": [
-          2368,
+          2576,
           512
         ],
         "type": "n8n-nodes-base.respondToWebhook",
@@ -4118,7 +4136,7 @@
           "jsCode": "const items = $input.all();\nconst fileNames = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    if (typeof content !== 'string') continue;\n\n    const lowerContent = content.toLowerCase();\n\n    // Ищем readme или content\n    if (!lowerContent.includes('readme') && !lowerContent.includes('content')) {\n      continue;\n    }\n\n    let fileName =\n      att.fileName ||\n      att.filename ||\n      att.name ||\n      '';\n\n    // Если имени нет — вытаскиваем из URL/строки\n    if (!fileName) {\n      const clean = content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop() || '';\n    }\n\n    if (!fileName) fileName = 'unknown';\n\n    fileNames.push(fileName);\n  }\n}\n\n// Один item на выходе\nreturn [\n  {\n    json: {\n      fileNames, // массив всех найденных имён\n      count: fileNames.length,\n    }\n  }\n];\n"
         },
         "position": [
-          704,
+          912,
           352
         ],
         "type": "n8n-nodes-base.code",
@@ -4140,7 +4158,7 @@
           "operation": "get"
         },
         "position": [
-          560,
+          768,
           352
         ],
         "type": "n8n-nodes-base.jira",
@@ -4201,7 +4219,7 @@
           "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'promt_dropbox_2.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
         },
         "position": [
-          1200,
+          1408,
           352
         ],
         "type": "n8n-nodes-base.code",
@@ -4228,7 +4246,7 @@
           }
         },
         "position": [
-          896,
+          1104,
           528
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
@@ -4269,7 +4287,7 @@
           }
         },
         "position": [
-          -1280,
+          -1072,
           480
         ],
         "type": "n8n-nodes-base.jira",
@@ -4292,7 +4310,7 @@
           "options": {}
         },
         "position": [
-          -1440,
+          -1232,
           480
         ],
         "type": "n8n-nodes-base.set",
@@ -4333,7 +4351,7 @@
           }
         },
         "position": [
-          -1296,
+          -1088,
           176
         ],
         "type": "n8n-nodes-base.jira",
@@ -4356,18 +4374,63 @@
           "options": {}
         },
         "position": [
-          -1456,
+          -1248,
           176
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
+      },
+      {
+        "id": "51282374-b411-4de9-95dd-45a0e5f5467e",
+        "name": "Есть пк?",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "ba741007-8d5e-40ea-a48c-090e89af26b0",
+                "leftValue": "={{ $json.desktop }}",
+                "operator": {
+                  "operation": "notEmpty",
+                  "singleValue": true,
+                  "type": "string"
+                },
+                "rightValue": ""
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -2208,
+          192
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "id": "0821dc49-15a0-482c-b15e-350621a51bbb",
+        "name": "No Operation, do nothing",
+        "parameters": {},
+        "position": [
+          -2208,
+          320
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-17T13:57:26.847Z",
-    "versionId": "b156a2bf-867a-421e-a1c7-2ed118729a14",
+    "updatedAt": "2025-12-18T13:37:26.585Z",
+    "versionId": "07e64184-2ed0-4651-bc24-d58f806e90ab",
     "workflowId": "ARtmbGaqzmUv1KS5"
   },
-  "activeVersionId": "b156a2bf-867a-421e-a1c7-2ed118729a14",
+  "activeVersionId": "07e64184-2ed0-4651-bc24-d58f806e90ab",
   "connections": {
     "AI Agent": {
       "main": [
@@ -5331,12 +5394,30 @@
         ]
       ]
     },
-    "Есть таска?": {
+    "Есть пк?": {
       "main": [
         [
           {
             "index": 0,
             "node": "Update Workers Task + Status",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Есть таска?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Есть пк?",
             "type": "main"
           }
         ],
@@ -5381,7 +5462,7 @@
         "operation": "get"
       },
       "position": [
-        -2544,
+        -2528,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -5463,7 +5544,7 @@
         "options": {}
       },
       "position": [
-        -2224,
+        -2016,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -5496,7 +5577,7 @@
         "options": {}
       },
       "position": [
-        -2384,
+        -2368,
         192
       ],
       "type": "n8n-nodes-base.if",
@@ -5507,8 +5588,8 @@
       "name": "No Operation, do nothing3",
       "parameters": {},
       "position": [
-        -2224,
-        336
+        -2368,
+        320
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -5588,7 +5669,7 @@
         "options": {}
       },
       "position": [
-        -2064,
+        -1856,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -5611,7 +5692,7 @@
         "options": {}
       },
       "position": [
-        -1120,
+        -912,
         176
       ],
       "type": "n8n-nodes-base.set",
@@ -5654,7 +5735,7 @@
         }
       },
       "position": [
-        -960,
+        -752,
         176
       ],
       "type": "n8n-nodes-base.jira",
@@ -5683,7 +5764,7 @@
         "operation": "get"
       },
       "position": [
-        -2864,
+        -2848,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -6347,7 +6428,7 @@
         "options": {}
       },
       "position": [
-        -480,
+        -272,
         176
       ],
       "type": "n8n-nodes-base.if",
@@ -6377,7 +6458,7 @@
         "responseMode": "responseNode"
       },
       "position": [
-        -3184,
+        -3168,
         192
       ],
       "type": "n8n-nodes-base.webhook",
@@ -6485,7 +6566,7 @@
         }
       },
       "position": [
-        -2704,
+        -2688,
         176
       ],
       "type": "n8n-nodes-base.switch",
@@ -6508,7 +6589,7 @@
         "options": {}
       },
       "position": [
-        -2544,
+        -2528,
         464
       ],
       "type": "n8n-nodes-base.set",
@@ -6549,7 +6630,7 @@
         }
       },
       "position": [
-        -2384,
+        -2368,
         464
       ],
       "type": "n8n-nodes-base.jira",
@@ -6629,7 +6710,7 @@
         "options": {}
       },
       "position": [
-        -2224,
+        -2208,
         464
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -6787,7 +6868,7 @@
         "operation": "get"
       },
       "position": [
-        -800,
+        -592,
         176
       ],
       "type": "n8n-nodes-base.jira",
@@ -7221,7 +7302,7 @@
         "options": {}
       },
       "position": [
-        -3024,
+        -3008,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -7381,7 +7462,7 @@
         "options": {}
       },
       "position": [
-        -320,
+        -112,
         176
       ],
       "type": "n8n-nodes-base.splitOut",
@@ -7394,7 +7475,7 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        -640,
+        -432,
         176
       ],
       "type": "n8n-nodes-base.code",
@@ -7417,7 +7498,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        -160,
+        48,
         176
       ],
       "type": "n8n-nodes-base.jira",
@@ -7431,7 +7512,7 @@
         "options": {}
       },
       "position": [
-        0,
+        208,
         176
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -7451,7 +7532,7 @@
         "options": {}
       },
       "position": [
-        160,
+        368,
         176
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -7464,7 +7545,7 @@
         "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
       },
       "position": [
-        320,
+        528,
         176
       ],
       "type": "n8n-nodes-base.code",
@@ -7479,7 +7560,7 @@
         "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['0'] }}\",\n  \"data_1\": \"{{ $json['1'] }}\"\n}"
       },
       "position": [
-        480,
+        688,
         176
       ],
       "type": "n8n-nodes-base.respondToWebhook",
@@ -8066,7 +8147,7 @@
         "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    // content должен быть строкой и содержать 'dropbox'\n    if (typeof content === 'string' && content.toLowerCase().includes('dropbox')) {\n      result.push({\n        json: {\n          content,\n          attachment: att,\n          sourceKey: 'fields.attachment.content',\n        }\n      });\n    }\n  }\n}\n\nreturn result;\n"
       },
       "position": [
-        -624,
+        -416,
         480
       ],
       "type": "n8n-nodes-base.code",
@@ -8089,7 +8170,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        -448,
+        -240,
         480
       ],
       "type": "n8n-nodes-base.jira",
@@ -8118,7 +8199,7 @@
         "operation": "get"
       },
       "position": [
-        -1872,
+        -1664,
         192
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -8141,7 +8222,7 @@
         "options": {}
       },
       "position": [
-        -1120,
+        -912,
         480
       ],
       "type": "n8n-nodes-base.set",
@@ -8184,7 +8265,7 @@
         }
       },
       "position": [
-        -960,
+        -752,
         480
       ],
       "type": "n8n-nodes-base.jira",
@@ -8217,7 +8298,7 @@
         "options": {}
       },
       "position": [
-        1680,
+        1888,
         512
       ],
       "type": "n8n-nodes-base.if",
@@ -8239,7 +8320,7 @@
         "operation": "get"
       },
       "position": [
-        -800,
+        -592,
         480
       ],
       "type": "n8n-nodes-base.jira",
@@ -8252,7 +8333,7 @@
         "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('promt');\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
       },
       "position": [
-        896,
+        1104,
         656
       ],
       "type": "n8n-nodes-base.code",
@@ -8275,7 +8356,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        1200,
+        1408,
         656
       ],
       "type": "n8n-nodes-base.jira",
@@ -8308,7 +8389,7 @@
         "options": {}
       },
       "position": [
-        -1696,
+        -1488,
         192
       ],
       "type": "n8n-nodes-base.if",
@@ -8322,7 +8403,7 @@
         "options": {}
       },
       "position": [
-        -288,
+        -80,
         480
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -8341,7 +8422,7 @@
         "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
       },
       "position": [
-        912,
+        1120,
         352
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -8369,7 +8450,7 @@
         "operation": "get"
       },
       "position": [
-        -112,
+        96,
         480
       ],
       "type": "n8n-nodes-base.dataTable",
@@ -8391,7 +8472,7 @@
         "operation": "get"
       },
       "position": [
-        560,
+        768,
         656
       ],
       "type": "n8n-nodes-base.jira",
@@ -8402,7 +8483,7 @@
       "name": "Merge",
       "parameters": {},
       "position": [
-        1488,
+        1696,
         512
       ],
       "type": "n8n-nodes-base.merge",
@@ -8416,7 +8497,7 @@
         "options": {}
       },
       "position": [
-        1888,
+        2096,
         512
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -8436,7 +8517,7 @@
         "options": {}
       },
       "position": [
-        2048,
+        2256,
         512
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -8449,7 +8530,7 @@
         "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
       },
       "position": [
-        2208,
+        2416,
         512
       ],
       "type": "n8n-nodes-base.code",
@@ -8464,7 +8545,7 @@
         "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['1'] }}\",\n  \"data_1\": \"{{ $json['0'] }}\"\n}"
       },
       "position": [
-        2368,
+        2576,
         512
       ],
       "type": "n8n-nodes-base.respondToWebhook",
@@ -8488,7 +8569,7 @@
         "jsCode": "const items = $input.all();\nconst fileNames = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    if (typeof content !== 'string') continue;\n\n    const lowerContent = content.toLowerCase();\n\n    // Ищем readme или content\n    if (!lowerContent.includes('readme') && !lowerContent.includes('content')) {\n      continue;\n    }\n\n    let fileName =\n      att.fileName ||\n      att.filename ||\n      att.name ||\n      '';\n\n    // Если имени нет — вытаскиваем из URL/строки\n    if (!fileName) {\n      const clean = content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop() || '';\n    }\n\n    if (!fileName) fileName = 'unknown';\n\n    fileNames.push(fileName);\n  }\n}\n\n// Один item на выходе\nreturn [\n  {\n    json: {\n      fileNames, // массив всех найденных имён\n      count: fileNames.length,\n    }\n  }\n];\n"
       },
       "position": [
-        704,
+        912,
         352
       ],
       "type": "n8n-nodes-base.code",
@@ -8510,7 +8591,7 @@
         "operation": "get"
       },
       "position": [
-        560,
+        768,
         352
       ],
       "type": "n8n-nodes-base.jira",
@@ -8571,7 +8652,7 @@
         "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'promt_dropbox_2.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
       },
       "position": [
-        1200,
+        1408,
         352
       ],
       "type": "n8n-nodes-base.code",
@@ -8598,7 +8679,7 @@
         }
       },
       "position": [
-        896,
+        1104,
         528
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
@@ -8639,7 +8720,7 @@
         }
       },
       "position": [
-        -1280,
+        -1072,
         480
       ],
       "type": "n8n-nodes-base.jira",
@@ -8662,7 +8743,7 @@
         "options": {}
       },
       "position": [
-        -1440,
+        -1232,
         480
       ],
       "type": "n8n-nodes-base.set",
@@ -8703,7 +8784,7 @@
         }
       },
       "position": [
-        -1296,
+        -1088,
         176
       ],
       "type": "n8n-nodes-base.jira",
@@ -8726,11 +8807,56 @@
         "options": {}
       },
       "position": [
-        -1456,
+        -1248,
         176
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
+    },
+    {
+      "id": "51282374-b411-4de9-95dd-45a0e5f5467e",
+      "name": "Есть пк?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "ba741007-8d5e-40ea-a48c-090e89af26b0",
+              "leftValue": "={{ $json.desktop }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -2208,
+        192
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "id": "0821dc49-15a0-482c-b15e-350621a51bbb",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        -2208,
+        320
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -8780,27 +8906,27 @@
             "accept-encoding": "gzip, br",
             "accept-language": "*",
             "cdn-loop": "cloudflare; loops=1; subreqs=1",
-            "cf-connecting-ip": "46.235.72.49",
+            "cf-connecting-ip": "89.149.94.222",
             "cf-ew-via": "15",
-            "cf-ipcountry": "KZ",
-            "cf-ray": "9af6335542a2c0bb-WAW",
+            "cf-ipcountry": "MD",
+            "cf-ray": "9af7ed51e75be3eb-OTP",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "host": "academicpixflow.app.n8n.cloud",
             "sec-fetch-mode": "cors",
             "user-agent": "node",
-            "x-forwarded-for": "46.235.72.49, 172.64.200.148",
+            "x-forwarded-for": "89.149.94.222, 162.158.14.251",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
             "x-is-trusted": "yes",
-            "x-real-ip": "46.235.72.49"
+            "x-real-ip": "89.149.94.222"
           },
           "params": {},
           "query": {
             "status": "idle",
-            "worker_id": "anydesk-1"
+            "worker_id": "anydesk-12"
           },
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/task_get_test"
         },
@@ -8831,6 +8957,6 @@
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2025-12-17T13:57:26.845Z",
-  "versionId": "b156a2bf-867a-421e-a1c7-2ed118729a14"
+  "updatedAt": "2025-12-18T13:37:26.582Z",
+  "versionId": "07e64184-2ed0-4651-bc24-d58f806e90ab"
 }
