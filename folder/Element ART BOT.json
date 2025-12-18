@@ -548,6 +548,11 @@
             "index": 0,
             "node": "Analyze1",
             "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Основа Subs",
+            "type": "main"
           }
         ]
       ]
@@ -708,35 +713,12 @@
     },
     "Google Gemini Chat Model1": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent4",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Google Gemini Chat Model2": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent5",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Google Gemini Chat Model3": {
       "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "Проверка ТЗ",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Icons": {
@@ -959,12 +941,45 @@
         ]
       ]
     },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent4",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "OpenRouter Chat Model1": {
       "ai_languageModel": [
         [
           {
             "index": 0,
             "node": "Structured Output Parser1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка ТЗ",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent5",
             "type": "ai_languageModel"
           }
         ]
@@ -2461,8 +2476,8 @@
         "options": {}
       },
       "position": [
-        -5328,
-        1872
+        -5776,
+        2112
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -2727,8 +2742,8 @@
         "options": {}
       },
       "position": [
-        -3520,
-        2080
+        -3872,
+        2720
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -3799,26 +3814,6 @@
       "typeVersion": 1.2
     },
     {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "OE9cIjhzVtc73YQt",
-          "name": "Gemini WORK"
-        }
-      },
-      "id": "715c3d93-6ab6-4b56-8eae-677adb80b9da",
-      "name": "Google Gemini Chat Model2",
-      "parameters": {
-        "modelName": "models/gemini-2.5-pro",
-        "options": {}
-      },
-      "position": [
-        -2656,
-        2448
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
-    },
-    {
       "id": "6c35bbdb-f9cc-43f0-94c1-4fe53800958f",
       "name": "Edit Fields4",
       "parameters": {
@@ -4421,6 +4416,92 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "R5PO8l5WPYDlukvT",
+          "name": "ART"
+        }
+      },
+      "id": "36cd507e-4c48-4a1f-ba8f-cb3e5f2857ff",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "google/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -5328,
+        1856
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "R5PO8l5WPYDlukvT",
+          "name": "ART"
+        }
+      },
+      "id": "c741bd76-66ec-4fcb-85a5-7041c881302d",
+      "name": "OpenRouter Chat Model2",
+      "parameters": {
+        "model": "google/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -3584,
+        2112
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "R5PO8l5WPYDlukvT",
+          "name": "ART"
+        }
+      },
+      "id": "44ad9fe8-5b8e-4213-a65a-65447a0d2164",
+      "name": "OpenRouter Chat Model3",
+      "parameters": {
+        "model": "google/gemini-2.5-pro",
+        "options": {}
+      },
+      "position": [
+        -2672,
+        2448
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "R5PO8l5WPYDlukvT",
+          "name": "ART"
+        }
+      },
+      "id": "1f176594-f4b9-4305-8294-032a25375c55",
+      "name": "Основа Subs",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  model: \"google/gemini-2.5-pro\",\n  temperature: 0.2,\n  messages: [\n    {\n      role: \"user\",\n      content: [\n        {\n          type: \"text\",\n          text: {{ JSON.stringify($json.prompt) }}\n        },\n        {\n          type: \"file\",\n          file: {\n            filename: \"document.pdf\",\n            fileData: `data:application/pdf;base64, {{ $('Extract from File1').item.json.data }}`\n          }\n        }\n      ]\n    }\n  ],\n  plugins: [\n    {\n      id: \"file-parser\",\n      pdf: {\n        engine: \"pdf-text\"\n      }\n    }\n  ]\n}\n",
+        "method": "POST",
+        "nodeCredentialType": "openRouterApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://openrouter.ai/api/v1/chat/completions"
+      },
+      "position": [
+        -6016,
+        1472
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
     }
   ],
   "pinData": {
@@ -4485,13 +4566,6 @@
         }
       }
     ],
-    "Send \"...\"": [
-      {
-        "json": {
-          "event_id": "$4NK86uaI8uRVoDygyg-ElxxNW2zCczoT1giaxtWGnFw"
-        }
-      }
-    ],
     "Split1": [
       {
         "json": {
@@ -4516,35 +4590,38 @@
             "data": "filesystem-v2",
             "fileExtension": "pdf",
             "fileName": "data.pdf",
-            "fileSize": "800 kB",
+            "fileSize": "688 kB",
             "fileType": "pdf",
-            "id": "filesystem-v2:workflows/8hAL1P83T3KgVt6U/executions/133456/binary_data/a5d81e4f-10ff-47e0-88b3-ac6e564b5069",
+            "id": "filesystem-v2:workflows/8hAL1P83T3KgVt6U/executions/151980/binary_data/4586e06b-37ea-4853-9cf7-a4b456c46b69",
             "mimeType": "application/pdf"
           }
         },
         "json": {
-          "age": 1028,
+          "age": 829,
           "content": {
-            "body": "ТЗ Арт Здания и окружение Глобальная карта-v26-20251216_121923.pdf",
+            "body": "ТЗ Арт Здания и окружение Глобальная карта-v26-20251217_105058.pdf.pdf",
             "info": {
               "mimetype": "application/pdf",
-              "size": 799933
+              "size": 688477
             },
             "m.mentions": {},
             "msgtype": "m.file",
-            "url": "mxc://matrix.itcomp.org/mMaYMyskhQaVoGDEgPMqwJjf"
+            "url": "mxc://matrix.itcomp.org/xQGArdVaXxTqddREadgGnnxa"
           },
-          "downloadUrl": "https://matrix.itcomp.org/_matrix/client/v1/media/download/matrix.itcomp.org/mMaYMyskhQaVoGDEgPMqwJjf?allow_remote=true",
-          "event_id": "$O3rMZDfvfJ86LUv9svDC33hGJ5xJUVWGY8FyhbcOy-c",
-          "origin_server_ts": 1765888234062,
+          "downloadUrl": "https://matrix.itcomp.org/_matrix/client/v1/media/download/matrix.itcomp.org/xQGArdVaXxTqddREadgGnnxa?allow_remote=true",
+          "event_id": "$PUFem4YBjDnRxW4nZYJ9wlWtPCEEJSqojWzlj-4Ybjs",
+          "origin_server_ts": 1766064189100,
           "room_id": "!SBRGpGoMppJf-9fCee0B0Tme7hGsus6FBo4iblNZFZU",
           "sender": "@malakhov.d:matrix.itcomp.org",
           "type": "m.room.message",
           "unsigned": {
-            "age": 1028,
+            "age": 829,
             "membership": "join"
           },
           "user_id": "@malakhov.d:matrix.itcomp.org"
+        },
+        "pairedItem": {
+          "item": 0
         }
       }
     ],
@@ -4700,6 +4777,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-16T12:54:47.000Z",
-  "versionId": "52bb487c-b8ea-413e-a2ca-13e5a084a595"
+  "updatedAt": "2025-12-18T13:39:04.467Z",
+  "versionId": "02bd9c25-00de-4f24-8974-b85b1e71b763"
 }
