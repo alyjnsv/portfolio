@@ -1,0 +1,659 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Output",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Bria Remove BG": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Bria",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Build Output": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Is CSV?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "DL Image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter Image",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "DL Video": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge Video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fetch API": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Process Emotes",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter Image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Has Image?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Has Image?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "DL Video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Is CSV?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Merge Video": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Resize 480x650",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fetch API",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Parse Bria": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "DL Image",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Process Emotes": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Bria Remove BG",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Resize 480x650": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Restore Video",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Restore Video": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Config",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ZIP": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-17T12:40:36.056Z",
+  "id": "PSCQddvfDbmkWTGr",
+  "isArchived": false,
+  "meta": null,
+  "name": "Fortnite_Emotes_v2",
+  "nodes": [
+    {
+      "id": "f291a3b4-61e3-489f-ad85-e8bb02c454d2",
+      "name": "Trigger",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -1568,
+        1136
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "1c792694-2ff2-454a-94f4-f605bd5bc610",
+      "name": "Config",
+      "parameters": {
+        "jsCode": "const input = $json;\nreturn [{ json: {\n  chat_id: input.chat_id,\n  count: input.config?.emotes?.count || 60,\n  min_per_rarity: input.config?.emotes?.min_per_rarity || 10,\n  id_start: input.id_ranges?.emotes?.start || 200000,\n  bria_token: input.bria_token || '130a9262fe6349b9bc9fd2dfbd2fd2d8'\n}}];"
+      },
+      "position": [
+        -1376,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "ff19a925-0b3c-4a82-ad4f-5167e0d8acca",
+      "name": "Notify",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "text": "💃 Processing Emotes (PNG + MP4)..."
+      },
+      "position": [
+        -1184,
+        1136
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "a3c74986-babd-4686-8466-9716ca3adb0d"
+    },
+    {
+      "id": "f230c27e-c88b-4e2f-a29a-dfcab3e029ea",
+      "name": "Fetch API",
+      "parameters": {
+        "options": {
+          "timeout": 120000
+        },
+        "url": "https://fortnite-api.com/v2/cosmetics/br"
+      },
+      "position": [
+        -976,
+        1136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "0fdcf0dd-33c7-43f1-8a53-ed73c2f75893",
+      "name": "Process Emotes",
+      "parameters": {
+        "jsCode": "const cosmetics = $json.data || [];\nconst config = $('Config').first().json;\n\nconst RARITIES = ['common','uncommon','rare','epic','legendary','other'];\nconst normalize = r => {\n  const v = (r?.value || 'other').toLowerCase();\n  if (['common','uncommon','rare','epic','legendary'].includes(v)) return v;\n  return 'other';\n};\n\nconst emotes = cosmetics.filter(i => i.type?.value === 'emote' && (i.images?.icon || i.images?.smallIcon));\n\nconst byRarity = {};\nfor (const r of RARITIES) byRarity[r] = [];\nfor (const e of emotes) byRarity[normalize(e.rarity)].push(e);\n\nconst selected = [];\nconst used = new Set();\n\n// First: 10 per rarity\nfor (const r of RARITIES) {\n  const pool = byRarity[r].sort(() => Math.random() - 0.5);\n  let c = 0;\n  for (const e of pool) {\n    if (c >= config.min_per_rarity) break;\n    if (used.has(e.id)) continue;\n    selected.push({ ...e, _rarity: r });\n    used.add(e.id);\n    c++;\n  }\n}\n\n// Fill remaining\nconst remaining = emotes.filter(e => !used.has(e.id)).sort(() => Math.random() - 0.5);\nfor (const e of remaining) {\n  if (selected.length >= config.count) break;\n  selected.push({ ...e, _rarity: normalize(e.rarity) });\n}\n\nreturn selected.map((e, i) => {\n  const numId = e.id.replace(/\\D/g, '') || i;\n  return {\n    json: {\n      id: config.id_start + i,\n      api_id: e.id,\n      name: e.name || '',\n      rarity: e._rarity,\n      image_url: e.images?.icon || e.images?.smallIcon,\n      vid_url: `https://fnggcdn.com/items/${numId}/video.mp4`,\n      img_file: `${config.id_start + i}.png`,\n      vid_file: `${config.id_start + i}.mp4`,\n      _chat_id: config.chat_id,\n      _bria: config.bria_token\n    }\n  };\n});"
+      },
+      "position": [
+        -784,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "793fd92d-6e28-4a50-9434-c38f7d820f6c",
+      "name": "Bria Remove BG",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_token",
+              "value": "={{ $json._bria }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={ \"image\": \"{{ $json.image_url }}\", \"sync\": true }",
+        "method": "POST",
+        "options": {
+          "timeout": 60000
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://engine.prod.bria-api.com/v2/image/edit/remove_background"
+      },
+      "position": [
+        -576,
+        1136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "61a9bc0e-9a3e-4b72-af16-558fcb9b36cb",
+      "name": "Parse Bria",
+      "parameters": {
+        "jsCode": "const items = $('Process Emotes').all();\nconst meta = items[$itemIndex]?.json || {};\nconst r = $json;\nconst url = r.result?.image_url || r.image_url || meta.image_url;\nreturn { json: { ...meta, processed_url: url } };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -384,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "5926d4d8-9503-436a-9282-9f05ef1cbc47",
+      "name": "DL Image",
+      "parameters": {
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 30000
+        },
+        "url": "={{ $json.processed_url }}"
+      },
+      "position": [
+        -176,
+        1136
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "9c421b50-b8a5-4e23-b8f0-d9386faae3d7",
+      "name": "Filter Image",
+      "parameters": {
+        "jsCode": "const items = $('Parse Bria').all();\nconst meta = items[$itemIndex]?.json || {};\nconst bin = $input.item.binary;\nif (!bin || !Object.keys(bin).length) return { json: { ...meta, _skip: true } };\nconst k = Object.keys(bin)[0];\nreturn { json: meta, binary: { image: { ...bin[k], fileName: meta.img_file, mimeType: 'image/png' } } };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        16,
+        1136
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "c18f1467-3ee1-48c3-9045-fd195e0bbdd6",
+      "name": "Has Image?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json._skip }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        224,
+        1136
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "continueOnFail": true,
+      "id": "6e370339-76df-4999-a21d-1a8b39f172e4",
+      "name": "DL Video",
+      "parameters": {
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 60000
+        },
+        "url": "={{ $json.vid_url }}"
+      },
+      "position": [
+        416,
+        1040
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ba0bb9c2-2545-4571-b28a-1c60b3ad9aab",
+      "name": "Merge Video",
+      "parameters": {
+        "jsCode": "const imgItems = $('Has Image?').all().filter(i => !i.json._skip);\nconst meta = imgItems[$itemIndex]?.json || {};\nconst prevBin = imgItems[$itemIndex]?.binary || {};\nconst vidBin = $input.item.binary || {};\n\nconst newBin = { ...prevBin };\nif (vidBin && Object.keys(vidBin).length) {\n  const k = Object.keys(vidBin)[0];\n  newBin.video = { ...vidBin[k], fileName: meta.vid_file, mimeType: 'video/mp4' };\n}\n\nreturn { json: { ...meta, has_video: !!newBin.video }, binary: newBin };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        624,
+        1040
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "066a0cfe-c547-48d8-9bc5-61ca3f406fd9",
+      "name": "Resize 480x650",
+      "parameters": {
+        "height": 650,
+        "operation": "resize",
+        "options": {},
+        "width": 480
+      },
+      "position": [
+        816,
+        1040
+      ],
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1
+    },
+    {
+      "id": "1e3816ec-5d58-4d26-90ae-730257783896",
+      "name": "Restore Video",
+      "parameters": {
+        "jsCode": "const mergeItems = $('Merge Video').all();\nconst meta = mergeItems[$itemIndex]?.json || {};\nconst origBin = mergeItems[$itemIndex]?.binary || {};\nconst resizedBin = $input.item.binary || {};\n\nconst newBin = {};\nif (resizedBin.image) newBin.image = { ...resizedBin.image, fileName: meta.img_file, mimeType: 'image/png' };\nif (origBin.video) newBin.video = origBin.video;\n\nreturn { json: meta, binary: newBin };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        1024,
+        1040
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "916ba35e-5717-4fd5-aad1-f3d8056b9c87",
+      "name": "Aggregate",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "items",
+        "options": {}
+      },
+      "position": [
+        1216,
+        1040
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "3471b694-591a-4cb5-8b1d-c07853e3a17a",
+      "name": "Build Output",
+      "parameters": {
+        "jsCode": "const items = $json.items || [];\nconst finalItems = $('Restore Video').all();\nlet chatId = items[0]?._chat_id || 0;\n\n// CSV: id, name, image, rarity, video\nconst csv = ['id,name,image,rarity,video'];\nfor (const item of items) {\n  if (!item._skip) {\n    csv.push(`${item.id},\"${(item.name||'').replace(/\"/g,'')}\",${item.img_file},${item.rarity},${item.vid_file}`);\n  }\n}\n\n// Collect binaries (both PNG and MP4)\nconst binData = {};\nconst keys = [];\nlet imgCount = 0, vidCount = 0;\n\nfor (const f of finalItems) {\n  if (f.binary?.image) { binData[f.json.img_file] = f.binary.image; keys.push(f.json.img_file); imgCount++; }\n  if (f.binary?.video) { binData[f.json.vid_file] = f.binary.video; keys.push(f.json.vid_file); vidCount++; }\n}\n\nreturn [\n  { json: { type: 'csv', chat_id: chatId, count: imgCount, videos: vidCount }, binary: { file: { data: Buffer.from(csv.join('\\n')).toString('base64'), mimeType: 'text/csv', fileName: 'emotes.csv' } } },\n  { json: { type: 'zip', chat_id: chatId, count: imgCount, videos: vidCount, keys: keys.join(',') }, binary: binData }\n];"
+      },
+      "position": [
+        1424,
+        1040
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "bc8806b4-0d7b-41b6-b7b7-c89465476a40",
+      "name": "Is CSV?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.type }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "csv"
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        1616,
+        1040
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "4b271599-aa6d-4148-aad8-fd6c48137950",
+      "name": "Send CSV",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=📋 EMOTES ({{ $json.count }} PNG, {{ $json.videos }} MP4)"
+        },
+        "binaryData": true,
+        "binaryPropertyName": "file",
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1824,
+        928
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e19fe2b6-bf27-428e-8abe-6ee0bdee7bef"
+    },
+    {
+      "id": "87a21f9f-cb8e-433c-a9a0-748a01cf05bc",
+      "name": "ZIP",
+      "parameters": {
+        "binaryPropertyName": "={{ $json.keys }}",
+        "fileName": "emotes.zip",
+        "operation": "compress"
+      },
+      "position": [
+        1824,
+        1136
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "2a58353a-6922-4286-a87b-b40c538d467b",
+      "name": "Send ZIP",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=📦 EMOTES ({{ $json.count }} PNG + {{ $json.videos }} MP4)"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        2016,
+        1136
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "d83468c7-3c7e-443c-b057-5401c8a1ef12"
+    }
+  ],
+  "pinData": {
+    "Trigger": [
+      {
+        "json": {
+          "ok": true,
+          "result": {
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1765975534,
+            "entities": [
+              {
+                "length": 41,
+                "offset": 144,
+                "type": "italic"
+              },
+              {
+                "length": 3,
+                "offset": 185,
+                "type": "text_link",
+                "url": "https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620"
+              }
+            ],
+            "from": {
+              "first_name": "testn8nbot",
+              "id": 8556384331,
+              "is_bot": true,
+              "username": "testn8n44bot"
+            },
+            "link_preview_options": {
+              "is_disabled": true
+            },
+            "message_id": 122,
+            "text": "🎮 Fortnite Orchestrator\n\n📋 Sections:\n• Skins: 50\n• Emotes: 50\n• Items: 50\n• Weapons: 50\n• Bundles: 50\n• XP Maps: 50\n\n⏳ Starting workflows...\n\nThis message was sent automatically with n8n"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-17T12:40:36.060Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-17T12:40:36.060Z",
+      "workflowId": "PSCQddvfDbmkWTGr"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-22T13:59:16.929Z",
+  "versionId": "eda077c4-3733-41c6-b705-9e6779306387"
+}
