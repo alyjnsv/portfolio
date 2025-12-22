@@ -1,7 +1,7 @@
 {
   "active": true,
   "activeVersion": {
-    "authors": "Vlad Shmitd",
+    "authors": "ALII DZHANSUEV",
     "connections": {
       "Aggregate": {
         "main": [
@@ -1402,7 +1402,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-16T07:49:27.734Z",
+    "createdAt": "2025-12-22T07:33:57.179Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -3653,7 +3653,7 @@
         },
         "position": [
           1600,
-          2368
+          2352
         ],
         "type": "n8n-nodes-base.scheduleTrigger",
         "typeVersion": 1.3
@@ -4708,8 +4708,8 @@
           }
         },
         "position": [
-          5184,
-          5072
+          4736,
+          4896
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -4731,8 +4731,8 @@
           "options": {}
         },
         "position": [
-          5024,
-          5072
+          4576,
+          4896
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -4754,8 +4754,8 @@
           "options": {}
         },
         "position": [
-          5024,
-          4720
+          4576,
+          4544
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -4811,8 +4811,8 @@
           }
         },
         "position": [
-          5184,
-          4720
+          4736,
+          4544
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -4843,8 +4843,8 @@
           "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
         },
         "position": [
-          5360,
-          4896
+          4912,
+          4720
         ],
         "type": "n8n-nodes-base.httpRequest",
         "typeVersion": 4.3
@@ -4866,8 +4866,8 @@
           "options": {}
         },
         "position": [
-          5024,
-          4896
+          4576,
+          4720
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -4915,8 +4915,8 @@
           }
         },
         "position": [
-          5184,
-          4896
+          4736,
+          4720
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -5081,8 +5081,8 @@
           }
         },
         "position": [
-          4720,
-          4800
+          4272,
+          4624
         ],
         "type": "n8n-nodes-base.switch",
         "typeVersion": 3.3
@@ -5162,8 +5162,8 @@
           "options": {}
         },
         "position": [
-          5360,
-          4720
+          4912,
+          4544
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -5243,8 +5243,8 @@
           "options": {}
         },
         "position": [
-          5360,
-          5072
+          4912,
+          4896
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -5290,8 +5290,8 @@
           "options": {}
         },
         "position": [
-          4544,
-          4864
+          4096,
+          4688
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -5547,8 +5547,8 @@
           "path": "task_post"
         },
         "position": [
-          4368,
-          4864
+          3920,
+          4688
         ],
         "type": "n8n-nodes-base.webhook",
         "typeVersion": 2.1,
@@ -6309,13 +6309,41 @@
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
+      },
+      {
+        "id": "9b08a1dc-0bca-41f0-a879-03c6a53b4ed1",
+        "name": "Sticky Note1",
+        "parameters": {
+          "content": "## 22.12"
+        },
+        "position": [
+          1568,
+          1424
+        ],
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1
+      },
+      {
+        "id": "e7c04682-da58-4f91-bdc7-af46a390305a",
+        "name": "jira_todo",
+        "parameters": {
+          "options": {},
+          "path": "jira_todo"
+        },
+        "position": [
+          1664,
+          1648
+        ],
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "webhookId": "92d6ca8a-34c8-46ee-b376-ccb01a2f9219"
       }
     ],
-    "updatedAt": "2025-12-16T07:49:27.734Z",
-    "versionId": "b9512645-3d9e-4c79-b2f5-9b97bf7602c0",
+    "updatedAt": "2025-12-22T07:33:57.179Z",
+    "versionId": "5be710f2-7743-45e5-bacf-bae8c75d1f00",
     "workflowId": "olPdyMDkg03rvfu9"
   },
-  "activeVersionId": "b9512645-3d9e-4c79-b2f5-9b97bf7602c0",
+  "activeVersionId": "5be710f2-7743-45e5-bacf-bae8c75d1f00",
   "connections": {
     "Aggregate": {
       "main": [
@@ -9971,7 +9999,7 @@
       },
       "position": [
         1600,
-        2368
+        2352
       ],
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3
@@ -11026,8 +11054,8 @@
         }
       },
       "position": [
-        5184,
-        5072
+        4736,
+        4896
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -11049,8 +11077,8 @@
         "options": {}
       },
       "position": [
-        5024,
-        5072
+        4576,
+        4896
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -11072,8 +11100,8 @@
         "options": {}
       },
       "position": [
-        5024,
-        4720
+        4576,
+        4544
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -11129,8 +11157,8 @@
         }
       },
       "position": [
-        5184,
-        4720
+        4736,
+        4544
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -11161,8 +11189,8 @@
         "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
       },
       "position": [
-        5360,
-        4896
+        4912,
+        4720
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
@@ -11184,8 +11212,8 @@
         "options": {}
       },
       "position": [
-        5024,
-        4896
+        4576,
+        4720
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -11233,8 +11261,8 @@
         }
       },
       "position": [
-        5184,
-        4896
+        4736,
+        4720
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -11399,8 +11427,8 @@
         }
       },
       "position": [
-        4720,
-        4800
+        4272,
+        4624
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3
@@ -11480,8 +11508,8 @@
         "options": {}
       },
       "position": [
-        5360,
-        4720
+        4912,
+        4544
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -11561,8 +11589,8 @@
         "options": {}
       },
       "position": [
-        5360,
-        5072
+        4912,
+        4896
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -11608,8 +11636,8 @@
         "options": {}
       },
       "position": [
-        4544,
-        4864
+        4096,
+        4688
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -11865,8 +11893,8 @@
         "path": "task_post"
       },
       "position": [
-        4368,
-        4864
+        3920,
+        4688
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -12627,6 +12655,34 @@
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
+    },
+    {
+      "id": "9b08a1dc-0bca-41f0-a879-03c6a53b4ed1",
+      "name": "Sticky Note1",
+      "parameters": {
+        "content": "## 22.12"
+      },
+      "position": [
+        1568,
+        1424
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "e7c04682-da58-4f91-bdc7-af46a390305a",
+      "name": "jira_todo",
+      "parameters": {
+        "options": {},
+        "path": "jira_todo"
+      },
+      "position": [
+        1664,
+        1648
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "92d6ca8a-34c8-46ee-b376-ccb01a2f9219"
     }
   ],
   "pinData": {
@@ -12771,7 +12827,7 @@
     }
   },
   "tags": [],
-  "triggerCount": 5,
-  "updatedAt": "2025-12-16T07:49:27.000Z",
-  "versionId": "b9512645-3d9e-4c79-b2f5-9b97bf7602c0"
+  "triggerCount": 6,
+  "updatedAt": "2025-12-22T07:33:57.175Z",
+  "versionId": "5be710f2-7743-45e5-bacf-bae8c75d1f00"
 }
