@@ -1,0 +1,494 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Output",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Build Output": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Is CSV?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Finalize": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aggregate",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Gemini Generate Image": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Gemini",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generate Maps": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Gemini Generate Image",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Has Image?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Resize 480x650",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Is CSV?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Generate Maps",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Parse Gemini": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Has Image?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Resize 480x650": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Finalize",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Config",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "ZIP": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send ZIP",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-12-17T12:41:56.997Z",
+  "id": "fancwk0cWHtiwgFY",
+  "isArchived": false,
+  "meta": null,
+  "name": "Fortnite_XP_Maps_v2",
+  "nodes": [
+    {
+      "id": "8598eab8-5314-42aa-b9d9-25d0a21482fb",
+      "name": "Trigger",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        -1504,
+        288
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "c47ff29e-2de3-4023-8666-fcee6f389b4f",
+      "name": "Config",
+      "parameters": {
+        "jsCode": "const input = $json;\nreturn [{ json: {\n  chat_id: input.chat_id,\n  count: input.config?.xp_maps?.count || 50,\n  id_start: input.id_ranges?.xp_maps?.start || 500000,\n  gemini_key: input.gemini_key || 'AIzaSyAT4U4SNPm9rgR5nogX3HTcESFL_bg9uHo'\n}}];"
+      },
+      "position": [
+        -1328,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "52298015-ccf9-4d32-9678-938cc47bc271",
+      "name": "Notify",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "text": "🗺️ Processing XP Maps (codes ####-####-####)..."
+      },
+      "position": [
+        -1120,
+        288
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "c089d2d6-a254-4e6c-854c-6c8693f4ddea"
+    },
+    {
+      "id": "88704e3a-ccd2-4a24-a973-f6110ad95fe8",
+      "name": "Generate Maps",
+      "parameters": {
+        "jsCode": "const config = $('Config').first().json;\n\n// Generate unique map codes in format ####-####-####\nconst usedCodes = new Set();\nconst forbiddenPatterns = ['0000-0000-0000', '1111-1111-1111', '1234-1234-1234', '1234-5678-9012'];\n\nfunction generateCode() {\n  let code;\n  let attempts = 0;\n  do {\n    const p1 = String(Math.floor(1000 + Math.random() * 9000));\n    const p2 = String(Math.floor(1000 + Math.random() * 9000));\n    const p3 = String(Math.floor(1000 + Math.random() * 9000));\n    code = `${p1}-${p2}-${p3}`;\n    attempts++;\n    // Check for forbidden patterns (same blocks)\n    if (p1 === p2 && p2 === p3) continue;\n    if (forbiddenPatterns.includes(code)) continue;\n  } while (usedCodes.has(code) && attempts < 100);\n  usedCodes.add(code);\n  return code;\n}\n\n// Map themes for variety\nconst themes = [\n  { name: 'Tropical Paradise', tags: ['tropical', 'beach', 'xp'], desc: 'A sunny beach island perfect for XP farming' },\n  { name: 'Neon City', tags: ['neon', 'city', 'cyberpunk'], desc: 'Futuristic city with neon lights and XP zones' },\n  { name: 'Ancient Temple', tags: ['temple', 'ancient', 'adventure'], desc: 'Mysterious temple ruins with hidden XP rewards' },\n  { name: 'Space Station', tags: ['space', 'sci-fi', 'zero-g'], desc: 'Orbital station with zero gravity XP challenges' },\n  { name: 'Haunted Mansion', tags: ['horror', 'mansion', 'spooky'], desc: 'Creepy mansion with XP secrets in every room' },\n  { name: 'Crystal Caves', tags: ['caves', 'crystal', 'underground'], desc: 'Glowing crystal caverns filled with XP' },\n  { name: 'Sky Islands', tags: ['sky', 'floating', 'parkour'], desc: 'Floating islands with parkour XP challenges' },\n  { name: 'Volcano Arena', tags: ['volcano', 'lava', 'action'], desc: 'Active volcano with intense XP battles' },\n  { name: 'Frozen Tundra', tags: ['ice', 'snow', 'winter'], desc: 'Frozen landscape with hidden XP caches' },\n  { name: 'Jungle Expedition', tags: ['jungle', 'nature', 'exploration'], desc: 'Dense jungle with exploration XP rewards' }\n];\n\nconst maps = [];\nfor (let i = 0; i < config.count; i++) {\n  const theme = themes[i % themes.length];\n  const variant = Math.floor(i / themes.length) + 1;\n  \n  maps.push({\n    json: {\n      id: config.id_start + i,\n      name: `${theme.name} ${variant > 1 ? 'V' + variant : ''}`.trim(),\n      description: theme.desc,\n      code: generateCode(),\n      tags: theme.tags,\n      img_file: `${config.id_start + i}.png`,\n      _idx: i,\n      _theme: theme.name.toLowerCase().replace(/\\s+/g, '_'),\n      _chat_id: config.chat_id,\n      _gemini_key: config.gemini_key\n    }\n  });\n}\n\nreturn maps;"
+      },
+      "position": [
+        -928,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "continueOnFail": true,
+      "id": "d13ed348-2717-4b74-a8f4-d4ea79f8cad9",
+      "name": "Gemini Generate Image",
+      "parameters": {
+        "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"Generate a Fortnite creative map image. Theme: {{ $json._theme }}. Style: colorful game environment, no text, no UI, no HUD, clean landscape view, 480x650 portrait orientation. High quality game art.\"\n    }]\n  }],\n  \"generationConfig\": {\n    \"responseModalities\": [\"image\", \"text\"],\n    \"responseMimeType\": \"text/plain\"\n  }\n}",
+        "method": "POST",
+        "options": {
+          "timeout": 120000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={{ $json._gemini_key }}"
+      },
+      "position": [
+        -720,
+        288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "973f5d12-1aa3-407d-bd7e-99e56010931b",
+      "name": "Parse Gemini",
+      "parameters": {
+        "jsCode": "const items = $('Generate Maps').all();\nconst meta = items[$itemIndex]?.json || {};\nconst response = $json;\n\nlet imageData = null;\nlet mimeType = 'image/png';\n\ntry {\n  const parts = response.candidates?.[0]?.content?.parts || [];\n  for (const part of parts) {\n    if (part.inlineData) {\n      imageData = part.inlineData.data;\n      mimeType = part.inlineData.mimeType || 'image/png';\n      break;\n    }\n  }\n} catch (e) {}\n\nif (imageData) {\n  return {\n    json: meta,\n    binary: {\n      image: {\n        data: imageData,\n        mimeType: mimeType,\n        fileName: meta.img_file\n      }\n    }\n  };\n}\n\nreturn { json: { ...meta, _skip: true } };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        -528,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "d7511566-4dec-4166-9f47-15ce979752be",
+      "name": "Has Image?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json._skip }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -320,
+        288
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "continueOnFail": true,
+      "id": "362609a2-6123-4e5d-b264-affbb6411e1e",
+      "name": "Resize 480x650",
+      "parameters": {
+        "height": 650,
+        "operation": "resize",
+        "options": {},
+        "width": 480
+      },
+      "position": [
+        -112,
+        192
+      ],
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1
+    },
+    {
+      "id": "e736b9d8-73dc-4865-b8d9-6af6c46c529a",
+      "name": "Finalize",
+      "parameters": {
+        "jsCode": "const meta = $json;\nconst bin = $input.item.binary || {};\nconst newBin = {};\nif (bin.image) newBin.image = { ...bin.image, fileName: meta.img_file, mimeType: 'image/png' };\nreturn { json: meta, binary: newBin };",
+        "mode": "runOnceForEachItem"
+      },
+      "position": [
+        80,
+        192
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "1bf81412-e004-4ceb-9f66-9cc81d7d3e9d",
+      "name": "Aggregate",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "items",
+        "options": {}
+      },
+      "position": [
+        288,
+        192
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "88c7f27e-64dd-4854-9c0e-b5d66737480d",
+      "name": "Build Output",
+      "parameters": {
+        "jsCode": "const items = $json.items || [];\nconst finalItems = $('Finalize').all();\nlet chatId = items[0]?._chat_id || 0;\n\n// CSV: name, description, image, code, tags\nconst csv = ['name,description,image,code,tags'];\nfor (const item of items) {\n  if (!item._skip) {\n    const tagsStr = JSON.stringify(item.tags || []);\n    csv.push(`\"${(item.name||'').replace(/\"/g,'')}\",\"${(item.description||'').replace(/\"/g,'')}\",${item.img_file},${item.code},\"${tagsStr.replace(/\"/g, '\"\"')}\"`);\n  }\n}\n\n// Collect binaries\nconst binData = {};\nconst keys = [];\nfor (const f of finalItems) {\n  if (f.binary?.image) {\n    binData[f.json.img_file] = f.binary.image;\n    keys.push(f.json.img_file);\n  }\n}\n\nreturn [\n  { json: { type: 'csv', chat_id: chatId, count: keys.length }, binary: { file: { data: Buffer.from(csv.join('\\n')).toString('base64'), mimeType: 'text/csv', fileName: 'xp_maps.csv' } } },\n  { json: { type: 'zip', chat_id: chatId, count: keys.length, keys: keys.join(',') }, binary: binData }\n];"
+      },
+      "position": [
+        480,
+        192
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "f4ef504c-a6c4-4c15-9f13-0e21fe83691e",
+      "name": "Is CSV?",
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.type }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "csv"
+            }
+          ],
+          "options": {
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        688,
+        192
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "7b64cad8-8e87-4a55-9252-33b940ec7024",
+      "name": "Send CSV",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=📋 XP MAPS ({{ $json.count }}, codes ####-####-####)"
+        },
+        "binaryData": true,
+        "binaryPropertyName": "file",
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        880,
+        80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "fad1c446-6e7a-48b7-afd6-7e7b4e8cc8cb"
+    },
+    {
+      "id": "87651b75-5312-4373-930b-cd574a545d62",
+      "name": "ZIP",
+      "parameters": {
+        "binaryPropertyName": "={{ $json.keys }}",
+        "fileName": "xp_maps.zip",
+        "operation": "compress"
+      },
+      "position": [
+        880,
+        288
+      ],
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "HSbKDu8bh3GpHHZS",
+          "name": "TestRe"
+        }
+      },
+      "id": "5bc771df-80f1-430d-94cb-2fa503dc922f",
+      "name": "Send ZIP",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=📦 XP MAPS ({{ $json.count }} PNG 480×650)"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Trigger').item.json.result.chat.id }}",
+        "operation": "sendDocument"
+      },
+      "position": [
+        1088,
+        288
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "68df16fb-c5d9-4d6f-aa94-ce07268c2e94"
+    }
+  ],
+  "pinData": {
+    "Trigger": [
+      {
+        "json": {
+          "ok": true,
+          "result": {
+            "caption": "BUNDLES (50)",
+            "chat": {
+              "first_name": "Данил",
+              "id": 387605444,
+              "type": "private",
+              "username": "hecox"
+            },
+            "date": 1765979570,
+            "document": {
+              "file_id": "BQACAgIAAxkDAAO5aUK1slbnLi33HbLOcznS1RCSilMAAkeHAALExBBKBaaLbBN5vcg2BA",
+              "file_name": "bundles.zip",
+              "file_size": 13801464,
+              "file_unique_id": "AgADR4cAAsTEEEo",
+              "mime_type": "application/zip"
+            },
+            "from": {
+              "first_name": "testn8nbot",
+              "id": 8556384331,
+              "is_bot": true,
+              "username": "testn8n44bot"
+            },
+            "message_id": 185
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-12-17T12:41:57.002Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2025-12-17T12:41:57.002Z",
+      "workflowId": "fancwk0cWHtiwgFY"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-12-22T13:58:19.368Z",
+  "versionId": "66275be5-5b17-400a-a7c6-b38a778cacff"
+}
