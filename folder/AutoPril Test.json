@@ -1,7 +1,7 @@
 {
   "active": true,
   "activeVersion": {
-    "authors": "Vlad Shmitd",
+    "authors": "ALII DZHANSUEV",
     "connections": {
       "AI Agent": {
         "main": [
@@ -1000,9 +1000,53 @@
             }
           ]
         ]
+      },
+      "Занести таску в БД": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update an issue2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Занести таску в БД1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update an issue",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Обновить БД": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update an issue1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Обновить БД1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update an issue3",
+              "type": "main"
+            }
+          ]
+        ]
       }
     },
-    "createdAt": "2025-12-18T13:37:26.585Z",
+    "createdAt": "2025-12-22T11:46:53.602Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1252,7 +1296,7 @@
                 "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
                 "name": "sys_admin_board",
                 "type": "object",
-                "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"idle\",       \"id\": \"13802\",       \"disabled\": false     }"
+                "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"working\",       \"id\": \"13802\",       \"disabled\": false     }"
               }
             ]
           },
@@ -1381,7 +1425,7 @@
         },
         "position": [
           -1952,
-          1136
+          1648
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -1404,7 +1448,7 @@
         },
         "position": [
           -2112,
-          1136
+          1648
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -1427,7 +1471,7 @@
         },
         "position": [
           -2112,
-          784
+          1296
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -1484,7 +1528,7 @@
         },
         "position": [
           -1952,
-          784
+          1296
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -1516,7 +1560,7 @@
         },
         "position": [
           -1776,
-          960
+          1472
         ],
         "type": "n8n-nodes-base.httpRequest",
         "typeVersion": 4.3
@@ -1539,7 +1583,7 @@
         },
         "position": [
           -2112,
-          960
+          1472
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -1588,7 +1632,7 @@
         },
         "position": [
           -1952,
-          960
+          1472
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -1754,7 +1798,7 @@
         },
         "position": [
           -2288,
-          864
+          1376
         ],
         "type": "n8n-nodes-base.switch",
         "typeVersion": 3.3
@@ -1835,7 +1879,7 @@
         },
         "position": [
           -1776,
-          784
+          1296
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -1916,7 +1960,7 @@
         },
         "position": [
           -1776,
-          1136
+          1648
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -1963,7 +2007,7 @@
         },
         "position": [
           -2448,
-          928
+          1440
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -2010,8 +2054,8 @@
           "responseBody": "={\n  \"task_id\": \"{{ $('Info collect2').item.json.ticket }}\",\n  \"worker_id\": \"{{ $('Info collect2').item.json.workerId }}\",\n  \"status\": \"{{ $('Info collect2').item.json.status }}\"\n}"
         },
         "position": [
-          -3296,
-          736
+          -3280,
+          1408
         ],
         "type": "n8n-nodes-base.respondToWebhook",
         "typeVersion": 1.4
@@ -2042,7 +2086,7 @@
         },
         "position": [
           -2608,
-          928
+          1440
         ],
         "type": "n8n-nodes-base.webhook",
         "typeVersion": 2.1,
@@ -2516,8 +2560,8 @@
         "name": "When clicking ‘Execute workflow’",
         "parameters": {},
         "position": [
-          -3120,
-          736
+          -3104,
+          1408
         ],
         "type": "n8n-nodes-base.manualTrigger",
         "typeVersion": 1
@@ -2532,8 +2576,8 @@
           "responseMode": "lastNode"
         },
         "position": [
-          -2624,
-          -624
+          -3184,
+          -720
         ],
         "type": "n8n-nodes-base.webhook",
         "typeVersion": 2.1,
@@ -2555,8 +2599,8 @@
           "operation": "get"
         },
         "position": [
-          -2464,
-          -624
+          -3024,
+          -720
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2579,8 +2623,8 @@
           "options": {}
         },
         "position": [
-          -2000,
-          -624
+          -2560,
+          -720
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -2602,8 +2646,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          -1680,
-          -624
+          -1664,
+          -720
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2625,8 +2669,8 @@
           "options": {}
         },
         "position": [
-          -1680,
-          -480
+          -1664,
+          -576
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -2666,8 +2710,8 @@
           }
         },
         "position": [
-          -1520,
-          -480
+          -1504,
+          -576
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2681,8 +2725,8 @@
           "options": {}
         },
         "position": [
-          -1520,
-          -624
+          -1504,
+          -720
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
@@ -2714,8 +2758,8 @@
           "options": {}
         },
         "position": [
-          -1840,
-          -624
+          -1824,
+          -720
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -2788,8 +2832,8 @@
           "options": {}
         },
         "position": [
-          -1040,
-          -624
+          -1024,
+          -720
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -2903,8 +2947,8 @@
           "options": {}
         },
         "position": [
-          -1200,
-          -624
+          -1184,
+          -720
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -2932,8 +2976,8 @@
           "operation": "get"
         },
         "position": [
-          -1360,
-          -624
+          -1344,
+          -720
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -3015,8 +3059,8 @@
           "options": {}
         },
         "position": [
-          -1040,
-          -496
+          -1024,
+          -592
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -3160,8 +3204,8 @@
           "options": {}
         },
         "position": [
-          -2256,
-          -624
+          -2816,
+          -720
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -3214,8 +3258,8 @@
           "options": {}
         },
         "position": [
-          -2000,
-          -320
+          -2688,
+          -416
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -3237,8 +3281,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          -1680,
-          -320
+          -2240,
+          -432
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -3260,8 +3304,8 @@
           "options": {}
         },
         "position": [
-          -1680,
-          -176
+          -2240,
+          -272
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -3301,8 +3345,8 @@
           }
         },
         "position": [
-          -1520,
-          -176
+          -2080,
+          -272
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -3316,8 +3360,8 @@
           "options": {}
         },
         "position": [
-          -1520,
-          -320
+          -2080,
+          -432
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
@@ -3349,8 +3393,8 @@
           "options": {}
         },
         "position": [
-          -1840,
-          -320
+          -2448,
+          -416
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -3489,8 +3533,8 @@
           "options": {}
         },
         "position": [
-          -1040,
-          -320
+          -1600,
+          -448
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -3523,8 +3567,8 @@
           "options": {}
         },
         "position": [
-          -1200,
-          -320
+          -1760,
+          -432
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -3552,8 +3596,8 @@
           "operation": "get"
         },
         "position": [
-          -1360,
-          -320
+          -1920,
+          -432
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -3701,8 +3745,8 @@
           "options": {}
         },
         "position": [
-          -1040,
-          -192
+          -1600,
+          -288
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
@@ -3983,7 +4027,7 @@
           "hasOutputParser": true,
           "options": {
             "enableStreaming": true,
-            "systemMessage": "[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+            "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
           },
           "promptType": "define",
           "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
@@ -4123,8 +4167,8 @@
         "name": "Compression",
         "parameters": {},
         "position": [
-          -1168,
-          768
+          -1232,
+          1456
         ],
         "type": "n8n-nodes-base.compression",
         "typeVersion": 1.1
@@ -4341,18 +4385,12 @@
                   "fieldValue": "={{ $json.sys_admin_board }}"
                 }
               ]
-            },
-            "statusId": {
-              "__rl": true,
-              "cachedResultName": "Development-Admin",
-              "mode": "list",
-              "value": "171"
             }
           }
         },
         "position": [
           -1088,
-          176
+          160
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -4374,8 +4412,8 @@
           "options": {}
         },
         "position": [
-          -1248,
-          176
+          -1232,
+          160
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -4424,13 +4462,169 @@
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
+      },
+      {
+        "id": "49ecfa1b-2f31-4f65-9fde-62b453782686",
+        "name": "Webhook",
+        "parameters": {
+          "options": {},
+          "path": "136158ab-6401-4927-afa6-75afa9c8a4b1"
+        },
+        "position": [
+          -368,
+          -16
+        ],
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "webhookId": "136158ab-6401-4927-afa6-75afa9c8a4b1"
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "39cea675-a610-4437-808a-72f99aa29b8d",
+        "name": "Update an issue",
+        "parameters": {
+          "issueKey": "={{ $json.issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "261"
+            }
+          }
+        },
+        "position": [
+          -1392,
+          -448
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "fe7cc4ba-e2f6-4b8e-bce4-f5d72e19ee0f",
+        "name": "Update an issue1",
+        "parameters": {
+          "issueKey": "={{ $json.issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "cachedResultName": "To Do",
+              "mode": "list",
+              "value": "261"
+            }
+          }
+        },
+        "position": [
+          -816,
+          -592
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "a5e05d90-72c0-4f52-aac5-34575f93d082",
+        "name": "Update an issue2",
+        "parameters": {
+          "issueKey": "={{ $json.issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "cachedResultName": "To Do",
+              "mode": "list",
+              "value": "261"
+            }
+          }
+        },
+        "position": [
+          -816,
+          -720
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "f40f9194-892d-4711-933f-c533c465bf72",
+        "name": "Update an issue3",
+        "parameters": {
+          "issueKey": "={{ $json.issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "cachedResultName": "To Do",
+              "mode": "list",
+              "value": "261"
+            }
+          }
+        },
+        "position": [
+          -1392,
+          -288
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "id": "77d05d8e-c325-44ca-8ea7-4acd0f788fc9",
+        "name": "Sticky Note",
+        "parameters": {
+          "content": "поменян вебхук"
+        },
+        "position": [
+          -3344,
+          -544
+        ],
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1
+      },
+      {
+        "id": "a97038e6-24d6-44d9-bc1e-6614a3e6ab40",
+        "name": "Sticky Note1",
+        "parameters": {
+          "content": "проверить поля"
+        },
+        "position": [
+          -1840,
+          -192
+        ],
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-18T13:37:26.585Z",
-    "versionId": "07e64184-2ed0-4651-bc24-d58f806e90ab",
+    "updatedAt": "2025-12-22T11:46:53.602Z",
+    "versionId": "d07dc8a9-63d8-43c8-8530-118cf1c80ea6",
     "workflowId": "ARtmbGaqzmUv1KS5"
   },
-  "activeVersionId": "07e64184-2ed0-4651-bc24-d58f806e90ab",
+  "activeVersionId": "d07dc8a9-63d8-43c8-8530-118cf1c80ea6",
   "connections": {
     "AI Agent": {
       "main": [
@@ -5429,6 +5623,50 @@
           }
         ]
       ]
+    },
+    "Занести таску в БД": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Занести таску в БД1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновить БД": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Обновить БД1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue3",
+            "type": "main"
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-12-04T09:48:25.445Z",
@@ -5685,7 +5923,7 @@
               "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
               "name": "sys_admin_board",
               "type": "object",
-              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"idle\",       \"id\": \"13802\",       \"disabled\": false     }"
+              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"working\",       \"id\": \"13802\",       \"disabled\": false     }"
             }
           ]
         },
@@ -5814,7 +6052,7 @@
       },
       "position": [
         -1952,
-        1136
+        1648
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5837,7 +6075,7 @@
       },
       "position": [
         -2112,
-        1136
+        1648
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -5860,7 +6098,7 @@
       },
       "position": [
         -2112,
-        784
+        1296
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -5917,7 +6155,7 @@
       },
       "position": [
         -1952,
-        784
+        1296
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5949,7 +6187,7 @@
       },
       "position": [
         -1776,
-        960
+        1472
       ],
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.3
@@ -5972,7 +6210,7 @@
       },
       "position": [
         -2112,
-        960
+        1472
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -6021,7 +6259,7 @@
       },
       "position": [
         -1952,
-        960
+        1472
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6187,7 +6425,7 @@
       },
       "position": [
         -2288,
-        864
+        1376
       ],
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3
@@ -6268,7 +6506,7 @@
       },
       "position": [
         -1776,
-        784
+        1296
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -6349,7 +6587,7 @@
       },
       "position": [
         -1776,
-        1136
+        1648
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -6396,7 +6634,7 @@
       },
       "position": [
         -2448,
-        928
+        1440
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -6443,8 +6681,8 @@
         "responseBody": "={\n  \"task_id\": \"{{ $('Info collect2').item.json.ticket }}\",\n  \"worker_id\": \"{{ $('Info collect2').item.json.workerId }}\",\n  \"status\": \"{{ $('Info collect2').item.json.status }}\"\n}"
       },
       "position": [
-        -3296,
-        736
+        -3280,
+        1408
       ],
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4
@@ -6475,7 +6713,7 @@
       },
       "position": [
         -2608,
-        928
+        1440
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -6949,8 +7187,8 @@
       "name": "When clicking ‘Execute workflow’",
       "parameters": {},
       "position": [
-        -3120,
-        736
+        -3104,
+        1408
       ],
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1
@@ -6965,8 +7203,8 @@
         "responseMode": "lastNode"
       },
       "position": [
-        -2624,
-        -624
+        -3184,
+        -720
       ],
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
@@ -6988,8 +7226,8 @@
         "operation": "get"
       },
       "position": [
-        -2464,
-        -624
+        -3024,
+        -720
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -7012,8 +7250,8 @@
         "options": {}
       },
       "position": [
-        -2000,
-        -624
+        -2560,
+        -720
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -7035,8 +7273,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        -1680,
-        -624
+        -1664,
+        -720
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -7058,8 +7296,8 @@
         "options": {}
       },
       "position": [
-        -1680,
-        -480
+        -1664,
+        -576
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -7099,8 +7337,8 @@
         }
       },
       "position": [
-        -1520,
-        -480
+        -1504,
+        -576
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -7114,8 +7352,8 @@
         "options": {}
       },
       "position": [
-        -1520,
-        -624
+        -1504,
+        -720
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -7147,8 +7385,8 @@
         "options": {}
       },
       "position": [
-        -1840,
-        -624
+        -1824,
+        -720
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -7221,8 +7459,8 @@
         "options": {}
       },
       "position": [
-        -1040,
-        -624
+        -1024,
+        -720
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -7336,8 +7574,8 @@
         "options": {}
       },
       "position": [
-        -1200,
-        -624
+        -1184,
+        -720
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -7365,8 +7603,8 @@
         "operation": "get"
       },
       "position": [
-        -1360,
-        -624
+        -1344,
+        -720
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -7448,8 +7686,8 @@
         "options": {}
       },
       "position": [
-        -1040,
-        -496
+        -1024,
+        -592
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -7593,8 +7831,8 @@
         "options": {}
       },
       "position": [
-        -2256,
-        -624
+        -2816,
+        -720
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -7647,8 +7885,8 @@
         "options": {}
       },
       "position": [
-        -2000,
-        -320
+        -2688,
+        -416
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -7670,8 +7908,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        -1680,
-        -320
+        -2240,
+        -432
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -7693,8 +7931,8 @@
         "options": {}
       },
       "position": [
-        -1680,
-        -176
+        -2240,
+        -272
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -7734,8 +7972,8 @@
         }
       },
       "position": [
-        -1520,
-        -176
+        -2080,
+        -272
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -7749,8 +7987,8 @@
         "options": {}
       },
       "position": [
-        -1520,
-        -320
+        -2080,
+        -432
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -7782,8 +8020,8 @@
         "options": {}
       },
       "position": [
-        -1840,
-        -320
+        -2448,
+        -416
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -7922,8 +8160,8 @@
         "options": {}
       },
       "position": [
-        -1040,
-        -320
+        -1600,
+        -448
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -7956,8 +8194,8 @@
         "options": {}
       },
       "position": [
-        -1200,
-        -320
+        -1760,
+        -432
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -7985,8 +8223,8 @@
         "operation": "get"
       },
       "position": [
-        -1360,
-        -320
+        -1920,
+        -432
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -8134,8 +8372,8 @@
         "options": {}
       },
       "position": [
-        -1040,
-        -192
+        -1600,
+        -288
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -8416,7 +8654,7 @@
         "hasOutputParser": true,
         "options": {
           "enableStreaming": true,
-          "systemMessage": "[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+          "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
         },
         "promptType": "define",
         "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
@@ -8556,8 +8794,8 @@
       "name": "Compression",
       "parameters": {},
       "position": [
-        -1168,
-        768
+        -1232,
+        1456
       ],
       "type": "n8n-nodes-base.compression",
       "typeVersion": 1.1
@@ -8774,18 +9012,12 @@
                 "fieldValue": "={{ $json.sys_admin_board }}"
               }
             ]
-          },
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Development-Admin",
-            "mode": "list",
-            "value": "171"
           }
         }
       },
       "position": [
         -1088,
-        176
+        160
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -8807,8 +9039,8 @@
         "options": {}
       },
       "position": [
-        -1248,
-        176
+        -1232,
+        160
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -8857,6 +9089,162 @@
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
+    },
+    {
+      "id": "49ecfa1b-2f31-4f65-9fde-62b453782686",
+      "name": "Webhook",
+      "parameters": {
+        "options": {},
+        "path": "136158ab-6401-4927-afa6-75afa9c8a4b1"
+      },
+      "position": [
+        -368,
+        -16
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "136158ab-6401-4927-afa6-75afa9c8a4b1"
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "39cea675-a610-4437-808a-72f99aa29b8d",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $json.issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "261"
+          }
+        }
+      },
+      "position": [
+        -1392,
+        -448
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "fe7cc4ba-e2f6-4b8e-bce4-f5d72e19ee0f",
+      "name": "Update an issue1",
+      "parameters": {
+        "issueKey": "={{ $json.issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do",
+            "mode": "list",
+            "value": "261"
+          }
+        }
+      },
+      "position": [
+        -816,
+        -592
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "a5e05d90-72c0-4f52-aac5-34575f93d082",
+      "name": "Update an issue2",
+      "parameters": {
+        "issueKey": "={{ $json.issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do",
+            "mode": "list",
+            "value": "261"
+          }
+        }
+      },
+      "position": [
+        -816,
+        -720
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "f40f9194-892d-4711-933f-c533c465bf72",
+      "name": "Update an issue3",
+      "parameters": {
+        "issueKey": "={{ $json.issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do",
+            "mode": "list",
+            "value": "261"
+          }
+        }
+      },
+      "position": [
+        -1392,
+        -288
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "77d05d8e-c325-44ca-8ea7-4acd0f788fc9",
+      "name": "Sticky Note",
+      "parameters": {
+        "content": "поменян вебхук"
+      },
+      "position": [
+        -3344,
+        -544
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "a97038e6-24d6-44d9-bc1e-6614a3e6ab40",
+      "name": "Sticky Note1",
+      "parameters": {
+        "content": "проверить поля"
+      },
+      "position": [
+        -1840,
+        -192
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -8865,7 +9253,7 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "DEV-9574",
+            "issue_key": "TAA-18",
             "serial_num_pc": "null"
           },
           "executionMode": "production",
@@ -8876,23 +9264,26 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9af452bd565bd25a-FRA",
+            "cf-ray": "9b1ed0ad6196b19e-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "68",
+            "content-length": "66",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.164.134",
+            "x-forwarded-for": "135.181.186.107, 172.70.240.149",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
           "params": {},
           "query": {},
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
+        },
+        "pairedItem": {
+          "item": 0
         }
       }
     ],
@@ -8909,23 +9300,23 @@
             "cf-connecting-ip": "89.149.94.222",
             "cf-ew-via": "15",
             "cf-ipcountry": "MD",
-            "cf-ray": "9af7ed51e75be3eb-OTP",
+            "cf-ray": "9b1f2e45a391c9e4-OTP",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "host": "academicpixflow.app.n8n.cloud",
             "sec-fetch-mode": "cors",
             "user-agent": "node",
-            "x-forwarded-for": "89.149.94.222, 162.158.14.251",
+            "x-forwarded-for": "89.149.94.222, 162.158.18.219",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
             "x-is-trusted": "yes",
             "x-real-ip": "89.149.94.222"
           },
           "params": {},
           "query": {
-            "status": "idle",
+            "status": "working",
             "worker_id": "anydesk-12"
           },
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/task_get_test"
@@ -8956,7 +9347,7 @@
     }
   },
   "tags": [],
-  "triggerCount": 3,
-  "updatedAt": "2025-12-18T13:37:26.582Z",
-  "versionId": "07e64184-2ed0-4651-bc24-d58f806e90ab"
+  "triggerCount": 4,
+  "updatedAt": "2025-12-22T11:46:53.601Z",
+  "versionId": "d07dc8a9-63d8-43c8-8530-118cf1c80ea6"
 }
