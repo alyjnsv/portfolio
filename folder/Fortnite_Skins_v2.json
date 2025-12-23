@@ -30,7 +30,7 @@
         [
           {
             "index": 0,
-            "node": "Is CSV?1",
+            "node": "Switch",
             "type": "main"
           }
         ]
@@ -102,24 +102,6 @@
         ]
       ]
     },
-    "Is CSV?1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Send CSV1",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "ZIP1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Notify1": {
       "main": [
         [
@@ -159,6 +141,24 @@
           {
             "index": 0,
             "node": "Finalize1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send CSV1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "ZIP1",
             "type": "main"
           }
         ]
@@ -245,6 +245,7 @@
       "id": "15f8b3ac-2d63-4ed3-8eb5-6ec9a7685d49",
       "name": "Resize 480x650",
       "parameters": {
+        "dataPropertyName": "image",
         "height": 650,
         "operation": "resize",
         "options": {},
@@ -442,34 +443,6 @@
       "typeVersion": 2
     },
     {
-      "id": "cda8cbea-e619-48e8-b6cd-bc06aad931e3",
-      "name": "Is CSV?1",
-      "parameters": {
-        "conditions": {
-          "conditions": [
-            {
-              "leftValue": "={{ $json.type }}",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "csv"
-            }
-          ],
-          "options": {
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        288,
-        304
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
       "credentials": {
         "telegramApi": {
           "id": "HSbKDu8bh3GpHHZS",
@@ -488,7 +461,7 @@
         "operation": "sendDocument"
       },
       "position": [
-        496,
+        704,
         192
       ],
       "type": "n8n-nodes-base.telegram",
@@ -504,7 +477,7 @@
         "operation": "compress"
       },
       "position": [
-        496,
+        704,
         400
       ],
       "type": "n8n-nodes-base.compression",
@@ -528,12 +501,78 @@
         "operation": "sendDocument"
       },
       "position": [
-        688,
+        896,
         400
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "webhookId": "b8b27555-d8d5-4bac-945a-043661e12088"
+    },
+    {
+      "id": "0a027bbe-7c26-485f-b762-062b77f5019c",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "46f4262a-43f9-43a6-b351-61357424e1c2",
+                    "leftValue": "={{ $json.type }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "=csv"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "csv",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "ada7825e-fe75-419c-8c3a-ea614041e013",
+                    "leftValue": "={{ $json.type }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "zip"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "zip",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        304,
+        304
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4
     }
   ],
   "pinData": {
@@ -548,31 +587,15 @@
               "type": "private",
               "username": "hecox"
             },
-            "date": 1766410921,
-            "entities": [
-              {
-                "length": 41,
-                "offset": 274,
-                "type": "italic"
-              },
-              {
-                "length": 3,
-                "offset": 315,
-                "type": "text_link",
-                "url": "https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_75a40fbaa11f32eff2328e8099aca506b30e8f40de38aaa033816315a698d620"
-              }
-            ],
+            "date": 1766411983,
             "from": {
               "first_name": "testn8nbot",
               "id": 8556384331,
               "is_bot": true,
               "username": "testn8n44bot"
             },
-            "link_preview_options": {
-              "is_disabled": true
-            },
-            "message_id": 273,
-            "text": "🎮 Fortnite Bot v2.0\\n\\n📋 ТЗ Requirements:\\n• Skins: 60 (10/rarity, full-body)\\n• Emotes: 60 (PNG + MP4)\\n• Items: 120 (incl. Weapons)\\n• Bundles: 60 (ids array)\\n• XP Maps: 50 (with codes)\\n\\n📐 Output: PNG 480×650, transparent\\n🆔 IDs: 6-digit unique\\n\\n⏳ Processing...\n\nThis message was sent automatically with n8n"
+            "message_id": 275,
+            "text": "Fortnite Bot v2.0\nТЗ Requirements:\n• Skins: 60 (10/rarity, full-body)\n• Emotes: 60 (PNG + MP4)\n• Items: 120 (incl. Weapons)\n• Bundles: 60 (ids array)\n• XP Maps: 50 (with codes)\n\nOutput: PNG 480×650, transparent\nIDs: 6-digit unique\n\nProcessing..."
           }
         },
         "pairedItem": {
@@ -596,6 +619,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-22T13:57:57.877Z",
-  "versionId": "3bb19a6d-f8f4-49cb-a827-59e682b76fa0"
+  "updatedAt": "2025-12-23T08:26:15.744Z",
+  "versionId": "d7703337-09a6-4305-aa62-b20cf5a9a656"
 }
