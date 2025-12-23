@@ -3,12 +3,28 @@
   "activeVersion": null,
   "activeVersionId": null,
   "connections": {
+    "Blocked": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Blocked",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Update Jira Issue": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Update an issue",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -20,6 +36,17 @@
           {
             "index": 0,
             "node": "Update Jira Issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue",
             "type": "main"
           }
         ]
@@ -85,33 +112,108 @@
       "typeVersion": 4.2
     },
     {
+      "id": "a08cc4df-79ec-473a-a75d-7c96a52da697",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        0,
+        192
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
       "credentials": {
         "jiraSoftwareServerPatApi": {
           "id": "fVJt68N6D6vmqd2x",
           "name": "Jira SW AI Task Builder"
         }
       },
-      "id": "ad06ed55-8bc4-4057-81e6-276cbd47074f",
-      "name": "Update an issue",
+      "id": "82a8ddda-1556-4cb7-a6ef-f13553b217bb",
+      "name": "Get an issue",
       "parameters": {
-        "issueKey": "={{ $('When Executed by Another Workflow').item.json.key }}",
+        "additionalFields": {},
+        "issueKey": "LW-28030",
         "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Blocked",
-            "mode": "list",
-            "value": "1171"
-          }
-        }
+        "operation": "get"
+      },
+      "position": [
+        208,
+        192
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "1e448c10-546f-47da-98dd-99af3a686a2c",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e3ef1518-fc5d-4328-9598-63f49dc323fd",
+              "name": "customfield_11402",
+              "type": "object",
+              "value": "={\n  \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/10925\",\n  \"value\": \"Blocked by Art\",\n  \"id\": \"10925\",\n  \"disabled\": false\n}"
+            }
+          ]
+        },
+        "options": {}
       },
       "position": [
         416,
         0
       ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "8e779aa8-dd6a-489c-bddf-91e737d8147f",
+      "name": "HTTP Request1",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "jiraSoftwareServerPatApi",
+        "options": {},
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('When Executed by Another Workflow').first().json.key }}/transitions"
+      },
+      "position": [
+        640,
+        192
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "fVJt68N6D6vmqd2x",
+          "name": "Jira SW AI Task Builder"
+        }
+      },
+      "id": "6faaeb1f-c6d5-4876-a954-31e927f6b380",
+      "name": "Blocked",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"transition\": {\n      \"id\": \"1171\"\n  },\n  \"update\": {\n    \"comment\": [\n      {\n        \"add\": {\n          \"body\": \"Не получилось сгенерировать изображение за 10 попыток\"\n        }\n      }\n    ]\n  },\n  \"fields\": {\n    \"customfield_11402\": {{ JSON.stringify($json.customfield_11402) }}\n  }\n}\n",
+        "method": "POST",
+        "nodeCredentialType": "jiraSoftwareServerPatApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://jira.itcomp.space/rest/api/2/issue/{{ $('When Executed by Another Workflow').first().json.key }}/transitions"
+      },
+      "position": [
+        608,
+        0
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
     }
   ],
   "pinData": {
@@ -141,6 +243,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-12-22T13:42:43.927Z",
-  "versionId": "5f2e4634-ae30-4c7b-8c9d-4eaa7fdb856c"
+  "updatedAt": "2025-12-23T08:39:31.019Z",
+  "versionId": "73985a9d-4dc7-4da9-b565-1deda7249397"
 }
