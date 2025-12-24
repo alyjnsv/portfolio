@@ -1,7 +1,7 @@
 {
   "active": true,
   "activeVersion": {
-    "authors": "Vlad Shmitd",
+    "authors": "ALII DZHANSUEV",
     "connections": {
       "AI Agent": {
         "main": [
@@ -822,7 +822,7 @@
           [
             {
               "index": 0,
-              "node": "HTTP Request1",
+              "node": "Обновление Jira Task",
               "type": "main"
             }
           ]
@@ -1046,7 +1046,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-23T10:19:03.554Z",
+    "createdAt": "2025-12-24T10:48:08.088Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1559,7 +1559,7 @@
           "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
         },
         "position": [
-          -1776,
+          -1536,
           1472
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -4619,13 +4619,94 @@
         ],
         "type": "n8n-nodes-base.stickyNote",
         "typeVersion": 1
+      },
+      {
+        "id": "22d80bfb-e5cc-4c73-8d6c-001460cbc498",
+        "name": "Обновление Jira Task",
+        "parameters": {
+          "columns": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "issue",
+                "id": "issue",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "prompt",
+                "id": "prompt",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "desktop",
+                "id": "desktop",
+                "readOnly": false,
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "status",
+                "id": "status",
+                "readOnly": false,
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "desktop": "=-",
+              "status": "=Fixing"
+            }
+          },
+          "dataTableId": {
+            "__rl": true,
+            "cachedResultName": "Jira_task_test",
+            "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/GJopakLQe2DRnXb2",
+            "mode": "list",
+            "value": "GJopakLQe2DRnXb2"
+          },
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "issue",
+                "keyValue": "={{ $('task_post').item.json.body.task_id }}"
+              }
+            ]
+          },
+          "operation": "update",
+          "options": {}
+        },
+        "position": [
+          -1776,
+          1472
+        ],
+        "type": "n8n-nodes-base.dataTable",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-23T10:19:03.554Z",
-    "versionId": "b1a77aca-9a53-4f19-a622-bccc1c22ff59",
+    "updatedAt": "2025-12-24T10:48:08.088Z",
+    "versionId": "dae3232e-c2d5-48fa-9c4c-19fb98a44213",
     "workflowId": "ARtmbGaqzmUv1KS5"
   },
-  "activeVersionId": "b1a77aca-9a53-4f19-a622-bccc1c22ff59",
+  "activeVersionId": "dae3232e-c2d5-48fa-9c4c-19fb98a44213",
   "connections": {
     "AI Agent": {
       "main": [
@@ -5446,7 +5527,7 @@
         [
           {
             "index": 0,
-            "node": "HTTP Request1",
+            "node": "Обновление Jira Task",
             "type": "main"
           }
         ]
@@ -6187,7 +6268,7 @@
         "url": "https://amusing-hope-production-bb8f.up.railway.app/incoming/n8n"
       },
       "position": [
-        -1776,
+        -1536,
         1472
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -9247,6 +9328,87 @@
       ],
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1
+    },
+    {
+      "id": "22d80bfb-e5cc-4c73-8d6c-001460cbc498",
+      "name": "Обновление Jira Task",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "issue",
+              "id": "issue",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "prompt",
+              "id": "prompt",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "desktop",
+              "id": "desktop",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "status",
+              "id": "status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "desktop": "=-",
+            "status": "=Fixing"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task_test",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/GJopakLQe2DRnXb2",
+          "mode": "list",
+          "value": "GJopakLQe2DRnXb2"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "issue",
+              "keyValue": "={{ $('task_post').item.json.body.task_id }}"
+            }
+          ]
+        },
+        "operation": "update",
+        "options": {}
+      },
+      "position": [
+        -1776,
+        1472
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -9350,6 +9512,6 @@
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2025-12-23T10:19:03.552Z",
-  "versionId": "b1a77aca-9a53-4f19-a622-bccc1c22ff59"
+  "updatedAt": "2025-12-24T10:48:08.086Z",
+  "versionId": "dae3232e-c2d5-48fa-9c4c-19fb98a44213"
 }
