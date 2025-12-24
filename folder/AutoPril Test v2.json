@@ -1,7 +1,7 @@
 {
   "active": true,
   "activeVersion": {
-    "authors": "Vlad Shmitd",
+    "authors": "ALII DZHANSUEV",
     "connections": {
       "AI Agent": {
         "main": [
@@ -411,12 +411,7 @@
           [
             {
               "index": 0,
-              "node": "Get an issue5",
-              "type": "main"
-            },
-            {
-              "index": 0,
-              "node": "Add an attachment to an issue",
+              "node": "Document?5",
               "type": "main"
             }
           ]
@@ -650,7 +645,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-23T15:03:59.961Z",
+    "createdAt": "2025-12-24T11:43:29.085Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1858,7 +1853,7 @@
             "conditions": [
               {
                 "keyName": "Issue",
-                "keyValue": "={{ $json.issue }}"
+                "keyValue": "={{ $json.Issue }}"
               }
             ]
           },
@@ -2030,8 +2025,8 @@
           "options": {}
         },
         "position": [
-          2752,
-          576
+          2192,
+          512
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
@@ -2059,6 +2054,7 @@
         "typeVersion": 1
       },
       {
+        "alwaysOutputData": true,
         "credentials": {
           "jiraSoftwareServerPatApi": {
             "id": "WwUfZZ4lukKmf4G9",
@@ -2067,6 +2063,7 @@
         },
         "id": "24683fb4-69af-463d-bc35-891c7a6deeb1",
         "name": "Get file1",
+        "onError": "continueRegularOutput",
         "parameters": {
           "attachmentId": "={{ $json.attachmentIds }}",
           "download": true,
@@ -2217,8 +2214,8 @@
           "options": {}
         },
         "position": [
-          2960,
-          576
+          2400,
+          480
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
@@ -2237,8 +2234,8 @@
           "options": {}
         },
         "position": [
-          3120,
-          576
+          2560,
+          480
         ],
         "type": "n8n-nodes-base.aggregate",
         "typeVersion": 1
@@ -2250,8 +2247,8 @@
           "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
         },
         "position": [
-          3280,
-          576
+          2720,
+          480
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -2265,8 +2262,8 @@
           "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['1'] }}\",\n  \"data_1\": \"{{ $json['0'] }}\"\n}"
         },
         "position": [
-          3440,
-          576
+          2880,
+          480
         ],
         "type": "n8n-nodes-base.respondToWebhook",
         "typeVersion": 1.4
@@ -2427,8 +2424,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          2544,
-          352
+          2528,
+          -176
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2449,8 +2446,8 @@
           "operation": "get"
         },
         "position": [
-          2064,
-          352
+          2048,
+          -176
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2462,8 +2459,8 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          2224,
-          352
+          2208,
+          -176
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -2477,8 +2474,8 @@
           "options": {}
         },
         "position": [
-          2384,
-          352
+          2368,
+          -176
         ],
         "type": "n8n-nodes-base.splitOut",
         "typeVersion": 1
@@ -2498,8 +2495,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          2064,
-          640
+          2048,
+          112
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2527,8 +2524,8 @@
           }
         },
         "position": [
-          2224,
-          640
+          2208,
+          112
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -2557,7 +2554,7 @@
         "id": "30d681fb-e7a7-49c1-9f4b-5f031e1ef4ea",
         "name": "Вытаскиваем файл с prompt",
         "parameters": {
-          "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt');\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
+          "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
         },
         "position": [
           1312,
@@ -2658,11 +2655,11 @@
         "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-23T15:03:59.961Z",
-    "versionId": "04398daa-4514-4dbd-b8d1-fdf822fa086b",
+    "updatedAt": "2025-12-24T11:43:29.085Z",
+    "versionId": "02b6d557-e2b3-4562-8e14-8e2c27ef2453",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "04398daa-4514-4dbd-b8d1-fdf822fa086b",
+  "activeVersionId": "02b6d557-e2b3-4562-8e14-8e2c27ef2453",
   "connections": {
     "AI Agent": {
       "main": [
@@ -3072,12 +3069,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue5",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Add an attachment to an issue",
+            "node": "Document?5",
             "type": "main"
           }
         ]
@@ -4523,7 +4515,7 @@
           "conditions": [
             {
               "keyName": "Issue",
-              "keyValue": "={{ $json.issue }}"
+              "keyValue": "={{ $json.Issue }}"
             }
           ]
         },
@@ -4695,8 +4687,8 @@
         "options": {}
       },
       "position": [
-        2752,
-        576
+        2192,
+        512
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
@@ -4724,6 +4716,7 @@
       "typeVersion": 1
     },
     {
+      "alwaysOutputData": true,
       "credentials": {
         "jiraSoftwareServerPatApi": {
           "id": "WwUfZZ4lukKmf4G9",
@@ -4732,6 +4725,7 @@
       },
       "id": "24683fb4-69af-463d-bc35-891c7a6deeb1",
       "name": "Get file1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "attachmentId": "={{ $json.attachmentIds }}",
         "download": true,
@@ -4882,8 +4876,8 @@
         "options": {}
       },
       "position": [
-        2960,
-        576
+        2400,
+        480
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -4902,8 +4896,8 @@
         "options": {}
       },
       "position": [
-        3120,
-        576
+        2560,
+        480
       ],
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1
@@ -4915,8 +4909,8 @@
         "jsCode": "// 1. Берём json из ноды \"Updata Jira-Status\"\nconst src = $node[\"Updata Jira-Status\"].json;\n\n// Это ровно то же самое, что твои выражения в Set:\n// workerId  - {{ $('Updata Jira-Status').item.json.desktop }}\n// prompt    - {{ $('Updata Jira-Status').item.json.prompt }}\n// ticket    - {{ $('Updata Jira-Status').item.json.issue }}\n// status    - {{ $('Updata Jira-Status').item.json.status }}\nconst workerId = src.desktop;\nconst prompt   = src.prompt;\nconst ticket   = src.issue;\nconst status   = src.status;\n\n// 2. Берём все data_* из текущего item\n// (там, где раньше в debugJson ты видел поле data)\nconst item = $json;\nconst data = item.data || {};\n\n// 3. Формируем итоговый объект с нужными полями\nconst result = {\n  workerId,  // = desktop\n  prompt,    // = prompt\n  ticket,    // = issue\n  status,    // = status\n};\n\n// 4. Разворачиваем data_0, data_1, data_2, ... в корень\nObject.keys(data).forEach((key) => {\n  // key уже вида \"data_0\", \"data_1\", ...\n  result[key] = data[key];\n});\n\n// 5. Отдаём один item в нужном формате\nreturn {\n  json: result,\n};\n"
       },
       "position": [
-        3280,
-        576
+        2720,
+        480
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -4930,8 +4924,8 @@
         "responseBody": "={\n  \"task_id\": \"{{ $json.ticket }}\",\n  \"worker_id\": \"{{ $json.workerId }}\",\n  \"status\": \"{{ $json.status }}\",\n  \"data_0\": \"{{ $json['1'] }}\",\n  \"data_1\": \"{{ $json['0'] }}\"\n}"
       },
       "position": [
-        3440,
-        576
+        2880,
+        480
       ],
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4
@@ -5092,8 +5086,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        2544,
-        352
+        2528,
+        -176
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5114,8 +5108,8 @@
         "operation": "get"
       },
       "position": [
-        2064,
-        352
+        2048,
+        -176
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5127,8 +5121,8 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        2224,
-        352
+        2208,
+        -176
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5142,8 +5136,8 @@
         "options": {}
       },
       "position": [
-        2384,
-        352
+        2368,
+        -176
       ],
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1
@@ -5163,8 +5157,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        2064,
-        640
+        2048,
+        112
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5192,8 +5186,8 @@
         }
       },
       "position": [
-        2224,
-        640
+        2208,
+        112
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -5222,7 +5216,7 @@
       "id": "30d681fb-e7a7-49c1-9f4b-5f031e1ef4ea",
       "name": "Вытаскиваем файл с prompt",
       "parameters": {
-        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt');\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
+        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
       },
       "position": [
         1312,
@@ -5327,17 +5321,17 @@
     "Schedule Trigger": [
       {
         "json": {
-          "Day of month": "23",
-          "Day of week": "Tuesday",
-          "Hour": "15",
-          "Minute": "18",
+          "Day of month": "24",
+          "Day of week": "Wednesday",
+          "Hour": "11",
+          "Minute": "51",
           "Month": "December",
-          "Readable date": "December 23rd 2025, 3:18:00 pm",
-          "Readable time": "3:18:00 pm",
+          "Readable date": "December 24th 2025, 11:51:00 am",
+          "Readable time": "11:51:00 am",
           "Second": "00",
           "Timezone": "Europe/Warsaw (UTC+01:00)",
           "Year": "2025",
-          "timestamp": "2025-12-23T15:18:00.007+01:00"
+          "timestamp": "2025-12-24T11:51:00.002+01:00"
         },
         "pairedItem": {
           "item": 0
@@ -5405,6 +5399,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2025-12-23T15:03:59.958Z",
-  "versionId": "04398daa-4514-4dbd-b8d1-fdf822fa086b"
+  "updatedAt": "2025-12-24T11:43:29.083Z",
+  "versionId": "02b6d557-e2b3-4562-8e14-8e2c27ef2453"
 }
