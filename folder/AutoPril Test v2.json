@@ -14,6 +14,28 @@
           ]
         ]
       },
+      "Add a comment": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Add a comment1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing4",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Add an attachment to an issue": {
         "main": [
           [
@@ -52,7 +74,7 @@
           [
             {
               "index": 0,
-              "node": "Update an issue in progress3",
+              "node": "Board of SysAdmins",
               "type": "main"
             }
           ]
@@ -482,7 +504,13 @@
       },
       "Remove an attachment from an issue": {
         "main": [
-          []
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing6",
+              "type": "main"
+            }
+          ]
         ]
       },
       "Schedule Trigger": {
@@ -534,23 +562,45 @@
           ]
         ]
       },
-      "Update an issue in progress3": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Board of SysAdmins",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Update an issue working": {
         "main": [
           [
             {
               "index": 0,
               "node": "Get an issue",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update an issue working3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update an issue working4": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update an issue working5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing",
               "type": "main"
             }
           ]
@@ -587,6 +637,11 @@
               "type": "main"
             }
           ]
+        ]
+      },
+      "Webhook2": {
+        "main": [
+          []
         ]
       },
       "arcihve extractor": {
@@ -743,7 +798,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-25T12:02:49.913Z",
+    "createdAt": "2025-12-29T09:31:41.005Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -940,23 +995,6 @@
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
-      },
-      {
-        "id": "e3f965eb-6a3f-4448-a1a9-780a4c34b57f",
-        "name": "Webhook1",
-        "parameters": {
-          "httpMethod": "POST",
-          "options": {},
-          "path": "jira_task_test",
-          "responseMode": "lastNode"
-        },
-        "position": [
-          -4064,
-          -112
-        ],
-        "type": "n8n-nodes-base.webhook",
-        "typeVersion": 2.1,
-        "webhookId": "43ab2f4a-0fa2-4092-bc5c-c325b73a196c"
       },
       {
         "credentials": {
@@ -1421,7 +1459,7 @@
             "conditions": [
               {
                 "keyName": "Issue",
-                "keyValue": "={{ $json.issue }}"
+                "keyValue": "={{ $json.Issue }}"
               }
             ]
           },
@@ -1998,8 +2036,10 @@
           432,
           608
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "63f8a665-1d16-42dd-bb75-46b429221175",
@@ -2093,8 +2133,10 @@
           -80,
           608
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2115,8 +2157,10 @@
           80,
           608
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "alwaysOutputData": true,
@@ -2140,8 +2184,10 @@
           1904,
           784
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "655c18dd-8c87-4e36-97d8-8e6adcfcc43e",
@@ -2257,8 +2303,10 @@
           1568,
           784
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "be74624e-5026-44bb-a4ac-fe04c0ac8549",
@@ -2303,8 +2351,10 @@
           1568,
           480
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "36037389-b781-4607-9bb8-3f7168d2aa01",
@@ -2348,47 +2398,6 @@
         "typeVersion": 1.3
       },
       {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "9cbb2906-efb6-4f44-80d7-ee9783bbd163",
-        "name": "Update an issue in progress3",
-        "parameters": {
-          "issueKey": "={{ $('Get Dropbox info').item.json.Issue }}",
-          "jiraVersion": "serverPat",
-          "operation": "update",
-          "updateFields": {
-            "customFieldsUi": {
-              "customFieldsValues": [
-                {
-                  "fieldId": {
-                    "__rl": true,
-                    "mode": "id",
-                    "value": "=customfield_13502"
-                  },
-                  "fieldValue": "={{ $json.sys_admin_board }}"
-                }
-              ]
-            },
-            "statusId": {
-              "__rl": true,
-              "cachedResultName": "Writing Prompt-Admin",
-              "mode": "list",
-              "value": "251"
-            }
-          }
-        },
-        "position": [
-          -400,
-          608
-        ],
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
-      },
-      {
         "id": "a6141afe-53cc-428a-a61d-37e2f5acdb51",
         "name": "Board of SysAdmins In progress3",
         "parameters": {
@@ -2430,8 +2439,10 @@
           3648,
           480
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2452,8 +2463,10 @@
           3168,
           480
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "2846a27d-bbb0-4654-85fc-6215e442fb39",
@@ -2501,8 +2514,10 @@
           3168,
           768
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2530,8 +2545,10 @@
           3328,
           768
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "disabled": true,
@@ -2593,8 +2610,10 @@
           -272,
           128
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "9ff26509-a80c-410e-ac14-2f2c5a82a2c4",
@@ -2655,8 +2674,10 @@
           1056,
           816
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2677,8 +2698,10 @@
           -960,
           144
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "e9943739-aabd-4a04-bb81-ca8cfb7b2b48",
@@ -2753,8 +2776,10 @@
           -272,
           256
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2776,8 +2801,10 @@
           -64,
           256
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2798,8 +2825,10 @@
           -1168,
           624
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "d1416054-9ff6-4502-b939-d8231b26b3fe",
@@ -2874,8 +2903,10 @@
           -560,
           832
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -2897,8 +2928,10 @@
           -352,
           832
         ],
+        "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
       },
       {
         "id": "9f89d19e-4dea-4404-a077-6f2e467d645a",
@@ -2927,13 +2960,113 @@
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
+      },
+      {
+        "disabled": true,
+        "id": "e3f965eb-6a3f-4448-a1a9-780a4c34b57f",
+        "name": "Webhook2",
+        "parameters": {
+          "httpMethod": "POST",
+          "options": {},
+          "path": "jira_task_test",
+          "responseMode": "streaming"
+        },
+        "position": [
+          -4400,
+          -16
+        ],
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "webhookId": "43ab2f4a-0fa2-4092-bc5c-c325b73a196c"
+      },
+      {
+        "id": "e25dcf68-6920-4e67-a30b-b59e30c6e9a8",
+        "name": "Webhook1",
+        "parameters": {
+          "httpMethod": "POST",
+          "options": {},
+          "path": "jira_task_test"
+        },
+        "position": [
+          -4144,
+          -112
+        ],
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "webhookId": "3c5df5f8-cd79-4cd5-9f37-865d8962051f"
+      },
+      {
+        "id": "a8f06442-f27f-42d5-af2f-09c831758a69",
+        "name": "No Operation, do nothing",
+        "parameters": {},
+        "position": [
+          1264,
+          816
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "4997d651-c6e2-4fec-b55f-21c1b796a633",
+        "name": "No Operation, do nothing1",
+        "parameters": {},
+        "position": [
+          144,
+          256
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "59984ff8-5593-4be4-abe2-7522b98091d2",
+        "name": "No Operation, do nothing2",
+        "parameters": {},
+        "position": [
+          -64,
+          128
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "190b0782-9081-43d2-9267-60e897f289e5",
+        "name": "No Operation, do nothing4",
+        "parameters": {},
+        "position": [
+          -160,
+          832
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "edf5e1aa-5c3c-46f3-9912-82fd47a939b3",
+        "name": "No Operation, do nothing5",
+        "parameters": {},
+        "position": [
+          3520,
+          768
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "6a96a04a-069c-4230-bca8-f3657e5c1d78",
+        "name": "No Operation, do nothing6",
+        "parameters": {},
+        "position": [
+          3840,
+          480
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-25T12:02:49.913Z",
-    "versionId": "8a19745a-8a5c-44a6-a96a-7603ac7a6b19",
+    "updatedAt": "2025-12-29T09:31:41.005Z",
+    "versionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "8a19745a-8a5c-44a6-a96a-7603ac7a6b19",
+  "activeVersionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a",
   "connections": {
     "AI Agent": {
       "main": [
@@ -2941,6 +3074,28 @@
           {
             "index": 0,
             "node": "Convert MD",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Add a comment": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Add a comment1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing4",
             "type": "main"
           }
         ]
@@ -2984,7 +3139,7 @@
         [
           {
             "index": 0,
-            "node": "Update an issue in progress3",
+            "node": "Board of SysAdmins",
             "type": "main"
           }
         ]
@@ -3414,7 +3569,13 @@
     },
     "Remove an attachment from an issue": {
       "main": [
-        []
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing6",
+            "type": "main"
+          }
+        ]
       ]
     },
     "Schedule Trigger": {
@@ -3466,23 +3627,45 @@
         ]
       ]
     },
-    "Update an issue in progress3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Update an issue working": {
       "main": [
         [
           {
             "index": 0,
             "node": "Get an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue working3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue working4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue working5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
             "type": "main"
           }
         ]
@@ -3519,6 +3702,11 @@
             "type": "main"
           }
         ]
+      ]
+    },
+    "Webhook2": {
+      "main": [
+        []
       ]
     },
     "arcihve extractor": {
@@ -3876,23 +4064,6 @@
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
-    },
-    {
-      "id": "e3f965eb-6a3f-4448-a1a9-780a4c34b57f",
-      "name": "Webhook1",
-      "parameters": {
-        "httpMethod": "POST",
-        "options": {},
-        "path": "jira_task_test",
-        "responseMode": "lastNode"
-      },
-      "position": [
-        -4064,
-        -112
-      ],
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 2.1,
-      "webhookId": "43ab2f4a-0fa2-4092-bc5c-c325b73a196c"
     },
     {
       "credentials": {
@@ -4357,7 +4528,7 @@
           "conditions": [
             {
               "keyName": "Issue",
-              "keyValue": "={{ $json.issue }}"
+              "keyValue": "={{ $json.Issue }}"
             }
           ]
         },
@@ -4934,8 +5105,10 @@
         432,
         608
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "63f8a665-1d16-42dd-bb75-46b429221175",
@@ -5029,8 +5202,10 @@
         -80,
         608
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5051,8 +5226,10 @@
         80,
         608
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "alwaysOutputData": true,
@@ -5076,8 +5253,10 @@
         1904,
         784
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "655c18dd-8c87-4e36-97d8-8e6adcfcc43e",
@@ -5193,8 +5372,10 @@
         1568,
         784
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "be74624e-5026-44bb-a4ac-fe04c0ac8549",
@@ -5239,8 +5420,10 @@
         1568,
         480
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "36037389-b781-4607-9bb8-3f7168d2aa01",
@@ -5284,47 +5467,6 @@
       "typeVersion": 1.3
     },
     {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "9cbb2906-efb6-4f44-80d7-ee9783bbd163",
-      "name": "Update an issue in progress3",
-      "parameters": {
-        "issueKey": "={{ $('Get Dropbox info').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "customFieldsUi": {
-            "customFieldsValues": [
-              {
-                "fieldId": {
-                  "__rl": true,
-                  "mode": "id",
-                  "value": "=customfield_13502"
-                },
-                "fieldValue": "={{ $json.sys_admin_board }}"
-              }
-            ]
-          },
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Writing Prompt-Admin",
-            "mode": "list",
-            "value": "251"
-          }
-        }
-      },
-      "position": [
-        -400,
-        608
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
       "id": "a6141afe-53cc-428a-a61d-37e2f5acdb51",
       "name": "Board of SysAdmins In progress3",
       "parameters": {
@@ -5366,8 +5508,10 @@
         3648,
         480
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5388,8 +5532,10 @@
         3168,
         480
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "2846a27d-bbb0-4654-85fc-6215e442fb39",
@@ -5437,8 +5583,10 @@
         3168,
         768
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5466,8 +5614,10 @@
         3328,
         768
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "disabled": true,
@@ -5529,8 +5679,10 @@
         -272,
         128
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "9ff26509-a80c-410e-ac14-2f2c5a82a2c4",
@@ -5591,8 +5743,10 @@
         1056,
         816
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5613,8 +5767,10 @@
         -960,
         144
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "e9943739-aabd-4a04-bb81-ca8cfb7b2b48",
@@ -5689,8 +5845,10 @@
         -272,
         256
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5712,8 +5870,10 @@
         -64,
         256
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5734,8 +5894,10 @@
         -1168,
         624
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "d1416054-9ff6-4502-b939-d8231b26b3fe",
@@ -5810,8 +5972,10 @@
         -560,
         832
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -5833,8 +5997,10 @@
         -352,
         832
       ],
+      "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
     },
     {
       "id": "9f89d19e-4dea-4404-a077-6f2e467d645a",
@@ -5863,6 +6029,106 @@
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
+    },
+    {
+      "disabled": true,
+      "id": "e3f965eb-6a3f-4448-a1a9-780a4c34b57f",
+      "name": "Webhook2",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "jira_task_test",
+        "responseMode": "streaming"
+      },
+      "position": [
+        -4400,
+        -16
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "43ab2f4a-0fa2-4092-bc5c-c325b73a196c"
+    },
+    {
+      "id": "e25dcf68-6920-4e67-a30b-b59e30c6e9a8",
+      "name": "Webhook1",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "jira_task_test"
+      },
+      "position": [
+        -4144,
+        -112
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "3c5df5f8-cd79-4cd5-9f37-865d8962051f"
+    },
+    {
+      "id": "a8f06442-f27f-42d5-af2f-09c831758a69",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        1264,
+        816
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "4997d651-c6e2-4fec-b55f-21c1b796a633",
+      "name": "No Operation, do nothing1",
+      "parameters": {},
+      "position": [
+        144,
+        256
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "59984ff8-5593-4be4-abe2-7522b98091d2",
+      "name": "No Operation, do nothing2",
+      "parameters": {},
+      "position": [
+        -64,
+        128
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "190b0782-9081-43d2-9267-60e897f289e5",
+      "name": "No Operation, do nothing4",
+      "parameters": {},
+      "position": [
+        -160,
+        832
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "edf5e1aa-5c3c-46f3-9912-82fd47a939b3",
+      "name": "No Operation, do nothing5",
+      "parameters": {},
+      "position": [
+        3520,
+        768
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "6a96a04a-069c-4230-bca8-f3657e5c1d78",
+      "name": "No Operation, do nothing6",
+      "parameters": {},
+      "position": [
+        3840,
+        480
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -5880,45 +6146,6 @@
           "Timezone": "Europe/Warsaw (UTC+01:00)",
           "Year": "2025",
           "timestamp": "2025-12-24T11:51:00.002+01:00"
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ],
-    "Webhook1": [
-      {
-        "json": {
-          "body": {
-            "description": "null",
-            "issue_key": "TAA-38",
-            "serial_num_pc": "anydesk-12"
-          },
-          "executionMode": "production",
-          "headers": {
-            "accept": "application/json, application/javascript, text/javascript",
-            "accept-encoding": "gzip, br",
-            "cdn-loop": "cloudflare; loops=1; subreqs=1",
-            "cf-connecting-ip": "135.181.186.107",
-            "cf-ew-via": "15",
-            "cf-ipcountry": "FI",
-            "cf-ray": "9b3815ec07f2d2cf-FRA",
-            "cf-visitor": "{\"scheme\":\"https\"}",
-            "cf-worker": "n8n.cloud",
-            "content-length": "72",
-            "content-type": "application/json",
-            "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.164.134",
-            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
-            "x-is-trusted": "yes",
-            "x-real-ip": "135.181.186.107"
-          },
-          "params": {},
-          "query": {},
-          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
         },
         "pairedItem": {
           "item": 0
@@ -5947,6 +6174,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-25T12:02:49.912Z",
-  "versionId": "8a19745a-8a5c-44a6-a96a-7603ac7a6b19"
+  "updatedAt": "2025-12-29T09:31:41.003Z",
+  "versionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a"
 }
