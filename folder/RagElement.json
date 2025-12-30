@@ -1,7 +1,7 @@
 {
   "active": true,
   "activeVersion": {
-    "authors": "ALII DZHANSUEV",
+    "authors": "Vlad Shmitd",
     "connections": {
       "AI Agent1": {
         "main": [
@@ -165,6 +165,11 @@
       },
       "OpenAI Chat Model": {
         "ai_languageModel": [
+          []
+        ]
+      },
+      "OpenRouter Chat Model": {
+        "ai_languageModel": [
           [
             {
               "index": 0,
@@ -244,7 +249,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-17T09:14:17.566Z",
+    "createdAt": "2025-12-30T14:42:57.237Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -504,7 +509,7 @@
           "options": {}
         },
         "position": [
-          -528,
+          -784,
           -32
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -839,13 +844,33 @@
         ],
         "type": "n8n-nodes-base.merge",
         "typeVersion": 3.2
+      },
+      {
+        "credentials": {
+          "openRouterApi": {
+            "id": "MxDmhTEDcHkODHH1",
+            "name": "OpenRouter account"
+          }
+        },
+        "id": "a7ef9adc-eab5-4516-a537-a13b239bb51d",
+        "name": "OpenRouter Chat Model",
+        "parameters": {
+          "model": "moonshotai/kimi-k2-thinking",
+          "options": {}
+        },
+        "position": [
+          -528,
+          16
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-17T09:14:17.566Z",
-    "versionId": "530653ee-1496-4e22-a2c0-a6b4d479286c",
+    "updatedAt": "2025-12-30T14:42:57.237Z",
+    "versionId": "06ec4153-5a66-4f72-8fa6-deb95bff09f4",
     "workflowId": "IJpAcw3SGuv95mE5"
   },
-  "activeVersionId": "530653ee-1496-4e22-a2c0-a6b4d479286c",
+  "activeVersionId": "06ec4153-5a66-4f72-8fa6-deb95bff09f4",
   "connections": {
     "AI Agent1": {
       "main": [
@@ -1008,6 +1033,11 @@
       ]
     },
     "OpenAI Chat Model": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "OpenRouter Chat Model": {
       "ai_languageModel": [
         [
           {
@@ -1352,7 +1382,7 @@
         "options": {}
       },
       "position": [
-        -528,
+        -784,
         -32
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
@@ -1687,6 +1717,26 @@
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "a7ef9adc-eab5-4516-a537-a13b239bb51d",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "moonshotai/kimi-k2-thinking",
+        "options": {}
+      },
+      "position": [
+        -528,
+        16
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -1765,6 +1815,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-17T09:14:17.000Z",
-  "versionId": "530653ee-1496-4e22-a2c0-a6b4d479286c"
+  "updatedAt": "2025-12-30T14:42:57.236Z",
+  "versionId": "06ec4153-5a66-4f72-8fa6-deb95bff09f4"
 }
