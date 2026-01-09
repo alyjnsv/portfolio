@@ -36,6 +36,17 @@
           ]
         ]
       },
+      "Add a comment2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing7",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Add an attachment to an issue": {
         "main": [
           [
@@ -107,7 +118,7 @@
           [
             {
               "index": 0,
-              "node": "Get file3",
+              "node": "Get row(s)1",
               "type": "main"
             }
           ],
@@ -125,7 +136,7 @@
           [
             {
               "index": 0,
-              "node": "Get file2",
+              "node": "Get row(s)",
               "type": "main"
             }
           ],
@@ -309,28 +320,6 @@
             {
               "index": 0,
               "node": "Extract from File1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Get file2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Tech-task2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Get file3": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Tech-task",
               "type": "main"
             }
           ]
@@ -529,28 +518,6 @@
           ]
         ]
       },
-      "Tech-task": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get row(s)1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Tech-task2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get row(s)",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Updata Jira-Status": {
         "main": [
           [
@@ -623,6 +590,17 @@
             {
               "index": 0,
               "node": "Add a comment1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update an issue working9": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Add a comment2",
               "type": "main"
             }
           ]
@@ -798,7 +776,7 @@
         ]
       }
     },
-    "createdAt": "2025-12-29T09:31:41.005Z",
+    "createdAt": "2026-01-09T09:52:31.666Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1012,7 +990,7 @@
           "operation": "get"
         },
         "position": [
-          -3904,
+          -3584,
           -112
         ],
         "type": "n8n-nodes-base.jira",
@@ -1036,34 +1014,11 @@
           "options": {}
         },
         "position": [
-          -3440,
-          -112
+          -3200,
+          -128
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "e8e97ba2-1747-4883-b98e-b048b81c0fc1",
-        "name": "Get file2",
-        "parameters": {
-          "attachmentId": "={{ $json.fields.attachment[0].id }}",
-          "download": true,
-          "jiraVersion": "serverPat",
-          "operation": "get",
-          "resource": "issueAttachment"
-        },
-        "position": [
-          -2976,
-          -112
-        ],
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
       },
       {
         "id": "be9e1ba1-f37c-403c-a7fe-694ded305d08",
@@ -1082,7 +1037,7 @@
           "options": {}
         },
         "position": [
-          -2976,
+          -2656,
           32
         ],
         "type": "n8n-nodes-base.set",
@@ -1123,26 +1078,11 @@
           }
         },
         "position": [
-          -2816,
+          -2496,
           32
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
-      },
-      {
-        "id": "306e76c6-8fae-414e-839a-71c1d57b79f9",
-        "name": "Tech-task2",
-        "parameters": {
-          "destinationKey": "tech-task",
-          "operation": "text",
-          "options": {}
-        },
-        "position": [
-          -2816,
-          -112
-        ],
-        "type": "n8n-nodes-base.extractFromFile",
-        "typeVersion": 1.1
       },
       {
         "id": "86138b7e-ec90-4121-be54-e37a7b34d037",
@@ -1153,7 +1093,7 @@
             "conditions": [
               {
                 "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
-                "leftValue": "={{ $json.error }}",
+                "leftValue": "=",
                 "operator": {
                   "operation": "notEquals",
                   "type": "string"
@@ -1171,186 +1111,11 @@
           "options": {}
         },
         "position": [
-          -3136,
-          -112
+          -3040,
+          -128
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.2
-      },
-      {
-        "id": "499a2e98-a929-4635-ad0b-a9ca9a72ced1",
-        "name": "Занести таску в БД",
-        "parameters": {
-          "columns": {
-            "attemptToConvertTypes": false,
-            "convertFieldsToString": false,
-            "mappingMode": "defineBelow",
-            "matchingColumns": [],
-            "schema": [
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "Issue",
-                "id": "Issue",
-                "readOnly": false,
-                "removed": false,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "Status",
-                "id": "Status",
-                "readOnly": false,
-                "removed": false,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "APPkey",
-                "id": "APPkey",
-                "readOnly": false,
-                "removed": true,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "APPsecret",
-                "id": "APPsecret",
-                "readOnly": false,
-                "removed": true,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "RefreshToken",
-                "id": "RefreshToken",
-                "readOnly": false,
-                "removed": true,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "DropBox",
-                "id": "DropBox",
-                "readOnly": false,
-                "removed": false,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "Content",
-                "id": "Content",
-                "readOnly": false,
-                "removed": true,
-                "required": false,
-                "type": "string"
-              },
-              {
-                "defaultMatch": false,
-                "display": true,
-                "displayName": "BaseFolder",
-                "id": "BaseFolder",
-                "readOnly": false,
-                "removed": true,
-                "required": false,
-                "type": "string"
-              }
-            ],
-            "value": {
-              "Issue": "={{ $('Webhook1').item.json.body.issue_key }}",
-              "Status": "queue"
-            }
-          },
-          "dataTableId": {
-            "__rl": true,
-            "cachedResultName": "Jira_task_test_v2",
-            "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
-            "mode": "list",
-            "value": "RkroTaP1NAl95TCT"
-          },
-          "options": {}
-        },
-        "position": [
-          -2336,
-          -112
-        ],
-        "type": "n8n-nodes-base.dataTable",
-        "typeVersion": 1
-      },
-      {
-        "id": "54e959e0-cadd-4880-a27f-b331623cbb8b",
-        "name": "If",
-        "parameters": {
-          "conditions": {
-            "combinator": "and",
-            "conditions": [
-              {
-                "id": "4ca79493-703d-4065-85d9-196cc985b42a",
-                "leftValue": "={{ $json.Issue }}",
-                "operator": {
-                  "operation": "empty",
-                  "singleValue": true,
-                  "type": "string"
-                },
-                "rightValue": ""
-              }
-            ],
-            "options": {
-              "caseSensitive": true,
-              "leftValue": "",
-              "typeValidation": "strict",
-              "version": 2
-            }
-          },
-          "options": {}
-        },
-        "position": [
-          -2496,
-          -112
-        ],
-        "type": "n8n-nodes-base.if",
-        "typeVersion": 2.2
-      },
-      {
-        "alwaysOutputData": true,
-        "id": "e3b7e1ae-0257-4a9f-bd3c-03ca34d9d728",
-        "name": "Get row(s)",
-        "parameters": {
-          "dataTableId": {
-            "__rl": true,
-            "cachedResultName": "Jira_task_test_v2",
-            "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
-            "mode": "list",
-            "value": "RkroTaP1NAl95TCT"
-          },
-          "filters": {
-            "conditions": [
-              {
-                "keyName": "Issue",
-                "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
-              }
-            ]
-          },
-          "operation": "get"
-        },
-        "position": [
-          -2656,
-          -112
-        ],
-        "type": "n8n-nodes-base.dataTable",
-        "typeVersion": 1
       },
       {
         "id": "461ffe71-cf2b-4886-9faf-37dd8311961d",
@@ -1500,7 +1265,7 @@
           "options": {}
         },
         "position": [
-          -3696,
+          -3376,
           -112
         ],
         "type": "n8n-nodes-base.if",
@@ -1554,34 +1319,11 @@
           "options": {}
         },
         "position": [
-          -3424,
+          -3104,
           192
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "c23df06b-811c-4852-8ab4-295b5e2334e2",
-        "name": "Get file3",
-        "parameters": {
-          "attachmentId": "={{ $json.fields.attachment[0].id }}",
-          "download": true,
-          "jiraVersion": "serverPat",
-          "operation": "get",
-          "resource": "issueAttachment"
-        },
-        "position": [
-          -2976,
-          176
-        ],
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
       },
       {
         "id": "973bdc47-e182-4bcb-806b-c005bc059452",
@@ -1600,7 +1342,7 @@
           "options": {}
         },
         "position": [
-          -2976,
+          -2656,
           336
         ],
         "type": "n8n-nodes-base.set",
@@ -1641,26 +1383,11 @@
           }
         },
         "position": [
-          -2816,
+          -2496,
           336
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
-      },
-      {
-        "id": "8b697440-9ff3-4fbe-b346-2cc1c405279d",
-        "name": "Tech-task",
-        "parameters": {
-          "destinationKey": "tech-task",
-          "operation": "text",
-          "options": {}
-        },
-        "position": [
-          -2816,
-          176
-        ],
-        "type": "n8n-nodes-base.extractFromFile",
-        "typeVersion": 1.1
       },
       {
         "id": "b712dd7b-0b11-45f3-b57b-f3f11b82886f",
@@ -1689,7 +1416,7 @@
           "options": {}
         },
         "position": [
-          -3136,
+          -2816,
           192
         ],
         "type": "n8n-nodes-base.if",
@@ -2988,7 +2715,7 @@
           "path": "jira_task_test"
         },
         "position": [
-          -4144,
+          -3824,
           -112
         ],
         "type": "n8n-nodes-base.webhook",
@@ -3060,13 +2787,255 @@
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "07d70e21-ac37-464d-b057-566ed8d1b668",
+        "name": "Update an issue working9",
+        "parameters": {
+          "issueKey": "={{ $('Get an issue2').item.json.key }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "cachedResultName": "Cancelled-Admin",
+              "mode": "list",
+              "value": "241"
+            }
+          }
+        },
+        "position": [
+          -2016,
+          -192
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "892bdc4b-464c-4d64-92fa-0b3b4054f0d4",
+        "name": "Add a comment2",
+        "parameters": {
+          "comment": "Неправильное заполнение задачи.",
+          "issueKey": "={{ $('Get an issue2').item.json.key }}",
+          "jiraVersion": "serverPat",
+          "options": {},
+          "resource": "issueComment"
+        },
+        "position": [
+          -1808,
+          -192
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      },
+      {
+        "id": "445ce98d-5a7e-41cc-ae59-db86bcba89df",
+        "name": "No Operation, do nothing7",
+        "parameters": {},
+        "position": [
+          -1600,
+          -192
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "id": "d0c371dc-6758-4e5f-ae5b-c63f3cc7e0ad",
+        "name": "Занести таску в БД",
+        "parameters": {
+          "columns": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Issue",
+                "id": "Issue",
+                "readOnly": false,
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Status",
+                "id": "Status",
+                "readOnly": false,
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "APPkey",
+                "id": "APPkey",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "APPsecret",
+                "id": "APPsecret",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "RefreshToken",
+                "id": "RefreshToken",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "DropBox",
+                "id": "DropBox",
+                "readOnly": false,
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Content",
+                "id": "Content",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "BaseFolder",
+                "id": "BaseFolder",
+                "readOnly": false,
+                "removed": true,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "Issue": "={{ $('Webhook1').item.json.body.issue_key }}",
+              "Status": "queue"
+            }
+          },
+          "dataTableId": {
+            "__rl": true,
+            "cachedResultName": "Jira_task_test_v2",
+            "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
+            "mode": "list",
+            "value": "RkroTaP1NAl95TCT"
+          },
+          "options": {}
+        },
+        "position": [
+          -2336,
+          -128
+        ],
+        "type": "n8n-nodes-base.dataTable",
+        "typeVersion": 1
+      },
+      {
+        "id": "76743e62-76b4-40ef-aabb-364f76ff506d",
+        "name": "If",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "4ca79493-703d-4065-85d9-196cc985b42a",
+                "leftValue": "={{ $json.Issue }}",
+                "operator": {
+                  "operation": "empty",
+                  "singleValue": true,
+                  "type": "string"
+                },
+                "rightValue": ""
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -2496,
+          -128
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "alwaysOutputData": true,
+        "id": "686c931b-7dd0-4190-8405-beb6a40e20ed",
+        "name": "Get row(s)",
+        "parameters": {
+          "dataTableId": {
+            "__rl": true,
+            "cachedResultName": "Jira_task_test_v2",
+            "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
+            "mode": "list",
+            "value": "RkroTaP1NAl95TCT"
+          },
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "Issue",
+                "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
+              }
+            ]
+          },
+          "operation": "get"
+        },
+        "position": [
+          -2656,
+          -128
+        ],
+        "type": "n8n-nodes-base.dataTable",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2025-12-29T09:31:41.005Z",
-    "versionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a",
+    "updatedAt": "2026-01-09T09:52:31.666Z",
+    "versionId": "2849062b-9d80-4342-88f1-2aa040206d74",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a",
+  "activeVersionId": "2849062b-9d80-4342-88f1-2aa040206d74",
   "connections": {
     "AI Agent": {
       "main": [
@@ -3096,6 +3065,17 @@
           {
             "index": 0,
             "node": "No Operation, do nothing4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Add a comment2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing7",
             "type": "main"
           }
         ]
@@ -3172,7 +3152,7 @@
         [
           {
             "index": 0,
-            "node": "Get file3",
+            "node": "Get row(s)1",
             "type": "main"
           }
         ],
@@ -3190,7 +3170,7 @@
         [
           {
             "index": 0,
-            "node": "Get file2",
+            "node": "Get row(s)",
             "type": "main"
           }
         ],
@@ -3374,28 +3354,6 @@
           {
             "index": 0,
             "node": "Extract from File1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get file2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Tech-task2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get file3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Tech-task",
             "type": "main"
           }
         ]
@@ -3594,28 +3552,6 @@
         ]
       ]
     },
-    "Tech-task": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get row(s)1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Tech-task2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get row(s)",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Updata Jira-Status": {
       "main": [
         [
@@ -3688,6 +3624,17 @@
           {
             "index": 0,
             "node": "Add a comment1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue working9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Add a comment2",
             "type": "main"
           }
         ]
@@ -4081,7 +4028,7 @@
         "operation": "get"
       },
       "position": [
-        -3904,
+        -3584,
         -112
       ],
       "type": "n8n-nodes-base.jira",
@@ -4105,34 +4052,11 @@
         "options": {}
       },
       "position": [
-        -3440,
-        -112
+        -3200,
+        -128
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "e8e97ba2-1747-4883-b98e-b048b81c0fc1",
-      "name": "Get file2",
-      "parameters": {
-        "attachmentId": "={{ $json.fields.attachment[0].id }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        -2976,
-        -112
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
     },
     {
       "id": "be9e1ba1-f37c-403c-a7fe-694ded305d08",
@@ -4151,7 +4075,7 @@
         "options": {}
       },
       "position": [
-        -2976,
+        -2656,
         32
       ],
       "type": "n8n-nodes-base.set",
@@ -4192,26 +4116,11 @@
         }
       },
       "position": [
-        -2816,
+        -2496,
         32
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "id": "306e76c6-8fae-414e-839a-71c1d57b79f9",
-      "name": "Tech-task2",
-      "parameters": {
-        "destinationKey": "tech-task",
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        -2816,
-        -112
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
     },
     {
       "id": "86138b7e-ec90-4121-be54-e37a7b34d037",
@@ -4222,7 +4131,7 @@
           "conditions": [
             {
               "id": "35c2f981-5ecb-4a86-8eb4-6bd6f0db6917",
-              "leftValue": "={{ $json.error }}",
+              "leftValue": "=",
               "operator": {
                 "operation": "notEquals",
                 "type": "string"
@@ -4240,186 +4149,11 @@
         "options": {}
       },
       "position": [
-        -3136,
-        -112
+        -3040,
+        -128
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2
-    },
-    {
-      "id": "499a2e98-a929-4635-ad0b-a9ca9a72ced1",
-      "name": "Занести таску в БД",
-      "parameters": {
-        "columns": {
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false,
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "schema": [
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "Issue",
-              "id": "Issue",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "Status",
-              "id": "Status",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "APPkey",
-              "id": "APPkey",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "APPsecret",
-              "id": "APPsecret",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "RefreshToken",
-              "id": "RefreshToken",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "DropBox",
-              "id": "DropBox",
-              "readOnly": false,
-              "removed": false,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "Content",
-              "id": "Content",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultMatch": false,
-              "display": true,
-              "displayName": "BaseFolder",
-              "id": "BaseFolder",
-              "readOnly": false,
-              "removed": true,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "value": {
-            "Issue": "={{ $('Webhook1').item.json.body.issue_key }}",
-            "Status": "queue"
-          }
-        },
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task_test_v2",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
-          "mode": "list",
-          "value": "RkroTaP1NAl95TCT"
-        },
-        "options": {}
-      },
-      "position": [
-        -2336,
-        -112
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "id": "54e959e0-cadd-4880-a27f-b331623cbb8b",
-      "name": "If",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "4ca79493-703d-4065-85d9-196cc985b42a",
-              "leftValue": "={{ $json.Issue }}",
-              "operator": {
-                "operation": "empty",
-                "singleValue": true,
-                "type": "string"
-              },
-              "rightValue": ""
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        -2496,
-        -112
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2
-    },
-    {
-      "alwaysOutputData": true,
-      "id": "e3b7e1ae-0257-4a9f-bd3c-03ca34d9d728",
-      "name": "Get row(s)",
-      "parameters": {
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task_test_v2",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
-          "mode": "list",
-          "value": "RkroTaP1NAl95TCT"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "Issue",
-              "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
-            }
-          ]
-        },
-        "operation": "get"
-      },
-      "position": [
-        -2656,
-        -112
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
     },
     {
       "id": "461ffe71-cf2b-4886-9faf-37dd8311961d",
@@ -4569,7 +4303,7 @@
         "options": {}
       },
       "position": [
-        -3696,
+        -3376,
         -112
       ],
       "type": "n8n-nodes-base.if",
@@ -4623,34 +4357,11 @@
         "options": {}
       },
       "position": [
-        -3424,
+        -3104,
         192
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "c23df06b-811c-4852-8ab4-295b5e2334e2",
-      "name": "Get file3",
-      "parameters": {
-        "attachmentId": "={{ $json.fields.attachment[0].id }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        -2976,
-        176
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
     },
     {
       "id": "973bdc47-e182-4bcb-806b-c005bc059452",
@@ -4669,7 +4380,7 @@
         "options": {}
       },
       "position": [
-        -2976,
+        -2656,
         336
       ],
       "type": "n8n-nodes-base.set",
@@ -4710,26 +4421,11 @@
         }
       },
       "position": [
-        -2816,
+        -2496,
         336
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
-    },
-    {
-      "id": "8b697440-9ff3-4fbe-b346-2cc1c405279d",
-      "name": "Tech-task",
-      "parameters": {
-        "destinationKey": "tech-task",
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        -2816,
-        176
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
     },
     {
       "id": "b712dd7b-0b11-45f3-b57b-f3f11b82886f",
@@ -4758,7 +4454,7 @@
         "options": {}
       },
       "position": [
-        -3136,
+        -2816,
         192
       ],
       "type": "n8n-nodes-base.if",
@@ -6057,7 +5753,7 @@
         "path": "jira_task_test"
       },
       "position": [
-        -4144,
+        -3824,
         -112
       ],
       "type": "n8n-nodes-base.webhook",
@@ -6129,6 +5825,248 @@
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "07d70e21-ac37-464d-b057-566ed8d1b668",
+      "name": "Update an issue working9",
+      "parameters": {
+        "issueKey": "={{ $('Get an issue2').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Cancelled-Admin",
+            "mode": "list",
+            "value": "241"
+          }
+        }
+      },
+      "position": [
+        -2016,
+        -192
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "892bdc4b-464c-4d64-92fa-0b3b4054f0d4",
+      "name": "Add a comment2",
+      "parameters": {
+        "comment": "Неправильное заполнение задачи.",
+        "issueKey": "={{ $('Get an issue2').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        -1808,
+        -192
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "445ce98d-5a7e-41cc-ae59-db86bcba89df",
+      "name": "No Operation, do nothing7",
+      "parameters": {},
+      "position": [
+        -1600,
+        -192
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "d0c371dc-6758-4e5f-ae5b-c63f3cc7e0ad",
+      "name": "Занести таску в БД",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Issue",
+              "id": "Issue",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Status",
+              "id": "Status",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "APPkey",
+              "id": "APPkey",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "APPsecret",
+              "id": "APPsecret",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "RefreshToken",
+              "id": "RefreshToken",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "DropBox",
+              "id": "DropBox",
+              "readOnly": false,
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Content",
+              "id": "Content",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "BaseFolder",
+              "id": "BaseFolder",
+              "readOnly": false,
+              "removed": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Issue": "={{ $('Webhook1').item.json.body.issue_key }}",
+            "Status": "queue"
+          }
+        },
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task_test_v2",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
+          "mode": "list",
+          "value": "RkroTaP1NAl95TCT"
+        },
+        "options": {}
+      },
+      "position": [
+        -2336,
+        -128
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
+    },
+    {
+      "id": "76743e62-76b4-40ef-aabb-364f76ff506d",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4ca79493-703d-4065-85d9-196cc985b42a",
+              "leftValue": "={{ $json.Issue }}",
+              "operator": {
+                "operation": "empty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -2496,
+        -128
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "686c931b-7dd0-4190-8405-beb6a40e20ed",
+      "name": "Get row(s)",
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "cachedResultName": "Jira_task_test_v2",
+          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
+          "mode": "list",
+          "value": "RkroTaP1NAl95TCT"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Issue",
+              "keyValue": "={{ $('Webhook1').item.json.body.issue_key }}"
+            }
+          ]
+        },
+        "operation": "get"
+      },
+      "position": [
+        -2656,
+        -128
+      ],
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -6146,6 +6084,45 @@
           "Timezone": "Europe/Warsaw (UTC+01:00)",
           "Year": "2025",
           "timestamp": "2025-12-24T11:51:00.002+01:00"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "Webhook1": [
+      {
+        "json": {
+          "body": {
+            "description": "null",
+            "issue_key": "TAA-216",
+            "serial_num_pc": "null"
+          },
+          "executionMode": "production",
+          "headers": {
+            "accept": "application/json, application/javascript, text/javascript",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "135.181.186.107",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "FI",
+            "cf-ray": "9bb1d42204e0d259-FRA",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-length": "67",
+            "content-type": "application/json",
+            "host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-for": "135.181.186.107, 172.71.164.135",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-is-trusted": "yes",
+            "x-real-ip": "135.181.186.107"
+          },
+          "params": {},
+          "query": {},
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
         },
         "pairedItem": {
           "item": 0
@@ -6174,6 +6151,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-12-29T09:31:41.003Z",
-  "versionId": "8c47f06b-e3cc-4a1e-af4c-0c14d7dd578a"
+  "updatedAt": "2026-01-09T09:52:31.664Z",
+  "versionId": "2849062b-9d80-4342-88f1-2aa040206d74"
 }
