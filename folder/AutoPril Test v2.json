@@ -14,6 +14,28 @@
           ]
         ]
       },
+      "AI Agent1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Convert MD2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "AI Agent2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Convert MD3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Add a comment": {
         "main": [
           [
@@ -69,6 +91,28 @@
           ]
         ]
       },
+      "Anthropic Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent1",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "Anthropic Chat Model2": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent2",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
       "Board of SysAdmins": {
         "main": [
           [
@@ -91,15 +135,42 @@
           ]
         ]
       },
-      "Convert MD": {
+      "Code in JavaScript": {
         "main": [
           [
             {
               "index": 0,
-              "node": "Merge",
+              "node": "Get an attachment from an issue1",
               "type": "main"
             }
           ]
+        ]
+      },
+      "Code in JavaScript1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Get an attachment from an issue2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Loop Over Items",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Convert MD": {
+        "main": [
+          []
         ]
       },
       "Convert MD1": {
@@ -107,6 +178,28 @@
           [
             {
               "index": 1,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Convert MD2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Loop Over Items",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Convert MD3": {
+        "main": [
+          [
+            {
+              "index": 2,
               "node": "Merge",
               "type": "main"
             }
@@ -160,6 +253,28 @@
           ]
         ]
       },
+      "Edit Fields": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "AI Agent2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Extract from File": {
         "main": [
           [
@@ -177,6 +292,28 @@
             {
               "index": 0,
               "node": "Convert MD1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Extract from File2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "arcihve extractor1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Extract from File3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "arcihve extractor2",
               "type": "main"
             }
           ]
@@ -231,7 +368,29 @@
           [
             {
               "index": 0,
-              "node": "If2",
+              "node": "Extract from File",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get an attachment from an issue1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Extract from File2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get an attachment from an issue2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Extract from File3",
               "type": "main"
             }
           ]
@@ -314,6 +473,28 @@
           ]
         ]
       },
+      "Get an issue7": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get an issue8": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Get file1": {
         "main": [
           [
@@ -359,6 +540,16 @@
               "index": 0,
               "node": "Get an issue3",
               "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Get an issue7",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Get an issue8",
+              "type": "main"
             }
           ]
         ]
@@ -401,17 +592,29 @@
       },
       "If2": {
         "main": [
+          [],
           [
             {
               "index": 0,
-              "node": "Extract from File",
+              "node": "Update an issue working5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Loop Over Items": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Merge",
               "type": "main"
             }
           ],
           [
             {
               "index": 0,
-              "node": "Update an issue working5",
+              "node": "Edit Fields",
               "type": "main"
             }
           ]
@@ -633,6 +836,28 @@
           ]
         ]
       },
+      "arcihve extractor1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "arcihve extractor2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Вытаскиваем все файлы2": {
         "main": [
           [
@@ -693,13 +918,7 @@
       },
       "Есть?1": {
         "main": [
-          [
-            {
-              "index": 0,
-              "node": "Board of SysAdmins In progress3",
-              "type": "main"
-            }
-          ],
+          [],
           [
             {
               "index": 0,
@@ -769,14 +988,14 @@
           [
             {
               "index": 0,
-              "node": "Есть?1",
+              "node": "Board of SysAdmins In progress3",
               "type": "main"
             }
           ]
         ]
       }
     },
-    "createdAt": "2026-01-09T09:52:31.666Z",
+    "createdAt": "2026-01-22T19:47:12.294Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -1733,6 +1952,7 @@
       {
         "id": "b1cb8c4c-a0ee-40ae-995e-b5ec636d9a33",
         "name": "Edit Dropbox",
+        "onError": "continueRegularOutput",
         "parameters": {
           "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  // 1) сначала ищем dropbox‑файл\n  let chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('dropbox');\n  });\n\n  // 2) если dropbox не найден — берём любой первый файл, если он есть\n  if (!chosen && attachments.length > 0) {\n    chosen = attachments[0];\n  }\n\n  // 3) если вообще нет вложений — ничего не добавляем\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n      },\n    });\n  }\n}\n\nreturn result;\n"
         },
@@ -1752,6 +1972,7 @@
         },
         "id": "9b97ba6c-5b7e-4f45-a2b8-7f867a43d371",
         "name": "Get an attachment from an issue",
+        "onError": "continueRegularOutput",
         "parameters": {
           "attachmentId": "={{ $json.attachment.id }}",
           "download": true,
@@ -1909,7 +2130,7 @@
         },
         "position": [
           1904,
-          784
+          992
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -1964,9 +2185,9 @@
         "typeVersion": 1.1
       },
       {
+        "disabled": true,
         "id": "773b4d45-fe59-46c3-97fb-96af3369b622",
         "name": "AI Agent",
-        "onError": "continueRegularOutput",
         "parameters": {
           "hasOutputParser": true,
           "options": {
@@ -1974,7 +2195,7 @@
             "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
           },
           "promptType": "define",
-          "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
+          "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
         },
         "position": [
           1920,
@@ -2028,7 +2249,7 @@
         },
         "position": [
           1568,
-          784
+          992
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -2038,15 +2259,18 @@
       {
         "id": "be74624e-5026-44bb-a4ac-fe04c0ac8549",
         "name": "Merge",
-        "parameters": {},
+        "parameters": {
+          "numberInputs": 3
+        },
         "position": [
-          2928,
+          4384,
           608
         ],
         "type": "n8n-nodes-base.merge",
         "typeVersion": 3.2
       },
       {
+        "disabled": true,
         "id": "f2438ae0-505f-4c65-bf37-4c57d5fdcda5",
         "name": "arcihve extractor",
         "parameters": {
@@ -2066,6 +2290,7 @@
             "name": "Jira SW Task Buider"
           }
         },
+        "disabled": true,
         "id": "19b79349-081a-46ef-8d7f-38b1fadc8775",
         "name": "Get an issue3",
         "parameters": {
@@ -2084,11 +2309,12 @@
         "waitBetweenTries": 5000
       },
       {
+        "disabled": true,
         "id": "36037389-b781-4607-9bb8-3f7168d2aa01",
         "name": "Convert MD",
         "onError": "continueRegularOutput",
         "parameters": {
-          "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_2.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
+          "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_dropbox.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
         },
         "position": [
           2208,
@@ -2104,6 +2330,7 @@
             "name": "Anthropic account"
           }
         },
+        "disabled": true,
         "id": "58e1a26b-7115-401b-884c-64547f2b44ac",
         "name": "Anthropic Chat Model",
         "parameters": {
@@ -2118,8 +2345,8 @@
           }
         },
         "position": [
-          1904,
-          656
+          1920,
+          352
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
         "typeVersion": 1.3
@@ -2163,7 +2390,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          3648,
+          5104,
           480
         ],
         "retryOnFail": true,
@@ -2182,12 +2409,12 @@
         "name": "Get an issue5",
         "parameters": {
           "additionalFields": {},
-          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
           "jiraVersion": "serverPat",
           "operation": "get"
         },
         "position": [
-          3168,
+          4624,
           480
         ],
         "retryOnFail": true,
@@ -2202,7 +2429,7 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          3328,
+          4784,
           480
         ],
         "type": "n8n-nodes-base.code",
@@ -2217,7 +2444,7 @@
           "options": {}
         },
         "position": [
-          3488,
+          4944,
           480
         ],
         "type": "n8n-nodes-base.splitOut",
@@ -2233,12 +2460,12 @@
         "id": "6c71b19d-51ef-43c1-8060-fcaedca50943",
         "name": "Add an attachment to an issue",
         "parameters": {
-          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
           "jiraVersion": "serverPat",
           "resource": "issueAttachment"
         },
         "position": [
-          3168,
+          4624,
           768
         ],
         "retryOnFail": true,
@@ -2256,7 +2483,7 @@
         "id": "b6c71552-2a9a-4070-b629-e48c9700f222",
         "name": "Update an issue working3",
         "parameters": {
-          "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+          "issueKey": "={{ $('Updata Jira-Status').last().json.Issue }}",
           "jiraVersion": "serverPat",
           "operation": "update",
           "updateFields": {
@@ -2269,7 +2496,7 @@
           }
         },
         "position": [
-          3328,
+          4784,
           768
         ],
         "retryOnFail": true,
@@ -2301,12 +2528,13 @@
       {
         "id": "30d681fb-e7a7-49c1-9f4b-5f031e1ef4ea",
         "name": "Вытаскиваем файл с prompt",
+        "onError": "continueRegularOutput",
         "parameters": {
           "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
         },
         "position": [
           1712,
-          784
+          992
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -2343,6 +2571,7 @@
         "waitBetweenTries": 5000
       },
       {
+        "disabled": true,
         "id": "9ff26509-a80c-410e-ac14-2f2c5a82a2c4",
         "name": "If2",
         "parameters": {
@@ -2369,8 +2598,8 @@
           "options": {}
         },
         "position": [
-          640,
-          608
+          624,
+          704
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.3
@@ -2561,7 +2790,7 @@
         "id": "d1416054-9ff6-4502-b939-d8231b26b3fe",
         "name": "Проверка на файлы Prompt1",
         "parameters": {
-          "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n\n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n\n    if (text.includes('dropbox')) return false;\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];\n"
+          "jsCode": "const allItems = $input.all();\n\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  return attachments.filter(a => {\n    const filename = (a.filename || '').toLowerCase();\n    const content = (a.content || '').toLowerCase();\n    const text = filename + ' ' + content;\n    \n    // Ищем только prompt или promt (БЕЗ исключения dropbox)\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\nconst attachmentIds = allFiltered.map(a => {\n  const contentUrl = a.content || '';\n  const match = contentUrl.match(/\\/attachment\\/(\\d+)\\//);\n  return match ? match[1] : null;\n}).filter(id => id !== null);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];"
         },
         "position": [
           -960,
@@ -2599,7 +2828,7 @@
         },
         "position": [
           -752,
-          624
+          848
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.3
@@ -2620,9 +2849,9 @@
           "updateFields": {
             "statusId": {
               "__rl": true,
-              "cachedResultName": "Cancelled-Admin",
+              "cachedResultName": "Backlog-Admin",
               "mode": "list",
-              "value": "241"
+              "value": "101"
             }
           }
         },
@@ -2645,7 +2874,7 @@
         "id": "c39609ee-5279-4348-94f7-a987d7d4b82f",
         "name": "Add a comment1",
         "parameters": {
-          "comment": "Неправильное заполнение задачи.",
+          "comment": "Неправильное заполнение задачи: Не приложены все файлы.",
           "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
           "jiraVersion": "serverPat",
           "options": {},
@@ -2663,13 +2892,14 @@
       {
         "id": "9f89d19e-4dea-4404-a077-6f2e467d645a",
         "name": "Extract from File1",
+        "onError": "continueRegularOutput",
         "parameters": {
           "operation": "text",
           "options": {}
         },
         "position": [
           2048,
-          784
+          992
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
@@ -2683,7 +2913,7 @@
         },
         "position": [
           2208,
-          784
+          992
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -2771,7 +3001,7 @@
         "name": "No Operation, do nothing5",
         "parameters": {},
         "position": [
-          3520,
+          4976,
           768
         ],
         "type": "n8n-nodes-base.noOp",
@@ -2782,7 +3012,7 @@
         "name": "No Operation, do nothing6",
         "parameters": {},
         "position": [
-          3840,
+          5296,
           480
         ],
         "type": "n8n-nodes-base.noOp",
@@ -3029,13 +3259,391 @@
         ],
         "type": "n8n-nodes-base.dataTable",
         "typeVersion": 1
+      },
+      {
+        "id": "cb405fe9-d202-4bfd-a633-bb14f30a8e41",
+        "name": "AI Agent1",
+        "parameters": {
+          "hasOutputParser": true,
+          "options": {
+            "enableStreaming": true,
+            "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+          },
+          "promptType": "define",
+          "text": "={{ $json.Prompt }} отредактируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот название файлов и папки: {{ $json.file }}\nВАЖНО! Сохраняй всю структуру, не добавляй ничего нового, только измени промпт под новые данные.\n"
+        },
+        "position": [
+          2848,
+          640
+        ],
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 3
+      },
+      {
+        "id": "adc2e066-c2f2-49b2-bf68-375bf3b5cc4b",
+        "name": "arcihve extractor1",
+        "parameters": {
+          "jsCode": "// Шаг 1: Получаем содержимое Readme.md из узла Extract from File2\nlet readmeContent = null;\ntry {\n  const extractNode = $('Extract from File2').first();\n  readmeContent = extractNode.json?.data || extractNode.binary?.data || null;\n  \n  // Если данные в base64, декодируем\n  if (readmeContent && typeof readmeContent !== 'string') {\n    readmeContent = Buffer.from(readmeContent, 'base64').toString('utf-8');\n  }\n} catch (e) {\n  console.log('Extract from File2 not found or empty');\n}\n\n// Шаг 2: Парсим Readme.md в словарь {id: название}\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Ищем строки вида: 67472790c37a3 - Skin Editor, Skin Maker\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      const id = match[1].toLowerCase();\n      const name = match[2].trim();\n      contentNames[id] = name;\n    }\n  }\n}\n\n// Шаг 3: Получаем attachments из узла Get an issue7\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue7').all();\n  \n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    \n    for (const att of attachments) {\n      const content = att.content || '';\n      if (typeof content !== 'string') continue;\n      \n      const lowerContent = content.toLowerCase();\n      \n      // Ищем только файлы с underscore (readme_ID или content_ID)\n      if (!lowerContent.includes('readme_') && !lowerContent.includes('content_')) {\n        continue;\n      }\n      \n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName) {\n        const clean = content.split('?')[0].split('#')[0];\n        fileName = clean.split('/').pop() || '';\n      }\n      \n      if (!fileName) continue;\n      \n      // Извлекаем ID из имени файла\n      const match = fileName.match(/[_/]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : 'unknown';\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, \n          content: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerContent.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n      } else if (lowerContent.includes('content_')) {\n        fileMap[fileId].content = fileName;\n      }\n    }\n  }\n} catch (e) {\n  console.log('Get an issue7 not found or empty');\n}\n\nreturn Object.values(fileMap).map(pair => ({\n  json: pair\n}));"
+        },
+        "position": [
+          2016,
+          640
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "d7b46cab-dd89-4f82-b821-74c7dd04d570",
+        "name": "Get an issue7",
+        "parameters": {
+          "additionalFields": {},
+          "issueKey": "={{ $json.Issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "get"
+        },
+        "position": [
+          1472,
+          640
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      },
+      {
+        "id": "1c31c099-be2d-4d97-b3ce-aa1513f47207",
+        "name": "Convert MD2",
+        "onError": "continueRegularOutput",
+        "parameters": {
+          "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем данные из Loop Over Items\nconst loopItem = $('Loop Over Items').first().json;\nconst contentName = loopItem.contentName || 'Unknown';\nconst id = loopItem.id || 'unknown';\nconst itemIndex = loopItem.loopIndex || 1;  // <-- Берем готовый индекс\n\nconsole.log('Item index:', itemIndex);\n\n// Формируем имя файла\nconst safeFileName = `prompt_${contentName}_${id}_${itemIndex}.md`.replace(/[\\/\\\\:*?\"<>|,]/g, '_');\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: safeFileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: safeFileName,\n    itemIndex: itemIndex,\n  }\n}];"
+        },
+        "position": [
+          3136,
+          640
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "anthropicApi": {
+            "id": "9tOxhZE1SbRJp4SW",
+            "name": "Anthropic account"
+          }
+        },
+        "id": "4d5e1a64-3756-4d70-beee-3485bc2609a6",
+        "name": "Anthropic Chat Model1",
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "cachedResultName": "Claude Opus 4.5",
+            "mode": "list",
+            "value": "claude-opus-4-5-20251101"
+          },
+          "options": {
+            "maxTokensToSample": 20000
+          }
+        },
+        "position": [
+          2656,
+          816
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "typeVersion": 1.3
+      },
+      {
+        "id": "3f37968e-686d-4912-bd0e-a79bfb143483",
+        "name": "Loop Over Items",
+        "parameters": {
+          "options": {}
+        },
+        "position": [
+          2336,
+          640
+        ],
+        "type": "n8n-nodes-base.splitInBatches",
+        "typeVersion": 3
+      },
+      {
+        "id": "2da80517-3c0a-41b0-bf56-31c830dd2a8a",
+        "name": "Edit Fields",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
+                "name": "file",
+                "type": "string",
+                "value": "=Folder name: {{ $json.id }}\n{{ $json.content }}\n{{ $json.readme }}"
+              },
+              {
+                "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
+                "name": "Prompt",
+                "type": "string",
+                "value": "=# 🔄 ПРОМТ — АДАПТАЦИЯ КАТЕГОРИИ: {{ $json.contentName }}\n\n## 📋 ЗАДАЧА\n\nАдаптировать ОДНУ категорию в существующем iOS-приложении с Dropbox-интеграцией под новый контент.\n\n**КРИТИЧНО:** \n- Работаем только с ОДНОЙ категорией\n- Не трогаем другие категории\n- Сохраняем работоспособность всего приложения\n\n---\n\n## 📚 ТЕРМИНОЛОГИЯ\n\n| Термин | Описание | Где находится |\n|--------|----------|---------------|\n| **Категория** | Раздел в приложении | TabBar / Menu / Navigation |\n| **Ключ категории (FolderName)** | Уникальный идентификатор папки | `Readme.md` |\n| **Контент** | Данные категории | `content_[FolderName].json` |\n| **Подкатегории** | Вложенные группы внутри контента | Внутри JSON (массивы, секции) |\n\n---\n\n## ⚙️ ВХОДНЫЕ ДАННЫЕ\n\n### Какую категорию адаптируем:\n\n```\nКатегория: [НАЗВАНИЕ для UI]\nКлюч категории (FolderName): [ИЗ Readme.md]\nJSON файл: content_[FolderName].json\nReadme файл: readme_[FolderName].md\n```\n\n### Конфигурация Dropbox (если первая категория):\n\n```\nCONTENT_ROOT = [ПУТЬ]\nRefresh Token: [ТОКЕН]\n```\n\n---\n\n## 🔍 ШАГ 1: ПРОВЕРКА ПРИЛОЖЕНИЯ\n\n### 1.1 Получить список всех категорий в приложении\n\n**Найти:** ContentCategory enum (или аналог)\n\n**Выписать все существующие категории:**\n\n| # | Case в enum | FolderName | Тип контента | Есть подкатегории |\n|---|-------------|------------|--------------|-------------------|\n| 1 | [case] | [folder] | [список/карточки/...] | [да/нет] |\n| 2 | ... | ... | ... | ... |\n\n### 1.2 Сравнить новую категорию с существующими\n\n**Найти максимально похожую категорию по критериям:**\n- Тип контента похож\n- Названия похожи\n\n### 1.3 Определить сценарий работы\n\n| Сценарий | Условие | Действие |\n|----------|---------|----------|\n| **A. Есть похожая категория** | Найдена категория с похожей структурой | Заменить контент в существующей категории |\n| **B. Нет похожих** | Структура контента уникальная | Создать новый раздел по образцу ближайшего |\n\n### 1.4 Зафиксировать решение\n\n```\nСценарий: [A / B]\nПохожая категория: [название или \"нет\"]\nЧто делаем: [заменяем контент / создаём новую]\n```\n\n---\n\n## 📂 ШАГ 2: АНАЛИЗ НОВОГО КОНТЕНТА КАТЕГОРИИ\n\n### 2.1 Получить ключ категории\n\n**Прочитать:** `Readme.md`\n\n**Найти:** ключ (FolderName) для нужной категории\n\n```\nКлюч категории (FolderName): [из Readme.md]\n```\n\n### 2.2 Изучить readme категории\n\n**Прочитать:** `readme_[FolderName].md`\n\n**Извлечь:**\n- Описание категории\n- Список ключей JSON\n- Назначение каждого ключа\n- Есть ли подкатегории\n\n### 2.3 Изучить JSON категории\n\n**Прочитать:** `content_[FolderName].json`\n\n**Извлечь:**\n- Структура верхнего уровня\n- Типы полей (String, Int, Bool, Array, Object)\n- **Подкатегории** — вложенные массивы или группы\n- Имя поля с изображением\n\n### 2.4 Маппинг ключей категории\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `[ключ1]` | [назначение] | [тип] |\n| `[ключ2]` | [назначение] | [тип] |\n| ... | ... | ... |\n\n**PartKey:** `[из JSON]`\n\n**Поле с изображением:** `[имя поля]`\n\n### 2.5 Подкатегории (если есть)\n\n**Проверить:** есть ли в JSON вложенные массивы или группы данных\n\n**Если есть подкатегории:**\n\n| Подкатегория | Ключ в JSON | Тип | Описание |\n|--------------|-------------|-----|----------|\n| [название1] | `[ключ]` | Array/Object | [что содержит] |\n| [название2] | `[ключ]` | Array/Object | [что содержит] |\n\n**Поля внутри подкатегории:**\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `[ключ]` | [назначение] | [тип] |\n\n**Как отображать подкатегории в UI:**\n- Секции в списке\n- Табы / сегменты\n- Вложенная навигация\n- Фильтры\n\n---\n\n## 🗺️ ШАГ 3: СРАВНЕНИЕ\n\n| Аспект | Было | Стало | Действие |\n|--------|------|-------|----------|\n| folderName | [старое] | [новое] | Обновить |\n| partKey | [старое] | [новое] | Обновить |\n| Кол-во полей | [N] | [M] | Добавить/Удалить |\n| Поле изображения | [старое] | [новое] | Обновить |\n| Подкатегории | [да/нет] | [да/нет] | Добавить структуры и UI |\n| Вложенные объекты | [да/нет] | [да/нет] | Добавить структуры |\n\n---\n\n## 🏗️ ШАГ 4: ОБНОВЛЕНИЕ КОДА\n\n### Для сценария A (заменяем контент в похожей категории):\n\n#### 4.1 ContentCategory enum\n\n**Найти:** case похожей категории\n\n**Обновить:**\n- `folderName` → новое имя папки\n- `partKey` → новый ключ из JSON\n- `displayName` → новое название для UI\n\n#### 4.2 Модель данных\n\n**Найти:** структуру модели похожей категории\n\n**Обновить:**\n- Поля под новый JSON\n- Типы данных\n- CodingKeys если нужно\n- Вложенные структуры для подкатегорий если есть\n\n**Если есть подкатегории:**\n- Создать отдельные структуры для каждой подкатегории\n- Или использовать массивы внутри основной модели\n\n#### 4.3 ContentParser\n\n**Найти:** метод парсинга похожей категории\n\n**Обновить:**\n- Парсинг под новую модель\n- Обработку вложенных объектов\n\n#### 4.4 View и ViewModel\n\n**Найти:** View и ViewModel похожей категории\n\n**Обновить:**\n- Отображаемые поля\n- DropboxImage — имя поля с картинкой\n- Тип данных в ViewModel\n\n**Если есть подкатегории:**\n- Добавить секции / табы / фильтры для подкатегорий\n- Обновить логику отображения групп данных\n\n---\n\n### Для сценария B (создаём новую по образцу):\n\n#### 4.1 ContentCategory enum\n\n**Добавить:** новый case для категории\n\n**Скопировать из ближайшего образца и изменить:**\n- `folderName` → имя папки новой категории\n- `partKey` → ключ из JSON новой категории\n- `displayName` → название для UI\n\n#### 4.2 Модель данных\n\n**Скопировать:** модель из ближайшего образца\n\n**Адаптировать:**\n- Переименовать структуру\n- Изменить поля под новый JSON\n- Обновить типы данных\n- Добавить структуры для подкатегорий если есть\n\n#### 4.3 ContentParser\n\n**Скопировать:** метод парсинга из образца\n\n**Адаптировать:**\n- Переименовать метод\n- Изменить тип возвращаемых данных\n- Обновить парсинг под новую модель\n\n#### 4.4 View и ViewModel\n\n**Скопировать:** View и ViewModel из образца\n\n**Адаптировать:**\n- Переименовать файлы и классы\n- Изменить отображаемые поля\n- Обновить категорию в DropboxImage\n- Изменить тип данных в ViewModel\n- Добавить UI для подкатегорий если есть (секции, табы, фильтры)\n\n#### 4.5 Navigation\n\n**Найти:** место где добавляются разделы (TabBar, Menu, List)\n\n**Добавить:**\n- Новый пункт навигации\n- Ссылку на новый View\n- Иконку если нужно\n\n---\n\n## ✅ ШАГ 5: ЧЕКЛИСТ КАТЕГОРИИ\n\n### Анализ:\n- [ ] Выписаны все существующие категории в приложении\n- [ ] Найдена похожая категория (или определено что нет похожих)\n- [ ] Определён сценарий (A / B)\n- [ ] Получен ключ категории из Readme.md\n- [ ] Прочитан readme категории\n- [ ] Изучен JSON категории\n- [ ] Заполнен маппинг ключей\n- [ ] Определён partKey\n- [ ] Определено поле с изображением\n- [ ] Определены подкатегории (если есть)\n\n### Код (сценарий A — замена контента в похожей):\n- [ ] Обновлён folderName в enum\n- [ ] Обновлён partKey в enum\n- [ ] Обновлён displayName в enum\n- [ ] Обновлена модель данных\n- [ ] Добавлены структуры подкатегорий (если есть)\n- [ ] Обновлён парсер\n- [ ] Обновлён View\n- [ ] Добавлен UI для подкатегорий (если есть)\n- [ ] Обновлён ViewModel\n\n### Код (сценарий B — новый раздел):\n- [ ] Добавлен case в enum с folderName и partKey\n- [ ] Создана новая модель по образцу\n- [ ] Добавлены структуры подкатегорий (если есть)\n- [ ] Добавлен метод парсинга\n- [ ] Создан View по образцу\n- [ ] Добавлен UI для подкатегорий (если есть)\n- [ ] Создан ViewModel по образцу\n- [ ] Добавлен раздел в навигацию\n\n### Тестирование:\n- [ ] Категория загружается без ошибок\n- [ ] Все данные отображаются\n- [ ] Подкатегории отображаются корректно (если есть)\n- [ ] Изображения загружаются\n- [ ] Другие категории не сломались\n- [ ] Навигация работает корректно\n\n---\n\n## 🔧 ЕСЛИ ЧТО-ТО НЕ РАБОТАЕТ\n\n### JSON не парсится:\n1. Сравнить ключи в readme с полями модели\n2. Проверить типы данных в JSON\n3. Проверить CodingKeys\n4. Проверить структуры подкатегорий\n\n### Изображения не загружаются:\n1. Проверить путь: `/{CONTENT_ROOT}/{folderName}/{fileName}`\n2. Проверить имя поля с изображением в модели\n3. Проверить что DropboxImage использует правильное поле\n\n### Данные не отображаются:\n1. Проверить что View использует все поля модели\n2. Проверить Optional поля\n3. Проверить вложенные объекты\n\n### Подкатегории не отображаются:\n1. Проверить структуру подкатегорий в модели\n2. Проверить парсинг вложенных массивов\n3. Проверить UI компоненты (секции, табы)\n\n---\n\n## 🚀 ПОРЯДОК РАБОТЫ\n\n1. **КАТЕГОРИИ** — выписать все существующие категории в приложении\n2. **СРАВНЕНИЕ** — найти похожую категорию по структуре контента\n3. **СЦЕНАРИЙ** — определить A (заменяем в похожей) или B (создаём новую)\n4. **КЛЮЧ** — получить ключ категории (FolderName) из Readme.md\n5. **README** — прочитать readme категории\n6. **JSON** — изучить структуру JSON и подкатегории\n7. **МАППИНГ** — заполнить таблицу ключей\n8. **КОД** — обновить или создать по образцу:\n   - Enum → Модель (+ подкатегории) → Парсер → View → ViewModel\n9. **НАВИГАЦИЯ** — добавить раздел если новый (сценарий B)\n10. **ТЕСТ** — проверить что работает\n\n---\n\n## ⚠️ ВАЖНО\n\n- **Сначала смотри существующие категории** — выпиши все что есть в приложении\n- **Ищи похожую по структуре** — если есть похожая категория, заменяем в ней контент\n- **Ключ категории** — всегда берётся из `Readme.md` корневой папки\n- **Если нет похожих** — создаём новую по образцу ближайшей\n- **Подкатегории** — если есть вложенные данные, создаём структуры и UI для них\n- Работаем ТОЛЬКО с одной категорией\n- Не меняем код других категорий\n- После завершения — проверяем что остальное не сломалось\n- Все данные из Dropbox, НЕ заглушки\n"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          2720,
+          640
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "044a46d9-36ca-4e18-be33-5b7096808278",
+        "name": "Code in JavaScript",
+        "parameters": {
+          "jsCode": "const items = $input.all();\nlet foundReadme = null;\nlet fallbackReadme = null;\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop();\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем URL-encoded символы\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Извлекаем ID из URL\n    const getAttachmentId = (attachment) => {\n      let id = null;\n      if (attachment.content) {\n        const match = attachment.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.self) {\n        const match = attachment.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.id) {\n        id = attachment.id.toString();\n      }\n      return id;\n    };\n    \n    // Приоритет 1: Чистый Readme.md (без underscore, без скобок)\n    if (lowerName === 'readme.md' && \n        !baseName.includes('_') && \n        !baseName.match(/readme\\s*\\(\\d+\\)\\.md/i)) {\n      \n      foundReadme = {\n        attachmentId: getAttachmentId(att),\n        fileName: baseName\n      };\n      break;\n    }\n    \n    // Приоритет 2: Readme (1).md - сохраняем как fallback\n    if (lowerName === 'readme (1).md' && !fallbackReadme) {\n      fallbackReadme = {\n        attachmentId: getAttachmentId(att),\n        fileName: baseName\n      };\n    }\n  }\n  \n  if (foundReadme) break;\n}\n\n// Возвращаем найденный или fallback\nif (foundReadme) {\n  return [{ json: foundReadme }];\n} else if (fallbackReadme) {\n  return [{ json: fallbackReadme }];\n} else {\n  return [\n    {\n      json: {\n        attachmentId: null,\n        error: 'Readme.md not found'\n      }\n    }\n  ];\n}"
+        },
+        "position": [
+          1616,
+          640
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "96304f3d-cb05-4ae2-bce3-c502dad74bd7",
+        "name": "Get an attachment from an issue1",
+        "parameters": {
+          "attachmentId": "={{ $json.attachmentId }}",
+          "download": true,
+          "jiraVersion": "serverPat",
+          "operation": "get",
+          "resource": "issueAttachment"
+        },
+        "position": [
+          1744,
+          640
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "id": "769ccfe6-2810-4796-8dea-087a4a93cacc",
+        "name": "Extract from File2",
+        "parameters": {
+          "operation": "text",
+          "options": {}
+        },
+        "position": [
+          1872,
+          640
+        ],
+        "type": "n8n-nodes-base.extractFromFile",
+        "typeVersion": 1.1
+      },
+      {
+        "id": "9fb436a0-91d8-4a42-977f-41972028c1ed",
+        "name": "AI Agent2",
+        "parameters": {
+          "hasOutputParser": true,
+          "options": {
+            "enableStreaming": true,
+            "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+          },
+          "promptType": "define",
+          "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
+        },
+        "position": [
+          2368,
+          1184
+        ],
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 3
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "2017c722-46fb-48a6-9ec9-8d24e6838802",
+        "name": "Get an issue8",
+        "parameters": {
+          "additionalFields": {},
+          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "jiraVersion": "serverPat",
+          "operation": "get"
+        },
+        "position": [
+          1568,
+          1184
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      },
+      {
+        "id": "a054d116-81aa-480e-83e7-94eae2f7155a",
+        "name": "Convert MD3",
+        "onError": "continueRegularOutput",
+        "parameters": {
+          "jsCode": "// Берём текст из AI Agent\nconst inputData = $input.first().json;\nconst aiOutput = inputData.output || inputData.text || inputData.content || 'No content';\n\n// Считаем количество всех items и добавляем +1\nlet itemNumber = 1;\n\ntry {\n  const allInputs = $input.all();\n  itemNumber = allInputs.length + 1;  // <-- Добавляем +1\n} catch (e) {\n  console.log('Cannot count items:', e.message);\n}\n\n// ОТЛАДКА\nconsole.log('Total items from Archive Extractor2:', $input.all().length);\nconsole.log('Item number (count + 1):', itemNumber);\n\n// Формируем имя файла с номером\nconst fileName = `prompt_CLEANUP_REMOVE_${itemNumber}.md`;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n  }\n}];"
+        },
+        "position": [
+          2656,
+          1184
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "anthropicApi": {
+            "id": "9tOxhZE1SbRJp4SW",
+            "name": "Anthropic account"
+          }
+        },
+        "id": "0000a5d8-8825-49b3-a42f-d535c6c9e8f1",
+        "name": "Anthropic Chat Model2",
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "cachedResultName": "Claude Opus 4.5",
+            "mode": "list",
+            "value": "claude-opus-4-5-20251101"
+          },
+          "options": {
+            "maxTokensToSample": 20000
+          }
+        },
+        "position": [
+          2176,
+          1360
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "typeVersion": 1.3
+      },
+      {
+        "id": "8b9d1810-dd61-40c4-bb76-e166bae6fe5a",
+        "name": "Edit Fields1",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
+                "name": "Content",
+                "type": "string",
+                "value": "={{ $('Extract from File3').item.json.data }}"
+              },
+              {
+                "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
+                "name": "Prompt",
+                "type": "string",
+                "value": "=# 🧹 ПРОМТ — ПРОВЕРКА И УДАЛЕНИЕ ЛИШНИХ КАТЕГОРИЙ\n\n## 📋 ЗАДАЧА\n\nПроверить проект и удалить все разделы контента, которые **есть в проекте**, но **отсутствуют в Dropbox контенте**.\n\n**КРИТИЧНО:** \n- Источник правды — `Readme.md` (предоставлен в файлах)\n- Удаляем ВСЁ что не указано в Readme.md\n- Сохраняем работоспособность приложения\n\n---\n\n## 🔍 ШАГ 1: ПОЛУЧИТЬ АКТУАЛЬНЫЙ СПИСОК КАТЕГОРИЙ\n\n### 1.1 Прочитать Readme.md из предоставленных файлов\n\n**Пример содержимого:**\n```markdown\n# Folder name\n`FNK3DS` - Editor\n`BNKFFO` - Mods\n`QDOWKD` - House Ideas\n```\n\n### 1.2 Извлечь список категорий\n\n| FolderName | Категория |\n|------------|-----------|\n| FNK3DS | Editor |\n| BNKFFO | Mods |\n| QDOWKD | House Ideas |\n\n**Это ЕДИНСТВЕННЫЕ категории, которые должны быть в проекте.**\n\n---\n\n## 🔍 ШАГ 2: ПРОВЕРИТЬ ПРОЕКТ\n\n### 2.1 Найти все категории в проекте\n\n**Искать в:**\n- `ContentCategory` enum (или аналог)\n- Модели данных\n- View/ViewModel файлы\n- Навигация (TabBar, Menu)\n\n### 2.2 Составить список категорий в проекте\n\n| Case в enum | FolderName | Есть в Dropbox? |\n|-------------|------------|-----------------|\n| [case1] | [folder1] | ✅ / ❌ |\n| [case2] | [folder2] | ✅ / ❌ |\n| ... | ... | ... |\n\n---\n\n## 🗑️ ШАГ 3: УДАЛИТЬ ЛИШНИЕ КАТЕГОРИИ\n\n### Для каждой категории с ❌:\n\n#### 3.1 ContentCategory enum\n\n**Удалить:**\n- case для этой категории\n- folderName в switch\n- partKey в switch\n- displayName в switch\n- Все computed properties для этого case\n\n#### 3.2 Модели данных\n\n**Удалить:**\n- Структуру модели (struct XxxItem)\n- Связанные типы данных\n\n#### 3.3 Парсер\n\n**Удалить:**\n- Метод парсинга для этой категории\n- Ссылки на модель в парсере\n\n#### 3.4 View и ViewModel\n\n**Удалить:**\n- View файл\n- ViewModel файл\n- Импорты в других файлах\n\n#### 3.5 Навигация\n\n**Удалить:**\n- Пункт в TabBar / Menu / Navigation\n- NavigationLink или роутинг\n- Иконку если была отдельно\n\n#### 3.6 Ресурсы\n\n**Удалить:**\n- Иконки категории в Assets\n- Локализацию для названия (если есть)\n\n---\n\n## ✅ ШАГ 4: ПРОВЕРКА ПОСЛЕ УДАЛЕНИЯ\n\n### 4.1 Компиляция\n\n- [ ] Проект компилируется без ошибок\n- [ ] Нет warnings о неиспользуемом коде\n\n### 4.2 Функциональность\n\n- [ ] Оставшиеся категории работают\n- [ ] Навигация корректная\n- [ ] Данные загружаются\n- [ ] Изображения отображаются\n\n### 4.3 Код\n\n- [ ] Нет мёртвого кода\n- [ ] Нет ссылок на удалённые модели\n- [ ] Нет пустых switch cases\n\n---\n\n## ⚠️ ВАЖНО\n\n1. **Readme.md — источник правды** — если категории нет в Readme.md, её не должно быть в проекте\n\n2. **Проверить зависимости** — перед удалением убедиться, что код не используется другими частями\n\n3. **Удалять полностью** — не оставлять закомментированный код\n\n4. **Тестировать после каждого удаления** — компилировать проект\n\n5. **Базовая инфраструктура остаётся:**\n   - DropboxService\n   - DropboxImage\n   - ContentCategory enum (с оставшимися cases)\n   - Базовые протоколы и расширения\n"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          2240,
+          1184
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "f307cb6a-c8ea-4242-92f6-fe8ca1707fc9",
+        "name": "Code in JavaScript1",
+        "parameters": {
+          "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
+        },
+        "position": [
+          1712,
+          1184
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "8b00f2d0-21ac-4510-857f-eda4c412707a",
+        "name": "Get an attachment from an issue2",
+        "parameters": {
+          "attachmentId": "={{ $json.attachmentId }}",
+          "download": true,
+          "jiraVersion": "serverPat",
+          "operation": "get",
+          "resource": "issueAttachment"
+        },
+        "position": [
+          1840,
+          1184
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "id": "3412a1f1-4a2d-42d7-a414-2915bbec5a20",
+        "name": "Extract from File3",
+        "parameters": {
+          "operation": "text",
+          "options": {}
+        },
+        "position": [
+          1968,
+          1184
+        ],
+        "type": "n8n-nodes-base.extractFromFile",
+        "typeVersion": 1.1
+      },
+      {
+        "id": "c4ccde7d-982e-4d10-8e68-f7f2a1231a67",
+        "name": "arcihve extractor2",
+        "parameters": {
+          "jsCode": "// Шаг 1: Получаем содержимое Readme.md из узла Extract from File2\nlet readmeContent = null;\ntry {\n  const extractNode = $('Extract from File2').first();\n  readmeContent = extractNode.json?.data || extractNode.binary?.data || null;\n  \n  // Если данные в base64, декодируем\n  if (readmeContent && typeof readmeContent !== 'string') {\n    readmeContent = Buffer.from(readmeContent, 'base64').toString('utf-8');\n  }\n} catch (e) {\n  console.log('Extract from File2 not found or empty');\n}\n\n// Шаг 2: Парсим Readme.md в словарь {id: название}\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Ищем строки вида: 67472790c37a3 - Skin Editor, Skin Maker\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      const id = match[1].toLowerCase();\n      const name = match[2].trim();\n      contentNames[id] = name;\n    }\n  }\n}\n\n// Шаг 3: Получаем attachments из узла Get an issue7\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue7').all();\n  \n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    \n    for (const att of attachments) {\n      const content = att.content || '';\n      if (typeof content !== 'string') continue;\n      \n      const lowerContent = content.toLowerCase();\n      \n      // Ищем только файлы с underscore (readme_ID или content_ID)\n      if (!lowerContent.includes('readme_') && !lowerContent.includes('content_')) {\n        continue;\n      }\n      \n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName) {\n        const clean = content.split('?')[0].split('#')[0];\n        fileName = clean.split('/').pop() || '';\n      }\n      \n      if (!fileName) continue;\n      \n      // Извлекаем ID из имени файла\n      const match = fileName.match(/[_/]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : 'unknown';\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, \n          content: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerContent.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n      } else if (lowerContent.includes('content_')) {\n        fileMap[fileId].content = fileName;\n      }\n    }\n  }\n} catch (e) {\n  console.log('Get an issue7 not found or empty');\n}\n\nreturn Object.values(fileMap).map(pair => ({\n  json: pair\n}));"
+        },
+        "position": [
+          2096,
+          1184
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "9ff9a1c2-1bea-4b74-89df-659a34ffc9b9",
+        "name": "Code in JavaScript2",
+        "parameters": {
+          "jsCode": "// В Loop Over Items добавьте это\nreturn items.map((item, index) => ({\n  json: {\n    ...item.json,\n    loopIndex: index + 1  // <-- Добавляем индекс\n  }\n}));"
+        },
+        "position": [
+          2160,
+          640
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
       }
     ],
-    "updatedAt": "2026-01-09T09:52:31.666Z",
-    "versionId": "2849062b-9d80-4342-88f1-2aa040206d74",
+    "updatedAt": "2026-01-22T19:47:12.294Z",
+    "versionId": "bb0f338e-4d79-460f-9ed5-6d1d1fb9eafc",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "2849062b-9d80-4342-88f1-2aa040206d74",
+  "activeVersionId": "bb0f338e-4d79-460f-9ed5-6d1d1fb9eafc",
   "connections": {
     "AI Agent": {
       "main": [
@@ -3043,6 +3651,28 @@
           {
             "index": 0,
             "node": "Convert MD",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert MD2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AI Agent2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert MD3",
             "type": "main"
           }
         ]
@@ -3103,6 +3733,28 @@
         ]
       ]
     },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "Board of SysAdmins": {
       "main": [
         [
@@ -3125,15 +3777,42 @@
         ]
       ]
     },
-    "Convert MD": {
+    "Code in JavaScript": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Merge",
+            "node": "Get an attachment from an issue1",
             "type": "main"
           }
         ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an attachment from an issue2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert MD": {
+      "main": [
+        []
       ]
     },
     "Convert MD1": {
@@ -3141,6 +3820,28 @@
         [
           {
             "index": 1,
+            "node": "Merge",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert MD2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert MD3": {
+      "main": [
+        [
+          {
+            "index": 2,
             "node": "Merge",
             "type": "main"
           }
@@ -3194,6 +3895,28 @@
         ]
       ]
     },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Extract from File": {
       "main": [
         [
@@ -3211,6 +3934,28 @@
           {
             "index": 0,
             "node": "Convert MD1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "arcihve extractor1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract from File3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "arcihve extractor2",
             "type": "main"
           }
         ]
@@ -3265,7 +4010,29 @@
         [
           {
             "index": 0,
-            "node": "If2",
+            "node": "Extract from File",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an attachment from an issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an attachment from an issue2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract from File3",
             "type": "main"
           }
         ]
@@ -3348,6 +4115,28 @@
         ]
       ]
     },
+    "Get an issue7": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an issue8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get file1": {
       "main": [
         [
@@ -3393,6 +4182,16 @@
             "index": 0,
             "node": "Get an issue3",
             "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Get an issue7",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Get an issue8",
+            "type": "main"
           }
         ]
       ]
@@ -3435,17 +4234,29 @@
     },
     "If2": {
       "main": [
+        [],
         [
           {
             "index": 0,
-            "node": "Extract from File",
+            "node": "Update an issue working5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Merge",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "Update an issue working5",
+            "node": "Edit Fields",
             "type": "main"
           }
         ]
@@ -3667,6 +4478,28 @@
         ]
       ]
     },
+    "arcihve extractor1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "arcihve extractor2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Вытаскиваем все файлы2": {
       "main": [
         [
@@ -3727,13 +4560,7 @@
     },
     "Есть?1": {
       "main": [
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins In progress3",
-            "type": "main"
-          }
-        ],
+        [],
         [
           {
             "index": 0,
@@ -3803,7 +4630,7 @@
         [
           {
             "index": 0,
-            "node": "Есть?1",
+            "node": "Board of SysAdmins In progress3",
             "type": "main"
           }
         ]
@@ -4771,6 +5598,7 @@
     {
       "id": "b1cb8c4c-a0ee-40ae-995e-b5ec636d9a33",
       "name": "Edit Dropbox",
+      "onError": "continueRegularOutput",
       "parameters": {
         "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  // 1) сначала ищем dropbox‑файл\n  let chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('dropbox');\n  });\n\n  // 2) если dropbox не найден — берём любой первый файл, если он есть\n  if (!chosen && attachments.length > 0) {\n    chosen = attachments[0];\n  }\n\n  // 3) если вообще нет вложений — ничего не добавляем\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n      },\n    });\n  }\n}\n\nreturn result;\n"
       },
@@ -4790,6 +5618,7 @@
       },
       "id": "9b97ba6c-5b7e-4f45-a2b8-7f867a43d371",
       "name": "Get an attachment from an issue",
+      "onError": "continueRegularOutput",
       "parameters": {
         "attachmentId": "={{ $json.attachment.id }}",
         "download": true,
@@ -4947,7 +5776,7 @@
       },
       "position": [
         1904,
-        784
+        992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5002,9 +5831,9 @@
       "typeVersion": 1.1
     },
     {
+      "disabled": true,
       "id": "773b4d45-fe59-46c3-97fb-96af3369b622",
       "name": "AI Agent",
-      "onError": "continueRegularOutput",
       "parameters": {
         "hasOutputParser": true,
         "options": {
@@ -5012,7 +5841,7 @@
           "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
         },
         "promptType": "define",
-        "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPKey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPSecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
+        "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
       },
       "position": [
         1920,
@@ -5066,7 +5895,7 @@
       },
       "position": [
         1568,
-        784
+        992
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5076,15 +5905,18 @@
     {
       "id": "be74624e-5026-44bb-a4ac-fe04c0ac8549",
       "name": "Merge",
-      "parameters": {},
+      "parameters": {
+        "numberInputs": 3
+      },
       "position": [
-        2928,
+        4384,
         608
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
     },
     {
+      "disabled": true,
       "id": "f2438ae0-505f-4c65-bf37-4c57d5fdcda5",
       "name": "arcihve extractor",
       "parameters": {
@@ -5104,6 +5936,7 @@
           "name": "Jira SW Task Buider"
         }
       },
+      "disabled": true,
       "id": "19b79349-081a-46ef-8d7f-38b1fadc8775",
       "name": "Get an issue3",
       "parameters": {
@@ -5122,11 +5955,12 @@
       "waitBetweenTries": 5000
     },
     {
+      "disabled": true,
       "id": "36037389-b781-4607-9bb8-3f7168d2aa01",
       "name": "Convert MD",
       "onError": "continueRegularOutput",
       "parameters": {
-        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_2.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
+        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_dropbox.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
       },
       "position": [
         2208,
@@ -5142,6 +5976,7 @@
           "name": "Anthropic account"
         }
       },
+      "disabled": true,
       "id": "58e1a26b-7115-401b-884c-64547f2b44ac",
       "name": "Anthropic Chat Model",
       "parameters": {
@@ -5156,8 +5991,8 @@
         }
       },
       "position": [
-        1904,
-        656
+        1920,
+        352
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -5201,7 +6036,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        3648,
+        5104,
         480
       ],
       "retryOnFail": true,
@@ -5220,12 +6055,12 @@
       "name": "Get an issue5",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
       "position": [
-        3168,
+        4624,
         480
       ],
       "retryOnFail": true,
@@ -5240,7 +6075,7 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        3328,
+        4784,
         480
       ],
       "type": "n8n-nodes-base.code",
@@ -5255,7 +6090,7 @@
         "options": {}
       },
       "position": [
-        3488,
+        4944,
         480
       ],
       "type": "n8n-nodes-base.splitOut",
@@ -5271,12 +6106,12 @@
       "id": "6c71b19d-51ef-43c1-8060-fcaedca50943",
       "name": "Add an attachment to an issue",
       "parameters": {
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
         "jiraVersion": "serverPat",
         "resource": "issueAttachment"
       },
       "position": [
-        3168,
+        4624,
         768
       ],
       "retryOnFail": true,
@@ -5294,7 +6129,7 @@
       "id": "b6c71552-2a9a-4070-b629-e48c9700f222",
       "name": "Update an issue working3",
       "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+        "issueKey": "={{ $('Updata Jira-Status').last().json.Issue }}",
         "jiraVersion": "serverPat",
         "operation": "update",
         "updateFields": {
@@ -5307,7 +6142,7 @@
         }
       },
       "position": [
-        3328,
+        4784,
         768
       ],
       "retryOnFail": true,
@@ -5339,12 +6174,13 @@
     {
       "id": "30d681fb-e7a7-49c1-9f4b-5f031e1ef4ea",
       "name": "Вытаскиваем файл с prompt",
+      "onError": "continueRegularOutput",
       "parameters": {
         "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
       },
       "position": [
         1712,
-        784
+        992
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5381,6 +6217,7 @@
       "waitBetweenTries": 5000
     },
     {
+      "disabled": true,
       "id": "9ff26509-a80c-410e-ac14-2f2c5a82a2c4",
       "name": "If2",
       "parameters": {
@@ -5407,8 +6244,8 @@
         "options": {}
       },
       "position": [
-        640,
-        608
+        624,
+        704
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
@@ -5599,7 +6436,7 @@
       "id": "d1416054-9ff6-4502-b939-d8231b26b3fe",
       "name": "Проверка на файлы Prompt1",
       "parameters": {
-        "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n\n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n\n    if (text.includes('dropbox')) return false;\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];\n"
+        "jsCode": "const allItems = $input.all();\n\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  return attachments.filter(a => {\n    const filename = (a.filename || '').toLowerCase();\n    const content = (a.content || '').toLowerCase();\n    const text = filename + ' ' + content;\n    \n    // Ищем только prompt или promt (БЕЗ исключения dropbox)\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\nconst attachmentIds = allFiltered.map(a => {\n  const contentUrl = a.content || '';\n  const match = contentUrl.match(/\\/attachment\\/(\\d+)\\//);\n  return match ? match[1] : null;\n}).filter(id => id !== null);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];"
       },
       "position": [
         -960,
@@ -5637,7 +6474,7 @@
       },
       "position": [
         -752,
-        624
+        848
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
@@ -5658,9 +6495,9 @@
         "updateFields": {
           "statusId": {
             "__rl": true,
-            "cachedResultName": "Cancelled-Admin",
+            "cachedResultName": "Backlog-Admin",
             "mode": "list",
-            "value": "241"
+            "value": "101"
           }
         }
       },
@@ -5683,7 +6520,7 @@
       "id": "c39609ee-5279-4348-94f7-a987d7d4b82f",
       "name": "Add a comment1",
       "parameters": {
-        "comment": "Неправильное заполнение задачи.",
+        "comment": "Неправильное заполнение задачи: Не приложены все файлы.",
         "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
         "jiraVersion": "serverPat",
         "options": {},
@@ -5701,13 +6538,14 @@
     {
       "id": "9f89d19e-4dea-4404-a077-6f2e467d645a",
       "name": "Extract from File1",
+      "onError": "continueRegularOutput",
       "parameters": {
         "operation": "text",
         "options": {}
       },
       "position": [
         2048,
-        784
+        992
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -5721,7 +6559,7 @@
       },
       "position": [
         2208,
-        784
+        992
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5809,7 +6647,7 @@
       "name": "No Operation, do nothing5",
       "parameters": {},
       "position": [
-        3520,
+        4976,
         768
       ],
       "type": "n8n-nodes-base.noOp",
@@ -5820,7 +6658,7 @@
       "name": "No Operation, do nothing6",
       "parameters": {},
       "position": [
-        3840,
+        5296,
         480
       ],
       "type": "n8n-nodes-base.noOp",
@@ -6067,6 +6905,384 @@
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
+    },
+    {
+      "id": "cb405fe9-d202-4bfd-a633-bb14f30a8e41",
+      "name": "AI Agent1",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "enableStreaming": true,
+          "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+        },
+        "promptType": "define",
+        "text": "={{ $json.Prompt }} отредактируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот название файлов и папки: {{ $json.file }}\nВАЖНО! Сохраняй всю структуру, не добавляй ничего нового, только измени промпт под новые данные.\n"
+      },
+      "position": [
+        2848,
+        640
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3
+    },
+    {
+      "id": "adc2e066-c2f2-49b2-bf68-375bf3b5cc4b",
+      "name": "arcihve extractor1",
+      "parameters": {
+        "jsCode": "// Шаг 1: Получаем содержимое Readme.md из узла Extract from File2\nlet readmeContent = null;\ntry {\n  const extractNode = $('Extract from File2').first();\n  readmeContent = extractNode.json?.data || extractNode.binary?.data || null;\n  \n  // Если данные в base64, декодируем\n  if (readmeContent && typeof readmeContent !== 'string') {\n    readmeContent = Buffer.from(readmeContent, 'base64').toString('utf-8');\n  }\n} catch (e) {\n  console.log('Extract from File2 not found or empty');\n}\n\n// Шаг 2: Парсим Readme.md в словарь {id: название}\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Ищем строки вида: 67472790c37a3 - Skin Editor, Skin Maker\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      const id = match[1].toLowerCase();\n      const name = match[2].trim();\n      contentNames[id] = name;\n    }\n  }\n}\n\n// Шаг 3: Получаем attachments из узла Get an issue7\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue7').all();\n  \n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    \n    for (const att of attachments) {\n      const content = att.content || '';\n      if (typeof content !== 'string') continue;\n      \n      const lowerContent = content.toLowerCase();\n      \n      // Ищем только файлы с underscore (readme_ID или content_ID)\n      if (!lowerContent.includes('readme_') && !lowerContent.includes('content_')) {\n        continue;\n      }\n      \n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName) {\n        const clean = content.split('?')[0].split('#')[0];\n        fileName = clean.split('/').pop() || '';\n      }\n      \n      if (!fileName) continue;\n      \n      // Извлекаем ID из имени файла\n      const match = fileName.match(/[_/]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : 'unknown';\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, \n          content: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerContent.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n      } else if (lowerContent.includes('content_')) {\n        fileMap[fileId].content = fileName;\n      }\n    }\n  }\n} catch (e) {\n  console.log('Get an issue7 not found or empty');\n}\n\nreturn Object.values(fileMap).map(pair => ({\n  json: pair\n}));"
+      },
+      "position": [
+        2016,
+        640
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "d7b46cab-dd89-4f82-b821-74c7dd04d570",
+      "name": "Get an issue7",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        1472,
+        640
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "1c31c099-be2d-4d97-b3ce-aa1513f47207",
+      "name": "Convert MD2",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем данные из Loop Over Items\nconst loopItem = $('Loop Over Items').first().json;\nconst contentName = loopItem.contentName || 'Unknown';\nconst id = loopItem.id || 'unknown';\nconst itemIndex = loopItem.loopIndex || 1;  // <-- Берем готовый индекс\n\nconsole.log('Item index:', itemIndex);\n\n// Формируем имя файла\nconst safeFileName = `prompt_${contentName}_${id}_${itemIndex}.md`.replace(/[\\/\\\\:*?\"<>|,]/g, '_');\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: safeFileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: safeFileName,\n    itemIndex: itemIndex,\n  }\n}];"
+      },
+      "position": [
+        3136,
+        640
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "anthropicApi": {
+          "id": "9tOxhZE1SbRJp4SW",
+          "name": "Anthropic account"
+        }
+      },
+      "id": "4d5e1a64-3756-4d70-beee-3485bc2609a6",
+      "name": "Anthropic Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "Claude Opus 4.5",
+          "mode": "list",
+          "value": "claude-opus-4-5-20251101"
+        },
+        "options": {
+          "maxTokensToSample": 20000
+        }
+      },
+      "position": [
+        2656,
+        816
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "3f37968e-686d-4912-bd0e-a79bfb143483",
+      "name": "Loop Over Items",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        2336,
+        640
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "2da80517-3c0a-41b0-bf56-31c830dd2a8a",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
+              "name": "file",
+              "type": "string",
+              "value": "=Folder name: {{ $json.id }}\n{{ $json.content }}\n{{ $json.readme }}"
+            },
+            {
+              "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
+              "name": "Prompt",
+              "type": "string",
+              "value": "=# 🔄 ПРОМТ — АДАПТАЦИЯ КАТЕГОРИИ: {{ $json.contentName }}\n\n## 📋 ЗАДАЧА\n\nАдаптировать ОДНУ категорию в существующем iOS-приложении с Dropbox-интеграцией под новый контент.\n\n**КРИТИЧНО:** \n- Работаем только с ОДНОЙ категорией\n- Не трогаем другие категории\n- Сохраняем работоспособность всего приложения\n\n---\n\n## 📚 ТЕРМИНОЛОГИЯ\n\n| Термин | Описание | Где находится |\n|--------|----------|---------------|\n| **Категория** | Раздел в приложении | TabBar / Menu / Navigation |\n| **Ключ категории (FolderName)** | Уникальный идентификатор папки | `Readme.md` |\n| **Контент** | Данные категории | `content_[FolderName].json` |\n| **Подкатегории** | Вложенные группы внутри контента | Внутри JSON (массивы, секции) |\n\n---\n\n## ⚙️ ВХОДНЫЕ ДАННЫЕ\n\n### Какую категорию адаптируем:\n\n```\nКатегория: [НАЗВАНИЕ для UI]\nКлюч категории (FolderName): [ИЗ Readme.md]\nJSON файл: content_[FolderName].json\nReadme файл: readme_[FolderName].md\n```\n\n### Конфигурация Dropbox (если первая категория):\n\n```\nCONTENT_ROOT = [ПУТЬ]\nRefresh Token: [ТОКЕН]\n```\n\n---\n\n## 🔍 ШАГ 1: ПРОВЕРКА ПРИЛОЖЕНИЯ\n\n### 1.1 Получить список всех категорий в приложении\n\n**Найти:** ContentCategory enum (или аналог)\n\n**Выписать все существующие категории:**\n\n| # | Case в enum | FolderName | Тип контента | Есть подкатегории |\n|---|-------------|------------|--------------|-------------------|\n| 1 | [case] | [folder] | [список/карточки/...] | [да/нет] |\n| 2 | ... | ... | ... | ... |\n\n### 1.2 Сравнить новую категорию с существующими\n\n**Найти максимально похожую категорию по критериям:**\n- Тип контента похож\n- Названия похожи\n\n### 1.3 Определить сценарий работы\n\n| Сценарий | Условие | Действие |\n|----------|---------|----------|\n| **A. Есть похожая категория** | Найдена категория с похожей структурой | Заменить контент в существующей категории |\n| **B. Нет похожих** | Структура контента уникальная | Создать новый раздел по образцу ближайшего |\n\n### 1.4 Зафиксировать решение\n\n```\nСценарий: [A / B]\nПохожая категория: [название или \"нет\"]\nЧто делаем: [заменяем контент / создаём новую]\n```\n\n---\n\n## 📂 ШАГ 2: АНАЛИЗ НОВОГО КОНТЕНТА КАТЕГОРИИ\n\n### 2.1 Получить ключ категории\n\n**Прочитать:** `Readme.md`\n\n**Найти:** ключ (FolderName) для нужной категории\n\n```\nКлюч категории (FolderName): [из Readme.md]\n```\n\n### 2.2 Изучить readme категории\n\n**Прочитать:** `readme_[FolderName].md`\n\n**Извлечь:**\n- Описание категории\n- Список ключей JSON\n- Назначение каждого ключа\n- Есть ли подкатегории\n\n### 2.3 Изучить JSON категории\n\n**Прочитать:** `content_[FolderName].json`\n\n**Извлечь:**\n- Структура верхнего уровня\n- Типы полей (String, Int, Bool, Array, Object)\n- **Подкатегории** — вложенные массивы или группы\n- Имя поля с изображением\n\n### 2.4 Маппинг ключей категории\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `[ключ1]` | [назначение] | [тип] |\n| `[ключ2]` | [назначение] | [тип] |\n| ... | ... | ... |\n\n**PartKey:** `[из JSON]`\n\n**Поле с изображением:** `[имя поля]`\n\n### 2.5 Подкатегории (если есть)\n\n**Проверить:** есть ли в JSON вложенные массивы или группы данных\n\n**Если есть подкатегории:**\n\n| Подкатегория | Ключ в JSON | Тип | Описание |\n|--------------|-------------|-----|----------|\n| [название1] | `[ключ]` | Array/Object | [что содержит] |\n| [название2] | `[ключ]` | Array/Object | [что содержит] |\n\n**Поля внутри подкатегории:**\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `[ключ]` | [назначение] | [тип] |\n\n**Как отображать подкатегории в UI:**\n- Секции в списке\n- Табы / сегменты\n- Вложенная навигация\n- Фильтры\n\n---\n\n## 🗺️ ШАГ 3: СРАВНЕНИЕ\n\n| Аспект | Было | Стало | Действие |\n|--------|------|-------|----------|\n| folderName | [старое] | [новое] | Обновить |\n| partKey | [старое] | [новое] | Обновить |\n| Кол-во полей | [N] | [M] | Добавить/Удалить |\n| Поле изображения | [старое] | [новое] | Обновить |\n| Подкатегории | [да/нет] | [да/нет] | Добавить структуры и UI |\n| Вложенные объекты | [да/нет] | [да/нет] | Добавить структуры |\n\n---\n\n## 🏗️ ШАГ 4: ОБНОВЛЕНИЕ КОДА\n\n### Для сценария A (заменяем контент в похожей категории):\n\n#### 4.1 ContentCategory enum\n\n**Найти:** case похожей категории\n\n**Обновить:**\n- `folderName` → новое имя папки\n- `partKey` → новый ключ из JSON\n- `displayName` → новое название для UI\n\n#### 4.2 Модель данных\n\n**Найти:** структуру модели похожей категории\n\n**Обновить:**\n- Поля под новый JSON\n- Типы данных\n- CodingKeys если нужно\n- Вложенные структуры для подкатегорий если есть\n\n**Если есть подкатегории:**\n- Создать отдельные структуры для каждой подкатегории\n- Или использовать массивы внутри основной модели\n\n#### 4.3 ContentParser\n\n**Найти:** метод парсинга похожей категории\n\n**Обновить:**\n- Парсинг под новую модель\n- Обработку вложенных объектов\n\n#### 4.4 View и ViewModel\n\n**Найти:** View и ViewModel похожей категории\n\n**Обновить:**\n- Отображаемые поля\n- DropboxImage — имя поля с картинкой\n- Тип данных в ViewModel\n\n**Если есть подкатегории:**\n- Добавить секции / табы / фильтры для подкатегорий\n- Обновить логику отображения групп данных\n\n---\n\n### Для сценария B (создаём новую по образцу):\n\n#### 4.1 ContentCategory enum\n\n**Добавить:** новый case для категории\n\n**Скопировать из ближайшего образца и изменить:**\n- `folderName` → имя папки новой категории\n- `partKey` → ключ из JSON новой категории\n- `displayName` → название для UI\n\n#### 4.2 Модель данных\n\n**Скопировать:** модель из ближайшего образца\n\n**Адаптировать:**\n- Переименовать структуру\n- Изменить поля под новый JSON\n- Обновить типы данных\n- Добавить структуры для подкатегорий если есть\n\n#### 4.3 ContentParser\n\n**Скопировать:** метод парсинга из образца\n\n**Адаптировать:**\n- Переименовать метод\n- Изменить тип возвращаемых данных\n- Обновить парсинг под новую модель\n\n#### 4.4 View и ViewModel\n\n**Скопировать:** View и ViewModel из образца\n\n**Адаптировать:**\n- Переименовать файлы и классы\n- Изменить отображаемые поля\n- Обновить категорию в DropboxImage\n- Изменить тип данных в ViewModel\n- Добавить UI для подкатегорий если есть (секции, табы, фильтры)\n\n#### 4.5 Navigation\n\n**Найти:** место где добавляются разделы (TabBar, Menu, List)\n\n**Добавить:**\n- Новый пункт навигации\n- Ссылку на новый View\n- Иконку если нужно\n\n---\n\n## ✅ ШАГ 5: ЧЕКЛИСТ КАТЕГОРИИ\n\n### Анализ:\n- [ ] Выписаны все существующие категории в приложении\n- [ ] Найдена похожая категория (или определено что нет похожих)\n- [ ] Определён сценарий (A / B)\n- [ ] Получен ключ категории из Readme.md\n- [ ] Прочитан readme категории\n- [ ] Изучен JSON категории\n- [ ] Заполнен маппинг ключей\n- [ ] Определён partKey\n- [ ] Определено поле с изображением\n- [ ] Определены подкатегории (если есть)\n\n### Код (сценарий A — замена контента в похожей):\n- [ ] Обновлён folderName в enum\n- [ ] Обновлён partKey в enum\n- [ ] Обновлён displayName в enum\n- [ ] Обновлена модель данных\n- [ ] Добавлены структуры подкатегорий (если есть)\n- [ ] Обновлён парсер\n- [ ] Обновлён View\n- [ ] Добавлен UI для подкатегорий (если есть)\n- [ ] Обновлён ViewModel\n\n### Код (сценарий B — новый раздел):\n- [ ] Добавлен case в enum с folderName и partKey\n- [ ] Создана новая модель по образцу\n- [ ] Добавлены структуры подкатегорий (если есть)\n- [ ] Добавлен метод парсинга\n- [ ] Создан View по образцу\n- [ ] Добавлен UI для подкатегорий (если есть)\n- [ ] Создан ViewModel по образцу\n- [ ] Добавлен раздел в навигацию\n\n### Тестирование:\n- [ ] Категория загружается без ошибок\n- [ ] Все данные отображаются\n- [ ] Подкатегории отображаются корректно (если есть)\n- [ ] Изображения загружаются\n- [ ] Другие категории не сломались\n- [ ] Навигация работает корректно\n\n---\n\n## 🔧 ЕСЛИ ЧТО-ТО НЕ РАБОТАЕТ\n\n### JSON не парсится:\n1. Сравнить ключи в readme с полями модели\n2. Проверить типы данных в JSON\n3. Проверить CodingKeys\n4. Проверить структуры подкатегорий\n\n### Изображения не загружаются:\n1. Проверить путь: `/{CONTENT_ROOT}/{folderName}/{fileName}`\n2. Проверить имя поля с изображением в модели\n3. Проверить что DropboxImage использует правильное поле\n\n### Данные не отображаются:\n1. Проверить что View использует все поля модели\n2. Проверить Optional поля\n3. Проверить вложенные объекты\n\n### Подкатегории не отображаются:\n1. Проверить структуру подкатегорий в модели\n2. Проверить парсинг вложенных массивов\n3. Проверить UI компоненты (секции, табы)\n\n---\n\n## 🚀 ПОРЯДОК РАБОТЫ\n\n1. **КАТЕГОРИИ** — выписать все существующие категории в приложении\n2. **СРАВНЕНИЕ** — найти похожую категорию по структуре контента\n3. **СЦЕНАРИЙ** — определить A (заменяем в похожей) или B (создаём новую)\n4. **КЛЮЧ** — получить ключ категории (FolderName) из Readme.md\n5. **README** — прочитать readme категории\n6. **JSON** — изучить структуру JSON и подкатегории\n7. **МАППИНГ** — заполнить таблицу ключей\n8. **КОД** — обновить или создать по образцу:\n   - Enum → Модель (+ подкатегории) → Парсер → View → ViewModel\n9. **НАВИГАЦИЯ** — добавить раздел если новый (сценарий B)\n10. **ТЕСТ** — проверить что работает\n\n---\n\n## ⚠️ ВАЖНО\n\n- **Сначала смотри существующие категории** — выпиши все что есть в приложении\n- **Ищи похожую по структуре** — если есть похожая категория, заменяем в ней контент\n- **Ключ категории** — всегда берётся из `Readme.md` корневой папки\n- **Если нет похожих** — создаём новую по образцу ближайшей\n- **Подкатегории** — если есть вложенные данные, создаём структуры и UI для них\n- Работаем ТОЛЬКО с одной категорией\n- Не меняем код других категорий\n- После завершения — проверяем что остальное не сломалось\n- Все данные из Dropbox, НЕ заглушки\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2720,
+        640
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "044a46d9-36ca-4e18-be33-5b7096808278",
+      "name": "Code in JavaScript",
+      "parameters": {
+        "jsCode": "const items = $input.all();\nlet foundReadme = null;\nlet fallbackReadme = null;\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop();\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем URL-encoded символы\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Извлекаем ID из URL\n    const getAttachmentId = (attachment) => {\n      let id = null;\n      if (attachment.content) {\n        const match = attachment.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.self) {\n        const match = attachment.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.id) {\n        id = attachment.id.toString();\n      }\n      return id;\n    };\n    \n    // Приоритет 1: Чистый Readme.md (без underscore, без скобок)\n    if (lowerName === 'readme.md' && \n        !baseName.includes('_') && \n        !baseName.match(/readme\\s*\\(\\d+\\)\\.md/i)) {\n      \n      foundReadme = {\n        attachmentId: getAttachmentId(att),\n        fileName: baseName\n      };\n      break;\n    }\n    \n    // Приоритет 2: Readme (1).md - сохраняем как fallback\n    if (lowerName === 'readme (1).md' && !fallbackReadme) {\n      fallbackReadme = {\n        attachmentId: getAttachmentId(att),\n        fileName: baseName\n      };\n    }\n  }\n  \n  if (foundReadme) break;\n}\n\n// Возвращаем найденный или fallback\nif (foundReadme) {\n  return [{ json: foundReadme }];\n} else if (fallbackReadme) {\n  return [{ json: fallbackReadme }];\n} else {\n  return [\n    {\n      json: {\n        attachmentId: null,\n        error: 'Readme.md not found'\n      }\n    }\n  ];\n}"
+      },
+      "position": [
+        1616,
+        640
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "96304f3d-cb05-4ae2-bce3-c502dad74bd7",
+      "name": "Get an attachment from an issue1",
+      "parameters": {
+        "attachmentId": "={{ $json.attachmentId }}",
+        "download": true,
+        "jiraVersion": "serverPat",
+        "operation": "get",
+        "resource": "issueAttachment"
+      },
+      "position": [
+        1744,
+        640
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "769ccfe6-2810-4796-8dea-087a4a93cacc",
+      "name": "Extract from File2",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        1872,
+        640
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "9fb436a0-91d8-4a42-977f-41972028c1ed",
+      "name": "AI Agent2",
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "enableStreaming": true,
+          "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
+        },
+        "promptType": "define",
+        "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
+      },
+      "position": [
+        2368,
+        1184
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "2017c722-46fb-48a6-9ec9-8d24e6838802",
+      "name": "Get an issue8",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        1568,
+        1184
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "a054d116-81aa-480e-83e7-94eae2f7155a",
+      "name": "Convert MD3",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "jsCode": "// Берём текст из AI Agent\nconst inputData = $input.first().json;\nconst aiOutput = inputData.output || inputData.text || inputData.content || 'No content';\n\n// Считаем количество всех items и добавляем +1\nlet itemNumber = 1;\n\ntry {\n  const allInputs = $input.all();\n  itemNumber = allInputs.length + 1;  // <-- Добавляем +1\n} catch (e) {\n  console.log('Cannot count items:', e.message);\n}\n\n// ОТЛАДКА\nconsole.log('Total items from Archive Extractor2:', $input.all().length);\nconsole.log('Item number (count + 1):', itemNumber);\n\n// Формируем имя файла с номером\nconst fileName = `prompt_CLEANUP_REMOVE_${itemNumber}.md`;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n  }\n}];"
+      },
+      "position": [
+        2656,
+        1184
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "anthropicApi": {
+          "id": "9tOxhZE1SbRJp4SW",
+          "name": "Anthropic account"
+        }
+      },
+      "id": "0000a5d8-8825-49b3-a42f-d535c6c9e8f1",
+      "name": "Anthropic Chat Model2",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "Claude Opus 4.5",
+          "mode": "list",
+          "value": "claude-opus-4-5-20251101"
+        },
+        "options": {
+          "maxTokensToSample": 20000
+        }
+      },
+      "position": [
+        2176,
+        1360
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3
+    },
+    {
+      "id": "8b9d1810-dd61-40c4-bb76-e166bae6fe5a",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
+              "name": "Content",
+              "type": "string",
+              "value": "={{ $('Extract from File3').item.json.data }}"
+            },
+            {
+              "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
+              "name": "Prompt",
+              "type": "string",
+              "value": "=# 🧹 ПРОМТ — ПРОВЕРКА И УДАЛЕНИЕ ЛИШНИХ КАТЕГОРИЙ\n\n## 📋 ЗАДАЧА\n\nПроверить проект и удалить все разделы контента, которые **есть в проекте**, но **отсутствуют в Dropbox контенте**.\n\n**КРИТИЧНО:** \n- Источник правды — `Readme.md` (предоставлен в файлах)\n- Удаляем ВСЁ что не указано в Readme.md\n- Сохраняем работоспособность приложения\n\n---\n\n## 🔍 ШАГ 1: ПОЛУЧИТЬ АКТУАЛЬНЫЙ СПИСОК КАТЕГОРИЙ\n\n### 1.1 Прочитать Readme.md из предоставленных файлов\n\n**Пример содержимого:**\n```markdown\n# Folder name\n`FNK3DS` - Editor\n`BNKFFO` - Mods\n`QDOWKD` - House Ideas\n```\n\n### 1.2 Извлечь список категорий\n\n| FolderName | Категория |\n|------------|-----------|\n| FNK3DS | Editor |\n| BNKFFO | Mods |\n| QDOWKD | House Ideas |\n\n**Это ЕДИНСТВЕННЫЕ категории, которые должны быть в проекте.**\n\n---\n\n## 🔍 ШАГ 2: ПРОВЕРИТЬ ПРОЕКТ\n\n### 2.1 Найти все категории в проекте\n\n**Искать в:**\n- `ContentCategory` enum (или аналог)\n- Модели данных\n- View/ViewModel файлы\n- Навигация (TabBar, Menu)\n\n### 2.2 Составить список категорий в проекте\n\n| Case в enum | FolderName | Есть в Dropbox? |\n|-------------|------------|-----------------|\n| [case1] | [folder1] | ✅ / ❌ |\n| [case2] | [folder2] | ✅ / ❌ |\n| ... | ... | ... |\n\n---\n\n## 🗑️ ШАГ 3: УДАЛИТЬ ЛИШНИЕ КАТЕГОРИИ\n\n### Для каждой категории с ❌:\n\n#### 3.1 ContentCategory enum\n\n**Удалить:**\n- case для этой категории\n- folderName в switch\n- partKey в switch\n- displayName в switch\n- Все computed properties для этого case\n\n#### 3.2 Модели данных\n\n**Удалить:**\n- Структуру модели (struct XxxItem)\n- Связанные типы данных\n\n#### 3.3 Парсер\n\n**Удалить:**\n- Метод парсинга для этой категории\n- Ссылки на модель в парсере\n\n#### 3.4 View и ViewModel\n\n**Удалить:**\n- View файл\n- ViewModel файл\n- Импорты в других файлах\n\n#### 3.5 Навигация\n\n**Удалить:**\n- Пункт в TabBar / Menu / Navigation\n- NavigationLink или роутинг\n- Иконку если была отдельно\n\n#### 3.6 Ресурсы\n\n**Удалить:**\n- Иконки категории в Assets\n- Локализацию для названия (если есть)\n\n---\n\n## ✅ ШАГ 4: ПРОВЕРКА ПОСЛЕ УДАЛЕНИЯ\n\n### 4.1 Компиляция\n\n- [ ] Проект компилируется без ошибок\n- [ ] Нет warnings о неиспользуемом коде\n\n### 4.2 Функциональность\n\n- [ ] Оставшиеся категории работают\n- [ ] Навигация корректная\n- [ ] Данные загружаются\n- [ ] Изображения отображаются\n\n### 4.3 Код\n\n- [ ] Нет мёртвого кода\n- [ ] Нет ссылок на удалённые модели\n- [ ] Нет пустых switch cases\n\n---\n\n## ⚠️ ВАЖНО\n\n1. **Readme.md — источник правды** — если категории нет в Readme.md, её не должно быть в проекте\n\n2. **Проверить зависимости** — перед удалением убедиться, что код не используется другими частями\n\n3. **Удалять полностью** — не оставлять закомментированный код\n\n4. **Тестировать после каждого удаления** — компилировать проект\n\n5. **Базовая инфраструктура остаётся:**\n   - DropboxService\n   - DropboxImage\n   - ContentCategory enum (с оставшимися cases)\n   - Базовые протоколы и расширения\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2240,
+        1184
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "f307cb6a-c8ea-4242-92f6-fe8ca1707fc9",
+      "name": "Code in JavaScript1",
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
+      },
+      "position": [
+        1712,
+        1184
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "8b00f2d0-21ac-4510-857f-eda4c412707a",
+      "name": "Get an attachment from an issue2",
+      "parameters": {
+        "attachmentId": "={{ $json.attachmentId }}",
+        "download": true,
+        "jiraVersion": "serverPat",
+        "operation": "get",
+        "resource": "issueAttachment"
+      },
+      "position": [
+        1840,
+        1184
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "3412a1f1-4a2d-42d7-a414-2915bbec5a20",
+      "name": "Extract from File3",
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "position": [
+        1968,
+        1184
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "c4ccde7d-982e-4d10-8e68-f7f2a1231a67",
+      "name": "arcihve extractor2",
+      "parameters": {
+        "jsCode": "// Шаг 1: Получаем содержимое Readme.md из узла Extract from File2\nlet readmeContent = null;\ntry {\n  const extractNode = $('Extract from File2').first();\n  readmeContent = extractNode.json?.data || extractNode.binary?.data || null;\n  \n  // Если данные в base64, декодируем\n  if (readmeContent && typeof readmeContent !== 'string') {\n    readmeContent = Buffer.from(readmeContent, 'base64').toString('utf-8');\n  }\n} catch (e) {\n  console.log('Extract from File2 not found or empty');\n}\n\n// Шаг 2: Парсим Readme.md в словарь {id: название}\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Ищем строки вида: 67472790c37a3 - Skin Editor, Skin Maker\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      const id = match[1].toLowerCase();\n      const name = match[2].trim();\n      contentNames[id] = name;\n    }\n  }\n}\n\n// Шаг 3: Получаем attachments из узла Get an issue7\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue7').all();\n  \n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    \n    for (const att of attachments) {\n      const content = att.content || '';\n      if (typeof content !== 'string') continue;\n      \n      const lowerContent = content.toLowerCase();\n      \n      // Ищем только файлы с underscore (readme_ID или content_ID)\n      if (!lowerContent.includes('readme_') && !lowerContent.includes('content_')) {\n        continue;\n      }\n      \n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName) {\n        const clean = content.split('?')[0].split('#')[0];\n        fileName = clean.split('/').pop() || '';\n      }\n      \n      if (!fileName) continue;\n      \n      // Извлекаем ID из имени файла\n      const match = fileName.match(/[_/]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : 'unknown';\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, \n          content: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerContent.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n      } else if (lowerContent.includes('content_')) {\n        fileMap[fileId].content = fileName;\n      }\n    }\n  }\n} catch (e) {\n  console.log('Get an issue7 not found or empty');\n}\n\nreturn Object.values(fileMap).map(pair => ({\n  json: pair\n}));"
+      },
+      "position": [
+        2096,
+        1184
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "9ff9a1c2-1bea-4b74-89df-659a34ffc9b9",
+      "name": "Code in JavaScript2",
+      "parameters": {
+        "jsCode": "// В Loop Over Items добавьте это\nreturn items.map((item, index) => ({\n  json: {\n    ...item.json,\n    loopIndex: index + 1  // <-- Добавляем индекс\n  }\n}));"
+      },
+      "position": [
+        2160,
+        640
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
     }
   ],
   "pinData": {
@@ -6084,9 +7300,6 @@
           "Timezone": "Europe/Warsaw (UTC+01:00)",
           "Year": "2025",
           "timestamp": "2025-12-24T11:51:00.002+01:00"
-        },
-        "pairedItem": {
-          "item": 0
         }
       }
     ],
@@ -6095,7 +7308,7 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "TAA-216",
+            "issue_key": "TAA-340",
             "serial_num_pc": "null"
           },
           "executionMode": "production",
@@ -6106,17 +7319,17 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9bb1d42204e0d259-FRA",
+            "cf-ray": "9c2125c6230ed34c-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "content-length": "67",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.164.135",
+            "x-forwarded-for": "135.181.186.107, 172.71.172.142",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
@@ -6151,6 +7364,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2026-01-15T09:00:01.002Z",
-  "versionId": "2849062b-9d80-4342-88f1-2aa040206d74"
+  "updatedAt": "2026-01-22T19:47:12.291Z",
+  "versionId": "bb0f338e-4d79-460f-9ed5-6d1d1fb9eafc"
 }
