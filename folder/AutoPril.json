@@ -19,7 +19,7 @@
           [
             {
               "index": 0,
-              "node": "Convert MD3",
+              "node": "Get an issue10",
               "type": "main"
             }
           ]
@@ -91,11 +91,33 @@
           ]
         ]
       },
+      "Anthropic Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 1,
+              "node": "AI Agent3",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
       "Anthropic Chat Model2": {
         "ai_languageModel": [
           [
             {
               "index": 0,
+              "node": "AI Agent2",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
+      "Anthropic Chat Model3": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 1,
               "node": "AI Agent2",
               "type": "ai_languageModel"
             }
@@ -506,6 +528,17 @@
           ]
         ]
       },
+      "Get an issue10": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Вытаскиваем файл с content",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Get an issue2": {
         "main": [
           [
@@ -642,12 +675,12 @@
             },
             {
               "index": 0,
-              "node": "Get an issue8",
+              "node": "Get an issue9",
               "type": "main"
             },
             {
               "index": 0,
-              "node": "Get an issue9",
+              "node": "Get an issue8",
               "type": "main"
             }
           ]
@@ -962,6 +995,17 @@
           ]
         ]
       },
+      "Вытаскиваем файл с content": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Convert MD3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Вытаскиваем файл с prompt": {
         "main": [
           [
@@ -1088,7 +1132,7 @@
         ]
       }
     },
-    "createdAt": "2026-01-24T18:38:13.806Z",
+    "createdAt": "2026-01-25T14:37:52.453Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -3359,6 +3403,7 @@
         "name": "AI Agent2",
         "parameters": {
           "hasOutputParser": true,
+          "needsFallback": true,
           "options": {
             "enableStreaming": true,
             "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
@@ -3367,7 +3412,7 @@
           "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
         },
         "position": [
-          3008,
+          3184,
           1184
         ],
         "type": "@n8n/n8n-nodes-langchain.agent",
@@ -3384,12 +3429,12 @@
         "name": "Get an issue8",
         "parameters": {
           "additionalFields": {},
-          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "issueKey": "={{ $('Get an issue').last().json.key }}",
           "jiraVersion": "serverPat",
           "operation": "get"
         },
         "position": [
-          1568,
+          1760,
           1184
         ],
         "retryOnFail": true,
@@ -3402,11 +3447,11 @@
         "name": "Convert MD3",
         "onError": "continueRegularOutput",
         "parameters": {
-          "jsCode": "// Берём текст из AI Agent\nconst inputData = $input.first().json;\nconst aiOutput = inputData.output || inputData.text || inputData.content || 'No content';\n\n// Считаем количество всех items и добавляем +1\nlet itemNumber = 1;\n\ntry {\n  const allInputs = $input.all();\n  itemNumber = allInputs.length + 1;  // <-- Добавляем +1\n} catch (e) {\n  console.log('Cannot count items:', e.message);\n}\n\n// ОТЛАДКА\nconsole.log('Total items from Archive Extractor2:', $input.all().length);\nconsole.log('Item number (count + 1):', itemNumber);\n\n// Формируем имя файла с номером\nconst fileName = `prompt_CLEANUP_REMOVE_${itemNumber}.md`;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n  }\n}];"
+          "jsCode": "// AI Agent обработал 1 файл\n// Считаем сколько файлов найдено в \"Вытаскиваем файл с content\" и присваиваем следующий номер\n\n// Берём AI output\nlet aiOutput = 'No content';\ntry {\n  const aiData = $('AI Agent2').first().json;\n  aiOutput = aiData.output || aiData.text || aiData.content || 'No content';\n} catch(e) {\n  console.log('Cannot get AI output:', e.message);\n}\n\n// Считаем сколько файлов найдено\nlet foundFilesCount = 0;\ntry {\n  foundFilesCount = $('Вытаскиваем файл с content').all().length;\n} catch(e) {\n  console.log('Cannot count files:', e.message);\n}\n\n// Номер = найденные файлы + 1\nconst itemNumber = foundFilesCount + 1;\n\nconsole.log('Found files:', foundFilesCount);\nconsole.log('New file number:', itemNumber);\nconsole.log('AI Output preview:', aiOutput.substring(0, 100));\n\n// Формируем файл: prompt_content_5.md\nconst fileName = `prompt_content_${itemNumber}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n    foundFilesCount: foundFilesCount,\n  }\n}];"
         },
         "position": [
-          3296,
-          1184
+          3744,
+          1200
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -3432,7 +3477,7 @@
           }
         },
         "position": [
-          2816,
+          2992,
           1360
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
@@ -3461,7 +3506,7 @@
           "options": {}
         },
         "position": [
-          2880,
+          3056,
           1184
         ],
         "type": "n8n-nodes-base.set",
@@ -3474,7 +3519,7 @@
           "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
         },
         "position": [
-          1712,
+          1888,
           1184
         ],
         "type": "n8n-nodes-base.code",
@@ -3497,7 +3542,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          1840,
+          2016,
           1184
         ],
         "type": "n8n-nodes-base.jira",
@@ -3511,7 +3556,7 @@
           "options": {}
         },
         "position": [
-          1968,
+          2144,
           1184
         ],
         "type": "n8n-nodes-base.extractFromFile",
@@ -3654,7 +3699,7 @@
         "id": "c95dfc4b-c865-4538-bb27-7a244cffa228",
         "name": "Find Category Files1",
         "parameters": {
-          "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName && att.content) fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      const lowerName = fileName.toLowerCase();\n      \n      if (!lowerName.includes('readme_') && !lowerName.includes('content_')) continue;\n      \n      const match = fileName.match(/[_]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerName.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (lowerName.includes('content_')) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
+          "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Флаг 'i' для регистро-независимого поиска\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра (README_, Readme_, content_, CONTENT_, и т.д.)\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Ищем ID в имени файла (регистро-независимо, флаг 'i')\n      const match = fileName.match(/[_]([a-fA-F0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
         },
         "position": [
           2272,
@@ -3760,9 +3805,11 @@
       },
       {
         "id": "52806d40-01e3-4c68-9e55-5c00f05af12b",
+        "maxTries": 5,
         "name": "AI Agent3",
         "parameters": {
           "hasOutputParser": true,
+          "needsFallback": true,
           "options": {
             "enableStreaming": true,
             "systemMessage": "[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.\n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа.\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.\n\n## Требования:\n– Язык: русский\n– Добавь примеры кода или JSON, если они есть во входных данных\n– Не выдумывай новых переменных или ключей\n– Сохрани все остальные разделы без изменений"
@@ -3774,8 +3821,10 @@
           3808,
           640
         ],
+        "retryOnFail": true,
         "type": "@n8n/n8n-nodes-langchain.agent",
-        "typeVersion": 3
+        "typeVersion": 3,
+        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -3794,7 +3843,7 @@
             "value": "claude-opus-4-5-20251101"
           },
           "options": {
-            "maxTokensToSample": 20000
+            "maxTokensToSample": 21000
           }
         },
         "position": [
@@ -3809,7 +3858,7 @@
         "name": "Convert MD4",
         "onError": "continueRegularOutput",
         "parameters": {
-          "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst contentName = loopItem?.contentName || 'Unknown';\nconst id = loopItem?.id || 'unknown';\nconst itemIndex = loopItem?.loopIndex || 1;\n\nconst safeFileName = `prompt_${contentName}_${id}_${itemIndex}.md`.replace(/[\\/\\\\:*?\"<>|,]/g, '_');\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: safeFileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: safeFileName,\n    itemIndex: itemIndex,\n  }\n}];"
+          "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `prompt_content_${itemIndex}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
         },
         "position": [
           4112,
@@ -3825,7 +3874,7 @@
           "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  // Ищем ТОЛЬКО файлы, где в content есть \"cleanup\"\n  const chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('cleanup');\n  });\n\n  // Если нет cleanup — этот item пропускаем\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n      },\n    });\n  }\n}\n\nreturn result;\n"
         },
         "position": [
-          2288,
+          2464,
           1184
         ],
         "type": "n8n-nodes-base.code",
@@ -3842,12 +3891,12 @@
         "name": "Get an issue7",
         "parameters": {
           "additionalFields": {},
-          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "issueKey": "={{ $('Get an issue').last().json.key }}",
           "jiraVersion": "serverPat",
           "operation": "get"
         },
         "position": [
-          2128,
+          2304,
           1184
         ],
         "type": "n8n-nodes-base.jira",
@@ -3870,7 +3919,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          2464,
+          2640,
           1184
         ],
         "type": "n8n-nodes-base.jira",
@@ -3884,18 +3933,110 @@
           "options": {}
         },
         "position": [
-          2672,
+          2848,
           1184
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "007f1921-e513-4865-b526-4c883cd13f3b",
+        "name": "Get an issue10",
+        "parameters": {
+          "additionalFields": {},
+          "issueKey": "={{ $('Get an issue').last().json.key }}",
+          "jiraVersion": "serverPat",
+          "operation": "get"
+        },
+        "position": [
+          3456,
+          1200
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "waitBetweenTries": 5000
+      },
+      {
+        "id": "84975cdc-2cc8-4399-a5d6-ffa41455905a",
+        "name": "Вытаскиваем файл с content",
+        "onError": "continueRegularOutput",
+        "parameters": {
+          "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"content\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n  // оставляем только content\n  return text.includes('content');\n});\n\n// 2) Возвращаем ОТДЕЛЬНЫЕ items для каждого attachment\nconst results = filtered.map((a, index) => ({\n  json: {\n    attachmentId: a.id,\n    fileName: a.filename || a.name || '',\n    contentUrl: a.content || '',\n    itemIndex: index + 1\n  }\n}));\n\n// Если ничего не найдено — возвращаем пустой результат\nif (results.length === 0) {\n  return [{ json: { error: 'No matching attachments found' } }];\n}\n\nreturn results;"
+        },
+        "position": [
+          3600,
+          1200
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "anthropicApi": {
+            "id": "9tOxhZE1SbRJp4SW",
+            "name": "Anthropic account"
+          }
+        },
+        "id": "b8c47f79-6c22-4cc8-bd4b-3f8069fa8f43",
+        "name": "Anthropic Chat Model1",
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "cachedResultName": "Claude Sonnet 4.5",
+            "mode": "list",
+            "value": "claude-sonnet-4-5-20250929"
+          },
+          "options": {
+            "maxTokensToSample": 20000
+          }
+        },
+        "position": [
+          3840,
+          1008
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "typeVersion": 1.3
+      },
+      {
+        "credentials": {
+          "anthropicApi": {
+            "id": "9tOxhZE1SbRJp4SW",
+            "name": "Anthropic account"
+          }
+        },
+        "id": "bdc77fad-0c48-4ab0-8d19-cdcd40df958f",
+        "name": "Anthropic Chat Model3",
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "cachedResultName": "Claude Sonnet 4.5",
+            "mode": "list",
+            "value": "claude-sonnet-4-5-20250929"
+          },
+          "options": {
+            "maxTokensToSample": 20000
+          }
+        },
+        "position": [
+          3232,
+          1456
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "typeVersion": 1.3
       }
     ],
-    "updatedAt": "2026-01-24T18:38:13.806Z",
-    "versionId": "f4b757f2-65db-4bd5-a0e5-9b9d40b60200",
+    "updatedAt": "2026-01-25T14:37:52.453Z",
+    "versionId": "558e951d-cfe9-4fa9-8a42-b61afda4a492",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "f4b757f2-65db-4bd5-a0e5-9b9d40b60200",
+  "activeVersionId": "558e951d-cfe9-4fa9-8a42-b61afda4a492",
   "connections": {
     "AI Agent": {
       "main": [
@@ -3913,7 +4054,7 @@
         [
           {
             "index": 0,
-            "node": "Convert MD3",
+            "node": "Get an issue10",
             "type": "main"
           }
         ]
@@ -3985,11 +4126,33 @@
         ]
       ]
     },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
+            "node": "AI Agent3",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "Anthropic Chat Model2": {
       "ai_languageModel": [
         [
           {
             "index": 0,
+            "node": "AI Agent2",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
             "node": "AI Agent2",
             "type": "ai_languageModel"
           }
@@ -4400,6 +4563,17 @@
         ]
       ]
     },
+    "Get an issue10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Вытаскиваем файл с content",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get an issue2": {
       "main": [
         [
@@ -4536,12 +4710,12 @@
           },
           {
             "index": 0,
-            "node": "Get an issue8",
+            "node": "Get an issue9",
             "type": "main"
           },
           {
             "index": 0,
-            "node": "Get an issue9",
+            "node": "Get an issue8",
             "type": "main"
           }
         ]
@@ -4851,6 +5025,17 @@
           {
             "index": 0,
             "node": "Split Out",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Вытаскиваем файл с content": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert MD3",
             "type": "main"
           }
         ]
@@ -7257,6 +7442,7 @@
       "name": "AI Agent2",
       "parameters": {
         "hasOutputParser": true,
+        "needsFallback": true,
         "options": {
           "enableStreaming": true,
           "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
@@ -7265,7 +7451,7 @@
         "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
       },
       "position": [
-        3008,
+        3184,
         1184
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -7282,12 +7468,12 @@
       "name": "Get an issue8",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "issueKey": "={{ $('Get an issue').last().json.key }}",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
       "position": [
-        1568,
+        1760,
         1184
       ],
       "retryOnFail": true,
@@ -7300,11 +7486,11 @@
       "name": "Convert MD3",
       "onError": "continueRegularOutput",
       "parameters": {
-        "jsCode": "// Берём текст из AI Agent\nconst inputData = $input.first().json;\nconst aiOutput = inputData.output || inputData.text || inputData.content || 'No content';\n\n// Считаем количество всех items и добавляем +1\nlet itemNumber = 1;\n\ntry {\n  const allInputs = $input.all();\n  itemNumber = allInputs.length + 1;  // <-- Добавляем +1\n} catch (e) {\n  console.log('Cannot count items:', e.message);\n}\n\n// ОТЛАДКА\nconsole.log('Total items from Archive Extractor2:', $input.all().length);\nconsole.log('Item number (count + 1):', itemNumber);\n\n// Формируем имя файла с номером\nconst fileName = `prompt_CLEANUP_REMOVE_${itemNumber}.md`;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n  }\n}];"
+        "jsCode": "// AI Agent обработал 1 файл\n// Считаем сколько файлов найдено в \"Вытаскиваем файл с content\" и присваиваем следующий номер\n\n// Берём AI output\nlet aiOutput = 'No content';\ntry {\n  const aiData = $('AI Agent2').first().json;\n  aiOutput = aiData.output || aiData.text || aiData.content || 'No content';\n} catch(e) {\n  console.log('Cannot get AI output:', e.message);\n}\n\n// Считаем сколько файлов найдено\nlet foundFilesCount = 0;\ntry {\n  foundFilesCount = $('Вытаскиваем файл с content').all().length;\n} catch(e) {\n  console.log('Cannot count files:', e.message);\n}\n\n// Номер = найденные файлы + 1\nconst itemNumber = foundFilesCount + 1;\n\nconsole.log('Found files:', foundFilesCount);\nconsole.log('New file number:', itemNumber);\nconsole.log('AI Output preview:', aiOutput.substring(0, 100));\n\n// Формируем файл: prompt_content_5.md\nconst fileName = `prompt_content_${itemNumber}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n    foundFilesCount: foundFilesCount,\n  }\n}];"
       },
       "position": [
-        3296,
-        1184
+        3744,
+        1200
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -7330,7 +7516,7 @@
         }
       },
       "position": [
-        2816,
+        2992,
         1360
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
@@ -7359,7 +7545,7 @@
         "options": {}
       },
       "position": [
-        2880,
+        3056,
         1184
       ],
       "type": "n8n-nodes-base.set",
@@ -7372,7 +7558,7 @@
         "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
       },
       "position": [
-        1712,
+        1888,
         1184
       ],
       "type": "n8n-nodes-base.code",
@@ -7395,7 +7581,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        1840,
+        2016,
         1184
       ],
       "type": "n8n-nodes-base.jira",
@@ -7409,7 +7595,7 @@
         "options": {}
       },
       "position": [
-        1968,
+        2144,
         1184
       ],
       "type": "n8n-nodes-base.extractFromFile",
@@ -7552,7 +7738,7 @@
       "id": "c95dfc4b-c865-4538-bb27-7a244cffa228",
       "name": "Find Category Files1",
       "parameters": {
-        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      let fileName = att.fileName || att.filename || att.name || '';\n      if (!fileName && att.content) fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      const lowerName = fileName.toLowerCase();\n      \n      if (!lowerName.includes('readme_') && !lowerName.includes('content_')) continue;\n      \n      const match = fileName.match(/[_]([a-f0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (lowerName.includes('readme_')) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (lowerName.includes('content_')) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
+        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Флаг 'i' для регистро-независимого поиска\n    const match = line.match(/^\\s*`?([a-f0-9]{10,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра (README_, Readme_, content_, CONTENT_, и т.д.)\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Ищем ID в имени файла (регистро-независимо, флаг 'i')\n      const match = fileName.match(/[_]([a-fA-F0-9]{10,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
       },
       "position": [
         2272,
@@ -7658,9 +7844,11 @@
     },
     {
       "id": "52806d40-01e3-4c68-9e55-5c00f05af12b",
+      "maxTries": 5,
       "name": "AI Agent3",
       "parameters": {
         "hasOutputParser": true,
+        "needsFallback": true,
         "options": {
           "enableStreaming": true,
           "systemMessage": "[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.\n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа.\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.\n\n## Требования:\n– Язык: русский\n– Добавь примеры кода или JSON, если они есть во входных данных\n– Не выдумывай новых переменных или ключей\n– Сохрани все остальные разделы без изменений"
@@ -7672,8 +7860,10 @@
         3808,
         640
       ],
+      "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 3
+      "typeVersion": 3,
+      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -7692,7 +7882,7 @@
           "value": "claude-opus-4-5-20251101"
         },
         "options": {
-          "maxTokensToSample": 20000
+          "maxTokensToSample": 21000
         }
       },
       "position": [
@@ -7707,7 +7897,7 @@
       "name": "Convert MD4",
       "onError": "continueRegularOutput",
       "parameters": {
-        "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst contentName = loopItem?.contentName || 'Unknown';\nconst id = loopItem?.id || 'unknown';\nconst itemIndex = loopItem?.loopIndex || 1;\n\nconst safeFileName = `prompt_${contentName}_${id}_${itemIndex}.md`.replace(/[\\/\\\\:*?\"<>|,]/g, '_');\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: safeFileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: safeFileName,\n    itemIndex: itemIndex,\n  }\n}];"
+        "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `prompt_content_${itemIndex}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
       },
       "position": [
         4112,
@@ -7723,7 +7913,7 @@
         "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  // Ищем ТОЛЬКО файлы, где в content есть \"cleanup\"\n  const chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('cleanup');\n  });\n\n  // Если нет cleanup — этот item пропускаем\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n      },\n    });\n  }\n}\n\nreturn result;\n"
       },
       "position": [
-        2288,
+        2464,
         1184
       ],
       "type": "n8n-nodes-base.code",
@@ -7740,12 +7930,12 @@
       "name": "Get an issue7",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "issueKey": "={{ $('Get an issue').last().json.key }}",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
       "position": [
-        2128,
+        2304,
         1184
       ],
       "type": "n8n-nodes-base.jira",
@@ -7768,7 +7958,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        2464,
+        2640,
         1184
       ],
       "type": "n8n-nodes-base.jira",
@@ -7782,32 +7972,106 @@
         "options": {}
       },
       "position": [
-        2672,
+        2848,
         1184
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "007f1921-e513-4865-b526-4c883cd13f3b",
+      "name": "Get an issue10",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Get an issue').last().json.key }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        3456,
+        1200
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "84975cdc-2cc8-4399-a5d6-ffa41455905a",
+      "name": "Вытаскиваем файл с content",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"content\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n  // оставляем только content\n  return text.includes('content');\n});\n\n// 2) Возвращаем ОТДЕЛЬНЫЕ items для каждого attachment\nconst results = filtered.map((a, index) => ({\n  json: {\n    attachmentId: a.id,\n    fileName: a.filename || a.name || '',\n    contentUrl: a.content || '',\n    itemIndex: index + 1\n  }\n}));\n\n// Если ничего не найдено — возвращаем пустой результат\nif (results.length === 0) {\n  return [{ json: { error: 'No matching attachments found' } }];\n}\n\nreturn results;"
+      },
+      "position": [
+        3600,
+        1200
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "anthropicApi": {
+          "id": "9tOxhZE1SbRJp4SW",
+          "name": "Anthropic account"
+        }
+      },
+      "id": "b8c47f79-6c22-4cc8-bd4b-3f8069fa8f43",
+      "name": "Anthropic Chat Model1",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "Claude Sonnet 4.5",
+          "mode": "list",
+          "value": "claude-sonnet-4-5-20250929"
+        },
+        "options": {
+          "maxTokensToSample": 20000
+        }
+      },
+      "position": [
+        3840,
+        1008
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3
+    },
+    {
+      "credentials": {
+        "anthropicApi": {
+          "id": "9tOxhZE1SbRJp4SW",
+          "name": "Anthropic account"
+        }
+      },
+      "id": "bdc77fad-0c48-4ab0-8d19-cdcd40df958f",
+      "name": "Anthropic Chat Model3",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "cachedResultName": "Claude Sonnet 4.5",
+          "mode": "list",
+          "value": "claude-sonnet-4-5-20250929"
+        },
+        "options": {
+          "maxTokensToSample": 20000
+        }
+      },
+      "position": [
+        3232,
+        1456
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3
     }
   ],
-  "pinData": {
-    "Schedule Trigger": [
-      {
-        "json": {
-          "Day of month": "24",
-          "Day of week": "Wednesday",
-          "Hour": "11",
-          "Minute": "51",
-          "Month": "December",
-          "Readable date": "December 24th 2025, 11:51:00 am",
-          "Readable time": "11:51:00 am",
-          "Second": "00",
-          "Timezone": "Europe/Warsaw (UTC+01:00)",
-          "Year": "2025",
-          "timestamp": "2025-12-24T11:51:00.002+01:00"
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "availableInMCP": false,
     "callerPolicy": "workflowsFromSameOwner",
@@ -7829,6 +8093,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2026-01-24T18:38:13.803Z",
-  "versionId": "f4b757f2-65db-4bd5-a0e5-9b9d40b60200"
+  "updatedAt": "2026-01-25T14:37:52.450Z",
+  "versionId": "558e951d-cfe9-4fa9-8a42-b61afda4a492"
 }
