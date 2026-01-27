@@ -1,7 +1,1013 @@
 {
-  "active": false,
-  "activeVersion": null,
-  "activeVersionId": null,
+  "active": true,
+  "activeVersion": {
+    "authors": "ilia Mungalov",
+    "connections": {
+      "Build Config1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Notify Start3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Build Manifest": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Notify Validating",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Courses?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Run Courses",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 1,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Edit Fields": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Sounds?",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Courses?",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Games?",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Extract Input": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Gemini Parse TZ",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Games?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Run Games",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 2,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Gemini Parse TZ": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Build Config1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Gemini Validator": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Parse Validation",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Merge": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Build Manifest",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Notify Retry": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Notify Start3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Edit Fields",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Notify Validating": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Gemini Validator",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "PASS?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Done PASS",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Retry?",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Parse Validation": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "PASS?",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Retry?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Notify Retry",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Done FAIL",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Run Courses": {
+        "main": [
+          [
+            {
+              "index": 1,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Run Games": {
+        "main": [
+          [
+            {
+              "index": 2,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Run Sounds": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Merge",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Sounds?": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Run Sounds",
+              "type": "main"
+            }
+          ],
+          []
+        ]
+      },
+      "Telegram": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Extract Input",
+              "type": "main"
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2026-01-27T14:55:42.009Z",
+    "description": null,
+    "name": null,
+    "nodes": [
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "2d0f88b4-3976-4df8-aea7-7439a159a007",
+        "name": "Telegram",
+        "parameters": {
+          "additionalFields": {},
+          "updates": [
+            "*"
+          ]
+        },
+        "position": [
+          -8192,
+          4720
+        ],
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "webhookId": "1279d751-a218-41cc-9692-8934054a4f70"
+      },
+      {
+        "id": "79f5ea90-405c-4f1d-8fb3-ecd18970ee5c",
+        "name": "Extract Input",
+        "parameters": {
+          "jsCode": "const input = $json;\nconst chatId = input.message?.chat?.id || input.chat_id || 0;\nconst userMessage = input.message?.text || '';\nreturn [{ json: { chat_id: chatId, user_message: userMessage } }];"
+        },
+        "position": [
+          -8000,
+          4720
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "a9b10c8c-4f89-4680-a982-c6acd03a7523",
+        "name": "Gemini Parse TZ",
+        "parameters": {
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "x-goog-api-key",
+                "value": "AIzaSyAT4U4SNPm9rgR5nogX3HTcESFL_bg9uHo"
+              }
+            ]
+          },
+          "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": {{ JSON.stringify(\n\"Parse technical specification (ТЗ) for Cat Translator content packs.\\n\\n\" +\n\"Request:\\n\" + $json.user_message + \"\\n\\n\" +\n\"Return STRICT JSON in the following format:\\n\" +\n\"{\\n\" +\n\"  \\\"segment\\\": \\\"Cat Translator\\\",\\n\" +\n\"  \\\"sounds\\\": {\\n\" +\n\"    \\\"enabled\\\": false,\\n\" +\n\"    \\\"min_count\\\": 50,\\n\" +\n\"    \\\"image\\\": { \\\"width\\\": 640, \\\"height\\\": 480, \\\"format\\\": \\\"PNG\\\" },\\n\" +\n\"    \\\"audio\\\": { \\\"format\\\": \\\"mp3\\\" },\\n\" +\n\"    \\\"fields\\\": [\\\"title\\\", \\\"image\\\", \\\"file\\\"]\\n\" +\n\"  },\\n\" +\n\"  \\\"courses\\\": {\\n\" +\n\"    \\\"enabled\\\": false,\\n\" +\n\"    \\\"min_count\\\": 50,\\n\" +\n\"    \\\"image\\\": { \\\"width\\\": 640, \\\"height\\\": 480, \\\"format\\\": \\\"PNG\\\" },\\n\" +\n\"    \\\"categories\\\": [\\\"commands\\\", \\\"tricks\\\"],\\n\" +\n\"    \\\"types\\\": {\\n\" +\n\"      \\\"beginner\\\": \\\"~33%\\\",\\n\" +\n\"      \\\"amateur\\\": \\\"~33%\\\",\\n\" +\n\"      \\\"advanced\\\": \\\"~33%\\\"\\n\" +\n\"    },\\n\" +\n\"    \\\"fields\\\": [\\\"title\\\", \\\"description\\\", \\\"image\\\", \\\"type\\\"]\\n\" +\n\"  },\\n\" +\n\"  \\\"games\\\": {\\n\" +\n\"    \\\"enabled\\\": false,\\n\" +\n\"    \\\"min_count\\\": 50,\\n\" +\n\"    \\\"image\\\": { \\\"width\\\": 640, \\\"height\\\": 480, \\\"format\\\": \\\"PNG\\\" },\\n\" +\n\"    \\\"game_type\\\": \\\"guess breed by image\\\",\\n\" +\n\"    \\\"fields\\\": [\\\"image\\\", \\\"title\\\"]\\n\" +\n\"  }\\n\" +\n\"}\\n\\n\" +\n\"Rules:\\n\" +\n\"- If section is mentioned in the ТЗ → enabled: true\\n\" +\n\"- If section is NOT mentioned → enabled: false\\n\" +\n\"- min_count must be taken from ТЗ if specified, otherwise default to 50\\n\" +\n\"- Do NOT invent sections\\n\" +\n\"- Do NOT add extra fields\\n\" +\n\"- Output JSON only, no explanations\"\n          ) }}\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"responseMimeType\": \"application/json\",\n    \"temperature\": 0\n  }\n}",
+          "method": "POST",
+          "options": {
+            "timeout": 60000
+          },
+          "sendBody": true,
+          "sendHeaders": true,
+          "specifyBody": "json",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+        },
+        "position": [
+          -7792,
+          4720
+        ],
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "9783739b-180b-4149-82dc-424d61883e50",
+        "name": "Build Manifest",
+        "parameters": {
+          "jsCode": "// Build manifest_json from all generated data\n// This collects results from sub-workflows for validation\n\nconst config = $('Build Config1').first().json;\nconst sections = ['skins', 'emotes', 'items', 'bundles', 'xp_maps'];\n\n// Initialize manifest structure per ТЗ validator requirements\nconst manifest = {\n  produced_archives: [],\n  tree: [],\n  per_section: {}\n};\n\n// Rarity dictionary (strict)\nconst validRarities = ['common', 'uncommon', 'rare', 'epic', 'legendary', 'other'];\n\n// Collect data from each section\n// In real implementation, sub-workflows return their results\n// Here we build structure for validator\n\nfor (const section of sections) {\n  if (!config.config[section]?.enabled) continue;\n  \n  const sectionConfig = config.config[section];\n  \n  manifest.produced_archives.push(`${section}.csv`, `${section}.zip`);\n  manifest.tree.push(`${section}.csv`, `${section}/`);\n  \n  // Build per_section data\n  manifest.per_section[section] = {\n    rows_total: sectionConfig.count || 50,\n    rows_by_rarity: {},\n    required_columns_present: true,\n    missing_columns: [],\n    ids_unique: true,\n    duplicate_ids: [],\n    undefined_rows_count: 0,\n    media_checks: {\n      images: [],\n      videos: []\n    }\n  };\n  \n  // Calculate rarity distribution (min 10 per rarity for skins/emotes/items)\n  if (['skins', 'emotes', 'items'].includes(section)) {\n    const minPerRarity = sectionConfig.min_per_rarity || 10;\n    const total = sectionConfig.count;\n    const rarities = ['common', 'uncommon', 'rare', 'epic', 'legendary'];\n    const base = Math.floor(total / rarities.length);\n    let remaining = total - (base * rarities.length);\n    \n    for (const r of rarities) {\n      manifest.per_section[section].rows_by_rarity[r] = base + (remaining-- > 0 ? 1 : 0);\n    }\n  }\n  \n  // Bundles specific checks\n  if (section === 'bundles') {\n    manifest.per_section[section].bundles_checks = {\n      ids_len_invalid_count: 0,\n      unresolved_ids_count: 0,\n      weapon_present_count: sectionConfig.count // All bundles should have weapon\n    };\n  }\n}\n\nreturn [{ json: {\n  ...config,\n  manifest_json: manifest\n}}];"
+        },
+        "position": [
+          -4848,
+          4736
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "52d020fe-984c-421f-bddb-1e47a2a1be3d",
+        "name": "Notify Validating",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $json.chat_id }}",
+          "text": "🔍 Validating content package..."
+        },
+        "position": [
+          -4640,
+          4736
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "1fbddfcd-2222-46f7-8def-f5e57415d9db"
+      },
+      {
+        "id": "0602dcb2-31f3-48e8-94ec-d0c43f295f2c",
+        "name": "Gemini Validator",
+        "parameters": {
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "x-goog-api-key",
+                "value": "={{ $('Build Config1').first().json.gemini_key }}"
+              }
+            ]
+          },
+          "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": {{ JSON.stringify(`PROMPT (шаблон) для бота-валидатора и оценщика контента FORTNITE\n\nРоль: Ты — QA-лид и контент-валидатор с 10+ летним опытом в парсинге и подготовке игровых датасетов (в частности Fortnite).\nОпыт/фокус: Ты умеешь проверять соответствие ТЗ, целостность связей между таблицами, качество медиа (PNG/MP4), квоты по редкостям, отсутствие дублей и запрещённых элементов.\n\nЦель: На основе входных метаданных о пакете контента вынести:\nSTATUS = PASS или REJECT\nFO (0–100) — итоговая оценка\n\nСловарь редкостей (строго): common, uncommon, rare, epic, legendary, other\n\nТЗ по количеству:\n- Skins: минимум 50, и на каждую редкость минимум 10\n- Emotes: минимум 50, и на каждую редкость минимум 10  \n- Items: минимум 50, и на каждую редкость минимум 10\n- Bundles: минимум 50\n- XP Maps: 50\n\nТЗ по схемам (обязательные поля):\n- Skins: name, image, rarity, id\n- Emotes: name, image, rarity, video, id\n- Items: name, image, rarity, type, id (type включает Weapon)\n- Bundles: name, image, rarity, ids[] (ровно 4: [skin_id, emote_id, weapon_item_id, other_item_id])\n- XP Maps: name, description, image, code, tags[] (code: ####-####-####)\n\nТЗ по изображениям: PNG, прозрачный фон (alpha), 480×650\n\nHARD FAIL условия:\nHF1: Нет раздела или пары CSV+ZIP\nHF2: Rarity вне словаря\nHF3: PNG не 480×650 или без alpha\nHF4: Watermark/текст/логотип\nHF5: Placeholder\nHF6: Emotes без mp4\nHF7: Bundles ids[] длина не 4 или нет weapon\nHF8: Bundles ids[] не резолвятся\nHF9: Не достигнуты минимальные квоты\n\n<manifest_json>\n${JSON.stringify($('Build Manifest').first().json.manifest_json, null, 2)}\n</manifest_json>\n\nОтветь СТРОГО в JSON формате:\n{\n  \"status\": \"PASS|REJECT\",\n  \"fo\": 0-100,\n  \"hard_fail\": [{\"code\":\"HFx\",\"rule\":\"...\",\"evidence\":\"...\"}],\n  \"section_summary\": {\n    \"skins\": {\"ok\":true|false,\"main_issues\":[]},\n    \"emotes\": {\"ok\":true|false,\"main_issues\":[]},\n    \"items\": {\"ok\":true|false,\"main_issues\":[]},\n    \"bundles\": {\"ok\":true|false,\"main_issues\":[]},\n    \"xp_maps\": {\"ok\":true|false,\"main_issues\":[]}\n  },\n  \"fix_actions_for_generator\": [{\"trigger\":\"...\",\"action\":\"...\"}]\n}`) }}\n    }]\n  }],\n  \"generationConfig\": { \"responseMimeType\": \"application/json\", \"temperature\": 0 }\n}",
+          "method": "POST",
+          "options": {
+            "timeout": 120000
+          },
+          "sendBody": true,
+          "sendHeaders": true,
+          "specifyBody": "json",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+        },
+        "position": [
+          -4432,
+          4736
+        ],
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "be464ae9-d796-4be7-8e59-925b8c4e3286",
+        "name": "Parse Validation",
+        "parameters": {
+          "jsCode": "// Parse validator response\nconst config = $('Build Manifest').first().json;\n\nlet validation = {\n  status: 'PASS',\n  fo: 100,\n  hard_fail: [],\n  section_summary: {},\n  fix_actions: []\n};\n\ntry {\n  const txt = $json.candidates?.[0]?.content?.parts?.[0]?.text || '{}';\n  const parsed = JSON.parse(txt.replace(/```json\\n?/g,'').replace(/```/g,'').trim());\n  \n  validation.status = parsed.status || 'PASS';\n  validation.fo = parsed.fo || 100;\n  validation.hard_fail = parsed.hard_fail || [];\n  validation.section_summary = parsed.section_summary || {};\n  validation.fix_actions = parsed.fix_actions_for_generator || [];\n} catch(e) {\n  validation.status = 'PASS'; // Default to pass if parse fails\n  validation.fo = 80;\n}\n\n// Check if retry is needed\nconst needsRetry = validation.status === 'REJECT' && config.retry_count < config.max_retries;\n\nreturn [{ json: {\n  ...config,\n  validation: validation,\n  needs_retry: needsRetry,\n  retry_count: needsRetry ? config.retry_count + 1 : config.retry_count\n}}];"
+        },
+        "position": [
+          -4224,
+          4736
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "71a3a46d-14e8-4c90-8278-e84d0caeee80",
+        "name": "PASS?",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "1b2433c2-c421-4694-a445-1cd3a4e9c62c",
+                "leftValue": "={{ $json.validation.status }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "string"
+                },
+                "rightValue": "PASS"
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -4032,
+          4736
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "2b70511b-734e-4d63-b570-9c286c259579",
+        "name": "Done PASS",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $json.chat_id }}",
+          "text": "=✅ Fortnite Bot v2.0 - VALIDATED!\n\n📊 Quality Score: {{ $json.validation.fo }}/100\n✅ Status: {{ $json.validation.status }}\n\n📦 Sections:\n• Skins: {{ $json.validation.section_summary.skins?.ok ? '✅' : '⚠️' }}\n• Emotes: {{ $json.validation.section_summary.emotes?.ok ? '✅' : '⚠️' }}\n• Items: {{ $json.validation.section_summary.items?.ok ? '✅' : '⚠️' }}\n• Bundles: {{ $json.validation.section_summary.bundles?.ok ? '✅' : '⚠️' }}\n• XP Maps: {{ $json.validation.section_summary.xp_maps?.ok ? '✅' : '⚠️' }}\n\n🎉 All files ready!"
+        },
+        "position": [
+          -3824,
+          4624
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "5632df3d-1ad2-410f-b3d8-d2be701a9a34"
+      },
+      {
+        "id": "110b392b-98c0-4333-a1f6-b5a084af9bcb",
+        "name": "Retry?",
+        "parameters": {
+          "conditions": {
+            "conditions": [
+              {
+                "leftValue": "={{ $json.needs_retry }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -3824,
+          4832
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "b57a3f91-2d57-4b70-a790-4f33f7a0ae08",
+        "name": "Notify Retry",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $json.chat_id }}",
+          "text": "=⚠️ Validation REJECT (Attempt {{ $json.retry_count }}/{{ $json.max_retries }})\n\n📊 Score: {{ $json.validation.fo }}/100\n\n❌ Issues:\n{{ $json.validation.hard_fail.map(h => '• ' + h.code + ': ' + h.rule).join('\\n') }}\n\n🔄 Retrying failed sections..."
+        },
+        "position": [
+          -3328,
+          4912
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "3ce848ef-2d18-43c2-9176-4e5da4c17a37"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "080e6f53-3b73-4a77-91d7-389734454ce1",
+        "name": "Done FAIL",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $json.chat_id }}",
+          "text": "=❌ Fortnite Bot v2.0 - FAILED\n\n📊 Final Score: {{ $json.validation.fo }}/100\n\n❌ Hard Fails:\n{{ $json.validation.hard_fail.map(h => '• ' + h.code + ': ' + h.rule).join('\\n') || 'None' }}\n\n🔧 Fix Actions:\n{{ $json.validation.fix_actions.map(a => '• ' + a.trigger + ' → ' + a.action).join('\\n') || 'Check logs' }}\n\nMax retries exceeded. Manual review needed."
+        },
+        "position": [
+          -3632,
+          4928
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "c5fefc5c-bb86-4130-ae4d-462e2c475a87"
+      },
+      {
+        "id": "83b6bc19-51eb-4e73-a7d1-5216664a1c7a",
+        "name": "Build Config1",
+        "parameters": {
+          "jsCode": "const input = $('Extract Input').first().json;\nconst chatId = input.chat_id;\n\n// Default config per Cat Translator ТЗ\nlet config = {\n  segment: 'Cat Translator',\n  sounds: {\n    enabled: false,\n    min_count: 50,\n    image: { width: 640, height: 480, format: 'PNG' },\n    audio: { format: 'mp3' },\n    fields: ['title', 'image', 'file'],\n  },\n  courses: {\n    enabled: false,\n    min_count: 50,\n    image: { width: 640, height: 480, format: 'PNG' },\n    categories: ['commands', 'tricks'],\n    types: { beginner: '~33%', amateur: '~33%', advanced: '~33%' },\n    fields: ['title', 'description', 'image', 'type'],\n  },\n  games: {\n    enabled: false,\n    min_count: 50,\n    image: { width: 640, height: 480, format: 'PNG' },\n    game_type: 'guess breed by image',\n    fields: ['image', 'title'],\n  },\n};\n\nfunction safeParseModelJson(raw) {\n  const txt = String(raw || '')\n    .replace(/```json\\s*/gi, '')\n    .replace(/```\\s*/g, '')\n    .trim();\n  if (!txt) return null;\n  try {\n    return JSON.parse(txt);\n  } catch (e) {\n    return null;\n  }\n}\n\nfunction mergeDeep(target, src) {\n  if (!src || typeof src !== 'object') return target;\n  for (const [k, v] of Object.entries(src)) {\n    if (v && typeof v === 'object' && !Array.isArray(v)) {\n      target[k] = mergeDeep({ ...(target[k] || {}) }, v);\n    } else {\n      target[k] = v;\n    }\n  }\n  return target;\n}\n\ntry {\n  const raw = $json.candidates?.[0]?.content?.parts?.[0]?.text || '{}';\n  const parsed = safeParseModelJson(raw);\n\n  if (parsed) {\n    if (parsed.segment) config.segment = parsed.segment;\n\n    if (parsed.sounds) config.sounds = mergeDeep({ ...config.sounds }, parsed.sounds);\n    if (parsed.courses) config.courses = mergeDeep({ ...config.courses }, parsed.courses);\n    if (parsed.games) config.games = mergeDeep({ ...config.games }, parsed.games);\n  }\n} catch (e) {}\n\n// 6-digit ID ranges (unique across sections)\nconst id_ranges = {\n  sounds: { start: 100000, prefix: 'SO' },\n  courses: { start: 200000, prefix: 'CO' },\n  games: { start: 300000, prefix: 'GA' },\n};\n\nreturn [\n  {\n    json: {\n      chat_id: chatId,\n      config,\n      id_ranges,\n      retry_count: 0,\n      max_retries: 2,\n\n      // оставил как у тебя (но лучше вынести в creds/env)\n      bria_token: '130a9262fe6349b9bc9fd2dfbd2fd2d8',\n      gemini_key: 'AIzaSyAT4U4SNPm9rgR5nogX3HTcESFL_bg9uHo',\n    },\n  },\n];"
+        },
+        "position": [
+          -7600,
+          4720
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "8oCdQBtqn44alreG",
+            "name": "@cat_translator_bot"
+          }
+        },
+        "id": "be4c6590-09f4-44d7-9ff5-046fe87662d5",
+        "name": "Notify Start3",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $json.chat_id }}",
+          "text": "=🐱 Cat Translator v2.0\n\n📋 ТЗ Requirements:\n\n🎧 Sounds:\n{{ $json.config.sounds.enabled \n  ? '• min. ' + $json.config.sounds.min_count + \n    ' | MP3 | Image: ' + \n    $json.config.sounds.image.width + '×' + \n    $json.config.sounds.image.height + ' ' + \n    $json.config.sounds.image.format\n  : '• ❌' }}\n\n📚 Courses:\n{{ $json.config.courses.enabled \n  ? '• min. ' + $json.config.courses.min_count +\n    ' | Categories: ' + $json.config.courses.categories.join(', ') +\n    ' | Types: beginner / amateur / advanced (~равномерно)' +\n    ' | Image: ' +\n    $json.config.courses.image.width + '×' +\n    $json.config.courses.image.height + ' ' +\n    $json.config.courses.image.format\n  : '• ❌' }}\n\n🎮 Games:\n{{ $json.config.games.enabled \n  ? '• min. ' + $json.config.games.min_count +\n    ' | Type: ' + $json.config.games.game_type +\n    ' | Image: ' +\n    $json.config.games.image.width + '×' +\n    $json.config.games.image.height + ' ' +\n    $json.config.games.image.format\n  : '• ❌' }}\n\n🧩 Rules:\n• Item = неделимая связка (title ↔ image ↔ file/description/type)\n• Titles не изменяются\n• Дубликаты запрещены\n\n🆔 IDs: 6-digit unique per segment\n⏳ Processing content packs..."
+        },
+        "position": [
+          -7408,
+          4720
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "8aa84cd2-bcc8-48a4-9b58-a68b4f3faae5"
+      },
+      {
+        "id": "ec56980b-1ea4-422a-a3db-799e1877c37f",
+        "name": "Merge",
+        "parameters": {
+          "numberInputs": 3
+        },
+        "position": [
+          -5184,
+          4688
+        ],
+        "type": "n8n-nodes-base.merge",
+        "typeVersion": 3.2
+      },
+      {
+        "id": "3a4dcf96-55cd-4088-892c-8e24cabfaac0",
+        "name": "Edit Fields",
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "892572b9-53cf-47c9-9b25-6792c1318c4d",
+                "name": "chat_id",
+                "type": "number",
+                "value": "={{ $('Build Config1').item.json.chat_id }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "position": [
+          -7200,
+          4720
+        ],
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4
+      },
+      {
+        "id": "ca9adb69-e5a5-40e8-bab9-55899195cb2e",
+        "name": "Query",
+        "parameters": {
+          "filters": {},
+          "resource": "search"
+        },
+        "position": [
+          -7840,
+          4128
+        ],
+        "type": "n8n-nodes-base.dropbox",
+        "typeVersion": 1
+      },
+      {
+        "id": "9b062d48-a9d9-48e9-a002-39cd9702edb2",
+        "name": "Sounds?",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "8535f755-4fd7-4c00-a68d-a39dceaabc84",
+                "leftValue": "={{ $('Build Config1').item.json.config.sounds.enabled }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -6496,
+          4240
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "id": "28232e05-663c-4563-8f70-644ce8406e65",
+        "name": "Run Sounds",
+        "notes": "Set workflowId to Fortnite_Skins workflow ID",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": true
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "Videoproduction — Cat_Sounds_v2",
+            "cachedResultUrl": "/workflow/WFcOCZXNoSGWjELu",
+            "mode": "list",
+            "value": "WFcOCZXNoSGWjELu"
+          },
+          "workflowInputs": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "chat_id",
+                "id": "chat_id",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "count",
+                "id": "count",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "min_per_rarity",
+                "id": "min_per_rarity",
+                "removed": true,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "id_start",
+                "id": "id_start",
+                "removed": true,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "bria_token",
+                "id": "bria_token",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "bria_token": "={{ $('Build Config1').item.json.bria_token }}",
+              "chat_id": "={{ $('Build Config1').item.json.chat_id }}",
+              "count": "={{ $('Build Config1').item.json.config.sounds.min_count }}"
+            }
+          }
+        },
+        "position": [
+          -6320,
+          4128
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.2
+      },
+      {
+        "id": "06862f5e-865b-4bf5-ab4a-a1fca4967d40",
+        "name": "Courses?",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "2434ac80-6c4c-4386-bd09-57dc6d9fafb5",
+                "leftValue": "={{ $('Build Config1').item.json.config.courses.enabled }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -6496,
+          4528
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "id": "b4e97ccc-378b-48a0-b218-cc0922297784",
+        "name": "Run Courses",
+        "notes": "Set workflowId to Fortnite_Emotes workflow ID",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": true
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "Videoproduction — Fortnite Emotes v2",
+            "cachedResultUrl": "/workflow/PSCQddvfDbmkWTGr",
+            "mode": "list",
+            "value": "PSCQddvfDbmkWTGr"
+          },
+          "workflowInputs": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              ""
+            ],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "chat_id",
+                "id": "chat_id",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "count",
+                "id": "count",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "min_per_rarity",
+                "id": "min_per_rarity",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "id_start",
+                "id": "id_start",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "bria_token",
+                "id": "bria_token",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "bria_token": "={{ $('Build Config1').first().json.bria_token }}",
+              "chat_id": "={{ $('Build Config1').first().json.chat_id }}",
+              "count": "={{ $('Build Config1').first().json.config.emotes.count }}",
+              "id_start": "={{ $('Build Config1').first().json.id_ranges.emotes.start }}",
+              "min_per_rarity": "={{ $('Build Config1').first().json.config.emotes.min_per_rarity }}"
+            }
+          }
+        },
+        "position": [
+          -6288,
+          4416
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.2
+      },
+      {
+        "id": "fb3f2e9f-927e-4253-a59f-3af0b5782fe7",
+        "name": "Games?",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "7bef33b6-ca6d-4c3c-bfe6-33164ac6452f",
+                "leftValue": "={{ $('Build Config1').item.json.config.games.enabled }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          -6496,
+          4800
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2
+      },
+      {
+        "id": "89f6fb9a-129e-46af-801c-e0df999cd552",
+        "name": "Run Games",
+        "notes": "Set workflowId to Fortnite_Weapons workflow ID",
+        "parameters": {
+          "options": {
+            "waitForSubWorkflow": true
+          },
+          "workflowId": {
+            "__rl": true,
+            "cachedResultName": "Videoproduction — Fortnite_Items_v2",
+            "cachedResultUrl": "/workflow/dIqtI3dRlFh0385k",
+            "mode": "list",
+            "value": "dIqtI3dRlFh0385k"
+          },
+          "workflowInputs": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "chat_id",
+                "id": "chat_id",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "count",
+                "id": "count",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "min_per_rarity",
+                "id": "min_per_rarity",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "id_start",
+                "id": "id_start",
+                "removed": false,
+                "required": false,
+                "type": "number"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "bria_token",
+                "id": "bria_token",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "bria_token": "={{ $('Build Config1').first().json.bria_token }}",
+              "chat_id": "={{ $('Build Config1').first().json.chat_id }}",
+              "count": "={{ $('Build Config1').first().json.config.items.count }}",
+              "id_start": "={{ $('Build Config1').first().json.id_ranges.items.start }}",
+              "min_per_rarity": "={{ $('Build Config1').first().json.config.items.min_per_rarity }}"
+            }
+          }
+        },
+        "position": [
+          -6304,
+          4688
+        ],
+        "type": "n8n-nodes-base.executeWorkflow",
+        "typeVersion": 1.2
+      }
+    ],
+    "updatedAt": "2026-01-27T14:55:42.009Z",
+    "versionId": "62435b33-a3a5-4fb7-888a-570af33975b1",
+    "workflowId": "8HeZnI9E7pYL4rWW"
+  },
+  "activeVersionId": "62435b33-a3a5-4fb7-888a-570af33975b1",
   "connections": {
     "Build Config1": {
       "main": [
@@ -1018,7 +2024,7 @@
               "type": "private",
               "username": "moongalov"
             },
-            "date": 1769170206,
+            "date": 1769525355,
             "from": {
               "first_name": "Илья",
               "id": 5530327308,
@@ -1026,10 +2032,10 @@
               "language_code": "ru",
               "username": "moongalov"
             },
-            "message_id": 2,
+            "message_id": 11,
             "text": "Сегмент: Cat Translator\n\nSounds\nСтруктура: название, картинка, файл\nФормат файла: mp3\nРазмер картинки к разделу: 640*480 (альбомная)\nФормат картинки: PNG\nКоличество элементов в категории: мин. 50 шт.\n\n\nCourses:\nСтруктура: название, описание, картинка, тип\nРазмер картинки к разделу: 640*480 (альбомная)\nФормат картинки: PNG\nКатегории: commands, tricks\nТип курсов: beginner, amateur, advanced (разделить примерно поровну)\nКоличество элементов в категории: мин. 50 шт.\n\nGames (Угадать название породы по картинке)\nСтруктура: Картинка, название\nРазмер картинки к разделу: 640*480 (альбомная)\nФормат картинки: PNG\nКоличество элементов: мин. 50 шт."
           },
-          "update_id": 98656126
+          "update_id": 98656130
         },
         "pairedItem": {
           "item": 0
@@ -1052,6 +2058,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2026-01-23T13:03:50.161Z",
-  "versionId": "b7cee964-5b70-4faa-ac9f-34df112aad89"
+  "updatedAt": "2026-01-27T14:56:26.648Z",
+  "versionId": "62435b33-a3a5-4fb7-888a-570af33975b1"
 }
