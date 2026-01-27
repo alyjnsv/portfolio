@@ -1,0 +1,1457 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "AppRefactoring": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "AppRefactoringQA": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Post apprefactoring",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generate JWT Token": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get ZIP GitHub",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get ZIP GitHub": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Update an issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an issue": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "collect info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an issue2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "to do",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "done",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "to do1",
+            "type": "main"
+          }
+        ],
+        []
+      ]
+    },
+    "If2": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "done1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "to do2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Jira": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Post apprefactoring": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Edit Fields1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "If3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Add a comment",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "collect info": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Generate JWT Token",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-01-27T13:40:41.072Z",
+  "id": "IjYhAQXrXPzjg57b",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Autopril refactoring Test",
+  "nodes": [
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "30001040-1ac3-4d6a-b280-b10807f7dbd5",
+      "name": "Get an issue",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        -784,
+        336
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "a28e59a0-cf43-4a5f-a38f-8f6b911f4ab8",
+      "name": "collect info",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e0001ca-d29d-41e1-a56d-5c50dd41f0fb",
+              "name": "GitHub Link",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_10044.split('/').at(-1) }}"
+            },
+            {
+              "id": "9b2daf47-cedf-491d-8808-2bc704eb5bb4",
+              "name": "AppRefactoring Group ID",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_13511 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -624,
+        336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "9bae596f-105c-43b7-9d86-cf268fcf38a6",
+      "name": "Jira",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "084a954c-ecd3-45d3-8dad-7a0ed63c0d70"
+      },
+      "position": [
+        -944,
+        336
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "084a954c-ecd3-45d3-8dad-7a0ed63c0d70"
+    },
+    {
+      "id": "a07ffdbb-2cb3-4f12-9e59-5e9343aff5ed",
+      "name": "AppRefactoring",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "b78ced3e-6259-4d28-8092-3e79d977947c"
+      },
+      "position": [
+        -1520,
+        688
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "b78ced3e-6259-4d28-8092-3e79d977947c"
+    },
+    {
+      "id": "1ad1ed74-7356-4854-961c-2025471d004b",
+      "name": "Generate JWT Token",
+      "parameters": {
+        "jsonBody": "{\n\"username\":\"jira_automation@mail.com\",\n\"password\":\"fg2eO2mir73K6iF243f\",\n\"_remember_me\":true\n}",
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://api.apprefactoring.com/api/login_check"
+      },
+      "position": [
+        -480,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "077354d6-5027-4348-8410-4d4533d32a15",
+      "name": "Post apprefactoring",
+      "parameters": {
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "teamID",
+              "value": "={{ $('collect info').item.json['AppRefactoring Group ID'] }}"
+            },
+            {
+              "name": "type",
+              "value": "swift"
+            },
+            {
+              "inputDataFieldName": "data",
+              "name": "fileName",
+              "parameterType": "formBinaryData"
+            }
+          ]
+        },
+        "contentType": "multipart-form-data",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('Generate JWT Token').item.json.token }}"
+            }
+          ]
+        },
+        "method": "POST",
+        "options": {},
+        "sendBody": true,
+        "sendHeaders": true,
+        "url": "https://api.apprefactoring.com/api/projects/"
+      },
+      "position": [
+        16,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "d4dcad95-2504-482b-95aa-077f36246fa5",
+      "name": "Get ZIP GitHub",
+      "onError": "continueErrorOutput",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/IT-OUT/{{ $('collect info').item.json['GitHub Link'] }}/zipball/main"
+      },
+      "position": [
+        -320,
+        336
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "90fad083-4458-41f0-9e24-12bac21dd1bc",
+      "name": "Edit Fields",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ca4de227-9c6d-4790-9eb8-485c104d370a",
+              "name": "ProjectKey",
+              "type": "string",
+              "value": "={{ $json.body.id }}"
+            },
+            {
+              "id": "81b3a8b7-b5cb-4d0a-a46e-9709d5183756",
+              "name": "ProcentAppRefactoring",
+              "type": "number",
+              "value": "={{ $json.body.totalIntersection }}"
+            },
+            {
+              "id": "8ddadc15-a70d-4aa2-9f2c-1b566d537057",
+              "name": "Jiraissue",
+              "type": "string",
+              "value": "={{ $json.body.name.match(/TAA-\\d+/)?.[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1328,
+        688
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "02818166-e92a-478e-99ab-bfd9b1b321c4",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4a67a46a-4115-45c0-ac6b-f596d77ba26e",
+              "leftValue": 10,
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": "={{ $('Edit Fields').item.json.ProcentAppRefactoring }}"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -656,
+        672
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "8b1b71b0-cf04-40ed-96f8-a9483ca36b75",
+      "name": "to do",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields').item.json.Jiraissue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_11500"
+                },
+                "fieldValue": "={{ $('AppRefactoring').item.json.body.totalIntersection }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10047"
+                },
+                "fieldValue": "=https://cabinet.apprefactoring.com/teams/7041/projects/{{ $('Edit Fields').item.json.ProjectKey }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "AppRefactoring To Do-Admin",
+            "mode": "list",
+            "value": "321"
+          }
+        }
+      },
+      "position": [
+        -400,
+        512
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "27696b99-86a7-4506-9d2a-a48331c7d8e0",
+      "name": "done",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields').item.json.Jiraissue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_11500"
+                },
+                "fieldValue": "={{ $('AppRefactoring').item.json.body.totalIntersection }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10047"
+                },
+                "fieldValue": "=https://cabinet.apprefactoring.com/teams/7041/projects/{{ $('Edit Fields').item.json.ProjectKey }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Done-Admin",
+            "mode": "list",
+            "value": "231"
+          }
+        }
+      },
+      "position": [
+        -400,
+        688
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "93f00ac0-9c33-4402-af22-11b1cae85e38",
+      "name": "Update an issue",
+      "parameters": {
+        "issueKey": "={{ $('Jira').item.json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_13512"
+                },
+                "fieldValue": "={{ $json.ProjectID }}"
+              }
+            ]
+          }
+        }
+      },
+      "position": [
+        352,
+        336
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "d63f6536-486a-4c56-ba16-5adc233b79c3",
+      "name": "Code in JavaScript1",
+      "parameters": {
+        "jsCode": "const issueKey = $('Jira').item.json.body.issue_key;\n\n// Меняем только имя файла\n$input.item.binary.data.fileName = `${issueKey}.zip`;\n\nreturn $input.item;"
+      },
+      "position": [
+        -144,
+        336
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "56679d48-08dd-4e67-b118-7494250b2d6b",
+      "name": "Update an issue1",
+      "parameters": {
+        "issueKey": "={{ $('Jira').item.json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Cancelled-Admin",
+            "mode": "list",
+            "value": "241"
+          }
+        }
+      },
+      "position": [
+        -80,
+        480
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "40f724c8-b230-4a4f-8fdc-b9796289a1de",
+      "name": "Add a comment",
+      "parameters": {
+        "comment": "Нету ссылки на Github.",
+        "issueKey": "={{ $('Jira').item.json.body.issue_key }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        64,
+        480
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "f0e301e4-ee2e-4b4f-b470-64c26453ef2e",
+      "name": "Get an issue1",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $json.Jiraissue.match(/TAA-\\d+/)?.[0] }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        -1168,
+        688
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "ea57ff92-e399-4f23-b82f-bde8918980c0",
+      "name": "Edit Fields1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d695625b-f464-4f46-baec-f0af2ed18418",
+              "name": "ProjectID",
+              "type": "string",
+              "value": "={{ $json.project.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        176,
+        336
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "24040af1-97e6-4aef-b218-32b7d0273831",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "207db952-1c73-4e33-9965-b4cbfa6ef895",
+                    "leftValue": "AppRefactoring Upload",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.fields.status.name }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "Upload",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c0bbbfd0-78de-4bc9-b9d2-794f46a24028",
+                    "leftValue": "AppRefactoring QA",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.fields.status.name }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "QA",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -960,
+        688
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "eebaa76b-8173-490f-a5e1-0e029b339534",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4a67a46a-4115-45c0-ac6b-f596d77ba26e",
+              "leftValue": 10,
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": "={{ $('Edit Fields').item.json.ProcentAppRefactoring }}"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -656,
+        880
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "9670eeab-476c-4f15-a8e3-0b1d96571260",
+      "name": "to do1",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields').item.json.Jiraissue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_11500"
+                },
+                "fieldValue": "={{ $('AppRefactoring').item.json.body.totalIntersection }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10047"
+                },
+                "fieldValue": "=https://cabinet.apprefactoring.com/teams/7041/projects/{{ $('Edit Fields').item.json.ProjectKey }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "AppRefactoring To Do-Admin",
+            "mode": "list",
+            "value": "321"
+          }
+        }
+      },
+      "position": [
+        -400,
+        816
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "8699cc38-7292-4ad7-b8e0-84b13bb2e4fe",
+      "name": "AppRefactoringQA",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "5e814b53-d5ba-438c-ba44-da21cba4a5d7"
+      },
+      "position": [
+        -1488,
+        1104
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "5e814b53-d5ba-438c-ba44-da21cba4a5d7"
+    },
+    {
+      "disabled": true,
+      "id": "f0681d3e-ed88-4b83-b07c-03205128523d",
+      "name": "Edit Fields2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ca4de227-9c6d-4790-9eb8-485c104d370a",
+              "name": "ProjectKey",
+              "type": "string",
+              "value": "={{ $json.body.id }}"
+            },
+            {
+              "id": "81b3a8b7-b5cb-4d0a-a46e-9709d5183756",
+              "name": "ProcentAppRefactoring",
+              "type": "number",
+              "value": "={{ $json.body.totalIntersection }}"
+            },
+            {
+              "id": "8ddadc15-a70d-4aa2-9f2c-1b566d537057",
+              "name": "Jiraissue",
+              "type": "string",
+              "value": "={{ $json.body.name.match(/TAA-\\d+/)?.[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        -1200,
+        1104
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "disabled": true,
+      "id": "f1f2cdf1-27c4-454e-b45a-7c6fa7aaab7a",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4a67a46a-4115-45c0-ac6b-f596d77ba26e",
+              "leftValue": 10,
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": "={{ $('Edit Fields2').item.json.ProcentAppRefactoring }}"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -528,
+        1088
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "cc6383a7-d93b-4b60-a2a6-44b2ded9f0c3",
+      "name": "done1",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields2').item.json.Jiraissue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_11500"
+                },
+                "fieldValue": "={{ $('AppRefactoring').item.json.body.totalIntersection }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10047"
+                },
+                "fieldValue": "=https://cabinet.apprefactoring.com/teams/7041/projects/{{ $('Edit Fields2').item.json.ProjectKey }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Done-Admin",
+            "mode": "list",
+            "value": "231"
+          }
+        }
+      },
+      "position": [
+        -272,
+        1104
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "7098cb20-6324-44cb-95ab-77f9bc405625",
+      "name": "Get an issue2",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $json.Jiraissue.match(/TAA-\\d+/)?.[0] }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        -1040,
+        1104
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "disabled": true,
+      "id": "34e83d7d-c719-488a-83b1-f4708263dcaa",
+      "name": "Switch1",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "207db952-1c73-4e33-9965-b4cbfa6ef895",
+                    "leftValue": "AppRefactoring Upload",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.fields.status.name }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "Upload",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c0bbbfd0-78de-4bc9-b9d2-794f46a24028",
+                    "leftValue": "AppRefactoring QA",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "={{ $json.fields.status.name }}"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "QA",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        -832,
+        1104
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4
+    },
+    {
+      "disabled": true,
+      "id": "1976e2ec-d65f-46d5-9a77-dab0b57c3d78",
+      "name": "If3",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "4a67a46a-4115-45c0-ac6b-f596d77ba26e",
+              "leftValue": 10,
+              "operator": {
+                "operation": "lte",
+                "type": "number"
+              },
+              "rightValue": "={{ $('Edit Fields2').item.json.ProcentAppRefactoring }}"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -528,
+        1296
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "ce494420-637b-4264-b8a6-cbc3f55261a4",
+      "name": "to do2",
+      "parameters": {
+        "issueKey": "={{ $('Edit Fields2').item.json.Jiraissue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_11500"
+                },
+                "fieldValue": "={{ $('AppRefactoring').item.json.body.totalIntersection }}"
+              },
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10047"
+                },
+                "fieldValue": "=https://cabinet.apprefactoring.com/teams/7041/projects/{{ $('Edit Fields2').item.json.ProjectKey }}"
+              }
+            ]
+          },
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "AppRefactoring To Do-Admin",
+            "mode": "list",
+            "value": "321"
+          }
+        }
+      },
+      "position": [
+        -272,
+        1232
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {
+    "AppRefactoring": [
+      {
+        "json": {
+          "body": {
+            "id": 26952,
+            "intersectionCounters": {
+              "Actor name": {
+                "crossAmount": 1,
+                "totalAmount": 1
+              },
+              "File content": {
+                "crossAmount": 80,
+                "totalAmount": 88
+              },
+              "File name": {
+                "crossAmount": 82,
+                "totalAmount": 84
+              },
+              "Json structure": {
+                "crossAmount": 0,
+                "totalAmount": 3
+              },
+              "Swift class name": {
+                "crossAmount": 5,
+                "totalAmount": 5
+              },
+              "Swift class structure": {
+                "crossAmount": 5,
+                "totalAmount": 5
+              },
+              "Swift enum name": {
+                "crossAmount": 9,
+                "totalAmount": 9
+              },
+              "Swift extension name": {
+                "crossAmount": 2,
+                "totalAmount": 2
+              },
+              "Swift function name": {
+                "crossAmount": 84,
+                "totalAmount": 84
+              },
+              "Swift function structure": {
+                "crossAmount": 84,
+                "totalAmount": 84
+              },
+              "Swift struct name": {
+                "crossAmount": 53,
+                "totalAmount": 53
+              },
+              "Swift structure": {
+                "crossAmount": 35,
+                "totalAmount": 35
+              }
+            },
+            "name": "TAA-39-test",
+            "teamId": 7041,
+            "totalIntersection": 90.71
+          },
+          "executionMode": "production",
+          "headers": {
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "157.90.214.58",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "DE",
+            "cf-ray": "9c05129f30ee803d-FRA",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-length": "746",
+            "content-type": "application/json",
+            "host": "academicpixflow.app.n8n.cloud",
+            "user-agent": "Symfony HttpClient/Curl",
+            "x-forwarded-for": "157.90.214.58, 172.70.248.165",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-is-trusted": "yes",
+            "x-real-ip": "157.90.214.58"
+          },
+          "params": {},
+          "query": {},
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/appref"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "AppRefactoringQA": [
+      {
+        "json": {
+          "body": {
+            "id": 26952,
+            "intersectionCounters": {
+              "Actor name": {
+                "crossAmount": 1,
+                "totalAmount": 1
+              },
+              "File content": {
+                "crossAmount": 80,
+                "totalAmount": 88
+              },
+              "File name": {
+                "crossAmount": 82,
+                "totalAmount": 84
+              },
+              "Json structure": {
+                "crossAmount": 0,
+                "totalAmount": 3
+              },
+              "Swift class name": {
+                "crossAmount": 5,
+                "totalAmount": 5
+              },
+              "Swift class structure": {
+                "crossAmount": 5,
+                "totalAmount": 5
+              },
+              "Swift enum name": {
+                "crossAmount": 9,
+                "totalAmount": 9
+              },
+              "Swift extension name": {
+                "crossAmount": 2,
+                "totalAmount": 2
+              },
+              "Swift function name": {
+                "crossAmount": 84,
+                "totalAmount": 84
+              },
+              "Swift function structure": {
+                "crossAmount": 84,
+                "totalAmount": 84
+              },
+              "Swift struct name": {
+                "crossAmount": 53,
+                "totalAmount": 53
+              },
+              "Swift structure": {
+                "crossAmount": 35,
+                "totalAmount": 35
+              }
+            },
+            "name": "TAA-39-test",
+            "teamId": 7041,
+            "totalIntersection": 90.71
+          },
+          "executionMode": "production",
+          "headers": {
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "157.90.214.58",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "DE",
+            "cf-ray": "9c05129f30ee803d-FRA",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-length": "746",
+            "content-type": "application/json",
+            "host": "academicpixflow.app.n8n.cloud",
+            "user-agent": "Symfony HttpClient/Curl",
+            "x-forwarded-for": "157.90.214.58, 172.70.248.165",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-is-trusted": "yes",
+            "x-real-ip": "157.90.214.58"
+          },
+          "params": {},
+          "query": {},
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/appref"
+        }
+      }
+    ],
+    "Jira": [
+      {
+        "json": {
+          "body": {
+            "issue_key": "TAA-290"
+          },
+          "executionMode": "production",
+          "headers": {
+            "accept": "application/json, application/javascript, text/javascript",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "135.181.186.107",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "FI",
+            "cf-ray": "9c04d21fc79cd9db-FRA",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-length": "23",
+            "content-type": "application/json",
+            "host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-for": "135.181.186.107, 172.71.144.94",
+            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-is-trusted": "yes",
+            "x-real-ip": "135.181.186.107"
+          },
+          "params": {},
+          "query": {},
+          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/apprefjira"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2026-01-27T13:40:41.076Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2026-01-27T13:40:41.076Z",
+      "workflowId": "IjYhAQXrXPzjg57b"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2026-01-27T13:41:50.461Z",
+  "versionId": "28460750-1a0d-48f1-a737-81a62f078fb0"
+}
