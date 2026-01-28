@@ -3,45 +3,12 @@
   "activeVersion": null,
   "activeVersionId": null,
   "connections": {
-    "AI Agent": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Convert MD",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "AI Agent1": {
       "main": [
         [
           {
             "index": 0,
             "node": "Convert MD2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue10",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "AI Agent3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Convert MD4",
             "type": "main"
           }
         ]
@@ -102,17 +69,6 @@
         ]
       ]
     },
-    "Add an attachment to an issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update an issue working3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Add an attachment to an issue1": {
       "main": [
         [
@@ -124,57 +80,13 @@
         ]
       ]
     },
-    "Anthropic Chat Model": {
-      "ai_languageModel": [
+    "Aggregate Results2": {
+      "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model1": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 1,
-            "node": "AI Agent3",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model2": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model3": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 1,
-            "node": "AI Agent2",
-            "type": "ai_languageModel"
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model4": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent3",
-            "type": "ai_languageModel"
+            "node": "Final Result2",
+            "type": "main"
           }
         ]
       ]
@@ -234,17 +146,6 @@
         ]
       ]
     },
-    "Board of SysAdmins": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update an issue working",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Board of SysAdmins In progress": {
       "main": [
         [
@@ -256,45 +157,12 @@
         ]
       ]
     },
-    "Board of SysAdmins In progress3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Board of SysAdmins",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Board of SysAdmins1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Update an issue working1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an attachment from an issue1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an attachment from an issue2",
+            "node": "Gold Rep?1",
             "type": "main"
           }
         ]
@@ -344,61 +212,12 @@
         ]
       ]
     },
-    "Combine Data1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Config1": {
       "main": [
         [
           {
             "index": 0,
             "node": "Init",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Convert MD": {
-      "main": [
-        []
-      ]
-    },
-    "Convert MD1": {
-      "main": [
-        [
-          {
-            "index": 1,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Convert MD3": {
-      "main": [
-        [
-          {
-            "index": 2,
-            "node": "Merge",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Convert MD4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items1",
             "type": "main"
           }
         ]
@@ -432,6 +251,28 @@
           {
             "index": 0,
             "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create File in New Repo2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Private Repo2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for Tree1",
             "type": "main"
           }
         ]
@@ -473,17 +314,6 @@
         ]
       ]
     },
-    "Download Content_ID": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract Content_ID1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Download Content_ID1": {
       "main": [
         [
@@ -517,28 +347,6 @@
         ]
       ]
     },
-    "Download Main Readme1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract Main Readme1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Download Readme_ID": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract Readme_ID1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Download Readme_ID1": {
       "main": [
         [
@@ -550,46 +358,12 @@
         ]
       ]
     },
-    "Edit Dropbox": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Есть?1",
-            "type": "main"
-          }
-        ],
-        []
-      ]
-    },
     "Edit Fields": {
       "main": [
         [
           {
             "index": 0,
             "node": "AI Agent4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Edit Fields2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "AI Agent3",
             "type": "main"
           }
         ]
@@ -617,17 +391,6 @@
         ]
       ]
     },
-    "Extract Content_ID1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Extract Main Readme": {
       "main": [
         [
@@ -639,78 +402,12 @@
         ]
       ]
     },
-    "Extract Main Readme1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Find Category Files1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Extract Readme_ID": {
       "main": [
         [
           {
             "index": 0,
             "node": "If4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract Readme_ID1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract from File": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get row(s)2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract from File1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Convert MD1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract from File2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Extract from File3": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue7",
             "type": "main"
           }
         ]
@@ -760,23 +457,23 @@
         ]
       ]
     },
+    "Final Result2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Jira with Repo URL",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Find Category Files": {
       "main": [
         [
           {
             "index": 0,
             "node": "Loop Over Items",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Find Category Files1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Loop Over Items1",
             "type": "main"
           }
         ]
@@ -793,23 +490,23 @@
         ]
       ]
     },
-    "Find Main Readme1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Download Main Readme1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get Dropbox info": {
       "main": [
         [
           {
             "index": 0,
             "node": "Need Content?1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get File Content2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create File in New Repo2",
             "type": "main"
           }
         ]
@@ -837,34 +534,23 @@
         ]
       ]
     },
-    "Get an attachment from an issue": {
+    "Get Source Repo Info1": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Extract from File",
+            "node": "Save Branch Info1",
             "type": "main"
           }
         ]
       ]
     },
-    "Get an attachment from an issue1": {
+    "Get Source Tree2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Extract from File2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an attachment from an issue2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract from File3",
+            "node": "Prepare Loop Data2",
             "type": "main"
           }
         ]
@@ -886,7 +572,7 @@
         [
           {
             "index": 0,
-            "node": "Edit Dropbox",
+            "node": "Gold Rep?2",
             "type": "main"
           }
         ]
@@ -898,28 +584,6 @@
           {
             "index": 0,
             "node": "Config1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Вытаскиваем файл с prompt",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue10": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Вытаскиваем файл с content",
             "type": "main"
           }
         ]
@@ -1040,7 +704,7 @@
         [
           {
             "index": 0,
-            "node": "arcihve extractor",
+            "node": "Parse Jira Data2",
             "type": "main"
           }
         ]
@@ -1057,78 +721,12 @@
         ]
       ]
     },
-    "Get an issue5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Вытаскиваем все файлы2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Проверка на файлы Prompt1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue7": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue8": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue9": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Find Main Readme1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get file": {
       "main": [
         [
           {
             "index": 0,
             "node": "Extract from File5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get file1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract from File1",
             "type": "main"
           }
         ]
@@ -1156,32 +754,6 @@
         ]
       ]
     },
-    "Get row(s)2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue1",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Get an issue3",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Get an issue9",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Get an issue8",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get row(s)3": {
       "main": [
         [
@@ -1203,6 +775,42 @@
           {
             "index": 0,
             "node": "Get an issue16",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Gold Rep?1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update an issue working1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Update an issue working10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Gold Rep?2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Проверка на файлы Prompt1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Update an issue working12",
             "type": "main"
           }
         ]
@@ -1286,42 +894,6 @@
           {
             "index": 0,
             "node": "Обновить БД1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Merge Files",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Update an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "If3": {
-      "main": [
-        [
-          {
-            "index": 1,
-            "node": "Merge Files",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Update an issue1",
             "type": "main"
           }
         ]
@@ -1453,46 +1025,14 @@
         [
           {
             "index": 0,
-            "node": "Merge",
+            "node": "Aggregate Results2",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "Download Readme_ID",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Download Content_ID",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Merge": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue5",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Add an attachment to an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Merge Files": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Combine Data1",
+            "node": "Get File Content2",
             "type": "main"
           }
         ]
@@ -1548,7 +1088,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue6",
+            "node": "Get an issue",
             "type": "main"
           }
         ],
@@ -1594,6 +1134,39 @@
         ]
       ]
     },
+    "Parse Jira Data2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Source Repo Info1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Prepare Loop Data2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Split Out Files2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Prepare for Tree1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Source Tree2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Read/Write Files from Disk": {
       "main": [
         [
@@ -1621,17 +1194,6 @@
         ]
       ]
     },
-    "Remove an attachment from an issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Remove an attachment from an issue1": {
       "main": [
         [
@@ -1654,6 +1216,17 @@
         ]
       ]
     },
+    "Save Branch Info1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Private Repo2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Split Item": {
       "main": [
         [
@@ -1670,12 +1243,12 @@
         ]
       ]
     },
-    "Split Out": {
+    "Split Out Files2": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Remove an attachment from an issue",
+            "node": "Loop Over Items1",
             "type": "main"
           }
         ]
@@ -1703,23 +1276,12 @@
         ]
       ]
     },
-    "Update an issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Add a comment3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Update an issue working": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Get an issue",
+            "node": "No Operation, do nothing5",
             "type": "main"
           }
         ]
@@ -1736,12 +1298,23 @@
         ]
       ]
     },
-    "Update an issue working3": {
+    "Update an issue working10": {
       "main": [
         [
           {
             "index": 0,
-            "node": "No Operation, do nothing5",
+            "node": "Add a comment8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update an issue working12": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Add a comment10",
             "type": "main"
           }
         ]
@@ -1753,17 +1326,6 @@
           {
             "index": 0,
             "node": "No Operation, do nothing2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Update an issue working5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Add a comment2",
             "type": "main"
           }
         ]
@@ -1802,12 +1364,12 @@
         ]
       ]
     },
-    "Update an issue1": {
+    "Update an issue working9": {
       "main": [
         [
           {
             "index": 0,
-            "node": "Add a comment4",
+            "node": "Add a comment2",
             "type": "main"
           }
         ]
@@ -1857,12 +1419,12 @@
         ]
       ]
     },
-    "arcihve extractor": {
+    "When clicking ‘Execute workflow’": {
       "main": [
         [
           {
             "index": 0,
-            "node": "AI Agent",
+            "node": "Get an issue3",
             "type": "main"
           }
         ]
@@ -1890,45 +1452,12 @@
         ]
       ]
     },
-    "Вытаскиваем все файлы2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Split Out",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Вытаскиваем файл с content": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Convert MD3",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Вытаскиваем файл с content1": {
       "main": [
         [
           {
             "index": 0,
             "node": "Convert MD6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Вытаскиваем файл с prompt": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get file1",
             "type": "main"
           }
         ]
@@ -1986,14 +1515,14 @@
         [
           {
             "index": 0,
-            "node": "Get an attachment from an issue",
+            "node": "Update an issue working",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "Update an issue working5",
+            "node": "Update an issue working9",
             "type": "main"
           }
         ]
@@ -2059,7 +1588,7 @@
         [
           {
             "index": 0,
-            "node": "Board of SysAdmins In progress3",
+            "node": "Есть?1",
             "type": "main"
           }
         ]
@@ -3036,46 +2565,6 @@
       "typeVersion": 1
     },
     {
-      "id": "d9974281-d9a6-4294-bc3c-3e7d568a849f",
-      "name": "Edit Dropbox",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n  \n  // 1) ищем ТОЛЬКО dropbox‑файл\n  const chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('dropbox');\n  });\n  \n  // 2) добавляем результат с флагом hasFile\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n        hasFile: 'да'\n      },\n    });\n  } else {\n    result.push({\n      json: {\n        content: '',\n        attachment: null,\n        sourceKey: 'fields.attachment.content',\n        hasFile: 'нет'\n      },\n    });\n  }\n}\n\nreturn result;"
-      },
-      "position": [
-        48,
-        -736
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "6e79b6f3-105e-4a4a-adb0-01a9c3291249",
-      "name": "Get an attachment from an issue",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "attachmentId": "={{ $json.attachment.id }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        448,
-        -736
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
       "id": "fcdc5e78-04c1-4aac-9402-0b2e275c3d64",
       "name": "Get Dropbox info",
       "parameters": {
@@ -3103,125 +2592,6 @@
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
-    },
-    {
-      "id": "925944d9-ccb4-433e-9617-4cee9d73d4dc",
-      "name": "Board of SysAdmins",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
-              "name": "sys_admin_board",
-              "type": "object",
-              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"idle\",       \"id\": \"13802\",       \"disabled\": false     }"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        -448,
-        -736
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "9f24f968-5bbd-4f61-8571-9f07d130fd7e",
-      "name": "Update an issue working",
-      "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "customFieldsUi": {
-            "customFieldsValues": [
-              {
-                "fieldId": {
-                  "__rl": true,
-                  "mode": "id",
-                  "value": "=customfield_13502"
-                },
-                "fieldValue": "={{ $json.sys_admin_board }}"
-              },
-              {
-                "fieldId": {
-                  "__rl": true,
-                  "mode": "id",
-                  "value": "=customfield_13501"
-                },
-                "fieldValue": "={{ $('Updata Jira-Status').item.json.desktop }}"
-              }
-            ]
-          }
-        }
-      },
-      "position": [
-        -288,
-        -736
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "29221523-7102-4513-a150-cb3b11610bfd",
-      "name": "Get an issue",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        -128,
-        -736
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "alwaysOutputData": true,
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "e611765a-4c87-429e-bc01-25216571ea89",
-      "name": "Get file1",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "attachmentId": "={{ $json.attachmentIds }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        1600,
-        -464
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
     },
     {
       "id": "7d9d064b-4392-488d-b300-df892cd84212",
@@ -3257,355 +2627,6 @@
       "typeVersion": 2.2
     },
     {
-      "id": "9bfc735a-276a-4517-944a-161f94d610fc",
-      "name": "Extract from File",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        640,
-        -736
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "disabled": true,
-      "id": "9e2aa9a9-1508-4a29-bce8-80a87a79389e",
-      "name": "AI Agent",
-      "parameters": {
-        "hasOutputParser": true,
-        "options": {
-          "enableStreaming": true,
-          "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
-        },
-        "promptType": "define",
-        "text": "={{ $('Extract from File').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
-      },
-      "position": [
-        1616,
-        -1200
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 3
-    },
-    {
-      "id": "9958fe81-3d85-4948-bf6e-a889093342cf",
-      "name": "Get row(s)2",
-      "parameters": {
-        "dataTableId": {
-          "__rl": true,
-          "cachedResultName": "Jira_task_test_v2",
-          "cachedResultUrl": "/projects/etE7eo3TEFjYCdjX/datatables/RkroTaP1NAl95TCT",
-          "mode": "list",
-          "value": "RkroTaP1NAl95TCT"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyName": "Issue",
-              "keyValue": "={{ $('Get Dropbox info').item.json.Issue }}"
-            }
-          ]
-        },
-        "operation": "get"
-      },
-      "position": [
-        816,
-        -736
-      ],
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "97293629-b62b-45e4-bbde-95d29e379a74",
-      "name": "Get an issue1",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        1168,
-        -464
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "9522dfdc-869f-4c93-a7ca-e56597fd5754",
-      "name": "Merge",
-      "parameters": {
-        "numberInputs": 3
-      },
-      "position": [
-        5008,
-        -752
-      ],
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.2
-    },
-    {
-      "disabled": true,
-      "id": "2e94227d-cf94-4d17-a99e-9261759fc7d6",
-      "name": "arcihve extractor",
-      "parameters": {
-        "jsCode": "const items = $input.all();\nconst fileNames = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    if (typeof content !== 'string') continue;\n\n    const lowerContent = content.toLowerCase();\n\n    // Ищем readme или content\n    if (!lowerContent.includes('readme') && !lowerContent.includes('content')) {\n      continue;\n    }\n\n    let fileName =\n      att.fileName ||\n      att.filename ||\n      att.name ||\n      '';\n\n    // Если имени нет — вытаскиваем из URL/строки\n    if (!fileName) {\n      const clean = content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop() || '';\n    }\n\n    if (!fileName) fileName = 'unknown';\n\n    fileNames.push(fileName);\n  }\n}\n\n// Один item на выходе\nreturn [\n  {\n    json: {\n      fileNames, // массив всех найденных имён\n      count: fileNames.length,\n    }\n  }\n];\n"
-      },
-      "position": [
-        1408,
-        -1200
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "disabled": true,
-      "id": "38ba8292-0afb-4e9a-8d91-e6d5ad395506",
-      "name": "Get an issue3",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        1264,
-        -1200
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "disabled": true,
-      "id": "3d7f248a-2422-434a-82fd-6452bafad382",
-      "name": "Convert MD",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_dropbox.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
-      },
-      "position": [
-        1904,
-        -1200
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "disabled": true,
-      "id": "e7ea44ee-69dc-4da0-958b-ffe575b339f1",
-      "name": "Anthropic Chat Model",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Opus 4.5",
-          "mode": "list",
-          "value": "claude-opus-4-5-20251101"
-        },
-        "options": {
-          "maxTokensToSample": 20000
-        }
-      },
-      "position": [
-        1616,
-        -1328
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
-    },
-    {
-      "id": "4b092922-504f-4489-b273-2202c473b745",
-      "name": "Board of SysAdmins In progress3",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "9d7c96f4-98ce-499c-806f-9807b5f68d60",
-              "name": "sys_admin_board",
-              "type": "object",
-              "value": "{       \"self\": \"https://jira.itcomp.space/rest/api/2/customFieldOption/13502\",       \"value\": \"working\",       \"id\": \"13803\",       \"disabled\": false     }"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        -608,
-        -736
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "c6b7ab48-dfb3-496f-831e-0063e4575283",
-      "name": "Remove an attachment from an issue",
-      "parameters": {
-        "attachmentId": "={{ $json.attachmentIds }}",
-        "jiraVersion": "serverPat",
-        "operation": "remove",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        5728,
-        -880
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "42db5779-d66a-4373-bda9-9c678ecd4c8a",
-      "name": "Get an issue5",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        5248,
-        -880
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "ac95ea96-d529-4185-a27c-182077cd0852",
-      "name": "Вытаскиваем все файлы2",
-      "parameters": {
-        "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
-      },
-      "position": [
-        5408,
-        -880
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "93d19638-4e1d-4e54-94b2-a17181d382b5",
-      "name": "Split Out",
-      "parameters": {
-        "fieldToSplitOut": "attachmentIds",
-        "include": "allOtherFields",
-        "options": {}
-      },
-      "position": [
-        5568,
-        -880
-      ],
-      "type": "n8n-nodes-base.splitOut",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "6cbac94c-48c1-438c-a1c9-6ddbc27d1466",
-      "name": "Add an attachment to an issue",
-      "parameters": {
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        5248,
-        -592
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "1d1f0f71-f8bb-42e5-b92a-e4c48ddd43db",
-      "name": "Update an issue working3",
-      "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "To Do-Admin",
-            "mode": "list",
-            "value": "111"
-          }
-        }
-      },
-      "position": [
-        5408,
-        -592
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "2fb75eb4-afd2-4779-bf9e-1ad5ea67edcd",
-      "name": "Вытаскиваем файл с prompt",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
-      },
-      "position": [
-        1392,
-        -464
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
       "credentials": {
         "jiraSoftwareServerPatApi": {
           "id": "WwUfZZ4lukKmf4G9",
@@ -3630,37 +2651,6 @@
       "position": [
         -2400,
         -1712
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "420b207a-1e82-4b10-8a7a-192576a54994",
-      "name": "Update an issue working5",
-      "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Backlog-Admin",
-            "mode": "list",
-            "value": "101"
-          }
-        }
-      },
-      "position": [
-        448,
-        -528
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -3801,43 +2791,6 @@
           "name": "Jira SW Task Buider"
         }
       },
-      "id": "c5f3b0af-7da2-41e7-bc79-74f67d91b05b",
-      "name": "Get an issue6",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        -976,
-        -736
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "7e24dda1-3ea0-47a8-af2e-b5bd3597586a",
-      "name": "Проверка на файлы Prompt1",
-      "parameters": {
-        "jsCode": "const allItems = $input.all();\n\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  return attachments.filter(a => {\n    const filename = (a.filename || '').toLowerCase();\n    const content = (a.content || '').toLowerCase();\n    const text = filename + ' ' + content;\n    \n    // Ищем только prompt или promt (БЕЗ исключения dropbox)\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\nconst attachmentIds = allFiltered.map(a => {\n  const contentUrl = a.content || '';\n  const match = contentUrl.match(/\\/attachment\\/(\\d+)\\//);\n  return match ? match[1] : null;\n}).filter(id => id !== null);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];"
-      },
-      "position": [
-        -768,
-        -736
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
       "id": "643d60e5-0579-4fe0-b21d-bfd511e14c76",
       "name": "Update an issue working7",
       "parameters": {
@@ -3888,35 +2841,6 @@
       "waitBetweenTries": 5000
     },
     {
-      "id": "496723f1-cc38-4e1e-a205-348ce187aba8",
-      "name": "Extract from File1",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        1824,
-        -464
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "a9f8cbae-93f9-464e-9bef-9163998e8a8b",
-      "name": "Convert MD1",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || $input.first().json.data;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_1.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
-      },
-      "position": [
-        2048,
-        -464
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
       "id": "b4d75f86-c8ec-4b0d-98ad-a4a3cf04e169",
       "name": "Webhook1",
       "parameters": {
@@ -3931,17 +2855,6 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "webhookId": "ca1d3a43-62ba-417d-9ec4-4599a9eff568"
-    },
-    {
-      "id": "0309db32-a455-469a-a4c8-87c04b06789a",
-      "name": "No Operation, do nothing",
-      "parameters": {},
-      "position": [
-        816,
-        -528
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
     },
     {
       "id": "791fd54e-5cd1-453c-8820-f42712dc35cf",
@@ -3972,28 +2885,6 @@
       "position": [
         -880,
         2784
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "id": "e2d30884-c2b2-43ed-8163-05fdf3857af9",
-      "name": "No Operation, do nothing5",
-      "parameters": {},
-      "position": [
-        5600,
-        -592
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "id": "637c90d0-8915-4780-8456-5e2952c6e160",
-      "name": "No Operation, do nothing6",
-      "parameters": {},
-      "position": [
-        5872,
-        -896
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -4172,639 +3063,6 @@
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
-    },
-    {
-      "id": "b103c6b7-ef90-4bfc-a637-c1343c7459ab",
-      "name": "AI Agent2",
-      "parameters": {
-        "hasOutputParser": true,
-        "needsFallback": true,
-        "options": {
-          "enableStreaming": true,
-          "systemMessage": "=[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.  \nРаботаешь для разработчиков и интеграторов, которым нужно быстро обновить или синхронизировать конкретные части текстов без искажения остального содержания.\n\n## Контекст:\nТебе поступает текст документации, в котором требуется заменить или обновить конкретные разделы.  \nВажно: ты изменяешь **только те участки, которые прямо указаны пользователем в запросе**, оставляя весь остальной текст без изменений.  \nНапример, при обновлении данных Dropbox API ты редактируешь только разделы:  \n- App Key  \n- App Secret  \n- Refresh Token  \n- Content path / структура контента  \n- JSON mapping  \n- Категории и ключи  \n- Swift-модели  \n- Архитектура загрузки и парсинга  \n- Координатор / использование в UI  \n- Краткая справка  \n- Полный путь к JSON-файлу  \n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа. Все неуказанные разделы должны остаться в исходном виде.\n\n## Входные данные:\n– Исходный текст документа  \n– Новый контент (или данные для обновления)  \n– Список разделов, которые следует обновить\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.  \nЕсли обновлены коды, оформи их в блоки ``````.\n\n## Стиль:\nТехнически точно, нейтрально, без эмоциональных прилагательных.  \nИспользуй краткие, информативные формулировки.  \nНе добавляй ничего сверх запроса.\n\n## Требования:\n– Язык: русский  \n– Добавь примеры кода или JSON, если они есть во входных данных  \n– Не выдумывай новых переменных или ключей  \n– Сохрани все остальные разделы без изменений\n\n## Примеры плохого и хорошего ответа:\nПлохо: \"Обновил всё, что связано с Dropbox.\"  \nХорошо: \"Обновлён раздел **App Key**, значение установлено в `new_app_key`. Все остальные разделы оставлены без изменений.\"\n\n## Финальный чек-лист:\n– Все указанные разделы обновлены?  \n– Остальная структура нетронута?  \n– Формат Markdown сохранён?  \n– Примеры кода оформлены корректно?\n\n## Запрещено:\n– Изменять текст в неуказанных разделах  \n– Придумывать новые значения или данные  \n– Вставлять рекламу, комментарии или пояснения от себя\n\n## Дополнительные ресурсы:\n– [Dropbox API Docs](https://www.dropbox.com/developers/documentation)  \n– [Swift Models Guide](https://developer.apple.com/documentation/swift)  \n– [JSON Schema Reference](https://json-schema.org/learn/)\n\n## Ошибки и их решения:\n– **Ошибка:** Агент случайно изменил неуказанные разделы → **Решение:** вернись к исходному тексту и редактируй только указанные части.  \n– **Ошибка:** Потеря структуры Markdown → **Решение:** пересоздай структуру согласно оригиналу перед вставкой изменений.\n"
-        },
-        "promptType": "define",
-        "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)2').item.json.BaseFolder }}\nContent: {{ $('Get row(s)2').item.json.Content }}\nAPP Key: {{ $('Get row(s)2').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
-      },
-      "position": [
-        3152,
-        -176
-      ],
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 3
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "00871c11-0e75-41e8-8842-37a54d9018ae",
-      "name": "Get an issue8",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').last().json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        1184,
-        -176
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "3f77edcd-2eff-423d-a416-a0508b66a91c",
-      "name": "Convert MD3",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "// AI Agent обработал 1 файл\n// Считаем сколько файлов найдено в \"Вытаскиваем файл с content\" и присваиваем следующий номер\n\n// Берём AI output\nlet aiOutput = 'No content';\ntry {\n  const aiData = $('AI Agent2').first().json;\n  aiOutput = aiData.output || aiData.text || aiData.content || 'No content';\n} catch(e) {\n  console.log('Cannot get AI output:', e.message);\n}\n\n// Считаем сколько файлов найдено\nlet foundFilesCount = 0;\ntry {\n  foundFilesCount = $('Вытаскиваем файл с content').all().length;\n} catch(e) {\n  console.log('Cannot count files:', e.message);\n}\n\n// Номер = найденные файлы + 1\nconst itemNumber = foundFilesCount + 1;\n\nconsole.log('Found files:', foundFilesCount);\nconsole.log('New file number:', itemNumber);\nconsole.log('AI Output preview:', aiOutput.substring(0, 100));\n\n// Формируем файл: prompt_content_5.md\nconst fileName = `prompt_content_${itemNumber}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n    foundFilesCount: foundFilesCount,\n  }\n}];"
-      },
-      "position": [
-        3904,
-        -176
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "id": "c42aa2f2-bef4-4548-b95f-dc02a50014a2",
-      "name": "Anthropic Chat Model2",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Opus 4.5",
-          "mode": "list",
-          "value": "claude-opus-4-5-20251101"
-        },
-        "options": {
-          "maxTokensToSample": 20000
-        }
-      },
-      "position": [
-        3088,
-        96
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
-    },
-    {
-      "id": "9186f758-45ed-44c7-b86b-1a0489a84000",
-      "name": "Edit Fields1",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
-              "name": "Content",
-              "type": "string",
-              "value": "={{ $('Extract from File3').item.json.data }}"
-            },
-            {
-              "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
-              "name": "Prompt",
-              "type": "string",
-              "value": "={{ $json.data }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        2928,
-        -176
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "id": "49c2e32f-7e1d-40fc-a177-4f91ce887765",
-      "name": "Code in JavaScript1",
-      "parameters": {
-        "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
-      },
-      "position": [
-        1408,
-        -176
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "edd0c00f-7663-4b60-818e-a3431bf8cd8d",
-      "name": "Get an attachment from an issue2",
-      "parameters": {
-        "attachmentId": "={{ $json.attachmentId }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        1600,
-        -176
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "79b9e9f5-1024-4305-a7d3-11e069cea9b8",
-      "name": "Extract from File3",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        1824,
-        -176
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "continueOnFail": true,
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "1f706674-2c34-4859-b98c-d42cb8250a45",
-      "name": "Download Readme_ID",
-      "parameters": {
-        "attachmentId": "={{ $json.readmeAttId }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        2480,
-        -848
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "continueOnFail": true,
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "be4925bf-95b1-4aa6-8d8d-bbad2a1e9ecc",
-      "name": "Download Content_ID",
-      "parameters": {
-        "attachmentId": "={{ $json.contentAttId }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        2480,
-        -656
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "c7be277a-3904-4ff5-97c1-9b7dd4af9ddc",
-      "name": "Merge Files",
-      "parameters": {},
-      "position": [
-        3136,
-        -752
-      ],
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3.1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "47ee4822-c520-43a6-9f56-0ad05153af81",
-      "name": "Get an issue9",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        1168,
-        -752
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "fafaf255-b6be-42a3-869f-b6a1f9456ef7",
-      "name": "Find Main Readme1",
-      "parameters": {
-        "jsCode": "const items = $input.all();\nlet foundReadme = null;\nlet fallbackReadme = null;\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop();\n    }\n    if (!fileName) continue;\n    \n    fileName = decodeURIComponent(fileName);\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    const getAttachmentId = (attachment) => {\n      let id = null;\n      if (attachment.content) {\n        const match = attachment.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.self) {\n        const match = attachment.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.id) id = attachment.id.toString();\n      return id;\n    };\n    \n    if (lowerName === 'readme.md' && !baseName.includes('_') && !baseName.match(/readme\\s*\\(\\d+\\)\\.md/i)) {\n      foundReadme = { attachmentId: getAttachmentId(att), fileName: baseName };\n      break;\n    }\n    \n    if (lowerName === 'readme (1).md' && !fallbackReadme) {\n      fallbackReadme = { attachmentId: getAttachmentId(att), fileName: baseName };\n    }\n  }\n  if (foundReadme) break;\n}\n\nif (foundReadme) return [{ json: foundReadme }];\nif (fallbackReadme) return [{ json: fallbackReadme }];\nreturn [{ json: { attachmentId: null, error: 'Readme.md not found' } }];"
-      },
-      "position": [
-        1392,
-        -752
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "17cd398c-1f7b-4a96-8519-bebd3805268d",
-      "name": "Download Main Readme1",
-      "parameters": {
-        "attachmentId": "={{ $json.attachmentId }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        1600,
-        -752
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "285d069a-ec05-46c5-8b32-48fe0eb7f67d",
-      "name": "Extract Main Readme1",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        1824,
-        -752
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "3e03e518-d977-448c-8284-4befec76445f",
-      "name": "Find Category Files1",
-      "parameters": {
-        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
-      },
-      "position": [
-        2048,
-        -752
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "e12ac9f6-1a79-4090-9965-d7440b98375b",
-      "name": "Loop Over Items1",
-      "parameters": {
-        "options": {}
-      },
-      "position": [
-        2272,
-        -752
-      ],
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 3
-    },
-    {
-      "id": "19b58937-8d48-49c4-9083-23ef86a1cf02",
-      "name": "Extract Readme_ID1",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        2624,
-        -848
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "82ccf586-a0ac-4cb3-9cfe-e83a042800fd",
-      "name": "Extract Content_ID1",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        2624,
-        -656
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "7549719c-bca4-4188-82c9-8275f2b6c226",
-      "name": "Combine Data1",
-      "parameters": {
-        "jsCode": "// COMBINE DATA - получаем metadata из Loop Over Items\nconst items = $input.all();\n\n// Получаем metadata из Loop - ищем узел по разным именам\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\n// Fallback - берём из items если есть\nif (!loopItem || !loopItem.id) {\n  loopItem = { id: '', contentName: '', loopIndex: 1, readme: '', content: '' };\n  for (const item of items) {\n    if (item.json?.id) loopItem.id = item.json.id;\n    if (item.json?.contentName) loopItem.contentName = item.json.contentName;\n    if (item.json?.loopIndex) loopItem.loopIndex = item.json.loopIndex;\n    if (item.json?.readme) loopItem.readme = item.json.readme;\n    if (item.json?.content) loopItem.content = item.json.content;\n  }\n}\n\nlet readmeText = '';\nlet contentJson = '';\n\nfor (const item of items) {\n  const text = item.json?.data || '';\n  if (!text) continue;\n  \n  const trimmed = text.trim();\n  \n  if (trimmed.startsWith('{') || trimmed.startsWith('[')) {\n    contentJson = text;\n  } else {\n    readmeText = text;\n  }\n}\n\nreturn [{\n  json: {\n    id: loopItem.id || '',\n    contentName: loopItem.contentName || '',\n    loopIndex: loopItem.loopIndex || 1,\n    readme: loopItem.readme || '',\n    content: loopItem.content || '',\n    readmeText: readmeText || 'README not extracted',\n    contentJson: contentJson || 'Content JSON not extracted'\n  }\n}];"
-      },
-      "position": [
-        3360,
-        -752
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "75860fc8-0d60-4a65-8592-233aabdb5a7a",
-      "name": "Edit Fields2",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "f74a61c3-4c35-4d64-ad00-1ea04f6b6b13",
-              "name": "file",
-              "type": "string",
-              "value": "=Folder name: {{ $json.id }}\n{{ $json.content }}\n{{ $json.readme }}"
-            },
-            {
-              "id": "682501dc-e634-4851-849c-e6b7e6a1bae9",
-              "name": "Data",
-              "type": "string",
-              "value": "=# 🔄 ПРОМТ — АДАПТАЦИЯ КАТЕГОРИИ: {{ $json.contentName }}\n\n## 📄 СОДЕРЖИМОЕ README ({{ $json.readme }})\n\n{{ $json.readmeText }}\n\n---\n\n## 📊 СОДЕРЖИМОЕ CONTENT JSON ({{ $json.content }})\n\n```json\n{{ $json.contentJson }}\n```\n\n---\n\n## ⚙️ ВХОДНЫЕ ДАННЫЕ\n\nКатегория: {{ $json.contentName }}\nКлюч категории (FolderName): {{ $json.id }}\nJSON файл: {{ $json.content }}\nReadme файл: {{ $json.readme }}\n"
-            },
-            {
-              "id": "1a438d48-5a06-4180-9c24-e84313e8ac82",
-              "name": "Prompt",
-              "type": "string",
-              "value": "={{ $('Extract from File').last().json.data }}"
-            },
-            {
-              "id": "5fe95a35-08e2-4126-b839-c056349ab1a1",
-              "name": "Analog",
-              "type": "string",
-              "value": "# AI Response\n\n# 🔄 ПРОМТ — АДАПТАЦИЯ КАТЕГОРИИ: Mods\n\n## 📋 ЗАДАЧА\n\nАдаптировать ОДНУ категорию в существующем iOS-приложении с Dropbox-интеграцией под новый контент.\n\n**КРИТИЧНО:** \n- Работаем только с ОДНОЙ категорией\n- Не трогаем другие категории\n- Сохраняем работоспособность всего приложения\n\n---\n\n## 📚 ТЕРМИНОЛОГИЯ\n\n| Термин | Описание | Где находится |\n|--------|----------|---------------|\n| **Категория** | Раздел в приложении | TabBar / Menu / Navigation |\n| **Ключ категории (FolderName)** | Уникальный идентификатор папки | `Readme_677fec5387952.md` |\n| **Контент** | Данные категории | `content_677fec5387952.json` |\n| **Подкатегории** | Вложенные группы внутри контента | Внутри JSON (массивы, секции) |\n\n---\n\n## ⚙️ ВХОДНЫЕ ДАННЫЕ\n\n### Какую категорию адаптируем:\n\n```\nКатегория: Mods\nКлюч категории (FolderName): 677fec5387952\nJSON файл: content_677fec5387952.json\nReadme файл: Readme_677fec5387952.md\n```\n\n### Конфигурация Dropbox:\n\n```\nCONTENT_ROOT = Content\nAPP Key: qka5tr6syngodb2\nAPP Secret: s90xhskup3463py\nRefresh Token: AV_Bn9l2YW0AAAAAAAAAAZGIS-Fsx3q6wuYPwa_DSGYkNBQM52ylnXLtgwJUh-yy\n```\n\n### Маппинг ключей из Readme:\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `l3w80i` | title (название) | String |\n| `a59-o140jm` | description (описание) | String |\n| `--uu7rz` | file (файл мода) | String |\n| `3dj7vk` | image (изображение) | String |\n| `s4j87` | json_key (корневой ключ данных) | Object |\n| `part` | Mods (идентификатор части) | - |\n\n### Дополнительные поля в JSON:\n\n| JSON ключ | Назначение | Тип данных |\n|-----------|------------|------------|\n| `isNew` | флаг \"новый\" | Bool |\n| `isTop` | флаг \"топ/популярный\" | Bool |\n\n### Подкатегории (вложенные в `s4j87`):\n\n| Подкатегория | Ключ в JSON | Тип | Описание |\n|--------------|-------------|-----|----------|\n| Fantasy | `Fantasy` | Object | Моды фэнтези тематики |\n| Mystical | `Mystical` | Object | Мистические моды |\n| Enchanted | `Enchanted` | Object | Зачарованные моды |\n| Realms | `Realms` | Object | Моды миров/измерений |\n| Eternity | `Eternity` | Object | Моды вечности |\n\n**PartKey:** `s4j87`\n\n**Поле с изображением:** `3dj7vk`\n\n---\n\n## 🔍 ШАГ 1: ПРОВЕРКА ПРИЛОЖЕНИЯ\n\n### 1.1 Получить список всех категорий в приложении\n\n**Найти:** ContentCategory enum (или аналог)\n\n**Выписать все существующие категории:**\n\n| # | Case в enum | FolderName | Тип контента | Есть подкатегории |\n|---|-------------|------------|--------------|-------------------|\n| 1 | [case] | [folder] | [список/карточки/...] | [да/нет] |\n| 2 | ... | ... | ... | ... |\n\n### 1.2 Сравнить новую категорию с существующими\n\n**Найти максимально похожую категорию по критериям:**\n- Тип контента похож (моды с файлами .mcaddon)\n- Структура: подкатегории → элементы с title, description, image, file\n- Есть флаги isNew, isTop\n\n### 1.3 Определить сценарий работы\n\n| Сценарий | Условие | Действие |\n|----------|---------|----------|\n| **A. Есть похожая категория** | Найдена категория с похожей структурой | Заменить контент в существующей категории |\n| **B. Нет похожих** | Структура контента уникальная | Создать новый раздел по образцу ближайшего |\n\n### 1.4 Зафиксировать решение\n\n```\nСценарий: [A / B]\nПохожая категория: [название или \"нет\"]\nЧто делаем: [заменяем контент / создаём новую]\n```\n\n---\n\n## 📂 ШАГ 2: АНАЛИЗ НОВОГО КОНТЕНТА КАТЕГОРИИ\n\n### 2.1 Структура JSON\n\n```\ncontent_677fec5387952.json\n├── \"s4j87\" (основные данные)\n│   ├── \"Fantasy\" (подкатегория)\n│   │   ├── \"1255266\" (ID элемента)\n│   │   │   ├── \"3dj7vk\": \"677fecf8954bb.png\" (изображение)\n│   │   │   ├── \"l3w80i\": \"The Arcane Forest\" (название)\n│   │   │   ├── \"a59-o140jm\": \"A world where...\" (описание)\n│   │   │   ├── \"--uu7rz\": \"677fecf89674e.mcaddon\" (файл)\n│   │   │   ├── \"isNew\": true\n│   │   │   └── \"isTop\": true\n│   │   └── ...\n│   ├── \"Mystical\" (подкатегория)\n│   ├── \"Enchanted\" (подкатегория)\n│   ├── \"Realms\" (подкатегория)\n│   └── \"Eternity\" (подкатегория)\n└── \"0\"-\"7\" (служебные данные, игнорировать)\n```\n\n### 2.2 Путь к файлам в Dropbox\n\n```\nИзображения: /Content/677fec5387952/{3dj7vk}\nФайлы модов: /Content/677fec5387952/{--uu7rz}\n```\n\n---\n\n## 🗺️ ШАГ 3: СРАВНЕНИЕ\n\n| Аспект | Было | Стало | Действие |\n|--------|------|-------|----------|\n| folderName | [старое] | `677fec5387952` | Обновить |\n| partKey | [старое] | `s4j87` | Обновить |\n| Поле title | [старое] | `l3w80i` | Обновить |\n| Поле description | [старое] | `a59-o140jm` | Обновить |\n| Поле image | [старое] | `3dj7vk` | Обновить |\n| Поле file | [старое] | `--uu7rz` | Обновить |\n| Подкатегории | [да/нет] | да (5 шт) | Добавить структуры и UI |\n| Флаги isNew/isTop | [да/нет] | да | Добавить если нет |\n\n---\n\n## 🏗️ ШАГ 4: ОБНОВЛЕНИЕ КОДА\n\n### Для сценария A (заменяем контент в похожей категории):\n\n#### 4.1 ContentCategory enum\n\n**Найти:** case похожей категории\n\n**Обновить:**\n- `folderName` → `\"677fec5387952\"`\n- `partKey` → `\"s4j87\"`\n- `displayName` → `\"Mods\"`\n\n#### 4.2 Модель данных\n\n**Структура модели:**\n\n```swift\n// Основная модель элемента мода\nstruct ModItem: Codable, Identifiable {\n    let id: String\n    let title: String           // l3w80i\n    let description: String     // a59-o140jm\n    let image: String           // 3dj7vk\n    let file: String            // --uu7rz\n    let isNew: Bool\n    let isTop: Bool\n    \n    enum CodingKeys: String, CodingKey {\n        case title = \"l3w80i\"\n        case description = \"a59-o140jm\"\n        case image = \"3dj7vk\"\n        case file = \"--uu7rz\"\n        case isNew\n        case isTop\n    }\n}\n\n// Подкатегории\nenum ModSubcategory: String, CaseIterable {\n    case fantasy = \"Fantasy\"\n    case mystical = \"Mystical\"\n    case enchanted = \"Enchanted\"\n    case realms = \"Realms\"\n    case eternity = \"Eternity\"\n}\n```\n\n#### 4.3 ContentParser\n\n**Обновить парсинг:**\n- Извлечь данные из ключа `s4j87`\n- Парсить подкатегории (Fantasy, Mystical, Enchanted, Realms, Eternity)\n- Преобразовать вложенные объекты в массив ModItem\n\n#### 4.4 View и ViewModel\n\n**Обновить:**\n- Отображаемые поля: title, description, image, file\n- DropboxImage — использовать поле `3dj7vk`\n- Категория в пути: `677fec5387952`\n- Добавить UI для подкатегорий (табы/сегменты/секции)\n- Добавить фильтры по isNew и isTop\n\n---\n\n### Для сценария B (создаём новую по образцу):\n\n#### 4.1 ContentCategory enum\n\n**Добавить новый case:**\n\n```swift\ncase mods\n    \nvar folderName: String {\n    switch self {\n    case .mods: return \"677fec5387952\"\n    // ...\n    }\n}\n\nvar partKey: String {\n    switch self {\n    case .mods: return \"s4j87\"\n    // ...\n    }\n}\n\nvar displayName: String {\n    switch self {\n    case .mods: return \"Mods\"\n    // ...\n    }\n}\n```\n\n#### 4.2-4.5 — Аналогично сценарию A\n\n---\n\n## ✅ ШАГ 5: ЧЕКЛИСТ КАТЕГОРИИ\n\n### Анализ:\n- [ ] Выписаны все существующие категории в приложении\n- [ ] Найдена похожая категория (или определено что нет похожих)\n- [ ] Определён сценарий (A / B)\n- [ ] Ключ категории: `677fec5387952`\n- [ ] PartKey: `s4j87`\n- [ ] Поле title: `l3w80i`\n- [ ] Поле description: `a59-o140jm`\n- [ ] Поле image: `3dj7vk`\n- [ ] Поле file: `--uu7rz`\n- [ ] Подкатегории: Fantasy, Mystical, Enchanted, Realms, Eternity\n\n### Код (сценарий A — замена контента в похожей):\n- [ ] Обновлён folderName → `677fec5387952`\n- [ ] Обновлён partKey → `s4j87`\n- [ ] Обновлён displayName → `Mods`\n- [ ] Обновлена модель с CodingKeys\n- [ ] Добавлены структуры подкатегорий\n- [ ] Обновлён парсер для вложенной структуры\n- [ ] Обновлён View с полями l3w80i, a59-o140jm, 3dj7vk, --uu7rz\n- [ ] Добавлен UI для 5 подкатегорий\n- [ ] Добавлены фильтры isNew/isTop\n- [ ] Обновлён ViewModel\n\n### Код (сценарий B — новый раздел):\n- [ ] Добавлен case `mods` в enum\n- [ ] Создана модель ModItem\n- [ ] Добавлен enum ModSubcategory\n- [ ] Добавлен метод парсинга\n- [ ] Создан ModsView\n- [ ] Создан ModsViewModel\n- [ ] Добавлен раздел в навигацию\n\n### Тестирование:\n- [ ] Категория загружается без ошибок\n- [ ] Все 5 подкатегорий отображаются\n- [ ] Данные внутри подкатегорий отображаются\n- [ ] Изображения загружаются из `/Content/677fec5387952/`\n- [ ] Файлы .mcaddon доступны для скачивания\n- [ ] Фильтры isNew/isTop работают\n- [ ] Другие категории не сломались\n- [ ] Навигация работает корректно\n\n---\n\n## 🔧 ЕСЛИ ЧТО-ТО НЕ РАБОТАЕТ\n\n### JSON не парсится:\n1. Проверить ключ `s4j87` — это корневой ключ данных\n2. Проверить CodingKeys: `l3w80i`, `a59-o140jm`, `3dj7vk`, `--uu7rz`\n3. Проверить парсинг подкатегорий (Fantasy, Mystical и т.д.)\n4. ID элементов — это ключи объектов (\"1255266\" и т.д.)\n\n### Изображения не загружаются:\n1. Проверить путь: `/Content/677fec5387952/{3dj7vk}`\n2. Пример: `/Content/677fec5387952/677fecf8954bb.png`\n3. Проверить что DropboxImage использует поле `3dj7vk`\n\n### Файлы модов не скачиваются:\n1. Проверить путь: `/Content/677fec5387952/{--uu7rz}`\n2. Пример: `/Content/677fec5387952/677fecf89674e.mcaddon`\n\n### Подкатегории не отображаются:\n1. Проверить парсинг ключей: Fantasy, Mystical, Enchanted, Realms, Eternity\n2. Проверить UI компоненты (табы, сегменты, секции)\n\n---\n\n## 🚀 ПОРЯДОК РАБОТЫ\n\n1. **КАТЕГОРИИ** — выписать все существующие категории в приложении\n2. **СРАВНЕНИЕ** — найти похожую категорию по структуре контента\n3. **СЦЕНАРИЙ** — определить A (заменяем в похожей) или B (создаём новую)\n4. **КЛЮЧИ** — использовать маппинг из Readme:\n   - folderName: `677fec5387952`\n   - partKey: `s4j87`\n   - title: `l3w80i`\n   - description: `a59-o140jm`\n   - image: `3dj7vk`\n   - file: `--uu7rz`\n5. **КОД** — обновить или создать:\n   - Enum → Модель → Парсер → View → ViewModel\n6. **ПОДКАТЕГОРИИ** — реализовать UI для 5 подкатегорий\n7. **НАВИГАЦИЯ** — добавить раздел если новый (сценарий B)\n8. **ТЕСТ** — проверить что работает\n\n---\n\n## ⚠️ ВАЖНО\n\n- **Ключ категории:** `677fec5387952`\n- **PartKey для данных:** `s4j87`\n- **5 подкатегорий:** Fantasy, Mystical, Enchanted, Realms, Eternity\n- **Формат файлов:** .mcaddon (моды для Minecraft)\n- **Флаги фильтрации:** isNew, isTop\n- Работаем ТОЛЬКО с одной категорией\n- Не меняем код других категорий\n- После завершения — проверяем что остальное не сломалось\n- Все данные из Dropbox, НЕ заглушки"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        3568,
-        -752
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "id": "fa967708-0f3c-48bc-b02e-d28c3d45f9a2",
-      "maxTries": 5,
-      "name": "AI Agent3",
-      "parameters": {
-        "hasOutputParser": true,
-        "needsFallback": true,
-        "options": {
-          "enableStreaming": true,
-          "systemMessage": "[Редактирование указанных разделов текста]\n\n## Роль:\nТы — ИИ-редактор для автоматического обновления технической документации.\n\n## Задача:\nОбнови или перепиши указанные разделы в тексте, не изменяя остальную структуру документа.\n\n## Формат ответа:\nMarkdown, сохраняя изначальную структуру текста.\n\n## Требования:\n– Язык: русский\n– Добавь примеры кода или JSON, если они есть во входных данных\n– Не выдумывай новых переменных или ключей\n– Сохрани все остальные разделы без изменений"
-        },
-        "promptType": "define",
-        "text": "=Вот мой промпт:\n{{ $json.Prompt }}\n\nНапиши мне промпт под новые данные:\nКорневая папка структуры: {{ $('Get row(s)2').last().json.BaseFolder }}\nContent: {{ $('Get row(s)2').last().json.Content }}\nAPP Key: {{ $('Get row(s)2').last().json.APPkey }}\nAPP Secret: {{ $('Get row(s)2').last().json.APPsecret }}\nRefresh Token: {{ $('Get row(s)2').last().json.RefreshToken }}\nВот название файлов и папки и вся информацию из Json и Readme и название: {{ $json.Data }}\nВот пример заполнения: \n{{ $json.Analog }}\n\nВАЖНО! Не пропускай ни одного пункта."
-      },
-      "position": [
-        3792,
-        -752
-      ],
-      "retryOnFail": true,
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 3,
-      "waitBetweenTries": 5000
-    },
-    {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "id": "832f9bbb-e707-4314-a92f-9fbfab467f1e",
-      "name": "Anthropic Chat Model4",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Opus 4.5",
-          "mode": "list",
-          "value": "claude-opus-4-5-20251101"
-        },
-        "options": {
-          "maxTokensToSample": 20000
-        }
-      },
-      "position": [
-        3744,
-        -512
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
-    },
-    {
-      "id": "0b04afd7-8913-44c2-8036-967bb7a15203",
-      "name": "Convert MD4",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `prompt_content_${itemIndex}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
-      },
-      "position": [
-        4096,
-        -752
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "fb67dc70-ddaa-484f-928f-5f1c346151e2",
-      "name": "Code in JavaScript",
-      "parameters": {
-        "jsCode": "const items = $input.all();\nconst result = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  // Ищем ТОЛЬКО файлы, где в content есть \"cleanup\"\n  const chosen = attachments.find(att => {\n    const content = att.content || '';\n    return typeof content === 'string' && content.toLowerCase().includes('cleanup');\n  });\n\n  // Если нет cleanup — этот item пропускаем\n  if (chosen) {\n    const content = chosen.content || '';\n    result.push({\n      json: {\n        content,\n        attachment: chosen,\n        sourceKey: 'fields.attachment.content',\n      },\n    });\n  }\n}\n\nreturn result;\n"
-      },
-      "position": [
-        2272,
-        -176
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "008232a2-bbcc-437a-9b45-f77ac8a7575d",
-      "name": "Get an issue7",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').last().json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        2048,
-        -176
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "d7585b5b-9cbc-4e57-b62e-fbcb8f4af259",
-      "name": "Get an attachment from an issue1",
-      "parameters": {
-        "attachmentId": "={{ $json.attachment.id }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        2480,
-        -176
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "c97c495b-5b69-41dc-8769-7d376315e62d",
-      "name": "Extract from File2",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        2704,
-        -176
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "ea1b3338-fb2f-459c-9a3a-1bd4d00e61be",
-      "name": "Get an issue10",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').last().json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        3568,
-        -176
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "08eb0107-18ef-49d0-a0c2-2511f1d44081",
-      "name": "Вытаскиваем файл с content",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme1').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue9').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      const lowerName = fileName.toLowerCase();\n      \n      // === ФИЛЬТРАЦИЯ: исключаем dropbox и cleanup ===\n      if (lowerName.includes('dropbox')) continue;\n      if (lowerName.includes('cleanup')) continue;\n      \n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
-      },
-      "position": [
-        3760,
-        -176
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "id": "0e691fed-4bd1-409c-9318-6cb59df859e0",
-      "name": "Anthropic Chat Model1",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Sonnet 4.5",
-          "mode": "list",
-          "value": "claude-sonnet-4-5-20250929"
-        },
-        "options": {
-          "maxTokensToSample": 20000
-        }
-      },
-      "position": [
-        3856,
-        -512
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
-    },
-    {
-      "credentials": {
-        "anthropicApi": {
-          "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
-        }
-      },
-      "id": "f6c08f0c-be61-4f35-9ff9-dfbe5a896776",
-      "name": "Anthropic Chat Model3",
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "cachedResultName": "Claude Sonnet 4.5",
-          "mode": "list",
-          "value": "claude-sonnet-4-5-20250929"
-        },
-        "options": {
-          "maxTokensToSample": 20000
-        }
-      },
-      "position": [
-        3200,
-        96
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3
     },
     {
       "id": "6c9ddcbb-d739-49d7-b22f-17e576c2a65c",
@@ -5320,29 +3578,6 @@
       "typeVersion": 1
     },
     {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "f474c3fe-6ff0-4f2d-9512-240b9ae3e5ad",
-      "name": "Add a comment2",
-      "parameters": {
-        "comment": "Неправильно заполнена задача: Не загружены файлы \"Prompt\"",
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "options": {},
-        "resource": "issueComment"
-      },
-      "position": [
-        640,
-        -528
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
       "id": "33d89bd1-38cd-493b-9318-fb01b27764ae",
       "name": "Board of SysAdmins1",
       "parameters": {
@@ -5402,8 +3637,8 @@
         }
       },
       "position": [
-        -160,
-        896
+        64,
+        880
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5426,8 +3661,8 @@
         "operation": "get"
       },
       "position": [
-        0,
-        896
+        240,
+        880
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5453,8 +3688,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        976,
-        1168
+        1216,
+        1152
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5475,8 +3710,8 @@
         "text": "={{ $('Extract from File4').item.json.data }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)3').item.json.BaseFolder }}\nContent: {{ $('Get row(s)3').item.json.Content }}\nAPP Key: {{ $('Get row(s)3').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)3').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)3').item.json.RefreshToken }}\nВот ещё файлы: {{ $json.fileNames }}\n\nУчти что, readme main находится в корневой папке, все остальные content и readme в подпапке своей категории."
       },
       "position": [
-        992,
-        432
+        1232,
+        416
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 3
@@ -5503,8 +3738,8 @@
         "operation": "get"
       },
       "position": [
-        192,
-        896
+        432,
+        880
       ],
       "type": "n8n-nodes-base.dataTable",
       "typeVersion": 1
@@ -5525,8 +3760,8 @@
         "operation": "get"
       },
       "position": [
-        544,
-        1168
+        784,
+        1152
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5540,8 +3775,8 @@
         "numberInputs": 3
       },
       "position": [
-        4176,
-        880
+        4416,
+        864
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2
@@ -5554,8 +3789,8 @@
         "jsCode": "const items = $input.all();\nconst fileNames = [];\n\nfor (const item of items) {\n  const attachments = item.json.fields?.attachment || [];\n\n  for (const att of attachments) {\n    const content = att.content || '';\n\n    if (typeof content !== 'string') continue;\n\n    const lowerContent = content.toLowerCase();\n\n    // Ищем readme или content\n    if (!lowerContent.includes('readme') && !lowerContent.includes('content')) {\n      continue;\n    }\n\n    let fileName =\n      att.fileName ||\n      att.filename ||\n      att.name ||\n      '';\n\n    // Если имени нет — вытаскиваем из URL/строки\n    if (!fileName) {\n      const clean = content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop() || '';\n    }\n\n    if (!fileName) fileName = 'unknown';\n\n    fileNames.push(fileName);\n  }\n}\n\n// Один item на выходе\nreturn [\n  {\n    json: {\n      fileNames, // массив всех найденных имён\n      count: fileNames.length,\n    }\n  }\n];\n"
       },
       "position": [
-        784,
-        432
+        1024,
+        416
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5577,8 +3812,8 @@
         "operation": "get"
       },
       "position": [
-        640,
-        432
+        880,
+        416
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5594,8 +3829,8 @@
         "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_dropbox.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
       },
       "position": [
-        1280,
-        432
+        1520,
+        416
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5622,8 +3857,8 @@
         }
       },
       "position": [
-        992,
-        304
+        1232,
+        288
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -5667,8 +3902,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        4896,
-        752
+        5136,
+        736
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5691,8 +3926,8 @@
         "operation": "get"
       },
       "position": [
-        4416,
-        752
+        4656,
+        736
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5706,8 +3941,8 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        4576,
-        752
+        4816,
+        736
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5721,8 +3956,8 @@
         "options": {}
       },
       "position": [
-        4736,
-        752
+        4976,
+        736
       ],
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1
@@ -5742,8 +3977,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        4416,
-        1040
+        4656,
+        1024
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5773,8 +4008,8 @@
         }
       },
       "position": [
-        4576,
-        1040
+        4816,
+        1024
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5789,8 +4024,8 @@
         "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
       },
       "position": [
-        768,
-        1168
+        1008,
+        1152
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5841,8 +4076,8 @@
         "options": {}
       },
       "position": [
-        1200,
-        1168
+        1440,
+        1152
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -5855,8 +4090,8 @@
         "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || $input.first().json.data;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_1.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
       },
       "position": [
-        1424,
-        1168
+        1664,
+        1152
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5866,8 +4101,8 @@
       "name": "No Operation, do nothing7",
       "parameters": {},
       "position": [
-        4768,
-        1040
+        5008,
+        1024
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -5877,8 +4112,8 @@
       "name": "No Operation, do nothing8",
       "parameters": {},
       "position": [
-        5040,
-        736
+        5280,
+        720
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -5897,8 +4132,8 @@
         "text": "={{ $json.Prompt }} адаптируй этот промпт под эти новые данные\nВот данные:\nКорневая папка стркутры: {{ $('Get row(s)3').item.json.BaseFolder }}\nContent: {{ $('Get row(s)3').item.json.Content }}\nAPP Key: {{ $('Get row(s)3').item.json.APPkey }}\nAPP Secret: {{ $('Get row(s)3').item.json.APPsecret }}\nRefresh Token: {{ $('Get row(s)3').item.json.RefreshToken }}\nВот категории контента: {{ $json.Content }}\nАдаптируй мне промт под каждую категорию контента на основании вложенных файлов и финальный промт адаптируй на основании Readme файла"
       },
       "position": [
-        1872,
-        1456
+        2112,
+        1440
       ],
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 3
@@ -5919,8 +4154,8 @@
         "operation": "get"
       },
       "position": [
-        560,
-        1456
+        800,
+        1440
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -5935,8 +4170,8 @@
         "jsCode": "// AI Agent обработал 1 файл\n// Считаем сколько файлов найдено в \"Вытаскиваем файл с content\" и присваиваем следующий номер\n\n// Берём AI output\nlet aiOutput = 'No content';\ntry {\n  const aiData = $('AI Agent4').first().json;\n  aiOutput = aiData.output || aiData.text || aiData.content || 'No content';\n} catch(e) {\n  console.log('Cannot get AI output:', e.message);\n}\n\n// Считаем сколько файлов найдено\nlet foundFilesCount = 0;\ntry {\n  foundFilesCount = $('Вытаскиваем файл с content1').all().length;\n} catch(e) {\n  console.log('Cannot count files:', e.message);\n}\n\n// Номер = найденные файлы + 1\nconst itemNumber = foundFilesCount + 1;\n\nconsole.log('Found files:', foundFilesCount);\nconsole.log('New file number:', itemNumber);\nconsole.log('AI Output preview:', aiOutput.substring(0, 100));\n\n// Формируем файл: prompt_content_5.md\nconst fileName = `prompt_content_${itemNumber}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemNumber: itemNumber,\n    foundFilesCount: foundFilesCount,\n  }\n}];"
       },
       "position": [
-        2624,
-        1456
+        2864,
+        1440
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -5962,8 +4197,8 @@
         }
       },
       "position": [
-        1808,
-        1728
+        2048,
+        1712
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -5991,8 +4226,8 @@
         "options": {}
       },
       "position": [
-        1648,
-        1456
+        1888,
+        1440
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -6004,8 +4239,8 @@
         "jsCode": "const items = $input.all();\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    \n    // Если имени нет, берем из URL и декодируем\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = decodeURIComponent(clean.split('/').pop());\n    }\n    \n    if (!fileName) continue;\n    \n    // Декодируем на всякий случай\n    fileName = decodeURIComponent(fileName);\n    \n    // Извлекаем только имя файла (без пути)\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    // Проверка readme.md:\n    // ✅ Readme.md\n    // ✅ Readme (1).md, Readme (2).md и т.д.\n    // ❌ Readme_670b72259a3cd.md (с underscore)\n    const isReadme = (\n      lowerName === 'readme.md' || \n      lowerName.match(/^readme\\s*\\(\\d+\\)\\.md$/)\n    ) && !baseName.includes('_');\n    \n    if (isReadme) {\n      // Извлекаем ID из URL\n      let attachmentId = null;\n      \n      // Вариант 1: из content URL (.../attachment/206556/Readme...)\n      if (att.content) {\n        const match = att.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 2: из self URL (.../api/2/attachment/206556)\n      if (!attachmentId && att.self) {\n        const match = att.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) attachmentId = match[1];\n      }\n      \n      // Вариант 3: прямое поле id\n      if (!attachmentId && att.id) {\n        attachmentId = att.id.toString();\n      }\n      \n      return [\n        {\n          json: {\n            attachmentId: attachmentId,\n            fileName: baseName\n          }\n        }\n      ];\n    }\n  }\n}\n\n// Если не нашли\nreturn [\n  {\n    json: {\n      attachmentId: null,\n      error: 'Readme.md not found'\n    }\n  }\n];"
       },
       "position": [
-        784,
-        1456
+        1024,
+        1440
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6027,8 +4262,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        976,
-        1456
+        1216,
+        1440
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6041,8 +4276,8 @@
         "options": {}
       },
       "position": [
-        1200,
-        1456
+        1440,
+        1440
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -6065,8 +4300,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        1856,
-        784
+        2096,
+        768
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6089,8 +4324,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        1856,
-        976
+        2096,
+        960
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6100,8 +4335,8 @@
       "name": "Merge Files1",
       "parameters": {},
       "position": [
-        2784,
-        880
+        3024,
+        864
       ],
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.1
@@ -6122,8 +4357,8 @@
         "operation": "get"
       },
       "position": [
-        544,
-        880
+        784,
+        864
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -6137,8 +4372,8 @@
         "jsCode": "const items = $input.all();\nlet foundReadme = null;\nlet fallbackReadme = null;\n\nfor (const item of items) {\n  const attachments = item.json?.fields?.attachment || [];\n  \n  for (const att of attachments) {\n    let fileName = att.fileName || att.filename || att.name || '';\n    if (!fileName && att.content) {\n      const clean = att.content.split('?')[0].split('#')[0];\n      fileName = clean.split('/').pop();\n    }\n    if (!fileName) continue;\n    \n    fileName = decodeURIComponent(fileName);\n    const baseName = fileName.split('/').pop().split('\\\\').pop();\n    const lowerName = baseName.toLowerCase();\n    \n    const getAttachmentId = (attachment) => {\n      let id = null;\n      if (attachment.content) {\n        const match = attachment.content.match(/\\/attachment\\/(\\d+)\\//);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.self) {\n        const match = attachment.self.match(/\\/attachment\\/(\\d+)$/);\n        if (match) id = match[1];\n      }\n      if (!id && attachment.id) id = attachment.id.toString();\n      return id;\n    };\n    \n    if (lowerName === 'readme.md' && !baseName.includes('_') && !baseName.match(/readme\\s*\\(\\d+\\)\\.md/i)) {\n      foundReadme = { attachmentId: getAttachmentId(att), fileName: baseName };\n      break;\n    }\n    \n    if (lowerName === 'readme (1).md' && !fallbackReadme) {\n      fallbackReadme = { attachmentId: getAttachmentId(att), fileName: baseName };\n    }\n  }\n  if (foundReadme) break;\n}\n\nif (foundReadme) return [{ json: foundReadme }];\nif (fallbackReadme) return [{ json: fallbackReadme }];\nreturn [{ json: { attachmentId: null, error: 'Readme.md not found' } }];"
       },
       "position": [
-        768,
-        880
+        1008,
+        864
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6160,8 +4395,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        976,
-        880
+        1216,
+        864
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6174,8 +4409,8 @@
         "options": {}
       },
       "position": [
-        1200,
-        880
+        1440,
+        864
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -6187,8 +4422,8 @@
         "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
       },
       "position": [
-        1424,
-        880
+        1664,
+        864
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6200,8 +4435,8 @@
         "options": {}
       },
       "position": [
-        1648,
-        880
+        1888,
+        864
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
@@ -6214,8 +4449,8 @@
         "options": {}
       },
       "position": [
-        2080,
-        784
+        2320,
+        768
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -6228,8 +4463,8 @@
         "options": {}
       },
       "position": [
-        2080,
-        976
+        2320,
+        960
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -6241,8 +4476,8 @@
         "jsCode": "// COMBINE DATA - получаем metadata из Loop Over Items\nconst items = $input.all();\n\n// Получаем metadata из Loop - ищем узел по разным именам\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\n// Fallback - берём из items если есть\nif (!loopItem || !loopItem.id) {\n  loopItem = { id: '', contentName: '', loopIndex: 1, readme: '', content: '' };\n  for (const item of items) {\n    if (item.json?.id) loopItem.id = item.json.id;\n    if (item.json?.contentName) loopItem.contentName = item.json.contentName;\n    if (item.json?.loopIndex) loopItem.loopIndex = item.json.loopIndex;\n    if (item.json?.readme) loopItem.readme = item.json.readme;\n    if (item.json?.content) loopItem.content = item.json.content;\n  }\n}\n\nlet readmeText = '';\nlet contentJson = '';\n\nfor (const item of items) {\n  const text = item.json?.data || '';\n  if (!text) continue;\n  \n  const trimmed = text.trim();\n  \n  if (trimmed.startsWith('{') || trimmed.startsWith('[')) {\n    contentJson = text;\n  } else {\n    readmeText = text;\n  }\n}\n\nreturn [{\n  json: {\n    id: loopItem.id || '',\n    contentName: loopItem.contentName || '',\n    loopIndex: loopItem.loopIndex || 1,\n    readme: loopItem.readme || '',\n    content: loopItem.content || '',\n    readmeText: readmeText || 'README not extracted',\n    contentJson: contentJson || 'Content JSON not extracted'\n  }\n}];"
       },
       "position": [
-        3008,
-        880
+        3248,
+        864
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6282,8 +4517,8 @@
         "options": {}
       },
       "position": [
-        3216,
-        880
+        3456,
+        864
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -6303,8 +4538,8 @@
         "text": "=Вот мой промпт:\n{{ $json.Prompt }}\n\nНапиши мне промпт под новые данные:\nКорневая папка структуры: {{ $('Get row(s)3').last().json.BaseFolder }}\nContent: {{ $('Get row(s)3').last().json.Content }}\nAPP Key: {{ $('Get row(s)3').last().json.APPkey }}\nAPP Secret: {{ $('Get row(s)3').last().json.APPsecret }}\nRefresh Token: {{ $('Get row(s)3').last().json.RefreshToken }}\nВот название файлов и папки и вся информацию из Json и Readme и название: {{ $json.Data }}\nВот пример заполнения: \n{{ $json.Analog }}\n\nВАЖНО! Не пропускай ни одного пункта."
       },
       "position": [
-        3440,
-        880
+        3680,
+        864
       ],
       "retryOnFail": true,
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -6332,8 +4567,8 @@
         }
       },
       "position": [
-        3392,
-        1120
+        3632,
+        1104
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -6346,8 +4581,8 @@
         "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `prompt_content_${itemIndex}.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
       },
       "position": [
-        3744,
-        880
+        3984,
+        864
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6368,8 +4603,8 @@
         "operation": "get"
       },
       "position": [
-        1424,
-        1456
+        1664,
+        1440
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6390,8 +4625,8 @@
         "operation": "get"
       },
       "position": [
-        2288,
-        1456
+        2528,
+        1440
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -6406,8 +4641,8 @@
         "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      const lowerName = fileName.toLowerCase();\n      \n      // === ФИЛЬТРАЦИЯ: исключаем dropbox и cleanup ===\n      if (lowerName.includes('dropbox')) continue;\n      if (lowerName.includes('cleanup')) continue;\n      \n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
       },
       "position": [
-        2480,
-        1456
+        2720,
+        1440
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -6433,8 +4668,8 @@
         }
       },
       "position": [
-        3504,
-        1120
+        3744,
+        1104
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -6460,202 +4695,11 @@
         }
       },
       "position": [
-        1920,
-        1728
+        2160,
+        1712
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
-    },
-    {
-      "id": "f33eb6fd-e06e-4f9b-80a0-704cdc02f463",
-      "name": "Есть?1",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "5930eb6a-bbbf-40dc-81eb-3ca54fd71337",
-              "leftValue": "={{ $json.hasFile }}",
-              "operator": {
-                "operation": "equals",
-                "type": "string"
-              },
-              "rightValue": "да"
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 3
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        208,
-        -736
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.3
-    },
-    {
-      "id": "98b02985-43fd-4f61-81c7-71c8551383bb",
-      "name": "If2",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "44bd271b-2b29-4600-bfba-ccabd6964b0e",
-              "leftValue": "={{ $('Extract Readme_ID1').item.json.data }}",
-              "operator": {
-                "operation": "notEmpty",
-                "singleValue": true,
-                "type": "string"
-              },
-              "rightValue": ""
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 3
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        2784,
-        -848
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.3
-    },
-    {
-      "id": "e2864ba0-17b4-48a4-b167-437c70b642f4",
-      "name": "If3",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "44bd271b-2b29-4600-bfba-ccabd6964b0e",
-              "leftValue": "={{ $('Extract Readme_ID1').item.json.data }}",
-              "operator": {
-                "operation": "notEmpty",
-                "singleValue": true,
-                "type": "string"
-              },
-              "rightValue": ""
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 3
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        2784,
-        -656
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.3
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "f1b19240-3821-444d-bdf1-e1568f9bf8fa",
-      "name": "Update an issue",
-      "parameters": {
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {}
-      },
-      "position": [
-        2880,
-        -1200
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "0f229010-ae02-4e4d-86ae-4433ee46c4ac",
-      "name": "Add a comment3",
-      "parameters": {
-        "comment": "=Нету Readme файла: {{ $('Loop Over Items1').item.json.id }}",
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "options": {},
-        "resource": "issueComment"
-      },
-      "position": [
-        3056,
-        -1200
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "4eb855e9-7ce8-4e91-9da3-2d35e14e0d77",
-      "name": "Update an issue1",
-      "parameters": {
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {}
-      },
-      "position": [
-        2880,
-        -1056
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "6c53c6b6-a3e0-4e07-ad29-a4a211a9ad58",
-      "name": "Add a comment4",
-      "parameters": {
-        "comment": "=Нету Json файла: {{ $('Loop Over Items1').item.json.id }}",
-        "issueKey": "={{ $('Get row(s)2').last().json.Issue }}",
-        "jiraVersion": "serverPat",
-        "options": {},
-        "resource": "issueComment"
-      },
-      "position": [
-        3056,
-        -1056
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
     },
     {
       "id": "c270bb88-e504-40d1-b41f-ba848e2b0161",
@@ -6685,8 +4729,8 @@
         "options": {}
       },
       "position": [
-        2320,
-        784
+        2560,
+        768
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
@@ -6719,8 +4763,8 @@
         "options": {}
       },
       "position": [
-        2320,
-        976
+        2560,
+        960
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
@@ -6741,8 +4785,8 @@
         "updateFields": {}
       },
       "position": [
-        2608,
-        464
+        2704,
+        432
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6764,8 +4808,8 @@
         "resource": "issueComment"
       },
       "position": [
-        2784,
-        464
+        2880,
+        432
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6786,8 +4830,8 @@
         "updateFields": {}
       },
       "position": [
-        2608,
-        608
+        2704,
+        576
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -6809,11 +4853,865 @@
         "resource": "issueComment"
       },
       "position": [
-        2784,
-        608
+        2880,
+        576
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
+    },
+    {
+      "id": "52192a2f-0c25-465e-b1c9-55bdd75f3344",
+      "name": "Gold Rep?1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8293f3d9-f974-4223-b68e-66a16900d1b1",
+              "leftValue": "={{ $('Get an issue15').item.json.fields.customfield_13513 }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -144,
+        896
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "c20433fb-9a3c-4179-af0a-39ef9b68b7ef",
+      "name": "Update an issue working10",
+      "parameters": {
+        "issueKey": "={{ $('Get an issue15').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Backlog-Admin",
+            "mode": "list",
+            "value": "101"
+          }
+        }
+      },
+      "position": [
+        -144,
+        1104
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "e07ff5e2-c7dc-4923-9550-9fac37adbfd9",
+      "name": "Add a comment8",
+      "parameters": {
+        "comment": "Неправильно заполнена задача: На заполнен Gold Repository",
+        "issueKey": "={{ $('Get an issue15').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        32,
+        1104
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "id": "6bfc3535-fb1c-46f4-a648-a9fdd4fff864",
+      "name": "Gold Rep?2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8293f3d9-f974-4223-b68e-66a16900d1b1",
+              "leftValue": "={{ $('Get an issue').item.json.fields.customfield_13513 }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "string"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -432,
+        96
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "5594ce65-ed67-4f19-b62c-f706da183879",
+      "name": "Update an issue working12",
+      "parameters": {
+        "issueKey": "={{ $('Get an issue').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Backlog-Admin",
+            "mode": "list",
+            "value": "101"
+          }
+        }
+      },
+      "position": [
+        -288,
+        304
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "8b5b08b6-e419-4a30-83f6-48ea66f2f8af",
+      "name": "Add a comment10",
+      "parameters": {
+        "comment": "Неправильно заполнена задача: На заполнен Gold Repository",
+        "issueKey": "={{ $('Get an issue').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        -128,
+        304
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "5d340227-13c4-42d2-a4a2-a8ee650ca76e",
+      "name": "Update an issue working",
+      "parameters": {
+        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "To Do-Admin",
+            "mode": "list",
+            "value": "111"
+          }
+        }
+      },
+      "position": [
+        368,
+        80
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "b9330469-492b-42fd-9075-a73cd746686d",
+      "name": "Get an issue",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        -656,
+        96
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "998dc1d5-e02b-41df-863c-8a5d3d55582c",
+      "name": "Проверка на файлы Prompt1",
+      "parameters": {
+        "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n\n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n\n    if (text.includes('dropbox')) return false;\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];\n"
+      },
+      "position": [
+        -112,
+        96
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "7adcec6e-1eaf-452b-8d0b-cc94bafb3e9d",
+      "name": "Есть?1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "5930eb6a-bbbf-40dc-81eb-3ca54fd71337",
+              "leftValue": "={{ $json.attachmentIds }}",
+              "operator": {
+                "operation": "notEmpty",
+                "singleValue": true,
+                "type": "array"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        96,
+        96
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "828a7019-bfc1-4467-bb3c-0aee48f924fc",
+      "name": "Update an issue working9",
+      "parameters": {
+        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Cancelled-Admin",
+            "mode": "list",
+            "value": "241"
+          }
+        }
+      },
+      "position": [
+        368,
+        208
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "92ae9c04-90fa-4b08-a612-65d206a580ea",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        784,
+        208
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "92c42e84-e5ab-4081-bc4c-a03bb7c1d8e6",
+      "name": "No Operation, do nothing5",
+      "parameters": {},
+      "position": [
+        576,
+        80
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "4c6ae3a0-42ed-47e4-8a15-ac1f47b035a1",
+      "name": "Add a comment2",
+      "parameters": {
+        "comment": "Неправильное заполнение задачи.",
+        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        576,
+        208
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "0c6933c3-dd8e-4c64-8119-3d8d1e38a6d1",
+      "name": "When clicking ‘Execute workflow’",
+      "parameters": {},
+      "position": [
+        1136,
+        16
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "2f06b17e-fd8d-4fb4-be51-538055de0a7a",
+      "name": "Update Jira with Repo URL",
+      "parameters": {
+        "issueKey": "={{ $json.jira_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10044"
+                },
+                "fieldValue": "={{ $json.new_repo_url }}"
+              }
+            ]
+          }
+        }
+      },
+      "position": [
+        4320,
+        16
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "1335f32b-4466-4916-9c4b-1c05400a2e36",
+      "name": "Get an issue3",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "=AD-13",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        1312,
+        16
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "3a439ef7-3154-4078-aa34-db0a826b8961",
+      "name": "Get Source Repo Info1",
+      "parameters": {
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.source_owner }}"
+        },
+        "repository": {
+          "__regex": "https:\\/\\/(?:[^/]+)\\/(?:[-_0-9a-zA-Z]+)\\/([-_.0-9a-zA-Z]+)",
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.source_url }}"
+        },
+        "resource": "repository"
+      },
+      "position": [
+        1728,
+        16
+      ],
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "webhookId": "dcdb69e9-c081-486b-99c7-75591f004e3b"
+    },
+    {
+      "id": "58bcb34c-a257-42ac-9abc-ff357ff2a55a",
+      "name": "Save Branch Info1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data2').item.json.source_owner }}"
+            },
+            {
+              "id": "field2",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data2').item.json.source_repo }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data2').item.json.new_repo_name }}"
+            },
+            {
+              "id": "field4",
+              "name": "default_branch",
+              "type": "string",
+              "value": "={{ $json.default_branch }}"
+            },
+            {
+              "id": "field5",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Get an issue3').item.json.key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1952,
+        16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "48e66f3d-d495-45d1-8244-6d5e20e6d0e1",
+      "name": "Prepare for Tree1",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "new_owner",
+              "type": "string",
+              "value": "={{ $json.owner.login }}"
+            },
+            {
+              "id": "field2",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Save Branch Info1').item.json.new_repo_name }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $json.html_url }}"
+            },
+            {
+              "id": "field4",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Save Branch Info1').item.json.source_owner }}"
+            },
+            {
+              "id": "field5",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Save Branch Info1').item.json.source_repo }}"
+            },
+            {
+              "id": "field6",
+              "name": "default_branch",
+              "type": "string",
+              "value": "={{ $('Save Branch Info1').item.json.default_branch }}"
+            },
+            {
+              "id": "field7",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Save Branch Info1').item.json.jira_key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        2384,
+        16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "ca279e38-f58f-4c6a-ba2d-31327c8297aa",
+      "name": "Get Source Tree2",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
+      },
+      "position": [
+        2608,
+        16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "61295ce4-1b05-43d6-a5a9-354aacdbad90",
+      "name": "Get File Content2",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
+      },
+      "position": [
+        3472,
+        16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "5c0f6132-4dd3-4feb-919c-621431f77171",
+      "name": "Create File in New Repo2",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "message",
+              "value": "=Add {{ $('Loop Over Items1').item.json.path }}"
+            },
+            {
+              "name": "content",
+              "value": "={{ $json.content }}"
+            }
+          ]
+        },
+        "method": "PUT",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.new_repo_name }}/contents/{{ $('Loop Over Items1').item.json.path }}"
+      },
+      "position": [
+        3696,
+        16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "c3b49b7a-2187-47ef-9d54-20216256e36c",
+      "name": "Aggregate Results2",
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "position": [
+        3920,
+        16
+      ],
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1
+    },
+    {
+      "id": "6d346401-0499-48f8-b607-0eae08856d1e",
+      "name": "Parse Jira Data2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "source_url",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_13513 }}"
+            },
+            {
+              "id": "field2",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_13513.split('/')[3] }}"
+            },
+            {
+              "id": "field3",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $json.fields.customfield_13513.split('/')[4].replace('.git', '') }}"
+            },
+            {
+              "id": "field4",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Get an issue3').item.json.key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1504,
+        16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "7d6f3359-a2d5-41f7-8b65-37964b154b50",
+      "name": "Prepare Loop Data2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "new_owner",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.new_owner }}"
+            },
+            {
+              "id": "field2",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.new_repo_name }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.new_repo_url }}"
+            },
+            {
+              "id": "field4",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.source_owner }}"
+            },
+            {
+              "id": "field5",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.source_repo }}"
+            },
+            {
+              "id": "field6",
+              "name": "files",
+              "type": "array",
+              "value": "={{ $json.tree.filter(item => item.type === 'blob' && !item.path.includes('.DS_Store') && !item.path.startsWith('.')) }}"
+            },
+            {
+              "id": "field7",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.jira_key }}"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "position": [
+        2832,
+        16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "ec4f2153-f623-4c83-bda8-43a422c786d0",
+      "name": "Split Out Files2",
+      "parameters": {
+        "fieldToSplitOut": "files",
+        "options": {}
+      },
+      "position": [
+        3056,
+        16
+      ],
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1
+    },
+    {
+      "id": "c25dd8db-3353-4e34-af47-8af85b525097",
+      "name": "Final Result2",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "success",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "field2",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.jira_key }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree1').item.json.new_repo_url }}"
+            },
+            {
+              "id": "field4",
+              "name": "files_copied",
+              "type": "number",
+              "value": "={{ $json.data.length }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        4144,
+        16
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "e1c28fc1-1e3b-4aa6-a5b7-34f3a312838f",
+      "name": "Create Private Repo2",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"name\": \"{{ $json.new_repo_name }}\",\n  \"private\": true,\n  \"description\": \"Cloned for Jira ticket {{ $json.new_repo_name }}\"\n}",
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://api.github.com/orgs/IT-OUT/repos"
+      },
+      "position": [
+        2160,
+        16
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "b230807e-24cb-4cf9-9a83-a7264508f72d",
+      "name": "Loop Over Items1",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        3264,
+        16
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
     }
   ],
   "pinData": {
@@ -6875,6 +5773,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-01-27T15:20:54.746Z",
-  "versionId": "2982883d-e17e-4a29-8ef1-02cdd5442ccc"
+  "updatedAt": "2026-01-28T16:03:13.508Z",
+  "versionId": "a879af47-d336-4ed7-abd3-4167066c8f0b"
 }
