@@ -1046,12 +1046,7 @@
           [
             {
               "index": 0,
-              "node": "Gold Rep?2",
-              "type": "main"
-            },
-            {
-              "index": 0,
-              "node": "Parse Jira Data2",
+              "node": "Проверка на файлы Prompt",
               "type": "main"
             }
           ]
@@ -1239,14 +1234,14 @@
           [
             {
               "index": 0,
-              "node": "Проверка на файлы Prompt",
+              "node": "Get an issue4",
               "type": "main"
             }
           ],
           [
             {
               "index": 0,
-              "node": "Update an issue working12",
+              "node": "Parse Jira Data2",
               "type": "main"
             }
           ]
@@ -1719,7 +1714,7 @@
           [
             {
               "index": 0,
-              "node": "Get an issue4",
+              "node": "Gold Rep?2",
               "type": "main"
             }
           ],
@@ -1940,6 +1935,17 @@
             {
               "index": 0,
               "node": "Get Dropbox info",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update Jira with Repo URL": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Get an issue4",
               "type": "main"
             }
           ]
@@ -2346,7 +2352,7 @@
         ]
       }
     },
-    "createdAt": "2026-01-28T16:05:55.609Z",
+    "createdAt": "2026-01-29T08:11:53.435Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -6012,7 +6018,7 @@
                 "id": "1a438d48-5a06-4180-9c24-e84313e8ac82",
                 "name": "Prompt",
                 "type": "string",
-                "value": "=# 🔄 АДАПТАЦИЯ КАТЕГОРИИ DROPBOX — КОМПАКТНЫЙ ПРОМТ\n\n## 🚨 КРИТИЧНЫЕ ПРАВИЛА (НАРУШАТЬ НЕЛЬЗЯ!)\n\n```\n1. КРЕДЫ DROPBOX     → Обновить ВСЕ: App Key, App Secret, Refresh Token, Content URL, Base Path\n2. ВЕРИФИКАЦИЯ       → ОБЯЗАТЕЛЬНО проверить подключение ДО и ПОСЛЕ изменений\n3. СУЩЕСТВУЮЩИЙ КОД  → Адаптировать, НЕ создавать с нуля\n4. РЕГИСТР           → folderName ТОЧНО как в Dropbox (Mods ≠ mods)\n5. JSON FILENAME     → Проверить! Часто захардкожен и не обновляется автоматически\n6. ОДНА КАТЕГОРИЯ    → Не трогать другие категории\n```\n\n---\n\n## 📥 ВХОДНЫЕ ДАННЫЕ\n\n```yaml\n# Категория\nНазвание UI:        [ИМЯ В ИНТЕРФЕЙСЕ]\nFolderName:         [ИЗ Readme.md]\nJSON файл:          content_[FolderName].json\nReadme файл:        readme_[FolderName].md\nPartKey:            [КЛЮЧ ИЗ JSON]\n\n# Dropbox креды (ОБЯЗАТЕЛЬНО ОБНОВИТЬ ВСЕ!)\nContent URL:        [НОВЫЙ URL ДЛЯ ДОСТУПА К КОНТЕНТУ]\nApp Key:            [НОВЫЙ КЛЮЧ]\nApp Secret:         [НОВЫЙ СЕКРЕТ]\nRefresh Token:      [НОВЫЙ ТОКЕН]\nBase Path:          [ПУТЬ К ПАПКЕ КАТЕГОРИИ, например: /content/67ab80b5efa8e/]\n\n# Структура JSON (заполнить при адаптации промпта)\nПоля модели:\n  - field1: String    # описание\n  - field2: Int       # описание\n  - imageName: String # поле с картинкой\n  \nПодкатегории:       [НЕТ / список если есть]\n```\n\n---\n\n## ⚡ АЛГОРИТМ РАБОТЫ\n\n### ШАГ 0: ВЕРИФИКАЦИЯ ПОДКЛЮЧЕНИЯ (ДО НАЧАЛА РАБОТЫ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить перед любыми изменениями в коде!**\n\n**0.1. Получить Access Token:**\n```bash\ncurl -X POST https://api.dropboxapi.com/oauth2/token \\\n  -d grant_type=refresh_token \\\n  -d refresh_token=\"[REFRESH_TOKEN]\" \\\n  -d client_id=\"[APP_KEY]\" \\\n  -d client_secret=\"[APP_SECRET]\"\n```\n✅ Ожидаемый результат: JSON с `access_token`\n❌ Если ошибка → креды неверные, СТОП\n\n**0.2. Проверить доступ к папке категории:**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/list_folder \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH]\"}'\n```\n✅ Ожидаемый результат: список файлов в папке (JSON, изображения, readme)\n❌ Если `path/not_found` → Base Path неверный, проверить путь\n\n**0.3. Скачать и проверить JSON манифест:**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\"\n```\n✅ Ожидаемый результат: валидный JSON с данными категории\n❌ Если ошибка → проверить имя файла и путь\n\n**0.4. Проверить наличие изображения (любого из JSON):**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/get_metadata \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH][image_filename_from_json]\"}'\n```\n✅ Ожидаемый результат: метаданные файла\n❌ Если `path/not_found` → изображения в другом месте или имена не совпадают\n\n**📋 ЧЕКЛИСТ ВЕРИФИКАЦИИ (ДО) — выполнить и зафиксировать:**\n```\n- [ ] Access Token получен успешно\n- [ ] Папка категории доступна, файлы видны\n- [ ] JSON манифест скачивается и валиден\n- [ ] Структура JSON соответствует ожидаемой модели\n- [ ] Изображения находятся в той же папке\n- [ ] Все пути корректны\n```\n\n**📝 ЗАФИКСИРОВАТЬ РЕЗУЛЬТАТЫ:**\n```\nAccess Token:     [получен/ошибка]\nСписок файлов:    [перечислить что видно в папке]\nJSON структура:   [ключи верхнего уровня, поля объектов]\nПути к файлам:    [реальные пути из Dropbox]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n### ШАГ 1: ОБНОВИТЬ КРЕДЫ DROPBOX\n\n**Найти в проекте** (искать в `DropboxManager`, `Constants`, `Config`, `Info.plist`, `.xcconfig`):\n\n```swift\n// Обновить ВСЕ на новые значения:\ncontentURL / CONTENT_URL / baseURL        → [НОВЫЙ Content URL]\nappKey / DROPBOX_APP_KEY / clientId       → [НОВЫЙ App Key]\nappSecret / DROPBOX_APP_SECRET            → [НОВЫЙ App Secret]  \nrefreshToken / REFRESH_TOKEN              → [НОВЫЙ Refresh Token]\nbasePath / BASE_PATH / contentRoot        → [НОВЫЙ Base Path]\n```\n\n### ШАГ 2: ПРОВЕРИТЬ ПУТИ\n\n**📍 ПОЛНЫЕ ПУТИ К ФАЙЛАМ В DROPBOX:**\n```\nBase Path:        /content/{FolderName}/\n\nJSON манифест:    /content/{FolderName}/content_{FolderName}.json\nИзображения:      /content/{FolderName}/{image_filename}\nФайлы модов:      /content/{FolderName}/{mod_filename}\nReadme категории: /content/{FolderName}/readme_{FolderName}.md\n\n# Пример для FolderName = \"67ab80b5efa8e\":\nBase Path:        /content/67ab80b5efa8e/\nJSON манифест:    /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nИзображения:      /content/67ab80b5efa8e/preview_item1.png\nФайлы модов:      /content/67ab80b5efa8e/mod_data.zip\n```\n\n**Проверить в коде:**\n```swift\n// Путь к JSON (относительно Base Path):\n\"content_{folderName}.json\"\n\n// Полный путь к JSON:\n\"{basePath}content_{folderName}.json\"\n\n// ⚠️ ЧАСТАЯ ОШИБКА: jsonFileName захардкожен!\n// Если видишь такое — ИСПРАВИТЬ:\ncase .oldCategory: return \"content_oldname.json\"  // ❌\n// На:\nreturn \"content_\\(folderName).json\"               // ✅\n\n// Путь к изображениям (относительно Base Path):\n\"{imageName}\"\n```\n\n### ШАГ 3: НАЙТИ ПОХОЖУЮ КАТЕГОРИЮ\n\n1. Открыть `ContentCategory` enum (или аналог)\n2. Выписать все существующие категории\n3. Найти похожую по структуре контента\n4. Определить сценарий:\n   - **A** — есть похожая → заменяем контент в ней\n   - **B** — нет похожей → создаём по образцу ближайшей\n\n### ШАГ 4: ОБНОВИТЬ КОД\n\n**ContentCategory enum:**\n```swift\ncase newCategory\n\nvar folderName: String {\n    case .newCategory: return \"ExactDropboxFolderName\"  // Регистр!\n}\n\nvar partKey: String {\n    case .newCategory: return \"keyFromJSON\"\n}\n\nvar displayName: String {\n    case .newCategory: return \"Название в UI\"\n}\n```\n\n**Модель данных** — адаптировать существующую:\n```swift\nstruct NewCategoryItem: Codable {\n    let field1: String      // Из JSON\n    let field2: Int         // Из JSON\n    let imageName: String   // Поле с картинкой\n    // + вложенные структуры для подкатегорий если есть\n}\n```\n\n**Парсер** — использовать существующий, обновить тип.\n\n**View/ViewModel** — адаптировать существующие:\n- Обновить отображаемые поля\n- Обновить `folderName` в DropboxImage\n- Добавить UI для подкатегорий (если есть)\n\n**Навигация** (только для сценария B) — добавить пункт меню.\n\n---\n\n### ШАГ 5: ФИНАЛЬНАЯ ВЕРИФИКАЦИЯ (ПОСЛЕ ИЗМЕНЕНИЙ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить после всех изменений в коде!**\n\n**5.1. Повторить все проверки из ШАГ 0:**\n- Получить Access Token\n- Проверить доступ к папке\n- Скачать JSON манифест\n- Проверить изображения\n\n**5.2. Сверить пути в коде с реальными путями в Dropbox:**\n```bash\n# Вывести путь к JSON из кода и сравнить с реальным\necho \"Путь в коде: [путь_из_кода]\"\necho \"Путь в Dropbox: [BASE_PATH]content_[FolderName].json\"\n# Должны совпадать!\n```\n\n**5.3. Проверить что модель данных соответствует JSON:**\n```bash\n# Скачать JSON и проверить поля\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\" \\\n  | jq 'keys'  # или просто посмотреть структуру\n```\n✅ Все поля из JSON есть в модели\n❌ Если поля не совпадают → исправить модель\n\n**5.4. Проверить путь к изображениям в коде:**\n```swift\n// В DropboxImage или аналоге должно быть:\n// basePath + imageName (из JSON)\n// Например: /content/67ab80b5efa8e/ + preview.png\n```\n\n**📋 ЧЕКЛИСТ ФИНАЛЬНОЙ ВЕРИФИКАЦИИ — выполнить и сравнить с эталоном:**\n```\n- [ ] Access Token по-прежнему работает\n- [ ] Путь к JSON в коде = путь в Dropbox\n- [ ] Все поля модели соответствуют JSON\n- [ ] Путь к изображениям в коде корректен\n- [ ] Код компилируется без ошибок\n- [ ] Приложение запускается\n- [ ] Данные категории загружаются\n- [ ] Изображения отображаются\n- [ ] Другие категории не сломались\n```\n\n**📝 СРАВНИТЬ С ЭТАЛОНОМ ИЗ ШАГ 0:**\n```\nПути совпадают:   [да/нет, если нет - что отличается]\nJSON парсится:    [да/нет, если нет - какие поля]\nФайлы доступны:   [да/нет, если нет - какие]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n## 🔧 TROUBLESHOOTING (ТОП-5 ОШИБОК)\n\n| Симптом | Причина | Решение |\n|---------|---------|---------|\n| 401 Unauthorized | Старые креды | Обновить Content URL, App Key, App Secret, Refresh Token |\n| Файлы не найдены | Неверный Base Path | Проверить Base Path = `/content/{FolderName}/` |\n| JSON не найден | jsonFileName захардкожен | Найти где задаётся, должен быть `content_{folderName}.json` |\n| Ошибка парсинга | Поля модели ≠ JSON | Сверить поля и типы с readme |\n| Картинки не грузятся | Неверный folderName или путь | Проверить регистр и Base Path |\n\n---\n\n## ✅ ФИНАЛЬНЫЙ ЧЕКЛИСТ (5 ПРОХОДОВ)\n\n**Пройти 5 раз, отмечая каждый пункт:**\n\n### ВЕРИФИКАЦИЯ ДО\n- [ ] ШАГ 0 выполнен полностью\n- [ ] Все API-вызовы успешны\n- [ ] JSON структура понятна\n\n### КРЕДЫ\n- [ ] Content URL обновлён\n- [ ] App Key обновлён\n- [ ] App Secret обновлён\n- [ ] Refresh Token обновлён\n- [ ] Base Path обновлён (формат: `/content/{FolderName}/`)\n\n### ПУТИ\n- [ ] folderName = точное имя папки в Dropbox (регистр!)\n- [ ] jsonFileName формируется правильно (не захардкожен старый)\n- [ ] JSON = `{BasePath}content_{folderName}.json`\n- [ ] Изображения = `{BasePath}{imageName}`\n\n### ДАННЫЕ\n- [ ] Модель соответствует JSON (все поля, типы)\n- [ ] Парсер использует новую модель\n- [ ] Подкатегории обработаны (если есть)\n\n### UI\n- [ ] View отображает все поля\n- [ ] DropboxImage использует правильный folderName\n- [ ] ViewModel обновлён\n- [ ] Навигация добавлена (сценарий B)\n\n### ВЕРИФИКАЦИЯ ПОСЛЕ\n- [ ] ШАГ 5 выполнен полностью\n- [ ] Все API-вызовы успешны\n- [ ] Пути в коде = пути в Dropbox\n- [ ] Приложение работает корректно\n\n### ИНТЕГРАЦИЯ\n- [ ] Компилируется без ошибок\n- [ ] Данные загружаются\n- [ ] Изображения отображаются\n- [ ] Другие категории работают\n\n```\nПРОХОД 1: ___  ПРОХОД 2: ___  ПРОХОД 3: ___  ПРОХОД 4: ___  ПРОХОД 5: ___\n\nВСЕ 5 ПРОХОДОВ ЗАВЕРШЕНЫ: [ДА/НЕТ]\n```\n\n**⚠️ Если хоть один пункт не выполнен — вернуться и исправить!**\n\n---\n\n## 📌 НАПОМИНАНИЕ\n\n```\n✓ ВЕРИФИКАЦИЯ ДО — проверить подключение к Dropbox ПЕРЕД изменениями\n✓ Креды — ОБНОВИТЬ ВСЕ (Content URL, App Key, App Secret, Refresh Token, Base Path)\n✓ Base Path — путь к папке категории: /content/{FolderName}/\n✓ Существующий код — АДАПТИРОВАТЬ  \n✓ Регистр — ПРОВЕРИТЬ\n✓ jsonFileName — ПРОВЕРИТЬ (часто захардкожен!)\n✓ ВЕРИФИКАЦИЯ ПОСЛЕ — проверить что всё работает ПОСЛЕ изменений\n✓ 5 проходов чеклиста — ОБЯЗАТЕЛЬНО\n```\n"
+                "value": "=# 🔄 АДАПТАЦИЯ КАТЕГОРИИ DROPBOX — КОМПАКТНЫЙ ПРОМТ\n\n## 🚨 КРИТИЧНЫЕ ПРАВИЛА (НАРУШАТЬ НЕЛЬЗЯ!)\n\n```\n1. КРЕДЫ DROPBOX     → Обновить ВСЕ: App Key, App Secret, Refresh Token, Base Path\n2. МЕТОД ДОСТУПА     → ТОЛЬКО через API (OAuth2 + /2/files/download), НЕ shared links!\n3. ВЕРИФИКАЦИЯ       → ОБЯЗАТЕЛЬНО проверить подключение ДО и ПОСЛЕ изменений\n4. СУЩЕСТВУЮЩИЙ КОД  → Адаптировать, НЕ создавать с нуля\n5. РЕГИСТР           → folderName ТОЧНО как в Dropbox (Mods ≠ mods)\n6. JSON FILENAME     → Проверить! Часто захардкожен и не обновляется автоматически\n7. ОДНА КАТЕГОРИЯ    → Не трогать другие категории\n```\n\n---\n\n## ⚠️ ВАЖНО: ДОСТУП ЧЕРЕЗ API, НЕ SHARED LINKS\n\n### Почему НЕ использовать Shared Links:\n```\n❌ Shared Links:\n- Требуют ручного создания для каждого файла\n- Могут истечь или быть отозваны\n- Ограничения на количество скачиваний\n- Проблемы с кэшированием (dl=0/dl=1)\n- Не подходят для динамического контента\n\n✅ Прямой API доступ:\n- Автоматический доступ ко всем файлам по пути\n- Работает с refresh token (автообновление)\n- Нет ограничений на скачивания\n- Полный контроль над загрузкой\n- Подходит для приложений с изменяющимся контентом\n```\n\n### Схема работы через API:\n```\n1. App Key + App Secret + Refresh Token\n           ↓\n2. POST /oauth2/token → получаем Access Token\n           ↓\n3. POST /2/files/download + path → получаем файл\n           ↓\n4. Access Token истёк? → повторяем шаг 2\n```\n\n---\n\n## 📥 ВХОДНЫЕ ДАННЫЕ\n\n```yaml\n# Категория\nНазвание UI:        [ИМЯ В ИНТЕРФЕЙСЕ]\nFolderName:         [ИЗ Readme.md]\nJSON файл:          content_[FolderName].json\nReadme файл:        readme_[FolderName].md\nPartKey:            [КЛЮЧ ИЗ JSON]\n\n# Dropbox креды для API доступа (ОБЯЗАТЕЛЬНО ОБНОВИТЬ ВСЕ!)\nApp Key:            [НОВЫЙ КЛЮЧ]\nApp Secret:         [НОВЫЙ СЕКРЕТ]\nRefresh Token:      [НОВЫЙ ТОКЕН]\nBase Path:          [ПУТЬ К ПАПКЕ КАТЕГОРИИ, например: /content/67ab80b5efa8e/]\n\n# ⚠️ НЕ ИСПОЛЬЗОВАТЬ:\n# - Shared links (https://www.dropbox.com/s/...)\n# - Direct download links (https://dl.dropboxusercontent.com/...)\n# - Content URL из shared links\n\n# Структура JSON (заполнить при адаптации промпта)\nПоля модели:\n  - field1: String    # описание\n  - field2: Int       # описание\n  - imageName: String # поле с картинкой\n  \nПодкатегории:       [НЕТ / список если есть]\n```\n\n---\n\n## 🔐 РАБОТА С DROPBOX API\n\n### Endpoints (использовать ТОЛЬКО эти):\n\n```yaml\n# Получение Access Token (обновление через Refresh Token)\nToken URL:      https://api.dropboxapi.com/oauth2/token\n\n# Работа с файлами\nList Folder:    https://api.dropboxapi.com/2/files/list_folder\nGet Metadata:   https://api.dropboxapi.com/2/files/get_metadata\nDownload:       https://content.dropboxapi.com/2/files/download\n\n# ⚠️ НЕ ИСПОЛЬЗОВАТЬ:\n# - /2/sharing/get_shared_link_file\n# - /2/sharing/create_shared_link_with_settings\n# - Любые endpoints из /sharing/*\n```\n\n### Паттерн загрузки файла через API:\n\n```swift\n// 1. Получить Access Token\nfunc refreshAccessToken() async throws -> String {\n    let url = URL(string: \"https://api.dropboxapi.com/oauth2/token\")!\n    var request = URLRequest(url: url)\n    request.httpMethod = \"POST\"\n    request.setValue(\"application/x-www-form-urlencoded\", forHTTPHeaderField: \"Content-Type\")\n    \n    let body = [\n        \"grant_type\": \"refresh_token\",\n        \"refresh_token\": refreshToken,      // Из кредов\n        \"client_id\": appKey,                // Из кредов\n        \"client_secret\": appSecret          // Из кредов\n    ]\n    request.httpBody = body.map { \"\\($0.key)=\\($0.value)\" }.joined(separator: \"&\").data(using: .utf8)\n    \n    let (data, _) = try await URLSession.shared.data(for: request)\n    let response = try JSONDecoder().decode(TokenResponse.self, from: data)\n    return response.accessToken\n}\n\n// 2. Скачать файл по пути\nfunc downloadFile(path: String) async throws -> Data {\n    let accessToken = try await refreshAccessToken()\n    \n    let url = URL(string: \"https://content.dropboxapi.com/2/files/download\")!\n    var request = URLRequest(url: url)\n    request.httpMethod = \"POST\"\n    request.setValue(\"Bearer \\(accessToken)\", forHTTPHeaderField: \"Authorization\")\n    \n    // ⚠️ ВАЖНО: путь передаётся в заголовке, не в body!\n    let apiArg = [\"path\": path]\n    let apiArgJSON = try JSONSerialization.data(withJSONObject: apiArg)\n    request.setValue(String(data: apiArgJSON, encoding: .utf8), forHTTPHeaderField: \"Dropbox-API-Arg\")\n    \n    let (data, _) = try await URLSession.shared.data(for: request)\n    return data\n}\n\n// 3. Использование\nlet jsonPath = \"\\(basePath)content_\\(folderName).json\"  // /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nlet jsonData = try await downloadFile(path: jsonPath)\n\nlet imagePath = \"\\(basePath)\\(item.imageName)\"          // /content/67ab80b5efa8e/preview.png\nlet imageData = try await downloadFile(path: imagePath)\n```\n\n### Структура DropboxManager (эталонная):\n\n```swift\nclass DropboxManager {\n    // КРЕДЫ — хранить безопасно (Keychain, Config, etc.)\n    private let appKey: String\n    private let appSecret: String\n    private let refreshToken: String\n    private let basePath: String  // /content/{FolderName}/\n    \n    // Кэш токена\n    private var accessToken: String?\n    private var tokenExpiry: Date?\n    \n    // MARK: - Token Management\n    \n    func getValidAccessToken() async throws -> String {\n        // Если токен валиден — вернуть\n        if let token = accessToken, let expiry = tokenExpiry, expiry > Date() {\n            return token\n        }\n        // Иначе обновить\n        return try await refreshAccessToken()\n    }\n    \n    private func refreshAccessToken() async throws -> String {\n        // POST https://api.dropboxapi.com/oauth2/token\n        // grant_type=refresh_token\n        // refresh_token, client_id, client_secret\n        // ...\n        \n        // Сохранить токен и время истечения\n        self.accessToken = newToken\n        self.tokenExpiry = Date().addingTimeInterval(TimeInterval(expiresIn - 60))\n        return newToken\n    }\n    \n    // MARK: - File Operations (ЧЕРЕЗ API, НЕ SHARED LINKS!)\n    \n    func downloadJSON<T: Decodable>(filename: String, as type: T.Type) async throws -> T {\n        let path = \"\\(basePath)\\(filename)\"\n        let data = try await downloadFile(path: path)\n        return try JSONDecoder().decode(type, from: data)\n    }\n    \n    func downloadImage(filename: String) async throws -> Data {\n        let path = \"\\(basePath)\\(filename)\"\n        return try await downloadFile(path: path)\n    }\n    \n    private func downloadFile(path: String) async throws -> Data {\n        let token = try await getValidAccessToken()\n        \n        var request = URLRequest(url: URL(string: \"https://content.dropboxapi.com/2/files/download\")!)\n        request.httpMethod = \"POST\"\n        request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n        request.setValue(\"{\\\"path\\\":\\\"\\(path)\\\"}\", forHTTPHeaderField: \"Dropbox-API-Arg\")\n        \n        let (data, response) = try await URLSession.shared.data(for: request)\n        \n        guard let httpResponse = response as? HTTPURLResponse,\n              httpResponse.statusCode == 200 else {\n            throw DropboxError.downloadFailed\n        }\n        \n        return data\n    }\n    \n    func listFolder(path: String? = nil) async throws -> [FileMetadata] {\n        let token = try await getValidAccessToken()\n        let folderPath = path ?? basePath\n        \n        var request = URLRequest(url: URL(string: \"https://api.dropboxapi.com/2/files/list_folder\")!)\n        request.httpMethod = \"POST\"\n        request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n        request.setValue(\"application/json\", forHTTPHeaderField: \"Content-Type\")\n        request.httpBody = try JSONSerialization.data(withJSONObject: [\"path\": folderPath])\n        \n        let (data, _) = try await URLSession.shared.data(for: request)\n        let response = try JSONDecoder().decode(ListFolderResponse.self, from: data)\n        return response.entries\n    }\n}\n```\n\n---\n\n## ⚡ АЛГОРИТМ РАБОТЫ\n\n### ШАГ 0: ВЕРИФИКАЦИЯ ПОДКЛЮЧЕНИЯ (ДО НАЧАЛА РАБОТЫ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить перед любыми изменениями в коде!**\n\n**0.1. Получить Access Token через API:**\n```bash\ncurl -X POST https://api.dropboxapi.com/oauth2/token \\\n  -d grant_type=refresh_token \\\n  -d refresh_token=\"[REFRESH_TOKEN]\" \\\n  -d client_id=\"[APP_KEY]\" \\\n  -d client_secret=\"[APP_SECRET]\"\n```\n✅ Ожидаемый результат: JSON с `access_token` и `expires_in`\n❌ Если ошибка → креды неверные, СТОП\n\n**0.2. Проверить доступ к папке категории через API:**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/list_folder \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH]\"}'\n```\n✅ Ожидаемый результат: список файлов в папке (JSON, изображения, readme)\n❌ Если `path/not_found` → Base Path неверный, проверить путь\n\n**0.3. Скачать JSON манифест через API (НЕ через shared link!):**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\"\n```\n✅ Ожидаемый результат: валидный JSON с данными категории\n❌ Если ошибка → проверить имя файла и путь\n\n**0.4. Проверить загрузку изображения через API:**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH][image_filename_from_json]\\\"}\" \\\n  --output test_image.png\n```\n✅ Ожидаемый результат: файл скачан\n❌ Если ошибка → путь или имя файла неверны\n\n**📋 ЧЕКЛИСТ ВЕРИФИКАЦИИ (ДО) — выполнить и зафиксировать:**\n```\n- [ ] Access Token получен через /oauth2/token\n- [ ] Папка категории доступна через /2/files/list_folder\n- [ ] JSON скачивается через /2/files/download (НЕ shared link!)\n- [ ] Изображения скачиваются через /2/files/download (НЕ shared link!)\n- [ ] Все пути начинаются с / и ведут к реальным файлам\n```\n\n**📝 ЗАФИКСИРОВАТЬ РЕЗУЛЬТАТЫ:**\n```\nAccess Token:     [получен/ошибка]\nСписок файлов:    [перечислить что видно в папке]\nJSON структура:   [ключи верхнего уровня, поля объектов]\nПути к файлам:    [реальные пути из Dropbox, начинающиеся с /]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n### ШАГ 1: ОБНОВИТЬ КРЕДЫ И МЕТОД ДОСТУПА\n\n**1.1. Найти в проекте** (искать в `DropboxManager`, `Constants`, `Config`, `Info.plist`, `.xcconfig`):\n\n```swift\n// УДАЛИТЬ/ЗАМЕНИТЬ (если есть):\ncontentURL / baseURL / sharedLink        → УДАЛИТЬ (не нужны для API)\ndirectDownloadURL                        → УДАЛИТЬ\n\n// ОБНОВИТЬ на новые значения:\nappKey / DROPBOX_APP_KEY / clientId       → [НОВЫЙ App Key]\nappSecret / DROPBOX_APP_SECRET            → [НОВЫЙ App Secret]  \nrefreshToken / REFRESH_TOKEN              → [НОВЫЙ Refresh Token]\nbasePath / BASE_PATH / contentRoot        → [НОВЫЙ Base Path]\n```\n\n**1.2. Проверить метод загрузки файлов:**\n\n```swift\n// ❌ НЕПРАВИЛЬНО — через shared links:\nfunc downloadFile(sharedLink: String) {\n    let url = sharedLink.replacingOccurrences(of: \"dl=0\", with: \"dl=1\")\n    // ...\n}\n\n// ❌ НЕПРАВИЛЬНО — через content URL:\nfunc downloadImage(name: String) {\n    let url = \"\\(contentURL)/\\(name)\"\n    // ...\n}\n\n// ✅ ПРАВИЛЬНО — через API:\nfunc downloadFile(path: String) async throws -> Data {\n    let token = try await getAccessToken()\n    var request = URLRequest(url: URL(string: \"https://content.dropboxapi.com/2/files/download\")!)\n    request.httpMethod = \"POST\"\n    request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n    request.setValue(\"{\\\"path\\\":\\\"\\(path)\\\"}\", forHTTPHeaderField: \"Dropbox-API-Arg\")\n    // ...\n}\n```\n\n**1.3. Если в проекте используются shared links — РЕФАКТОРИНГ:**\n\n```swift\n// Найти все места где формируется URL для Dropbox:\n// - URLSession.shared.dataTask с dropbox URL\n// - AsyncImage с dropbox URL\n// - SDWebImage/Kingfisher с dropbox URL\n\n// Заменить на вызов DropboxManager:\n// ДО:\nAsyncImage(url: URL(string: \"\\(contentURL)/\\(imageName)\"))\n\n// ПОСЛЕ:\nDropboxAsyncImage(path: \"\\(basePath)\\(imageName)\")\n\n// Или загружать через manager:\nlet imageData = try await dropboxManager.downloadFile(path: \"\\(basePath)\\(imageName)\")\nlet image = UIImage(data: imageData)\n```\n\n### ШАГ 2: ПРОВЕРИТЬ ПУТИ\n\n**📍 ПОЛНЫЕ ПУТИ К ФАЙЛАМ В DROPBOX (для API):**\n```\nBase Path:        /content/{FolderName}/\n\nJSON манифест:    /content/{FolderName}/content_{FolderName}.json\nИзображения:      /content/{FolderName}/{image_filename}\nФайлы модов:      /content/{FolderName}/{mod_filename}\nReadme категории: /content/{FolderName}/readme_{FolderName}.md\n\n# Пример для FolderName = \"67ab80b5efa8e\":\nBase Path:        /content/67ab80b5efa8e/\nJSON манифест:    /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nИзображения:      /content/67ab80b5efa8e/preview_item1.png\n\n# ⚠️ Путь ВСЕГДА начинается с /\n# ⚠️ НЕ использовать URL вида https://...\n```\n\n**Проверить в коде:**\n```swift\n// Путь к JSON (относительно Base Path):\n\"content_{folderName}.json\"\n\n// Полный путь к JSON для API:\n\"{basePath}content_{folderName}.json\"\n// Например: /content/67ab80b5efa8e/content_67ab80b5efa8e.json\n\n// ⚠️ ЧАСТАЯ ОШИБКА: jsonFileName захардкожен!\n// Если видишь такое — ИСПРАВИТЬ:\ncase .oldCategory: return \"content_oldname.json\"  // ❌\n// На:\nreturn \"content_\\(folderName).json\"               // ✅\n\n// Путь к изображениям для API:\n\"{basePath}{imageName}\"\n// Например: /content/67ab80b5efa8e/preview.png\n```\n\n### ШАГ 3: НАЙТИ ПОХОЖУЮ КАТЕГОРИЮ\n\n1. Открыть `ContentCategory` enum (или аналог)\n2. Выписать все существующие категории\n3. Найти похожую по структуре контента\n4. Определить сценарий:\n   - **A** — есть похожая → заменяем контент в ней\n   - **B** — нет похожей → создаём по образцу ближайшей\n\n### ШАГ 4: ОБНОВИТЬ КОД\n\n**ContentCategory enum:**\n```swift\ncase newCategory\n\nvar folderName: String {\n    case .newCategory: return \"ExactDropboxFolderName\"  // Регистр!\n}\n\nvar partKey: String {\n    case .newCategory: return \"keyFromJSON\"\n}\n\nvar displayName: String {\n    case .newCategory: return \"Название в UI\"\n}\n\n// ⚠️ Убедиться что используется API path, не URL:\nvar jsonPath: String {\n    case .newCategory: return \"/content/\\(folderName)/content_\\(folderName).json\"\n}\n```\n\n**Модель данных** — адаптировать существующую:\n```swift\nstruct NewCategoryItem: Codable {\n    let field1: String      // Из JSON\n    let field2: Int         // Из JSON\n    let imageName: String   // Поле с картинкой\n    // + вложенные структуры для подкатегорий если есть\n}\n```\n\n**Парсер** — использовать существующий, обновить тип.\n\n**View/ViewModel** — адаптировать существующие:\n- Обновить отображаемые поля\n- Обновить путь в DropboxImage (API path, не URL!)\n- Добавить UI для подкатегорий (если есть)\n\n**DropboxImage (проверить что использует API):**\n```swift\n// ✅ ПРАВИЛЬНО:\nstruct DropboxImage: View {\n    let path: String  // /content/folder/image.png\n    \n    var body: some View {\n        AsyncImageFromDropbox(path: path)\n    }\n}\n\n// ❌ НЕПРАВИЛЬНО:\nstruct DropboxImage: View {\n    let url: String  // https://dl.dropbox.com/...\n}\n```\n\n**Навигация** (только для сценария B) — добавить пункт меню.\n\n---\n\n### ШАГ 5: ФИНАЛЬНАЯ ВЕРИФИКАЦИЯ (ПОСЛЕ ИЗМЕНЕНИЙ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить после всех изменений в коде!**\n\n**5.1. Повторить все проверки из ШАГ 0:**\n- Получить Access Token через API\n- Проверить доступ к папке через API\n- Скачать JSON через API (не shared link!)\n- Скачать изображение через API (не shared link!)\n\n**5.2. Проверить что код использует API, а не shared links:**\n```swift\n// Поиск в проекте — НЕ должно быть:\n\"dropbox.com/s/\"           // shared link\n\"dl.dropboxusercontent\"    // direct download URL\n\"dl=1\"                     // shared link parameter\n\"raw=1\"                    // shared link parameter\n\n// Должно быть:\n\"api.dropboxapi.com\"       // API endpoint\n\"content.dropboxapi.com\"   // Download endpoint\n\"Dropbox-API-Arg\"          // API header\n\"Authorization: Bearer\"    // OAuth header\n```\n\n**5.3. Сверить пути в коде с реальными путями в Dropbox:**\n```bash\n# Путь в коде должен быть вида:\n/content/67ab80b5efa8e/content_67ab80b5efa8e.json\n\n# НЕ вида:\nhttps://www.dropbox.com/s/xxx/content.json?dl=0\n```\n\n**5.4. Проверить что модель данных соответствует JSON:**\n```bash\n# Скачать JSON через API и проверить поля\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\" \\\n  | jq 'keys'\n```\n✅ Все поля из JSON есть в модели\n❌ Если поля не совпадают → исправить модель\n\n**📋 ЧЕКЛИСТ ФИНАЛЬНОЙ ВЕРИФИКАЦИИ:**\n```\n- [ ] Access Token работает\n- [ ] Код использует API endpoints, не shared links\n- [ ] Путь к JSON = API path (начинается с /)\n- [ ] Путь к изображениям = API path (начинается с /)\n- [ ] Нет упоминаний shared links в коде\n- [ ] Код компилируется без ошибок\n- [ ] Приложение запускается\n- [ ] Данные категории загружаются через API\n- [ ] Изображения загружаются через API\n- [ ] Другие категории работают\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n## 🔧 TROUBLESHOOTING (ТОП-7 ОШИБОК)\n\n| Симптом | Причина | Решение |\n|---------|---------|---------|\n| 401 Unauthorized | Старый/невалидный токен | Обновить Access Token через refresh |\n| 400 Bad Request | Неверный формат Dropbox-API-Arg | Проверить JSON в заголовке (экранирование) |\n| Файлы не найдены | Неверный path | Проверить что путь начинается с / |\n| `invalid_access_token` | Токен истёк | Реализовать автообновление токена |\n| JSON не парсится | Путь ведёт на HTML | Проверить что используется API, не shared link |\n| Картинки не грузятся | URL вместо path | Заменить URL на API path |\n| `expired_access_token` | Нет авто-refresh | Добавить логику обновления токена |\n\n---\n\n## 🔄 МИГРАЦИЯ С SHARED LINKS НА API\n\nЕсли в проекте уже используются shared links:\n\n### Шаг 1: Идентифицировать места использования\n```bash\n# Найти все shared links:\ngrep -r \"dropbox.com/s\" .\ngrep -r \"dl.dropboxusercontent\" .\ngrep -r \"dl=1\" .\ngrep -r \"raw=1\" .\n```\n\n### Шаг 2: Создать/обновить DropboxManager\n```swift\n// Добавить методы для работы через API (см. эталонную структуру выше)\n```\n\n### Шаг 3: Заменить вызовы\n```swift\n// ДО (shared link):\nlet url = \"https://www.dropbox.com/s/abc123/image.png?dl=1\"\nURLSession.shared.dataTask(with: URL(string: url)!)\n\n// ПОСЛЕ (API):\nlet path = \"/content/folder/image.png\"\nlet data = try await dropboxManager.downloadFile(path: path)\n```\n\n### Шаг 4: Удалить старые креды\n```swift\n// Удалить:\n- contentURL\n- sharedLinks\n- directDownloadURLs\n\n// Оставить только:\n- appKey\n- appSecret\n- refreshToken\n- basePath\n```\n\n---\n\n## ✅ ФИНАЛЬНЫЙ ЧЕКЛИСТ (5 ПРОХОДОВ)\n\n**Пройти 5 раз, отмечая каждый пункт:**\n\n### ВЕРИФИКАЦИЯ ДО\n- [ ] ШАГ 0 выполнен полностью\n- [ ] Все API-вызовы через /oauth2/token и /2/files/* успешны\n- [ ] JSON структура понятна\n\n### МЕТОД ДОСТУПА\n- [ ] Используется API (oauth2/token + files/download)\n- [ ] НЕ используются shared links\n- [ ] НЕ используются direct download URLs\n- [ ] Access Token обновляется через refresh_token\n\n### КРЕДЫ\n- [ ] App Key обновлён\n- [ ] App Secret обновлён\n- [ ] Refresh Token обновлён\n- [ ] Base Path обновлён (формат: `/content/{FolderName}/`)\n- [ ] Content URL / Shared Links УДАЛЕНЫ (если были)\n\n### ПУТИ\n- [ ] Все пути начинаются с `/`\n- [ ] folderName = точное имя папки в Dropbox (регистр!)\n- [ ] jsonFileName формируется правильно (не захардкожен старый)\n- [ ] JSON path = `{basePath}content_{folderName}.json`\n- [ ] Image path = `{basePath}{imageName}`\n\n### ДАННЫЕ\n- [ ] Модель соответствует JSON (все поля, типы)\n- [ ] Парсер использует новую модель\n- [ ] Подкатегории обработаны (если есть)\n\n### UI\n- [ ] View отображает все поля\n- [ ] DropboxImage использует API path (не URL!)\n- [ ] ViewModel обновлён\n- [ ] Навигация добавлена (сценарий B)\n\n### ВЕРИФИКАЦИЯ ПОСЛЕ\n- [ ] ШАГ 5 выполнен полностью\n- [ ] Код использует ТОЛЬКО API endpoints\n- [ ] Нет shared links в коде\n- [ ] Приложение работает корректно\n\n### ИНТЕГРАЦИЯ\n- [ ] Компилируется без ошибок\n- [ ] Данные загружаются через API\n- [ ] Изображения загружаются через API\n- [ ] Другие категории работают\n\n```\nПРОХОД 1: ___  ПРОХОД 2: ___  ПРОХОД 3: ___  ПРОХОД 4: ___  ПРОХОД 5: ___\n\nВСЕ 5 ПРОХОДОВ ЗАВЕРШЕНЫ: [ДА/НЕТ]\n```\n\n**⚠️ Если хоть один пункт не выполнен — вернуться и исправить!**\n\n---\n\n## 📌 НАПОМИНАНИЕ\n\n```\n✓ МЕТОД ДОСТУПА     → ТОЛЬКО через API, НЕ shared links!\n✓ ВЕРИФИКАЦИЯ ДО    → проверить API подключение ПЕРЕД изменениями\n✓ Креды             → App Key, App Secret, Refresh Token, Base Path\n✓ ⚠️ Content URL    → НЕ НУЖЕН (удалить если есть)\n✓ ⚠️ Shared Links   → НЕ ИСПОЛЬЗОВАТЬ\n✓ Base Path         → путь к папке категории: /content/{FolderName}/\n✓ Все пути          → начинаются с / (API path, не URL!)\n✓ Существующий код  → АДАПТИРОВАТЬ  \n✓ Регистр           → ПРОВЕРИТЬ\n✓ jsonFileName      → ПРОВЕРИТЬ (часто захардкожен!)\n✓ ВЕРИФИКАЦИЯ ПОСЛЕ → проверить что API работает ПОСЛЕ изменений\n✓ 5 проходов        → ОБЯЗАТЕЛЬНО\n```\n\n---\n\n## 📚 СПРАВКА: API vs SHARED LINKS\n\n| Аспект | Shared Links | API Access |\n|--------|--------------|------------|\n| URL формат | `https://dropbox.com/s/...` | Path: `/folder/file.ext` |\n| Авторизация | Нет (публичная ссылка) | OAuth2 Bearer Token |\n| Срок действия | Может истечь | Токен обновляется |\n| Лимиты | Ограничения на скачивания | Зависит от тарифа API |\n| Динамический контент | Нужно пересоздавать ссылки | Автоматический доступ |\n| Безопасность | Публичный доступ | Контролируемый доступ |\n| Рекомендация | ❌ Не использовать | ✅ Использовать |\n"
               },
               {
                 "id": "5fe95a35-08e2-4126-b839-c056349ab1a1",
@@ -6966,7 +6972,7 @@
           "operation": "get"
         },
         "position": [
-          -784,
+          -544,
           144
         ],
         "retryOnFail": true,
@@ -7250,7 +7256,7 @@
             "conditions": [
               {
                 "id": "8293f3d9-f974-4223-b68e-66a16900d1b1",
-                "leftValue": "={{ $('Get an issue4').item.json.fields.customfield_13513 }}",
+                "leftValue": "={{ $('Get an issue2').item.json.fields.customfield_13513 }}",
                 "operator": {
                   "operation": "notEmpty",
                   "singleValue": true,
@@ -7269,8 +7275,8 @@
           "options": {}
         },
         "position": [
-          -560,
-          144
+          -944,
+          160
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.3
@@ -7298,8 +7304,8 @@
           }
         },
         "position": [
-          -416,
-          352
+          -560,
+          576
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -7323,8 +7329,8 @@
           "resource": "issueComment"
         },
         "position": [
-          -256,
-          352
+          -400,
+          576
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -7573,7 +7579,7 @@
           }
         },
         "position": [
-          2256,
+          2272,
           -64
         ],
         "type": "n8n-nodes-base.jira",
@@ -7604,7 +7610,7 @@
           "resource": "repository"
         },
         "position": [
-          -336,
+          -320,
           -64
         ],
         "type": "n8n-nodes-base.github",
@@ -7645,14 +7651,14 @@
                 "id": "field5",
                 "name": "jira_key",
                 "type": "string",
-                "value": "={{ $('Get an issue4').item.json.key }}"
+                "value": "={{ $('Get an issue2').item.json.key }}"
               }
             ]
           },
           "options": {}
         },
         "position": [
-          -112,
+          -96,
           -64
         ],
         "type": "n8n-nodes-base.set",
@@ -7711,7 +7717,7 @@
           "options": {}
         },
         "position": [
-          320,
+          336,
           -64
         ],
         "type": "n8n-nodes-base.set",
@@ -7733,7 +7739,7 @@
           "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
         },
         "position": [
-          544,
+          560,
           -64
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -7755,7 +7761,7 @@
           "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
         },
         "position": [
-          1408,
+          1424,
           -64
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -7791,7 +7797,7 @@
           "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.new_repo_name }}/contents/{{ $('Loop Over Items2').item.json.path }}"
         },
         "position": [
-          1632,
+          1648,
           -64
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -7805,7 +7811,7 @@
           "options": {}
         },
         "position": [
-          1856,
+          1872,
           -64
         ],
         "type": "n8n-nodes-base.aggregate",
@@ -7839,14 +7845,14 @@
                 "id": "field4",
                 "name": "new_repo_name",
                 "type": "string",
-                "value": "={{ $('Get an issue4').item.json.key }}"
+                "value": "={{ $('Get an issue2').item.json.key }}"
               }
             ]
           },
           "options": {}
         },
         "position": [
-          -560,
+          -544,
           -64
         ],
         "type": "n8n-nodes-base.set",
@@ -7907,7 +7913,7 @@
           }
         },
         "position": [
-          768,
+          784,
           -64
         ],
         "type": "n8n-nodes-base.set",
@@ -7921,7 +7927,7 @@
           "options": {}
         },
         "position": [
-          992,
+          1008,
           -64
         ],
         "type": "n8n-nodes-base.splitOut",
@@ -7962,7 +7968,7 @@
           "options": {}
         },
         "position": [
-          2080,
+          2096,
           -64
         ],
         "type": "n8n-nodes-base.set",
@@ -7988,7 +7994,7 @@
           "url": "https://api.github.com/orgs/IT-OUT/repos"
         },
         "position": [
-          96,
+          112,
           -64
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -8001,18 +8007,18 @@
           "options": {}
         },
         "position": [
-          1200,
+          1216,
           -64
         ],
         "type": "n8n-nodes-base.splitInBatches",
         "typeVersion": 3
       }
     ],
-    "updatedAt": "2026-01-28T16:05:55.609Z",
-    "versionId": "1ba16b8e-8d0b-4519-b36c-6454f32c5027",
+    "updatedAt": "2026-01-29T08:11:53.435Z",
+    "versionId": "dca5cd3e-432f-421c-b04c-9639843ca94c",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "1ba16b8e-8d0b-4519-b36c-6454f32c5027",
+  "activeVersionId": "dca5cd3e-432f-421c-b04c-9639843ca94c",
   "connections": {
     "AI Agent2": {
       "main": [
@@ -9057,12 +9063,7 @@
         [
           {
             "index": 0,
-            "node": "Gold Rep?2",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Parse Jira Data2",
+            "node": "Проверка на файлы Prompt",
             "type": "main"
           }
         ]
@@ -9250,14 +9251,14 @@
         [
           {
             "index": 0,
-            "node": "Проверка на файлы Prompt",
+            "node": "Get an issue4",
             "type": "main"
           }
         ],
         [
           {
             "index": 0,
-            "node": "Update an issue working12",
+            "node": "Parse Jira Data2",
             "type": "main"
           }
         ]
@@ -9730,7 +9731,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue4",
+            "node": "Gold Rep?2",
             "type": "main"
           }
         ],
@@ -9951,6 +9952,17 @@
           {
             "index": 0,
             "node": "Get Dropbox info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Jira with Repo URL": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue4",
             "type": "main"
           }
         ]
@@ -14027,7 +14039,7 @@
               "id": "1a438d48-5a06-4180-9c24-e84313e8ac82",
               "name": "Prompt",
               "type": "string",
-              "value": "=# 🔄 АДАПТАЦИЯ КАТЕГОРИИ DROPBOX — КОМПАКТНЫЙ ПРОМТ\n\n## 🚨 КРИТИЧНЫЕ ПРАВИЛА (НАРУШАТЬ НЕЛЬЗЯ!)\n\n```\n1. КРЕДЫ DROPBOX     → Обновить ВСЕ: App Key, App Secret, Refresh Token, Content URL, Base Path\n2. ВЕРИФИКАЦИЯ       → ОБЯЗАТЕЛЬНО проверить подключение ДО и ПОСЛЕ изменений\n3. СУЩЕСТВУЮЩИЙ КОД  → Адаптировать, НЕ создавать с нуля\n4. РЕГИСТР           → folderName ТОЧНО как в Dropbox (Mods ≠ mods)\n5. JSON FILENAME     → Проверить! Часто захардкожен и не обновляется автоматически\n6. ОДНА КАТЕГОРИЯ    → Не трогать другие категории\n```\n\n---\n\n## 📥 ВХОДНЫЕ ДАННЫЕ\n\n```yaml\n# Категория\nНазвание UI:        [ИМЯ В ИНТЕРФЕЙСЕ]\nFolderName:         [ИЗ Readme.md]\nJSON файл:          content_[FolderName].json\nReadme файл:        readme_[FolderName].md\nPartKey:            [КЛЮЧ ИЗ JSON]\n\n# Dropbox креды (ОБЯЗАТЕЛЬНО ОБНОВИТЬ ВСЕ!)\nContent URL:        [НОВЫЙ URL ДЛЯ ДОСТУПА К КОНТЕНТУ]\nApp Key:            [НОВЫЙ КЛЮЧ]\nApp Secret:         [НОВЫЙ СЕКРЕТ]\nRefresh Token:      [НОВЫЙ ТОКЕН]\nBase Path:          [ПУТЬ К ПАПКЕ КАТЕГОРИИ, например: /content/67ab80b5efa8e/]\n\n# Структура JSON (заполнить при адаптации промпта)\nПоля модели:\n  - field1: String    # описание\n  - field2: Int       # описание\n  - imageName: String # поле с картинкой\n  \nПодкатегории:       [НЕТ / список если есть]\n```\n\n---\n\n## ⚡ АЛГОРИТМ РАБОТЫ\n\n### ШАГ 0: ВЕРИФИКАЦИЯ ПОДКЛЮЧЕНИЯ (ДО НАЧАЛА РАБОТЫ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить перед любыми изменениями в коде!**\n\n**0.1. Получить Access Token:**\n```bash\ncurl -X POST https://api.dropboxapi.com/oauth2/token \\\n  -d grant_type=refresh_token \\\n  -d refresh_token=\"[REFRESH_TOKEN]\" \\\n  -d client_id=\"[APP_KEY]\" \\\n  -d client_secret=\"[APP_SECRET]\"\n```\n✅ Ожидаемый результат: JSON с `access_token`\n❌ Если ошибка → креды неверные, СТОП\n\n**0.2. Проверить доступ к папке категории:**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/list_folder \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH]\"}'\n```\n✅ Ожидаемый результат: список файлов в папке (JSON, изображения, readme)\n❌ Если `path/not_found` → Base Path неверный, проверить путь\n\n**0.3. Скачать и проверить JSON манифест:**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\"\n```\n✅ Ожидаемый результат: валидный JSON с данными категории\n❌ Если ошибка → проверить имя файла и путь\n\n**0.4. Проверить наличие изображения (любого из JSON):**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/get_metadata \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH][image_filename_from_json]\"}'\n```\n✅ Ожидаемый результат: метаданные файла\n❌ Если `path/not_found` → изображения в другом месте или имена не совпадают\n\n**📋 ЧЕКЛИСТ ВЕРИФИКАЦИИ (ДО) — выполнить и зафиксировать:**\n```\n- [ ] Access Token получен успешно\n- [ ] Папка категории доступна, файлы видны\n- [ ] JSON манифест скачивается и валиден\n- [ ] Структура JSON соответствует ожидаемой модели\n- [ ] Изображения находятся в той же папке\n- [ ] Все пути корректны\n```\n\n**📝 ЗАФИКСИРОВАТЬ РЕЗУЛЬТАТЫ:**\n```\nAccess Token:     [получен/ошибка]\nСписок файлов:    [перечислить что видно в папке]\nJSON структура:   [ключи верхнего уровня, поля объектов]\nПути к файлам:    [реальные пути из Dropbox]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n### ШАГ 1: ОБНОВИТЬ КРЕДЫ DROPBOX\n\n**Найти в проекте** (искать в `DropboxManager`, `Constants`, `Config`, `Info.plist`, `.xcconfig`):\n\n```swift\n// Обновить ВСЕ на новые значения:\ncontentURL / CONTENT_URL / baseURL        → [НОВЫЙ Content URL]\nappKey / DROPBOX_APP_KEY / clientId       → [НОВЫЙ App Key]\nappSecret / DROPBOX_APP_SECRET            → [НОВЫЙ App Secret]  \nrefreshToken / REFRESH_TOKEN              → [НОВЫЙ Refresh Token]\nbasePath / BASE_PATH / contentRoot        → [НОВЫЙ Base Path]\n```\n\n### ШАГ 2: ПРОВЕРИТЬ ПУТИ\n\n**📍 ПОЛНЫЕ ПУТИ К ФАЙЛАМ В DROPBOX:**\n```\nBase Path:        /content/{FolderName}/\n\nJSON манифест:    /content/{FolderName}/content_{FolderName}.json\nИзображения:      /content/{FolderName}/{image_filename}\nФайлы модов:      /content/{FolderName}/{mod_filename}\nReadme категории: /content/{FolderName}/readme_{FolderName}.md\n\n# Пример для FolderName = \"67ab80b5efa8e\":\nBase Path:        /content/67ab80b5efa8e/\nJSON манифест:    /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nИзображения:      /content/67ab80b5efa8e/preview_item1.png\nФайлы модов:      /content/67ab80b5efa8e/mod_data.zip\n```\n\n**Проверить в коде:**\n```swift\n// Путь к JSON (относительно Base Path):\n\"content_{folderName}.json\"\n\n// Полный путь к JSON:\n\"{basePath}content_{folderName}.json\"\n\n// ⚠️ ЧАСТАЯ ОШИБКА: jsonFileName захардкожен!\n// Если видишь такое — ИСПРАВИТЬ:\ncase .oldCategory: return \"content_oldname.json\"  // ❌\n// На:\nreturn \"content_\\(folderName).json\"               // ✅\n\n// Путь к изображениям (относительно Base Path):\n\"{imageName}\"\n```\n\n### ШАГ 3: НАЙТИ ПОХОЖУЮ КАТЕГОРИЮ\n\n1. Открыть `ContentCategory` enum (или аналог)\n2. Выписать все существующие категории\n3. Найти похожую по структуре контента\n4. Определить сценарий:\n   - **A** — есть похожая → заменяем контент в ней\n   - **B** — нет похожей → создаём по образцу ближайшей\n\n### ШАГ 4: ОБНОВИТЬ КОД\n\n**ContentCategory enum:**\n```swift\ncase newCategory\n\nvar folderName: String {\n    case .newCategory: return \"ExactDropboxFolderName\"  // Регистр!\n}\n\nvar partKey: String {\n    case .newCategory: return \"keyFromJSON\"\n}\n\nvar displayName: String {\n    case .newCategory: return \"Название в UI\"\n}\n```\n\n**Модель данных** — адаптировать существующую:\n```swift\nstruct NewCategoryItem: Codable {\n    let field1: String      // Из JSON\n    let field2: Int         // Из JSON\n    let imageName: String   // Поле с картинкой\n    // + вложенные структуры для подкатегорий если есть\n}\n```\n\n**Парсер** — использовать существующий, обновить тип.\n\n**View/ViewModel** — адаптировать существующие:\n- Обновить отображаемые поля\n- Обновить `folderName` в DropboxImage\n- Добавить UI для подкатегорий (если есть)\n\n**Навигация** (только для сценария B) — добавить пункт меню.\n\n---\n\n### ШАГ 5: ФИНАЛЬНАЯ ВЕРИФИКАЦИЯ (ПОСЛЕ ИЗМЕНЕНИЙ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить после всех изменений в коде!**\n\n**5.1. Повторить все проверки из ШАГ 0:**\n- Получить Access Token\n- Проверить доступ к папке\n- Скачать JSON манифест\n- Проверить изображения\n\n**5.2. Сверить пути в коде с реальными путями в Dropbox:**\n```bash\n# Вывести путь к JSON из кода и сравнить с реальным\necho \"Путь в коде: [путь_из_кода]\"\necho \"Путь в Dropbox: [BASE_PATH]content_[FolderName].json\"\n# Должны совпадать!\n```\n\n**5.3. Проверить что модель данных соответствует JSON:**\n```bash\n# Скачать JSON и проверить поля\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\" \\\n  | jq 'keys'  # или просто посмотреть структуру\n```\n✅ Все поля из JSON есть в модели\n❌ Если поля не совпадают → исправить модель\n\n**5.4. Проверить путь к изображениям в коде:**\n```swift\n// В DropboxImage или аналоге должно быть:\n// basePath + imageName (из JSON)\n// Например: /content/67ab80b5efa8e/ + preview.png\n```\n\n**📋 ЧЕКЛИСТ ФИНАЛЬНОЙ ВЕРИФИКАЦИИ — выполнить и сравнить с эталоном:**\n```\n- [ ] Access Token по-прежнему работает\n- [ ] Путь к JSON в коде = путь в Dropbox\n- [ ] Все поля модели соответствуют JSON\n- [ ] Путь к изображениям в коде корректен\n- [ ] Код компилируется без ошибок\n- [ ] Приложение запускается\n- [ ] Данные категории загружаются\n- [ ] Изображения отображаются\n- [ ] Другие категории не сломались\n```\n\n**📝 СРАВНИТЬ С ЭТАЛОНОМ ИЗ ШАГ 0:**\n```\nПути совпадают:   [да/нет, если нет - что отличается]\nJSON парсится:    [да/нет, если нет - какие поля]\nФайлы доступны:   [да/нет, если нет - какие]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n## 🔧 TROUBLESHOOTING (ТОП-5 ОШИБОК)\n\n| Симптом | Причина | Решение |\n|---------|---------|---------|\n| 401 Unauthorized | Старые креды | Обновить Content URL, App Key, App Secret, Refresh Token |\n| Файлы не найдены | Неверный Base Path | Проверить Base Path = `/content/{FolderName}/` |\n| JSON не найден | jsonFileName захардкожен | Найти где задаётся, должен быть `content_{folderName}.json` |\n| Ошибка парсинга | Поля модели ≠ JSON | Сверить поля и типы с readme |\n| Картинки не грузятся | Неверный folderName или путь | Проверить регистр и Base Path |\n\n---\n\n## ✅ ФИНАЛЬНЫЙ ЧЕКЛИСТ (5 ПРОХОДОВ)\n\n**Пройти 5 раз, отмечая каждый пункт:**\n\n### ВЕРИФИКАЦИЯ ДО\n- [ ] ШАГ 0 выполнен полностью\n- [ ] Все API-вызовы успешны\n- [ ] JSON структура понятна\n\n### КРЕДЫ\n- [ ] Content URL обновлён\n- [ ] App Key обновлён\n- [ ] App Secret обновлён\n- [ ] Refresh Token обновлён\n- [ ] Base Path обновлён (формат: `/content/{FolderName}/`)\n\n### ПУТИ\n- [ ] folderName = точное имя папки в Dropbox (регистр!)\n- [ ] jsonFileName формируется правильно (не захардкожен старый)\n- [ ] JSON = `{BasePath}content_{folderName}.json`\n- [ ] Изображения = `{BasePath}{imageName}`\n\n### ДАННЫЕ\n- [ ] Модель соответствует JSON (все поля, типы)\n- [ ] Парсер использует новую модель\n- [ ] Подкатегории обработаны (если есть)\n\n### UI\n- [ ] View отображает все поля\n- [ ] DropboxImage использует правильный folderName\n- [ ] ViewModel обновлён\n- [ ] Навигация добавлена (сценарий B)\n\n### ВЕРИФИКАЦИЯ ПОСЛЕ\n- [ ] ШАГ 5 выполнен полностью\n- [ ] Все API-вызовы успешны\n- [ ] Пути в коде = пути в Dropbox\n- [ ] Приложение работает корректно\n\n### ИНТЕГРАЦИЯ\n- [ ] Компилируется без ошибок\n- [ ] Данные загружаются\n- [ ] Изображения отображаются\n- [ ] Другие категории работают\n\n```\nПРОХОД 1: ___  ПРОХОД 2: ___  ПРОХОД 3: ___  ПРОХОД 4: ___  ПРОХОД 5: ___\n\nВСЕ 5 ПРОХОДОВ ЗАВЕРШЕНЫ: [ДА/НЕТ]\n```\n\n**⚠️ Если хоть один пункт не выполнен — вернуться и исправить!**\n\n---\n\n## 📌 НАПОМИНАНИЕ\n\n```\n✓ ВЕРИФИКАЦИЯ ДО — проверить подключение к Dropbox ПЕРЕД изменениями\n✓ Креды — ОБНОВИТЬ ВСЕ (Content URL, App Key, App Secret, Refresh Token, Base Path)\n✓ Base Path — путь к папке категории: /content/{FolderName}/\n✓ Существующий код — АДАПТИРОВАТЬ  \n✓ Регистр — ПРОВЕРИТЬ\n✓ jsonFileName — ПРОВЕРИТЬ (часто захардкожен!)\n✓ ВЕРИФИКАЦИЯ ПОСЛЕ — проверить что всё работает ПОСЛЕ изменений\n✓ 5 проходов чеклиста — ОБЯЗАТЕЛЬНО\n```\n"
+              "value": "=# 🔄 АДАПТАЦИЯ КАТЕГОРИИ DROPBOX — КОМПАКТНЫЙ ПРОМТ\n\n## 🚨 КРИТИЧНЫЕ ПРАВИЛА (НАРУШАТЬ НЕЛЬЗЯ!)\n\n```\n1. КРЕДЫ DROPBOX     → Обновить ВСЕ: App Key, App Secret, Refresh Token, Base Path\n2. МЕТОД ДОСТУПА     → ТОЛЬКО через API (OAuth2 + /2/files/download), НЕ shared links!\n3. ВЕРИФИКАЦИЯ       → ОБЯЗАТЕЛЬНО проверить подключение ДО и ПОСЛЕ изменений\n4. СУЩЕСТВУЮЩИЙ КОД  → Адаптировать, НЕ создавать с нуля\n5. РЕГИСТР           → folderName ТОЧНО как в Dropbox (Mods ≠ mods)\n6. JSON FILENAME     → Проверить! Часто захардкожен и не обновляется автоматически\n7. ОДНА КАТЕГОРИЯ    → Не трогать другие категории\n```\n\n---\n\n## ⚠️ ВАЖНО: ДОСТУП ЧЕРЕЗ API, НЕ SHARED LINKS\n\n### Почему НЕ использовать Shared Links:\n```\n❌ Shared Links:\n- Требуют ручного создания для каждого файла\n- Могут истечь или быть отозваны\n- Ограничения на количество скачиваний\n- Проблемы с кэшированием (dl=0/dl=1)\n- Не подходят для динамического контента\n\n✅ Прямой API доступ:\n- Автоматический доступ ко всем файлам по пути\n- Работает с refresh token (автообновление)\n- Нет ограничений на скачивания\n- Полный контроль над загрузкой\n- Подходит для приложений с изменяющимся контентом\n```\n\n### Схема работы через API:\n```\n1. App Key + App Secret + Refresh Token\n           ↓\n2. POST /oauth2/token → получаем Access Token\n           ↓\n3. POST /2/files/download + path → получаем файл\n           ↓\n4. Access Token истёк? → повторяем шаг 2\n```\n\n---\n\n## 📥 ВХОДНЫЕ ДАННЫЕ\n\n```yaml\n# Категория\nНазвание UI:        [ИМЯ В ИНТЕРФЕЙСЕ]\nFolderName:         [ИЗ Readme.md]\nJSON файл:          content_[FolderName].json\nReadme файл:        readme_[FolderName].md\nPartKey:            [КЛЮЧ ИЗ JSON]\n\n# Dropbox креды для API доступа (ОБЯЗАТЕЛЬНО ОБНОВИТЬ ВСЕ!)\nApp Key:            [НОВЫЙ КЛЮЧ]\nApp Secret:         [НОВЫЙ СЕКРЕТ]\nRefresh Token:      [НОВЫЙ ТОКЕН]\nBase Path:          [ПУТЬ К ПАПКЕ КАТЕГОРИИ, например: /content/67ab80b5efa8e/]\n\n# ⚠️ НЕ ИСПОЛЬЗОВАТЬ:\n# - Shared links (https://www.dropbox.com/s/...)\n# - Direct download links (https://dl.dropboxusercontent.com/...)\n# - Content URL из shared links\n\n# Структура JSON (заполнить при адаптации промпта)\nПоля модели:\n  - field1: String    # описание\n  - field2: Int       # описание\n  - imageName: String # поле с картинкой\n  \nПодкатегории:       [НЕТ / список если есть]\n```\n\n---\n\n## 🔐 РАБОТА С DROPBOX API\n\n### Endpoints (использовать ТОЛЬКО эти):\n\n```yaml\n# Получение Access Token (обновление через Refresh Token)\nToken URL:      https://api.dropboxapi.com/oauth2/token\n\n# Работа с файлами\nList Folder:    https://api.dropboxapi.com/2/files/list_folder\nGet Metadata:   https://api.dropboxapi.com/2/files/get_metadata\nDownload:       https://content.dropboxapi.com/2/files/download\n\n# ⚠️ НЕ ИСПОЛЬЗОВАТЬ:\n# - /2/sharing/get_shared_link_file\n# - /2/sharing/create_shared_link_with_settings\n# - Любые endpoints из /sharing/*\n```\n\n### Паттерн загрузки файла через API:\n\n```swift\n// 1. Получить Access Token\nfunc refreshAccessToken() async throws -> String {\n    let url = URL(string: \"https://api.dropboxapi.com/oauth2/token\")!\n    var request = URLRequest(url: url)\n    request.httpMethod = \"POST\"\n    request.setValue(\"application/x-www-form-urlencoded\", forHTTPHeaderField: \"Content-Type\")\n    \n    let body = [\n        \"grant_type\": \"refresh_token\",\n        \"refresh_token\": refreshToken,      // Из кредов\n        \"client_id\": appKey,                // Из кредов\n        \"client_secret\": appSecret          // Из кредов\n    ]\n    request.httpBody = body.map { \"\\($0.key)=\\($0.value)\" }.joined(separator: \"&\").data(using: .utf8)\n    \n    let (data, _) = try await URLSession.shared.data(for: request)\n    let response = try JSONDecoder().decode(TokenResponse.self, from: data)\n    return response.accessToken\n}\n\n// 2. Скачать файл по пути\nfunc downloadFile(path: String) async throws -> Data {\n    let accessToken = try await refreshAccessToken()\n    \n    let url = URL(string: \"https://content.dropboxapi.com/2/files/download\")!\n    var request = URLRequest(url: url)\n    request.httpMethod = \"POST\"\n    request.setValue(\"Bearer \\(accessToken)\", forHTTPHeaderField: \"Authorization\")\n    \n    // ⚠️ ВАЖНО: путь передаётся в заголовке, не в body!\n    let apiArg = [\"path\": path]\n    let apiArgJSON = try JSONSerialization.data(withJSONObject: apiArg)\n    request.setValue(String(data: apiArgJSON, encoding: .utf8), forHTTPHeaderField: \"Dropbox-API-Arg\")\n    \n    let (data, _) = try await URLSession.shared.data(for: request)\n    return data\n}\n\n// 3. Использование\nlet jsonPath = \"\\(basePath)content_\\(folderName).json\"  // /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nlet jsonData = try await downloadFile(path: jsonPath)\n\nlet imagePath = \"\\(basePath)\\(item.imageName)\"          // /content/67ab80b5efa8e/preview.png\nlet imageData = try await downloadFile(path: imagePath)\n```\n\n### Структура DropboxManager (эталонная):\n\n```swift\nclass DropboxManager {\n    // КРЕДЫ — хранить безопасно (Keychain, Config, etc.)\n    private let appKey: String\n    private let appSecret: String\n    private let refreshToken: String\n    private let basePath: String  // /content/{FolderName}/\n    \n    // Кэш токена\n    private var accessToken: String?\n    private var tokenExpiry: Date?\n    \n    // MARK: - Token Management\n    \n    func getValidAccessToken() async throws -> String {\n        // Если токен валиден — вернуть\n        if let token = accessToken, let expiry = tokenExpiry, expiry > Date() {\n            return token\n        }\n        // Иначе обновить\n        return try await refreshAccessToken()\n    }\n    \n    private func refreshAccessToken() async throws -> String {\n        // POST https://api.dropboxapi.com/oauth2/token\n        // grant_type=refresh_token\n        // refresh_token, client_id, client_secret\n        // ...\n        \n        // Сохранить токен и время истечения\n        self.accessToken = newToken\n        self.tokenExpiry = Date().addingTimeInterval(TimeInterval(expiresIn - 60))\n        return newToken\n    }\n    \n    // MARK: - File Operations (ЧЕРЕЗ API, НЕ SHARED LINKS!)\n    \n    func downloadJSON<T: Decodable>(filename: String, as type: T.Type) async throws -> T {\n        let path = \"\\(basePath)\\(filename)\"\n        let data = try await downloadFile(path: path)\n        return try JSONDecoder().decode(type, from: data)\n    }\n    \n    func downloadImage(filename: String) async throws -> Data {\n        let path = \"\\(basePath)\\(filename)\"\n        return try await downloadFile(path: path)\n    }\n    \n    private func downloadFile(path: String) async throws -> Data {\n        let token = try await getValidAccessToken()\n        \n        var request = URLRequest(url: URL(string: \"https://content.dropboxapi.com/2/files/download\")!)\n        request.httpMethod = \"POST\"\n        request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n        request.setValue(\"{\\\"path\\\":\\\"\\(path)\\\"}\", forHTTPHeaderField: \"Dropbox-API-Arg\")\n        \n        let (data, response) = try await URLSession.shared.data(for: request)\n        \n        guard let httpResponse = response as? HTTPURLResponse,\n              httpResponse.statusCode == 200 else {\n            throw DropboxError.downloadFailed\n        }\n        \n        return data\n    }\n    \n    func listFolder(path: String? = nil) async throws -> [FileMetadata] {\n        let token = try await getValidAccessToken()\n        let folderPath = path ?? basePath\n        \n        var request = URLRequest(url: URL(string: \"https://api.dropboxapi.com/2/files/list_folder\")!)\n        request.httpMethod = \"POST\"\n        request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n        request.setValue(\"application/json\", forHTTPHeaderField: \"Content-Type\")\n        request.httpBody = try JSONSerialization.data(withJSONObject: [\"path\": folderPath])\n        \n        let (data, _) = try await URLSession.shared.data(for: request)\n        let response = try JSONDecoder().decode(ListFolderResponse.self, from: data)\n        return response.entries\n    }\n}\n```\n\n---\n\n## ⚡ АЛГОРИТМ РАБОТЫ\n\n### ШАГ 0: ВЕРИФИКАЦИЯ ПОДКЛЮЧЕНИЯ (ДО НАЧАЛА РАБОТЫ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить перед любыми изменениями в коде!**\n\n**0.1. Получить Access Token через API:**\n```bash\ncurl -X POST https://api.dropboxapi.com/oauth2/token \\\n  -d grant_type=refresh_token \\\n  -d refresh_token=\"[REFRESH_TOKEN]\" \\\n  -d client_id=\"[APP_KEY]\" \\\n  -d client_secret=\"[APP_SECRET]\"\n```\n✅ Ожидаемый результат: JSON с `access_token` и `expires_in`\n❌ Если ошибка → креды неверные, СТОП\n\n**0.2. Проверить доступ к папке категории через API:**\n```bash\ncurl -X POST https://api.dropboxapi.com/2/files/list_folder \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"[BASE_PATH]\"}'\n```\n✅ Ожидаемый результат: список файлов в папке (JSON, изображения, readme)\n❌ Если `path/not_found` → Base Path неверный, проверить путь\n\n**0.3. Скачать JSON манифест через API (НЕ через shared link!):**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\"\n```\n✅ Ожидаемый результат: валидный JSON с данными категории\n❌ Если ошибка → проверить имя файла и путь\n\n**0.4. Проверить загрузку изображения через API:**\n```bash\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH][image_filename_from_json]\\\"}\" \\\n  --output test_image.png\n```\n✅ Ожидаемый результат: файл скачан\n❌ Если ошибка → путь или имя файла неверны\n\n**📋 ЧЕКЛИСТ ВЕРИФИКАЦИИ (ДО) — выполнить и зафиксировать:**\n```\n- [ ] Access Token получен через /oauth2/token\n- [ ] Папка категории доступна через /2/files/list_folder\n- [ ] JSON скачивается через /2/files/download (НЕ shared link!)\n- [ ] Изображения скачиваются через /2/files/download (НЕ shared link!)\n- [ ] Все пути начинаются с / и ведут к реальным файлам\n```\n\n**📝 ЗАФИКСИРОВАТЬ РЕЗУЛЬТАТЫ:**\n```\nAccess Token:     [получен/ошибка]\nСписок файлов:    [перечислить что видно в папке]\nJSON структура:   [ключи верхнего уровня, поля объектов]\nПути к файлам:    [реальные пути из Dropbox, начинающиеся с /]\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n### ШАГ 1: ОБНОВИТЬ КРЕДЫ И МЕТОД ДОСТУПА\n\n**1.1. Найти в проекте** (искать в `DropboxManager`, `Constants`, `Config`, `Info.plist`, `.xcconfig`):\n\n```swift\n// УДАЛИТЬ/ЗАМЕНИТЬ (если есть):\ncontentURL / baseURL / sharedLink        → УДАЛИТЬ (не нужны для API)\ndirectDownloadURL                        → УДАЛИТЬ\n\n// ОБНОВИТЬ на новые значения:\nappKey / DROPBOX_APP_KEY / clientId       → [НОВЫЙ App Key]\nappSecret / DROPBOX_APP_SECRET            → [НОВЫЙ App Secret]  \nrefreshToken / REFRESH_TOKEN              → [НОВЫЙ Refresh Token]\nbasePath / BASE_PATH / contentRoot        → [НОВЫЙ Base Path]\n```\n\n**1.2. Проверить метод загрузки файлов:**\n\n```swift\n// ❌ НЕПРАВИЛЬНО — через shared links:\nfunc downloadFile(sharedLink: String) {\n    let url = sharedLink.replacingOccurrences(of: \"dl=0\", with: \"dl=1\")\n    // ...\n}\n\n// ❌ НЕПРАВИЛЬНО — через content URL:\nfunc downloadImage(name: String) {\n    let url = \"\\(contentURL)/\\(name)\"\n    // ...\n}\n\n// ✅ ПРАВИЛЬНО — через API:\nfunc downloadFile(path: String) async throws -> Data {\n    let token = try await getAccessToken()\n    var request = URLRequest(url: URL(string: \"https://content.dropboxapi.com/2/files/download\")!)\n    request.httpMethod = \"POST\"\n    request.setValue(\"Bearer \\(token)\", forHTTPHeaderField: \"Authorization\")\n    request.setValue(\"{\\\"path\\\":\\\"\\(path)\\\"}\", forHTTPHeaderField: \"Dropbox-API-Arg\")\n    // ...\n}\n```\n\n**1.3. Если в проекте используются shared links — РЕФАКТОРИНГ:**\n\n```swift\n// Найти все места где формируется URL для Dropbox:\n// - URLSession.shared.dataTask с dropbox URL\n// - AsyncImage с dropbox URL\n// - SDWebImage/Kingfisher с dropbox URL\n\n// Заменить на вызов DropboxManager:\n// ДО:\nAsyncImage(url: URL(string: \"\\(contentURL)/\\(imageName)\"))\n\n// ПОСЛЕ:\nDropboxAsyncImage(path: \"\\(basePath)\\(imageName)\")\n\n// Или загружать через manager:\nlet imageData = try await dropboxManager.downloadFile(path: \"\\(basePath)\\(imageName)\")\nlet image = UIImage(data: imageData)\n```\n\n### ШАГ 2: ПРОВЕРИТЬ ПУТИ\n\n**📍 ПОЛНЫЕ ПУТИ К ФАЙЛАМ В DROPBOX (для API):**\n```\nBase Path:        /content/{FolderName}/\n\nJSON манифест:    /content/{FolderName}/content_{FolderName}.json\nИзображения:      /content/{FolderName}/{image_filename}\nФайлы модов:      /content/{FolderName}/{mod_filename}\nReadme категории: /content/{FolderName}/readme_{FolderName}.md\n\n# Пример для FolderName = \"67ab80b5efa8e\":\nBase Path:        /content/67ab80b5efa8e/\nJSON манифест:    /content/67ab80b5efa8e/content_67ab80b5efa8e.json\nИзображения:      /content/67ab80b5efa8e/preview_item1.png\n\n# ⚠️ Путь ВСЕГДА начинается с /\n# ⚠️ НЕ использовать URL вида https://...\n```\n\n**Проверить в коде:**\n```swift\n// Путь к JSON (относительно Base Path):\n\"content_{folderName}.json\"\n\n// Полный путь к JSON для API:\n\"{basePath}content_{folderName}.json\"\n// Например: /content/67ab80b5efa8e/content_67ab80b5efa8e.json\n\n// ⚠️ ЧАСТАЯ ОШИБКА: jsonFileName захардкожен!\n// Если видишь такое — ИСПРАВИТЬ:\ncase .oldCategory: return \"content_oldname.json\"  // ❌\n// На:\nreturn \"content_\\(folderName).json\"               // ✅\n\n// Путь к изображениям для API:\n\"{basePath}{imageName}\"\n// Например: /content/67ab80b5efa8e/preview.png\n```\n\n### ШАГ 3: НАЙТИ ПОХОЖУЮ КАТЕГОРИЮ\n\n1. Открыть `ContentCategory` enum (или аналог)\n2. Выписать все существующие категории\n3. Найти похожую по структуре контента\n4. Определить сценарий:\n   - **A** — есть похожая → заменяем контент в ней\n   - **B** — нет похожей → создаём по образцу ближайшей\n\n### ШАГ 4: ОБНОВИТЬ КОД\n\n**ContentCategory enum:**\n```swift\ncase newCategory\n\nvar folderName: String {\n    case .newCategory: return \"ExactDropboxFolderName\"  // Регистр!\n}\n\nvar partKey: String {\n    case .newCategory: return \"keyFromJSON\"\n}\n\nvar displayName: String {\n    case .newCategory: return \"Название в UI\"\n}\n\n// ⚠️ Убедиться что используется API path, не URL:\nvar jsonPath: String {\n    case .newCategory: return \"/content/\\(folderName)/content_\\(folderName).json\"\n}\n```\n\n**Модель данных** — адаптировать существующую:\n```swift\nstruct NewCategoryItem: Codable {\n    let field1: String      // Из JSON\n    let field2: Int         // Из JSON\n    let imageName: String   // Поле с картинкой\n    // + вложенные структуры для подкатегорий если есть\n}\n```\n\n**Парсер** — использовать существующий, обновить тип.\n\n**View/ViewModel** — адаптировать существующие:\n- Обновить отображаемые поля\n- Обновить путь в DropboxImage (API path, не URL!)\n- Добавить UI для подкатегорий (если есть)\n\n**DropboxImage (проверить что использует API):**\n```swift\n// ✅ ПРАВИЛЬНО:\nstruct DropboxImage: View {\n    let path: String  // /content/folder/image.png\n    \n    var body: some View {\n        AsyncImageFromDropbox(path: path)\n    }\n}\n\n// ❌ НЕПРАВИЛЬНО:\nstruct DropboxImage: View {\n    let url: String  // https://dl.dropbox.com/...\n}\n```\n\n**Навигация** (только для сценария B) — добавить пункт меню.\n\n---\n\n### ШАГ 5: ФИНАЛЬНАЯ ВЕРИФИКАЦИЯ (ПОСЛЕ ИЗМЕНЕНИЙ)\n\n**⚠️ ОБЯЗАТЕЛЬНО выполнить после всех изменений в коде!**\n\n**5.1. Повторить все проверки из ШАГ 0:**\n- Получить Access Token через API\n- Проверить доступ к папке через API\n- Скачать JSON через API (не shared link!)\n- Скачать изображение через API (не shared link!)\n\n**5.2. Проверить что код использует API, а не shared links:**\n```swift\n// Поиск в проекте — НЕ должно быть:\n\"dropbox.com/s/\"           // shared link\n\"dl.dropboxusercontent\"    // direct download URL\n\"dl=1\"                     // shared link parameter\n\"raw=1\"                    // shared link parameter\n\n// Должно быть:\n\"api.dropboxapi.com\"       // API endpoint\n\"content.dropboxapi.com\"   // Download endpoint\n\"Dropbox-API-Arg\"          // API header\n\"Authorization: Bearer\"    // OAuth header\n```\n\n**5.3. Сверить пути в коде с реальными путями в Dropbox:**\n```bash\n# Путь в коде должен быть вида:\n/content/67ab80b5efa8e/content_67ab80b5efa8e.json\n\n# НЕ вида:\nhttps://www.dropbox.com/s/xxx/content.json?dl=0\n```\n\n**5.4. Проверить что модель данных соответствует JSON:**\n```bash\n# Скачать JSON через API и проверить поля\ncurl -X POST https://content.dropboxapi.com/2/files/download \\\n  -H \"Authorization: Bearer [ACCESS_TOKEN]\" \\\n  -H \"Dropbox-API-Arg: {\\\"path\\\": \\\"[BASE_PATH]content_[FolderName].json\\\"}\" \\\n  | jq 'keys'\n```\n✅ Все поля из JSON есть в модели\n❌ Если поля не совпадают → исправить модель\n\n**📋 ЧЕКЛИСТ ФИНАЛЬНОЙ ВЕРИФИКАЦИИ:**\n```\n- [ ] Access Token работает\n- [ ] Код использует API endpoints, не shared links\n- [ ] Путь к JSON = API path (начинается с /)\n- [ ] Путь к изображениям = API path (начинается с /)\n- [ ] Нет упоминаний shared links в коде\n- [ ] Код компилируется без ошибок\n- [ ] Приложение запускается\n- [ ] Данные категории загружаются через API\n- [ ] Изображения загружаются через API\n- [ ] Другие категории работают\n```\n\n**⚠️ Если ошибка → исправить и повторить проверку до успеха!**\n\n---\n\n## 🔧 TROUBLESHOOTING (ТОП-7 ОШИБОК)\n\n| Симптом | Причина | Решение |\n|---------|---------|---------|\n| 401 Unauthorized | Старый/невалидный токен | Обновить Access Token через refresh |\n| 400 Bad Request | Неверный формат Dropbox-API-Arg | Проверить JSON в заголовке (экранирование) |\n| Файлы не найдены | Неверный path | Проверить что путь начинается с / |\n| `invalid_access_token` | Токен истёк | Реализовать автообновление токена |\n| JSON не парсится | Путь ведёт на HTML | Проверить что используется API, не shared link |\n| Картинки не грузятся | URL вместо path | Заменить URL на API path |\n| `expired_access_token` | Нет авто-refresh | Добавить логику обновления токена |\n\n---\n\n## 🔄 МИГРАЦИЯ С SHARED LINKS НА API\n\nЕсли в проекте уже используются shared links:\n\n### Шаг 1: Идентифицировать места использования\n```bash\n# Найти все shared links:\ngrep -r \"dropbox.com/s\" .\ngrep -r \"dl.dropboxusercontent\" .\ngrep -r \"dl=1\" .\ngrep -r \"raw=1\" .\n```\n\n### Шаг 2: Создать/обновить DropboxManager\n```swift\n// Добавить методы для работы через API (см. эталонную структуру выше)\n```\n\n### Шаг 3: Заменить вызовы\n```swift\n// ДО (shared link):\nlet url = \"https://www.dropbox.com/s/abc123/image.png?dl=1\"\nURLSession.shared.dataTask(with: URL(string: url)!)\n\n// ПОСЛЕ (API):\nlet path = \"/content/folder/image.png\"\nlet data = try await dropboxManager.downloadFile(path: path)\n```\n\n### Шаг 4: Удалить старые креды\n```swift\n// Удалить:\n- contentURL\n- sharedLinks\n- directDownloadURLs\n\n// Оставить только:\n- appKey\n- appSecret\n- refreshToken\n- basePath\n```\n\n---\n\n## ✅ ФИНАЛЬНЫЙ ЧЕКЛИСТ (5 ПРОХОДОВ)\n\n**Пройти 5 раз, отмечая каждый пункт:**\n\n### ВЕРИФИКАЦИЯ ДО\n- [ ] ШАГ 0 выполнен полностью\n- [ ] Все API-вызовы через /oauth2/token и /2/files/* успешны\n- [ ] JSON структура понятна\n\n### МЕТОД ДОСТУПА\n- [ ] Используется API (oauth2/token + files/download)\n- [ ] НЕ используются shared links\n- [ ] НЕ используются direct download URLs\n- [ ] Access Token обновляется через refresh_token\n\n### КРЕДЫ\n- [ ] App Key обновлён\n- [ ] App Secret обновлён\n- [ ] Refresh Token обновлён\n- [ ] Base Path обновлён (формат: `/content/{FolderName}/`)\n- [ ] Content URL / Shared Links УДАЛЕНЫ (если были)\n\n### ПУТИ\n- [ ] Все пути начинаются с `/`\n- [ ] folderName = точное имя папки в Dropbox (регистр!)\n- [ ] jsonFileName формируется правильно (не захардкожен старый)\n- [ ] JSON path = `{basePath}content_{folderName}.json`\n- [ ] Image path = `{basePath}{imageName}`\n\n### ДАННЫЕ\n- [ ] Модель соответствует JSON (все поля, типы)\n- [ ] Парсер использует новую модель\n- [ ] Подкатегории обработаны (если есть)\n\n### UI\n- [ ] View отображает все поля\n- [ ] DropboxImage использует API path (не URL!)\n- [ ] ViewModel обновлён\n- [ ] Навигация добавлена (сценарий B)\n\n### ВЕРИФИКАЦИЯ ПОСЛЕ\n- [ ] ШАГ 5 выполнен полностью\n- [ ] Код использует ТОЛЬКО API endpoints\n- [ ] Нет shared links в коде\n- [ ] Приложение работает корректно\n\n### ИНТЕГРАЦИЯ\n- [ ] Компилируется без ошибок\n- [ ] Данные загружаются через API\n- [ ] Изображения загружаются через API\n- [ ] Другие категории работают\n\n```\nПРОХОД 1: ___  ПРОХОД 2: ___  ПРОХОД 3: ___  ПРОХОД 4: ___  ПРОХОД 5: ___\n\nВСЕ 5 ПРОХОДОВ ЗАВЕРШЕНЫ: [ДА/НЕТ]\n```\n\n**⚠️ Если хоть один пункт не выполнен — вернуться и исправить!**\n\n---\n\n## 📌 НАПОМИНАНИЕ\n\n```\n✓ МЕТОД ДОСТУПА     → ТОЛЬКО через API, НЕ shared links!\n✓ ВЕРИФИКАЦИЯ ДО    → проверить API подключение ПЕРЕД изменениями\n✓ Креды             → App Key, App Secret, Refresh Token, Base Path\n✓ ⚠️ Content URL    → НЕ НУЖЕН (удалить если есть)\n✓ ⚠️ Shared Links   → НЕ ИСПОЛЬЗОВАТЬ\n✓ Base Path         → путь к папке категории: /content/{FolderName}/\n✓ Все пути          → начинаются с / (API path, не URL!)\n✓ Существующий код  → АДАПТИРОВАТЬ  \n✓ Регистр           → ПРОВЕРИТЬ\n✓ jsonFileName      → ПРОВЕРИТЬ (часто захардкожен!)\n✓ ВЕРИФИКАЦИЯ ПОСЛЕ → проверить что API работает ПОСЛЕ изменений\n✓ 5 проходов        → ОБЯЗАТЕЛЬНО\n```\n\n---\n\n## 📚 СПРАВКА: API vs SHARED LINKS\n\n| Аспект | Shared Links | API Access |\n|--------|--------------|------------|\n| URL формат | `https://dropbox.com/s/...` | Path: `/folder/file.ext` |\n| Авторизация | Нет (публичная ссылка) | OAuth2 Bearer Token |\n| Срок действия | Может истечь | Токен обновляется |\n| Лимиты | Ограничения на скачивания | Зависит от тарифа API |\n| Динамический контент | Нужно пересоздавать ссылки | Автоматический доступ |\n| Безопасность | Публичный доступ | Контролируемый доступ |\n| Рекомендация | ❌ Не использовать | ✅ Использовать |\n"
             },
             {
               "id": "5fe95a35-08e2-4126-b839-c056349ab1a1",
@@ -14981,7 +14993,7 @@
         "operation": "get"
       },
       "position": [
-        -784,
+        -544,
         144
       ],
       "retryOnFail": true,
@@ -15265,7 +15277,7 @@
           "conditions": [
             {
               "id": "8293f3d9-f974-4223-b68e-66a16900d1b1",
-              "leftValue": "={{ $('Get an issue4').item.json.fields.customfield_13513 }}",
+              "leftValue": "={{ $('Get an issue2').item.json.fields.customfield_13513 }}",
               "operator": {
                 "operation": "notEmpty",
                 "singleValue": true,
@@ -15284,8 +15296,8 @@
         "options": {}
       },
       "position": [
-        -560,
-        144
+        -944,
+        160
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
@@ -15313,8 +15325,8 @@
         }
       },
       "position": [
-        -416,
-        352
+        -560,
+        576
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -15338,8 +15350,8 @@
         "resource": "issueComment"
       },
       "position": [
-        -256,
-        352
+        -400,
+        576
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -15588,7 +15600,7 @@
         }
       },
       "position": [
-        2256,
+        2272,
         -64
       ],
       "type": "n8n-nodes-base.jira",
@@ -15619,7 +15631,7 @@
         "resource": "repository"
       },
       "position": [
-        -336,
+        -320,
         -64
       ],
       "type": "n8n-nodes-base.github",
@@ -15660,14 +15672,14 @@
               "id": "field5",
               "name": "jira_key",
               "type": "string",
-              "value": "={{ $('Get an issue4').item.json.key }}"
+              "value": "={{ $('Get an issue2').item.json.key }}"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -112,
+        -96,
         -64
       ],
       "type": "n8n-nodes-base.set",
@@ -15726,7 +15738,7 @@
         "options": {}
       },
       "position": [
-        320,
+        336,
         -64
       ],
       "type": "n8n-nodes-base.set",
@@ -15748,7 +15760,7 @@
         "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
       },
       "position": [
-        544,
+        560,
         -64
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -15770,7 +15782,7 @@
         "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
       },
       "position": [
-        1408,
+        1424,
         -64
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -15806,7 +15818,7 @@
         "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.new_repo_name }}/contents/{{ $('Loop Over Items2').item.json.path }}"
       },
       "position": [
-        1632,
+        1648,
         -64
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -15820,7 +15832,7 @@
         "options": {}
       },
       "position": [
-        1856,
+        1872,
         -64
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -15854,14 +15866,14 @@
               "id": "field4",
               "name": "new_repo_name",
               "type": "string",
-              "value": "={{ $('Get an issue4').item.json.key }}"
+              "value": "={{ $('Get an issue2').item.json.key }}"
             }
           ]
         },
         "options": {}
       },
       "position": [
-        -560,
+        -544,
         -64
       ],
       "type": "n8n-nodes-base.set",
@@ -15922,7 +15934,7 @@
         }
       },
       "position": [
-        768,
+        784,
         -64
       ],
       "type": "n8n-nodes-base.set",
@@ -15936,7 +15948,7 @@
         "options": {}
       },
       "position": [
-        992,
+        1008,
         -64
       ],
       "type": "n8n-nodes-base.splitOut",
@@ -15977,7 +15989,7 @@
         "options": {}
       },
       "position": [
-        2080,
+        2096,
         -64
       ],
       "type": "n8n-nodes-base.set",
@@ -16003,7 +16015,7 @@
         "url": "https://api.github.com/orgs/IT-OUT/repos"
       },
       "position": [
-        96,
+        112,
         -64
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -16016,7 +16028,7 @@
         "options": {}
       },
       "position": [
-        1200,
+        1216,
         -64
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -16067,7 +16079,7 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "AD-13",
+            "issue_key": "AD-23",
             "serial_num_pc": "null"
           },
           "executionMode": "production",
@@ -16078,17 +16090,17 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9c512ea13171d2a2-FRA",
+            "cf-ray": "9c56a1061525dca9-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "content-length": "65",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.164.134",
+            "x-forwarded-for": "135.181.186.107, 172.71.148.49",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
@@ -16123,7 +16135,7 @@
         ".json",
         ".md"
       ],
-      "sharedLink": "https://www.dropbox.com/scl/fo/aj38rq9ps27auhar1nfd1/ADGoDWs1A5JrUZ3cC4N71lE?rlkey=7o14mu8cze0jo1wgy40e9ey0u&st=jjctaugq&dl=0"
+      "sharedLink": "https://www.dropbox.com/scl/fo/8u356xlvthlk5zjnle83r/ABaVrt-UCrLOWIMhyoCVoFM?rlkey=xk1d8o6s4k409vc4ru9bxyalt&st=m0y3lvvy"
     },
     "node:Schedule Trigger": {
       "recurrenceRules": []
@@ -16131,6 +16143,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-01-28T16:05:55.605Z",
-  "versionId": "1ba16b8e-8d0b-4519-b36c-6454f32c5027"
+  "updatedAt": "2026-01-29T08:11:53.431Z",
+  "versionId": "dca5cd3e-432f-421c-b04c-9639843ca94c"
 }
