@@ -34,9 +34,6 @@
               "type": "ai_languageModel"
             }
           ]
-        ],
-        "main": [
-          []
         ]
       },
       "Gemini: анализ ТЗ": {
@@ -81,9 +78,6 @@
               "type": "ai_tool"
             }
           ]
-        ],
-        "main": [
-          []
         ]
       },
       "Modrinth Search": {
@@ -95,9 +89,6 @@
               "type": "ai_tool"
             }
           ]
-        ],
-        "main": [
-          []
         ]
       },
       "R2 Presign (агент)": {
@@ -373,17 +364,6 @@
           ]
         ]
       },
-      "Подпись R2 (YouTube)": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Apify: скачать видео",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Подтвердил?": {
         "main": [
           [
@@ -640,14 +620,14 @@
           [
             {
               "index": 0,
-              "node": "Подпись R2 (YouTube)",
+              "node": "Apify: скачать видео",
               "type": "main"
             }
           ]
         ]
       }
     },
-    "createdAt": "2026-01-29T12:24:29.780Z",
+    "createdAt": "2026-02-03T11:52:17.088Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -960,16 +940,20 @@
         "id": "gemini1",
         "name": "Gemini: анализ ТЗ",
         "parameters": {
-          "inputType": "binary",
+          "messages": {
+            "values": [
+              {
+                "content": "Проанализируй скриншот ТЗ и верни JSON:\n{\n  \"project_key\": \"gta|fortnite|minecraft|tabs|other\",\n  \"topic_query\": \"КОРОТКИЙ поисковый запрос для YouTube (3-5 слов максимум!) БЕЗ слова shorts\",\n  \"filters\": { \"min_duration_sec\": 60, \"max_duration_sec\": 600 },\n  \"notes\": \"краткие заметки\"\n}\nВажно: Ищем ТОЛЬКО ГОРИЗОНТАЛЬНЫЕ видео (16:9), НЕ Shorts!\nВерни ТОЛЬКО валидный JSON."
+              }
+            ]
+          },
           "modelId": {
             "__rl": true,
-            "mode": "id",
-            "value": "models/gemini-2.0-flash"
+            "cachedResultName": "models/gemini-3-flash-preview",
+            "mode": "list",
+            "value": "models/gemini-3-flash-preview"
           },
-          "operation": "analyze",
-          "options": {},
-          "resource": "image",
-          "text": "Проанализируй скриншот ТЗ и верни JSON:\n{\n  \"project_key\": \"gta|fortnite|minecraft|tabs|other\",\n  \"topic_query\": \"КОРОТКИЙ поисковый запрос для YouTube (3-5 слов максимум!)\",\n  \"filters\": { \"min_duration_sec\": 10, \"max_duration_sec\": 120 },\n  \"notes\": \"краткие заметки\"\n}\nВерни ТОЛЬКО валидный JSON."
+          "options": {}
         },
         "position": [
           3040,
@@ -996,7 +980,7 @@
         "name": "Поиск YouTube",
         "parameters": {
           "options": {},
-          "url": "=https://www.googleapis.com/youtube/v3/search?part=snippet&q={{ encodeURIComponent($json.analysis.topic_query) }}&type=video&maxResults=20&videoDuration=short&key=AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+          "url": "=https://www.googleapis.com/youtube/v3/search?part=snippet&q={{ encodeURIComponent($json.analysis.topic_query) }}&type=video&maxResults=20&videoDuration=medium&key=AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
         },
         "position": [
           3552,
@@ -1023,7 +1007,7 @@
         "id": "n7",
         "name": "Фильтр видео",
         "parameters": {
-          "jsCode": "const prev = $('Разобрать ответ Gemini').first().json;\nconst items = $input.first().json.items || [];\nfunction parseDuration(iso) { const m = (iso || '').match(/PT(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)S)?/); if (!m) return 0; return (parseInt(m[1]||0)*3600) + (parseInt(m[2]||0)*60) + parseInt(m[3]||0); }\nconst validVideos = items.filter(v => { const dur = parseDuration(v.contentDetails?.duration || ''); return dur >= 10 && dur <= 120; }).slice(0, 5).map((v, idx) => ({ videoId: v.id, title: v.snippet?.title || '', duration: parseDuration(v.contentDetails?.duration || ''), views: parseInt(v.statistics?.viewCount || 0), watch_url: 'https://www.youtube.com/watch?v=' + v.id, index: idx }));\nreturn validVideos.map(video => ({ json: { chat_id: prev.chat_id, analysis: prev.analysis, video: video, total_videos: validVideos.length } }));"
+          "jsCode": "const prev = $('Разобрать ответ Gemini').first().json;\nconst items = $input.first().json.items || [];\n\nfunction parseDuration(iso) {\n  const m = (iso || '').match(/PT(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)S)?/);\n  if (!m) return 0;\n  return (parseInt(m[1]||0)*3600) + (parseInt(m[2]||0)*60) + parseInt(m[3]||0);\n}\n\n// Фильтруем: >60 сек, <20 мин, без #shorts в названии\nconst validVideos = items.filter(v => {\n  const dur = parseDuration(v.contentDetails?.duration || '');\n  const title = (v.snippet?.title || '').toLowerCase();\n  \n  // Исключаем Shorts\n  if (title.includes('#shorts') || title.includes('#short')) return false;\n  if (dur < 60) return false;  // Shorts обычно <60 сек\n  if (dur > 1200) return false;  // Max 20 минут\n  \n  return true;\n}).slice(0, 5).map((v, idx) => ({\n  videoId: v.id,\n  title: v.snippet?.title || '',\n  duration: parseDuration(v.contentDetails?.duration || ''),\n  views: parseInt(v.statistics?.viewCount || 0),\n  watch_url: 'https://www.youtube.com/watch?v=' + v.id,\n  index: idx\n}));\n\nreturn validVideos.map(video => ({ json: {\n  chat_id: prev.chat_id,\n  analysis: prev.analysis,\n  video: video,\n  total_videos: validVideos.length\n} }));"
         },
         "position": [
           4048,
@@ -1046,30 +1030,17 @@
         "typeVersion": 3
       },
       {
-        "id": "r2_presign",
-        "name": "Подпись R2 (YouTube)",
-        "parameters": {
-          "jsCode": "const R2_ACCESS_KEY_ID = '1ad7377299c9a4474623eb49b3cb2201';\nconst R2_SECRET_ACCESS_KEY = '9122a1da40ebdca3d96ba16d7733981d246a71a635c5587a78e6a584b6c38fed';\nconst R2_ENDPOINT_HOST = '0b487c633839b7b611c2d68f1ba5e8c9.r2.cloudflarestorage.com';\nconst R2_BUCKET = 'my-videos';\nconst AWS_REGION = 'auto';\nconst EXPIRES = 3600;\nconst prev = $input.first().json;\nconst r2Key = (prev.analysis?.project_key || 'other') + '/raw/youtube/' + (prev.video?.videoId || 'unknown') + '.mp4';\nconst now = new Date();\nconst amzDate = now.toISOString().replace(/[:-]|\\.\\d{3}/g, '').substring(0, 15) + 'Z';\nconst dateStamp = amzDate.substring(0, 8);\nconst canonicalUri = '/' + R2_BUCKET + '/' + r2Key;\nconst credentialScope = `${dateStamp}/${AWS_REGION}/s3/aws4_request`;\nconst credential = `${R2_ACCESS_KEY_ID}/${credentialScope}`;\nconst queryParams = { 'X-Amz-Algorithm': 'AWS4-HMAC-SHA256', 'X-Amz-Credential': credential, 'X-Amz-Date': amzDate, 'X-Amz-Expires': String(EXPIRES), 'X-Amz-SignedHeaders': 'host' };\nconst sortedKeys = Object.keys(queryParams).sort();\nconst canonicalQueryString = sortedKeys.map(k => encodeURIComponent(k) + '=' + encodeURIComponent(queryParams[k])).join('&');\nconst canonicalHeaders = 'host:' + R2_ENDPOINT_HOST + '\\n';\nconst canonicalRequest = ['PUT', canonicalUri, canonicalQueryString, canonicalHeaders, 'host', 'UNSIGNED-PAYLOAD'].join('\\n');\nconst crypto = require('crypto');\nconst canonicalRequestHash = crypto.createHash('sha256').update(canonicalRequest).digest('hex');\nconst stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, canonicalRequestHash].join('\\n');\nfunction hmacSha256(key, data) { return crypto.createHmac('sha256', key).update(data).digest(); }\nconst kDate = hmacSha256('AWS4' + R2_SECRET_ACCESS_KEY, dateStamp);\nconst kRegion = hmacSha256(kDate, AWS_REGION);\nconst kService = hmacSha256(kRegion, 's3');\nconst kSigning = hmacSha256(kService, 'aws4_request');\nconst signature = crypto.createHmac('sha256', kSigning).update(stringToSign).digest('hex');\nconst putUrl = `https://${R2_ENDPOINT_HOST}${canonicalUri}?${canonicalQueryString}&X-Amz-Signature=${signature}`;\nreturn [{ json: { ...prev, r2_key: r2Key, presigned_put_url: putUrl } }];"
-        },
-        "position": [
-          4544,
-          320
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
         "id": "get_download_url",
         "name": "Apify: скачать видео",
         "parameters": {
-          "jsonBody": "={{ JSON.stringify({ youtubeUrl: $json.video?.watch_url || '', r2PutUrl: $json.presigned_put_url || '', resolution: '480p' }) }}",
+          "jsonBody": "={{ JSON.stringify({ youtube_url: $json.video?.watch_url || '', r2_bucket: 'my-videos', r2_key: ($json.analysis?.project_key || 'other') + '/raw/youtube/' + ($json.video?.videoId || 'unknown') + '.mp4' }) }}",
           "method": "POST",
           "options": {
             "timeout": 300000
           },
           "sendBody": true,
           "specifyBody": "json",
-          "url": "https://api.apify.com/v2/acts/warmhearted_education~my-actor-1/run-sync-get-dataset-items?token=apify_api_AHMfUROZBobfB5HYYmJZWUx0e5rk1K3yJGA8&timeout=300"
+          "url": "https://dispatch-sculpture-opens-chapel.trycloudflare.com/download-sync"
         },
         "position": [
           4800,
@@ -1082,7 +1053,7 @@
         "id": "parse_download",
         "name": "Обработать результат",
         "parameters": {
-          "jsCode": "const input = $input.first().json;\nconst prev = $('Подпись R2 (YouTube)').first().json;\nconst results = Array.isArray(input) ? input : [input];\nconst actorResult = results[0] || {};\nreturn [{ json: { chat_id: prev.chat_id, analysis: prev.analysis, video: prev.video, result: { videoId: prev.video?.videoId || 'unknown', title: prev.video?.title || 'untitled', r2_key: prev.r2_key, quality: actorResult.client || '480p', download_success: actorResult.ok === true, upload_success: actorResult.ok === true, file_size_mb: actorResult.sizeMB || null, error: actorResult.error || null } } }];"
+          "jsCode": "const input = $input.first().json;\n\n// r2_key формат: {project}/raw/youtube/{videoId}.mp4\nconst r2Key = input.r2_key || 'other/raw/youtube/unknown.mp4';\nconst parts = r2Key.split('/');\nconst videoId = (parts[parts.length - 1] || '').replace('.mp4', '');\n\n// Используем public_url если сервис его вернул\nconst publicUrl = input.public_url || null;\n\nreturn [{ json: { \n  r2_key: r2Key,\n  public_url: publicUrl,\n  result: { \n    videoId: videoId,\n    title: videoId,\n    r2_key: r2Key,\n    public_url: publicUrl,\n    download_success: input.ok === true,\n    upload_success: input.ok === true,\n    file_size_mb: input.sizeMB || null,\n    error: input.error || null\n  }\n} }];"
         },
         "position": [
           5040,
@@ -1095,7 +1066,7 @@
         "id": "aggregate_results",
         "name": "Собрать результаты",
         "parameters": {
-          "jsCode": "const items = $input.all();\nif (!items.length) return [{ json: { error: 'No results', videos: [], success_count: 0, chat_id: '' } }];\nconst firstItem = items[0].json;\nconst results = items.map(i => i.json.result).filter(r => r);\nconst successCount = results.filter(r => r.upload_success).length;\nreturn [{ json: { chat_id: firstItem.chat_id, project_key: firstItem.analysis.project_key, topic_query: firstItem.analysis.topic_query, bucket: 'my-videos', timestamp: new Date().toISOString(), summary: { total: results.length, success: successCount, failed: results.length - successCount }, videos: results } }];"
+          "jsCode": "const items = $input.all();\nif (!items.length) return [{ json: { error: 'No results', videos: [], summary: { total: 0, success: 0, failed: 0 } } }];\n\nconst results = items.map(i => i.json.result).filter(r => r);\nconst successCount = results.filter(r => r.upload_success).length;\n\n// Получаем chat_id из начала цепочки\nlet chatId = 0;\ntry {\n  chatId = $('Фильтр видео').first().json.chat_id || 0;\n} catch(e) {\n  try {\n    chatId = $('Разобрать ответ Gemini').first().json.chat_id || 0;\n  } catch(e2) {}\n}\n\nreturn [{ json: { \n  chat_id: chatId,\n  summary: { total: results.length, success: successCount, failed: results.length - successCount },\n  videos: results\n} }];"
         },
         "position": [
           4544,
@@ -1108,7 +1079,7 @@
         "id": "n16",
         "name": "Формат отчёта",
         "parameters": {
-          "jsCode": "const d = $input.first().json;\nlet msg = '📊 *YouTube Material Report*\\n\\n🎮 *Project:* ' + (d.project_key || 'other').replace(/([_*`\\[\\]])/g, '\\\\$1') + '\\n🔍 *Query:* ' + (d.topic_query || '-').replace(/([_*`\\[\\]])/g, '\\\\$1') + '\\n🪣 *Bucket:* ' + (d.bucket || 'my-videos') + '\\n\\n📈 *Results:*\\n✅ Uploaded: ' + d.summary.success + '\\n❌ Failed: ' + d.summary.failed + '\\n📁 Total: ' + d.summary.total + '\\n\\n';\nif (d.videos && d.videos.length > 0) { msg += '🎬 *Videos:*\\n'; d.videos.slice(0, 10).forEach((v, i) => { const status = v.upload_success ? '✅' : '❌'; const title = (v.title || '').substring(0, 25).replace(/([_*`\\[\\]])/g, '\\\\$1'); msg += (i+1) + '. ' + status + ' ' + title + '\\n'; if (v.r2_key && v.upload_success) msg += '   📂 `' + v.r2_key + '`\\n'; }); }\nreturn [{ json: { chat_id: d.chat_id, text: msg } }];"
+          "jsCode": "const d = $input.first().json;\n\nlet msg = '✅ Скачано: ' + (d.summary?.success || 0) + '\\n\\n';\n\nif (d.videos && d.videos.length > 0) {\n  d.videos.forEach((v, i) => {\n    if (v.upload_success) {\n      // Используем public_url если есть, иначе r2_key\n      const url = v.public_url || v.r2_key || 'no link';\n      msg += url + '\\n\\n';\n    }\n  });\n} else {\n  msg += 'Нет ссылок';\n}\n\nreturn [{ json: { chat_id: d.chat_id || 0, text: msg } }];"
         },
         "position": [
           4800,
@@ -1170,7 +1141,7 @@
         "id": "369cee66-8088-4b0f-9bde-83813dafaf73",
         "name": "Определить тип",
         "parameters": {
-          "jsCode": "const staticData = $getWorkflowStaticData('global');\nconst sessions = staticData.activeSessions || {};\nconst data = $input.first().json;\nconst hasCallback = !!data.callback_query;\nconst hasMessage = !!data.message;\n\nif (hasCallback) {\n  const cb = data.callback_query;\n  const callbackData = cb.data || '';\n  const parts = callbackData.split(':');\n  const action = parts[0] || '';\n  const requestId = parts[1] || '';\n  \n  return [{ json: {\n    type: 'callback',\n    chat_id: cb.message?.chat?.id || cb.from?.id,\n    callback_id: cb.id,\n    action: action,\n    requestId: requestId,\n    from: cb.from\n  } }];\n}\n\nif (hasMessage) {\n  const msg = data.message;\n  const chatId = msg.chat?.id;\n  const text = (msg.text || msg.caption || '').trim();\n  const hasPhoto = !!(msg.photo && msg.photo.length > 0);\n  let photoId = null;\n  if (hasPhoto) {\n    photoId = msg.photo[msg.photo.length - 1].file_id;\n  }\n  \n  // Команды выхода из сессии\n  if (text === '/exit' || text === '/cancel' || text === '/stop' || text === 'выход') {\n    delete sessions[chatId];\n    staticData.activeSessions = sessions;\n    return [{ json: {\n      type: 'exit_session',\n      chat_id: chatId,\n      from: msg.from\n    } }];\n  }\n  \n  // Проверка активной сессии с агентом\n  const session = sessions[chatId];\n  if (session && session.mode === 'agent') {\n    // Таймаут 30 минут\n    const SESSION_TIMEOUT = 30 * 60 * 1000;\n    if (Date.now() - session.lastActivity < SESSION_TIMEOUT) {\n      session.lastActivity = Date.now();\n      staticData.activeSessions = sessions;\n      return [{ json: {\n        type: 'agent_session',\n        chat_id: chatId,\n        text: text,\n        question: text,\n        has_photo: hasPhoto,\n        photo_id: photoId,\n        from: msg.from,\n        message_id: msg.message_id\n      } }];\n    } else {\n      // Сессия истекла\n      delete sessions[chatId];\n      staticData.activeSessions = sessions;\n    }\n  }\n  \n  return [{ json: {\n    type: 'message',\n    chat_id: chatId,\n    text: text,\n    has_photo: hasPhoto,\n    photo_id: photoId,\n    from: msg.from,\n    message_id: msg.message_id\n  } }];\n}\n\nreturn [{ json: { type: 'unknown' } }];"
+          "jsCode": "const data = $input.first().json;\nconst hasCallback = !!data.callback_query;\nconst hasMessage = !!data.message;\n\nif (hasCallback) {\n  const cb = data.callback_query;\n  const action = cb.data || '';\n  \n  // Простые коды: yt, px, ai, no\n  let intent = 'unknown';\n  if (action === 'yt') intent = 'youtube_search';\n  else if (action === 'px') intent = 'pexels_search';\n  else if (action === 'ai') intent = 'agent_chat';\n  else if (action === 'no') intent = 'cancel';\n  \n  return [{ json: {\n    type: 'callback',\n    chat_id: cb.message?.chat?.id || cb.from?.id,\n    callback_id: cb.id,\n    action: action,\n    intent: intent,\n    from: cb.from\n  } }];\n}\n\nif (hasMessage) {\n  const msg = data.message;\n  const chatId = msg.chat?.id;\n  const text = (msg.text || msg.caption || '').trim();\n  const hasPhoto = !!(msg.photo && msg.photo.length > 0);\n  let photoId = null;\n  if (hasPhoto) {\n    photoId = msg.photo[msg.photo.length - 1].file_id;\n  }\n  \n  return [{ json: {\n    type: 'message',\n    chat_id: chatId,\n    text: text,\n    has_photo: hasPhoto,\n    photo_id: photoId,\n    from: msg.from,\n    message_id: msg.message_id\n  } }];\n}\n\nreturn [{ json: { type: 'unknown' } }];"
         },
         "position": [
           -1296,
@@ -1318,9 +1289,15 @@
                   "buttons": [
                     {
                       "additionalFields": {
-                        "callback_data": "={{ 'confirm_yes:' + $json.requestId }}"
+                        "callback_data": "yt"
                       },
-                      "text": "✅ Да, верно"
+                      "text": "🎬 YouTube"
+                    },
+                    {
+                      "additionalFields": {
+                        "callback_data": "px"
+                      },
+                      "text": "🖼 Pexels"
                     }
                   ]
                 }
@@ -1330,31 +1307,13 @@
                   "buttons": [
                     {
                       "additionalFields": {
-                        "callback_data": "={{ 'switch_pexels:' + $json.requestId }}"
+                        "callback_data": "ai"
                       },
-                      "text": "🎬 Стоковый футаж"
+                      "text": "🤖 AI"
                     },
                     {
                       "additionalFields": {
-                        "callback_data": "={{ 'switch_youtube:' + $json.requestId }}"
-                      },
-                      "text": "🎮 YouTube"
-                    }
-                  ]
-                }
-              },
-              {
-                "row": {
-                  "buttons": [
-                    {
-                      "additionalFields": {
-                        "callback_data": "={{ 'switch_agent:' + $json.requestId }}"
-                      },
-                      "text": "🤖 AI Агент"
-                    },
-                    {
-                      "additionalFields": {
-                        "callback_data": "={{ 'confirm_no:' + $json.requestId }}"
+                        "callback_data": "no"
                       },
                       "text": "❌ Отмена"
                     }
@@ -1364,7 +1323,7 @@
             ]
           },
           "replyMarkup": "inlineKeyboard",
-          "text": "={{ $json.question }}\n\nВыбери сценарий:"
+          "text": "={{ $json.question }}"
         },
         "position": [
           464,
@@ -1378,7 +1337,7 @@
         "id": "4712d312-0ea0-4413-a44b-064e1c7fecec",
         "name": "Обработать ответ",
         "parameters": {
-          "jsCode": "const staticData = $getWorkflowStaticData('global');\nconst pending = staticData.pendingConfirms || {};\nconst sessions = staticData.activeSessions || {};\nconst data = $input.first().json;\n\nconst requestId = data.requestId;\nconst action = data.action;\nconst chatId = data.chat_id;\n\nif (!requestId || !pending[requestId]) {\n  return [{ json: { route: 'expired', chat_id: chatId, error: 'Запрос устарел. Попробуй снова.' } }];\n}\n\nconst state = pending[requestId];\ndelete pending[requestId];\nstaticData.pendingConfirms = pending;\n\n// Подтверждение текущего выбора\nif (action === 'confirm_yes') {\n  // Если подтверждают agent_chat - создаём сессию\n  if (state.intent === 'agent_chat') {\n    sessions[chatId] = { mode: 'agent', lastActivity: Date.now() };\n    staticData.activeSessions = sessions;\n  }\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: state.intent,\n    query: state.query,\n    question: state.originalMessage,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на Pexels\nif (action === 'switch_pexels') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'pexels_search',\n    query: state.query,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на YouTube\nif (action === 'switch_youtube') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'youtube_search',\n    query: state.query,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на AI Агент - СОЗДАЁМ СЕССИЮ!\nif (action === 'switch_agent') {\n  sessions[chatId] = { mode: 'agent', lastActivity: Date.now() };\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'agent_chat',\n    query: state.query,\n    question: state.originalMessage,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Отмена\nif (action === 'confirm_no') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { route: 'clarify', chat_id: chatId } }];\n}\n\nreturn [{ json: { route: 'unknown', chat_id: chatId } }];"
+          "jsCode": "const data = $input.first().json;\nconst action = data.action;\nconst chatId = data.chat_id;\nconst intent = data.intent || 'unknown';\n\nif (action === 'no') {\n  return [{ json: { route: 'clarify', chat_id: chatId } }];\n}\n\n// yt, px, ai - execute\nreturn [{ json: { \n  route: 'execute',\n  chat_id: chatId,\n  intent: intent,\n  query: '',\n  question: '',\n  originalMessage: '',\n  has_photo: false,\n  photo_id: null\n} }];"
         },
         "position": [
           -272,
@@ -1486,7 +1445,7 @@
             "conditions": [
               {
                 "id": "1",
-                "leftValue": "={{ $json.needs_confirm }}",
+                "leftValue": "={{ $json.needs_confirm && !$json.has_photo }}",
                 "operator": {
                   "operation": "true",
                   "type": "boolean"
@@ -1497,7 +1456,7 @@
               "caseSensitive": true,
               "leftValue": "",
               "typeValidation": "strict",
-              "version": 1
+              "version": 2
             }
           },
           "options": {}
@@ -1513,7 +1472,7 @@
         "id": "7b193cd9-dd98-4e99-8f40-2d67cb9836cc",
         "name": "Сохранить состояние",
         "parameters": {
-          "jsCode": "const staticData = $getWorkflowStaticData('global');\nif (!staticData.pendingConfirms) staticData.pendingConfirms = {};\n\nconst data = $input.first().json;\nconst requestId = 'req_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);\n\nstaticData.pendingConfirms[requestId] = {\n  intent: data.intent,\n  query: data.query,           // английский\n  query_ru: data.query_ru,     // русский ← ДОБАВЬ\n  originalMessage: data.text,\n  has_photo: data.has_photo,\n  photo_id: data.photo_id,\n  createdAt: new Date().toISOString()\n};\n\n// Cleanup old requests (older than 1 hour)\nconst oneHourAgo = Date.now() - 3600000;\nfor (const id of Object.keys(staticData.pendingConfirms)) {\n  const req = staticData.pendingConfirms[id];\n  if (new Date(req.createdAt).getTime() < oneHourAgo) {\n    delete staticData.pendingConfirms[id];\n  }\n}\n\nreturn [{ json: {\n  chat_id: data.chat_id,\n  question: data.question,\n  requestId: requestId\n} }];"
+          "jsCode": "const data = $input.first().json;\n\n// Минимальное состояние - только то что нужно\nconst hp = data.has_photo ? '1' : '0';\nconst pi = data.photo_id ? data.photo_id.slice(-20) : ''; // последние 20 символов\n\nreturn [{ json: {\n  chat_id: data.chat_id,\n  question: data.question,\n  hp: hp,\n  pi: pi,\n  query: data.query || '',\n  text: data.text || ''\n} }];"
         },
         "position": [
           208,
@@ -1888,8 +1847,8 @@
           "text": "✅ Сессия завершена.\n\nОтправь новый запрос чтобы начать."
         },
         "position": [
-          -800,
-          704
+          -896,
+          864
         ],
         "type": "n8n-nodes-base.telegram",
         "typeVersion": 1.2,
@@ -2093,11 +2052,11 @@
         "typeVersion": 1.1
       }
     ],
-    "updatedAt": "2026-01-29T12:24:29.780Z",
-    "versionId": "08ae50c4-1f2f-42d8-bc85-abbdf63b238c",
+    "updatedAt": "2026-02-03T11:52:17.088Z",
+    "versionId": "9e312d84-50d5-470d-ac22-0ec63a4289fb",
     "workflowId": "9Gs5aCcRp9VDlrMM"
   },
-  "activeVersionId": "08ae50c4-1f2f-42d8-bc85-abbdf63b238c",
+  "activeVersionId": "9e312d84-50d5-470d-ac22-0ec63a4289fb",
   "connections": {
     "AI Агент": {
       "main": [
@@ -2130,9 +2089,6 @@
             "type": "ai_languageModel"
           }
         ]
-      ],
-      "main": [
-        []
       ]
     },
     "Gemini: анализ ТЗ": {
@@ -2177,9 +2133,6 @@
             "type": "ai_tool"
           }
         ]
-      ],
-      "main": [
-        []
       ]
     },
     "Modrinth Search": {
@@ -2191,9 +2144,6 @@
             "type": "ai_tool"
           }
         ]
-      ],
-      "main": [
-        []
       ]
     },
     "R2 Presign (агент)": {
@@ -2469,17 +2419,6 @@
         ]
       ]
     },
-    "Подпись R2 (YouTube)": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Apify: скачать видео",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Подтвердил?": {
       "main": [
         [
@@ -2736,7 +2675,7 @@
         [
           {
             "index": 0,
-            "node": "Подпись R2 (YouTube)",
+            "node": "Apify: скачать видео",
             "type": "main"
           }
         ]
@@ -3060,16 +2999,20 @@
       "id": "gemini1",
       "name": "Gemini: анализ ТЗ",
       "parameters": {
-        "inputType": "binary",
+        "messages": {
+          "values": [
+            {
+              "content": "Проанализируй скриншот ТЗ и верни JSON:\n{\n  \"project_key\": \"gta|fortnite|minecraft|tabs|other\",\n  \"topic_query\": \"КОРОТКИЙ поисковый запрос для YouTube (3-5 слов максимум!) БЕЗ слова shorts\",\n  \"filters\": { \"min_duration_sec\": 60, \"max_duration_sec\": 600 },\n  \"notes\": \"краткие заметки\"\n}\nВажно: Ищем ТОЛЬКО ГОРИЗОНТАЛЬНЫЕ видео (16:9), НЕ Shorts!\nВерни ТОЛЬКО валидный JSON."
+            }
+          ]
+        },
         "modelId": {
           "__rl": true,
-          "mode": "id",
-          "value": "models/gemini-2.0-flash"
+          "cachedResultName": "models/gemini-3-flash-preview",
+          "mode": "list",
+          "value": "models/gemini-3-flash-preview"
         },
-        "operation": "analyze",
-        "options": {},
-        "resource": "image",
-        "text": "Проанализируй скриншот ТЗ и верни JSON:\n{\n  \"project_key\": \"gta|fortnite|minecraft|tabs|other\",\n  \"topic_query\": \"КОРОТКИЙ поисковый запрос для YouTube (3-5 слов максимум!)\",\n  \"filters\": { \"min_duration_sec\": 10, \"max_duration_sec\": 120 },\n  \"notes\": \"краткие заметки\"\n}\nВерни ТОЛЬКО валидный JSON."
+        "options": {}
       },
       "position": [
         3040,
@@ -3096,7 +3039,7 @@
       "name": "Поиск YouTube",
       "parameters": {
         "options": {},
-        "url": "=https://www.googleapis.com/youtube/v3/search?part=snippet&q={{ encodeURIComponent($json.analysis.topic_query) }}&type=video&maxResults=20&videoDuration=short&key=AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
+        "url": "=https://www.googleapis.com/youtube/v3/search?part=snippet&q={{ encodeURIComponent($json.analysis.topic_query) }}&type=video&maxResults=20&videoDuration=medium&key=AIzaSyAe_DA6Ds45RYC-mPB6wbxdwM7QIN_pT4g"
       },
       "position": [
         3552,
@@ -3123,7 +3066,7 @@
       "id": "n7",
       "name": "Фильтр видео",
       "parameters": {
-        "jsCode": "const prev = $('Разобрать ответ Gemini').first().json;\nconst items = $input.first().json.items || [];\nfunction parseDuration(iso) { const m = (iso || '').match(/PT(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)S)?/); if (!m) return 0; return (parseInt(m[1]||0)*3600) + (parseInt(m[2]||0)*60) + parseInt(m[3]||0); }\nconst validVideos = items.filter(v => { const dur = parseDuration(v.contentDetails?.duration || ''); return dur >= 10 && dur <= 120; }).slice(0, 5).map((v, idx) => ({ videoId: v.id, title: v.snippet?.title || '', duration: parseDuration(v.contentDetails?.duration || ''), views: parseInt(v.statistics?.viewCount || 0), watch_url: 'https://www.youtube.com/watch?v=' + v.id, index: idx }));\nreturn validVideos.map(video => ({ json: { chat_id: prev.chat_id, analysis: prev.analysis, video: video, total_videos: validVideos.length } }));"
+        "jsCode": "const prev = $('Разобрать ответ Gemini').first().json;\nconst items = $input.first().json.items || [];\n\nfunction parseDuration(iso) {\n  const m = (iso || '').match(/PT(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+)S)?/);\n  if (!m) return 0;\n  return (parseInt(m[1]||0)*3600) + (parseInt(m[2]||0)*60) + parseInt(m[3]||0);\n}\n\n// Фильтруем: >60 сек, <20 мин, без #shorts в названии\nconst validVideos = items.filter(v => {\n  const dur = parseDuration(v.contentDetails?.duration || '');\n  const title = (v.snippet?.title || '').toLowerCase();\n  \n  // Исключаем Shorts\n  if (title.includes('#shorts') || title.includes('#short')) return false;\n  if (dur < 60) return false;  // Shorts обычно <60 сек\n  if (dur > 1200) return false;  // Max 20 минут\n  \n  return true;\n}).slice(0, 5).map((v, idx) => ({\n  videoId: v.id,\n  title: v.snippet?.title || '',\n  duration: parseDuration(v.contentDetails?.duration || ''),\n  views: parseInt(v.statistics?.viewCount || 0),\n  watch_url: 'https://www.youtube.com/watch?v=' + v.id,\n  index: idx\n}));\n\nreturn validVideos.map(video => ({ json: {\n  chat_id: prev.chat_id,\n  analysis: prev.analysis,\n  video: video,\n  total_videos: validVideos.length\n} }));"
       },
       "position": [
         4048,
@@ -3146,30 +3089,17 @@
       "typeVersion": 3
     },
     {
-      "id": "r2_presign",
-      "name": "Подпись R2 (YouTube)",
-      "parameters": {
-        "jsCode": "const R2_ACCESS_KEY_ID = '1ad7377299c9a4474623eb49b3cb2201';\nconst R2_SECRET_ACCESS_KEY = '9122a1da40ebdca3d96ba16d7733981d246a71a635c5587a78e6a584b6c38fed';\nconst R2_ENDPOINT_HOST = '0b487c633839b7b611c2d68f1ba5e8c9.r2.cloudflarestorage.com';\nconst R2_BUCKET = 'my-videos';\nconst AWS_REGION = 'auto';\nconst EXPIRES = 3600;\nconst prev = $input.first().json;\nconst r2Key = (prev.analysis?.project_key || 'other') + '/raw/youtube/' + (prev.video?.videoId || 'unknown') + '.mp4';\nconst now = new Date();\nconst amzDate = now.toISOString().replace(/[:-]|\\.\\d{3}/g, '').substring(0, 15) + 'Z';\nconst dateStamp = amzDate.substring(0, 8);\nconst canonicalUri = '/' + R2_BUCKET + '/' + r2Key;\nconst credentialScope = `${dateStamp}/${AWS_REGION}/s3/aws4_request`;\nconst credential = `${R2_ACCESS_KEY_ID}/${credentialScope}`;\nconst queryParams = { 'X-Amz-Algorithm': 'AWS4-HMAC-SHA256', 'X-Amz-Credential': credential, 'X-Amz-Date': amzDate, 'X-Amz-Expires': String(EXPIRES), 'X-Amz-SignedHeaders': 'host' };\nconst sortedKeys = Object.keys(queryParams).sort();\nconst canonicalQueryString = sortedKeys.map(k => encodeURIComponent(k) + '=' + encodeURIComponent(queryParams[k])).join('&');\nconst canonicalHeaders = 'host:' + R2_ENDPOINT_HOST + '\\n';\nconst canonicalRequest = ['PUT', canonicalUri, canonicalQueryString, canonicalHeaders, 'host', 'UNSIGNED-PAYLOAD'].join('\\n');\nconst crypto = require('crypto');\nconst canonicalRequestHash = crypto.createHash('sha256').update(canonicalRequest).digest('hex');\nconst stringToSign = ['AWS4-HMAC-SHA256', amzDate, credentialScope, canonicalRequestHash].join('\\n');\nfunction hmacSha256(key, data) { return crypto.createHmac('sha256', key).update(data).digest(); }\nconst kDate = hmacSha256('AWS4' + R2_SECRET_ACCESS_KEY, dateStamp);\nconst kRegion = hmacSha256(kDate, AWS_REGION);\nconst kService = hmacSha256(kRegion, 's3');\nconst kSigning = hmacSha256(kService, 'aws4_request');\nconst signature = crypto.createHmac('sha256', kSigning).update(stringToSign).digest('hex');\nconst putUrl = `https://${R2_ENDPOINT_HOST}${canonicalUri}?${canonicalQueryString}&X-Amz-Signature=${signature}`;\nreturn [{ json: { ...prev, r2_key: r2Key, presigned_put_url: putUrl } }];"
-      },
-      "position": [
-        4544,
-        320
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
       "id": "get_download_url",
       "name": "Apify: скачать видео",
       "parameters": {
-        "jsonBody": "={{ JSON.stringify({ youtubeUrl: $json.video?.watch_url || '', r2PutUrl: $json.presigned_put_url || '', resolution: '480p' }) }}",
+        "jsonBody": "={{ JSON.stringify({ youtube_url: $json.video?.watch_url || '', r2_bucket: 'my-videos', r2_key: ($json.analysis?.project_key || 'other') + '/raw/youtube/' + ($json.video?.videoId || 'unknown') + '.mp4' }) }}",
         "method": "POST",
         "options": {
           "timeout": 300000
         },
         "sendBody": true,
         "specifyBody": "json",
-        "url": "https://api.apify.com/v2/acts/warmhearted_education~my-actor-1/run-sync-get-dataset-items?token=apify_api_AHMfUROZBobfB5HYYmJZWUx0e5rk1K3yJGA8&timeout=300"
+        "url": "https://dispatch-sculpture-opens-chapel.trycloudflare.com/download-sync"
       },
       "position": [
         4800,
@@ -3182,7 +3112,7 @@
       "id": "parse_download",
       "name": "Обработать результат",
       "parameters": {
-        "jsCode": "const input = $input.first().json;\nconst prev = $('Подпись R2 (YouTube)').first().json;\nconst results = Array.isArray(input) ? input : [input];\nconst actorResult = results[0] || {};\nreturn [{ json: { chat_id: prev.chat_id, analysis: prev.analysis, video: prev.video, result: { videoId: prev.video?.videoId || 'unknown', title: prev.video?.title || 'untitled', r2_key: prev.r2_key, quality: actorResult.client || '480p', download_success: actorResult.ok === true, upload_success: actorResult.ok === true, file_size_mb: actorResult.sizeMB || null, error: actorResult.error || null } } }];"
+        "jsCode": "const input = $input.first().json;\n\n// r2_key формат: {project}/raw/youtube/{videoId}.mp4\nconst r2Key = input.r2_key || 'other/raw/youtube/unknown.mp4';\nconst parts = r2Key.split('/');\nconst videoId = (parts[parts.length - 1] || '').replace('.mp4', '');\n\n// Используем public_url если сервис его вернул\nconst publicUrl = input.public_url || null;\n\nreturn [{ json: { \n  r2_key: r2Key,\n  public_url: publicUrl,\n  result: { \n    videoId: videoId,\n    title: videoId,\n    r2_key: r2Key,\n    public_url: publicUrl,\n    download_success: input.ok === true,\n    upload_success: input.ok === true,\n    file_size_mb: input.sizeMB || null,\n    error: input.error || null\n  }\n} }];"
       },
       "position": [
         5040,
@@ -3195,7 +3125,7 @@
       "id": "aggregate_results",
       "name": "Собрать результаты",
       "parameters": {
-        "jsCode": "const items = $input.all();\nif (!items.length) return [{ json: { error: 'No results', videos: [], success_count: 0, chat_id: '' } }];\nconst firstItem = items[0].json;\nconst results = items.map(i => i.json.result).filter(r => r);\nconst successCount = results.filter(r => r.upload_success).length;\nreturn [{ json: { chat_id: firstItem.chat_id, project_key: firstItem.analysis.project_key, topic_query: firstItem.analysis.topic_query, bucket: 'my-videos', timestamp: new Date().toISOString(), summary: { total: results.length, success: successCount, failed: results.length - successCount }, videos: results } }];"
+        "jsCode": "const items = $input.all();\nif (!items.length) return [{ json: { error: 'No results', videos: [], summary: { total: 0, success: 0, failed: 0 } } }];\n\nconst results = items.map(i => i.json.result).filter(r => r);\nconst successCount = results.filter(r => r.upload_success).length;\n\n// Получаем chat_id из начала цепочки\nlet chatId = 0;\ntry {\n  chatId = $('Фильтр видео').first().json.chat_id || 0;\n} catch(e) {\n  try {\n    chatId = $('Разобрать ответ Gemini').first().json.chat_id || 0;\n  } catch(e2) {}\n}\n\nreturn [{ json: { \n  chat_id: chatId,\n  summary: { total: results.length, success: successCount, failed: results.length - successCount },\n  videos: results\n} }];"
       },
       "position": [
         4544,
@@ -3208,7 +3138,7 @@
       "id": "n16",
       "name": "Формат отчёта",
       "parameters": {
-        "jsCode": "const d = $input.first().json;\nlet msg = '📊 *YouTube Material Report*\\n\\n🎮 *Project:* ' + (d.project_key || 'other').replace(/([_*`\\[\\]])/g, '\\\\$1') + '\\n🔍 *Query:* ' + (d.topic_query || '-').replace(/([_*`\\[\\]])/g, '\\\\$1') + '\\n🪣 *Bucket:* ' + (d.bucket || 'my-videos') + '\\n\\n📈 *Results:*\\n✅ Uploaded: ' + d.summary.success + '\\n❌ Failed: ' + d.summary.failed + '\\n📁 Total: ' + d.summary.total + '\\n\\n';\nif (d.videos && d.videos.length > 0) { msg += '🎬 *Videos:*\\n'; d.videos.slice(0, 10).forEach((v, i) => { const status = v.upload_success ? '✅' : '❌'; const title = (v.title || '').substring(0, 25).replace(/([_*`\\[\\]])/g, '\\\\$1'); msg += (i+1) + '. ' + status + ' ' + title + '\\n'; if (v.r2_key && v.upload_success) msg += '   📂 `' + v.r2_key + '`\\n'; }); }\nreturn [{ json: { chat_id: d.chat_id, text: msg } }];"
+        "jsCode": "const d = $input.first().json;\n\nlet msg = '✅ Скачано: ' + (d.summary?.success || 0) + '\\n\\n';\n\nif (d.videos && d.videos.length > 0) {\n  d.videos.forEach((v, i) => {\n    if (v.upload_success) {\n      // Используем public_url если есть, иначе r2_key\n      const url = v.public_url || v.r2_key || 'no link';\n      msg += url + '\\n\\n';\n    }\n  });\n} else {\n  msg += 'Нет ссылок';\n}\n\nreturn [{ json: { chat_id: d.chat_id || 0, text: msg } }];"
       },
       "position": [
         4800,
@@ -3270,7 +3200,7 @@
       "id": "369cee66-8088-4b0f-9bde-83813dafaf73",
       "name": "Определить тип",
       "parameters": {
-        "jsCode": "const staticData = $getWorkflowStaticData('global');\nconst sessions = staticData.activeSessions || {};\nconst data = $input.first().json;\nconst hasCallback = !!data.callback_query;\nconst hasMessage = !!data.message;\n\nif (hasCallback) {\n  const cb = data.callback_query;\n  const callbackData = cb.data || '';\n  const parts = callbackData.split(':');\n  const action = parts[0] || '';\n  const requestId = parts[1] || '';\n  \n  return [{ json: {\n    type: 'callback',\n    chat_id: cb.message?.chat?.id || cb.from?.id,\n    callback_id: cb.id,\n    action: action,\n    requestId: requestId,\n    from: cb.from\n  } }];\n}\n\nif (hasMessage) {\n  const msg = data.message;\n  const chatId = msg.chat?.id;\n  const text = (msg.text || msg.caption || '').trim();\n  const hasPhoto = !!(msg.photo && msg.photo.length > 0);\n  let photoId = null;\n  if (hasPhoto) {\n    photoId = msg.photo[msg.photo.length - 1].file_id;\n  }\n  \n  // Команды выхода из сессии\n  if (text === '/exit' || text === '/cancel' || text === '/stop' || text === 'выход') {\n    delete sessions[chatId];\n    staticData.activeSessions = sessions;\n    return [{ json: {\n      type: 'exit_session',\n      chat_id: chatId,\n      from: msg.from\n    } }];\n  }\n  \n  // Проверка активной сессии с агентом\n  const session = sessions[chatId];\n  if (session && session.mode === 'agent') {\n    // Таймаут 30 минут\n    const SESSION_TIMEOUT = 30 * 60 * 1000;\n    if (Date.now() - session.lastActivity < SESSION_TIMEOUT) {\n      session.lastActivity = Date.now();\n      staticData.activeSessions = sessions;\n      return [{ json: {\n        type: 'agent_session',\n        chat_id: chatId,\n        text: text,\n        question: text,\n        has_photo: hasPhoto,\n        photo_id: photoId,\n        from: msg.from,\n        message_id: msg.message_id\n      } }];\n    } else {\n      // Сессия истекла\n      delete sessions[chatId];\n      staticData.activeSessions = sessions;\n    }\n  }\n  \n  return [{ json: {\n    type: 'message',\n    chat_id: chatId,\n    text: text,\n    has_photo: hasPhoto,\n    photo_id: photoId,\n    from: msg.from,\n    message_id: msg.message_id\n  } }];\n}\n\nreturn [{ json: { type: 'unknown' } }];"
+        "jsCode": "const data = $input.first().json;\nconst hasCallback = !!data.callback_query;\nconst hasMessage = !!data.message;\n\nif (hasCallback) {\n  const cb = data.callback_query;\n  const action = cb.data || '';\n  \n  // Простые коды: yt, px, ai, no\n  let intent = 'unknown';\n  if (action === 'yt') intent = 'youtube_search';\n  else if (action === 'px') intent = 'pexels_search';\n  else if (action === 'ai') intent = 'agent_chat';\n  else if (action === 'no') intent = 'cancel';\n  \n  return [{ json: {\n    type: 'callback',\n    chat_id: cb.message?.chat?.id || cb.from?.id,\n    callback_id: cb.id,\n    action: action,\n    intent: intent,\n    from: cb.from\n  } }];\n}\n\nif (hasMessage) {\n  const msg = data.message;\n  const chatId = msg.chat?.id;\n  const text = (msg.text || msg.caption || '').trim();\n  const hasPhoto = !!(msg.photo && msg.photo.length > 0);\n  let photoId = null;\n  if (hasPhoto) {\n    photoId = msg.photo[msg.photo.length - 1].file_id;\n  }\n  \n  return [{ json: {\n    type: 'message',\n    chat_id: chatId,\n    text: text,\n    has_photo: hasPhoto,\n    photo_id: photoId,\n    from: msg.from,\n    message_id: msg.message_id\n  } }];\n}\n\nreturn [{ json: { type: 'unknown' } }];"
       },
       "position": [
         -1296,
@@ -3418,9 +3348,15 @@
                 "buttons": [
                   {
                     "additionalFields": {
-                      "callback_data": "={{ 'confirm_yes:' + $json.requestId }}"
+                      "callback_data": "yt"
                     },
-                    "text": "✅ Да, верно"
+                    "text": "🎬 YouTube"
+                  },
+                  {
+                    "additionalFields": {
+                      "callback_data": "px"
+                    },
+                    "text": "🖼 Pexels"
                   }
                 ]
               }
@@ -3430,31 +3366,13 @@
                 "buttons": [
                   {
                     "additionalFields": {
-                      "callback_data": "={{ 'switch_pexels:' + $json.requestId }}"
+                      "callback_data": "ai"
                     },
-                    "text": "🎬 Стоковый футаж"
+                    "text": "🤖 AI"
                   },
                   {
                     "additionalFields": {
-                      "callback_data": "={{ 'switch_youtube:' + $json.requestId }}"
-                    },
-                    "text": "🎮 YouTube"
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "additionalFields": {
-                      "callback_data": "={{ 'switch_agent:' + $json.requestId }}"
-                    },
-                    "text": "🤖 AI Агент"
-                  },
-                  {
-                    "additionalFields": {
-                      "callback_data": "={{ 'confirm_no:' + $json.requestId }}"
+                      "callback_data": "no"
                     },
                     "text": "❌ Отмена"
                   }
@@ -3464,7 +3382,7 @@
           ]
         },
         "replyMarkup": "inlineKeyboard",
-        "text": "={{ $json.question }}\n\nВыбери сценарий:"
+        "text": "={{ $json.question }}"
       },
       "position": [
         464,
@@ -3478,7 +3396,7 @@
       "id": "4712d312-0ea0-4413-a44b-064e1c7fecec",
       "name": "Обработать ответ",
       "parameters": {
-        "jsCode": "const staticData = $getWorkflowStaticData('global');\nconst pending = staticData.pendingConfirms || {};\nconst sessions = staticData.activeSessions || {};\nconst data = $input.first().json;\n\nconst requestId = data.requestId;\nconst action = data.action;\nconst chatId = data.chat_id;\n\nif (!requestId || !pending[requestId]) {\n  return [{ json: { route: 'expired', chat_id: chatId, error: 'Запрос устарел. Попробуй снова.' } }];\n}\n\nconst state = pending[requestId];\ndelete pending[requestId];\nstaticData.pendingConfirms = pending;\n\n// Подтверждение текущего выбора\nif (action === 'confirm_yes') {\n  // Если подтверждают agent_chat - создаём сессию\n  if (state.intent === 'agent_chat') {\n    sessions[chatId] = { mode: 'agent', lastActivity: Date.now() };\n    staticData.activeSessions = sessions;\n  }\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: state.intent,\n    query: state.query,\n    question: state.originalMessage,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на Pexels\nif (action === 'switch_pexels') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'pexels_search',\n    query: state.query,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на YouTube\nif (action === 'switch_youtube') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'youtube_search',\n    query: state.query,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Переключение на AI Агент - СОЗДАЁМ СЕССИЮ!\nif (action === 'switch_agent') {\n  sessions[chatId] = { mode: 'agent', lastActivity: Date.now() };\n  staticData.activeSessions = sessions;\n  return [{ json: { \n    route: 'execute',\n    chat_id: chatId,\n    intent: 'agent_chat',\n    query: state.query,\n    question: state.originalMessage,\n    originalMessage: state.originalMessage\n  } }];\n}\n\n// Отмена\nif (action === 'confirm_no') {\n  delete sessions[chatId]; // Сброс сессии\n  staticData.activeSessions = sessions;\n  return [{ json: { route: 'clarify', chat_id: chatId } }];\n}\n\nreturn [{ json: { route: 'unknown', chat_id: chatId } }];"
+        "jsCode": "const data = $input.first().json;\nconst action = data.action;\nconst chatId = data.chat_id;\nconst intent = data.intent || 'unknown';\n\nif (action === 'no') {\n  return [{ json: { route: 'clarify', chat_id: chatId } }];\n}\n\n// yt, px, ai - execute\nreturn [{ json: { \n  route: 'execute',\n  chat_id: chatId,\n  intent: intent,\n  query: '',\n  question: '',\n  originalMessage: '',\n  has_photo: false,\n  photo_id: null\n} }];"
       },
       "position": [
         -272,
@@ -3586,7 +3504,7 @@
           "conditions": [
             {
               "id": "1",
-              "leftValue": "={{ $json.needs_confirm }}",
+              "leftValue": "={{ $json.needs_confirm && !$json.has_photo }}",
               "operator": {
                 "operation": "true",
                 "type": "boolean"
@@ -3597,7 +3515,7 @@
             "caseSensitive": true,
             "leftValue": "",
             "typeValidation": "strict",
-            "version": 1
+            "version": 2
           }
         },
         "options": {}
@@ -3613,7 +3531,7 @@
       "id": "7b193cd9-dd98-4e99-8f40-2d67cb9836cc",
       "name": "Сохранить состояние",
       "parameters": {
-        "jsCode": "const staticData = $getWorkflowStaticData('global');\nif (!staticData.pendingConfirms) staticData.pendingConfirms = {};\n\nconst data = $input.first().json;\nconst requestId = 'req_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);\n\nstaticData.pendingConfirms[requestId] = {\n  intent: data.intent,\n  query: data.query,           // английский\n  query_ru: data.query_ru,     // русский ← ДОБАВЬ\n  originalMessage: data.text,\n  has_photo: data.has_photo,\n  photo_id: data.photo_id,\n  createdAt: new Date().toISOString()\n};\n\n// Cleanup old requests (older than 1 hour)\nconst oneHourAgo = Date.now() - 3600000;\nfor (const id of Object.keys(staticData.pendingConfirms)) {\n  const req = staticData.pendingConfirms[id];\n  if (new Date(req.createdAt).getTime() < oneHourAgo) {\n    delete staticData.pendingConfirms[id];\n  }\n}\n\nreturn [{ json: {\n  chat_id: data.chat_id,\n  question: data.question,\n  requestId: requestId\n} }];"
+        "jsCode": "const data = $input.first().json;\n\n// Минимальное состояние - только то что нужно\nconst hp = data.has_photo ? '1' : '0';\nconst pi = data.photo_id ? data.photo_id.slice(-20) : ''; // последние 20 символов\n\nreturn [{ json: {\n  chat_id: data.chat_id,\n  question: data.question,\n  hp: hp,\n  pi: pi,\n  query: data.query || '',\n  text: data.text || ''\n} }];"
       },
       "position": [
         208,
@@ -3988,8 +3906,8 @@
         "text": "✅ Сессия завершена.\n\nОтправь новый запрос чтобы начать."
       },
       "position": [
-        -800,
-        704
+        -896,
+        864
       ],
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -4217,27 +4135,94 @@
   ],
   "staticData": {
     "global": {
-      "activeSessions": {
-        "500448463": {
-          "lastActivity": 1769685685911,
-          "mode": "agent"
-        }
-      },
+      "activeSessions": {},
       "pendingConfirms": {
-        "req_1769670419526_u7oum5bx1": {
-          "createdAt": "2026-01-29T07:06:59.526Z",
-          "has_photo": false,
-          "intent": "agent_chat",
-          "originalMessage": "сука не еби мозг все ты моежшь",
-          "photo_id": null,
-          "query": "сука не еби мозг все ты моежшь",
-          "query_ru": "сука не еби мозг все ты можешь"
+        "req_1770107717005_ur25yu0lb": {
+          "createdAt": "2026-02-03T08:35:17.005Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBJmmBs0CpfHAbdznon_iEpKbC6t5PAAJgEGsbfxcJSN5HNNxaQfxcAQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770108194345_i5jlt4g7k": {
+          "createdAt": "2026-02-03T08:43:14.345Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBKGmBtR2Urxf2Icdnv9FlqkAEbsjsAAJ0EGsbfxcJSLahsEeRYmboAQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770108510978_89vhmwrw2": {
+          "createdAt": "2026-02-03T08:48:30.978Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBKmmBtluYKFiIChGBsZNBK12rjiM7AAJ9EGsbfxcJSAkfEugX3yNsAQADAgADeQADOAQ",
+          "query": "gaming playthrough with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770109279405_tn357fhp3": {
+          "createdAt": "2026-02-03T09:01:19.405Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBLGmBuVvzjXupxGtabaaHlZxTPBUyAAKWEGsbfxcJSKaHQuTnBNlBAQADAgADeQADOAQ",
+          "query": "with photo",
+          "query_ru": "с фото"
+        },
+        "req_1770109747170_a5ewz5x2s": {
+          "createdAt": "2026-02-03T09:09:07.170Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBLmmBuy_-w7gymo0vu5eI9HSgtVE6AAKnEGsbfxcJSEzn9E_9nzldAQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770110047971_6fhx0eauh": {
+          "createdAt": "2026-02-03T09:14:07.971Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBMGmBvFyaLbRpgOge4WA-OH8aEtRQAAKtEGsbfxcJSMhW8KiJjTC8AQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770110239472_zkt4oqcii": {
+          "createdAt": "2026-02-03T09:17:19.472Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBM2mBvRlyqNuOic39pONEOfAmrcccAAKyEGsbfxcJSB3D1JAzr2wXAQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770110344466_prl4jeu3m": {
+          "createdAt": "2026-02-03T09:19:04.466Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBNWmBvYEXJ8nAFX6-X6j0ydF5m-67AAK2EGsbfxcJSHZffM-3DVQFAQADAgADeQADOAQ",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
+        },
+        "req_1770110607895_5b0eseu9m": {
+          "createdAt": "2026-02-03T09:23:27.895Z",
+          "has_photo": true,
+          "intent": "youtube_search",
+          "originalMessage": "",
+          "photo_id": "AgACAgIAAxkBAAIBN2mBvosOQoD31CgZwaztCtln5TbtAALBEGsbfxcJSJUAAS3C6lCWdwEAAwIAA3kAAzgE",
+          "query": "gameplay with photo",
+          "query_ru": "геймплей с фото"
         }
       }
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2026-01-29T12:24:29.777Z",
-  "versionId": "08ae50c4-1f2f-42d8-bc85-abbdf63b238c"
+  "updatedAt": "2026-02-03T11:52:17.085Z",
+  "versionId": "9e312d84-50d5-470d-ac22-0ec63a4289fb"
 }
