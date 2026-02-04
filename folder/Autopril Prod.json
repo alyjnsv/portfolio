@@ -80,6 +80,11 @@
           ]
         ]
       },
+      "Add a comment9": {
+        "main": [
+          []
+        ]
+      },
       "Add an attachment to an issue": {
         "main": [
           [
@@ -355,22 +360,11 @@
           ]
         ]
       },
-      "Convert MD5": {
-        "main": [
-          [
-            {
-              "index": 1,
-              "node": "Merge1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Convert MD6": {
         "main": [
           [
             {
-              "index": 2,
+              "index": 1,
               "node": "Merge1",
               "type": "main"
             }
@@ -383,6 +377,17 @@
             {
               "index": 0,
               "node": "Loop Over Items",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Count Items": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If8",
               "type": "main"
             }
           ]
@@ -689,17 +694,6 @@
           ]
         ]
       },
-      "Extract from File5": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Convert MD5",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Extract from File6": {
         "main": [
           [
@@ -953,17 +947,6 @@
           ]
         ]
       },
-      "Get an issue12": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Вытаскиваем файл с prompt1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Get an issue14": {
         "main": [
           [
@@ -1107,17 +1090,6 @@
           ]
         ]
       },
-      "Get file": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Extract from File5",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Get file1": {
         "main": [
           [
@@ -1175,11 +1147,6 @@
       "Get row(s)3": {
         "main": [
           [
-            {
-              "index": 0,
-              "node": "Get an issue12",
-              "type": "main"
-            },
             {
               "index": 0,
               "node": "Get an issue17",
@@ -1460,6 +1427,29 @@
           ]
         ]
       },
+      "If8": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Get an issue14",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Add an attachment to an issue1",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Update an issue10",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Init": {
         "main": [
           [
@@ -1680,12 +1670,7 @@
           [
             {
               "index": 0,
-              "node": "Get an issue14",
-              "type": "main"
-            },
-            {
-              "index": 0,
-              "node": "Add an attachment to an issue1",
+              "node": "Count Items",
               "type": "main"
             }
           ]
@@ -2094,6 +2079,17 @@
           ]
         ]
       },
+      "Update an issue10": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Add a comment12",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Update an issue6": {
         "main": [
           [
@@ -2210,17 +2206,6 @@
             {
               "index": 0,
               "node": "Get file1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Вытаскиваем файл с prompt1": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get file",
               "type": "main"
             }
           ]
@@ -2358,7 +2343,7 @@
         ]
       }
     },
-    "createdAt": "2026-02-02T06:59:09.581Z",
+    "createdAt": "2026-02-04T08:52:10.401Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -5287,33 +5272,6 @@
         "waitBetweenTries": 5000
       },
       {
-        "alwaysOutputData": true,
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "4ace6dda-dd7a-47ee-86b0-88435289e582",
-        "name": "Get file",
-        "onError": "continueRegularOutput",
-        "parameters": {
-          "attachmentId": "={{ $json.attachmentIds }}",
-          "download": true,
-          "jiraVersion": "serverPat",
-          "operation": "get",
-          "resource": "issueAttachment"
-        },
-        "position": [
-          1104,
-          1168
-        ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
-      },
-      {
         "id": "703ab136-54d3-4817-9382-798ec7d29fc6",
         "name": "Get row(s)3",
         "parameters": {
@@ -5342,35 +5300,9 @@
         "typeVersion": 1
       },
       {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "4f520076-32b4-4243-ab92-618429914edf",
-        "name": "Get an issue12",
-        "parameters": {
-          "additionalFields": {},
-          "issueKey": "={{ $('Get an issue11').item.json.key }}",
-          "jiraVersion": "serverPat",
-          "operation": "get"
-        },
-        "position": [
-          672,
-          1168
-        ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
-      },
-      {
         "id": "ccf17ed8-627a-4ea3-8747-b3b0be102d6d",
         "name": "Merge1",
-        "parameters": {
-          "numberInputs": 3
-        },
+        "parameters": {},
         "position": [
           4512,
           880
@@ -5417,7 +5349,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          5440,
+          5680,
           752
         ],
         "retryOnFail": true,
@@ -5441,7 +5373,7 @@
           "operation": "get"
         },
         "position": [
-          4960,
+          5200,
           752
         ],
         "retryOnFail": true,
@@ -5456,7 +5388,7 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          5120,
+          5360,
           752
         ],
         "type": "n8n-nodes-base.code",
@@ -5471,7 +5403,7 @@
           "options": {}
         },
         "position": [
-          5280,
+          5520,
           752
         ],
         "type": "n8n-nodes-base.splitOut",
@@ -5492,7 +5424,7 @@
           "resource": "issueAttachment"
         },
         "position": [
-          4976,
+          5200,
           1040
         ],
         "retryOnFail": true,
@@ -5523,27 +5455,13 @@
           }
         },
         "position": [
-          5280,
+          5504,
           1040
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1,
         "waitBetweenTries": 5000
-      },
-      {
-        "id": "9ecab17c-4ee7-484f-aa78-a52225d0cadf",
-        "name": "Вытаскиваем файл с prompt1",
-        "onError": "continueRegularOutput",
-        "parameters": {
-          "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
-        },
-        "position": [
-          896,
-          1168
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
       },
       {
         "credentials": {
@@ -5583,40 +5501,11 @@
         "typeVersion": 2
       },
       {
-        "id": "f8ee0c7c-2035-4cf8-92e4-353c040be5ed",
-        "name": "Extract from File5",
-        "onError": "continueRegularOutput",
-        "parameters": {
-          "operation": "text",
-          "options": {}
-        },
-        "position": [
-          1328,
-          1168
-        ],
-        "type": "n8n-nodes-base.extractFromFile",
-        "typeVersion": 1.1
-      },
-      {
-        "id": "cf4fb25d-700f-4f20-a391-e053c535bbaf",
-        "name": "Convert MD5",
-        "onError": "continueRegularOutput",
-        "parameters": {
-          "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || $input.first().json.data;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_1.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
-        },
-        "position": [
-          1552,
-          1168
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
         "id": "ca06c4d6-2f71-445e-a56a-48b549425106",
         "name": "No Operation, do nothing7",
         "parameters": {},
         "position": [
-          5440,
+          5664,
           1040
         ],
         "type": "n8n-nodes-base.noOp",
@@ -5627,8 +5516,8 @@
         "name": "No Operation, do nothing8",
         "parameters": {},
         "position": [
-          5584,
-          736
+          5824,
+          752
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -5939,7 +5828,7 @@
         "id": "543ada34-9a59-4083-8f1a-b4af24b043f7",
         "name": "Find Category Files",
         "parameters": {
-          "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
+          "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра И с возможным пробелом\n      const hasReadme = /readme\\s*_/i.test(lowerName);\n      const hasContent = /content\\s*_/i.test(lowerName);\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Извлекаем ID с учётом возможного пробела\n      const match = fileName.match(/(?:readme|content)\\s*_\\s*([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
         },
         "position": [
           1728,
@@ -6234,7 +6123,7 @@
           "keep": "lastItems"
         },
         "position": [
-          5136,
+          5360,
           1040
         ],
         "type": "n8n-nodes-base.limit",
@@ -8018,13 +7907,111 @@
         ],
         "type": "n8n-nodes-base.splitInBatches",
         "typeVersion": 3
+      },
+      {
+        "id": "d09354fb-e19b-40b8-9ae4-03c76bf2b277",
+        "name": "Count Items",
+        "parameters": {
+          "jsCode": "const items = $input.all();\nconst count = items.length;\n\nreturn [{\n  json: {\n    itemCount: count,\n    message: `Получено ${count} айтемов с Merge`\n  }\n}];"
+        },
+        "position": [
+          4704,
+          880
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "e9a3f19c-1648-4e0f-b462-3c67d660a50c",
+        "name": "If8",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "3aa0f641-754a-480a-86c1-f75b3b16a67a",
+                "leftValue": "={{ $json.itemCount }}",
+                "operator": {
+                  "operation": "gt",
+                  "type": "number"
+                },
+                "rightValue": 1
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          4912,
+          880
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "dba70419-345a-4972-bfb2-a8162fa387b2",
+        "name": "Add a comment12",
+        "parameters": {
+          "comment": "=Нету всех файлов для обработки!",
+          "issueKey": "={{ $('Get row(s)3').last().json.Issue }}",
+          "jiraVersion": "serverPat",
+          "options": {},
+          "resource": "issueComment"
+        },
+        "position": [
+          5344,
+          896
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "jiraSoftwareServerPatApi": {
+            "id": "WwUfZZ4lukKmf4G9",
+            "name": "Jira SW Task Buider"
+          }
+        },
+        "id": "74928c53-749f-43c0-a056-37f55b487435",
+        "name": "Update an issue10",
+        "parameters": {
+          "issueKey": "={{ $('Get row(s)3').last().json.Issue }}",
+          "jiraVersion": "serverPat",
+          "operation": "update",
+          "updateFields": {
+            "statusId": {
+              "__rl": true,
+              "cachedResultName": "Backlog-Admin",
+              "mode": "list",
+              "value": "101"
+            }
+          }
+        },
+        "position": [
+          5200,
+          896
+        ],
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2026-02-02T06:59:09.581Z",
-    "versionId": "173a3fd2-975c-47ff-903d-53bddb5c53bd",
+    "updatedAt": "2026-02-04T08:52:10.401Z",
+    "versionId": "abab0133-014f-4e4f-ac4f-650e37a7b6a9",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "173a3fd2-975c-47ff-903d-53bddb5c53bd",
+  "activeVersionId": "abab0133-014f-4e4f-ac4f-650e37a7b6a9",
   "connections": {
     "AI Agent2": {
       "main": [
@@ -8101,6 +8088,11 @@
             "type": "main"
           }
         ]
+      ]
+    },
+    "Add a comment9": {
+      "main": [
+        []
       ]
     },
     "Add an attachment to an issue": {
@@ -8378,22 +8370,11 @@
         ]
       ]
     },
-    "Convert MD5": {
-      "main": [
-        [
-          {
-            "index": 1,
-            "node": "Merge1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Convert MD6": {
       "main": [
         [
           {
-            "index": 2,
+            "index": 1,
             "node": "Merge1",
             "type": "main"
           }
@@ -8406,6 +8387,17 @@
           {
             "index": 0,
             "node": "Loop Over Items",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Count Items": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If8",
             "type": "main"
           }
         ]
@@ -8712,17 +8704,6 @@
         ]
       ]
     },
-    "Extract from File5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Convert MD5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Extract from File6": {
       "main": [
         [
@@ -8976,17 +8957,6 @@
         ]
       ]
     },
-    "Get an issue12": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Вытаскиваем файл с prompt1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get an issue14": {
       "main": [
         [
@@ -9130,17 +9100,6 @@
         ]
       ]
     },
-    "Get file": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract from File5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get file1": {
       "main": [
         [
@@ -9198,11 +9157,6 @@
     "Get row(s)3": {
       "main": [
         [
-          {
-            "index": 0,
-            "node": "Get an issue12",
-            "type": "main"
-          },
           {
             "index": 0,
             "node": "Get an issue17",
@@ -9483,6 +9437,29 @@
         ]
       ]
     },
+    "If8": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get an issue14",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Add an attachment to an issue1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Update an issue10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Init": {
       "main": [
         [
@@ -9703,12 +9680,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue14",
-            "type": "main"
-          },
-          {
-            "index": 0,
-            "node": "Add an attachment to an issue1",
+            "node": "Count Items",
             "type": "main"
           }
         ]
@@ -10117,6 +10089,17 @@
         ]
       ]
     },
+    "Update an issue10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Add a comment12",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Update an issue6": {
       "main": [
         [
@@ -10233,17 +10216,6 @@
           {
             "index": 0,
             "node": "Get file1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Вытаскиваем файл с prompt1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get file",
             "type": "main"
           }
         ]
@@ -13314,33 +13286,6 @@
       "waitBetweenTries": 5000
     },
     {
-      "alwaysOutputData": true,
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "4ace6dda-dd7a-47ee-86b0-88435289e582",
-      "name": "Get file",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "attachmentId": "={{ $json.attachmentIds }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        1104,
-        1168
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
       "id": "703ab136-54d3-4817-9382-798ec7d29fc6",
       "name": "Get row(s)3",
       "parameters": {
@@ -13369,35 +13314,9 @@
       "typeVersion": 1
     },
     {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "4f520076-32b4-4243-ab92-618429914edf",
-      "name": "Get an issue12",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Get an issue11').item.json.key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        672,
-        1168
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
       "id": "ccf17ed8-627a-4ea3-8747-b3b0be102d6d",
       "name": "Merge1",
-      "parameters": {
-        "numberInputs": 3
-      },
+      "parameters": {},
       "position": [
         4512,
         880
@@ -13444,7 +13363,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        5440,
+        5680,
         752
       ],
       "retryOnFail": true,
@@ -13468,7 +13387,7 @@
         "operation": "get"
       },
       "position": [
-        4960,
+        5200,
         752
       ],
       "retryOnFail": true,
@@ -13483,7 +13402,7 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        5120,
+        5360,
         752
       ],
       "type": "n8n-nodes-base.code",
@@ -13498,7 +13417,7 @@
         "options": {}
       },
       "position": [
-        5280,
+        5520,
         752
       ],
       "type": "n8n-nodes-base.splitOut",
@@ -13519,7 +13438,7 @@
         "resource": "issueAttachment"
       },
       "position": [
-        4976,
+        5200,
         1040
       ],
       "retryOnFail": true,
@@ -13550,27 +13469,13 @@
         }
       },
       "position": [
-        5280,
+        5504,
         1040
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1,
       "waitBetweenTries": 5000
-    },
-    {
-      "id": "9ecab17c-4ee7-484f-aa78-a52225d0cadf",
-      "name": "Вытаскиваем файл с prompt1",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "const item = $json;\n\n// attachments — массив объектов вложений\nconst attachments = item.fields?.attachment || [];\n\n// 1) Сначала фильтруем по имени/ссылке:\n//    - выкидываем всё, где есть \"dropbox\"\n//    - оставляем только то, где есть \"promt\"\nconst filtered = attachments.filter(a => {\n  const text = (a.filename || a.content || '').toLowerCase();\n\n  // если есть dropbox — выкидываем\n  if (text.includes('dropbox')) return false;\n\n  // оставляем только promt (если нужно prompt — добавь вторую проверку)\n  return text.includes('prompt') || text.includes('promt');\n;\n});\n\n// 2) Мапим в массив ID\nconst attachmentIds = filtered.map(a => a.id);\n\nreturn {\n  json: {\n    attachmentIds, // ID только тех файлов, где в имени/ссылке есть promt и нет dropbox\n  },\n};\n\n"
-      },
-      "position": [
-        896,
-        1168
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
     },
     {
       "credentials": {
@@ -13610,40 +13515,11 @@
       "typeVersion": 2
     },
     {
-      "id": "f8ee0c7c-2035-4cf8-92e4-353c040be5ed",
-      "name": "Extract from File5",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        1328,
-        1168
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "cf4fb25d-700f-4f20-a391-e053c535bbaf",
-      "name": "Convert MD5",
-      "onError": "continueRegularOutput",
-      "parameters": {
-        "jsCode": "// Берём текст из AI Agent\nconst aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || $input.first().json.data;\n\n// Формируем Markdown\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\n\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: 'prompt_1.md',   // <-- нужное имя\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n  }\n}];\n"
-      },
-      "position": [
-        1552,
-        1168
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
       "id": "ca06c4d6-2f71-445e-a56a-48b549425106",
       "name": "No Operation, do nothing7",
       "parameters": {},
       "position": [
-        5440,
+        5664,
         1040
       ],
       "type": "n8n-nodes-base.noOp",
@@ -13654,8 +13530,8 @@
       "name": "No Operation, do nothing8",
       "parameters": {},
       "position": [
-        5584,
-        736
+        5824,
+        752
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -13966,7 +13842,7 @@
       "id": "543ada34-9a59-4083-8f1a-b4af24b043f7",
       "name": "Find Category Files",
       "parameters": {
-        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра\n      const hasReadme = lowerName.includes('readme_');\n      const hasContent = lowerName.includes('content_');\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n      const match = fileName.match(/[_]([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
+        "jsCode": "let readmeContent = null;\ntry {\n  const extractNode = $('Extract Main Readme').first();\n  readmeContent = extractNode.json?.data || null;\n} catch (e) {\n  console.log('Extract Main Readme not found');\n}\n\nconst contentNames = {};\nif (readmeContent) {\n  const lines = readmeContent.split('\\n');\n  for (const line of lines) {\n    // Исправлено: буквенно-цифровой ID (5+ символов) вместо только hex (10+)\n    const match = line.match(/^\\s*`?([a-zA-Z0-9]{5,})`?\\s*[-–—]\\s*(.+)$/i);\n    if (match) {\n      contentNames[match[1].toLowerCase()] = match[2].trim();\n    }\n  }\n}\n\nconst getAttachmentId = (att) => {\n  if (att.content) {\n    const m = att.content.match(/\\/attachment\\/(\\d+)\\//);\n    if (m) return m[1];\n  }\n  if (att.self) {\n    const m = att.self.match(/\\/attachment\\/(\\d+)$/);\n    if (m) return m[1];\n  }\n  return att.id?.toString() || null;\n};\n\nconst fileMap = {};\ntry {\n  const issueItems = $('Get an issue17').all();\n  for (const item of issueItems) {\n    const attachments = item.json?.fields?.attachment || [];\n    for (const att of attachments) {\n      // Проверяем все варианты имени файла (fileName, filename, name)\n      let fileName = att.fileName || att.filename || att.name || att.Filename || att.FileName || '';\n      if (!fileName && att.content) {\n        fileName = decodeURIComponent(att.content.split('?')[0].split('/').pop() || '');\n      }\n      if (!fileName) continue;\n      \n      fileName = decodeURIComponent(fileName);\n      \n      // Приводим к нижнему регистру для поиска\n      const lowerName = fileName.toLowerCase();\n      \n      // Ищем readme_ или content_ независимо от регистра И с возможным пробелом\n      const hasReadme = /readme\\s*_/i.test(lowerName);\n      const hasContent = /content\\s*_/i.test(lowerName);\n      \n      if (!hasReadme && !hasContent) continue;\n      \n      // Извлекаем ID с учётом возможного пробела\n      const match = fileName.match(/(?:readme|content)\\s*_\\s*([a-zA-Z0-9]{5,})/i);\n      const fileId = match ? match[1].toLowerCase() : null;\n      if (!fileId) continue;\n      \n      if (!fileMap[fileId]) {\n        fileMap[fileId] = { \n          id: fileId, \n          readme: null, readmeAttId: null,\n          content: null, contentAttId: null,\n          contentName: contentNames[fileId] || 'Unknown'\n        };\n      }\n      \n      if (hasReadme) {\n        fileMap[fileId].readme = fileName;\n        fileMap[fileId].readmeAttId = getAttachmentId(att);\n      } else if (hasContent) {\n        fileMap[fileId].content = fileName;\n        fileMap[fileId].contentAttId = getAttachmentId(att);\n      }\n    }\n  }\n} catch (e) {\n  console.log('Error:', e.message);\n}\n\nconst results = Object.values(fileMap).map((pair, index) => ({ json: { ...pair, loopIndex: index + 1 } }));\nreturn results.length > 0 ? results : [{ json: { error: 'No readme_ID/content_ID files found' } }];"
       },
       "position": [
         1728,
@@ -14261,7 +14137,7 @@
         "keep": "lastItems"
       },
       "position": [
-        5136,
+        5360,
         1040
       ],
       "type": "n8n-nodes-base.limit",
@@ -16045,6 +15921,104 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "id": "d09354fb-e19b-40b8-9ae4-03c76bf2b277",
+      "name": "Count Items",
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst count = items.length;\n\nreturn [{\n  json: {\n    itemCount: count,\n    message: `Получено ${count} айтемов с Merge`\n  }\n}];"
+      },
+      "position": [
+        4704,
+        880
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "e9a3f19c-1648-4e0f-b462-3c67d660a50c",
+      "name": "If8",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3aa0f641-754a-480a-86c1-f75b3b16a67a",
+              "leftValue": "={{ $json.itemCount }}",
+              "operator": {
+                "operation": "gt",
+                "type": "number"
+              },
+              "rightValue": 1
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        4912,
+        880
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "dba70419-345a-4972-bfb2-a8162fa387b2",
+      "name": "Add a comment12",
+      "parameters": {
+        "comment": "=Нету всех файлов для обработки!",
+        "issueKey": "={{ $('Get row(s)3').last().json.Issue }}",
+        "jiraVersion": "serverPat",
+        "options": {},
+        "resource": "issueComment"
+      },
+      "position": [
+        5344,
+        896
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "74928c53-749f-43c0-a056-37f55b487435",
+      "name": "Update an issue10",
+      "parameters": {
+        "issueKey": "={{ $('Get row(s)3').last().json.Issue }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "statusId": {
+            "__rl": true,
+            "cachedResultName": "Backlog-Admin",
+            "mode": "list",
+            "value": "101"
+          }
+        }
+      },
+      "position": [
+        5200,
+        896
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -16052,8 +16026,8 @@
       {
         "json": {
           "body": {
-            "content_key": "CON-5077",
-            "dev_key": "AD-4"
+            "content_key": "CON-5179",
+            "dev_key": "AD-62"
           },
           "executionMode": "production",
           "headers": {
@@ -16063,65 +16037,23 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9c4ebd47f52cd285-FRA",
+            "cf-ray": "9c88bac876cc8f33-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "43",
+            "content-length": "44",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.164.134",
+            "x-forwarded-for": "135.181.186.107, 162.158.95.87",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
           "params": {},
           "query": {},
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/dropbox_file"
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ],
-    "Webhook1": [
-      {
-        "json": {
-          "body": {
-            "description": "null",
-            "issue_key": "AD-23",
-            "serial_num_pc": "null"
-          },
-          "executionMode": "production",
-          "headers": {
-            "accept": "application/json, application/javascript, text/javascript",
-            "accept-encoding": "gzip, br",
-            "cdn-loop": "cloudflare; loops=1; subreqs=1",
-            "cf-connecting-ip": "135.181.186.107",
-            "cf-ew-via": "15",
-            "cf-ipcountry": "FI",
-            "cf-ray": "9c56a1061525dca9-FRA",
-            "cf-visitor": "{\"scheme\":\"https\"}",
-            "cf-worker": "n8n.cloud",
-            "content-length": "65",
-            "content-type": "application/json",
-            "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.71.148.49",
-            "x-forwarded-host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
-            "x-is-trusted": "yes",
-            "x-real-ip": "135.181.186.107"
-          },
-          "params": {},
-          "query": {},
-          "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
-        },
-        "pairedItem": {
-          "item": 0
         }
       }
     ]
@@ -16147,7 +16079,7 @@
         ".json",
         ".md"
       ],
-      "sharedLink": "https://www.dropbox.com/scl/fo/xoyp99r2s6whe6nu4j10x/ANPx7Qzi18BO5zuEUxzm4sE?rlkey=nf9yd3gvqm42pex4epbas7tt1&st=ulwhobdx&dl=0"
+      "sharedLink": "https://www.dropbox.com/scl/fo/ure9fk9gea2xzn92aep3c/AD3wuoKgyXUKpDTe2fb3Mbc?rlkey=bvyiqgcny1bfxpwcknlp4rwl4&st=i1pgq4az"
     },
     "node:Schedule Trigger": {
       "recurrenceRules": []
@@ -16155,6 +16087,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-02-02T06:59:09.577Z",
-  "versionId": "173a3fd2-975c-47ff-903d-53bddb5c53bd"
+  "updatedAt": "2026-02-04T08:52:10.396Z",
+  "versionId": "abab0133-014f-4e4f-ac4f-650e37a7b6a9"
 }
