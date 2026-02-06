@@ -47,17 +47,6 @@
           ]
         ]
       },
-      "Add a comment2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "No Operation, do nothing1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Add a comment9": {
         "main": [
           []
@@ -180,6 +169,17 @@
           ]
         ]
       },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Add an attachment to an issue1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
       "Code in JavaScript2": {
         "main": [
           [
@@ -290,6 +290,17 @@
             {
               "index": 0,
               "node": "If8",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Count Items1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If9",
               "type": "main"
             }
           ]
@@ -683,17 +694,6 @@
           ]
         ]
       },
-      "Get an issue": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Проверка на файлы Prompt1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Get an issue URL": {
         "main": [
           [
@@ -820,7 +820,7 @@
           [
             {
               "index": 0,
-              "node": "Проверка на файлы Prompt",
+              "node": "Get an issue3",
               "type": "main"
             }
           ]
@@ -913,13 +913,7 @@
       },
       "Google Gemini Chat Model3": {
         "ai_languageModel": [
-          [
-            {
-              "index": 1,
-              "node": "AI Generate Design Spec",
-              "type": "ai_languageModel"
-            }
-          ]
+          []
         ]
       },
       "Hardcode Prompt": {
@@ -1005,24 +999,6 @@
           ]
         ]
       },
-      "If2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get an issue3",
-              "type": "main"
-            }
-          ],
-          [
-            {
-              "index": 0,
-              "node": "Update an issue working6",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "If4": {
         "main": [
           [
@@ -1099,6 +1075,24 @@
         "main": [
           [],
           []
+        ]
+      },
+      "If9": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Code in JavaScript",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "No Operation, do nothing",
+              "type": "main"
+            }
+          ]
         ]
       },
       "Init": {
@@ -1276,7 +1270,7 @@
             },
             {
               "index": 0,
-              "node": "Add an attachment to an issue1",
+              "node": "Count Items1",
               "type": "main"
             }
           ]
@@ -1347,6 +1341,17 @@
               "index": 0,
               "node": "Update an issue error2",
               "type": "main"
+            }
+          ]
+        ]
+      },
+      "OpenRouter Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 1,
+              "node": "AI Generate Design Spec",
+              "type": "ai_languageModel"
             }
           ]
         ]
@@ -1603,28 +1608,6 @@
           ]
         ]
       },
-      "Update an issue working4": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "No Operation, do nothing2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Update an issue working6": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Add a comment2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Update an issue working8": {
         "main": [
           [
@@ -1775,24 +1758,6 @@
           ]
         ]
       },
-      "Есть?": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Update an issue working4",
-              "type": "main"
-            }
-          ],
-          [
-            {
-              "index": 0,
-              "node": "Get an issue",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Занести таску в БД": {
         "main": [
           [
@@ -1837,28 +1802,6 @@
           ]
         ]
       },
-      "Проверка на файлы Prompt": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Есть?",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Проверка на файлы Prompt1": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "If2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Проверка на файлы Prompt2": {
         "main": [
           [
@@ -1871,7 +1814,7 @@
         ]
       }
     },
-    "createdAt": "2026-02-05T13:45:32.509Z",
+    "createdAt": "2026-02-06T13:57:42.571Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -4021,7 +3964,7 @@
         "credentials": {
           "anthropicApi": {
             "id": "9tOxhZE1SbRJp4SW",
-            "name": "Anthropic account"
+            "name": "Anthropic Claude API"
           }
         },
         "id": "707cdff8-3519-4013-8cd5-ea38b06a1995",
@@ -4396,7 +4339,7 @@
         "credentials": {
           "anthropicApi": {
             "id": "9tOxhZE1SbRJp4SW",
-            "name": "Anthropic account"
+            "name": "Anthropic Claude API"
           }
         },
         "id": "6b0a97cc-ead0-41bb-bf85-c4c664eaf5c6",
@@ -4497,7 +4440,7 @@
         "credentials": {
           "anthropicApi": {
             "id": "9tOxhZE1SbRJp4SW",
-            "name": "Anthropic account"
+            "name": "Anthropic Claude API"
           }
         },
         "id": "7617599d-aaac-4223-b526-fe8b1b5a2d8c",
@@ -5312,8 +5255,8 @@
           "resource": "file"
         },
         "position": [
-          1552,
-          752
+          272,
+          816
         ],
         "type": "n8n-nodes-base.github",
         "typeVersion": 1.1,
@@ -5326,8 +5269,8 @@
           "jsCode": "// Получаем все файлы из репозитория\nconst items = $input.all();\n\n// Фильтруем файлы с именами содержащими 'screen' или 'button'\nconst screenFiles = [];\nconst buttonFiles = [];\n\nfor (const item of items) {\n  const fileName = item.json.name?.toLowerCase() || '';\n  const filePath = item.json.path?.toLowerCase() || '';\n  \n  if (fileName.includes('screen') || filePath.includes('screen')) {\n    screenFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n  \n  if (fileName.includes('button') || filePath.includes('button')) {\n    buttonFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n}\n\nreturn [{\n  json: {\n    hasScreenFiles: screenFiles.length > 0,\n    hasButtonFiles: buttonFiles.length > 0,\n    screenFilesCount: screenFiles.length,\n    buttonFilesCount: buttonFiles.length,\n    screenFiles: screenFiles,\n    buttonFiles: buttonFiles,\n    totalFilesChecked: items.length\n  }\n}];"
         },
         "position": [
-          1760,
-          752
+          480,
+          816
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5368,8 +5311,8 @@
           "options": {}
         },
         "position": [
-          1952,
-          752
+          672,
+          816
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2
@@ -5409,8 +5352,8 @@
           "options": {}
         },
         "position": [
-          2176,
-          848
+          896,
+          912
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -5439,8 +5382,8 @@
           "resource": "repository"
         },
         "position": [
-          1360,
-          752
+          80,
+          816
         ],
         "type": "n8n-nodes-base.github",
         "typeVersion": 1.1,
@@ -5453,8 +5396,8 @@
           "jsCode": "// Преобразуем найденные файлы в отдельные items для загрузки\nconst input = $input.first().json;\nconst allFiles = [];\n\n// Добавляем screen файлы\nfor (const file of input.screenFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'screen'\n      }\n    });\n  }\n}\n\n// Добавляем button файлы\nfor (const file of input.buttonFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'button'\n      }\n    });\n  }\n}\n\nreturn allFiles;"
         },
         "position": [
-          2176,
-          640
+          896,
+          704
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5485,8 +5428,8 @@
           "resource": "file"
         },
         "position": [
-          2368,
-          640
+          1088,
+          704
         ],
         "type": "n8n-nodes-base.github",
         "typeVersion": 1.1,
@@ -5499,8 +5442,8 @@
           "jsCode": "const data = $input.first().json;\n\n// Берём данные из Merge и Edit Fields\nconst mergeData = $('Merge2').first().json;\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec; // Промпт для генерации\n\nconst screensContent = mergeData.Screens || '';\nconst elementsContent = mergeData.ScreenElements || '';\n\n// Формируем промпт для AI\nconst prompt = `${designSpecPrompt}\n\n---\n\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n\n## Сегмент App Store\n${segment}\n\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n\n---\n\n# ЗАДАЧА\n\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
         },
         "position": [
-          3200,
-          640
+          1920,
+          704
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5514,8 +5457,8 @@
           "text": "={{ $json.prompt }}"
         },
         "position": [
-          3376,
-          640
+          2096,
+          704
         ],
         "type": "@n8n/n8n-nodes-langchain.chainLlm",
         "typeVersion": 1.4
@@ -5524,7 +5467,7 @@
         "credentials": {
           "anthropicApi": {
             "id": "9tOxhZE1SbRJp4SW",
-            "name": "Anthropic account"
+            "name": "Anthropic Claude API"
           }
         },
         "id": "c347209b-1cba-47f0-aea8-09b323cf0e71",
@@ -5541,8 +5484,8 @@
           }
         },
         "position": [
-          3376,
-          832
+          2096,
+          896
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
         "typeVersion": 1.3
@@ -5584,8 +5527,8 @@
           }
         },
         "position": [
-          3584,
-          848
+          2368,
+          1072
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
         "typeVersion": 1
@@ -5598,8 +5541,8 @@
           "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `DesignSpec.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
         },
         "position": [
-          3696,
-          640
+          2416,
+          704
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5627,8 +5570,8 @@
           }
         },
         "position": [
-          2368,
-          848
+          1088,
+          912
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -5650,8 +5593,8 @@
           "resource": "issueComment"
         },
         "position": [
-          2576,
-          848
+          1296,
+          912
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -5664,8 +5607,8 @@
           "options": {}
         },
         "position": [
-          2544,
-          640
+          1264,
+          704
         ],
         "type": "n8n-nodes-base.extractFromFile",
         "typeVersion": 1.1
@@ -5677,8 +5620,8 @@
           "jsCode": "const extractedItems = $input.all();\nconst fileItems = $('Get File Content').all();\n\nconst result = {};\n\nextractedItems.forEach((item, index) => {\n  const fileName = fileItems[index]?.binary?.data?.fileName?.replace(/\\.[^/.]+$/, '') || `file_${index + 1}`;\n  result[fileName] = item.json.data;\n});\n\nreturn [{\n  json: result\n}];"
         },
         "position": [
-          2752,
-          640
+          1472,
+          704
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5724,8 +5667,8 @@
           "options": {}
         },
         "position": [
-          2992,
-          640
+          1712,
+          704
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -5746,8 +5689,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          4448,
-          480
+          3168,
+          544
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5770,8 +5713,8 @@
           "operation": "get"
         },
         "position": [
-          3968,
-          480
+          2688,
+          544
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5785,8 +5728,8 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          4128,
-          480
+          2848,
+          544
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5800,8 +5743,8 @@
           "options": {}
         },
         "position": [
-          4288,
-          480
+          3008,
+          544
         ],
         "type": "n8n-nodes-base.splitOut",
         "typeVersion": 1
@@ -5811,8 +5754,8 @@
         "name": "No Operation, do nothing9",
         "parameters": {},
         "position": [
-          4592,
-          480
+          3312,
+          544
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -5832,8 +5775,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          3968,
-          752
+          2688,
+          816
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5893,8 +5836,8 @@
           "options": {}
         },
         "position": [
-          1168,
-          752
+          -112,
+          816
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -5910,13 +5853,13 @@
         "name": "Get an issue3",
         "parameters": {
           "additionalFields": {},
-          "issueKey": "={{ $('Get an issue').item.json.key }}",
+          "issueKey": "={{ $('Get an issue4').item.json.key }}",
           "jiraVersion": "serverPat",
           "operation": "get"
         },
         "position": [
-          992,
-          752
+          -288,
+          816
         ],
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1
@@ -5944,8 +5887,8 @@
           }
         },
         "position": [
-          4288,
-          752
+          3008,
+          816
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5957,8 +5900,8 @@
         "name": "No Operation, do nothing10",
         "parameters": {},
         "position": [
-          4448,
-          752
+          3168,
+          816
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -5970,42 +5913,11 @@
           "keep": "lastItems"
         },
         "position": [
-          4128,
-          752
+          2848,
+          816
         ],
         "type": "n8n-nodes-base.limit",
         "typeVersion": 1
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "8caaea79-503b-424e-b013-be3b56283524",
-        "name": "Update an issue working4",
-        "parameters": {
-          "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-          "jiraVersion": "serverPat",
-          "operation": "update",
-          "updateFields": {
-            "statusId": {
-              "__rl": true,
-              "cachedResultName": "To Do-Admin",
-              "mode": "list",
-              "value": "111"
-            }
-          }
-        },
-        "position": [
-          640,
-          576
-        ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
       },
       {
         "credentials": {
@@ -6030,106 +5942,6 @@
         "type": "n8n-nodes-base.jira",
         "typeVersion": 1,
         "waitBetweenTries": 5000
-      },
-      {
-        "id": "78338c44-bd06-48fb-8a3b-b1a4f4473e4f",
-        "name": "Проверка на файлы Prompt",
-        "parameters": {
-          "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n\n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n\n    if (text.includes('dropbox')) return false;\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];\n"
-        },
-        "position": [
-          -144,
-          592
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
-        "id": "2d065d29-b979-4ed1-a4cb-df5930a35186",
-        "name": "Есть?",
-        "parameters": {
-          "conditions": {
-            "combinator": "and",
-            "conditions": [
-              {
-                "id": "5930eb6a-bbbf-40dc-81eb-3ca54fd71337",
-                "leftValue": "={{ $json.attachmentIds }}",
-                "operator": {
-                  "operation": "notEmpty",
-                  "singleValue": true,
-                  "type": "array"
-                },
-                "rightValue": ""
-              }
-            ],
-            "options": {
-              "caseSensitive": true,
-              "leftValue": "",
-              "typeValidation": "strict",
-              "version": 3
-            }
-          },
-          "options": {}
-        },
-        "position": [
-          64,
-          592
-        ],
-        "type": "n8n-nodes-base.if",
-        "typeVersion": 2.3
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "7761208f-dc36-42dc-a779-294342dcadf0",
-        "name": "Update an issue working6",
-        "parameters": {
-          "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-          "jiraVersion": "serverPat",
-          "operation": "update",
-          "updateFields": {
-            "statusId": {
-              "__rl": true,
-              "cachedResultName": "Cancelled-Admin",
-              "mode": "list",
-              "value": "241"
-            }
-          }
-        },
-        "position": [
-          992,
-          1040
-        ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
-      },
-      {
-        "id": "20c7dc6c-dba0-4bc5-8a08-e0bc73238dea",
-        "name": "No Operation, do nothing1",
-        "parameters": {},
-        "position": [
-          1408,
-          1040
-        ],
-        "type": "n8n-nodes-base.noOp",
-        "typeVersion": 1
-      },
-      {
-        "id": "1bd5bcb2-b451-4d52-bb17-5c1d9d49ca84",
-        "name": "No Operation, do nothing2",
-        "parameters": {},
-        "position": [
-          848,
-          576
-        ],
-        "type": "n8n-nodes-base.noOp",
-        "typeVersion": 1
       },
       {
         "id": "0c75b746-b7e5-4514-91b1-2b58856385ad",
@@ -6633,83 +6445,46 @@
         "typeVersion": 3
       },
       {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "49e9c13a-10a6-468b-ba7f-e481461c38b0",
-        "name": "Add a comment2",
+        "id": "49bb55b0-19c4-409c-abf8-1c5edadfb994",
+        "name": "Code in JavaScript",
         "parameters": {
-          "comment": "Неправильное заполнение задачи.",
-          "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-          "jiraVersion": "serverPat",
-          "options": {},
-          "resource": "issueComment"
+          "jsCode": "// Получаем данные из конкретной ноды по имени\nconst mergeItems = $(\"Merge1\").all();\n\nconst binaryData = [];\n\nfor (const item of mergeItems) {\n  if (item.binary) {\n    binaryData.push({\n      json: {\n        hasBinary: true,\n        binaryKeys: Object.keys(item.binary),\n      },\n      binary: item.binary,\n    });\n  }\n}\n\nif (binaryData.length === 0) {\n  return [{ json: { message: \"No binary data found in Merge1\" } }];\n}\n\nreturn binaryData;"
         },
         "position": [
-          1200,
-          1040
-        ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
-      },
-      {
-        "id": "49d46f58-e536-47ba-a68b-c3db4e249cc6",
-        "name": "Проверка на файлы Prompt1",
-        "parameters": {
-          "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n  \n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n    \n    // Ищем файлы содержащие 'designspec'\n    return text.includes('designspec');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];"
-        },
-        "position": [
-          368,
-          896
+          5040,
+          -624
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
       },
       {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "6ea207b1-a3b7-4236-9fba-ee559d468c69",
-        "name": "Get an issue",
+        "id": "bd4a1abd-0905-4b65-bc3a-5313a21a1356",
+        "name": "Count Items1",
         "parameters": {
-          "additionalFields": {},
-          "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-          "jiraVersion": "serverPat",
-          "operation": "get"
+          "jsCode": "const items = $input.all();\nconst count = items.length;\n\nreturn [{\n  json: {\n    itemCount: count,\n    message: `Получено ${count} айтемов с Merge`\n  }\n}];"
         },
         "position": [
-          192,
-          896
+          4656,
+          -624
         ],
-        "retryOnFail": true,
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1,
-        "waitBetweenTries": 5000
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
       },
       {
-        "id": "d6f6efa1-b1d3-4b71-ab7a-62a23b8927cd",
-        "name": "If2",
+        "id": "e7c60398-1f00-4f73-ad90-227cdfb636f7",
+        "name": "If9",
         "parameters": {
           "conditions": {
             "combinator": "and",
             "conditions": [
               {
-                "id": "65d27479-40d9-4694-ba0b-ddea6ae0b38b",
-                "leftValue": "={{ $json.attachmentIds[0] }}",
+                "id": "3aa0f641-754a-480a-86c1-f75b3b16a67a",
+                "leftValue": "={{ $json.itemCount }}",
                 "operator": {
-                  "operation": "notEmpty",
-                  "singleValue": true,
-                  "type": "string"
+                  "operation": "gt",
+                  "type": "number"
                 },
-                "rightValue": ""
+                "rightValue": 1
               }
             ],
             "options": {
@@ -6722,18 +6497,49 @@
           "options": {}
         },
         "position": [
-          576,
-          896
+          4816,
+          -624
         ],
         "type": "n8n-nodes-base.if",
         "typeVersion": 2.3
+      },
+      {
+        "id": "8f68e0c6-95c5-4098-b99a-a3e375e5933d",
+        "name": "No Operation, do nothing",
+        "parameters": {},
+        "position": [
+          5040,
+          -464
+        ],
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1
+      },
+      {
+        "credentials": {
+          "openRouterApi": {
+            "id": "MxDmhTEDcHkODHH1",
+            "name": "OpenRouter account"
+          }
+        },
+        "id": "2a0f601b-c4b1-4356-b0ed-c5dca2a47041",
+        "name": "OpenRouter Chat Model",
+        "parameters": {
+          "model": "moonshotai/kimi-k2.5",
+          "options": {}
+        },
+        "position": [
+          2224,
+          912
+        ],
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1
       }
     ],
-    "updatedAt": "2026-02-05T13:45:32.509Z",
-    "versionId": "9054509c-93b6-476a-a656-69bbc3d70f85",
+    "updatedAt": "2026-02-06T13:57:42.571Z",
+    "versionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "9054509c-93b6-476a-a656-69bbc3d70f85",
+  "activeVersionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc",
   "connections": {
     "AI Agent4": {
       "main": [
@@ -6774,17 +6580,6 @@
           {
             "index": 0,
             "node": "Limit2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Add a comment2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing1",
             "type": "main"
           }
         ]
@@ -6912,6 +6707,17 @@
         ]
       ]
     },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Add an attachment to an issue1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Code in JavaScript2": {
       "main": [
         [
@@ -7022,6 +6828,17 @@
           {
             "index": 0,
             "node": "If8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Count Items1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If9",
             "type": "main"
           }
         ]
@@ -7415,17 +7232,6 @@
         ]
       ]
     },
-    "Get an issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Проверка на файлы Prompt1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get an issue URL": {
       "main": [
         [
@@ -7552,7 +7358,7 @@
         [
           {
             "index": 0,
-            "node": "Проверка на файлы Prompt",
+            "node": "Get an issue3",
             "type": "main"
           }
         ]
@@ -7645,13 +7451,7 @@
     },
     "Google Gemini Chat Model3": {
       "ai_languageModel": [
-        [
-          {
-            "index": 1,
-            "node": "AI Generate Design Spec",
-            "type": "ai_languageModel"
-          }
-        ]
+        []
       ]
     },
     "Hardcode Prompt": {
@@ -7737,24 +7537,6 @@
         ]
       ]
     },
-    "If2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue3",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Update an issue working6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "If4": {
       "main": [
         [
@@ -7831,6 +7613,24 @@
       "main": [
         [],
         []
+      ]
+    },
+    "If9": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Code in JavaScript",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation, do nothing",
+            "type": "main"
+          }
+        ]
       ]
     },
     "Init": {
@@ -8008,7 +7808,7 @@
           },
           {
             "index": 0,
-            "node": "Add an attachment to an issue1",
+            "node": "Count Items1",
             "type": "main"
           }
         ]
@@ -8079,6 +7879,17 @@
             "index": 0,
             "node": "Update an issue error2",
             "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
+            "node": "AI Generate Design Spec",
+            "type": "ai_languageModel"
           }
         ]
       ]
@@ -8335,28 +8146,6 @@
         ]
       ]
     },
-    "Update an issue working4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "No Operation, do nothing2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Update an issue working6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Add a comment2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Update an issue working8": {
       "main": [
         [
@@ -8507,24 +8296,6 @@
         ]
       ]
     },
-    "Есть?": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update an issue working4",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Get an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Занести таску в БД": {
       "main": [
         [
@@ -8564,28 +8335,6 @@
           {
             "index": 0,
             "node": "Get Jira-Issue",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Проверка на файлы Prompt": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Есть?",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Проверка на файлы Prompt1": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "If2",
             "type": "main"
           }
         ]
@@ -10757,7 +10506,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "707cdff8-3519-4013-8cd5-ea38b06a1995",
@@ -11132,7 +10881,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "6b0a97cc-ead0-41bb-bf85-c4c664eaf5c6",
@@ -11233,7 +10982,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "7617599d-aaac-4223-b526-fe8b1b5a2d8c",
@@ -12048,8 +11797,8 @@
         "resource": "file"
       },
       "position": [
-        1552,
-        752
+        272,
+        816
       ],
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
@@ -12062,8 +11811,8 @@
         "jsCode": "// Получаем все файлы из репозитория\nconst items = $input.all();\n\n// Фильтруем файлы с именами содержащими 'screen' или 'button'\nconst screenFiles = [];\nconst buttonFiles = [];\n\nfor (const item of items) {\n  const fileName = item.json.name?.toLowerCase() || '';\n  const filePath = item.json.path?.toLowerCase() || '';\n  \n  if (fileName.includes('screen') || filePath.includes('screen')) {\n    screenFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n  \n  if (fileName.includes('button') || filePath.includes('button')) {\n    buttonFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n}\n\nreturn [{\n  json: {\n    hasScreenFiles: screenFiles.length > 0,\n    hasButtonFiles: buttonFiles.length > 0,\n    screenFilesCount: screenFiles.length,\n    buttonFilesCount: buttonFiles.length,\n    screenFiles: screenFiles,\n    buttonFiles: buttonFiles,\n    totalFilesChecked: items.length\n  }\n}];"
       },
       "position": [
-        1760,
-        752
+        480,
+        816
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12104,8 +11853,8 @@
         "options": {}
       },
       "position": [
-        1952,
-        752
+        672,
+        816
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2
@@ -12145,8 +11894,8 @@
         "options": {}
       },
       "position": [
-        2176,
-        848
+        896,
+        912
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -12175,8 +11924,8 @@
         "resource": "repository"
       },
       "position": [
-        1360,
-        752
+        80,
+        816
       ],
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
@@ -12189,8 +11938,8 @@
         "jsCode": "// Преобразуем найденные файлы в отдельные items для загрузки\nconst input = $input.first().json;\nconst allFiles = [];\n\n// Добавляем screen файлы\nfor (const file of input.screenFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'screen'\n      }\n    });\n  }\n}\n\n// Добавляем button файлы\nfor (const file of input.buttonFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'button'\n      }\n    });\n  }\n}\n\nreturn allFiles;"
       },
       "position": [
-        2176,
-        640
+        896,
+        704
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12221,8 +11970,8 @@
         "resource": "file"
       },
       "position": [
-        2368,
-        640
+        1088,
+        704
       ],
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
@@ -12235,8 +11984,8 @@
         "jsCode": "const data = $input.first().json;\n\n// Берём данные из Merge и Edit Fields\nconst mergeData = $('Merge2').first().json;\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec; // Промпт для генерации\n\nconst screensContent = mergeData.Screens || '';\nconst elementsContent = mergeData.ScreenElements || '';\n\n// Формируем промпт для AI\nconst prompt = `${designSpecPrompt}\n\n---\n\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n\n## Сегмент App Store\n${segment}\n\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n\n---\n\n# ЗАДАЧА\n\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
       },
       "position": [
-        3200,
-        640
+        1920,
+        704
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12250,8 +11999,8 @@
         "text": "={{ $json.prompt }}"
       },
       "position": [
-        3376,
-        640
+        2096,
+        704
       ],
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.4
@@ -12260,7 +12009,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "c347209b-1cba-47f0-aea8-09b323cf0e71",
@@ -12277,8 +12026,8 @@
         }
       },
       "position": [
-        3376,
-        832
+        2096,
+        896
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
@@ -12320,8 +12069,8 @@
         }
       },
       "position": [
-        3584,
-        848
+        2368,
+        1072
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
@@ -12334,8 +12083,8 @@
         "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `DesignSpec.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
       },
       "position": [
-        3696,
-        640
+        2416,
+        704
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12363,8 +12112,8 @@
         }
       },
       "position": [
-        2368,
-        848
+        1088,
+        912
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -12386,8 +12135,8 @@
         "resource": "issueComment"
       },
       "position": [
-        2576,
-        848
+        1296,
+        912
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -12400,8 +12149,8 @@
         "options": {}
       },
       "position": [
-        2544,
-        640
+        1264,
+        704
       ],
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1.1
@@ -12413,8 +12162,8 @@
         "jsCode": "const extractedItems = $input.all();\nconst fileItems = $('Get File Content').all();\n\nconst result = {};\n\nextractedItems.forEach((item, index) => {\n  const fileName = fileItems[index]?.binary?.data?.fileName?.replace(/\\.[^/.]+$/, '') || `file_${index + 1}`;\n  result[fileName] = item.json.data;\n});\n\nreturn [{\n  json: result\n}];"
       },
       "position": [
-        2752,
-        640
+        1472,
+        704
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12460,8 +12209,8 @@
         "options": {}
       },
       "position": [
-        2992,
-        640
+        1712,
+        704
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -12482,8 +12231,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        4448,
-        480
+        3168,
+        544
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12506,8 +12255,8 @@
         "operation": "get"
       },
       "position": [
-        3968,
-        480
+        2688,
+        544
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12521,8 +12270,8 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        4128,
-        480
+        2848,
+        544
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12536,8 +12285,8 @@
         "options": {}
       },
       "position": [
-        4288,
-        480
+        3008,
+        544
       ],
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1
@@ -12547,8 +12296,8 @@
       "name": "No Operation, do nothing9",
       "parameters": {},
       "position": [
-        4592,
-        480
+        3312,
+        544
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -12568,8 +12317,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        3968,
-        752
+        2688,
+        816
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12629,8 +12378,8 @@
         "options": {}
       },
       "position": [
-        1168,
-        752
+        -112,
+        816
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -12646,13 +12395,13 @@
       "name": "Get an issue3",
       "parameters": {
         "additionalFields": {},
-        "issueKey": "={{ $('Get an issue').item.json.key }}",
+        "issueKey": "={{ $('Get an issue4').item.json.key }}",
         "jiraVersion": "serverPat",
         "operation": "get"
       },
       "position": [
-        992,
-        752
+        -288,
+        816
       ],
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1
@@ -12680,8 +12429,8 @@
         }
       },
       "position": [
-        4288,
-        752
+        3008,
+        816
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12693,8 +12442,8 @@
       "name": "No Operation, do nothing10",
       "parameters": {},
       "position": [
-        4448,
-        752
+        3168,
+        816
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -12706,42 +12455,11 @@
         "keep": "lastItems"
       },
       "position": [
-        4128,
-        752
+        2848,
+        816
       ],
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "8caaea79-503b-424e-b013-be3b56283524",
-      "name": "Update an issue working4",
-      "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "To Do-Admin",
-            "mode": "list",
-            "value": "111"
-          }
-        }
-      },
-      "position": [
-        640,
-        576
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
     },
     {
       "credentials": {
@@ -12766,106 +12484,6 @@
       "type": "n8n-nodes-base.jira",
       "typeVersion": 1,
       "waitBetweenTries": 5000
-    },
-    {
-      "id": "78338c44-bd06-48fb-8a3b-b1a4f4473e4f",
-      "name": "Проверка на файлы Prompt",
-      "parameters": {
-        "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n\n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n\n    if (text.includes('dropbox')) return false;\n    return text.includes('prompt') || text.includes('promt');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];\n"
-      },
-      "position": [
-        -144,
-        592
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "2d065d29-b979-4ed1-a4cb-df5930a35186",
-      "name": "Есть?",
-      "parameters": {
-        "conditions": {
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "5930eb6a-bbbf-40dc-81eb-3ca54fd71337",
-              "leftValue": "={{ $json.attachmentIds }}",
-              "operator": {
-                "operation": "notEmpty",
-                "singleValue": true,
-                "type": "array"
-              },
-              "rightValue": ""
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 3
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        64,
-        592
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.3
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "7761208f-dc36-42dc-a779-294342dcadf0",
-      "name": "Update an issue working6",
-      "parameters": {
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Cancelled-Admin",
-            "mode": "list",
-            "value": "241"
-          }
-        }
-      },
-      "position": [
-        992,
-        1040
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "20c7dc6c-dba0-4bc5-8a08-e0bc73238dea",
-      "name": "No Operation, do nothing1",
-      "parameters": {},
-      "position": [
-        1408,
-        1040
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
-    },
-    {
-      "id": "1bd5bcb2-b451-4d52-bb17-5c1d9d49ca84",
-      "name": "No Operation, do nothing2",
-      "parameters": {},
-      "position": [
-        848,
-        576
-      ],
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1
     },
     {
       "id": "0c75b746-b7e5-4514-91b1-2b58856385ad",
@@ -13369,83 +12987,46 @@
       "typeVersion": 3
     },
     {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "49e9c13a-10a6-468b-ba7f-e481461c38b0",
-      "name": "Add a comment2",
+      "id": "49bb55b0-19c4-409c-abf8-1c5edadfb994",
+      "name": "Code in JavaScript",
       "parameters": {
-        "comment": "Неправильное заполнение задачи.",
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "options": {},
-        "resource": "issueComment"
+        "jsCode": "// Получаем данные из конкретной ноды по имени\nconst mergeItems = $(\"Merge1\").all();\n\nconst binaryData = [];\n\nfor (const item of mergeItems) {\n  if (item.binary) {\n    binaryData.push({\n      json: {\n        hasBinary: true,\n        binaryKeys: Object.keys(item.binary),\n      },\n      binary: item.binary,\n    });\n  }\n}\n\nif (binaryData.length === 0) {\n  return [{ json: { message: \"No binary data found in Merge1\" } }];\n}\n\nreturn binaryData;"
       },
       "position": [
-        1200,
-        1040
-      ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
-    },
-    {
-      "id": "49d46f58-e536-47ba-a68b-c3db4e249cc6",
-      "name": "Проверка на файлы Prompt1",
-      "parameters": {
-        "jsCode": "const allItems = $input.all();\n\n// Собираем все подходящие атачи из всех items\nconst allFiltered = allItems.flatMap(item => {\n  const attachments = item.json.fields?.attachment || [];\n  \n  return attachments.filter(a => {\n    const text = (a.filename || a.content || '').toLowerCase();\n    \n    // Ищем файлы содержащие 'designspec'\n    return text.includes('designspec');\n  });\n});\n\n// Только ID\nconst attachmentIds = allFiltered.map(a => a.id);\n\nreturn [\n  {\n    json: {\n      attachmentIds,\n    },\n  },\n];"
-      },
-      "position": [
-        368,
-        896
+        5040,
+        -624
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
     },
     {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "6ea207b1-a3b7-4236-9fba-ee559d468c69",
-      "name": "Get an issue",
+      "id": "bd4a1abd-0905-4b65-bc3a-5313a21a1356",
+      "name": "Count Items1",
       "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $('Updata Jira-Status').item.json.Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
+        "jsCode": "const items = $input.all();\nconst count = items.length;\n\nreturn [{\n  json: {\n    itemCount: count,\n    message: `Получено ${count} айтемов с Merge`\n  }\n}];"
       },
       "position": [
-        192,
-        896
+        4656,
+        -624
       ],
-      "retryOnFail": true,
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1,
-      "waitBetweenTries": 5000
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
     },
     {
-      "id": "d6f6efa1-b1d3-4b71-ab7a-62a23b8927cd",
-      "name": "If2",
+      "id": "e7c60398-1f00-4f73-ad90-227cdfb636f7",
+      "name": "If9",
       "parameters": {
         "conditions": {
           "combinator": "and",
           "conditions": [
             {
-              "id": "65d27479-40d9-4694-ba0b-ddea6ae0b38b",
-              "leftValue": "={{ $json.attachmentIds[0] }}",
+              "id": "3aa0f641-754a-480a-86c1-f75b3b16a67a",
+              "leftValue": "={{ $json.itemCount }}",
               "operator": {
-                "operation": "notEmpty",
-                "singleValue": true,
-                "type": "string"
+                "operation": "gt",
+                "type": "number"
               },
-              "rightValue": ""
+              "rightValue": 1
             }
           ],
           "options": {
@@ -13458,11 +13039,42 @@
         "options": {}
       },
       "position": [
-        576,
-        896
+        4816,
+        -624
       ],
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3
+    },
+    {
+      "id": "8f68e0c6-95c5-4098-b99a-a3e375e5933d",
+      "name": "No Operation, do nothing",
+      "parameters": {},
+      "position": [
+        5040,
+        -464
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "openRouterApi": {
+          "id": "MxDmhTEDcHkODHH1",
+          "name": "OpenRouter account"
+        }
+      },
+      "id": "2a0f601b-c4b1-4356-b0ed-c5dca2a47041",
+      "name": "OpenRouter Chat Model",
+      "parameters": {
+        "model": "moonshotai/kimi-k2.5",
+        "options": {}
+      },
+      "position": [
+        2224,
+        912
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1
     }
   ],
   "pinData": {
@@ -13506,7 +13118,7 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "AD-55",
+            "issue_key": "TAA-558",
             "serial_num_pc": "null"
           },
           "executionMode": "production",
@@ -13517,17 +13129,17 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9c92758b44333f0f-FRA",
+            "cf-ray": "9c9aedefb46565cf-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
-            "content-length": "65",
+            "content-length": "67",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.70.248.164",
+            "x-forwarded-for": "135.181.186.107, 172.68.195.162",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-tt4xc",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
@@ -13562,7 +13174,7 @@
         ".json",
         ".md"
       ],
-      "sharedLink": "https://www.dropbox.com/scl/fo/teuvzybw527psoau2i9o7/ABfHCJtrVpNRyuEI726Qx-U?rlkey=xdzvbnuv0pjg33ku9r9qzfxyv&st=ut6o7ub2"
+      "sharedLink": "https://www.dropbox.com/scl/fo/1odscnsmq2doizs7z8b1t/AF4M7xZ5qnzCqKDPlA7PjuM?rlkey=3q2wya0njyp719f33reeegc4u&st=hdwv7ac8"
     },
     "node:Schedule Trigger": {
       "recurrenceRules": []
@@ -13570,6 +13182,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-02-05T13:45:32.503Z",
-  "versionId": "9054509c-93b6-476a-a656-69bbc3d70f85"
+  "updatedAt": "2026-02-06T13:57:42.567Z",
+  "versionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc"
 }
