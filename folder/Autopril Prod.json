@@ -911,6 +911,17 @@
           ]
         ]
       },
+      "Google Gemini Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "index": 1,
+              "node": "AI Generate Design Spec",
+              "type": "ai_languageModel"
+            }
+          ]
+        ]
+      },
       "Google Gemini Chat Model3": {
         "ai_languageModel": [
           []
@@ -1341,17 +1352,6 @@
               "index": 0,
               "node": "Update an issue error2",
               "type": "main"
-            }
-          ]
-        ]
-      },
-      "OpenRouter Chat Model": {
-        "ai_languageModel": [
-          [
-            {
-              "index": 1,
-              "node": "AI Generate Design Spec",
-              "type": "ai_languageModel"
             }
           ]
         ]
@@ -1814,7 +1814,7 @@
         ]
       }
     },
-    "createdAt": "2026-02-06T13:57:42.571Z",
+    "createdAt": "2026-02-09T12:02:03.237Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -6516,30 +6516,30 @@
       },
       {
         "credentials": {
-          "openRouterApi": {
-            "id": "MxDmhTEDcHkODHH1",
-            "name": "OpenRouter account"
+          "googlePalmApi": {
+            "id": "kpb4KMG2LrUgiQZB",
+            "name": "Gemini Ilya Owner"
           }
         },
-        "id": "2a0f601b-c4b1-4356-b0ed-c5dca2a47041",
-        "name": "OpenRouter Chat Model",
+        "id": "33ffe832-bbf8-4f60-8e08-53b91b5a3e72",
+        "name": "Google Gemini Chat Model1",
         "parameters": {
-          "model": "moonshotai/kimi-k2.5",
+          "modelName": "models/gemini-3-pro-preview",
           "options": {}
         },
         "position": [
           2224,
           912
         ],
-        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
         "typeVersion": 1
       }
     ],
-    "updatedAt": "2026-02-06T13:57:42.571Z",
-    "versionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc",
+    "updatedAt": "2026-02-09T12:02:03.237Z",
+    "versionId": "e578d51d-8607-455e-902d-30d6aaffc551",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc",
+  "activeVersionId": "e578d51d-8607-455e-902d-30d6aaffc551",
   "connections": {
     "AI Agent4": {
       "main": [
@@ -7449,6 +7449,17 @@
         ]
       ]
     },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 1,
+            "node": "AI Generate Design Spec",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
     "Google Gemini Chat Model3": {
       "ai_languageModel": [
         []
@@ -7879,17 +7890,6 @@
             "index": 0,
             "node": "Update an issue error2",
             "type": "main"
-          }
-        ]
-      ]
-    },
-    "OpenRouter Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "index": 1,
-            "node": "AI Generate Design Spec",
-            "type": "ai_languageModel"
           }
         ]
       ]
@@ -13058,22 +13058,22 @@
     },
     {
       "credentials": {
-        "openRouterApi": {
-          "id": "MxDmhTEDcHkODHH1",
-          "name": "OpenRouter account"
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
         }
       },
-      "id": "2a0f601b-c4b1-4356-b0ed-c5dca2a47041",
-      "name": "OpenRouter Chat Model",
+      "id": "33ffe832-bbf8-4f60-8e08-53b91b5a3e72",
+      "name": "Google Gemini Chat Model1",
       "parameters": {
-        "model": "moonshotai/kimi-k2.5",
+        "modelName": "models/gemini-3-pro-preview",
         "options": {}
       },
       "position": [
         2224,
         912
       ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
     }
   ],
@@ -13174,7 +13174,7 @@
         ".json",
         ".md"
       ],
-      "sharedLink": "https://www.dropbox.com/scl/fo/1odscnsmq2doizs7z8b1t/AF4M7xZ5qnzCqKDPlA7PjuM?rlkey=3q2wya0njyp719f33reeegc4u&st=hdwv7ac8"
+      "sharedLink": "https://www.dropbox.com/scl/fo/co4imucdv75ksttxgj1lm/ACbXqqfAjRuikkUX36WY4A8?rlkey=2v0za36k0b6oz0wsr8ukr43aa&st=0zffzmd2"
     },
     "node:Schedule Trigger": {
       "recurrenceRules": []
@@ -13182,6 +13182,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-02-06T13:57:42.567Z",
-  "versionId": "169355be-d0c0-4d24-ad4b-37612dfa6acc"
+  "updatedAt": "2026-02-09T12:02:03.233Z",
+  "versionId": "e578d51d-8607-455e-902d-30d6aaffc551"
 }
