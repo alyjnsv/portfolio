@@ -2,190 +2,19 @@
   "active": false,
   "activeVersion": null,
   "activeVersionId": null,
-  "connections": {
-    "Code in JavaScript2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an attachment from an issue5",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Compression6": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Analyze an image1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an attachment from an issue5": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Compression6",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get an issue": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Code in JavaScript2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "When clicking ‘Execute workflow’": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get an issue",
-            "type": "main"
-          }
-        ]
-      ]
-    }
-  },
+  "connections": {},
   "createdAt": "2026-02-09T14:11:27.704Z",
   "id": "7XPrqxP0pdYj6sxK",
   "isArchived": false,
-  "meta": null,
-  "name": "My workflow 28",
-  "nodes": [
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "e222c177-e1fd-47db-8488-a8e595f798a2",
-      "name": "Get an issue",
-      "parameters": {
-        "additionalFields": {},
-        "issueKey": "={{ $json.Key }}",
-        "jiraVersion": "serverPat",
-        "operation": "get"
-      },
-      "position": [
-        -784,
-        48
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "b3c0ae62-2351-4556-9340-9c78dc37745f",
-      "name": "Code in JavaScript2",
-      "parameters": {
-        "jsCode": "const item = $json;\nconst attachments = item.fields?.attachment || [];\n\n// Функция для расшифровки URL-encoded строки\nfunction decodeFileName(name) {\n  if (!name) return null;\n  try {\n    // Заменяем + на пробелы и декодируем URL\n    return decodeURIComponent(name.replace(/\\+/g, ' '));\n  } catch (e) {\n    return name;\n  }\n}\n\n// Функция для определения типа по названию\nfunction getType(name) {\n  if (!name) return 'unknown';\n  const decoded = decodeFileName(name).toLowerCase();\n  if (decoded.includes('креатив') || decoded.includes('creative')) return 'creative';\n  if (decoded.includes('дизайн') || decoded.includes('design')) return 'design';\n  return 'unknown';\n}\n\n// Определяем дизайн и креатив по названию, а не по порядку\nlet design = null;\nlet creative = null;\n\nfor (const att of attachments) {\n  const type = getType(att.name || att.filename || '');\n  if (type === 'design' && !design) {\n    design = att;\n  } else if (type === 'creative' && !creative) {\n    creative = att;\n  }\n}\n\n// Если не нашли по названию — берём по порядку\nif (!design) design = attachments[0] || null;\nif (!creative) creative = attachments[1] || null;\n\nconst designContent = design ? design.content || null : null;\nconst designId = design ? design.id || null : null;\nconst designName = design ? decodeFileName(design.name || design.filename) : null;\n\nconst creativeContent = creative ? creative.content || null : null;\nconst creativeId = creative ? creative.id || null : null;\nconst creativeName = creative ? decodeFileName(creative.name || creative.filename) : null;\n\nreturn {\n  json: {\n    ...item,\n    designContent,\n    designId,\n    designName,\n    creativeContent,\n    creativeId,\n    creativeName,\n  },\n};"
-      },
-      "position": [
-        -576,
-        48
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "25b75707-5b72-4735-93da-52ebfb10e579",
-      "name": "Get an attachment from an issue5",
-      "parameters": {
-        "attachmentId": "={{ $('Code in JavaScript2').item.json.creativeId }}",
-        "download": true,
-        "jiraVersion": "serverPat",
-        "operation": "get",
-        "resource": "issueAttachment"
-      },
-      "position": [
-        -368,
-        48
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "f93424f1-865b-41b0-8d27-71287edd0c64",
-      "name": "Compression6",
-      "parameters": {},
-      "position": [
-        -176,
-        48
-      ],
-      "type": "n8n-nodes-base.compression",
-      "typeVersion": 1.1
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "id": "de37842e-cbd1-4667-8b29-40d58e824b4c",
-      "name": "Analyze an image1",
-      "parameters": {
-        "binaryPropertyName": "={{ Object.keys($binary).join(',') }}",
-        "inputType": "binary",
-        "modelId": {
-          "__rl": true,
-          "cachedResultName": "models/gemini-3-pro-preview",
-          "mode": "list",
-          "value": "models/gemini-3-pro-preview"
-        },
-        "operation": "analyze",
-        "options": {},
-        "resource": "image",
-        "text": "=Проанализируй изображение и разбей его на экраны, один экран - одно окно.\nЭкран это текст снизу \"Экран 1 - DD\" и т.д, окно, это изображение что находится сверху, где оно разделено на сколько то частей, главное внимательно проанализируй и посмотри где оно разделяется. Твоя задача выписать текст с экрана и описать подробно окно под него.\nВАЖНО! Если на изображении есть что-то помимо экранов, то выпиши это в каждый экран, например стилистика или что-то еще.\nВАЖНО!! Не теряй детали.\nВАЖНО!!! Подписывай к какому экрану идёт контент из \"Экран 1 - DD\""
-      },
-      "position": [
-        32,
-        48
-      ],
-      "type": "@n8n/n8n-nodes-langchain.googleGemini",
-      "typeVersion": 1
-    },
-    {
-      "id": "4d6040ee-618f-4372-bb3f-d4a875e9083b",
-      "name": "When clicking ‘Execute workflow’",
-      "parameters": {},
-      "position": [
-        -1008,
-        48
-      ],
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1
-    }
-  ],
-  "pinData": {
-    "When clicking ‘Execute workflow’": [
-      {
-        "json": {
-          "Key": "DES-41524"
-        }
-      }
-    ]
+  "meta": {
+    "templateCredsSetupCompleted": true
   },
+  "name": "My workflow 28",
+  "nodes": [],
+  "pinData": {},
   "settings": {
+    "availableInMCP": false,
+    "callerPolicy": "workflowsFromSameOwner",
     "executionOrder": "v1"
   },
   "shared": [
@@ -199,7 +28,7 @@
   ],
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2026-02-09T14:11:27.704Z",
-  "versionId": "fbb4fa68-aecf-40e3-b5a7-4d72bd392238"
+  "triggerCount": 2,
+  "updatedAt": "2026-02-10T12:37:22.832Z",
+  "versionId": "62d77999-d423-4789-a60b-ff3a16e70ca7"
 }
