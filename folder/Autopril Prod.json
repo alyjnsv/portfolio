@@ -151,24 +151,6 @@
           ]
         ]
       },
-      "Check Files Exist": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Prepare Files List",
-              "type": "main"
-            }
-          ],
-          [
-            {
-              "index": 0,
-              "node": "Files Missing",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Code in JavaScript": {
         "main": [
           [
@@ -229,7 +211,7 @@
           [
             {
               "index": 0,
-              "node": "Get Source Repo Info",
+              "node": "Edit Fields4",
               "type": "main"
             }
           ]
@@ -322,7 +304,7 @@
           [
             {
               "index": 0,
-              "node": "Prepare for Tree1",
+              "node": "If2",
               "type": "main"
             }
           ]
@@ -474,17 +456,6 @@
           ]
         ]
       },
-      "Extract from File4": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Merge2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Extract from File6": {
         "main": [
           [
@@ -513,28 +484,6 @@
             {
               "index": 0,
               "node": "Document?2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Files Missing": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Update an issue2",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Filter Screen & Button Files": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Check Files Exist",
               "type": "main"
             }
           ]
@@ -595,17 +544,6 @@
           ]
         ]
       },
-      "Get File Content": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Extract from File4",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Get File Content2": {
         "main": [
           [
@@ -639,28 +577,6 @@
           ]
         ]
       },
-      "Get Repo Files": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Filter Screen & Button Files",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Get Source Repo Info": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get Repo Files",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Get Source Repo Info1": {
         "main": [
           [
@@ -678,6 +594,17 @@
             {
               "index": 0,
               "node": "Prepare Loop Data2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get a repository": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Prepare for Tree1",
               "type": "main"
             }
           ]
@@ -922,11 +849,6 @@
           ]
         ]
       },
-      "Google Gemini Chat Model3": {
-        "ai_languageModel": [
-          []
-        ]
-      },
       "Hardcode Prompt": {
         "main": [
           [
@@ -1005,6 +927,24 @@
             {
               "index": 0,
               "node": "Обновить БД1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Prepare for Tree1",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get a repository",
               "type": "main"
             }
           ]
@@ -1287,17 +1227,6 @@
           ]
         ]
       },
-      "Merge2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Edit Fields4",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Need Content?": {
         "main": [
           [
@@ -1373,17 +1302,6 @@
             {
               "index": 0,
               "node": "Get Source Repo Info1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
-      "Prepare Files List": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Get File Content",
               "type": "main"
             }
           ]
@@ -1630,17 +1548,6 @@
           ]
         ]
       },
-      "Update an issue2": {
-        "main": [
-          [
-            {
-              "index": 0,
-              "node": "Add a comment1",
-              "type": "main"
-            }
-          ]
-        ]
-      },
       "Update an issue6": {
         "main": [
           [
@@ -1814,7 +1721,7 @@
         ]
       }
     },
-    "createdAt": "2026-02-11T08:48:35.444Z",
+    "createdAt": "2026-02-12T18:21:03.591Z",
     "description": null,
     "name": null,
     "nodes": [
@@ -5232,218 +5139,14 @@
         "typeVersion": 1
       },
       {
-        "credentials": {
-          "githubApi": {
-            "id": "rtS05OFOF0Kaw568",
-            "name": "GitHub-Service"
-          }
-        },
-        "id": "11e9b7fc-947c-43c9-88c4-eff1d74b5f95",
-        "name": "Get Repo Files",
-        "parameters": {
-          "operation": "list",
-          "owner": {
-            "__rl": true,
-            "mode": "name",
-            "value": "={{ $('Config').item.json.Gitowner }}"
-          },
-          "repository": {
-            "__rl": true,
-            "mode": "name",
-            "value": "={{ $json.name }}"
-          },
-          "resource": "file"
-        },
-        "position": [
-          272,
-          816
-        ],
-        "type": "n8n-nodes-base.github",
-        "typeVersion": 1.1,
-        "webhookId": "d4814e51-294a-4906-a91a-8fd511b2e118"
-      },
-      {
-        "id": "23cb4776-8e2a-473d-b78f-1abe83541de5",
-        "name": "Filter Screen & Button Files",
-        "parameters": {
-          "jsCode": "// Получаем все файлы из репозитория\nconst items = $input.all();\n\n// Фильтруем файлы с именами содержащими 'screen' или 'button'\nconst screenFiles = [];\nconst buttonFiles = [];\n\nfor (const item of items) {\n  const fileName = item.json.name?.toLowerCase() || '';\n  const filePath = item.json.path?.toLowerCase() || '';\n  \n  if (fileName.includes('screen') || filePath.includes('screen')) {\n    screenFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n  \n  if (fileName.includes('button') || filePath.includes('button')) {\n    buttonFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n}\n\nreturn [{\n  json: {\n    hasScreenFiles: screenFiles.length > 0,\n    hasButtonFiles: buttonFiles.length > 0,\n    screenFilesCount: screenFiles.length,\n    buttonFilesCount: buttonFiles.length,\n    screenFiles: screenFiles,\n    buttonFiles: buttonFiles,\n    totalFilesChecked: items.length\n  }\n}];"
-        },
-        "position": [
-          480,
-          816
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
-        "id": "4a13e59a-36fe-485a-90a9-c5ec41f1b729",
-        "name": "Check Files Exist",
-        "parameters": {
-          "conditions": {
-            "combinator": "or",
-            "conditions": [
-              {
-                "id": "condition-screen",
-                "leftValue": "={{ $json.hasScreenFiles }}",
-                "operator": {
-                  "operation": "equals",
-                  "type": "boolean"
-                },
-                "rightValue": true
-              },
-              {
-                "id": "condition-button",
-                "leftValue": "={{ $json.hasButtonFiles }}",
-                "operator": {
-                  "operation": "equals",
-                  "type": "boolean"
-                },
-                "rightValue": true
-              }
-            ],
-            "options": {
-              "caseSensitive": true,
-              "leftValue": "",
-              "typeValidation": "strict",
-              "version": 1
-            }
-          },
-          "options": {}
-        },
-        "position": [
-          672,
-          816
-        ],
-        "type": "n8n-nodes-base.if",
-        "typeVersion": 2
-      },
-      {
-        "id": "8b684d97-edeb-4f85-bcbe-640a890b4c6a",
-        "name": "Files Missing",
-        "parameters": {
-          "assignments": {
-            "assignments": [
-              {
-                "id": "result-fail",
-                "name": "status",
-                "type": "string",
-                "value": "missing_files"
-              },
-              {
-                "id": "result-message-fail",
-                "name": "message",
-                "type": "string",
-                "value": "={{ 'Missing: ' + ($json.hasScreenFiles ? '' : 'screen files ') + ($json.hasButtonFiles ? '' : 'button files') }}"
-              },
-              {
-                "id": "screen-count",
-                "name": "screenFilesCount",
-                "type": "number",
-                "value": "={{ $json.screenFilesCount }}"
-              },
-              {
-                "id": "button-count",
-                "name": "buttonFilesCount",
-                "type": "number",
-                "value": "={{ $json.buttonFilesCount }}"
-              }
-            ]
-          },
-          "options": {}
-        },
-        "position": [
-          896,
-          912
-        ],
-        "type": "n8n-nodes-base.set",
-        "typeVersion": 3.4
-      },
-      {
-        "credentials": {
-          "githubApi": {
-            "id": "rtS05OFOF0Kaw568",
-            "name": "GitHub-Service"
-          }
-        },
-        "id": "33777f3d-36ad-47c0-ba6e-7999edcdbe14",
-        "name": "Get Source Repo Info",
-        "parameters": {
-          "operation": "get",
-          "owner": {
-            "__rl": true,
-            "mode": "name",
-            "value": "={{ $json.Gitowner }}"
-          },
-          "repository": {
-            "__rl": true,
-            "mode": "url",
-            "value": "={{ $json.GitHubLink }}"
-          },
-          "resource": "repository"
-        },
-        "position": [
-          80,
-          816
-        ],
-        "type": "n8n-nodes-base.github",
-        "typeVersion": 1.1,
-        "webhookId": "05d4eeb1-96de-4ad5-a364-35d6a2be8e26"
-      },
-      {
-        "id": "1cc95f01-6f30-4126-8aa9-5e97117363cf",
-        "name": "Prepare Files List",
-        "parameters": {
-          "jsCode": "// Преобразуем найденные файлы в отдельные items для загрузки\nconst input = $input.first().json;\nconst allFiles = [];\n\n// Добавляем screen файлы\nfor (const file of input.screenFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'screen'\n      }\n    });\n  }\n}\n\n// Добавляем button файлы\nfor (const file of input.buttonFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'button'\n      }\n    });\n  }\n}\n\nreturn allFiles;"
-        },
-        "position": [
-          896,
-          704
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
-        "credentials": {
-          "githubApi": {
-            "id": "rtS05OFOF0Kaw568",
-            "name": "GitHub-Service"
-          }
-        },
-        "id": "d5d21e9b-977e-44fb-8e5e-618a6de802e4",
-        "name": "Get File Content",
-        "parameters": {
-          "additionalParameters": {},
-          "filePath": "={{ $json.path }}",
-          "operation": "get",
-          "owner": {
-            "__rl": true,
-            "mode": "name",
-            "value": "={{ $('Config').first().json.Gitowner }}"
-          },
-          "repository": {
-            "__rl": true,
-            "mode": "name",
-            "value": "={{ $('Get Source Repo Info').first().json.name }}"
-          },
-          "resource": "file"
-        },
-        "position": [
-          1088,
-          704
-        ],
-        "type": "n8n-nodes-base.github",
-        "typeVersion": 1.1,
-        "webhookId": "13f56517-aa55-468f-bfb2-a1ac338affa1"
-      },
-      {
         "id": "d82126d8-1171-4a8a-a4b6-ef6e80c2d8f2",
         "name": "Build Design Spec Prompt",
         "parameters": {
-          "jsCode": "const data = $input.first().json;\n\n// Берём данные из Merge и Edit Fields\nconst mergeData = $('Merge2').first().json;\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec; // Промпт для генерации\n\nconst screensContent = mergeData.Screens || '';\nconst elementsContent = mergeData.ScreenElements || '';\n\n// Формируем промпт для AI\nconst prompt = `${designSpecPrompt}\n\n---\n\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n\n## Сегмент App Store\n${segment}\n\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n\n---\n\n# ЗАДАЧА\n\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
+          "jsCode": "const data = $('Edit Fields4').first().json;\n\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec;\nconst screensContent = data.Screens || '';\nconst elementsContent = data.ScreenElements || '';\n\nconst prompt = `${designSpecPrompt}\n---\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n## Сегмент App Store\n${segment}\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n---\n# ЗАДАЧА\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
         },
         "position": [
-          1920,
-          704
+          496,
+          816
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5457,8 +5160,8 @@
           "text": "={{ $json.prompt }}"
         },
         "position": [
-          2096,
-          704
+          672,
+          816
         ],
         "type": "@n8n/n8n-nodes-langchain.chainLlm",
         "typeVersion": 1.4
@@ -5484,54 +5187,11 @@
           }
         },
         "position": [
-          2096,
-          896
+          672,
+          1008
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
         "typeVersion": 1.3
-      },
-      {
-        "credentials": {
-          "googlePalmApi": {
-            "id": "kpb4KMG2LrUgiQZB",
-            "name": "Gemini Ilya Owner"
-          }
-        },
-        "id": "fd58fabe-345b-4374-b0b0-18c976face98",
-        "name": "Google Gemini Chat Model3",
-        "parameters": {
-          "modelName": "models/gemini-3-flash-preview",
-          "options": {
-            "maxOutputTokens": 64000,
-            "safetySettings": {
-              "values": [
-                {
-                  "category": "HARM_CATEGORY_HARASSMENT",
-                  "threshold": "BLOCK_NONE"
-                },
-                {
-                  "category": "HARM_CATEGORY_HATE_SPEECH",
-                  "threshold": "BLOCK_NONE"
-                },
-                {
-                  "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                  "threshold": "BLOCK_NONE"
-                },
-                {
-                  "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                  "threshold": "BLOCK_NONE"
-                }
-              ]
-            },
-            "temperature": 0.1
-          }
-        },
-        "position": [
-          2368,
-          1072
-        ],
-        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-        "typeVersion": 1
       },
       {
         "id": "49dddbda-a540-4787-86b1-3c0307d7409a",
@@ -5541,87 +5201,8 @@
           "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `DesignSpec.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
         },
         "position": [
-          2416,
-          704
-        ],
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "930b0b34-a65d-4601-8d75-4f05d1085689",
-        "name": "Update an issue2",
-        "parameters": {
-          "issueKey": "={{ $('Config').last().json.Jira_Issue }}",
-          "jiraVersion": "serverPat",
-          "operation": "update",
-          "updateFields": {
-            "statusId": {
-              "__rl": true,
-              "cachedResultName": "Backlog-Admin",
-              "mode": "list",
-              "value": "101"
-            }
-          }
-        },
-        "position": [
-          1088,
-          912
-        ],
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
-      },
-      {
-        "credentials": {
-          "jiraSoftwareServerPatApi": {
-            "id": "WwUfZZ4lukKmf4G9",
-            "name": "Jira SW Task Buider"
-          }
-        },
-        "id": "ffb1a437-e17f-4d2f-bacb-f8b018584da9",
-        "name": "Add a comment1",
-        "parameters": {
-          "comment": "=Gold Git Repository -  {{ $('Files Missing').item.json.message }}",
-          "issueKey": "={{ $('Config').last().json.Jira_Issue }}",
-          "jiraVersion": "serverPat",
-          "options": {},
-          "resource": "issueComment"
-        },
-        "position": [
-          1296,
-          912
-        ],
-        "type": "n8n-nodes-base.jira",
-        "typeVersion": 1
-      },
-      {
-        "id": "cf86e704-b769-4227-898a-86e4bebb14f4",
-        "name": "Extract from File4",
-        "parameters": {
-          "operation": "text",
-          "options": {}
-        },
-        "position": [
-          1264,
-          704
-        ],
-        "type": "n8n-nodes-base.extractFromFile",
-        "typeVersion": 1.1
-      },
-      {
-        "id": "55559d9a-be35-4328-8675-3c5b486e2a4d",
-        "name": "Merge2",
-        "parameters": {
-          "jsCode": "const extractedItems = $input.all();\nconst fileItems = $('Get File Content').all();\n\nconst result = {};\n\nextractedItems.forEach((item, index) => {\n  const fileName = fileItems[index]?.binary?.data?.fileName?.replace(/\\.[^/.]+$/, '') || `file_${index + 1}`;\n  result[fileName] = item.json.data;\n});\n\nreturn [{\n  json: result\n}];"
-        },
-        "position": [
-          1472,
-          704
+          992,
+          816
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5642,7 +5223,7 @@
                 "id": "33785421-1ed9-4815-bf04-e0230e93941c",
                 "name": "DesignSpec",
                 "type": "string",
-                "value": "=# 🎯 СОЗДАНИЕ УНИКАЛЬНОЙ ДИЗАЙН-СПЕЦИФИКАЦИИ\n# На основе текущего проекта + анализ Top 20 App Store US\n\n---\n\n## РОЛЬ\nТы — Senior Product Designer уровня Apple/Airbnb с 15+ годами опыта. Ты создаёшь дизайн-системы, которые выигрывают Apple Design Awards. Ты не копируешь — ты задаёшь тренды.\n\n---\n\n## ВХОДНЫЕ ДАННЫЕ\n\n### Обязательные файлы проекта:\n- `Screens.md` — полный каталог экранов приложения\n- `ScreenElements.md` — все UI-элементы на каждом экране\n\n### Параметры:\n- **Сегмент App Store:** {{ $('Config').last().json.AppName }} [УКАЗАТЬ СЕГМЕНТ, например: Photo Editing, Fitness, Finance]\n\n---\n\n## ⚠️ КРИТИЧЕСКИ ВАЖНО — ПРОЧТИ ПЕРЕД НАЧАЛОМ\n\n```\nЭТО НЕ ШАБЛОННЫЙ РЕДИЗАЙН.\nЭТО СОЗДАНИЕ ПРИЛОЖЕНИЯ, КОТОРОЕ БУДЕТ ЛУЧШЕ ВСЕХ В КАТЕГОРИИ.\n\nПравила:\n1. КАЖДОЕ решение должно быть ОБОСНОВАНО — почему именно так, а не иначе\n2. КАЖДЫЙ экран должен быть ПЕРЕОСМЫСЛЕН — не косметика, а реальное улучшение\n3. КАЖДЫЙ компонент должен быть УНИКАЛЬНЫМ — не дефолтный iOS, не Material\n4. Бизнес-логика НЕ МЕНЯЕТСЯ — меняется только визуал, layout, flow, анимации\n5. Навигационная структура может УЛУЧШАТЬСЯ — но не ломаться\n```\n\n---\n\n## ЭТАП 0: ГЛУБОКИЙ АНАЛИЗ ТЕКУЩЕГО ПРОЕКТА\n\n### 0.1 Прочитай Screens.md и ScreenElements.md ПОЛНОСТЬЮ\n\nСоздай таблицу текущего состояния:\n\n| ScreenID | Screen Name | Кол-во элементов | Тип Layout | Density | CTA Count | Проблемы |\n|----------|-------------|-------------------|------------|---------|-----------|----------|\n| SCR-001 | ... | ... | ... | ... | ... | ... |\n\n### 0.2 Аудит текущего UX\n\nДля КАЖДОГО экрана из Screens.md оцени по 10-балльной шкале:\n\n| ScreenID | Visual Hierarchy | CTA Clarity | Info Density | Whitespace | Animation | Wow-factor | TOTAL |\n|----------|-----------------|-------------|--------------|------------|-----------|------------|-------|\n| SCR-001 | /10 | /10 | /10 | /10 | /10 | /10 | /60 |\n\n### 0.3 Выявление Critical Problems\n\n```\nДля каждого экрана определи:\n\n🔴 CRITICAL (ломает UX):\n- [ ] CTA не видно / конкурирует с другими\n- [ ] Слишком много элементов\n- [ ] Нет иерархии\n- [ ] Пользователь не понимает что делать\n\n🟡 IMPORTANT (ухудшает опыт):\n- [ ] Скучный/шаблонный дизайн\n- [ ] Слабые анимации\n- [ ] Нет emotional design\n- [ ] Плохая плотность информации\n\n🟢 NICE-TO-HAVE (полировка):\n- [ ] Микроанимации\n- [ ] Haptic feedback\n- [ ] Easter eggs\n- [ ] Delight moments\n```\n\n### 0.4 Карта элементов для переработки\n\nИз ScreenElements.md создай матрицу:\n\n| Element Type | Где встречается (Screen IDs) | Текущая реализация | Что не так | Приоритет переделки |\n|--------------|------------------------------|--------------------|-----------|--------------------|\n| Primary Button | SCR-001, SCR-003, ... | Стандартный | Скучный | 🔴 High |\n| Card | SCR-002, SCR-005, ... | Flat bordered | Шаблонный | 🟡 Medium |\n| ... | ... | ... | ... | ... |\n\n---\n\n## ЭТАП 1: АНАЛИЗ TOP 20 APP STORE US\n\n### 1.1 Поиск конкурентов\n\nНайди и проанализируй **топ-20 приложений** в категории **[СЕГМЕНТ]** в US App Store.\n\n### 1.2 Глубокий анализ каждого\n\n| # | App | Rating | Downloads | Visual Style | Цвета (Primary/Accent) | Typo | Wow-момент | Слабость |\n|---|-----|--------|-----------|-------------|----------------------|------|-----------|----------|\n| 1 | ... | ... | ... | ... | ... | ... | ... | ... |\n\n### 1.3 Детальный разбор UI конкурентов\n\nДля КАЖДОГО из топ-20 зафиксируй:\n\n**Layout patterns:**\n- Как организована Home/Main screen\n- Где расположены CTA (top/bottom/float)\n- Как сделана навигация (tab/drawer/gesture)\n- Как организованы списки/гриды\n\n**Visual decisions:**\n- Color palette (primary, secondary, accent — HEX)\n- Typography (font family, key sizes)\n- Corner radius стиль (sharp/rounded/pill)\n- Shadow usage (heavy/subtle/none)\n- Gradient usage (да/нет, где)\n\n**Motion & Feel:**\n- Transition между экранами\n- Micro-interactions на кнопках\n- Loading states (spinner/skeleton/shimmer)\n- Pull-to-refresh стиль\n- Gesture support (swipe actions, long press)\n\n**Monetization screens:**\n- Paywall layout\n- Pricing presentation\n- Free trial messaging\n- Upsell triggers\n\n**Onboarding:**\n- Количество шагов\n- Стиль (illustration/video/animation/interactive)\n- Skip доступность\n- Permission requests flow\n\n---\n\n## ЭТАП 2: ПАТТЕРНЫ И ВОЗМОЖНОСТИ\n\n### 2.1 Матрица индустрии\n\nЗаполни строго:\n\n**✅ Must-Have (делают 15+ из 20):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы ОБЯЗАНЫ иметь, но ЛУЧШЕ)\n```\n\n**⭐ Best-in-Class (делают топ-3):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы КОПИРУЕМ подход, но УНИКАЛЬНА реализация)\n```\n\n**🚀 Blue Ocean (НЕ делает НИКТО):**\n```\n1. ...\n2. ...\n3. ...\n(Это наши УНИКАЛЬНЫЕ фишки — конкурентное преимущество)\n```\n\n**💀 Antipatterns (делают, но ПЛОХО):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы ИСПРАВЛЯЕМ и делаем ПРАВИЛЬНО)\n```\n\n### 2.2 Opportunity Map\n\n| Аспект | Средний уровень рынка | Лучший конкурент | Наша цель | Как достигаем |\n|--------|----------------------|------------------|-----------|---------------|\n| Onboarding | 5 экранов, скучно | 3 экрана, анимации | 2-3, wow-эффект | [КАК] |\n| Paywall | Агрессивный | Neutral | Premium-чувство | [КАК] |\n| Home screen | Перегружен | Чистый | Персонализирован | [КАК] |\n| Animations | Почти нет | Базовые | Signature feel | [КАК] |\n| Empty states | Текст | Иллюстрация | Интерактив | [КАК] |\n| Error handling | Alert | Inline | Помощь+действие | [КАК] |\n| ... | ... | ... | ... | ... |\n\n---\n\n## ЭТАП 3: ВИЗУАЛЬНАЯ КОНЦЕПЦИЯ\n\n### 3.1 Brand Positioning\n\n```\nОпредели:\n\nЭМОЦИЯ: [Какое чувство вызывает приложение]\n  Примеры: Premium calm, Energetic creative, Trustworthy expert\n\nМЕТАФОРА: [С чем ассоциируется]\n  Примеры: Personal assistant, Creative studio, Luxury tool\n\nПРИНЦИПЫ (3 штуки):\n  1. [ПРИНЦИП] — что это значит для UI\n  2. [ПРИНЦИП] — что это значит для UI\n  3. [ПРИНЦИП] — что это значит для UI\n\nANTI-ПРИНЦИПЫ (чем мы НЕ являемся):\n  1. НЕ [ЧТО]\n  2. НЕ [ЧТО]\n  3. НЕ [ЧТО]\n```\n\n### 3.2 Signature Elements\n\n```\nОпредели 3-5 УНИКАЛЬНЫХ визуальных элемента, которых НЕТ у конкурентов:\n\n1. SIGNATURE ELEMENT: [Название]\n   Описание: [Что это]\n   Где используется: [На каких экранах]\n   Почему уникально: [Чем отличается]\n\n2. ...\n3. ...\n```\n\n---\n\n## ЭТАП 4: ДИЗАЙН-СПЕЦИФИКАЦИЯ (ОСНОВНОЙ OUTPUT)\n\n### Файл: `DesignSpec.md`\n\n> ⚠️ Каждое значение ниже — КОНКРЕТНОЕ. Никаких \"зависит от контекста\".\n> ⚠️ Каждое решение — ОБОСНОВАНО через анализ конкурентов.\n\n---\n\n### 4.1 ЦВЕТОВАЯ СИСТЕМА\n\n#### Brand Palette\n\n| Token | Light Mode HEX | Dark Mode HEX | Opacity варианты | Где используется |\n|-------|---------------|---------------|-----------------|-----------------|\n| `brand.primary` | #XXXXXX | #XXXXXX | 100%, 80%, 60%, 20%, 10% | CTA, активные акценты |\n| `brand.secondary` | #XXXXXX | #XXXXXX | 100%, 80%, 60%, 20%, 10% | Вторичные акценты |\n| `brand.accent` | #XXXXXX | #XXXXXX | 100%, 80% | Промо, highlights |\n\n**⚠️ Обоснование выбора:**\n- Почему эти цвета: [Анализ — что используют конкуренты и ПОЧЕМУ мы выбрали иначе]\n- Психология: [Какие эмоции вызывают]\n- Уникальность: [Чем отличаемся от топ-5]\n\n#### Semantic Palette\n\n| Token | Light Mode | Dark Mode | Использование |\n|-------|------------|-----------|---------------|\n| `success` | #XXXXXX | #XXXXXX | Успешные операции |\n| `warning` | #XXXXXX | #XXXXXX | Предупреждения |\n| `error` | #XXXXXX | #XXXXXX | Ошибки |\n| `info` | #XXXXXX | #XXXXXX | Информация |\n\n#### Background System\n\n| Token | Light Mode | Dark Mode | Elevation | Использование |\n|-------|------------|-----------|-----------|---------------|\n| `bg.base` | #XXXXXX | #XXXXXX | 0 | Фон приложения |\n| `bg.surface` | #XXXXXX | #XXXXXX | +1 | Карточки, секции |\n| `bg.elevated` | #XXXXXX | #XXXXXX | +2 | Модалки, sheets |\n| `bg.overlay` | #XXXXXX XX% | #XXXXXX XX% | — | Затемнение |\n\n#### Text System\n\n| Token | Light Mode | Dark Mode | Использование |\n|-------|------------|-----------|---------------|\n| `text.primary` | #XXXXXX | #XXXXXX | Заголовки, основной |\n| `text.secondary` | #XXXXXX | #XXXXXX | Описания |\n| `text.tertiary` | #XXXXXX | #XXXXXX | Placeholder, hints |\n| `text.disabled` | #XXXXXX | #XXXXXX | Неактивные |\n| `text.inverse` | #XXXXXX | #XXXXXX | На цветном фоне |\n| `text.brand` | #XXXXXX | #XXXXXX | Ссылки, акценты |\n\n#### Gradients\n\n```swift\n// Для каждого градиента указать:\n// - Название\n// - Цвета (HEX)\n// - Направление\n// - ГДЕ ИМЕННО используется (конкретные экраны/элементы)\n\ngradient.primaryCTA:\n  colors: [#XXXXXX, #XXXXXX]\n  direction: topLeading → bottomTrailing\n  usage: Primary CTA buttons на SCR-001, SCR-005, SCR-008\n\ngradient.premium:\n  colors: [#XXXXXX, #XXXXXX, #XXXXXX]\n  direction: topLeading → bottomTrailing\n  usage: Paywall CTA, premium badges\n\ngradient.backgroundHero:\n  colors: [#XXXXXX 0%, #XXXXXX 50%, transparent 100%]\n  direction: top → bottom\n  usage: Hero секции на Onboarding, Home\n```\n\n#### Правила цвета\n\n```\n1. Maximum PRIMARY цвета на экране: 2 элемента (CTA + 1 акцент)\n2. Background НИКОГДА не чисто белый/чёрный — всегда с оттенком\n3. Gradient ТОЛЬКО на: Primary CTA, Hero backgrounds, Premium elements\n4. Dark Mode: brand colors на 15-20% ярче для контраста\n5. Контраст текста: минимум 4.5:1 (WCAG AA)\n6. Контраст CTA: минимум 7:1 (WCAG AAA)\n```\n\n---\n\n### 4.2 ТИПОГРАФИКА\n\n#### Правило шрифтов\n\n```\n⚠️ МАКСИМУМ 1-2 ШРИФТА НА ВСЁ ПРИЛОЖЕНИЕ.\n\nВариант A (рекомендуемый): 1 шрифт — разделение через weight и size\nВариант B: 2 шрифта — один для заголовков (Display), один для body/UI (Text)\nНИКОГДА больше 2-х font families.\nРазнообразие достигается через WEIGHT и SIZE, а не через количество шрифтов.\n```\n\n**⚠️ Обоснование выбора шрифта:**\n- Какой шрифт(ы) выбран и ПОЧЕМУ\n- Чем отличается от конкурентов\n- Как влияет на восприятие бренда\n\n#### Type Scale\n\n| Token | Weight | Size | Line Height | Tracking | Использование |\n|-------|--------|------|-------------|----------|---------------|\n| `display.hero` | Black/900 | 40pt | 44pt | -1.0pt | Wow-заголовки (Onboarding, Paywall) |\n| `display.large` | Bold/700 | 34pt | 41pt | -0.5pt | Hero секции |\n| `display.medium` | Bold/700 | 28pt | 34pt | -0.3pt | Заголовки экранов |\n| `title.large` | Semibold/600 | 22pt | 28pt | 0pt | Заголовки карточек |\n| `title.medium` | Semibold/600 | 20pt | 25pt | 0pt | Подзаголовки |\n| `title.small` | Semibold/600 | 17pt | 22pt | 0pt | List headers |\n| `body.large` | Regular/400 | 17pt | 24pt | 0pt | Основной текст |\n| `body.medium` | Regular/400 | 15pt | 21pt | 0pt | Описания |\n| `body.small` | Regular/400 | 13pt | 18pt | 0pt | Подписи |\n| `label.large` | Medium/500 | 15pt | 20pt | 0.2pt | Кнопки |\n| `label.medium` | Medium/500 | 13pt | 18pt | 0.2pt | Chips, tabs |\n| `label.small` | Semibold/600 | 11pt | 13pt | 0.5pt | Badges, метки |\n| `caption` | Regular/400 | 12pt | 16pt | 0pt | Мелкий текст |\n| `overline` | Semibold/600 | 10pt | 12pt | 1.5pt | Категории (UPPERCASE) |\n\n#### Правила типографики\n\n```\n1. МАКСИМУМ 1-2 font family на всё приложение\n2. На одном экране максимум 4 РАЗНЫХ размера текста\n3. Заголовки: left-aligned (кроме Onboarding/Paywall — centered)\n4. Body text: максимум 60 символов на строку\n5. Никогда: ALL CAPS кроме overline и badges\n6. Числа: tabular figures (моноширинные цифры)\n7. Длинные тексты: body.medium, не body.large\n8. Hero текст: ТОЛЬКО на Onboarding, Paywall, Empty States\n```\n\n---\n\n### 4.3 SPACING & LAYOUT\n\n#### Spacing Scale (Base: 4pt)\n\n| Token | Value | Использование |\n|-------|-------|---------------|\n| `space.2` | 2pt | Hairline gaps |\n| `space.4` | 4pt | Icon-to-text, badge padding |\n| `space.6` | 6pt | Tight grouping |\n| `space.8` | 8pt | Related elements |\n| `space.12` | 12pt | Standard gaps |\n| `space.16` | 16pt | Screen padding, card padding |\n| `space.20` | 20pt | Section title to content |\n| `space.24` | 24pt | Between sections |\n| `space.32` | 32pt | Major separations |\n| `space.40` | 40pt | Hero spacing |\n| `space.48` | 48pt | Top/bottom screen breathing |\n| `space.64` | 64pt | Dramatic spacing |\n| `space.80` | 80pt | Hero sections |\n\n#### Layout Rules\n\n```\nScreen padding: 20pt (НЕ стандартные 16pt — даёт больше воздуха, premium feel)\nCard padding: 16pt\nCard gap: 16pt\nSection gap: 32pt\nCTA bottom padding: 16pt от Safe Area\nNav bar bottom margin: 8pt\n```\n\n**⚠️ Обоснование 20pt screen padding:**\n- Конкуренты: 16pt (стандарт)\n- Мы: 20pt — создаёт premium feel, больше whitespace\n- Контент уже на 8pt с каждой стороны → визуально чище\n\n#### Screen Layout Templates\n\n**Template A: Content + Fixed CTA (Onboarding, Paywall, Forms)**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Nav Bar (optional)        44pt │\n├────────────────────────────────┤\n│                                │\n│   ScrollView                   │\n│   padding: 20pt                │\n│                                │\n│   [CONTENT]                    │\n│                                │\n│                                │\n├────────────────────────────────┤\n│ ┌────────────────────────────┐ │\n│ │ Primary CTA           52pt │ │  Fixed bottom\n│ └────────────────────────────┘ │  padding: 20pt H, 16pt V\n│ Secondary action (text button) │  8pt gap\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template B: Header + Scrollable Content (Home, Dashboard)**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Custom Header              var │  Collapses on scroll\n├────────────────────────────────┤\n│                                │\n│   ScrollView                   │\n│                                │\n│   Section 1          gap: 32pt │\n│   ┌──────────────────────────┐ │\n│   │ Card                     │ │\n│   └──────────────────────────┘ │\n│   Section 2                    │\n│   ┌──────┐ ┌──────┐           │\n│   │ Card │ │ Card │  gap: 16pt│\n│   └──────┘ └──────┘           │\n│                                │\n├────────────────────────────────┤\n│ Tab Bar                   49pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template C: Full Canvas (Editor, Camera)**\n```\n┌────────────────────────────────┐\n│ Safe Area (overlay)            │\n├────────────────────────────────┤\n│ Top Toolbar (overlay)     44pt │\n│                                │\n│                                │\n│     CANVAS (full bleed)        │\n│                                │\n│                                │\n│ Bottom Toolbar (overlay)  60pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template D: List/Settings**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Large Title Nav           var  │\n├────────────────────────────────┤\n│ Search Bar (optional)     44pt │\n│                                │\n│ Section Header                 │\n│ ┌────────────────────────────┐ │\n│ │ List Item              56pt│ │\n│ ├────────────────────────────┤ │\n│ │ List Item              56pt│ │\n│ ├────────────────────────────┤ │\n│ │ List Item              56pt│ │\n│ └────────────────────────────┘ │\n│ Section gap: 32pt              │\n│ Section Header                 │\n│ ┌────────────────────────────┐ │\n│ │ List Item              56pt│ │\n│ └────────────────────────────┘ │\n│                                │\n├────────────────────────────────┤\n│ Tab Bar (optional)        49pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n---\n\n### 4.4 CORNER RADIUS\n\n| Token | Value | Где |\n|-------|-------|-----|\n| `radius.xs` | 4pt | Badges, status indicators |\n| `radius.sm` | 8pt | Chips, tags, small buttons |\n| `radius.md` | 12pt | Buttons, inputs |\n| `radius.lg` | 16pt | Cards, thumbnails |\n| `radius.xl` | 20pt | Large cards |\n| `radius.2xl` | 24pt | Bottom sheets |\n| `radius.3xl` | 28pt | Onboarding cards |\n| `radius.full` | 9999pt | Avatars, pills, indicators |\n\n**⚠️ ПРАВИЛО ВЛОЖЕННОСТИ:**\n```\nВнешний контейнер radius ВСЕГДА > внутреннего:\n- Card (16pt) → Button inside (12pt) ✅\n- Card (16pt) → Button inside (16pt) ❌\n- Sheet (24pt) → Card inside (16pt) ✅\n\nФормула: inner_radius = outer_radius - padding\nЕсли padding 16pt, card 16pt → inner ≈ 12pt (ок, ≤16-4=12)\n```\n\n---\n\n### 4.5 SHADOWS & DEPTH\n\n#### Light Mode Shadows\n\n| Token | X | Y | Blur | Spread | Color | Использование |\n|-------|---|---|------|--------|-------|---------------|\n| `shadow.subtle` | 0 | 1pt | 3pt | 0 | #000 4% | Hover states |\n| `shadow.card` | 0 | 2pt | 8pt | -1pt | #000 6% | Карточки |\n| `shadow.elevated` | 0 | 4pt | 12pt | -2pt | #000 8% | Dropdowns, поповеры |\n| `shadow.modal` | 0 | 8pt | 24pt | -4pt | #000 12% | Модалки, sheets |\n| `shadow.dramatic` | 0 | 16pt | 48pt | -8pt | #000 16% | Floating CTA, FAB |\n\n**⚠️ УНИКАЛЬНОСТЬ ТЕНЕЙ:**\n```\nНЕ используем стандартные плоские тени.\nНаш стиль: \"Elevated Soft\" — большой blur, маленький Y, negative spread.\nЭто создаёт эффект \"парения\", который конкуренты не используют.\n\nДополнительно: Color shadows для brand элементов:\n- Primary CTA shadow: brand.primary 20%, 0 4pt 16pt\n- Это добавляет \"свечение\" CTA — привлекает внимание\n```\n\n#### Dark Mode: Border System (вместо теней)\n\n| Element | Border |\n|---------|--------|\n| Card | 1pt `border.default` |\n| Elevated card | 1pt `border.strong` |\n| Modal | 1pt `border.strong` |\n| Input | 1pt `border.default` |\n| Input focused | 2pt `brand.primary` |\n\n---\n\n### 4.6 КОМПОНЕНТЫ — ПОЛНОЕ ОПИСАНИЕ\n\n> Для КАЖДОГО компонента указаны: размеры, цвета, состояния, анимации, расположение, УНИКАЛЬНОСТЬ\n\n#### 🔘 Buttons\n\n**Primary Button**\n```\nHeight: 56pt (НЕ стандартные 44/50 — крупнее = увереннее = больше конверсия)\nWidth: full-width (в контексте) или auto + min 200pt\nPadding: 24pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: gradient.primaryCTA\nText: text.inverse, label.large, Semibold, centered\nShadow: brand.primary 20%, 0 4pt 16pt (Light Mode) — \"glow effect\"\nIcon: 20pt, leading или trailing, 8pt gap\n\nSTATES:\n- Default: как описано\n- Pressed: scale(0.97), shadow уменьшается, duration 100ms\n- Disabled: opacity 40%, no shadow, no gradient (solid bg.tertiary)\n- Loading: text скрыт → circular spinner 20pt, centered, text.inverse\n\nANIMATION on appear:\n- fade in + translateY(8pt → 0) + scale(0.98 → 1.0)\n- duration: 300ms, ease-out\n- delay: последний элемент на экране (CTA появляется после контента)\n\n⚠️ УНИКАЛЬНОСТЬ: Glow shadow + увеличенная высота + появление с задержкой\n```\n\n**Secondary Button**\n```\nHeight: 52pt\nWidth: auto или full-width\nPadding: 20pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: transparent\nBorder: 1.5pt brand.primary (НЕ 1pt как у всех — толще = заметнее)\nText: brand.primary, label.large, Medium\nIcon: 20pt, optional\n\nSTATES:\n- Default: как описано\n- Pressed: background brand.primary 10%, scale(0.98), duration 100ms\n- Disabled: opacity 40%, border color text.disabled\n- Loading: spinner brand.primary\n\n⚠️ УНИКАЛЬНОСТЬ: Толстый border + тонированный press state\n```\n\n**Ghost Button**\n```\nHeight: 44pt\nPadding: 16pt horizontal\nBackground: transparent\nText: text.brand, label.large, Medium\nUnderline: нет\nIcon: 20pt optional\n\nSTATES:\n- Default: text.brand\n- Pressed: opacity 60%\n- Disabled: opacity 40%\n```\n\n**Icon Button**\n```\nSize: 48x48pt (touch target) / Visual: 40x40pt\nIcon: 24pt centered\nBackground: transparent (default) или bg.surface (contained)\nCorner Radius: radius.md (12pt)\n\nSTATES:\n- Default: icon text.secondary\n- Pressed: bg.surface, icon text.primary, scale(0.95)\n- Selected: icon brand.primary, bg brand.primary 10%\n- Badge: red dot 8pt, top-right offset -2pt\n```\n\n**Pill Button (tag-style)**\n```\nHeight: 36pt\nPadding: 16pt horizontal\nCorner Radius: radius.full\nBackground: bg.surface\nBorder: 1pt border.default\nText: label.medium, text.primary\nIcon: 16pt optional, leading\n\nSTATES:\n- Default: как описано\n- Selected: bg brand.primary, text text.inverse, no border\n- Pressed: scale(0.97)\n```\n\n---\n\n#### 🃏 Cards\n\n**Standard Card**\n```\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\n\nLight Mode: shadow.card\nDark Mode: 1pt border.default\n\nContent structure (top → bottom, gap 12pt):\n1. Image/Visual (optional, full-bleed top, radius.lg top only)\n2. Category/Tag (overline, text.secondary)\n3. Title (title.medium)\n4. Description (body.medium, text.secondary, max 2 lines)\n5. Footer: metadata left + action right\n\nSTATES:\n- Default: как описано\n- Pressed: scale(0.98), shadow.subtle, duration 150ms\n- Long press: scale(0.96), duration 200ms, context menu\n\nANIMATION on appear:\n- fade + translateY(16pt → 0)\n- duration: 300ms, ease-out\n- stagger: index * 60ms\n```\n\n**Feature Card (hero)**\n```\nMin Height: 200pt\nPadding: 24pt\nCorner Radius: radius.xl (20pt)\nBackground: gradient.backgroundHero или bg.elevated\n\nLight Mode: shadow.elevated\nDark Mode: 1pt border.strong + bg.elevated\n\nContent:\n1. Badge/Tag (top-left)\n2. Icon/Illustration (32-48pt, brand.primary)\n3. Title (title.large)\n4. Description (body.medium, text.secondary)\n5. CTA (Ghost Button или chevron)\n\n⚠️ УНИКАЛЬНОСТЬ: Градиентный фон + oversized icon + generous padding\n```\n\n**Horizontal Card (compact)**\n```\nHeight: 80pt\nPadding: 12pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\n\nLayout: [Image 56pt square, radius.md] | [Content] | [Action]\nImage left margin: 0 (flush)\nContent: title (titleSmall) + subtitle (bodySmall, text.secondary)\nAction: chevron 16pt text.tertiary или value text\n\nGap: image-content 12pt, content-action 8pt\n```\n\n**Selection Card (radio/option)**\n```\nHeight: auto (min 72pt)\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\n\nSTATES:\n- Unselected: bg.surface, 1.5pt border.default\n- Selected: bg brand.primary 5%, 2pt border brand.primary, checkmark icon\n- Pressed: scale(0.98)\n\nSelection indicator: 24pt circle, right side\n- Unselected: 2pt border, empty\n- Selected: brand.primary filled, white checkmark\n- Animation: scale(0 → 1) + opacity, spring 200ms\n```\n\n---\n\n#### 📝 Inputs\n\n**Text Input**\n```\nHeight: 56pt (увеличенный для удобства)\nPadding: 16pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: bg.surface\nBorder: 1.5pt border.default\n\nLabel: body.small, text.secondary, above input, 6pt gap\nPlaceholder: body.large, text.tertiary\nValue: body.large, text.primary\nHelper text: caption, text.secondary, below, 4pt gap\n\nSTATES:\n- Empty: border.default, placeholder visible\n- Focused: border 2pt brand.primary, floating label (animated)\n- Filled: border.default, value shown\n- Error: border 2pt error, helper text error color, shake animation\n- Disabled: opacity 50%, bg.tertiary\n\n⚠️ УНИКАЛЬНОСТЬ: Floating label animation + увеличенная высота + subtle shake on error\n```\n\n**Search Input**\n```\nHeight: 48pt\nPadding: 12pt horizontal\nCorner Radius: radius.full (pill shape — ОТЛИЧИЕ от конкурентов)\nBackground: bg.tertiary\nBorder: none\n\nIcon: magnifyingglass 20pt, text.tertiary, left 12pt\nPlaceholder: body.medium, text.tertiary\nClear button: xmark.circle.fill 20pt, appears on input, right\nCancel button: text button, appears on focus, right, animated slide-in\n\nANIMATION:\n- Focus: expand width (если в header), cancel button slides in\n- Cancel: shrink, cancel button slides out, keyboard dismiss\n```\n\n---\n\n#### 📋 Lists\n\n**Standard List Item**\n```\nHeight: min 60pt (увеличен)\nPadding: 20pt horizontal (match screen padding), 14pt vertical\nBackground: transparent\n\nStructure:\n[Leading 40pt] — [space 12pt] — [Content flex] — [space 8pt] — [Trailing]\n\nLeading: Icon 24pt in 40pt container (bg.surface, radius.md) ИЛИ Avatar 40pt\nContent: title (titleSmall) + subtitle (bodySmall, text.secondary, 2pt gap)\nTrailing: chevron 16pt text.tertiary / Switch / Value (bodyMedium, text.secondary) / Badge\n\nSeparator: 0.5pt (НЕ 1pt — тоньше = элегантнее)\nSeparator color: border.default\nSeparator inset: 72pt left (leading + gap)\n```\n\n**Swipeable List Item**\n```\n... всё как Standard +\n\nSwipe Right: [Icon + Label], bg success/brand.primary\nSwipe Left: [Icon + Label], bg error\nSwipe threshold: 80pt\n\nAnimation: spring, snap back или complete\nHaptic: .medium on threshold\n```\n\n**Grouped List Container**\n```\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\nPadding: 0 (items have own padding)\nMargin: 20pt horizontal (screen padding)\n\nSection Header: \n- body.small, text.secondary, UPPERCASE не нужен (modern approach)\n- Padding: 20pt left, 8pt bottom\n- Capitalized, not uppercase\n\nSection Footer:\n- caption, text.tertiary\n- Padding: 20pt left, 8pt top\n```\n\n---\n\n#### 🔔 Feedback & States\n\n**Toast Notification**\n```\nPosition: top, below safe area, 16pt padding\nHeight: auto (min 52pt)\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.elevated\nShadow: shadow.modal\n\nLayout: [Icon 24pt] [space 12pt] [Text flex] [Close/Action]\n\nTypes:\n- Success: icon checkmark.circle.fill, semantic.success\n- Error: icon xmark.circle.fill, semantic.error\n- Warning: icon exclamationmark.triangle.fill, semantic.warning\n- Info: icon info.circle.fill, semantic.info\n\nANIMATION:\n- Enter: translateY(-100% → 0) + opacity, spring 350ms\n- Exit: translateY(0 → -100%) + opacity, ease-in 200ms\n- Auto-dismiss: 4s, swipe-up to dismiss\n\n⚠️ УНИКАЛЬНОСТЬ: Top position (не bottom как у всех) — не перекрывает CTA\n```\n\n**Empty State**\n```\nPosition: centered in available space (1/3 from top визуально)\nMax width: 280pt\n\nStructure:\n1. Illustration/Icon: 80pt (лаконичный, brand-colored) — НЕ гигантский\n2. [gap 20pt]\n3. Title: title.medium, text.primary, center\n4. [gap 8pt]\n5. Description: body.medium, text.secondary, center, max 2 lines\n6. [gap 24pt]\n7. CTA: Secondary Button или Ghost Button\n\nANIMATION:\n- Illustration: fade + scale(0.8 → 1.0), 400ms, ease-out\n- Text: fade + translateY(8pt → 0), 300ms, delay 100ms\n- CTA: fade + translateY(8pt → 0), 300ms, delay 200ms\n\n⚠️ УНИКАЛЬНОСТЬ: Compact illustration (не oversized) + staggered animation\n```\n\n**Skeleton Loading**\n```\nShapes: повторяют реальный контент\nCorner Radius: match реального элемента\nBackground: bg.tertiary\n\nShimmer:\n- Gradient: bg.tertiary → bg.surface → bg.tertiary\n- Direction: -45° angle (диагональ — НЕ горизонтальный как у всех)\n- Duration: 1.8s\n- Timing: ease-in-out\n\n⚠️ УНИКАЛЬНОСТЬ: Диагональный shimmer (отличие от горизонтального стандарта)\n```\n\n**Error State (inline)**\n```\nBackground: semantic.error 8% (subtle tint)\nBorder: none (НЕ border error — слишком агрессивно)\nCorner Radius: radius.md (12pt)\nPadding: 12pt\n\nLayout: [Icon 20pt error] [space 8pt] [Message body.small error] [Action optional]\n\nANIMATION: shake входного поля (translateX: 0 → -4 → 4 → -4 → 4 → 0, 300ms)\n```\n\n---\n\n#### 🔲 Modals & Overlays\n\n**Bottom Sheet**\n```\nCorner Radius: radius.3xl (28pt) top only (БОЛЬШЕ чем стандарт 12-16pt)\nBackground: bg.elevated\nHandle: 40x4pt, radius.full, text.tertiary 30%, centered, 12pt from top\n\nDetents: \n- Small: 25% screen height\n- Medium: 50% screen height\n- Large: 90% screen height (НЕ full — всегда видно что за sheet)\n\nBackdrop: bg.overlay (animated opacity)\n\nANIMATION:\n- Present: spring(response: 0.4, dampingFraction: 0.82) — чуть bouncy\n- Dismiss: ease-in, 250ms\n- Interactive: follows drag gesture\n\n⚠️ УНИКАЛЬНОСТЬ: Увеличенный radius + bouncy spring + всегда видно parent\n```\n\n**Alert Dialog**\n```\nWidth: 300pt (шире стандарт iOS 270pt — больше воздуха)\nCorner Radius: radius.xl (20pt)\nBackground: bg.elevated + blur\nPadding: 24pt\n\nTitle: title.medium, text.primary, center\nMessage: body.medium, text.secondary, center\nGap title-message: 8pt\nGap message-buttons: 24pt\n\nButtons layout:\n- 2 кнопки: horizontal, равная ширина, 12pt gap\n- 3+ кнопки: vertical stack, full width, 8pt gap\n- Primary action: ВСЕГДА выделен (filled)\n- Destructive: semantic.error\n- Cancel: ghost/text style\n\nANIMATION:\n- Appear: backdrop fade + dialog scale(0.9 → 1.0) + opacity, 250ms\n- Disappear: reverse, 200ms\n```\n\n---\n\n### 4.7 НАВИГАЦИЯ\n\n#### Tab Bar\n```\nHeight: 56pt (увеличен, без label — чище)\nBackground: bg.base + ultraThinMaterial\nBorder top: 0.5pt border.default\n\nItems: 3-5 icons, evenly distributed\nIcon size: 26pt (чуть больше стандарт)\nLabels: СКРЫТЫ по умолчанию (clean look)\nSelected indicator: brand.primary dot 4pt BELOW icon, 4pt gap\n\nSelected state: icon brand.primary, scale(1.1)\nUnselected state: icon text.tertiary\n\nANIMATION:\n- Selection: spring scale(1.0 → 1.15 → 1.1), 200ms\n- Indicator dot: spring scale(0 → 1), 200ms\n\n⚠️ УНИКАЛЬНОСТЬ: No labels + dot indicator + bounce selection\nОбоснование: Airbnb, Twitter/X trend — иконки самодостаточны, labels — visual noise\n```\n\n#### Navigation Bar\n```\nHeight: 44pt + safe area\nBackground: transparent → bg.base (on scroll, animated)\n\nTransition: \n- Start: transparent, large title\n- Scroll 50pt: bg.base fades in, title shrinks\n- Duration: 200ms\n\nTitle (inline): title.small, text.primary, center\nLarge Title: display.medium, text.primary, left, padding 20pt\n\nBack button: chevron.left 24pt + hitbox 44pt, NO text\nRight actions: max 2, icon buttons 24pt\n```\n\n---\n\n### 4.8 АНИМАЦИИ & MOTION\n\n#### Timing System\n\n| Token | Duration | Easing | Use |\n|-------|----------|--------|-----|\n| `micro` | 100ms | ease-out | Color change, opacity |\n| `fast` | 200ms | ease-out | Button press, toggle |\n| `normal` | 300ms | ease-out | Card transitions |\n| `slow` | 400ms | spring(0.4, 0.82) | Screen transitions, modals |\n| `dramatic` | 600ms | spring(0.5, 0.75) | Onboarding, celebrations |\n\n#### Signature Animations\n\n**1. Content Cascade (стаггер появление контента)**\n```swift\n// Каждый элемент на экране появляется с задержкой\nForEach(elements.indices) { index in\n    ElementView()\n        .opacity(appeared ? 1 : 0)\n        .offset(y: appeared ? 0 : 16)\n        .animation(.spring(response: 0.4, dampingFraction: 0.82).delay(Double(index) * 0.06))\n}\n\n// Используется на: Home, Settings, Lists, любой контент-экран\n// Haptic: .light на первый элемент\n```\n\n**2. Magnetic Press (отклик кнопки)**\n```swift\n// Кнопка \"притягивается\" к пальцу\n.scaleEffect(isPressed ? 0.97 : 1.0)\n.brightness(isPressed ? -0.05 : 0)\n.animation(.spring(response: 0.2, dampingFraction: 0.7))\n\n// Haptic: .light on press\n```\n\n**3. Elastic Sheet (модалки)**\n```swift\n// Sheet слегка пружинит при появлении\n.spring(response: 0.4, dampingFraction: 0.82)\n\n// Sheet follow drag с инерцией\n// Velocity > 500: dismiss\n// Position > 50%: dismiss\n```\n\n**4. Celebration Burst (success момент)**\n```swift\n// Используется: после оплаты, завершения задачи, achievement\n\n// 1. Checkmark draws itself (stroke animation, 400ms)\n// 2. Confetti particles (8-12 штук, random positions, gravity)\n// 3. Haptic: .success\n\n// Haptic sequence: \n// 0ms: .light\n// 200ms: .medium\n// 400ms: .success\n```\n\n**5. Parallax Scroll (depth на scroll)**\n```swift\n// Hero image/illustration двигается медленнее контента\n// Factor: 0.3 (image moves at 30% scroll speed)\n\nGeometryReader { geo in\n    Image(...)\n        .offset(y: -geo.frame(in: .global).minY * 0.3)\n}\n\n// Используется: Home hero, Onboarding, Paywall\n```\n\n#### Screen Transitions\n\n| From → To | Transition | Duration |\n|-----------|-----------|----------|\n| Tab switch | Cross-fade | 200ms |\n| Push screen | Slide right + fade | 300ms |\n| Modal present | Slide up, spring | 400ms |\n| Modal dismiss | Slide down, ease-in | 250ms |\n| Sheet present | Slide up, bouncy spring | 400ms |\n| Alert appear | Scale + fade, spring | 250ms |\n| Fullscreen image | Zoom from thumbnail | 350ms |\n\n---\n\n### 4.9 HAPTIC FEEDBACK\n\n| Action | Style | When |\n|--------|-------|------|\n| Button tap | `UIImpactFeedbackGenerator(.light)` | On touch down |\n| CTA tap | `UIImpactFeedbackGenerator(.medium)` | On touch down |\n| Toggle | `UIImpactFeedbackGenerator(.medium)` | On value change |\n| Selection | `UISelectionFeedbackGenerator()` | Picker, segment change |\n| Success | `UINotificationFeedbackGenerator(.success)` | Purchase, save, complete |\n| Error | `UINotificationFeedbackGenerator(.error)` | Validation fail, shake |\n| Warning | `UINotificationFeedbackGenerator(.warning)` | Destructive action confirm |\n| Long press | `UIImpactFeedbackGenerator(.heavy)` | Threshold reached |\n| Pull refresh | `UIImpactFeedbackGenerator(.medium)` | Threshold reached |\n| Swipe action | `UIImpactFeedbackGenerator(.light)` | Action revealed |\n| Scroll snap | `UISelectionFeedbackGenerator()` | Carousel page snap |\n\n---\n\n### 4.10 ICONS\n\n```\nSet: SF Symbols (primary)\nFallback: Custom SVG (brand-specific only)\n\nDefault weight: Regular\nEmphasis weight: Medium\nSize system:\n- 16pt: inline with text\n- 20pt: buttons, inputs\n- 24pt: navigation, list leading\n- 28pt: tab bar\n- 32pt: feature icons\n- 48pt: empty states, onboarding\n\nRendering: Monochrome (default)\nExceptions: Multicolor for: weather, status, celebration elements\n\nColor:\n- UI: text.secondary\n- Active: brand.primary  \n- Destructive: semantic.error\n- On color: text.inverse\n```\n\n---\n\n### 4.11 ACCESSIBILITY\n\n```\nTouch targets: minimum 48x48pt (ВЫШЕ стандарта 44pt)\nColor contrast: WCAG AAA (7:1) для primary text\nDynamic Type: поддержка до accessibility5\nVoiceOver: все интерактивные элементы с labels\nReduce Motion: все анимации → instant crossfade\nReduce Transparency: solid backgrounds вместо blur\nBold Text: weight bump +1 (Regular → Medium, Medium → Semibold)\n```\n\n---\n\n### 4.12 DARK MODE\n\n```\nПринцип: \"Luminance hierarchy\" — НЕ инвертировать, а управлять яркостью\n\nElevation (darker → lighter):\nLevel 0 (base): #0A0A0A (ЧЕРНЕЕ чем стандарт #1C1C1E — drama)\nLevel 1 (surface): #141414\nLevel 2 (elevated): #1E1E1E  \nLevel 3 (modal): #282828\nLevel 4 (popover): #323232\n\nShadows: ОТКЛЮЧЕНЫ полностью\nBorders: включены (1pt border.default)\n\nBrand colors: +15% brightness\nText primary: #F5F5F5 (НЕ чисто белый — мягче для глаз)\nImages: -5% brightness (subtle dim)\n\n⚠️ УНИКАЛЬНОСТЬ: Deeper blacks + slightly dimmed images = cinematic feel\n```\n\n---\n\n## ЭТАП 5: ПРИМЕНЕНИЕ К КАЖДОМУ ЭКРАНУ\n\n> ⚠️ Это САМАЯ ВАЖНАЯ часть. Для КАЖДОГО экрана из Screens.md + ScreenElements.md\n\n### Формат для каждого экрана:\n\n```markdown\n### SCR-XXX: [Screen Name]\n\n**Layout Template:** [A / B / C / D]\n\n**Текущее состояние (из ScreenElements.md):**\n- Элементы: [список текущих]\n- Проблемы: [из аудита Этап 0]\n- Оценка: [X/60]\n\n**Новый дизайн:**\n\nLAYOUT:\n┌────────────────────────────────┐\n│ [Схема нового layout]         │\n│ С указанием каждого элемента  │\n│ И его позиции                 │\n└────────────────────────────────┘\n\nЭЛЕМЕНТЫ (сверху вниз):\n1. [Element] — компонент: [КАКОЙ из 4.6], позиция: [ГДЕ], размер: [КАКОЙ]\n2. [Element] — ...\n3. ...\n\nЦВЕТА на экране:\n- Background: [token]\n- Primary accent: [token], количество: [N]\n- Text hierarchy: [какие токены используются]\n\nSPACING:\n- Screen padding: [value]\n- Section gaps: [values]\n- Specific spacing notes: [если отличается от стандарта]\n\nANIMATION:\n- Появление экрана: [КАК]\n- Элементы: [cascade / instant / specific]\n- Интерактивные: [какие и как реагируют]\n\nCTA:\n- Primary: [Текст], позиция: [ГДЕ], тип: [КАКОЙ]\n- Secondary: [Текст], позиция: [ГДЕ], тип: [КАКОЙ]\n\nУНИКАЛЬНОСТЬ этого экрана:\n- Что отличает от конкурента: [ЧТО]\n- WOW-момент: [ЕСЛИ ЕСТЬ]\n\nОТЛИЧИЕ ОТ ТЕКУЩЕГО:\n- [ЧТО изменилось и ПОЧЕМУ]\n```\n\n---\n\n## ЭТАП 6: ФИНАЛЬНАЯ СВОДКА\n\n### Итоговые файлы:\n\n```\n1. DesignSpec.md — полная спецификация (Этапы 3-4)\n2. ScreenDesigns.md — дизайн каждого экрана (Этап 5)\n3. CompetitorAnalysis.md — анализ конкурентов (Этапы 1-2)\n4. UniqueFeatures.md — наши уникальные фишки\n```\n\n### Чеклист перед завершением:\n\n```\nАНАЛИЗ:\n- [ ] Top 20 проанализированы (названия, стили, сильные/слабые)\n- [ ] Паттерны выявлены (must-have, best-in-class, blue ocean, antipatterns)\n- [ ] Opportunity map заполнен\n\nСПЕЦИФИКАЦИЯ:\n- [ ] Все цвета в HEX (Light + Dark)\n- [ ] Все размеры в pt\n- [ ] Все spacing конкретные\n- [ ] Все компоненты описаны с состояниями\n- [ ] Все анимации с duration и easing\n- [ ] Все haptics указаны\n\nУНИКАЛЬНОСТЬ:\n- [ ] Минимум 5 signature elements\n- [ ] Каждый компонент имеет ⚠️ УНИКАЛЬНОСТЬ\n- [ ] Color shadows на CTA\n- [ ] Diagonal shimmer\n- [ ] Bouncy sheets\n- [ ] Tab bar без labels\n- [ ] Content cascade animation\n- [ ] Celebration burst\n- [ ] Deep dark mode\n- [ ] Toast сверху (не снизу)\n\nПРИМЕНЕНИЕ:\n- [ ] КАЖДЫЙ экран из Screens.md описан\n- [ ] КАЖДЫЙ элемент из ScreenElements.md учтён\n- [ ] Ни один экран не пропущен\n- [ ] Layout templates присвоены\n- [ ] CTA позиции определены\n\nКОНСИСТЕНТНОСТЬ:\n- [ ] Spacing система едина\n- [ ] Цвета по ролям\n- [ ] Typography иерархия\n- [ ] Corner radius по правилу вложенности\n- [ ] Анимации по timing system\n```\n\n---\n\n## ⛔ ЗАПРЕЩЕНО\n\n```\n❌ Шаблонные решения \"как у всех\"\n❌ Стандартные iOS defaults без модификации\n❌ Копирование конкретного конкурента\n❌ Абстрактные формулировки без значений\n❌ Пропуск экранов / элементов\n❌ Игнорирование Dark Mode\n❌ Игнорирование анимаций\n❌ Размеры \"на глаз\"\n❌ Изменение бизнес-логики\n❌ Удаление функциональности\n```\n\n## ✅ ОБЯЗАТЕЛЬНО\n\n```\n✅ Конкретные HEX, pt, ms для КАЖДОГО значения\n✅ Обоснование КАЖДОГО нестандартного решения\n✅ Уникальность КАЖДОГО компонента\n✅ Описание КАЖДОГО экрана\n✅ Описание КАЖДОГО состояния компонента\n✅ Анимации для КАЖДОГО перехода\n✅ Haptic для КАЖДОГО взаимодействия\n✅ Dark Mode для КАЖДОГО элемента\n✅ Accessibility для КАЖДОГО интерактивного элемента\n```\n\n---\n\n**РЕЗУЛЬТАТ: Приложение, которое при открытии вызывает \"вау\" и визуально превосходит ЛЮБОГО конкурента в категории.**\n"
+                "value": "=# Design Manifest Generator — Claude API Opus 4.6\n\n> **Инструмент:** Claude API (Opus 4.6)\n> **Формат:** Скопируй секцию SYSTEM PROMPT как system message, секцию USER MESSAGE как user message. Заполни поля в `[КВАДРАТНЫХ СКОБКАХ]` перед отправкой.\n> **Результат:** Модель вернёт полный `DesignSpec.md` — скопируй его в корень проекта.\n\n---\n\n## SYSTEM PROMPT\n\n```\nТы — ведущий iOS UI/UX-дизайнер и SwiftUI-архитектор с 10+ годами опыта в App Store.\n\nТвоя единственная задача: создать Design Manifest — исчерпывающий документ дизайн-системы для топового iOS-приложения. Этот документ будет использоваться AI-агентами (Sonnet 4.5 в Cursor) для поэкранного редизайна всего приложения. Каждый экран будет редизайниться отдельным агентом параллельно, поэтому манифест должен быть единственным источником истины.\n\nКРИТИЧЕСКИЕ ТРЕБОВАНИЯ:\n1. Минимальная iOS версия: 18.0. Используй все доступные API iOS 18 (MeshGradient, symbolEffect, contentTransition, sensoryFeedback, ScrollTransition, scrollTargetBehavior).\n2. Все значения КОНКРЕТНЫЕ — hex-коды, pt-размеры, spring-конфиги. Ни одного placeholder.\n3. Все SwiftUI-сниппеты в Component Catalog должны КОМПИЛИРОВАТЬСЯ на iOS 18 без дополнительных зависимостей.\n4. Дизайн должен быть РАДИКАЛЬНО отличным от стандартного iOS и от текущего дизайна приложения.\n5. Формат вывода: чистый Markdown, готовый к сохранению как DESIGN_MANIFEST.md.\n6. Язык документа: русский для описаний, английский для кода и технических терминов.\n```\n\n---\n\n## USER MESSAGE\n\n```\nСоздай Design Manifest для моего iOS-приложения.\n\nИНФОРМАЦИЯ О ПРИЛОЖЕНИИ:\n- Название: [НАЗВАНИЕ ПРИЛОЖЕНИЯ]\n- Категория в App Store: [КАТЕГОРИЯ — например: Photo & Video, Productivity, Finance, Health & Fitness, Social Networking]\n- Основной функционал: [3-5 КЛЮЧЕВЫХ ФУНКЦИЙ — например: редактирование фото, удаление фона, AI-улучшение, наложение фильтров, экспорт]\n- Целевая аудитория: [ОПИСАНИЕ — например: мобильные фотографы 18-35 лет, контент-криэйторы]\n- Текущий визуальный стиль (если есть): [ОПИСАНИЕ — например: тёмный UI, magenta акценты, неоморфизм / или \"стандартный iOS\"]\n\nЗАДАНИЕ:\n\nШаг 1: КОНКУРЕНТНЫЙ АНАЛИЗ\nВеб поиском проанализируй App Store и определи ТОП-20 приложений в категории [КАТЕГОРИЯ]. Для каждого кратко отметь: доминантные цвета, стиль UI (минимализм/glassmorphism/brutalism/neomorphism/skeuomorphism/другое), характерные паттерны. Выдели 3 самых популярных визуальных подхода среди них — это то, что мы НЕ будем использовать.\n\nШаг 2: 10 УНИКАЛЬНЫХ НАПРАВЛЕНИЙ\nСгенерируй 10 радикально разных визуальных направлений. Каждое:\n- НЕ копирует стандартный iOS (no default tab bar, no system navigation bar, no default tint colors)\n- НЕ повторяет 3 самых популярных подхода из Шага 1\n- Вдохновлено чем-то конкретным (природа, космос, архитектура, искусство, наука, музыка, кинематограф и т.д.)\n- Реализуемо средствами SwiftUI + iOS 18\n\nФормат для каждого:\n1. **[Название EN]** — [Вдохновение, 1 предложение]. Палитра: #XXX, #XXX, #XXX, #XXX. Фишка: [что уникального в UI].\n\nШаг 3: ВЫБОР\nВыбери направление номер [ЧИСЛО ОТ 1 ДО 10 — вставь случайное число, или напиши \"выбери сам наименее очевидное\"]. Если я не указал число — выбери наименее банальное, не первое и не последнее.\n\nШаг 4: ПОЛНЫЙ МАНИФЕСТ\nДля выбранного направления создай DESIGN_MANIFEST.md по структуре ниже. ВСЕ секции обязательны. ВСЕ значения конкретные.\n\n=== НАЧАЛО СТРУКТУРЫ DESIGN_MANIFEST.md ===\n\n# Design Manifest: [Название концепции]\n\n> [Абзац: философия дизайна, вдохновение, атмосфера, ощущение от UI]\n\n**Mood:** [5-7 ключевых слов]  \n**Category:** [категория]  \n**Min iOS:** 18.0  \n**Framework:** SwiftUI  \n\n---\n\n## 1. Color System\n\n### 1.1 Backgrounds\nТаблица с 3 цветами: bgPrimary, bgSecondary, bgTertiary — hex + назначение.\n\n### 1.2 Surfaces\nТаблица с 3 цветами: surfaceDefault, surfaceElevated, surfaceOverlay — hex + opacity + назначение.\n\n### 1.3 Text\nТаблица с 3 цветами: textPrimary, textSecondary, textTertiary — hex + назначение.\n\n### 1.4 Accents\nТаблица с 3 цветами: accentPrimary, accentSecondary, accentTertiary — hex + назначение.\n\n### 1.5 Semantic\nТаблица с 4 цветами: success, warning, error, info — hex + назначение.\n\n### 1.6 Named Gradients\n4 градиента как готовый Swift-код:\n- gradientPrimary (LinearGradient для CTA)\n- gradientAmbient (LinearGradient для фоновой глубины)\n- gradientSurface (LinearGradient для карточек)\n- gradientGlow (RadialGradient для свечения)\n\n### 1.7 MeshGradient (iOS 18)\nГотовый Swift-код MeshGradient 3x3 с 9 цветами из палитры для hero-секций.\n\n### 1.8 Color(hex:) Extension\nПолный готовый код расширения Color для работы с hex-строками.\n\n---\n\n## 2. Typography\n\nТаблица из 12 строк: token, size, weight, design, usage.\nТокены: displayLarge, displayMedium, titleLarge, titleMedium, titleSmall, bodyLarge, bodyMedium, bodySmall, labelLarge, labelMedium, labelSmall, mono.\n\n---\n\n## 3. Spacing\n\nТаблица из 9 строк: token, value, usage.\nТокены: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl.\nПлюс список стандартных паддингов (экран, карточка, панель, между секциями).\n\n---\n\n## 4. Corner Radius\n\nТаблица из 6 строк: token, value, usage.\nТокены: radiusXs, radiusSm, radiusMd, radiusLg, radiusXl, radiusFull.\n\n---\n\n## 5. Shadows and Elevation\n\n4 shadow-конфигурации как Swift-код:\n- shadowSubtle (для карточек)\n- shadowMedium (для приподнятых элементов)\n- shadowPronounced (для модальных окон)\n- glowAccent (для активных элементов)\n\n---\n\n## 6. Animation System\n\n### 6.1 Duration Scale\nТаблица: instant (0.1s), fast (0.2s), normal (0.35s), slow (0.5s), dramatic (0.8s).\n\n### 6.2 Spring Configurations\n4 spring-конфигурации как Swift-код: springSnappy, springSmooth, springBouncy, springGentle.\n\n### 6.3 Named Transitions\n4 transition как Swift-код: transitionAppear, transitionDisappear, transitionSwitch, transitionPanel.\n\n### 6.4 iOS 18 Обязательные анимации\nКонкретные примеры кода для: .contentTransition(.numericText), .symbolEffect(.bounce), .sensoryFeedback(.selection), .sensoryFeedback(.impact).\n\n---\n\n## 7. Icon System\n\nТаблица: context, size, weight для 6 контекстов (toolbar, tab bar, card, badge, hero, inline).\nПлюс правило: активные иконки = gradientPrimary через .foregroundStyle(), неактивные = textTertiary.\n\n---\n\n## 8. Component Catalog\n\nГОТОВЫЕ SwiftUI struct для каждого компонента (компилируемый код iOS 18):\n\n8.1 ManifestPrimaryButton — градиентная CTA кнопка\n8.2 ManifestSecondaryButton — полупрозрачная кнопка\n8.3 ManifestGhostButton — текстовая кнопка\n8.4 ManifestCard — карточка с surface фоном и stroke\n8.5 ManifestSlider — кастомный слайдер с иконкой, градиентным треком, светящимся thumb, contentTransition на значении\n8.6 ManifestSegmentedControl — табы-капсулы с градиентным выделением и sensoryFeedback\n8.7 ManifestToolbarButton — кнопка тулбара с symbolEffect(.bounce) и scale-анимацией\n8.8 ManifestBadge — бейдж/тег (accent, subtle, semantic варианты)\n8.9 ManifestSheetHeader — заголовок панели с индикатором и кнопкой закрытия\n8.10 ManifestEmptyState — пустое состояние с symbolEffect(.pulse) и CTA\n\nКАЖДЫЙ сниппет:\n- Полностью самодостаточный struct\n- Использует Color(hex:) с конкретными hex из палитры\n- Использует конкретные размеры/отступы из манифеста\n- Компилируется на iOS 18 без import кроме SwiftUI\n- Содержит .lineLimit(1) + .fixedSize() или .minimumScaleFactor(0.8) на всех label'ах\n\n---\n\n## 9. iOS 18 Features\n\nТаблица: feature, где использовать, пример кода — для 8 фич:\nsymbolEffect(.bounce), symbolEffect(.pulse), contentTransition(.numericText), sensoryFeedback(.selection), sensoryFeedback(.impact), MeshGradient, ScrollTransition, .scrollTargetBehavior(.viewAligned).\n\n---\n\n## 10. Navigation Patterns\n\nОписание кастомных паттернов:\n- Bottom Navigation (кастомный toolbar, gradient separator, scroll если >5 элементов)\n- Верхний бар (кастомный header, blur, иконки в кругах, CTA-капсула)\n- Модальные окна (.presentationDetents, кастомный drag indicator, bgSecondary фон)\n- Переходы (withAnimation(springSmooth))\n\n---\n\n## 11. Anti-patterns — ЗАПРЕЩЕНО\n\nПронумерованный список из 10+ конкретных запретов:\n1. Стандартный TabView\n2. Стандартный NavigationTitle\n3. Системный Slider()\n4. Color.accentColor / .tint(.blue)\n5. Color.black / Color.white напрямую\n6. Системный .alert()\n7. Text truncation (три точки)\n8. Word wrap в кнопках\n9. Анимации без spring\n10. Цвета не из манифеста\n\n---\n\n## 12. Validation Checklist\n\n15 пунктов с чекбоксами — по ним агент проверяет каждый экран после редизайна:\n- Все цвета из манифеста\n- Все typography из манифеста\n- Все spacing из манифеста\n- Все radius из манифеста\n- symbolEffect на иконках\n- contentTransition на числах\n- sensoryFeedback на выборах\n- Нет truncation\n- Нет word wrap\n- Кастомная навигация\n- Компоненты из каталога\n- 2+ анимации на экране\n- Радикальное отличие от исходного\n- Весь функционал сохранён\n- Контрастность текста WCAG AA\n\n=== КОНЕЦ СТРУКТУРЫ ===\n\nВАЖНО: Выведи ТОЛЬКО содержимое DESIGN_MANIFEST.md — без вступлений, пояснений и комментариев вне документа. Начни сразу с \"# Design Manifest: ...\"\n```\n\n---\n\n## Примечания по использованию\n\n### Шаг за шагом:\n\n1. Скопируй **SYSTEM PROMPT** в поле system message в API\n2. Скопируй **USER MESSAGE** в поле user message\n3. Заполни 5 полей в `[КВАДРАТНЫХ СКОБКАХ]`:\n   - Название приложения\n   - Категория в App Store\n   - 3-5 ключевых функций\n   - Целевая аудитория\n   - Текущий стиль (или \"стандартный iOS\")\n4. Вставь случайное число от 1 до 10 в Шаге 3, или оставь \"выбери сам наименее очевидное\"\n5. Отправь запрос\n6. Скопируй ответ целиком и сохрани как `DESIGN_MANIFEST.md` в корень проекта\n\n### Параметры API:\n\n```\nmodel: claude-opus-4-20250514\nmax_tokens: 16000\ntemperature: 0.9  (для креативности при генерации направлений)\n```\n\n### Если результат не нравится:\n\n- Смени число в Шаге 3 → получишь другое направление из тех же 10\n- Добавь в конец user message: \"Избегай направления [название того что не понравилось]\"\n- Повысь temperature до 1.0 для более экспериментальных результатов\n"
               },
               {
                 "id": "68254392-878d-40dc-89f7-6470ce1087c1",
@@ -5655,8 +5236,8 @@
           "options": {}
         },
         "position": [
-          1712,
-          704
+          80,
+          816
         ],
         "type": "n8n-nodes-base.set",
         "typeVersion": 3.4
@@ -5677,8 +5258,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          3168,
-          544
+          1744,
+          656
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5701,8 +5282,8 @@
           "operation": "get"
         },
         "position": [
-          2688,
-          544
+          1264,
+          656
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5716,8 +5297,8 @@
           "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
         },
         "position": [
-          2848,
-          544
+          1424,
+          656
         ],
         "type": "n8n-nodes-base.code",
         "typeVersion": 2
@@ -5731,8 +5312,8 @@
           "options": {}
         },
         "position": [
-          3008,
-          544
+          1584,
+          656
         ],
         "type": "n8n-nodes-base.splitOut",
         "typeVersion": 1
@@ -5742,8 +5323,8 @@
         "name": "No Operation, do nothing9",
         "parameters": {},
         "position": [
-          3312,
-          544
+          1888,
+          656
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -5763,8 +5344,8 @@
           "resource": "issueAttachment"
         },
         "position": [
-          2688,
-          816
+          1264,
+          928
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5875,8 +5456,8 @@
           }
         },
         "position": [
-          3008,
-          816
+          1584,
+          928
         ],
         "retryOnFail": true,
         "type": "n8n-nodes-base.jira",
@@ -5888,8 +5469,8 @@
         "name": "No Operation, do nothing10",
         "parameters": {},
         "position": [
-          3168,
-          816
+          1744,
+          928
         ],
         "type": "n8n-nodes-base.noOp",
         "typeVersion": 1
@@ -5901,8 +5482,8 @@
           "keep": "lastItems"
         },
         "position": [
-          2848,
-          816
+          1424,
+          928
         ],
         "type": "n8n-nodes-base.limit",
         "typeVersion": 1
@@ -5994,7 +5575,7 @@
           }
         },
         "position": [
-          2368,
+          2800,
           384
         ],
         "type": "n8n-nodes-base.jira",
@@ -6101,7 +5682,7 @@
                 "id": "field3",
                 "name": "new_repo_url",
                 "type": "string",
-                "value": "={{ $json.html_url }}"
+                "value": "={{ $json.html_url || $json.url }}"
               },
               {
                 "id": "field4",
@@ -6132,7 +5713,7 @@
           "options": {}
         },
         "position": [
-          432,
+          864,
           384
         ],
         "type": "n8n-nodes-base.set",
@@ -6154,7 +5735,7 @@
           "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
         },
         "position": [
-          656,
+          1088,
           384
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -6176,7 +5757,7 @@
           "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
         },
         "position": [
-          1520,
+          1952,
           384
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -6191,6 +5772,7 @@
         },
         "id": "000a488d-61cb-41a2-a347-43edac7213ce",
         "name": "Create File in New Repo2",
+        "onError": "continueRegularOutput",
         "parameters": {
           "authentication": "predefinedCredentialType",
           "bodyParameters": {
@@ -6216,7 +5798,7 @@
           "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.new_repo_name }}/contents/{{ $('Loop Over Items2').item.json.path }}"
         },
         "position": [
-          1744,
+          2176,
           384
         ],
         "type": "n8n-nodes-base.httpRequest",
@@ -6230,7 +5812,7 @@
           "options": {}
         },
         "position": [
-          1968,
+          2400,
           384
         ],
         "type": "n8n-nodes-base.aggregate",
@@ -6332,7 +5914,7 @@
           }
         },
         "position": [
-          880,
+          1312,
           384
         ],
         "type": "n8n-nodes-base.set",
@@ -6346,7 +5928,7 @@
           "options": {}
         },
         "position": [
-          1104,
+          1536,
           384
         ],
         "type": "n8n-nodes-base.splitOut",
@@ -6387,7 +5969,7 @@
           "options": {}
         },
         "position": [
-          2192,
+          2624,
           384
         ],
         "type": "n8n-nodes-base.set",
@@ -6402,6 +5984,7 @@
         },
         "id": "d0594b1b-4eb1-41c9-8b0d-78399bddf1fa",
         "name": "Create Private Repo2",
+        "onError": "continueRegularOutput",
         "parameters": {
           "authentication": "predefinedCredentialType",
           "jsonBody": "={\n  \"name\": \"{{ $json.new_repo_name }}\",\n  \"private\": true,\n  \"description\": \"Cloned for Jira ticket {{ $json.new_repo_name }}\"\n}",
@@ -6426,7 +6009,7 @@
           "options": {}
         },
         "position": [
-          1312,
+          1744,
           384
         ],
         "type": "n8n-nodes-base.splitInBatches",
@@ -6516,18 +6099,82 @@
           "options": {}
         },
         "position": [
-          2224,
-          912
+          800,
+          1024
         ],
         "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
         "typeVersion": 1
+      },
+      {
+        "id": "b464433c-de6a-433f-a671-2b0d50f66844",
+        "name": "If2",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "3c77452e-699a-40f8-aad7-1d27b386effe",
+                "leftValue": "={{ $json.error.description }}",
+                "operator": {
+                  "operation": "notEquals",
+                  "type": "string"
+                },
+                "rightValue": "=Repository creation failed."
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          416,
+          384
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "githubApi": {
+            "id": "rtS05OFOF0Kaw568",
+            "name": "GitHub-Service"
+          }
+        },
+        "id": "b2140120-cea3-49aa-8ce2-baabd8d31dd2",
+        "name": "Get a repository",
+        "parameters": {
+          "operation": "get",
+          "owner": {
+            "__rl": true,
+            "mode": "name",
+            "value": "IT-OUT"
+          },
+          "repository": {
+            "__rl": true,
+            "mode": "name",
+            "value": "={{ $('Save Branch Info1').item.json.new_repo_name }}"
+          },
+          "resource": "repository"
+        },
+        "position": [
+          608,
+          416
+        ],
+        "type": "n8n-nodes-base.github",
+        "typeVersion": 1.1,
+        "webhookId": "65b4b476-04d8-4b33-9cfd-1ae4da4910aa"
       }
     ],
-    "updatedAt": "2026-02-11T08:48:35.444Z",
-    "versionId": "b9201602-6c2f-43da-94a8-5e5472f4407d",
+    "updatedAt": "2026-02-12T18:21:03.591Z",
+    "versionId": "4f11f484-5ef0-4e7f-82d9-b28f6df26f0b",
     "workflowId": "Hc1zXoUukWnWYl3U"
   },
-  "activeVersionId": "b9201602-6c2f-43da-94a8-5e5472f4407d",
+  "activeVersionId": "4f11f484-5ef0-4e7f-82d9-b28f6df26f0b",
   "connections": {
     "AI Agent4": {
       "main": [
@@ -6677,24 +6324,6 @@
         ]
       ]
     },
-    "Check Files Exist": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Prepare Files List",
-            "type": "main"
-          }
-        ],
-        [
-          {
-            "index": 0,
-            "node": "Files Missing",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Code in JavaScript": {
       "main": [
         [
@@ -6755,7 +6384,7 @@
         [
           {
             "index": 0,
-            "node": "Get Source Repo Info",
+            "node": "Edit Fields4",
             "type": "main"
           }
         ]
@@ -6848,7 +6477,7 @@
         [
           {
             "index": 0,
-            "node": "Prepare for Tree1",
+            "node": "If2",
             "type": "main"
           }
         ]
@@ -7000,17 +6629,6 @@
         ]
       ]
     },
-    "Extract from File4": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Merge2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Extract from File6": {
       "main": [
         [
@@ -7039,28 +6657,6 @@
           {
             "index": 0,
             "node": "Document?2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Files Missing": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Update an issue2",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Filter Screen & Button Files": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Check Files Exist",
             "type": "main"
           }
         ]
@@ -7121,17 +6717,6 @@
         ]
       ]
     },
-    "Get File Content": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Extract from File4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get File Content2": {
       "main": [
         [
@@ -7165,28 +6750,6 @@
         ]
       ]
     },
-    "Get Repo Files": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Filter Screen & Button Files",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Get Source Repo Info": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get Repo Files",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Get Source Repo Info1": {
       "main": [
         [
@@ -7204,6 +6767,17 @@
           {
             "index": 0,
             "node": "Prepare Loop Data2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a repository": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for Tree1",
             "type": "main"
           }
         ]
@@ -7448,11 +7022,6 @@
         ]
       ]
     },
-    "Google Gemini Chat Model3": {
-      "ai_languageModel": [
-        []
-      ]
-    },
     "Hardcode Prompt": {
       "main": [
         [
@@ -7531,6 +7100,24 @@
           {
             "index": 0,
             "node": "Обновить БД1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for Tree1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get a repository",
             "type": "main"
           }
         ]
@@ -7813,17 +7400,6 @@
         ]
       ]
     },
-    "Merge2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Edit Fields4",
-            "type": "main"
-          }
-        ]
-      ]
-    },
     "Need Content?": {
       "main": [
         [
@@ -7899,17 +7475,6 @@
           {
             "index": 0,
             "node": "Get Source Repo Info1",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Prepare Files List": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Get File Content",
             "type": "main"
           }
         ]
@@ -8151,17 +7716,6 @@
           {
             "index": 0,
             "node": "Add a comment12",
-            "type": "main"
-          }
-        ]
-      ]
-    },
-    "Update an issue2": {
-      "main": [
-        [
-          {
-            "index": 0,
-            "node": "Add a comment1",
             "type": "main"
           }
         ]
@@ -11762,218 +11316,14 @@
       "typeVersion": 1
     },
     {
-      "credentials": {
-        "githubApi": {
-          "id": "rtS05OFOF0Kaw568",
-          "name": "GitHub-Service"
-        }
-      },
-      "id": "11e9b7fc-947c-43c9-88c4-eff1d74b5f95",
-      "name": "Get Repo Files",
-      "parameters": {
-        "operation": "list",
-        "owner": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Config').item.json.Gitowner }}"
-        },
-        "repository": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $json.name }}"
-        },
-        "resource": "file"
-      },
-      "position": [
-        272,
-        816
-      ],
-      "type": "n8n-nodes-base.github",
-      "typeVersion": 1.1,
-      "webhookId": "d4814e51-294a-4906-a91a-8fd511b2e118"
-    },
-    {
-      "id": "23cb4776-8e2a-473d-b78f-1abe83541de5",
-      "name": "Filter Screen & Button Files",
-      "parameters": {
-        "jsCode": "// Получаем все файлы из репозитория\nconst items = $input.all();\n\n// Фильтруем файлы с именами содержащими 'screen' или 'button'\nconst screenFiles = [];\nconst buttonFiles = [];\n\nfor (const item of items) {\n  const fileName = item.json.name?.toLowerCase() || '';\n  const filePath = item.json.path?.toLowerCase() || '';\n  \n  if (fileName.includes('screen') || filePath.includes('screen')) {\n    screenFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n  \n  if (fileName.includes('button') || filePath.includes('button')) {\n    buttonFiles.push({\n      name: item.json.name,\n      path: item.json.path,\n      type: item.json.type,\n      sha: item.json.sha\n    });\n  }\n}\n\nreturn [{\n  json: {\n    hasScreenFiles: screenFiles.length > 0,\n    hasButtonFiles: buttonFiles.length > 0,\n    screenFilesCount: screenFiles.length,\n    buttonFilesCount: buttonFiles.length,\n    screenFiles: screenFiles,\n    buttonFiles: buttonFiles,\n    totalFilesChecked: items.length\n  }\n}];"
-      },
-      "position": [
-        480,
-        816
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "id": "4a13e59a-36fe-485a-90a9-c5ec41f1b729",
-      "name": "Check Files Exist",
-      "parameters": {
-        "conditions": {
-          "combinator": "or",
-          "conditions": [
-            {
-              "id": "condition-screen",
-              "leftValue": "={{ $json.hasScreenFiles }}",
-              "operator": {
-                "operation": "equals",
-                "type": "boolean"
-              },
-              "rightValue": true
-            },
-            {
-              "id": "condition-button",
-              "leftValue": "={{ $json.hasButtonFiles }}",
-              "operator": {
-                "operation": "equals",
-                "type": "boolean"
-              },
-              "rightValue": true
-            }
-          ],
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 1
-          }
-        },
-        "options": {}
-      },
-      "position": [
-        672,
-        816
-      ],
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2
-    },
-    {
-      "id": "8b684d97-edeb-4f85-bcbe-640a890b4c6a",
-      "name": "Files Missing",
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "result-fail",
-              "name": "status",
-              "type": "string",
-              "value": "missing_files"
-            },
-            {
-              "id": "result-message-fail",
-              "name": "message",
-              "type": "string",
-              "value": "={{ 'Missing: ' + ($json.hasScreenFiles ? '' : 'screen files ') + ($json.hasButtonFiles ? '' : 'button files') }}"
-            },
-            {
-              "id": "screen-count",
-              "name": "screenFilesCount",
-              "type": "number",
-              "value": "={{ $json.screenFilesCount }}"
-            },
-            {
-              "id": "button-count",
-              "name": "buttonFilesCount",
-              "type": "number",
-              "value": "={{ $json.buttonFilesCount }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "position": [
-        896,
-        912
-      ],
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4
-    },
-    {
-      "credentials": {
-        "githubApi": {
-          "id": "rtS05OFOF0Kaw568",
-          "name": "GitHub-Service"
-        }
-      },
-      "id": "33777f3d-36ad-47c0-ba6e-7999edcdbe14",
-      "name": "Get Source Repo Info",
-      "parameters": {
-        "operation": "get",
-        "owner": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $json.Gitowner }}"
-        },
-        "repository": {
-          "__rl": true,
-          "mode": "url",
-          "value": "={{ $json.GitHubLink }}"
-        },
-        "resource": "repository"
-      },
-      "position": [
-        80,
-        816
-      ],
-      "type": "n8n-nodes-base.github",
-      "typeVersion": 1.1,
-      "webhookId": "05d4eeb1-96de-4ad5-a364-35d6a2be8e26"
-    },
-    {
-      "id": "1cc95f01-6f30-4126-8aa9-5e97117363cf",
-      "name": "Prepare Files List",
-      "parameters": {
-        "jsCode": "// Преобразуем найденные файлы в отдельные items для загрузки\nconst input = $input.first().json;\nconst allFiles = [];\n\n// Добавляем screen файлы\nfor (const file of input.screenFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'screen'\n      }\n    });\n  }\n}\n\n// Добавляем button файлы\nfor (const file of input.buttonFiles || []) {\n  if (file.type === 'file') {\n    allFiles.push({\n      json: {\n        ...file,\n        fileType: 'button'\n      }\n    });\n  }\n}\n\nreturn allFiles;"
-      },
-      "position": [
-        896,
-        704
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "githubApi": {
-          "id": "rtS05OFOF0Kaw568",
-          "name": "GitHub-Service"
-        }
-      },
-      "id": "d5d21e9b-977e-44fb-8e5e-618a6de802e4",
-      "name": "Get File Content",
-      "parameters": {
-        "additionalParameters": {},
-        "filePath": "={{ $json.path }}",
-        "operation": "get",
-        "owner": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Config').first().json.Gitowner }}"
-        },
-        "repository": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Get Source Repo Info').first().json.name }}"
-        },
-        "resource": "file"
-      },
-      "position": [
-        1088,
-        704
-      ],
-      "type": "n8n-nodes-base.github",
-      "typeVersion": 1.1,
-      "webhookId": "13f56517-aa55-468f-bfb2-a1ac338affa1"
-    },
-    {
       "id": "d82126d8-1171-4a8a-a4b6-ef6e80c2d8f2",
       "name": "Build Design Spec Prompt",
       "parameters": {
-        "jsCode": "const data = $input.first().json;\n\n// Берём данные из Merge и Edit Fields\nconst mergeData = $('Merge2').first().json;\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec; // Промпт для генерации\n\nconst screensContent = mergeData.Screens || '';\nconst elementsContent = mergeData.ScreenElements || '';\n\n// Формируем промпт для AI\nconst prompt = `${designSpecPrompt}\n\n---\n\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n\n## Сегмент App Store\n${segment}\n\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n\n---\n\n# ЗАДАЧА\n\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
+        "jsCode": "const data = $('Edit Fields4').first().json;\n\nconst segment = data.Segment || 'Photo Editor / Eraser';\nconst designSpecPrompt = data.DesignSpec;\nconst screensContent = data.Screens || '';\nconst elementsContent = data.ScreenElements || '';\n\nconst prompt = `${designSpecPrompt}\n---\n# ВХОДНЫЕ ДАННЫЕ ДЛЯ АНАЛИЗА\n## Сегмент App Store\n${segment}\n## Экраны приложения (Screens.md)\n${screensContent.substring(0, 15000)}\n## UI-элементы (ScreenElements.md)\n${elementsContent.substring(0, 15000)}\n---\n# ЗАДАЧА\n1. Проанализируй Top 20 приложений в сегменте \"${segment}\" в App Store\n2. Выяви лучшие практики UI/UX\n3. Создай уникальный Design Specification для приложения ${segment}\n4. Design Spec должен быть ЛУЧШЕ конкурентов\n# ВАЖНО\n- Выводи КОНКРЕТНЫЕ значения: HEX цвета, pt размеры, font weights\n- Формат: полный Markdown документ\n- Включи ВСЕ секции: цвета, типографика, spacing, компоненты, анимации\n- В конце добавь таблицу \"Отличия от конкурентов\"`;\n\nreturn [{\n  json: {\n    prompt: prompt,\n    segment: segment,\n    hasScreens: !!screensContent,\n    hasElements: !!elementsContent\n  }\n}];"
       },
       "position": [
-        1920,
-        704
+        496,
+        816
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -11987,8 +11337,8 @@
         "text": "={{ $json.prompt }}"
       },
       "position": [
-        2096,
-        704
+        672,
+        816
       ],
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.4
@@ -12014,54 +11364,11 @@
         }
       },
       "position": [
-        2096,
-        896
+        672,
+        1008
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3
-    },
-    {
-      "credentials": {
-        "googlePalmApi": {
-          "id": "kpb4KMG2LrUgiQZB",
-          "name": "Gemini Ilya Owner"
-        }
-      },
-      "id": "fd58fabe-345b-4374-b0b0-18c976face98",
-      "name": "Google Gemini Chat Model3",
-      "parameters": {
-        "modelName": "models/gemini-3-flash-preview",
-        "options": {
-          "maxOutputTokens": 64000,
-          "safetySettings": {
-            "values": [
-              {
-                "category": "HARM_CATEGORY_HARASSMENT",
-                "threshold": "BLOCK_NONE"
-              },
-              {
-                "category": "HARM_CATEGORY_HATE_SPEECH",
-                "threshold": "BLOCK_NONE"
-              },
-              {
-                "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                "threshold": "BLOCK_NONE"
-              },
-              {
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-              }
-            ]
-          },
-          "temperature": 0.1
-        }
-      },
-      "position": [
-        2368,
-        1072
-      ],
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "typeVersion": 1
     },
     {
       "id": "49dddbda-a540-4787-86b1-3c0307d7409a",
@@ -12071,87 +11378,8 @@
         "jsCode": "const aiOutput = $input.first().json.output || $input.first().json.text || $input.first().json.content || 'No content';\n\n// Получаем metadata из Loop\nlet loopItem = null;\nconst loopNames = ['Loop Over Items', 'Loop Over Items1', 'Loop'];\nfor (const name of loopNames) {\n  try {\n    loopItem = $(name).first().json;\n    if (loopItem && loopItem.id) break;\n  } catch(e) {}\n}\n\nconst itemIndex = loopItem?.loopIndex || 1;\n\n// Простое название: prompt_content_1.md, prompt_content_2.md, ...\nconst fileName = `DesignSpec.md`;\n\nconst mdContent = `# AI Response\\n\\n${aiOutput}`;\nconst buffer = Buffer.from(mdContent, 'utf8');\n\nreturn [{\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'text/markdown',\n      fileName: fileName,\n    }\n  },\n  json: {\n    source: 'AI Agent',\n    format: 'markdown',\n    fileName: fileName,\n    itemIndex: itemIndex,\n  }\n}];"
       },
       "position": [
-        2416,
-        704
-      ],
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "930b0b34-a65d-4601-8d75-4f05d1085689",
-      "name": "Update an issue2",
-      "parameters": {
-        "issueKey": "={{ $('Config').last().json.Jira_Issue }}",
-        "jiraVersion": "serverPat",
-        "operation": "update",
-        "updateFields": {
-          "statusId": {
-            "__rl": true,
-            "cachedResultName": "Backlog-Admin",
-            "mode": "list",
-            "value": "101"
-          }
-        }
-      },
-      "position": [
-        1088,
-        912
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "credentials": {
-        "jiraSoftwareServerPatApi": {
-          "id": "WwUfZZ4lukKmf4G9",
-          "name": "Jira SW Task Buider"
-        }
-      },
-      "id": "ffb1a437-e17f-4d2f-bacb-f8b018584da9",
-      "name": "Add a comment1",
-      "parameters": {
-        "comment": "=Gold Git Repository -  {{ $('Files Missing').item.json.message }}",
-        "issueKey": "={{ $('Config').last().json.Jira_Issue }}",
-        "jiraVersion": "serverPat",
-        "options": {},
-        "resource": "issueComment"
-      },
-      "position": [
-        1296,
-        912
-      ],
-      "type": "n8n-nodes-base.jira",
-      "typeVersion": 1
-    },
-    {
-      "id": "cf86e704-b769-4227-898a-86e4bebb14f4",
-      "name": "Extract from File4",
-      "parameters": {
-        "operation": "text",
-        "options": {}
-      },
-      "position": [
-        1264,
-        704
-      ],
-      "type": "n8n-nodes-base.extractFromFile",
-      "typeVersion": 1.1
-    },
-    {
-      "id": "55559d9a-be35-4328-8675-3c5b486e2a4d",
-      "name": "Merge2",
-      "parameters": {
-        "jsCode": "const extractedItems = $input.all();\nconst fileItems = $('Get File Content').all();\n\nconst result = {};\n\nextractedItems.forEach((item, index) => {\n  const fileName = fileItems[index]?.binary?.data?.fileName?.replace(/\\.[^/.]+$/, '') || `file_${index + 1}`;\n  result[fileName] = item.json.data;\n});\n\nreturn [{\n  json: result\n}];"
-      },
-      "position": [
-        1472,
-        704
+        992,
+        816
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12172,7 +11400,7 @@
               "id": "33785421-1ed9-4815-bf04-e0230e93941c",
               "name": "DesignSpec",
               "type": "string",
-              "value": "=# 🎯 СОЗДАНИЕ УНИКАЛЬНОЙ ДИЗАЙН-СПЕЦИФИКАЦИИ\n# На основе текущего проекта + анализ Top 20 App Store US\n\n---\n\n## РОЛЬ\nТы — Senior Product Designer уровня Apple/Airbnb с 15+ годами опыта. Ты создаёшь дизайн-системы, которые выигрывают Apple Design Awards. Ты не копируешь — ты задаёшь тренды.\n\n---\n\n## ВХОДНЫЕ ДАННЫЕ\n\n### Обязательные файлы проекта:\n- `Screens.md` — полный каталог экранов приложения\n- `ScreenElements.md` — все UI-элементы на каждом экране\n\n### Параметры:\n- **Сегмент App Store:** {{ $('Config').last().json.AppName }} [УКАЗАТЬ СЕГМЕНТ, например: Photo Editing, Fitness, Finance]\n\n---\n\n## ⚠️ КРИТИЧЕСКИ ВАЖНО — ПРОЧТИ ПЕРЕД НАЧАЛОМ\n\n```\nЭТО НЕ ШАБЛОННЫЙ РЕДИЗАЙН.\nЭТО СОЗДАНИЕ ПРИЛОЖЕНИЯ, КОТОРОЕ БУДЕТ ЛУЧШЕ ВСЕХ В КАТЕГОРИИ.\n\nПравила:\n1. КАЖДОЕ решение должно быть ОБОСНОВАНО — почему именно так, а не иначе\n2. КАЖДЫЙ экран должен быть ПЕРЕОСМЫСЛЕН — не косметика, а реальное улучшение\n3. КАЖДЫЙ компонент должен быть УНИКАЛЬНЫМ — не дефолтный iOS, не Material\n4. Бизнес-логика НЕ МЕНЯЕТСЯ — меняется только визуал, layout, flow, анимации\n5. Навигационная структура может УЛУЧШАТЬСЯ — но не ломаться\n```\n\n---\n\n## ЭТАП 0: ГЛУБОКИЙ АНАЛИЗ ТЕКУЩЕГО ПРОЕКТА\n\n### 0.1 Прочитай Screens.md и ScreenElements.md ПОЛНОСТЬЮ\n\nСоздай таблицу текущего состояния:\n\n| ScreenID | Screen Name | Кол-во элементов | Тип Layout | Density | CTA Count | Проблемы |\n|----------|-------------|-------------------|------------|---------|-----------|----------|\n| SCR-001 | ... | ... | ... | ... | ... | ... |\n\n### 0.2 Аудит текущего UX\n\nДля КАЖДОГО экрана из Screens.md оцени по 10-балльной шкале:\n\n| ScreenID | Visual Hierarchy | CTA Clarity | Info Density | Whitespace | Animation | Wow-factor | TOTAL |\n|----------|-----------------|-------------|--------------|------------|-----------|------------|-------|\n| SCR-001 | /10 | /10 | /10 | /10 | /10 | /10 | /60 |\n\n### 0.3 Выявление Critical Problems\n\n```\nДля каждого экрана определи:\n\n🔴 CRITICAL (ломает UX):\n- [ ] CTA не видно / конкурирует с другими\n- [ ] Слишком много элементов\n- [ ] Нет иерархии\n- [ ] Пользователь не понимает что делать\n\n🟡 IMPORTANT (ухудшает опыт):\n- [ ] Скучный/шаблонный дизайн\n- [ ] Слабые анимации\n- [ ] Нет emotional design\n- [ ] Плохая плотность информации\n\n🟢 NICE-TO-HAVE (полировка):\n- [ ] Микроанимации\n- [ ] Haptic feedback\n- [ ] Easter eggs\n- [ ] Delight moments\n```\n\n### 0.4 Карта элементов для переработки\n\nИз ScreenElements.md создай матрицу:\n\n| Element Type | Где встречается (Screen IDs) | Текущая реализация | Что не так | Приоритет переделки |\n|--------------|------------------------------|--------------------|-----------|--------------------|\n| Primary Button | SCR-001, SCR-003, ... | Стандартный | Скучный | 🔴 High |\n| Card | SCR-002, SCR-005, ... | Flat bordered | Шаблонный | 🟡 Medium |\n| ... | ... | ... | ... | ... |\n\n---\n\n## ЭТАП 1: АНАЛИЗ TOP 20 APP STORE US\n\n### 1.1 Поиск конкурентов\n\nНайди и проанализируй **топ-20 приложений** в категории **[СЕГМЕНТ]** в US App Store.\n\n### 1.2 Глубокий анализ каждого\n\n| # | App | Rating | Downloads | Visual Style | Цвета (Primary/Accent) | Typo | Wow-момент | Слабость |\n|---|-----|--------|-----------|-------------|----------------------|------|-----------|----------|\n| 1 | ... | ... | ... | ... | ... | ... | ... | ... |\n\n### 1.3 Детальный разбор UI конкурентов\n\nДля КАЖДОГО из топ-20 зафиксируй:\n\n**Layout patterns:**\n- Как организована Home/Main screen\n- Где расположены CTA (top/bottom/float)\n- Как сделана навигация (tab/drawer/gesture)\n- Как организованы списки/гриды\n\n**Visual decisions:**\n- Color palette (primary, secondary, accent — HEX)\n- Typography (font family, key sizes)\n- Corner radius стиль (sharp/rounded/pill)\n- Shadow usage (heavy/subtle/none)\n- Gradient usage (да/нет, где)\n\n**Motion & Feel:**\n- Transition между экранами\n- Micro-interactions на кнопках\n- Loading states (spinner/skeleton/shimmer)\n- Pull-to-refresh стиль\n- Gesture support (swipe actions, long press)\n\n**Monetization screens:**\n- Paywall layout\n- Pricing presentation\n- Free trial messaging\n- Upsell triggers\n\n**Onboarding:**\n- Количество шагов\n- Стиль (illustration/video/animation/interactive)\n- Skip доступность\n- Permission requests flow\n\n---\n\n## ЭТАП 2: ПАТТЕРНЫ И ВОЗМОЖНОСТИ\n\n### 2.1 Матрица индустрии\n\nЗаполни строго:\n\n**✅ Must-Have (делают 15+ из 20):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы ОБЯЗАНЫ иметь, но ЛУЧШЕ)\n```\n\n**⭐ Best-in-Class (делают топ-3):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы КОПИРУЕМ подход, но УНИКАЛЬНА реализация)\n```\n\n**🚀 Blue Ocean (НЕ делает НИКТО):**\n```\n1. ...\n2. ...\n3. ...\n(Это наши УНИКАЛЬНЫЕ фишки — конкурентное преимущество)\n```\n\n**💀 Antipatterns (делают, но ПЛОХО):**\n```\n1. ...\n2. ...\n3. ...\n(Это мы ИСПРАВЛЯЕМ и делаем ПРАВИЛЬНО)\n```\n\n### 2.2 Opportunity Map\n\n| Аспект | Средний уровень рынка | Лучший конкурент | Наша цель | Как достигаем |\n|--------|----------------------|------------------|-----------|---------------|\n| Onboarding | 5 экранов, скучно | 3 экрана, анимации | 2-3, wow-эффект | [КАК] |\n| Paywall | Агрессивный | Neutral | Premium-чувство | [КАК] |\n| Home screen | Перегружен | Чистый | Персонализирован | [КАК] |\n| Animations | Почти нет | Базовые | Signature feel | [КАК] |\n| Empty states | Текст | Иллюстрация | Интерактив | [КАК] |\n| Error handling | Alert | Inline | Помощь+действие | [КАК] |\n| ... | ... | ... | ... | ... |\n\n---\n\n## ЭТАП 3: ВИЗУАЛЬНАЯ КОНЦЕПЦИЯ\n\n### 3.1 Brand Positioning\n\n```\nОпредели:\n\nЭМОЦИЯ: [Какое чувство вызывает приложение]\n  Примеры: Premium calm, Energetic creative, Trustworthy expert\n\nМЕТАФОРА: [С чем ассоциируется]\n  Примеры: Personal assistant, Creative studio, Luxury tool\n\nПРИНЦИПЫ (3 штуки):\n  1. [ПРИНЦИП] — что это значит для UI\n  2. [ПРИНЦИП] — что это значит для UI\n  3. [ПРИНЦИП] — что это значит для UI\n\nANTI-ПРИНЦИПЫ (чем мы НЕ являемся):\n  1. НЕ [ЧТО]\n  2. НЕ [ЧТО]\n  3. НЕ [ЧТО]\n```\n\n### 3.2 Signature Elements\n\n```\nОпредели 3-5 УНИКАЛЬНЫХ визуальных элемента, которых НЕТ у конкурентов:\n\n1. SIGNATURE ELEMENT: [Название]\n   Описание: [Что это]\n   Где используется: [На каких экранах]\n   Почему уникально: [Чем отличается]\n\n2. ...\n3. ...\n```\n\n---\n\n## ЭТАП 4: ДИЗАЙН-СПЕЦИФИКАЦИЯ (ОСНОВНОЙ OUTPUT)\n\n### Файл: `DesignSpec.md`\n\n> ⚠️ Каждое значение ниже — КОНКРЕТНОЕ. Никаких \"зависит от контекста\".\n> ⚠️ Каждое решение — ОБОСНОВАНО через анализ конкурентов.\n\n---\n\n### 4.1 ЦВЕТОВАЯ СИСТЕМА\n\n#### Brand Palette\n\n| Token | Light Mode HEX | Dark Mode HEX | Opacity варианты | Где используется |\n|-------|---------------|---------------|-----------------|-----------------|\n| `brand.primary` | #XXXXXX | #XXXXXX | 100%, 80%, 60%, 20%, 10% | CTA, активные акценты |\n| `brand.secondary` | #XXXXXX | #XXXXXX | 100%, 80%, 60%, 20%, 10% | Вторичные акценты |\n| `brand.accent` | #XXXXXX | #XXXXXX | 100%, 80% | Промо, highlights |\n\n**⚠️ Обоснование выбора:**\n- Почему эти цвета: [Анализ — что используют конкуренты и ПОЧЕМУ мы выбрали иначе]\n- Психология: [Какие эмоции вызывают]\n- Уникальность: [Чем отличаемся от топ-5]\n\n#### Semantic Palette\n\n| Token | Light Mode | Dark Mode | Использование |\n|-------|------------|-----------|---------------|\n| `success` | #XXXXXX | #XXXXXX | Успешные операции |\n| `warning` | #XXXXXX | #XXXXXX | Предупреждения |\n| `error` | #XXXXXX | #XXXXXX | Ошибки |\n| `info` | #XXXXXX | #XXXXXX | Информация |\n\n#### Background System\n\n| Token | Light Mode | Dark Mode | Elevation | Использование |\n|-------|------------|-----------|-----------|---------------|\n| `bg.base` | #XXXXXX | #XXXXXX | 0 | Фон приложения |\n| `bg.surface` | #XXXXXX | #XXXXXX | +1 | Карточки, секции |\n| `bg.elevated` | #XXXXXX | #XXXXXX | +2 | Модалки, sheets |\n| `bg.overlay` | #XXXXXX XX% | #XXXXXX XX% | — | Затемнение |\n\n#### Text System\n\n| Token | Light Mode | Dark Mode | Использование |\n|-------|------------|-----------|---------------|\n| `text.primary` | #XXXXXX | #XXXXXX | Заголовки, основной |\n| `text.secondary` | #XXXXXX | #XXXXXX | Описания |\n| `text.tertiary` | #XXXXXX | #XXXXXX | Placeholder, hints |\n| `text.disabled` | #XXXXXX | #XXXXXX | Неактивные |\n| `text.inverse` | #XXXXXX | #XXXXXX | На цветном фоне |\n| `text.brand` | #XXXXXX | #XXXXXX | Ссылки, акценты |\n\n#### Gradients\n\n```swift\n// Для каждого градиента указать:\n// - Название\n// - Цвета (HEX)\n// - Направление\n// - ГДЕ ИМЕННО используется (конкретные экраны/элементы)\n\ngradient.primaryCTA:\n  colors: [#XXXXXX, #XXXXXX]\n  direction: topLeading → bottomTrailing\n  usage: Primary CTA buttons на SCR-001, SCR-005, SCR-008\n\ngradient.premium:\n  colors: [#XXXXXX, #XXXXXX, #XXXXXX]\n  direction: topLeading → bottomTrailing\n  usage: Paywall CTA, premium badges\n\ngradient.backgroundHero:\n  colors: [#XXXXXX 0%, #XXXXXX 50%, transparent 100%]\n  direction: top → bottom\n  usage: Hero секции на Onboarding, Home\n```\n\n#### Правила цвета\n\n```\n1. Maximum PRIMARY цвета на экране: 2 элемента (CTA + 1 акцент)\n2. Background НИКОГДА не чисто белый/чёрный — всегда с оттенком\n3. Gradient ТОЛЬКО на: Primary CTA, Hero backgrounds, Premium elements\n4. Dark Mode: brand colors на 15-20% ярче для контраста\n5. Контраст текста: минимум 4.5:1 (WCAG AA)\n6. Контраст CTA: минимум 7:1 (WCAG AAA)\n```\n\n---\n\n### 4.2 ТИПОГРАФИКА\n\n#### Правило шрифтов\n\n```\n⚠️ МАКСИМУМ 1-2 ШРИФТА НА ВСЁ ПРИЛОЖЕНИЕ.\n\nВариант A (рекомендуемый): 1 шрифт — разделение через weight и size\nВариант B: 2 шрифта — один для заголовков (Display), один для body/UI (Text)\nНИКОГДА больше 2-х font families.\nРазнообразие достигается через WEIGHT и SIZE, а не через количество шрифтов.\n```\n\n**⚠️ Обоснование выбора шрифта:**\n- Какой шрифт(ы) выбран и ПОЧЕМУ\n- Чем отличается от конкурентов\n- Как влияет на восприятие бренда\n\n#### Type Scale\n\n| Token | Weight | Size | Line Height | Tracking | Использование |\n|-------|--------|------|-------------|----------|---------------|\n| `display.hero` | Black/900 | 40pt | 44pt | -1.0pt | Wow-заголовки (Onboarding, Paywall) |\n| `display.large` | Bold/700 | 34pt | 41pt | -0.5pt | Hero секции |\n| `display.medium` | Bold/700 | 28pt | 34pt | -0.3pt | Заголовки экранов |\n| `title.large` | Semibold/600 | 22pt | 28pt | 0pt | Заголовки карточек |\n| `title.medium` | Semibold/600 | 20pt | 25pt | 0pt | Подзаголовки |\n| `title.small` | Semibold/600 | 17pt | 22pt | 0pt | List headers |\n| `body.large` | Regular/400 | 17pt | 24pt | 0pt | Основной текст |\n| `body.medium` | Regular/400 | 15pt | 21pt | 0pt | Описания |\n| `body.small` | Regular/400 | 13pt | 18pt | 0pt | Подписи |\n| `label.large` | Medium/500 | 15pt | 20pt | 0.2pt | Кнопки |\n| `label.medium` | Medium/500 | 13pt | 18pt | 0.2pt | Chips, tabs |\n| `label.small` | Semibold/600 | 11pt | 13pt | 0.5pt | Badges, метки |\n| `caption` | Regular/400 | 12pt | 16pt | 0pt | Мелкий текст |\n| `overline` | Semibold/600 | 10pt | 12pt | 1.5pt | Категории (UPPERCASE) |\n\n#### Правила типографики\n\n```\n1. МАКСИМУМ 1-2 font family на всё приложение\n2. На одном экране максимум 4 РАЗНЫХ размера текста\n3. Заголовки: left-aligned (кроме Onboarding/Paywall — centered)\n4. Body text: максимум 60 символов на строку\n5. Никогда: ALL CAPS кроме overline и badges\n6. Числа: tabular figures (моноширинные цифры)\n7. Длинные тексты: body.medium, не body.large\n8. Hero текст: ТОЛЬКО на Onboarding, Paywall, Empty States\n```\n\n---\n\n### 4.3 SPACING & LAYOUT\n\n#### Spacing Scale (Base: 4pt)\n\n| Token | Value | Использование |\n|-------|-------|---------------|\n| `space.2` | 2pt | Hairline gaps |\n| `space.4` | 4pt | Icon-to-text, badge padding |\n| `space.6` | 6pt | Tight grouping |\n| `space.8` | 8pt | Related elements |\n| `space.12` | 12pt | Standard gaps |\n| `space.16` | 16pt | Screen padding, card padding |\n| `space.20` | 20pt | Section title to content |\n| `space.24` | 24pt | Between sections |\n| `space.32` | 32pt | Major separations |\n| `space.40` | 40pt | Hero spacing |\n| `space.48` | 48pt | Top/bottom screen breathing |\n| `space.64` | 64pt | Dramatic spacing |\n| `space.80` | 80pt | Hero sections |\n\n#### Layout Rules\n\n```\nScreen padding: 20pt (НЕ стандартные 16pt — даёт больше воздуха, premium feel)\nCard padding: 16pt\nCard gap: 16pt\nSection gap: 32pt\nCTA bottom padding: 16pt от Safe Area\nNav bar bottom margin: 8pt\n```\n\n**⚠️ Обоснование 20pt screen padding:**\n- Конкуренты: 16pt (стандарт)\n- Мы: 20pt — создаёт premium feel, больше whitespace\n- Контент уже на 8pt с каждой стороны → визуально чище\n\n#### Screen Layout Templates\n\n**Template A: Content + Fixed CTA (Onboarding, Paywall, Forms)**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Nav Bar (optional)        44pt │\n├────────────────────────────────┤\n│                                │\n│   ScrollView                   │\n│   padding: 20pt                │\n│                                │\n│   [CONTENT]                    │\n│                                │\n│                                │\n├────────────────────────────────┤\n│ ┌────────────────────────────┐ │\n│ │ Primary CTA           52pt │ │  Fixed bottom\n│ └────────────────────────────┘ │  padding: 20pt H, 16pt V\n│ Secondary action (text button) │  8pt gap\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template B: Header + Scrollable Content (Home, Dashboard)**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Custom Header              var │  Collapses on scroll\n├────────────────────────────────┤\n│                                │\n│   ScrollView                   │\n│                                │\n│   Section 1          gap: 32pt │\n│   ┌──────────────────────────┐ │\n│   │ Card                     │ │\n│   └──────────────────────────┘ │\n│   Section 2                    │\n│   ┌──────┐ ┌──────┐           │\n│   │ Card │ │ Card │  gap: 16pt│\n│   └──────┘ └──────┘           │\n│                                │\n├────────────────────────────────┤\n│ Tab Bar                   49pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template C: Full Canvas (Editor, Camera)**\n```\n┌────────────────────────────────┐\n│ Safe Area (overlay)            │\n├────────────────────────────────┤\n│ Top Toolbar (overlay)     44pt │\n│                                │\n│                                │\n│     CANVAS (full bleed)        │\n│                                │\n│                                │\n│ Bottom Toolbar (overlay)  60pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n**Template D: List/Settings**\n```\n┌────────────────────────────────┐\n│ Safe Area                      │\n├────────────────────────────────┤\n│ Large Title Nav           var  │\n├────────────────────────────────┤\n│ Search Bar (optional)     44pt │\n│                                │\n│ Section Header                 │\n│ ┌────────────────────────────┐ │\n│ │ List Item              56pt│ │\n│ ├────────────────────────────┤ │\n│ │ List Item              56pt│ │\n│ ├────────────────────────────┤ │\n│ │ List Item              56pt│ │\n│ └────────────────────────────┘ │\n│ Section gap: 32pt              │\n│ Section Header                 │\n│ ┌────────────────────────────┐ │\n│ │ List Item              56pt│ │\n│ └────────────────────────────┘ │\n│                                │\n├────────────────────────────────┤\n│ Tab Bar (optional)        49pt │\n├────────────────────────────────┤\n│ Safe Area                      │\n└────────────────────────────────┘\n```\n\n---\n\n### 4.4 CORNER RADIUS\n\n| Token | Value | Где |\n|-------|-------|-----|\n| `radius.xs` | 4pt | Badges, status indicators |\n| `radius.sm` | 8pt | Chips, tags, small buttons |\n| `radius.md` | 12pt | Buttons, inputs |\n| `radius.lg` | 16pt | Cards, thumbnails |\n| `radius.xl` | 20pt | Large cards |\n| `radius.2xl` | 24pt | Bottom sheets |\n| `radius.3xl` | 28pt | Onboarding cards |\n| `radius.full` | 9999pt | Avatars, pills, indicators |\n\n**⚠️ ПРАВИЛО ВЛОЖЕННОСТИ:**\n```\nВнешний контейнер radius ВСЕГДА > внутреннего:\n- Card (16pt) → Button inside (12pt) ✅\n- Card (16pt) → Button inside (16pt) ❌\n- Sheet (24pt) → Card inside (16pt) ✅\n\nФормула: inner_radius = outer_radius - padding\nЕсли padding 16pt, card 16pt → inner ≈ 12pt (ок, ≤16-4=12)\n```\n\n---\n\n### 4.5 SHADOWS & DEPTH\n\n#### Light Mode Shadows\n\n| Token | X | Y | Blur | Spread | Color | Использование |\n|-------|---|---|------|--------|-------|---------------|\n| `shadow.subtle` | 0 | 1pt | 3pt | 0 | #000 4% | Hover states |\n| `shadow.card` | 0 | 2pt | 8pt | -1pt | #000 6% | Карточки |\n| `shadow.elevated` | 0 | 4pt | 12pt | -2pt | #000 8% | Dropdowns, поповеры |\n| `shadow.modal` | 0 | 8pt | 24pt | -4pt | #000 12% | Модалки, sheets |\n| `shadow.dramatic` | 0 | 16pt | 48pt | -8pt | #000 16% | Floating CTA, FAB |\n\n**⚠️ УНИКАЛЬНОСТЬ ТЕНЕЙ:**\n```\nНЕ используем стандартные плоские тени.\nНаш стиль: \"Elevated Soft\" — большой blur, маленький Y, negative spread.\nЭто создаёт эффект \"парения\", который конкуренты не используют.\n\nДополнительно: Color shadows для brand элементов:\n- Primary CTA shadow: brand.primary 20%, 0 4pt 16pt\n- Это добавляет \"свечение\" CTA — привлекает внимание\n```\n\n#### Dark Mode: Border System (вместо теней)\n\n| Element | Border |\n|---------|--------|\n| Card | 1pt `border.default` |\n| Elevated card | 1pt `border.strong` |\n| Modal | 1pt `border.strong` |\n| Input | 1pt `border.default` |\n| Input focused | 2pt `brand.primary` |\n\n---\n\n### 4.6 КОМПОНЕНТЫ — ПОЛНОЕ ОПИСАНИЕ\n\n> Для КАЖДОГО компонента указаны: размеры, цвета, состояния, анимации, расположение, УНИКАЛЬНОСТЬ\n\n#### 🔘 Buttons\n\n**Primary Button**\n```\nHeight: 56pt (НЕ стандартные 44/50 — крупнее = увереннее = больше конверсия)\nWidth: full-width (в контексте) или auto + min 200pt\nPadding: 24pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: gradient.primaryCTA\nText: text.inverse, label.large, Semibold, centered\nShadow: brand.primary 20%, 0 4pt 16pt (Light Mode) — \"glow effect\"\nIcon: 20pt, leading или trailing, 8pt gap\n\nSTATES:\n- Default: как описано\n- Pressed: scale(0.97), shadow уменьшается, duration 100ms\n- Disabled: opacity 40%, no shadow, no gradient (solid bg.tertiary)\n- Loading: text скрыт → circular spinner 20pt, centered, text.inverse\n\nANIMATION on appear:\n- fade in + translateY(8pt → 0) + scale(0.98 → 1.0)\n- duration: 300ms, ease-out\n- delay: последний элемент на экране (CTA появляется после контента)\n\n⚠️ УНИКАЛЬНОСТЬ: Glow shadow + увеличенная высота + появление с задержкой\n```\n\n**Secondary Button**\n```\nHeight: 52pt\nWidth: auto или full-width\nPadding: 20pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: transparent\nBorder: 1.5pt brand.primary (НЕ 1pt как у всех — толще = заметнее)\nText: brand.primary, label.large, Medium\nIcon: 20pt, optional\n\nSTATES:\n- Default: как описано\n- Pressed: background brand.primary 10%, scale(0.98), duration 100ms\n- Disabled: opacity 40%, border color text.disabled\n- Loading: spinner brand.primary\n\n⚠️ УНИКАЛЬНОСТЬ: Толстый border + тонированный press state\n```\n\n**Ghost Button**\n```\nHeight: 44pt\nPadding: 16pt horizontal\nBackground: transparent\nText: text.brand, label.large, Medium\nUnderline: нет\nIcon: 20pt optional\n\nSTATES:\n- Default: text.brand\n- Pressed: opacity 60%\n- Disabled: opacity 40%\n```\n\n**Icon Button**\n```\nSize: 48x48pt (touch target) / Visual: 40x40pt\nIcon: 24pt centered\nBackground: transparent (default) или bg.surface (contained)\nCorner Radius: radius.md (12pt)\n\nSTATES:\n- Default: icon text.secondary\n- Pressed: bg.surface, icon text.primary, scale(0.95)\n- Selected: icon brand.primary, bg brand.primary 10%\n- Badge: red dot 8pt, top-right offset -2pt\n```\n\n**Pill Button (tag-style)**\n```\nHeight: 36pt\nPadding: 16pt horizontal\nCorner Radius: radius.full\nBackground: bg.surface\nBorder: 1pt border.default\nText: label.medium, text.primary\nIcon: 16pt optional, leading\n\nSTATES:\n- Default: как описано\n- Selected: bg brand.primary, text text.inverse, no border\n- Pressed: scale(0.97)\n```\n\n---\n\n#### 🃏 Cards\n\n**Standard Card**\n```\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\n\nLight Mode: shadow.card\nDark Mode: 1pt border.default\n\nContent structure (top → bottom, gap 12pt):\n1. Image/Visual (optional, full-bleed top, radius.lg top only)\n2. Category/Tag (overline, text.secondary)\n3. Title (title.medium)\n4. Description (body.medium, text.secondary, max 2 lines)\n5. Footer: metadata left + action right\n\nSTATES:\n- Default: как описано\n- Pressed: scale(0.98), shadow.subtle, duration 150ms\n- Long press: scale(0.96), duration 200ms, context menu\n\nANIMATION on appear:\n- fade + translateY(16pt → 0)\n- duration: 300ms, ease-out\n- stagger: index * 60ms\n```\n\n**Feature Card (hero)**\n```\nMin Height: 200pt\nPadding: 24pt\nCorner Radius: radius.xl (20pt)\nBackground: gradient.backgroundHero или bg.elevated\n\nLight Mode: shadow.elevated\nDark Mode: 1pt border.strong + bg.elevated\n\nContent:\n1. Badge/Tag (top-left)\n2. Icon/Illustration (32-48pt, brand.primary)\n3. Title (title.large)\n4. Description (body.medium, text.secondary)\n5. CTA (Ghost Button или chevron)\n\n⚠️ УНИКАЛЬНОСТЬ: Градиентный фон + oversized icon + generous padding\n```\n\n**Horizontal Card (compact)**\n```\nHeight: 80pt\nPadding: 12pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\n\nLayout: [Image 56pt square, radius.md] | [Content] | [Action]\nImage left margin: 0 (flush)\nContent: title (titleSmall) + subtitle (bodySmall, text.secondary)\nAction: chevron 16pt text.tertiary или value text\n\nGap: image-content 12pt, content-action 8pt\n```\n\n**Selection Card (radio/option)**\n```\nHeight: auto (min 72pt)\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\n\nSTATES:\n- Unselected: bg.surface, 1.5pt border.default\n- Selected: bg brand.primary 5%, 2pt border brand.primary, checkmark icon\n- Pressed: scale(0.98)\n\nSelection indicator: 24pt circle, right side\n- Unselected: 2pt border, empty\n- Selected: brand.primary filled, white checkmark\n- Animation: scale(0 → 1) + opacity, spring 200ms\n```\n\n---\n\n#### 📝 Inputs\n\n**Text Input**\n```\nHeight: 56pt (увеличенный для удобства)\nPadding: 16pt horizontal\nCorner Radius: radius.md (12pt)\nBackground: bg.surface\nBorder: 1.5pt border.default\n\nLabel: body.small, text.secondary, above input, 6pt gap\nPlaceholder: body.large, text.tertiary\nValue: body.large, text.primary\nHelper text: caption, text.secondary, below, 4pt gap\n\nSTATES:\n- Empty: border.default, placeholder visible\n- Focused: border 2pt brand.primary, floating label (animated)\n- Filled: border.default, value shown\n- Error: border 2pt error, helper text error color, shake animation\n- Disabled: opacity 50%, bg.tertiary\n\n⚠️ УНИКАЛЬНОСТЬ: Floating label animation + увеличенная высота + subtle shake on error\n```\n\n**Search Input**\n```\nHeight: 48pt\nPadding: 12pt horizontal\nCorner Radius: radius.full (pill shape — ОТЛИЧИЕ от конкурентов)\nBackground: bg.tertiary\nBorder: none\n\nIcon: magnifyingglass 20pt, text.tertiary, left 12pt\nPlaceholder: body.medium, text.tertiary\nClear button: xmark.circle.fill 20pt, appears on input, right\nCancel button: text button, appears on focus, right, animated slide-in\n\nANIMATION:\n- Focus: expand width (если в header), cancel button slides in\n- Cancel: shrink, cancel button slides out, keyboard dismiss\n```\n\n---\n\n#### 📋 Lists\n\n**Standard List Item**\n```\nHeight: min 60pt (увеличен)\nPadding: 20pt horizontal (match screen padding), 14pt vertical\nBackground: transparent\n\nStructure:\n[Leading 40pt] — [space 12pt] — [Content flex] — [space 8pt] — [Trailing]\n\nLeading: Icon 24pt in 40pt container (bg.surface, radius.md) ИЛИ Avatar 40pt\nContent: title (titleSmall) + subtitle (bodySmall, text.secondary, 2pt gap)\nTrailing: chevron 16pt text.tertiary / Switch / Value (bodyMedium, text.secondary) / Badge\n\nSeparator: 0.5pt (НЕ 1pt — тоньше = элегантнее)\nSeparator color: border.default\nSeparator inset: 72pt left (leading + gap)\n```\n\n**Swipeable List Item**\n```\n... всё как Standard +\n\nSwipe Right: [Icon + Label], bg success/brand.primary\nSwipe Left: [Icon + Label], bg error\nSwipe threshold: 80pt\n\nAnimation: spring, snap back или complete\nHaptic: .medium on threshold\n```\n\n**Grouped List Container**\n```\nCorner Radius: radius.lg (16pt)\nBackground: bg.surface\nPadding: 0 (items have own padding)\nMargin: 20pt horizontal (screen padding)\n\nSection Header: \n- body.small, text.secondary, UPPERCASE не нужен (modern approach)\n- Padding: 20pt left, 8pt bottom\n- Capitalized, not uppercase\n\nSection Footer:\n- caption, text.tertiary\n- Padding: 20pt left, 8pt top\n```\n\n---\n\n#### 🔔 Feedback & States\n\n**Toast Notification**\n```\nPosition: top, below safe area, 16pt padding\nHeight: auto (min 52pt)\nPadding: 16pt\nCorner Radius: radius.lg (16pt)\nBackground: bg.elevated\nShadow: shadow.modal\n\nLayout: [Icon 24pt] [space 12pt] [Text flex] [Close/Action]\n\nTypes:\n- Success: icon checkmark.circle.fill, semantic.success\n- Error: icon xmark.circle.fill, semantic.error\n- Warning: icon exclamationmark.triangle.fill, semantic.warning\n- Info: icon info.circle.fill, semantic.info\n\nANIMATION:\n- Enter: translateY(-100% → 0) + opacity, spring 350ms\n- Exit: translateY(0 → -100%) + opacity, ease-in 200ms\n- Auto-dismiss: 4s, swipe-up to dismiss\n\n⚠️ УНИКАЛЬНОСТЬ: Top position (не bottom как у всех) — не перекрывает CTA\n```\n\n**Empty State**\n```\nPosition: centered in available space (1/3 from top визуально)\nMax width: 280pt\n\nStructure:\n1. Illustration/Icon: 80pt (лаконичный, brand-colored) — НЕ гигантский\n2. [gap 20pt]\n3. Title: title.medium, text.primary, center\n4. [gap 8pt]\n5. Description: body.medium, text.secondary, center, max 2 lines\n6. [gap 24pt]\n7. CTA: Secondary Button или Ghost Button\n\nANIMATION:\n- Illustration: fade + scale(0.8 → 1.0), 400ms, ease-out\n- Text: fade + translateY(8pt → 0), 300ms, delay 100ms\n- CTA: fade + translateY(8pt → 0), 300ms, delay 200ms\n\n⚠️ УНИКАЛЬНОСТЬ: Compact illustration (не oversized) + staggered animation\n```\n\n**Skeleton Loading**\n```\nShapes: повторяют реальный контент\nCorner Radius: match реального элемента\nBackground: bg.tertiary\n\nShimmer:\n- Gradient: bg.tertiary → bg.surface → bg.tertiary\n- Direction: -45° angle (диагональ — НЕ горизонтальный как у всех)\n- Duration: 1.8s\n- Timing: ease-in-out\n\n⚠️ УНИКАЛЬНОСТЬ: Диагональный shimmer (отличие от горизонтального стандарта)\n```\n\n**Error State (inline)**\n```\nBackground: semantic.error 8% (subtle tint)\nBorder: none (НЕ border error — слишком агрессивно)\nCorner Radius: radius.md (12pt)\nPadding: 12pt\n\nLayout: [Icon 20pt error] [space 8pt] [Message body.small error] [Action optional]\n\nANIMATION: shake входного поля (translateX: 0 → -4 → 4 → -4 → 4 → 0, 300ms)\n```\n\n---\n\n#### 🔲 Modals & Overlays\n\n**Bottom Sheet**\n```\nCorner Radius: radius.3xl (28pt) top only (БОЛЬШЕ чем стандарт 12-16pt)\nBackground: bg.elevated\nHandle: 40x4pt, radius.full, text.tertiary 30%, centered, 12pt from top\n\nDetents: \n- Small: 25% screen height\n- Medium: 50% screen height\n- Large: 90% screen height (НЕ full — всегда видно что за sheet)\n\nBackdrop: bg.overlay (animated opacity)\n\nANIMATION:\n- Present: spring(response: 0.4, dampingFraction: 0.82) — чуть bouncy\n- Dismiss: ease-in, 250ms\n- Interactive: follows drag gesture\n\n⚠️ УНИКАЛЬНОСТЬ: Увеличенный radius + bouncy spring + всегда видно parent\n```\n\n**Alert Dialog**\n```\nWidth: 300pt (шире стандарт iOS 270pt — больше воздуха)\nCorner Radius: radius.xl (20pt)\nBackground: bg.elevated + blur\nPadding: 24pt\n\nTitle: title.medium, text.primary, center\nMessage: body.medium, text.secondary, center\nGap title-message: 8pt\nGap message-buttons: 24pt\n\nButtons layout:\n- 2 кнопки: horizontal, равная ширина, 12pt gap\n- 3+ кнопки: vertical stack, full width, 8pt gap\n- Primary action: ВСЕГДА выделен (filled)\n- Destructive: semantic.error\n- Cancel: ghost/text style\n\nANIMATION:\n- Appear: backdrop fade + dialog scale(0.9 → 1.0) + opacity, 250ms\n- Disappear: reverse, 200ms\n```\n\n---\n\n### 4.7 НАВИГАЦИЯ\n\n#### Tab Bar\n```\nHeight: 56pt (увеличен, без label — чище)\nBackground: bg.base + ultraThinMaterial\nBorder top: 0.5pt border.default\n\nItems: 3-5 icons, evenly distributed\nIcon size: 26pt (чуть больше стандарт)\nLabels: СКРЫТЫ по умолчанию (clean look)\nSelected indicator: brand.primary dot 4pt BELOW icon, 4pt gap\n\nSelected state: icon brand.primary, scale(1.1)\nUnselected state: icon text.tertiary\n\nANIMATION:\n- Selection: spring scale(1.0 → 1.15 → 1.1), 200ms\n- Indicator dot: spring scale(0 → 1), 200ms\n\n⚠️ УНИКАЛЬНОСТЬ: No labels + dot indicator + bounce selection\nОбоснование: Airbnb, Twitter/X trend — иконки самодостаточны, labels — visual noise\n```\n\n#### Navigation Bar\n```\nHeight: 44pt + safe area\nBackground: transparent → bg.base (on scroll, animated)\n\nTransition: \n- Start: transparent, large title\n- Scroll 50pt: bg.base fades in, title shrinks\n- Duration: 200ms\n\nTitle (inline): title.small, text.primary, center\nLarge Title: display.medium, text.primary, left, padding 20pt\n\nBack button: chevron.left 24pt + hitbox 44pt, NO text\nRight actions: max 2, icon buttons 24pt\n```\n\n---\n\n### 4.8 АНИМАЦИИ & MOTION\n\n#### Timing System\n\n| Token | Duration | Easing | Use |\n|-------|----------|--------|-----|\n| `micro` | 100ms | ease-out | Color change, opacity |\n| `fast` | 200ms | ease-out | Button press, toggle |\n| `normal` | 300ms | ease-out | Card transitions |\n| `slow` | 400ms | spring(0.4, 0.82) | Screen transitions, modals |\n| `dramatic` | 600ms | spring(0.5, 0.75) | Onboarding, celebrations |\n\n#### Signature Animations\n\n**1. Content Cascade (стаггер появление контента)**\n```swift\n// Каждый элемент на экране появляется с задержкой\nForEach(elements.indices) { index in\n    ElementView()\n        .opacity(appeared ? 1 : 0)\n        .offset(y: appeared ? 0 : 16)\n        .animation(.spring(response: 0.4, dampingFraction: 0.82).delay(Double(index) * 0.06))\n}\n\n// Используется на: Home, Settings, Lists, любой контент-экран\n// Haptic: .light на первый элемент\n```\n\n**2. Magnetic Press (отклик кнопки)**\n```swift\n// Кнопка \"притягивается\" к пальцу\n.scaleEffect(isPressed ? 0.97 : 1.0)\n.brightness(isPressed ? -0.05 : 0)\n.animation(.spring(response: 0.2, dampingFraction: 0.7))\n\n// Haptic: .light on press\n```\n\n**3. Elastic Sheet (модалки)**\n```swift\n// Sheet слегка пружинит при появлении\n.spring(response: 0.4, dampingFraction: 0.82)\n\n// Sheet follow drag с инерцией\n// Velocity > 500: dismiss\n// Position > 50%: dismiss\n```\n\n**4. Celebration Burst (success момент)**\n```swift\n// Используется: после оплаты, завершения задачи, achievement\n\n// 1. Checkmark draws itself (stroke animation, 400ms)\n// 2. Confetti particles (8-12 штук, random positions, gravity)\n// 3. Haptic: .success\n\n// Haptic sequence: \n// 0ms: .light\n// 200ms: .medium\n// 400ms: .success\n```\n\n**5. Parallax Scroll (depth на scroll)**\n```swift\n// Hero image/illustration двигается медленнее контента\n// Factor: 0.3 (image moves at 30% scroll speed)\n\nGeometryReader { geo in\n    Image(...)\n        .offset(y: -geo.frame(in: .global).minY * 0.3)\n}\n\n// Используется: Home hero, Onboarding, Paywall\n```\n\n#### Screen Transitions\n\n| From → To | Transition | Duration |\n|-----------|-----------|----------|\n| Tab switch | Cross-fade | 200ms |\n| Push screen | Slide right + fade | 300ms |\n| Modal present | Slide up, spring | 400ms |\n| Modal dismiss | Slide down, ease-in | 250ms |\n| Sheet present | Slide up, bouncy spring | 400ms |\n| Alert appear | Scale + fade, spring | 250ms |\n| Fullscreen image | Zoom from thumbnail | 350ms |\n\n---\n\n### 4.9 HAPTIC FEEDBACK\n\n| Action | Style | When |\n|--------|-------|------|\n| Button tap | `UIImpactFeedbackGenerator(.light)` | On touch down |\n| CTA tap | `UIImpactFeedbackGenerator(.medium)` | On touch down |\n| Toggle | `UIImpactFeedbackGenerator(.medium)` | On value change |\n| Selection | `UISelectionFeedbackGenerator()` | Picker, segment change |\n| Success | `UINotificationFeedbackGenerator(.success)` | Purchase, save, complete |\n| Error | `UINotificationFeedbackGenerator(.error)` | Validation fail, shake |\n| Warning | `UINotificationFeedbackGenerator(.warning)` | Destructive action confirm |\n| Long press | `UIImpactFeedbackGenerator(.heavy)` | Threshold reached |\n| Pull refresh | `UIImpactFeedbackGenerator(.medium)` | Threshold reached |\n| Swipe action | `UIImpactFeedbackGenerator(.light)` | Action revealed |\n| Scroll snap | `UISelectionFeedbackGenerator()` | Carousel page snap |\n\n---\n\n### 4.10 ICONS\n\n```\nSet: SF Symbols (primary)\nFallback: Custom SVG (brand-specific only)\n\nDefault weight: Regular\nEmphasis weight: Medium\nSize system:\n- 16pt: inline with text\n- 20pt: buttons, inputs\n- 24pt: navigation, list leading\n- 28pt: tab bar\n- 32pt: feature icons\n- 48pt: empty states, onboarding\n\nRendering: Monochrome (default)\nExceptions: Multicolor for: weather, status, celebration elements\n\nColor:\n- UI: text.secondary\n- Active: brand.primary  \n- Destructive: semantic.error\n- On color: text.inverse\n```\n\n---\n\n### 4.11 ACCESSIBILITY\n\n```\nTouch targets: minimum 48x48pt (ВЫШЕ стандарта 44pt)\nColor contrast: WCAG AAA (7:1) для primary text\nDynamic Type: поддержка до accessibility5\nVoiceOver: все интерактивные элементы с labels\nReduce Motion: все анимации → instant crossfade\nReduce Transparency: solid backgrounds вместо blur\nBold Text: weight bump +1 (Regular → Medium, Medium → Semibold)\n```\n\n---\n\n### 4.12 DARK MODE\n\n```\nПринцип: \"Luminance hierarchy\" — НЕ инвертировать, а управлять яркостью\n\nElevation (darker → lighter):\nLevel 0 (base): #0A0A0A (ЧЕРНЕЕ чем стандарт #1C1C1E — drama)\nLevel 1 (surface): #141414\nLevel 2 (elevated): #1E1E1E  \nLevel 3 (modal): #282828\nLevel 4 (popover): #323232\n\nShadows: ОТКЛЮЧЕНЫ полностью\nBorders: включены (1pt border.default)\n\nBrand colors: +15% brightness\nText primary: #F5F5F5 (НЕ чисто белый — мягче для глаз)\nImages: -5% brightness (subtle dim)\n\n⚠️ УНИКАЛЬНОСТЬ: Deeper blacks + slightly dimmed images = cinematic feel\n```\n\n---\n\n## ЭТАП 5: ПРИМЕНЕНИЕ К КАЖДОМУ ЭКРАНУ\n\n> ⚠️ Это САМАЯ ВАЖНАЯ часть. Для КАЖДОГО экрана из Screens.md + ScreenElements.md\n\n### Формат для каждого экрана:\n\n```markdown\n### SCR-XXX: [Screen Name]\n\n**Layout Template:** [A / B / C / D]\n\n**Текущее состояние (из ScreenElements.md):**\n- Элементы: [список текущих]\n- Проблемы: [из аудита Этап 0]\n- Оценка: [X/60]\n\n**Новый дизайн:**\n\nLAYOUT:\n┌────────────────────────────────┐\n│ [Схема нового layout]         │\n│ С указанием каждого элемента  │\n│ И его позиции                 │\n└────────────────────────────────┘\n\nЭЛЕМЕНТЫ (сверху вниз):\n1. [Element] — компонент: [КАКОЙ из 4.6], позиция: [ГДЕ], размер: [КАКОЙ]\n2. [Element] — ...\n3. ...\n\nЦВЕТА на экране:\n- Background: [token]\n- Primary accent: [token], количество: [N]\n- Text hierarchy: [какие токены используются]\n\nSPACING:\n- Screen padding: [value]\n- Section gaps: [values]\n- Specific spacing notes: [если отличается от стандарта]\n\nANIMATION:\n- Появление экрана: [КАК]\n- Элементы: [cascade / instant / specific]\n- Интерактивные: [какие и как реагируют]\n\nCTA:\n- Primary: [Текст], позиция: [ГДЕ], тип: [КАКОЙ]\n- Secondary: [Текст], позиция: [ГДЕ], тип: [КАКОЙ]\n\nУНИКАЛЬНОСТЬ этого экрана:\n- Что отличает от конкурента: [ЧТО]\n- WOW-момент: [ЕСЛИ ЕСТЬ]\n\nОТЛИЧИЕ ОТ ТЕКУЩЕГО:\n- [ЧТО изменилось и ПОЧЕМУ]\n```\n\n---\n\n## ЭТАП 6: ФИНАЛЬНАЯ СВОДКА\n\n### Итоговые файлы:\n\n```\n1. DesignSpec.md — полная спецификация (Этапы 3-4)\n2. ScreenDesigns.md — дизайн каждого экрана (Этап 5)\n3. CompetitorAnalysis.md — анализ конкурентов (Этапы 1-2)\n4. UniqueFeatures.md — наши уникальные фишки\n```\n\n### Чеклист перед завершением:\n\n```\nАНАЛИЗ:\n- [ ] Top 20 проанализированы (названия, стили, сильные/слабые)\n- [ ] Паттерны выявлены (must-have, best-in-class, blue ocean, antipatterns)\n- [ ] Opportunity map заполнен\n\nСПЕЦИФИКАЦИЯ:\n- [ ] Все цвета в HEX (Light + Dark)\n- [ ] Все размеры в pt\n- [ ] Все spacing конкретные\n- [ ] Все компоненты описаны с состояниями\n- [ ] Все анимации с duration и easing\n- [ ] Все haptics указаны\n\nУНИКАЛЬНОСТЬ:\n- [ ] Минимум 5 signature elements\n- [ ] Каждый компонент имеет ⚠️ УНИКАЛЬНОСТЬ\n- [ ] Color shadows на CTA\n- [ ] Diagonal shimmer\n- [ ] Bouncy sheets\n- [ ] Tab bar без labels\n- [ ] Content cascade animation\n- [ ] Celebration burst\n- [ ] Deep dark mode\n- [ ] Toast сверху (не снизу)\n\nПРИМЕНЕНИЕ:\n- [ ] КАЖДЫЙ экран из Screens.md описан\n- [ ] КАЖДЫЙ элемент из ScreenElements.md учтён\n- [ ] Ни один экран не пропущен\n- [ ] Layout templates присвоены\n- [ ] CTA позиции определены\n\nКОНСИСТЕНТНОСТЬ:\n- [ ] Spacing система едина\n- [ ] Цвета по ролям\n- [ ] Typography иерархия\n- [ ] Corner radius по правилу вложенности\n- [ ] Анимации по timing system\n```\n\n---\n\n## ⛔ ЗАПРЕЩЕНО\n\n```\n❌ Шаблонные решения \"как у всех\"\n❌ Стандартные iOS defaults без модификации\n❌ Копирование конкретного конкурента\n❌ Абстрактные формулировки без значений\n❌ Пропуск экранов / элементов\n❌ Игнорирование Dark Mode\n❌ Игнорирование анимаций\n❌ Размеры \"на глаз\"\n❌ Изменение бизнес-логики\n❌ Удаление функциональности\n```\n\n## ✅ ОБЯЗАТЕЛЬНО\n\n```\n✅ Конкретные HEX, pt, ms для КАЖДОГО значения\n✅ Обоснование КАЖДОГО нестандартного решения\n✅ Уникальность КАЖДОГО компонента\n✅ Описание КАЖДОГО экрана\n✅ Описание КАЖДОГО состояния компонента\n✅ Анимации для КАЖДОГО перехода\n✅ Haptic для КАЖДОГО взаимодействия\n✅ Dark Mode для КАЖДОГО элемента\n✅ Accessibility для КАЖДОГО интерактивного элемента\n```\n\n---\n\n**РЕЗУЛЬТАТ: Приложение, которое при открытии вызывает \"вау\" и визуально превосходит ЛЮБОГО конкурента в категории.**\n"
+              "value": "=# Design Manifest Generator — Claude API Opus 4.6\n\n> **Инструмент:** Claude API (Opus 4.6)\n> **Формат:** Скопируй секцию SYSTEM PROMPT как system message, секцию USER MESSAGE как user message. Заполни поля в `[КВАДРАТНЫХ СКОБКАХ]` перед отправкой.\n> **Результат:** Модель вернёт полный `DesignSpec.md` — скопируй его в корень проекта.\n\n---\n\n## SYSTEM PROMPT\n\n```\nТы — ведущий iOS UI/UX-дизайнер и SwiftUI-архитектор с 10+ годами опыта в App Store.\n\nТвоя единственная задача: создать Design Manifest — исчерпывающий документ дизайн-системы для топового iOS-приложения. Этот документ будет использоваться AI-агентами (Sonnet 4.5 в Cursor) для поэкранного редизайна всего приложения. Каждый экран будет редизайниться отдельным агентом параллельно, поэтому манифест должен быть единственным источником истины.\n\nКРИТИЧЕСКИЕ ТРЕБОВАНИЯ:\n1. Минимальная iOS версия: 18.0. Используй все доступные API iOS 18 (MeshGradient, symbolEffect, contentTransition, sensoryFeedback, ScrollTransition, scrollTargetBehavior).\n2. Все значения КОНКРЕТНЫЕ — hex-коды, pt-размеры, spring-конфиги. Ни одного placeholder.\n3. Все SwiftUI-сниппеты в Component Catalog должны КОМПИЛИРОВАТЬСЯ на iOS 18 без дополнительных зависимостей.\n4. Дизайн должен быть РАДИКАЛЬНО отличным от стандартного iOS и от текущего дизайна приложения.\n5. Формат вывода: чистый Markdown, готовый к сохранению как DESIGN_MANIFEST.md.\n6. Язык документа: русский для описаний, английский для кода и технических терминов.\n```\n\n---\n\n## USER MESSAGE\n\n```\nСоздай Design Manifest для моего iOS-приложения.\n\nИНФОРМАЦИЯ О ПРИЛОЖЕНИИ:\n- Название: [НАЗВАНИЕ ПРИЛОЖЕНИЯ]\n- Категория в App Store: [КАТЕГОРИЯ — например: Photo & Video, Productivity, Finance, Health & Fitness, Social Networking]\n- Основной функционал: [3-5 КЛЮЧЕВЫХ ФУНКЦИЙ — например: редактирование фото, удаление фона, AI-улучшение, наложение фильтров, экспорт]\n- Целевая аудитория: [ОПИСАНИЕ — например: мобильные фотографы 18-35 лет, контент-криэйторы]\n- Текущий визуальный стиль (если есть): [ОПИСАНИЕ — например: тёмный UI, magenta акценты, неоморфизм / или \"стандартный iOS\"]\n\nЗАДАНИЕ:\n\nШаг 1: КОНКУРЕНТНЫЙ АНАЛИЗ\nВеб поиском проанализируй App Store и определи ТОП-20 приложений в категории [КАТЕГОРИЯ]. Для каждого кратко отметь: доминантные цвета, стиль UI (минимализм/glassmorphism/brutalism/neomorphism/skeuomorphism/другое), характерные паттерны. Выдели 3 самых популярных визуальных подхода среди них — это то, что мы НЕ будем использовать.\n\nШаг 2: 10 УНИКАЛЬНЫХ НАПРАВЛЕНИЙ\nСгенерируй 10 радикально разных визуальных направлений. Каждое:\n- НЕ копирует стандартный iOS (no default tab bar, no system navigation bar, no default tint colors)\n- НЕ повторяет 3 самых популярных подхода из Шага 1\n- Вдохновлено чем-то конкретным (природа, космос, архитектура, искусство, наука, музыка, кинематограф и т.д.)\n- Реализуемо средствами SwiftUI + iOS 18\n\nФормат для каждого:\n1. **[Название EN]** — [Вдохновение, 1 предложение]. Палитра: #XXX, #XXX, #XXX, #XXX. Фишка: [что уникального в UI].\n\nШаг 3: ВЫБОР\nВыбери направление номер [ЧИСЛО ОТ 1 ДО 10 — вставь случайное число, или напиши \"выбери сам наименее очевидное\"]. Если я не указал число — выбери наименее банальное, не первое и не последнее.\n\nШаг 4: ПОЛНЫЙ МАНИФЕСТ\nДля выбранного направления создай DESIGN_MANIFEST.md по структуре ниже. ВСЕ секции обязательны. ВСЕ значения конкретные.\n\n=== НАЧАЛО СТРУКТУРЫ DESIGN_MANIFEST.md ===\n\n# Design Manifest: [Название концепции]\n\n> [Абзац: философия дизайна, вдохновение, атмосфера, ощущение от UI]\n\n**Mood:** [5-7 ключевых слов]  \n**Category:** [категория]  \n**Min iOS:** 18.0  \n**Framework:** SwiftUI  \n\n---\n\n## 1. Color System\n\n### 1.1 Backgrounds\nТаблица с 3 цветами: bgPrimary, bgSecondary, bgTertiary — hex + назначение.\n\n### 1.2 Surfaces\nТаблица с 3 цветами: surfaceDefault, surfaceElevated, surfaceOverlay — hex + opacity + назначение.\n\n### 1.3 Text\nТаблица с 3 цветами: textPrimary, textSecondary, textTertiary — hex + назначение.\n\n### 1.4 Accents\nТаблица с 3 цветами: accentPrimary, accentSecondary, accentTertiary — hex + назначение.\n\n### 1.5 Semantic\nТаблица с 4 цветами: success, warning, error, info — hex + назначение.\n\n### 1.6 Named Gradients\n4 градиента как готовый Swift-код:\n- gradientPrimary (LinearGradient для CTA)\n- gradientAmbient (LinearGradient для фоновой глубины)\n- gradientSurface (LinearGradient для карточек)\n- gradientGlow (RadialGradient для свечения)\n\n### 1.7 MeshGradient (iOS 18)\nГотовый Swift-код MeshGradient 3x3 с 9 цветами из палитры для hero-секций.\n\n### 1.8 Color(hex:) Extension\nПолный готовый код расширения Color для работы с hex-строками.\n\n---\n\n## 2. Typography\n\nТаблица из 12 строк: token, size, weight, design, usage.\nТокены: displayLarge, displayMedium, titleLarge, titleMedium, titleSmall, bodyLarge, bodyMedium, bodySmall, labelLarge, labelMedium, labelSmall, mono.\n\n---\n\n## 3. Spacing\n\nТаблица из 9 строк: token, value, usage.\nТокены: xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl.\nПлюс список стандартных паддингов (экран, карточка, панель, между секциями).\n\n---\n\n## 4. Corner Radius\n\nТаблица из 6 строк: token, value, usage.\nТокены: radiusXs, radiusSm, radiusMd, radiusLg, radiusXl, radiusFull.\n\n---\n\n## 5. Shadows and Elevation\n\n4 shadow-конфигурации как Swift-код:\n- shadowSubtle (для карточек)\n- shadowMedium (для приподнятых элементов)\n- shadowPronounced (для модальных окон)\n- glowAccent (для активных элементов)\n\n---\n\n## 6. Animation System\n\n### 6.1 Duration Scale\nТаблица: instant (0.1s), fast (0.2s), normal (0.35s), slow (0.5s), dramatic (0.8s).\n\n### 6.2 Spring Configurations\n4 spring-конфигурации как Swift-код: springSnappy, springSmooth, springBouncy, springGentle.\n\n### 6.3 Named Transitions\n4 transition как Swift-код: transitionAppear, transitionDisappear, transitionSwitch, transitionPanel.\n\n### 6.4 iOS 18 Обязательные анимации\nКонкретные примеры кода для: .contentTransition(.numericText), .symbolEffect(.bounce), .sensoryFeedback(.selection), .sensoryFeedback(.impact).\n\n---\n\n## 7. Icon System\n\nТаблица: context, size, weight для 6 контекстов (toolbar, tab bar, card, badge, hero, inline).\nПлюс правило: активные иконки = gradientPrimary через .foregroundStyle(), неактивные = textTertiary.\n\n---\n\n## 8. Component Catalog\n\nГОТОВЫЕ SwiftUI struct для каждого компонента (компилируемый код iOS 18):\n\n8.1 ManifestPrimaryButton — градиентная CTA кнопка\n8.2 ManifestSecondaryButton — полупрозрачная кнопка\n8.3 ManifestGhostButton — текстовая кнопка\n8.4 ManifestCard — карточка с surface фоном и stroke\n8.5 ManifestSlider — кастомный слайдер с иконкой, градиентным треком, светящимся thumb, contentTransition на значении\n8.6 ManifestSegmentedControl — табы-капсулы с градиентным выделением и sensoryFeedback\n8.7 ManifestToolbarButton — кнопка тулбара с symbolEffect(.bounce) и scale-анимацией\n8.8 ManifestBadge — бейдж/тег (accent, subtle, semantic варианты)\n8.9 ManifestSheetHeader — заголовок панели с индикатором и кнопкой закрытия\n8.10 ManifestEmptyState — пустое состояние с symbolEffect(.pulse) и CTA\n\nКАЖДЫЙ сниппет:\n- Полностью самодостаточный struct\n- Использует Color(hex:) с конкретными hex из палитры\n- Использует конкретные размеры/отступы из манифеста\n- Компилируется на iOS 18 без import кроме SwiftUI\n- Содержит .lineLimit(1) + .fixedSize() или .minimumScaleFactor(0.8) на всех label'ах\n\n---\n\n## 9. iOS 18 Features\n\nТаблица: feature, где использовать, пример кода — для 8 фич:\nsymbolEffect(.bounce), symbolEffect(.pulse), contentTransition(.numericText), sensoryFeedback(.selection), sensoryFeedback(.impact), MeshGradient, ScrollTransition, .scrollTargetBehavior(.viewAligned).\n\n---\n\n## 10. Navigation Patterns\n\nОписание кастомных паттернов:\n- Bottom Navigation (кастомный toolbar, gradient separator, scroll если >5 элементов)\n- Верхний бар (кастомный header, blur, иконки в кругах, CTA-капсула)\n- Модальные окна (.presentationDetents, кастомный drag indicator, bgSecondary фон)\n- Переходы (withAnimation(springSmooth))\n\n---\n\n## 11. Anti-patterns — ЗАПРЕЩЕНО\n\nПронумерованный список из 10+ конкретных запретов:\n1. Стандартный TabView\n2. Стандартный NavigationTitle\n3. Системный Slider()\n4. Color.accentColor / .tint(.blue)\n5. Color.black / Color.white напрямую\n6. Системный .alert()\n7. Text truncation (три точки)\n8. Word wrap в кнопках\n9. Анимации без spring\n10. Цвета не из манифеста\n\n---\n\n## 12. Validation Checklist\n\n15 пунктов с чекбоксами — по ним агент проверяет каждый экран после редизайна:\n- Все цвета из манифеста\n- Все typography из манифеста\n- Все spacing из манифеста\n- Все radius из манифеста\n- symbolEffect на иконках\n- contentTransition на числах\n- sensoryFeedback на выборах\n- Нет truncation\n- Нет word wrap\n- Кастомная навигация\n- Компоненты из каталога\n- 2+ анимации на экране\n- Радикальное отличие от исходного\n- Весь функционал сохранён\n- Контрастность текста WCAG AA\n\n=== КОНЕЦ СТРУКТУРЫ ===\n\nВАЖНО: Выведи ТОЛЬКО содержимое DESIGN_MANIFEST.md — без вступлений, пояснений и комментариев вне документа. Начни сразу с \"# Design Manifest: ...\"\n```\n\n---\n\n## Примечания по использованию\n\n### Шаг за шагом:\n\n1. Скопируй **SYSTEM PROMPT** в поле system message в API\n2. Скопируй **USER MESSAGE** в поле user message\n3. Заполни 5 полей в `[КВАДРАТНЫХ СКОБКАХ]`:\n   - Название приложения\n   - Категория в App Store\n   - 3-5 ключевых функций\n   - Целевая аудитория\n   - Текущий стиль (или \"стандартный iOS\")\n4. Вставь случайное число от 1 до 10 в Шаге 3, или оставь \"выбери сам наименее очевидное\"\n5. Отправь запрос\n6. Скопируй ответ целиком и сохрани как `DESIGN_MANIFEST.md` в корень проекта\n\n### Параметры API:\n\n```\nmodel: claude-opus-4-20250514\nmax_tokens: 16000\ntemperature: 0.9  (для креативности при генерации направлений)\n```\n\n### Если результат не нравится:\n\n- Смени число в Шаге 3 → получишь другое направление из тех же 10\n- Добавь в конец user message: \"Избегай направления [название того что не понравилось]\"\n- Повысь temperature до 1.0 для более экспериментальных результатов\n"
             },
             {
               "id": "68254392-878d-40dc-89f7-6470ce1087c1",
@@ -12185,8 +11413,8 @@
         "options": {}
       },
       "position": [
-        1712,
-        704
+        80,
+        816
       ],
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4
@@ -12207,8 +11435,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        3168,
-        544
+        1744,
+        656
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12231,8 +11459,8 @@
         "operation": "get"
       },
       "position": [
-        2688,
-        544
+        1264,
+        656
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12246,8 +11474,8 @@
         "jsCode": "const item = $json;\n\nconst attachments = item.fields?.attachment || [];\nconst attachmentIds = attachments.map(a => a.id);\n\n// Возвращаем только список ID в json\nreturn {\n  json: {\n    attachmentIds,\n  },\n};\n"
       },
       "position": [
-        2848,
-        544
+        1424,
+        656
       ],
       "type": "n8n-nodes-base.code",
       "typeVersion": 2
@@ -12261,8 +11489,8 @@
         "options": {}
       },
       "position": [
-        3008,
-        544
+        1584,
+        656
       ],
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1
@@ -12272,8 +11500,8 @@
       "name": "No Operation, do nothing9",
       "parameters": {},
       "position": [
-        3312,
-        544
+        1888,
+        656
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -12293,8 +11521,8 @@
         "resource": "issueAttachment"
       },
       "position": [
-        2688,
-        816
+        1264,
+        928
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12405,8 +11633,8 @@
         }
       },
       "position": [
-        3008,
-        816
+        1584,
+        928
       ],
       "retryOnFail": true,
       "type": "n8n-nodes-base.jira",
@@ -12418,8 +11646,8 @@
       "name": "No Operation, do nothing10",
       "parameters": {},
       "position": [
-        3168,
-        816
+        1744,
+        928
       ],
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1
@@ -12431,8 +11659,8 @@
         "keep": "lastItems"
       },
       "position": [
-        2848,
-        816
+        1424,
+        928
       ],
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1
@@ -12524,7 +11752,7 @@
         }
       },
       "position": [
-        2368,
+        2800,
         384
       ],
       "type": "n8n-nodes-base.jira",
@@ -12631,7 +11859,7 @@
               "id": "field3",
               "name": "new_repo_url",
               "type": "string",
-              "value": "={{ $json.html_url }}"
+              "value": "={{ $json.html_url || $json.url }}"
             },
             {
               "id": "field4",
@@ -12662,7 +11890,7 @@
         "options": {}
       },
       "position": [
-        432,
+        864,
         384
       ],
       "type": "n8n-nodes-base.set",
@@ -12684,7 +11912,7 @@
         "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
       },
       "position": [
-        656,
+        1088,
         384
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -12706,7 +11934,7 @@
         "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
       },
       "position": [
-        1520,
+        1952,
         384
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -12721,6 +11949,7 @@
       },
       "id": "000a488d-61cb-41a2-a347-43edac7213ce",
       "name": "Create File in New Repo2",
+      "onError": "continueRegularOutput",
       "parameters": {
         "authentication": "predefinedCredentialType",
         "bodyParameters": {
@@ -12746,7 +11975,7 @@
         "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data2').item.json.new_owner }}/{{ $('Prepare Loop Data2').item.json.new_repo_name }}/contents/{{ $('Loop Over Items2').item.json.path }}"
       },
       "position": [
-        1744,
+        2176,
         384
       ],
       "type": "n8n-nodes-base.httpRequest",
@@ -12760,7 +11989,7 @@
         "options": {}
       },
       "position": [
-        1968,
+        2400,
         384
       ],
       "type": "n8n-nodes-base.aggregate",
@@ -12862,7 +12091,7 @@
         }
       },
       "position": [
-        880,
+        1312,
         384
       ],
       "type": "n8n-nodes-base.set",
@@ -12876,7 +12105,7 @@
         "options": {}
       },
       "position": [
-        1104,
+        1536,
         384
       ],
       "type": "n8n-nodes-base.splitOut",
@@ -12917,7 +12146,7 @@
         "options": {}
       },
       "position": [
-        2192,
+        2624,
         384
       ],
       "type": "n8n-nodes-base.set",
@@ -12932,6 +12161,7 @@
       },
       "id": "d0594b1b-4eb1-41c9-8b0d-78399bddf1fa",
       "name": "Create Private Repo2",
+      "onError": "continueRegularOutput",
       "parameters": {
         "authentication": "predefinedCredentialType",
         "jsonBody": "={\n  \"name\": \"{{ $json.new_repo_name }}\",\n  \"private\": true,\n  \"description\": \"Cloned for Jira ticket {{ $json.new_repo_name }}\"\n}",
@@ -12956,7 +12186,7 @@
         "options": {}
       },
       "position": [
-        1312,
+        1744,
         384
       ],
       "type": "n8n-nodes-base.splitInBatches",
@@ -13046,11 +12276,75 @@
         "options": {}
       },
       "position": [
-        2224,
-        912
+        800,
+        1024
       ],
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1
+    },
+    {
+      "id": "b464433c-de6a-433f-a671-2b0d50f66844",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3c77452e-699a-40f8-aad7-1d27b386effe",
+              "leftValue": "={{ $json.error.description }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "=Repository creation failed."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        416,
+        384
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "b2140120-cea3-49aa-8ce2-baabd8d31dd2",
+      "name": "Get a repository",
+      "parameters": {
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "IT-OUT"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Save Branch Info1').item.json.new_repo_name }}"
+        },
+        "resource": "repository"
+      },
+      "position": [
+        608,
+        416
+      ],
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "webhookId": "65b4b476-04d8-4b33-9cfd-1ae4da4910aa"
     }
   ],
   "pinData": {
@@ -13094,7 +12388,7 @@
         "json": {
           "body": {
             "description": "null",
-            "issue_key": "TAA-558",
+            "issue_key": "TAA-564",
             "serial_num_pc": "null"
           },
           "executionMode": "production",
@@ -13105,17 +12399,17 @@
             "cf-connecting-ip": "135.181.186.107",
             "cf-ew-via": "15",
             "cf-ipcountry": "FI",
-            "cf-ray": "9c9aedefb46565cf-FRA",
+            "cf-ray": "9ccdca5512db3660-FRA",
             "cf-visitor": "{\"scheme\":\"https\"}",
             "cf-worker": "n8n.cloud",
             "content-length": "67",
             "content-type": "application/json",
             "host": "academicpixflow.app.n8n.cloud",
-            "x-forwarded-for": "135.181.186.107, 172.68.195.162",
+            "x-forwarded-for": "135.181.186.107, 162.158.110.13",
             "x-forwarded-host": "academicpixflow.app.n8n.cloud",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lbwpz",
+            "x-forwarded-server": "traefik-prod-users-gwc-61-6d55649f6f-lwr2j",
             "x-is-trusted": "yes",
             "x-real-ip": "135.181.186.107"
           },
@@ -13158,6 +12452,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-02-11T08:48:35.439Z",
-  "versionId": "b9201602-6c2f-43da-94a8-5e5472f4407d"
+  "updatedAt": "2026-02-12T18:21:03.587Z",
+  "versionId": "4f11f484-5ef0-4e7f-82d9-b28f6df26f0b"
 }
