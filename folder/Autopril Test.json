@@ -36,6 +36,17 @@
         ]
       ]
     },
+    "Accumulate Blob SHA": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Add a comment": {
       "main": [
         [
@@ -168,6 +179,28 @@
         ]
       ]
     },
+    "Build Tree Array": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ensure Repo Has Commit",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Clear Accumulated Data": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Split Out Files",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Code in JavaScript2": {
       "main": [
         [
@@ -256,6 +289,28 @@
         ]
       ]
     },
+    "Create Blob in New Repo": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Accumulate Blob SHA",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Commit": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Ref",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Create File in New Repo2": {
       "main": [
         [
@@ -267,12 +322,34 @@
         ]
       ]
     },
+    "Create Private Repo": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Create Private Repo2": {
       "main": [
         [
           {
             "index": 0,
             "node": "Prepare for Tree1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create Tree": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Commit",
             "type": "main"
           }
         ]
@@ -380,6 +457,17 @@
         ]
       ]
     },
+    "Ensure Repo Has Commit": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Repo Info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Extract Content_ID": {
       "main": [
         [
@@ -457,6 +545,17 @@
         ]
       ]
     },
+    "Final Result": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Jira with Repo URL1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Final Result2": {
       "main": [
         [
@@ -501,6 +600,17 @@
         ]
       ]
     },
+    "Get File Content": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Blob in New Repo",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get File Content2": {
       "main": [
         [
@@ -534,6 +644,39 @@
         ]
       ]
     },
+    "Get Main Ref": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Tree",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get Repo Info": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Rename Branch to Main",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get Source Repo Info": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Save Branch Info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get Source Repo Info1": {
       "main": [
         [
@@ -545,12 +688,34 @@
         ]
       ]
     },
+    "Get Source Tree": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare Loop Data",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Get Source Tree2": {
       "main": [
         [
           {
             "index": 0,
             "node": "Prepare Loop Data2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get a repository": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for Tree",
             "type": "main"
           }
         ]
@@ -584,6 +749,17 @@
           {
             "index": 0,
             "node": "Config1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get an issue1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse Jira Data",
             "type": "main"
           }
         ]
@@ -899,6 +1075,24 @@
         ]
       ]
     },
+    "If2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for Tree",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get a repository",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "If4": {
       "main": [
         [
@@ -1038,6 +1232,24 @@
         ]
       ]
     },
+    "Loop Over Items2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Build Tree Array",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get File Content",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Merge Files1": {
       "main": [
         [
@@ -1134,6 +1346,17 @@
         ]
       ]
     },
+    "Parse Jira Data": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Source Repo Info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Parse Jira Data2": {
       "main": [
         [
@@ -1145,12 +1368,34 @@
         ]
       ]
     },
+    "Prepare Loop Data": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Clear Accumulated Data",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Prepare Loop Data2": {
       "main": [
         [
           {
             "index": 0,
             "node": "Split Out Files2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Prepare for Tree": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Source Tree",
             "type": "main"
           }
         ]
@@ -1216,6 +1461,28 @@
         ]
       ]
     },
+    "Rename Branch to Main": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get Main Ref",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Save Branch Info": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create Private Repo",
+            "type": "main"
+          }
+        ]
+      ]
+    },
     "Save Branch Info1": {
       "main": [
         [
@@ -1238,6 +1505,17 @@
           {
             "index": 0,
             "node": "Add Prompt CON",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Split Out Files": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Loop Over Items2",
             "type": "main"
           }
         ]
@@ -1271,6 +1549,17 @@
           {
             "index": 0,
             "node": "Get Dropbox info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Ref": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Final Result",
             "type": "main"
           }
         ]
@@ -1424,7 +1713,7 @@
         [
           {
             "index": 0,
-            "node": "Get an issue3",
+            "node": "Get an issue1",
             "type": "main"
           }
         ]
@@ -3839,7 +4128,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "disabled": true,
@@ -4180,7 +4469,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "80f9c08e-6547-4fcb-b905-76ed8bf9c59d",
@@ -4550,7 +4839,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "f0599708-3f0a-4dda-98f9-35b14c90589e",
@@ -4651,7 +4940,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "a9309b31-b8fd-4617-a7d3-af4f273fc373",
@@ -4678,7 +4967,7 @@
       "credentials": {
         "anthropicApi": {
           "id": "9tOxhZE1SbRJp4SW",
-          "name": "Anthropic account"
+          "name": "Anthropic Claude API"
         }
       },
       "id": "3b1c04f3-8362-449c-bb46-5e62ae44b038",
@@ -5220,8 +5509,8 @@
       "name": "When clicking ‘Execute workflow’",
       "parameters": {},
       "position": [
-        1136,
-        16
+        5152,
+        2288
       ],
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1
@@ -5712,6 +6001,761 @@
       ],
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "id": "948f8f15-d111-4cdb-82cd-207fd2c8ddc1",
+      "name": "Get an issue1",
+      "parameters": {
+        "additionalFields": {},
+        "issueKey": "=TAA-576",
+        "jiraVersion": "serverPat",
+        "operation": "get"
+      },
+      "position": [
+        5376,
+        2288
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "waitBetweenTries": 5000
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "35ba55c3-8d05-400c-bb8e-9fc33b82d0e2",
+      "name": "Create Blob in New Repo",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "={{ $json.content }}"
+            },
+            {
+              "name": "encoding",
+              "value": "base64"
+            }
+          ]
+        },
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data').item.json.new_owner }}/{{ $('Prepare Loop Data').item.json.new_repo_name }}/git/blobs"
+      },
+      "position": [
+        8176,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "881c92d0-008e-43fe-afdc-eea252ed9874",
+      "name": "Accumulate Blob SHA",
+      "parameters": {
+        "jsCode": "// Accumulate each blob SHA as the loop processes files\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.treeEntries) staticData.treeEntries = [];\n\nconst loopItem = $('Loop Over Items2').item.json;\n\n// Only add if blob creation succeeded (has sha)\nif ($json.sha) {\n  staticData.treeEntries.push({\n    path: loopItem.path,\n    mode: loopItem.mode || '100644',\n    type: 'blob',\n    sha: $json.sha\n  });\n}\n\nreturn [{ json: { accumulated: staticData.treeEntries.length } }];"
+      },
+      "position": [
+        8400,
+        2288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "dca087b8-b155-43a6-a20d-584e8417ab96",
+      "name": "Build Tree Array",
+      "parameters": {
+        "jsCode": "// Read accumulated blob SHAs and clear for next execution\nconst staticData = $getWorkflowStaticData('global');\nconst tree = staticData.treeEntries || [];\nstaticData.treeEntries = [];\n\nreturn [{ json: { tree } }];"
+      },
+      "position": [
+        8640,
+        2288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "971400de-9768-4e59-b4f6-c7513d1ab0ee",
+      "name": "Ensure Repo Has Commit",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"message\": \"init\",\n  \"content\": \"\"\n}",
+        "method": "PUT",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/contents/.gitkeep"
+      },
+      "position": [
+        8864,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "34c7ca84-4501-4120-94e3-c5dfe66a2a22",
+      "name": "Get Repo Info",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}"
+      },
+      "position": [
+        9088,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "a19efbeb-1332-46bf-8a5c-254a2f65011f",
+      "name": "Rename Branch to Main",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"new_name\": \"main\"\n}",
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/branches/{{ $json.default_branch }}/rename"
+      },
+      "position": [
+        9312,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "e6441bdb-4023-4997-8f55-092252069b2f",
+      "name": "Get Main Ref",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/git/ref/heads/main"
+      },
+      "position": [
+        9536,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "fc1089c8-e105-428b-a0fc-d88f534be660",
+      "name": "Create Tree",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"base_tree\": \"{{ $json.object.sha }}\",\n  \"tree\": {{ JSON.stringify($('Build Tree Array').item.json.tree) }}\n}",
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/git/trees"
+      },
+      "position": [
+        9760,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "3c51f48b-8f47-42f5-92c8-f5d6216f5019",
+      "name": "Create Commit",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"message\": \"Clone from source for {{ $('Prepare for Tree').last().json.jira_key }}\",\n  \"tree\": \"{{ $json.sha }}\",\n  \"parents\": [\"{{ $('Get Main Ref').item.json.object.sha }}\"]\n}",
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/git/commits"
+      },
+      "position": [
+        9984,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "64e12fa9-055f-4936-9283-82a813b336f6",
+      "name": "Update Ref",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"sha\": \"{{ $json.sha }}\",\n  \"force\": true\n}",
+        "method": "PATCH",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "=https://api.github.com/repos/{{ $('Prepare for Tree').last().json.new_owner }}/{{ $('Prepare for Tree').last().json.new_repo_name }}/git/refs/heads/main"
+      },
+      "position": [
+        10208,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "de45cd5d-664e-4910-8946-cb119955400a",
+      "name": "Loop Over Items2",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        7744,
+        2288
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "58a266ae-95c9-45c5-ac4f-dbdc597a5737",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3c77452e-699a-40f8-aad7-1d27b386effe",
+              "leftValue": "={{ $json.error.description }}",
+              "operator": {
+                "operation": "notEquals",
+                "type": "string"
+              },
+              "rightValue": "=Repository creation failed."
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        6416,
+        2288
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "d4460490-a074-4f19-9950-f76f35765231",
+      "name": "Get a repository",
+      "parameters": {
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "IT-OUT"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Save Branch Info').item.json.new_repo_name }}"
+        },
+        "resource": "repository"
+      },
+      "position": [
+        6608,
+        2320
+      ],
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "webhookId": "65b4b476-04d8-4b33-9cfd-1ae4da4910aa"
+    },
+    {
+      "credentials": {
+        "jiraSoftwareServerPatApi": {
+          "id": "WwUfZZ4lukKmf4G9",
+          "name": "Jira SW Task Buider"
+        }
+      },
+      "disabled": true,
+      "id": "61395e0a-3edd-4ea2-8e55-1a5e3797339d",
+      "name": "Update Jira with Repo URL1",
+      "parameters": {
+        "issueKey": "={{ $json.jira_key }}",
+        "jiraVersion": "serverPat",
+        "operation": "update",
+        "updateFields": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": {
+                  "__rl": true,
+                  "mode": "id",
+                  "value": "customfield_10044"
+                },
+                "fieldValue": "={{ $json.new_repo_url }}"
+              }
+            ]
+          }
+        }
+      },
+      "position": [
+        10656,
+        2288
+      ],
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "7c4582c4-346c-43f0-acac-ed8855a577de",
+      "name": "Get Source Repo Info",
+      "parameters": {
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.source_owner }}"
+        },
+        "repository": {
+          "__regex": "https:\\/\\/(?:[^/]+)\\/(?:[-_0-9a-zA-Z]+)\\/([-_.0-9a-zA-Z]+)",
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.source_url }}"
+        },
+        "resource": "repository"
+      },
+      "position": [
+        5776,
+        2288
+      ],
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "webhookId": "dcdb69e9-c081-486b-99c7-75591f004e3b"
+    },
+    {
+      "id": "7b4cf6d9-a708-4eb6-ae6a-e32725765842",
+      "name": "Save Branch Info",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data').item.json.source_owner }}"
+            },
+            {
+              "id": "field2",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data').item.json.source_repo }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Parse Jira Data').item.json.new_repo_name }}"
+            },
+            {
+              "id": "field4",
+              "name": "default_branch",
+              "type": "string",
+              "value": "={{ $json.default_branch }}"
+            },
+            {
+              "id": "field5",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Get an issue1').item.json.key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        6000,
+        2288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "1462494f-0527-4373-9327-e64f543be021",
+      "name": "Prepare for Tree",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "new_owner",
+              "type": "string",
+              "value": "={{ $json.owner.login }}"
+            },
+            {
+              "id": "field2",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Save Branch Info').item.json.new_repo_name }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $json.html_url || $json.url }}"
+            },
+            {
+              "id": "field4",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Save Branch Info').item.json.source_owner }}"
+            },
+            {
+              "id": "field5",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Save Branch Info').item.json.source_repo }}"
+            },
+            {
+              "id": "field6",
+              "name": "default_branch",
+              "type": "string",
+              "value": "={{ $('Save Branch Info').item.json.default_branch }}"
+            },
+            {
+              "id": "field7",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Save Branch Info').item.json.jira_key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        6864,
+        2288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "f016c772-d047-4119-bd91-002163af2a00",
+      "name": "Get Source Tree",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $json.source_owner }}/{{ $json.source_repo }}/git/trees/{{ $json.default_branch }}?recursive=1"
+      },
+      "position": [
+        7088,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "e3fd412e-64c7-4183-ae74-6cb248290e38",
+      "name": "Get File Content",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "url": "=https://api.github.com/repos/{{ $('Prepare Loop Data').item.json.source_owner }}/{{ $('Prepare Loop Data').item.json.source_repo }}/git/blobs/{{ $json.sha }}"
+      },
+      "position": [
+        7952,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "5101d369-6c4e-43bb-95f9-97ed33d5bc89",
+      "name": "Parse Jira Data",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "source_url",
+              "type": "string",
+              "value": "={{ $('Get an issue1').item.json.fields.customfield_13513 }}"
+            },
+            {
+              "id": "field2",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Get an issue1').item.json.fields.customfield_13513.split('/')[3] }}"
+            },
+            {
+              "id": "field3",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Get an issue1').item.json.fields.customfield_13513.split('/')[4].replace('.git', '') }}"
+            },
+            {
+              "id": "field4",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Get an issue1').item.json.key }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        5552,
+        2288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "812c2bb4-6dbe-4665-8028-40b78b70e690",
+      "name": "Prepare Loop Data",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "new_owner",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.new_owner }}"
+            },
+            {
+              "id": "field2",
+              "name": "new_repo_name",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.new_repo_name }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.new_repo_url }}"
+            },
+            {
+              "id": "field4",
+              "name": "source_owner",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.source_owner }}"
+            },
+            {
+              "id": "field5",
+              "name": "source_repo",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.source_repo }}"
+            },
+            {
+              "id": "field6",
+              "name": "files",
+              "type": "array",
+              "value": "={{ $json.tree.filter(item => item.type === 'blob' && !item.path.includes('.DS_Store') && !item.path.startsWith('.')) }}"
+            },
+            {
+              "id": "field7",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.jira_key }}"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "position": [
+        7312,
+        2288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "7928b906-6023-409a-a391-518bb79f0829",
+      "name": "Split Out Files",
+      "parameters": {
+        "fieldToSplitOut": "files",
+        "options": {}
+      },
+      "position": [
+        7536,
+        2288
+      ],
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1
+    },
+    {
+      "id": "337ef0c3-5ee8-4919-8f4a-d6fc5151d2fa",
+      "name": "Final Result",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field1",
+              "name": "success",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "field2",
+              "name": "jira_key",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.jira_key }}"
+            },
+            {
+              "id": "field3",
+              "name": "new_repo_url",
+              "type": "string",
+              "value": "={{ $('Prepare for Tree').last().json.new_repo_url }}"
+            },
+            {
+              "id": "field4",
+              "name": "files_copied",
+              "type": "number",
+              "value": "={{ $('Prepare Loop Data').item.json.files.length }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        10432,
+        2288
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "githubApi": {
+          "id": "rtS05OFOF0Kaw568",
+          "name": "GitHub-Service"
+        }
+      },
+      "id": "4b3d4551-74fb-4908-8280-de9b8cbd6f54",
+      "name": "Create Private Repo",
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"name\": \"{{ $json.new_repo_name }}\",\n  \"private\": true,\n  \"auto_init\": true,\n  \"description\": \"Cloned for Jira ticket {{ $json.new_repo_name }}\"\n}",
+        "method": "POST",
+        "nodeCredentialType": "githubApi",
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://api.github.com/orgs/IT-OUT/repos"
+      },
+      "position": [
+        6208,
+        2288
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "3d2ea5e6-7b16-48cb-bc79-01e20e25a178",
+      "name": "Clear Accumulated Data",
+      "parameters": {
+        "jsCode": "// Clear accumulated data at the start of processing\nconst staticData = $getWorkflowStaticData('global');\nstaticData.treeEntries = [];\nreturn $input.all();"
+      },
+      "position": [
+        7536,
+        2112
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
     }
   ],
   "pinData": {
@@ -5750,6 +6794,14 @@
           "webhookUrl": "https://academicpixflow.app.n8n.cloud/webhook/jira_task_test"
         }
       }
+    ],
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {},
+        "pairedItem": {
+          "item": 0
+        }
+      }
     ]
   },
   "settings": {
@@ -5773,6 +6825,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2026-01-28T16:03:13.508Z",
-  "versionId": "a879af47-d336-4ed7-abd3-4167066c8f0b"
+  "updatedAt": "2026-02-13T09:30:35.221Z",
+  "versionId": "94aa5e2d-f851-471d-b498-e2b8701dfeb7"
 }
