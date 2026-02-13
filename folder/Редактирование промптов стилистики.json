@@ -1,0 +1,3690 @@
+{
+  "active": true,
+  "activeVersion": {
+    "authors": "Maxim Bykov",
+    "connections": {
+      "Append row in sheet": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Command Parser": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Switch",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "GamesParser": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Generate Banner Prompt4": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Kie.ai Generate5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Generate Banner Prompt5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Kie.ai Generate6",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "GamesParser",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "PromptParser",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "SegmentChecker",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "SegmentChecker1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet4": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "RenameChecker",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Get row(s) in sheet5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "TestGenParser",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "HTTP Request38": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a photo message",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "HTTP Request39": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a photo message1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Append row in sheet",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send a text message4",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update row in sheet",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send a text message6",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If2": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Update row in sheet1",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send a text message8",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "If3": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Generate Banner Prompt4",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Send a text message9",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Generate Banner Prompt5",
+              "type": "main"
+            },
+            {
+              "index": 0,
+              "node": "Send a text message11",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Send a text message10",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Kie.ai Generate5": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Wait10",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Kie.ai Generate6": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Wait6",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "PromptParser": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "RenameChecker": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If2",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "SegmentChecker": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "SegmentChecker1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If1",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Switch": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet1",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet2",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet3",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet4",
+              "type": "main"
+            }
+          ],
+          [
+            {
+              "index": 0,
+              "node": "Get row(s) in sheet5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Telegram Trigger": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Command Parser",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "TestGenParser": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "If3",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update row in sheet": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message5",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Update row in sheet1": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "Send a text message7",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Wait10": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "HTTP Request38",
+              "type": "main"
+            }
+          ]
+        ]
+      },
+      "Wait6": {
+        "main": [
+          [
+            {
+              "index": 0,
+              "node": "HTTP Request39",
+              "type": "main"
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2026-02-13T13:15:36.587Z",
+    "description": null,
+    "name": null,
+    "nodes": [
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "55cb089d-ce3e-4cbe-83d6-c0e67ad7dafc",
+        "name": "Telegram Trigger",
+        "parameters": {
+          "additionalFields": {},
+          "updates": [
+            "message"
+          ]
+        },
+        "position": [
+          0,
+          16
+        ],
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "webhookId": "5e9f23dc-3b8e-432c-a568-2620b8a4a242"
+      },
+      {
+        "id": "7760bed8-d361-44dc-bb0e-306a990dae3d",
+        "name": "Command Parser",
+        "parameters": {
+          "jsCode": "const text = $input.first().json.message.text.trim();\n\nconst result = {\n  command: null,\n  game: null,\n  content: null,\n  error: null\n};\n\n// Разбиваем по \"|\"\nconst parts = text.split('|').map(p => p.trim());\nconst commandPart = parts[0];\nconst contentPart = parts[1] || null;\n\n// Парсим команду и аргумент\nconst tokens = commandPart.split(/\\s+/);\nconst command = tokens[0]?.toLowerCase();\nconst game = tokens.slice(1).join(' ').toLowerCase() || null; // <-- исправление тут\n\nswitch (command) {\n  case '/games':\n    result.command = 'games';\n    break;\n\n  case '/prompt':\n    if (!game) {\n      result.error = 'Укажите название игры: /prompt dota2';\n    } else {\n      result.command = 'prompt';\n      result.game = game;\n    }\n    break;\n\n  case '/add':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /add название | текст промпта';\n    } else {\n      result.command = 'add';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  case '/edit':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /edit название | новый текст';\n    } else {\n      result.command = 'edit';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  case '/rename':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /rename старое | новое';\n    } else {\n      result.command = 'rename';\n      result.game = game;\n      result.content = contentPart.toLowerCase();\n    }\n    break;\n\n  case '/test':\n    if (!game) {\n      result.error = 'Укажите название игры: /test dota2';\n    } else {\n      result.command = 'test';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  default:\n    result.error = 'Неизвестная команда. Доступно: /games, /prompt, /add, /edit, /rename, /test';\n}\n\nreturn { json: result };"
+        },
+        "position": [
+          160,
+          16
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "534425ed-9581-454c-b0bb-9a41e440ab2c",
+        "name": "Switch",
+        "parameters": {
+          "options": {},
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "a25eb0e6-2f4f-43b8-a3f5-e97dba2288c6",
+                      "leftValue": "={{ $json.error }}",
+                      "operator": {
+                        "operation": "notEmpty",
+                        "singleValue": true,
+                        "type": "string"
+                      },
+                      "rightValue": ""
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "Error",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "9c506461-75c1-4ccf-b80d-adaf99cd671b",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "games"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "games",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "3ea0d988-0b82-458c-98f0-2ade344bb668",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "prompt"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "prompt",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "fafeb025-a98d-4a0b-ad44-07d4c0dc1245",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "add"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "add",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "4728f37c-fbbb-44fb-8d96-a025e7615096",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "edit"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "edit",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "18753c67-4b3b-4983-bdb4-fd421e344a0d",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "rename"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "rename",
+                "renameOutput": true
+              },
+              {
+                "conditions": {
+                  "combinator": "and",
+                  "conditions": [
+                    {
+                      "id": "fe7136a5-5ffe-484c-8888-9b24f6b2e0eb",
+                      "leftValue": "={{ $json.command }}",
+                      "operator": {
+                        "name": "filter.operator.equals",
+                        "operation": "equals",
+                        "type": "string"
+                      },
+                      "rightValue": "test"
+                    }
+                  ],
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  }
+                },
+                "outputKey": "test",
+                "renameOutput": true
+              }
+            ]
+          }
+        },
+        "position": [
+          368,
+          -64
+        ],
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.4
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "5db1a1c1-d4fd-4b5c-9217-aef7dcb70b31",
+        "name": "Send a text message",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.error }}"
+        },
+        "position": [
+          512,
+          -432
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "bbc3aaf1-0aba-4761-90b1-e678328f93c1",
+        "name": "Get row(s) in sheet",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          -336
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "id": "d4b4eae6-0dde-4b60-b8da-98842da32e1f",
+        "name": "GamesParser",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\n\nif (rows.length === 0) {\n  return { json: { text: 'Нет сохранённых сегментов' } };\n}\n\nconst games = rows.map(r => r.json.Сегмент);\nconst text = `Доступные сегменты (${games.length}):\\n\\n` + games.map(g => `• ${g}`).join('\\n');\n\nreturn { json: { text } };"
+        },
+        "position": [
+          832,
+          -336
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "83a8388d-534f-4b9d-a8b0-a1b207d0f06c",
+        "name": "Send a text message1",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          960,
+          -336
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "7d915b7f-b9c8-4829-a97c-01cd75abc33c",
+        "name": "Get row(s) in sheet1",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          -208
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "3e7ff040-5637-4dfa-899a-cc99ff6e1cbf",
+        "name": "Send a text message2",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          960,
+          -208
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "86d9233f-9480-4de9-8876-6fe9cf8f328a",
+        "name": "Get row(s) in sheet2",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          -80
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "id": "ef56d4ce-6d2f-46bc-ac2e-41094c31b2d6",
+        "name": "SegmentChecker",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst content = $('Command Parser').first().json.content;\n\nconst exists = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (exists) {\n  return { json: { success: false, text: `Сегмент \"${game}\" уже существует. Используй /edit для изменения` } };\n}\n\nreturn { json: { success: true, game, content } };"
+        },
+        "position": [
+          832,
+          -80
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "dda98558-b7bd-4f58-927e-37455a2844f6",
+        "name": "PromptParser",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { text: `Сегмент \"${game}\" не найден` } };\n}\n\nconst text = `📌 ${found.json.Сегмент}\\n\\n${found.json.Промпт}`;\n\nreturn { json: { text } };"
+        },
+        "position": [
+          832,
+          -208
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "c0bf20df-287c-4d8a-9c5a-3071badab2e9",
+        "name": "If",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+                "leftValue": "={{ $json.success }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          960,
+          -80
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "32eba9d3-17fe-4876-8ee2-ff4a3cb3d491",
+        "name": "Append row in sheet",
+        "parameters": {
+          "columns": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Сегмент",
+                "id": "Сегмент",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Промпт",
+                "id": "Промпт",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "value": {
+              "Промпт": "={{ $json.content }}",
+              "Сегмент": "={{ $json.game }}"
+            }
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "operation": "append",
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          1232,
+          -448
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "8fc3d41a-5a56-4d42-8942-5e9cc89526d0",
+        "name": "Send a text message3",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "=✓ Сегмент \"{{ $('If').item.json.game }}\" создан"
+        },
+        "position": [
+          1360,
+          -448
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "eea64799-c11d-491f-83ea-91d1d31ed503",
+        "name": "Send a text message4",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          1232,
+          -336
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "044c1795-dc91-4002-83f8-73cb2cc31f40",
+        "name": "Get row(s) in sheet3",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          48
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "id": "a3602df5-8290-4828-89a8-db966f3102b1",
+        "name": "SegmentChecker1",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst content = $('Command Parser').first().json.content;\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { success: false, text: `Сегмент \"${game}\" не найден` } };\n}\n\nreturn { \n  json: { \n    success: true, \n    game,\n    content,\n    row_number: found.json.row_number\n  } \n};"
+        },
+        "position": [
+          832,
+          48
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "33f0ab5a-2eac-4488-85d3-9c4ccf812980",
+        "name": "If1",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+                "leftValue": "={{ $json.success }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          960,
+          48
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "4f7adadc-1d6d-4d8e-ae9e-a0a13a3e91ad",
+        "name": "Send a text message5",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "=✓ Сегмент \"{{ $('If1').item.json.game }}\" обновлён"
+        },
+        "position": [
+          1360,
+          -192
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "50fc8b8b-2282-4b0f-bb0e-cc04ef816999",
+        "name": "Send a text message6",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          1232,
+          -80
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "3bc7c30b-041b-48ee-b3ca-82610048fca6",
+        "name": "Update row in sheet",
+        "parameters": {
+          "columns": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Сегмент"
+            ],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Сегмент",
+                "id": "Сегмент",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Промпт",
+                "id": "Промпт",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "row_number",
+                "id": "row_number",
+                "readOnly": true,
+                "removed": true,
+                "required": false,
+                "type": "number"
+              }
+            ],
+            "value": {
+              "Промпт": "={{ $json.content }}",
+              "Сегмент": "={{ $json.game }}"
+            }
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "operation": "update",
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          1232,
+          -192
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "726de848-e1c0-48ba-ae0d-a6c211d7604f",
+        "name": "Get row(s) in sheet4",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          176
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "id": "719be29e-996e-431e-bc66-57c6e798b977",
+        "name": "RenameChecker",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\nconst oldName = $('Command Parser').first().json.game;\nconst newName = $('Command Parser').first().json.content;\n\nconst oldExists = rows.find(r => r.json.Сегмент.toLowerCase() === oldName);\nconst newExists = rows.find(r => r.json.Сегмент.toLowerCase() === newName);\n\nif (!oldExists) {\n  return { json: { success: false, text: `Сегмент \"${oldName}\" не найден` } };\n}\n\nif (newExists) {\n  return { json: { success: false, text: `Сегмент \"${newName}\" уже занят` } };\n}\n\nreturn { \n  json: { \n    success: true, \n    oldName,\n    newName,\n    row_number: oldExists.json.row_number\n  } \n};"
+        },
+        "position": [
+          832,
+          176
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "id": "073c7f90-da01-45f3-9952-3f10c56b206f",
+        "name": "If2",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+                "leftValue": "={{ $json.success }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          960,
+          176
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "e8ef6fcb-4d07-42da-bf6a-a7b8b7290263",
+        "name": "Send a text message7",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "=✓ \"{{ $('If2').item.json.oldName }}\" → \"{{ $('If2').item.json.newName }}\""
+        },
+        "position": [
+          1360,
+          64
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "13f2d34c-5abf-438e-a6a2-e8cbaac7f8fe",
+        "name": "Send a text message8",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          1232,
+          176
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "259eaf72-0d30-4ec3-bf82-8e63b05be372",
+        "name": "Update row in sheet1",
+        "parameters": {
+          "columns": {
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false,
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "schema": [
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Сегмент",
+                "id": "Сегмент",
+                "removed": false,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "Промпт",
+                "id": "Промпт",
+                "removed": true,
+                "required": false,
+                "type": "string"
+              },
+              {
+                "canBeUsedToMatch": true,
+                "defaultMatch": false,
+                "display": true,
+                "displayName": "row_number",
+                "id": "row_number",
+                "readOnly": true,
+                "removed": false,
+                "required": false,
+                "type": "number"
+              }
+            ],
+            "value": {
+              "row_number": "={{ $json.row_number }}",
+              "Сегмент": "={{ $json.newName }}"
+            }
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "operation": "update",
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          1232,
+          64
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "gngoNLFSKF2sQUSt",
+            "name": "N8NTelegram"
+          }
+        },
+        "id": "38854690-072f-4f61-bb6a-4bb2e7755c5f",
+        "name": "Get row(s) in sheet5",
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+          },
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "cachedResultName": "Style",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+            "mode": "list",
+            "value": "gid=0"
+          }
+        },
+        "position": [
+          704,
+          528
+        ],
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7
+      },
+      {
+        "id": "d881deea-3c48-4705-979a-a0b790bf23c6",
+        "name": "TestGenParser",
+        "parameters": {
+          "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst customInput = $('Command Parser').first().json.content; // может быть null\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { success: false, text: `Сегмент \"${game}\" не найден` } };\n}\n\nreturn { \n  json: { \n    success: true,\n    game,\n    prompt: found.json.Промпт,\n    input: customInput || 'Тестовый запрос' // дефолтный если не указан\n  } \n};"
+        },
+        "position": [
+          832,
+          528
+        ],
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "78d3109f-401b-4f93-a42b-673b3a2bd3d8",
+        "name": "Send a text message9",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "=Тестовая генерация иконки по сегменту {{ $json.game }} запущена"
+        },
+        "position": [
+          1232,
+          400
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "id": "5f516f9a-c24d-4381-a45d-54bb2f4ce250",
+        "name": "HTTP Request38",
+        "parameters": {
+          "options": {},
+          "url": "={{ $json.body.data.resultJson.slice(16,-3) }}"
+        },
+        "position": [
+          1568,
+          512
+        ],
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "kpb4KMG2LrUgiQZB",
+            "name": "Gemini Ilya Owner"
+          }
+        },
+        "id": "30b5a13d-d8e6-4f69-839c-8da18dc78b47",
+        "name": "Generate Banner Prompt4",
+        "parameters": {
+          "authentication": "predefinedCredentialType",
+          "jsonBody": "={\n  \"contents\": [{\"parts\": [\n    {\n      \"text\": \"Create a detailed prompt for generating a banner/preview card image for: {{ $json.game }}. Style: {{ JSON.stringify($json.prompt).slice(1,-1) }}. Style: colorful game art, suitable for a content card. The image MUST feature the title 'Mod Name' as large stylized text (not an icon or symbol logo, just the name written in a decorative font with effects like glow, outline or shadow) - this is the MAIN element of the composition. Characters are OPTIONAL - they can frame the title text but are not required. Prompt is for a branded title banner with a prominent stylized text name, not just for characters! Describe background, composition, additional design elements to make a stunning, attractive composition. Return ONLY the image generation prompt, no explanation. No UI or small text elements on image.\"\n    }\n  ]}],\n  \"generationConfig\": { \"temperature\": 0.7 },\n  \"tools\": [{ \"google_search\": {} }]\n}",
+          "method": "POST",
+          "nodeCredentialType": "googlePalmApi",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "json"
+              }
+            }
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+        },
+        "position": [
+          1232,
+          512
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "206c8e39-9d4f-4974-870a-91391dcd9085",
+        "maxTries": 2,
+        "name": "Kie.ai Generate5",
+        "parameters": {
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Authorization",
+                "value": "Bearer c46e7788e69c738aa3fc665a363aa4e9"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "jsonBody": "={\n  \"model\": \"nano-banana-pro\",\n  \"callBackUrl\": \"{{ $execution.resumeUrl }}\",\n  \"input\": {\n    \"prompt\": \"{{ $json.candidates[0].content.parts[0].text.replace(/[\\r\\n]+/g, ' ').replace(/[^a-zA-Z0-9а-яА-ЯёЁ\\s.,!?-]/g, '').trim() }}\",\n    \"output_format\": \"png\",\n    \"aspect_ratio\": \"1:1\"\n  }\n}",
+          "method": "POST",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "json"
+              }
+            },
+            "timeout": 180000
+          },
+          "sendBody": true,
+          "sendHeaders": true,
+          "specifyBody": "json",
+          "url": "https://api.kie.ai/api/v1/jobs/createTask"
+        },
+        "position": [
+          1344,
+          512
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "ea91bfb8-b05c-4cc1-bd3c-ae1c26dc18d7",
+        "name": "Wait10",
+        "parameters": {
+          "httpMethod": "POST",
+          "limitWaitTime": true,
+          "options": {},
+          "resume": "webhook",
+          "resumeAmount": 10,
+          "resumeUnit": "minutes"
+        },
+        "position": [
+          1456,
+          512
+        ],
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "webhookId": "3e98e665-87a9-4e7b-8da6-3e0ba276b7d5"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "5a00299f-36c3-4b69-9be6-45469a374f83",
+        "name": "Send a photo message",
+        "parameters": {
+          "additionalFields": {
+            "caption": "=Тестовая генерация иконки по сегменту {{ $('TestGenParser').item.json.game }}"
+          },
+          "binaryData": true,
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "operation": "sendPhoto"
+        },
+        "position": [
+          1696,
+          512
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "id": "0c34d67c-753c-451f-9e60-e96ac1909296",
+        "name": "If3",
+        "parameters": {
+          "conditions": {
+            "combinator": "and",
+            "conditions": [
+              {
+                "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+                "leftValue": "={{ $json.success }}",
+                "operator": {
+                  "operation": "equals",
+                  "type": "boolean"
+                },
+                "rightValue": true
+              }
+            ],
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            }
+          },
+          "options": {}
+        },
+        "position": [
+          960,
+          528
+        ],
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "ec9b4fca-941a-4295-b325-d6f65edf0998",
+        "name": "Send a text message10",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "={{ $json.text }}"
+        },
+        "position": [
+          1232,
+          928
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "id": "e2857b60-9011-41c5-a28f-8d137f570679",
+        "name": "Wait6",
+        "parameters": {
+          "httpMethod": "POST",
+          "limitWaitTime": true,
+          "options": {},
+          "resume": "webhook",
+          "resumeAmount": 10,
+          "resumeUnit": "minutes"
+        },
+        "position": [
+          1456,
+          768
+        ],
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "webhookId": "3e98e665-87a9-4e7b-8da6-3e0ba276b7d5"
+      },
+      {
+        "credentials": {
+          "googlePalmApi": {
+            "id": "kpb4KMG2LrUgiQZB",
+            "name": "Gemini Ilya Owner"
+          }
+        },
+        "id": "83d20170-09ec-40c4-bba0-b1ca6b5b42cc",
+        "name": "Generate Banner Prompt5",
+        "parameters": {
+          "authentication": "predefinedCredentialType",
+          "jsonBody": "={\n  \"contents\": [{\"parts\": [\n    {\n      \"text\": \"Create a detailed prompt for generating a character/hero art image for: {{ $json.game }}. Style: {{ JSON.stringify($json.prompt).slice(1,-1) }}. (Отсюда нужно только название игры/приложения). Style: colorful game character art, full body, on a simple solid color background. The background should be easy to remove. NO TEXT, NO UI ELEMENTS. Return ONLY the image generation prompt, no explanation.\"\n    }\n  ]}],\n  \"generationConfig\": { \"temperature\": 0.7 },\n  \"tools\": [{ \"google_search\": {} }]\n}",
+          "method": "POST",
+          "nodeCredentialType": "googlePalmApi",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "json"
+              }
+            }
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+        },
+        "position": [
+          1232,
+          768
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "id": "ee49c183-4285-400c-ac7f-b5eae1c119a5",
+        "name": "HTTP Request39",
+        "parameters": {
+          "options": {},
+          "url": "={{ $json.body.data.resultJson.slice(16,-3) }}"
+        },
+        "position": [
+          1568,
+          768
+        ],
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3
+      },
+      {
+        "id": "e925e021-1950-4a7f-b053-072092b487ef",
+        "maxTries": 2,
+        "name": "Kie.ai Generate6",
+        "parameters": {
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Authorization",
+                "value": "Bearer c46e7788e69c738aa3fc665a363aa4e9"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "jsonBody": "={\n  \"model\": \"nano-banana-pro\",\n  \"callBackUrl\": \"{{ $execution.resumeUrl }}\",\n  \"input\": {\n    \"prompt\": \"{{ $json.candidates[0].content.parts[0].text.replace(/[\\r\\n]+/g, ' ').replace(/[^a-zA-Z0-9а-яА-ЯёЁ\\s.,!?-]/g, '').trim() }}\",\n    \"output_format\": \"png\",\n    \"aspect_ratio\": \"2:3\"\n  }\n}",
+          "method": "POST",
+          "options": {
+            "response": {
+              "response": {
+                "responseFormat": "json"
+              }
+            },
+            "timeout": 180000
+          },
+          "sendBody": true,
+          "sendHeaders": true,
+          "specifyBody": "json",
+          "url": "https://api.kie.ai/api/v1/jobs/createTask"
+        },
+        "position": [
+          1344,
+          768
+        ],
+        "retryOnFail": true,
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "60324781-d0e8-4d57-a169-b31676220a48",
+        "name": "Send a photo message1",
+        "parameters": {
+          "additionalFields": {
+            "caption": "=Тестовая генерация персонажа по сегменту {{ $('TestGenParser').item.json.game }}. Фон в идеале должен получиться монотонным."
+          },
+          "binaryData": true,
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "operation": "sendPhoto"
+        },
+        "position": [
+          1696,
+          768
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      },
+      {
+        "credentials": {
+          "telegramApi": {
+            "id": "afwOAvvYiW1QkVMv",
+            "name": "@style_prompt_edit_bot"
+          }
+        },
+        "id": "9cf73406-018b-47e7-b853-803d0243ff86",
+        "name": "Send a text message11",
+        "parameters": {
+          "additionalFields": {
+            "appendAttribution": false
+          },
+          "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+          "text": "=Тестовая генерация персонажа по сегменту {{ $json.game }} запущена"
+        },
+        "position": [
+          1232,
+          640
+        ],
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+      }
+    ],
+    "updatedAt": "2026-02-13T13:15:36.587Z",
+    "versionId": "a32585e8-9221-4a52-bab5-8160de7d2881",
+    "workflowId": "Aki4UhBdsC7pUR4l"
+  },
+  "activeVersionId": "a32585e8-9221-4a52-bab5-8160de7d2881",
+  "connections": {
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Command Parser": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Switch",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "GamesParser": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generate Banner Prompt4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Kie.ai Generate5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Generate Banner Prompt5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Kie.ai Generate6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "GamesParser",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "PromptParser",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "SegmentChecker",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "SegmentChecker1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet4": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "RenameChecker",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "TestGenParser",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request38": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a photo message",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HTTP Request39": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a photo message1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Append row in sheet",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message4",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update row in sheet",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update row in sheet1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message8",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Generate Banner Prompt4",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message9",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Generate Banner Prompt5",
+            "type": "main"
+          },
+          {
+            "index": 0,
+            "node": "Send a text message11",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send a text message10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kie.ai Generate5": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait10",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Kie.ai Generate6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Wait6",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "PromptParser": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "RenameChecker": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If2",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "SegmentChecker": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "SegmentChecker1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If1",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet1",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet2",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet3",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet4",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Get row(s) in sheet5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Command Parser",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "TestGenParser": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If3",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message5",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update row in sheet1": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send a text message7",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait10": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request38",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Wait6": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "HTTP Request39",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-02-13T11:41:01.794Z",
+  "id": "Aki4UhBdsC7pUR4l",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Редактирование промптов стилистики",
+  "nodes": [
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "55cb089d-ce3e-4cbe-83d6-c0e67ad7dafc",
+      "name": "Telegram Trigger",
+      "parameters": {
+        "additionalFields": {},
+        "updates": [
+          "message"
+        ]
+      },
+      "position": [
+        0,
+        16
+      ],
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "webhookId": "5e9f23dc-3b8e-432c-a568-2620b8a4a242"
+    },
+    {
+      "id": "7760bed8-d361-44dc-bb0e-306a990dae3d",
+      "name": "Command Parser",
+      "parameters": {
+        "jsCode": "const text = $input.first().json.message.text.trim();\n\nconst result = {\n  command: null,\n  game: null,\n  content: null,\n  error: null\n};\n\n// Разбиваем по \"|\"\nconst parts = text.split('|').map(p => p.trim());\nconst commandPart = parts[0];\nconst contentPart = parts[1] || null;\n\n// Парсим команду и аргумент\nconst tokens = commandPart.split(/\\s+/);\nconst command = tokens[0]?.toLowerCase();\nconst game = tokens.slice(1).join(' ').toLowerCase() || null; // <-- исправление тут\n\nswitch (command) {\n  case '/games':\n    result.command = 'games';\n    break;\n\n  case '/prompt':\n    if (!game) {\n      result.error = 'Укажите название игры: /prompt dota2';\n    } else {\n      result.command = 'prompt';\n      result.game = game;\n    }\n    break;\n\n  case '/add':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /add название | текст промпта';\n    } else {\n      result.command = 'add';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  case '/edit':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /edit название | новый текст';\n    } else {\n      result.command = 'edit';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  case '/rename':\n    if (!game || !contentPart) {\n      result.error = 'Формат: /rename старое | новое';\n    } else {\n      result.command = 'rename';\n      result.game = game;\n      result.content = contentPart.toLowerCase();\n    }\n    break;\n\n  case '/test':\n    if (!game) {\n      result.error = 'Укажите название игры: /test dota2';\n    } else {\n      result.command = 'test';\n      result.game = game;\n      result.content = contentPart;\n    }\n    break;\n\n  default:\n    result.error = 'Неизвестная команда. Доступно: /games, /prompt, /add, /edit, /rename, /test';\n}\n\nreturn { json: result };"
+      },
+      "position": [
+        160,
+        16
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "534425ed-9581-454c-b0bb-9a41e440ab2c",
+      "name": "Switch",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "a25eb0e6-2f4f-43b8-a3f5-e97dba2288c6",
+                    "leftValue": "={{ $json.error }}",
+                    "operator": {
+                      "operation": "notEmpty",
+                      "singleValue": true,
+                      "type": "string"
+                    },
+                    "rightValue": ""
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "Error",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "9c506461-75c1-4ccf-b80d-adaf99cd671b",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "games"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "games",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "3ea0d988-0b82-458c-98f0-2ade344bb668",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "prompt"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "prompt",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "fafeb025-a98d-4a0b-ad44-07d4c0dc1245",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "add"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "add",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4728f37c-fbbb-44fb-8d96-a025e7615096",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "edit"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "edit",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "18753c67-4b3b-4983-bdb4-fd421e344a0d",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "rename"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "rename",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "fe7136a5-5ffe-484c-8888-9b24f6b2e0eb",
+                    "leftValue": "={{ $json.command }}",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "test"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                }
+              },
+              "outputKey": "test",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        368,
+        -64
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "5db1a1c1-d4fd-4b5c-9217-aef7dcb70b31",
+      "name": "Send a text message",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.error }}"
+      },
+      "position": [
+        512,
+        -432
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "bbc3aaf1-0aba-4761-90b1-e678328f93c1",
+      "name": "Get row(s) in sheet",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        -336
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "d4b4eae6-0dde-4b60-b8da-98842da32e1f",
+      "name": "GamesParser",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\nif (rows.length === 0) {\n  return { json: { text: 'Нет сохранённых сегментов' } };\n}\n\nconst games = rows.map(r => r.json.Сегмент);\nconst text = `Доступные сегменты (${games.length}):\\n\\n` + games.map(g => `• ${g}`).join('\\n');\n\nreturn { json: { text } };"
+      },
+      "position": [
+        832,
+        -336
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "83a8388d-534f-4b9d-a8b0-a1b207d0f06c",
+      "name": "Send a text message1",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        960,
+        -336
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "7d915b7f-b9c8-4829-a97c-01cd75abc33c",
+      "name": "Get row(s) in sheet1",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        -208
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "3e7ff040-5637-4dfa-899a-cc99ff6e1cbf",
+      "name": "Send a text message2",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        960,
+        -208
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "86d9233f-9480-4de9-8876-6fe9cf8f328a",
+      "name": "Get row(s) in sheet2",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        -80
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "ef56d4ce-6d2f-46bc-ac2e-41094c31b2d6",
+      "name": "SegmentChecker",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst content = $('Command Parser').first().json.content;\n\nconst exists = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (exists) {\n  return { json: { success: false, text: `Сегмент \"${game}\" уже существует. Используй /edit для изменения` } };\n}\n\nreturn { json: { success: true, game, content } };"
+      },
+      "position": [
+        832,
+        -80
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "dda98558-b7bd-4f58-927e-37455a2844f6",
+      "name": "PromptParser",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { text: `Сегмент \"${game}\" не найден` } };\n}\n\nconst text = `📌 ${found.json.Сегмент}\\n\\n${found.json.Промпт}`;\n\nreturn { json: { text } };"
+      },
+      "position": [
+        832,
+        -208
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "c0bf20df-287c-4d8a-9c5a-3071badab2e9",
+      "name": "If",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+              "leftValue": "={{ $json.success }}",
+              "operator": {
+                "operation": "equals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        960,
+        -80
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "32eba9d3-17fe-4876-8ee2-ff4a3cb3d491",
+      "name": "Append row in sheet",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Сегмент",
+              "id": "Сегмент",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Промпт",
+              "id": "Промпт",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "value": {
+            "Промпт": "={{ $json.content }}",
+            "Сегмент": "={{ $json.game }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "operation": "append",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        1232,
+        -448
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "8fc3d41a-5a56-4d42-8942-5e9cc89526d0",
+      "name": "Send a text message3",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "=✓ Сегмент \"{{ $('If').item.json.game }}\" создан"
+      },
+      "position": [
+        1360,
+        -448
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "eea64799-c11d-491f-83ea-91d1d31ed503",
+      "name": "Send a text message4",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        1232,
+        -336
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "044c1795-dc91-4002-83f8-73cb2cc31f40",
+      "name": "Get row(s) in sheet3",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        48
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "a3602df5-8290-4828-89a8-db966f3102b1",
+      "name": "SegmentChecker1",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst content = $('Command Parser').first().json.content;\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { success: false, text: `Сегмент \"${game}\" не найден` } };\n}\n\nreturn { \n  json: { \n    success: true, \n    game,\n    content,\n    row_number: found.json.row_number\n  } \n};"
+      },
+      "position": [
+        832,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "33f0ab5a-2eac-4488-85d3-9c4ccf812980",
+      "name": "If1",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+              "leftValue": "={{ $json.success }}",
+              "operator": {
+                "operation": "equals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        960,
+        48
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "4f7adadc-1d6d-4d8e-ae9e-a0a13a3e91ad",
+      "name": "Send a text message5",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "=✓ Сегмент \"{{ $('If1').item.json.game }}\" обновлён"
+      },
+      "position": [
+        1360,
+        -192
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "50fc8b8b-2282-4b0f-bb0e-cc04ef816999",
+      "name": "Send a text message6",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        1232,
+        -80
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "3bc7c30b-041b-48ee-b3ca-82610048fca6",
+      "name": "Update row in sheet",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "Сегмент"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Сегмент",
+              "id": "Сегмент",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Промпт",
+              "id": "Промпт",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "row_number",
+              "id": "row_number",
+              "readOnly": true,
+              "removed": true,
+              "required": false,
+              "type": "number"
+            }
+          ],
+          "value": {
+            "Промпт": "={{ $json.content }}",
+            "Сегмент": "={{ $json.game }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "operation": "update",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        1232,
+        -192
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "726de848-e1c0-48ba-ae0d-a6c211d7604f",
+      "name": "Get row(s) in sheet4",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        176
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "719be29e-996e-431e-bc66-57c6e798b977",
+      "name": "RenameChecker",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\nconst oldName = $('Command Parser').first().json.game;\nconst newName = $('Command Parser').first().json.content;\n\nconst oldExists = rows.find(r => r.json.Сегмент.toLowerCase() === oldName);\nconst newExists = rows.find(r => r.json.Сегмент.toLowerCase() === newName);\n\nif (!oldExists) {\n  return { json: { success: false, text: `Сегмент \"${oldName}\" не найден` } };\n}\n\nif (newExists) {\n  return { json: { success: false, text: `Сегмент \"${newName}\" уже занят` } };\n}\n\nreturn { \n  json: { \n    success: true, \n    oldName,\n    newName,\n    row_number: oldExists.json.row_number\n  } \n};"
+      },
+      "position": [
+        832,
+        176
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "073c7f90-da01-45f3-9952-3f10c56b206f",
+      "name": "If2",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+              "leftValue": "={{ $json.success }}",
+              "operator": {
+                "operation": "equals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        960,
+        176
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "e8ef6fcb-4d07-42da-bf6a-a7b8b7290263",
+      "name": "Send a text message7",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "=✓ \"{{ $('If2').item.json.oldName }}\" → \"{{ $('If2').item.json.newName }}\""
+      },
+      "position": [
+        1360,
+        64
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "13f2d34c-5abf-438e-a6a2-e8cbaac7f8fe",
+      "name": "Send a text message8",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        1232,
+        176
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "259eaf72-0d30-4ec3-bf82-8e63b05be372",
+      "name": "Update row in sheet1",
+      "parameters": {
+        "columns": {
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false,
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Сегмент",
+              "id": "Сегмент",
+              "removed": false,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "Промпт",
+              "id": "Промпт",
+              "removed": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "canBeUsedToMatch": true,
+              "defaultMatch": false,
+              "display": true,
+              "displayName": "row_number",
+              "id": "row_number",
+              "readOnly": true,
+              "removed": false,
+              "required": false,
+              "type": "number"
+            }
+          ],
+          "value": {
+            "row_number": "={{ $json.row_number }}",
+            "Сегмент": "={{ $json.newName }}"
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "operation": "update",
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        1232,
+        64
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "gngoNLFSKF2sQUSt",
+          "name": "N8NTelegram"
+        }
+      },
+      "id": "38854690-072f-4f61-bb6a-4bb2e7755c5f",
+      "name": "Get row(s) in sheet5",
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit?usp=sharing"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "cachedResultName": "Style",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1K4l1PsNOfmS-iKQRA66t6fFn0vrsNbSLvGVkbF7z210/edit#gid=0",
+          "mode": "list",
+          "value": "gid=0"
+        }
+      },
+      "position": [
+        704,
+        528
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7
+    },
+    {
+      "id": "d881deea-3c48-4705-979a-a0b790bf23c6",
+      "name": "TestGenParser",
+      "parameters": {
+        "jsCode": "const rows = $input.all();\nconst game = $('Command Parser').first().json.game;\nconst customInput = $('Command Parser').first().json.content; // может быть null\n\nconst found = rows.find(r => r.json.Сегмент.toLowerCase() === game);\n\nif (!found) {\n  return { json: { success: false, text: `Сегмент \"${game}\" не найден` } };\n}\n\nreturn { \n  json: { \n    success: true,\n    game,\n    prompt: found.json.Промпт,\n    input: customInput || 'Тестовый запрос' // дефолтный если не указан\n  } \n};"
+      },
+      "position": [
+        832,
+        528
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "78d3109f-401b-4f93-a42b-673b3a2bd3d8",
+      "name": "Send a text message9",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "=Тестовая генерация иконки по сегменту {{ $json.game }} запущена"
+      },
+      "position": [
+        1232,
+        400
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "id": "5f516f9a-c24d-4381-a45d-54bb2f4ce250",
+      "name": "HTTP Request38",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.body.data.resultJson.slice(16,-3) }}"
+      },
+      "position": [
+        1568,
+        512
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "30b5a13d-d8e6-4f69-839c-8da18dc78b47",
+      "name": "Generate Banner Prompt4",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"contents\": [{\"parts\": [\n    {\n      \"text\": \"Create a detailed prompt for generating a banner/preview card image for: {{ $json.game }}. Style: {{ JSON.stringify($json.prompt).slice(1,-1) }}. Style: colorful game art, suitable for a content card. The image MUST feature the title 'Mod Name' as large stylized text (not an icon or symbol logo, just the name written in a decorative font with effects like glow, outline or shadow) - this is the MAIN element of the composition. Characters are OPTIONAL - they can frame the title text but are not required. Prompt is for a branded title banner with a prominent stylized text name, not just for characters! Describe background, composition, additional design elements to make a stunning, attractive composition. Return ONLY the image generation prompt, no explanation. No UI or small text elements on image.\"\n    }\n  ]}],\n  \"generationConfig\": { \"temperature\": 0.7 },\n  \"tools\": [{ \"google_search\": {} }]\n}",
+        "method": "POST",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+      },
+      "position": [
+        1232,
+        512
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "206c8e39-9d4f-4974-870a-91391dcd9085",
+      "maxTries": 2,
+      "name": "Kie.ai Generate5",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer c46e7788e69c738aa3fc665a363aa4e9"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model\": \"nano-banana-pro\",\n  \"callBackUrl\": \"{{ $execution.resumeUrl }}\",\n  \"input\": {\n    \"prompt\": \"{{ $json.candidates[0].content.parts[0].text.replace(/[\\r\\n]+/g, ' ').replace(/[^a-zA-Z0-9а-яА-ЯёЁ\\s.,!?-]/g, '').trim() }}\",\n    \"output_format\": \"png\",\n    \"aspect_ratio\": \"1:1\"\n  }\n}",
+        "method": "POST",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 180000
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask"
+      },
+      "position": [
+        1344,
+        512
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ea91bfb8-b05c-4cc1-bd3c-ae1c26dc18d7",
+      "name": "Wait10",
+      "parameters": {
+        "httpMethod": "POST",
+        "limitWaitTime": true,
+        "options": {},
+        "resume": "webhook",
+        "resumeAmount": 10,
+        "resumeUnit": "minutes"
+      },
+      "position": [
+        1456,
+        512
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "3e98e665-87a9-4e7b-8da6-3e0ba276b7d5"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "5a00299f-36c3-4b69-9be6-45469a374f83",
+      "name": "Send a photo message",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=Тестовая генерация иконки по сегменту {{ $('TestGenParser').item.json.game }}"
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "operation": "sendPhoto"
+      },
+      "position": [
+        1696,
+        512
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "id": "0c34d67c-753c-451f-9e60-e96ac1909296",
+      "name": "If3",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "9caeef9d-a721-4133-a7f3-88f4a02c75a9",
+              "leftValue": "={{ $json.success }}",
+              "operator": {
+                "operation": "equals",
+                "type": "boolean"
+              },
+              "rightValue": true
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        960,
+        528
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "ec9b4fca-941a-4295-b325-d6f65edf0998",
+      "name": "Send a text message10",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "={{ $json.text }}"
+      },
+      "position": [
+        1232,
+        928
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "id": "e2857b60-9011-41c5-a28f-8d137f570679",
+      "name": "Wait6",
+      "parameters": {
+        "httpMethod": "POST",
+        "limitWaitTime": true,
+        "options": {},
+        "resume": "webhook",
+        "resumeAmount": 10,
+        "resumeUnit": "minutes"
+      },
+      "position": [
+        1456,
+        768
+      ],
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "webhookId": "3e98e665-87a9-4e7b-8da6-3e0ba276b7d5"
+    },
+    {
+      "credentials": {
+        "googlePalmApi": {
+          "id": "kpb4KMG2LrUgiQZB",
+          "name": "Gemini Ilya Owner"
+        }
+      },
+      "id": "83d20170-09ec-40c4-bba0-b1ca6b5b42cc",
+      "name": "Generate Banner Prompt5",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "jsonBody": "={\n  \"contents\": [{\"parts\": [\n    {\n      \"text\": \"Create a detailed prompt for generating a character/hero art image for: {{ $json.game }}. Style: {{ JSON.stringify($json.prompt).slice(1,-1) }}. (Отсюда нужно только название игры/приложения). Style: colorful game character art, full body, on a simple solid color background. The background should be easy to remove. NO TEXT, NO UI ELEMENTS. Return ONLY the image generation prompt, no explanation.\"\n    }\n  ]}],\n  \"generationConfig\": { \"temperature\": 0.7 },\n  \"tools\": [{ \"google_search\": {} }]\n}",
+        "method": "POST",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent"
+      },
+      "position": [
+        1232,
+        768
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "ee49c183-4285-400c-ac7f-b5eae1c119a5",
+      "name": "HTTP Request39",
+      "parameters": {
+        "options": {},
+        "url": "={{ $json.body.data.resultJson.slice(16,-3) }}"
+      },
+      "position": [
+        1568,
+        768
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3
+    },
+    {
+      "id": "e925e021-1950-4a7f-b053-072092b487ef",
+      "maxTries": 2,
+      "name": "Kie.ai Generate6",
+      "parameters": {
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer c46e7788e69c738aa3fc665a363aa4e9"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "jsonBody": "={\n  \"model\": \"nano-banana-pro\",\n  \"callBackUrl\": \"{{ $execution.resumeUrl }}\",\n  \"input\": {\n    \"prompt\": \"{{ $json.candidates[0].content.parts[0].text.replace(/[\\r\\n]+/g, ' ').replace(/[^a-zA-Z0-9а-яА-ЯёЁ\\s.,!?-]/g, '').trim() }}\",\n    \"output_format\": \"png\",\n    \"aspect_ratio\": \"2:3\"\n  }\n}",
+        "method": "POST",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          },
+          "timeout": 180000
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask"
+      },
+      "position": [
+        1344,
+        768
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "60324781-d0e8-4d57-a169-b31676220a48",
+      "name": "Send a photo message1",
+      "parameters": {
+        "additionalFields": {
+          "caption": "=Тестовая генерация персонажа по сегменту {{ $('TestGenParser').item.json.game }}. Фон в идеале должен получиться монотонным."
+        },
+        "binaryData": true,
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "operation": "sendPhoto"
+      },
+      "position": [
+        1696,
+        768
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    },
+    {
+      "credentials": {
+        "telegramApi": {
+          "id": "afwOAvvYiW1QkVMv",
+          "name": "@style_prompt_edit_bot"
+        }
+      },
+      "id": "9cf73406-018b-47e7-b853-803d0243ff86",
+      "name": "Send a text message11",
+      "parameters": {
+        "additionalFields": {
+          "appendAttribution": false
+        },
+        "chatId": "={{ $('Telegram Trigger').first().json.message.chat.id }}",
+        "text": "=Тестовая генерация персонажа по сегменту {{ $json.game }} запущена"
+      },
+      "position": [
+        1232,
+        640
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "webhookId": "e961e006-525b-482f-a103-41fff65d23e4"
+    }
+  ],
+  "pinData": {
+    "Telegram Trigger": [
+      {
+        "json": {
+          "message": {
+            "chat": {
+              "first_name": ".",
+              "id": 1381288093,
+              "type": "private",
+              "username": "waynevill"
+            },
+            "date": 1770987289,
+            "entities": [
+              {
+                "length": 5,
+                "offset": 0,
+                "type": "bot_command"
+              }
+            ],
+            "from": {
+              "first_name": ".",
+              "id": 1381288093,
+              "is_bot": false,
+              "language_code": "ru",
+              "username": "waynevill"
+            },
+            "message_id": 24,
+            "text": "/test gacha"
+          },
+          "update_id": 654662254
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2026-02-13T11:41:01.797Z",
+      "projectId": "etE7eo3TEFjYCdjX",
+      "role": "workflow:owner",
+      "updatedAt": "2026-02-13T11:41:01.797Z",
+      "workflowId": "Aki4UhBdsC7pUR4l"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-02-13T13:15:36.585Z",
+  "versionId": "a32585e8-9221-4a52-bab5-8160de7d2881"
+}
