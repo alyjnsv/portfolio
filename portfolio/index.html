@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Алий Джансуев — AI Architect & Automation Engineer</title>
+  <meta name="description"
+    content="Портфолио Алия Джансуева — AI Architect & Automation Engineer. Специалист по LLM, RAG-системам, n8n автоматизации и production AI решениям." />
+  <meta property="og:title" content="Алий Джансуев — AI Architect" />
+  <meta property="og:description" content="Production AI решения: RAG, n8n автоматизация, LLM интеграции" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <canvas id="globalSymbolsCanvas" class="global-symbols-canvas"></canvas>
+
+  <!-- ─── CURSOR GLOW ─── -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ─── NOISE OVERLAY ─── -->
+  <div class="noise-overlay"></div>
+
+  <!-- ─── HEADER ─── -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">AJ</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">О себе</a></li>
+        <li><a href="#stack" class="nav-link">Стек</a></li>
+        <li><a href="#projects" class="nav-link">Проекты</a></li>
+        <li><a href="#llm" class="nav-link">LLM</a></li>
+        <li><a href="#contact" class="nav-link">Контакты</a></li>
+      </ul>
+      <a href="https://github.com/alyjnsv" class="btn-primary" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+        </svg>
+        GitHub
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="about">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Доступен для проектов
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Алий Джансуев</span>
+        <span class="title-accent">AI Architect</span>
+        <span class="title-sub">&amp; Automation Engineer</span>
+      </h1>
+      <p class="hero-description">
+        Проектирую и разрабатываю <strong>production-ready AI системы</strong> —
+        от RAG-архитектур до многоагентных пайплайнов на n8n.
+        Специализируюсь на интеграции LLM в реальные бизнес-процессы.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-target="34+">0</div>
+          <div class="stat-label">Production проекта</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="300">0</div>
+          <div class="stat-label">+ сервисов в n8n</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-suffix="%">97</div>
+          <div class="stat-label">экономия хранилища (LEANN)</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-suffix="%">56</div>
+          <div class="stat-label">сокращение рутины</div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary btn-large">
+          Смотреть проекты
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn-ghost btn-large">Связаться</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── TECH STACK ─── -->
+  <section class="section stack-section" id="stack">
+    <canvas id="symbolsCanvas" class="symbols-canvas"></canvas>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">/ Технологии</div>
+        <h2 class="section-title">Стек</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- AI / LLM Block -->
+        <div class="bento-item bento-item-large bento-item-ai">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h3 class="bento-title">AI / LLM</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill tech-pill-primary">GPT-4o</div>
+            <div class="tech-pill">Claude 3.5</div>
+            <div class="tech-pill">Gemini 2.5</div>
+            <div class="tech-pill">LLaMA</div>
+            <div class="tech-pill">Mistral</div>
+            <div class="tech-pill">Qwen</div>
+          </div>
+        </div>
+
+        <!-- Frameworks Block -->
+        <div class="bento-item bento-item-medium">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Фреймворки</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill tech-pill-primary">n8n</div>
+            <div class="tech-pill">LangChain</div>
+            <div class="tech-pill">Hugging Face</div>
+            <div class="tech-pill">ComfyUI</div>
+            <div class="tech-pill">LEANN</div>
+          </div>
+        </div>
+
+        <!-- Tools Block -->
+        <div class="bento-item bento-item-medium">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Инструменты</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill tech-pill-primary">Python</div>
+            <div class="tech-pill">Docker</div>
+            <div class="tech-pill">FastAPI</div>
+            <div class="tech-pill">YAML / JSON</div>
+            <div class="tech-pill">CLI</div>
+          </div>
+        </div>
+
+        <!-- Vision Block -->
+        <div class="bento-item bento-item-small">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Vision</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill">GPT-4 Vision</div>
+            <div class="tech-pill">Gemini Vision</div>
+            <div class="tech-pill">Whisper</div>
+          </div>
+        </div>
+
+        <!-- Audio Block -->
+        <div class="bento-item bento-item-small">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Audio</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill">ElevenLabs</div>
+            <div class="tech-pill">Whisper</div>
+          </div>
+        </div>
+
+        <!-- Platforms Block -->
+        <div class="bento-item bento-item-wide">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Платформы</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill tech-pill-primary">GitHub</div>
+            <div class="tech-pill">App Store</div>
+            <div class="tech-pill">Google Workspace</div>
+            <div class="tech-pill">OAuth 2.0</div>
+            <div class="tech-pill">REST APIs</div>
+            <div class="tech-pill">Webhooks</div>
+          </div>
+        </div>
+
+        <!-- Embeddings Block -->
+        <div class="bento-item bento-item-small">
+          <div class="bento-header">
+            <div class="bento-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19 4v16H5V4h14m0-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+              </svg>
+            </div>
+            <h3 class="bento-title">Embeddings</h3>
+          </div>
+          <div class="bento-content">
+            <div class="tech-pill">text-embedding-3</div>
+            <div class="tech-pill">Contriever</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">/ Проекты</div>
+        <h2 class="section-title">Ключевые проекты</h2>
+        <p class="section-caption">Production-системы с n8n воркфлоу</p>
+      </div>
+
+      <div class="projects-grid-modern">
+
+        <!-- Project 1: Enterprise RAG -->
+        <article class="project-card-modern project-card-featured-modern" data-project="rag">
+          <div class="project-visual">
+            <div class="project-pattern"></div>
+            <div class="project-number-large">01</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-modern">
+              <span class="tag-modern tag-accent">RAG</span>
+              <span class="tag-modern">LEANN</span>
+            </div>
+            <h3 class="project-title-modern">Enterprise RAG с LEANN</h3>
+            <p class="project-desc-modern">Масштабируемая система семантического поиска по внутренней документации с минимальными инфраструктурными затратами.</p>
+            <div class="project-tech-modern">
+              <span class="tech-dot"></span>
+              <span>Python</span>
+              <span class="tech-dot"></span>
+              <span>LangChain</span>
+              <span class="tech-dot"></span>
+              <span>OpenAI Embeddings</span>
+              <span class="tech-dot"></span>
+              <span>Docker</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-item">
+                <div class="metric-value">&lt; 2 сек</div>
+                <div class="metric-label">время отклика</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">97%</div>
+                <div class="metric-label">экономия</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">локально</div>
+              </div>
+            </div>
+            <button class="btn-expand" data-expand="rag">
+              <span>Подробнее</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 2: n8n Multi-agent -->
+        <article class="project-card-modern" data-project="multi-agent">
+          <div class="project-visual">
+            <div class="project-pattern project-pattern-alt"></div>
+            <div class="project-number-large">02</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-modern">
+              <span class="tag-modern tag-accent">n8n</span>
+              <span class="tag-modern">Multi-Agent</span>
+              <span class="tag-modern tag-count">3 воркфлоу</span>
+            </div>
+            <h3 class="project-title-modern">Многоагентная система на n8n</h3>
+            <p class="project-desc-modern">Распределённая система автоматизации разработки с LLM-агентами на удалённых машинах.</p>
+            <div class="project-tech-modern">
+              <span class="tech-dot"></span>
+              <span>n8n</span>
+              <span class="tech-dot"></span>
+              <span>LLM агенты</span>
+              <span class="tech-dot"></span>
+              <span>Мониторинг</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-item">
+                <div class="metric-value">219</div>
+                <div class="metric-label">нод всего</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">40%</div>
+                <div class="metric-label">меньше рутины</div>
+              </div>
+            </div>
+            <button class="btn-expand" data-expand="multi-agent">
+              <span>Подробнее</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 3: Telegram Brief -->
+        <article class="project-card-modern" data-project="telegram-brief">
+          <div class="project-visual">
+            <div class="project-pattern project-pattern-accent"></div>
+            <div class="project-number-large">03</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-modern">
+              <span class="tag-modern tag-accent">Telegram</span>
+              <span class="tag-modern">AI Agent</span>
+            </div>
+            <h3 class="project-title-modern">Telegram Brief</h3>
+            <p class="project-desc-modern">Мульти-форматный приём контента через Telegram-бот с AI-агентом для извлечения структуры и классификации.</p>
+            <div class="project-tech-modern">
+              <span class="tech-dot"></span>
+              <span>Telegram API</span>
+              <span class="tech-dot"></span>
+              <span>Google Gemini</span>
+              <span class="tech-dot"></span>
+              <span>Google Sheets</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-item">
+                <div class="metric-value">102</div>
+                <div class="metric-label">ноды</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">7</div>
+                <div class="metric-label">API</div>
+              </div>
+            </div>
+            <button class="btn-expand" data-expand="telegram-brief">
+              <span>Подробнее</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 4: AppStore Auto -->
+        <article class="project-card-modern" data-project="appstore">
+          <div class="project-visual">
+            <div class="project-pattern"></div>
+            <div class="project-number-large">04</div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags-modern">
+              <span class="tag-modern tag-accent">Vision AI</span>
+              <span class="tag-modern">Pipeline</span>
+            </div>
+            <h3 class="project-title-modern">AppStore Auto</h3>
+            <p class="project-desc-modern">AI-генерация промо-материалов для мобильных приложений с анализом скриншотов и генерацией 4K-баннеров.</p>
+            <div class="project-tech-modern">
+              <span class="tech-dot"></span>
+              <span>ComfyUI</span>
+              <span class="tech-dot"></span>
+              <span>GPT-4 Vision</span>
+              <span class="tech-dot"></span>
+              <span>LangChain</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-item">
+                <div class="metric-value">Минуты</div>
+                <div class="metric-label">вместо часов</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">4K</div>
+                <div class="metric-label">качество</div>
+              </div>
+            </div>
+            <button class="btn-expand" data-expand="appstore">
+              <span>Подробнее</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Workflow Details Section (Initially Hidden) -->
+      <div class="workflow-details" id="workflowDetails">
+        <div class="workflow-details-inner">
+          <div class="workflow-header">
+            <h3 class="workflow-title" id="workflowTitle">Детали воркфлоу</h3>
+            <button class="btn-close" id="closeWorkflow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="workflow-tabs" id="workflowTabs">
+            <!-- Tabs will be generated by JS -->
+          </div>
+
+          <div class="workflow-content" id="workflowContent">
+            <!-- Content will be loaded by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LLM EXPERTISE ─── -->
+  <section class="section llm-section" id="llm">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">/ LLM</div>
+        <h2 class="section-title">Модели и технологии</h2>
+      </div>
+
+      <div class="llm-table-wrapper">
+        <table class="llm-table">
+          <thead>
+            <tr>
+              <th>Категория</th>
+              <th>Модели</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="llm-row">
+              <td><span class="category-badge badge-cloud">Cloud LLM</span></td>
+              <td><code>GPT-4o</code>, <code>Claude 3.5 Sonnet</code></td>
+            </tr>
+            <tr class="llm-row">
+              <td><span class="category-badge badge-vision">Vision</span></td>
+              <td><code>Gemini 2.5 Flash</code>, <code>GPT-4 Vision</code></td>
+            </tr>
+            <tr class="llm-row">
+              <td><span class="category-badge badge-local">Local LLM</span></td>
+              <td><code>LLaMA</code>, <code>Mistral</code>, <code>Qwen</code></td>
+            </tr>
+            <tr class="llm-row">
+              <td><span class="category-badge badge-embed">Embeddings</span></td>
+              <td><code>text-embedding-3</code>, <code>Contriever</code></td>
+            </tr>
+            <tr class="llm-row">
+              <td><span class="category-badge badge-audio">TTS / STT</span></td>
+              <td><code>Whisper</code>, <code>ElevenLabs</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">/ Контакты</div>
+        <h2 class="section-title">Готов к сотрудничеству</h2>
+        <p class="section-caption">Все проекты реализованы в production. Готов предоставить технические детали, code
+          review или live-демонстрацию.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="https://github.com/alyjnsv" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+          <div class="contact-card-glow"></div>
+          <div class="contact-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-platform">GitHub</div>
+            <div class="contact-handle">github.com/alyjnsv</div>
+            <div class="contact-desc">Активный репозиторий с AI-проектами</div>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+
+        <a href="https://t.me/broplemspb" target="_blank" rel="noopener" class="contact-card" id="contact-telegram">
+          <div class="contact-card-glow contact-card-glow-blue"></div>
+          <div class="contact-icon contact-icon-blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-platform">Telegram</div>
+            <div class="contact-handle">@broplemspb</div>
+            <div class="contact-desc">Для оперативной связи</div>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+
+        <a href="mailto:wavva123123123@gmail.com" class="contact-card" id="contact-email">
+          <div class="contact-card-glow contact-card-glow-purple"></div>
+          <div class="contact-icon contact-icon-purple">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-platform">Email</div>
+            <div class="contact-handle">wavva123123123@gmail.com</div>
+            <div class="contact-desc">Деловая переписка</div>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="contact-note">
+        <div class="contact-note-icon">💡</div>
+        <p>Все представленные проекты реализованы в <strong>production</strong>, обрабатывают реальные бизнес-задачи и
+          демонстрируют полный цикл разработки — от архитектурного проектирования до deployment и мониторинга.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">AJ</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <p class="footer-copy">© 2025 Алий Джансуев · AI Architect &amp; Automation Engineer</p>
+      <p class="footer-sub">Все проекты — production. Все решения — реальные.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
