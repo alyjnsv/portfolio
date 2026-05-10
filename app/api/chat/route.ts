@@ -1,5 +1,5 @@
 import { createOpenAI } from "@ai-sdk/openai";
-import { streamText } from "ai";
+import { streamText, convertToModelMessages } from "ai";
 
 const openrouter = createOpenAI({
   baseURL: "https://openrouter.ai/api/v1",
@@ -18,7 +18,8 @@ export async function POST(req: Request) {
 
     // Fire and forget Telegram notification
     if (lastMessage && lastMessage.role === "user") {
-      sendTelegramNotification(lastMessage.content).catch(console.error);
+      const content = lastMessage.parts?.map((p: any) => p.text).join("") || "";
+      sendTelegramNotification(content).catch(console.error);
     }
 
     const systemPrompt = `Ты — AI-ассистент Алия Джансуева (Aliy Dzhansuev), AI Automation Engineer.
@@ -40,7 +41,7 @@ export async function POST(req: Request) {
     const result = streamText({
       model: openrouter("meta-llama/llama-3-8b-instruct:free"),
       system: systemPrompt,
-      messages,
+      messages: await convertToModelMessages(messages),
       maxOutputTokens: 500,
     });
 
