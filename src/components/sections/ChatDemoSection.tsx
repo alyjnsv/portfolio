@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useLang } from "@/lib/lang-context";
 import { useInView } from "@/hooks/useInView";
 import { Send, Bot, User, Sparkles } from "lucide-react";
@@ -24,24 +24,21 @@ export function ChatDemoSection() {
   const { t } = useLang();
   const { ref, inView } = useInView();
   const bottomRef = useRef<HTMLDivElement>(null);
+  const [input, setInput] = useState("");
 
   const {
     messages,
-    input,
-    handleInputChange,
-    handleSubmit,
-    isLoading,
-    append,
+    sendMessage,
     setMessages,
+    status,
   } = useChat({
-    api: "/api/chat",
-    initialMessages: [
+    messages: [
       {
         id: "greeting",
         role: "assistant",
-        content: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой.",
+        parts: [{ type: "text", text: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой." }],
       },
-    ],
+    ] as any[],
   });
 
   // Reset greeting on language change, but only if the user hasn't started chatting
@@ -51,12 +48,14 @@ export function ChatDemoSection() {
         {
           id: "greeting",
           role: "assistant",
-          content: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой.",
+          parts: [{ type: "text", text: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой." }],
         },
-      ]);
+      ] as any[]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t.demo.assistant_name]);
+
+  const isLoading = status === "streaming" || status === "submitted";
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -64,7 +63,15 @@ export function ChatDemoSection() {
 
   const sendPreset = (text: string) => {
     if (isLoading) return;
-    append({ role: "user", content: text });
+    sendMessage({ text });
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+    const currentInput = input;
+    setInput("");
+    sendMessage({ text: currentInput });
   };
 
   return (
@@ -139,7 +146,7 @@ export function ChatDemoSection() {
                       : "bg-gradient-to-br from-emerald-500/20 to-cyan-500/15 border border-emerald-500/20 text-[#e2e8f0] rounded-tr-sm"
                   }`}
                 >
-                  {msg.content}
+                  {msg.parts?.map((p: any) => (p.type === "text" ? p.text : "")).join("")}
                 </div>
               </div>
             ))}
@@ -174,13 +181,13 @@ export function ChatDemoSection() {
 
           {/* Input Form */}
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleFormSubmit}
             className="flex items-center gap-3 px-5 py-4 border-t border-[#1e2d40]"
           >
             <input
               type="text"
               value={input}
-              onChange={handleInputChange}
+              onChange={(e) => setInput(e.target.value)}
               placeholder={t.demo.placeholder}
               disabled={isLoading}
               className="flex-1 bg-[#111827] border border-[#1e2d40] rounded-xl px-4 py-2.5 text-sm text-[#e2e8f0] placeholder-[#334155] focus:outline-none focus:border-emerald-500/40 transition-colors disabled:opacity-40"
