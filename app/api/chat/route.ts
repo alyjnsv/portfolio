@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 Отвечай кратко, емко, желательно 1-3 абзацами.`;
 
     const result = streamText({
-      model: openrouter.chat("meta-llama/llama-3.1-8b-instruct:free"),
+      model: openrouter.chat("meta-llama/llama-3.3-70b-instruct:free"),
       system: systemPrompt,
       messages: coreMessages,
       maxOutputTokens: 500,
