@@ -41,10 +41,10 @@ export async function POST(req: Request) {
       model: openrouter("meta-llama/llama-3-8b-instruct:free"),
       system: systemPrompt,
       messages,
-      maxTokens: 500,
+      maxOutputTokens: 500,
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
   } catch (error) {
     console.error("[chat] Unexpected error:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
