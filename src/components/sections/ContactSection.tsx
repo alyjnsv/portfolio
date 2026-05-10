@@ -41,10 +41,10 @@ export function ContactSection() {
     },
     {
       id: "email",
-      href: "mailto:wavva123123123@gmail.com",
+      href: "mailto:hello@alyjnsv.pro",
       icon: <Mail size={22} />,
       platform: "Email",
-      handle: "wavva123123123@gmail.com",
+      handle: "hello@alyjnsv.pro",
       desc: t.contact.email_desc,
       color: "hover:border-violet-500/40 hover:shadow-violet-500/5",
       iconColor: "text-violet-400",
@@ -101,9 +101,8 @@ export function ContactSection() {
               target={card.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
               id={`contact-${card.id}`}
-              className={`group glass rounded-2xl p-6 flex items-center gap-5 transition-all duration-300 hover:shadow-xl ${card.color} ${
-                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`group glass rounded-2xl p-6 flex items-center gap-5 transition-all duration-300 hover:shadow-xl ${card.color} ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
               style={{ transitionDelay: inView ? `${i * 80}ms` : "0ms" }}
             >
               {/* Icon */}

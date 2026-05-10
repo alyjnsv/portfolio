@@ -45,7 +45,7 @@ export function Footer() {
               <Send size={18} />
             </a>
             <a
-              href="mailto:wavva123123123@gmail.com"
+              href="mailto:hello@alyjnsv.pro"
               className="p-2 rounded-lg text-[#475569] hover:text-purple-400 hover:bg-[#111827] transition-all duration-200"
               aria-label="Email"
             >
