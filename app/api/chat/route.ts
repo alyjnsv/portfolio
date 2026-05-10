@@ -1,5 +1,10 @@
-import { openai } from "@ai-sdk/openai";
-import { streamText, Message } from "ai";
+import { createOpenAI } from "@ai-sdk/openai";
+import { streamText } from "ai";
+
+const openrouter = createOpenAI({
+  baseURL: "https://openrouter.ai/api/v1",
+  apiKey: process.env.OPENROUTER_API_KEY,
+});
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -33,7 +38,7 @@ export async function POST(req: Request) {
 Отвечай кратко, емко, желательно 1-3 абзацами.`;
 
     const result = streamText({
-      model: openai("gpt-4o-mini"),
+      model: openrouter("openai/gpt-4o-mini"),
       system: systemPrompt,
       messages,
       maxTokens: 500,
