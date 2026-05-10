@@ -12,10 +12,10 @@ export const maxDuration = 30;
 export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
-    
+
     // Extract the latest user message
     const lastMessage = messages[messages.length - 1];
-    
+
     // Fire and forget Telegram notification
     if (lastMessage && lastMessage.role === "user") {
       sendTelegramNotification(lastMessage.content).catch(console.error);
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
 Отвечай кратко, емко, желательно 1-3 абзацами.`;
 
     const result = streamText({
-      model: openrouter("openai/gpt-4o-mini"),
+      model: openrouter("meta-llama/llama-3-8b-instruct:free"),
       system: systemPrompt,
       messages,
       maxTokens: 500,
@@ -58,7 +58,7 @@ async function sendTelegramNotification(question: string) {
   if (!token || !chatId) return;
 
   const date = new Date().toLocaleString("ru-RU", { timeZone: "Europe/Moscow" });
-  
+
   const text = [
     "🤖 <b>Новый вопрос в AI Chat</b>",
     "",
