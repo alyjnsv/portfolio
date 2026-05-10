@@ -23,7 +23,7 @@ function TypingIndicator() {
 export function ChatDemoSection() {
   const { t } = useLang();
   const { ref, inView } = useInView();
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [input, setInput] = useState("");
 
   const {
@@ -58,7 +58,12 @@ export function ChatDemoSection() {
   const isLoading = status === "streaming" || status === "submitted";
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   }, [messages, isLoading]);
 
   const sendPreset = (text: string) => {
@@ -117,7 +122,7 @@ export function ChatDemoSection() {
           </div>
 
           {/* Messages */}
-          <div className="h-72 overflow-y-auto p-5 space-y-4 scroll-smooth">
+          <div ref={scrollRef} className="h-72 overflow-y-auto p-5 space-y-4 scroll-smooth">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -162,7 +167,7 @@ export function ChatDemoSection() {
               </div>
             )}
 
-            <div ref={bottomRef} />
+
           </div>
 
           {/* Preset questions */}
