@@ -1,14 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useLang } from "@/lib/lang-context";
 import { useInView } from "@/hooks/useInView";
 import { Send, Bot, User, Sparkles } from "lucide-react";
-
-interface Message {
-  role: "user" | "assistant";
-  text: string;
-}
+import { useChat } from "@ai-sdk/react";
 
 function TypingIndicator() {
   return (
@@ -27,49 +23,48 @@ function TypingIndicator() {
 export function ChatDemoSection() {
   const { t } = useLang();
   const { ref, inView } = useInView();
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      text: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой.",
-    },
-  ]);
-  const [input, setInput] = useState("");
-  const [typing, setTyping] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  // Reset greeting on language change
-  useEffect(() => {
-    setMessages([
+  const {
+    messages,
+    input,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    append,
+    setMessages,
+  } = useChat({
+    api: "/api/chat",
+    initialMessages: [
       {
+        id: "greeting",
         role: "assistant",
-        text:
-          t.demo.assistant_name +
-          " 👋\n\nВыберите вопрос ниже или напишите свой.",
+        content: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой.",
       },
-    ]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    ],
+  });
+
+  // Reset greeting on language change, but only if the user hasn't started chatting
+  useEffect(() => {
+    if (messages.length <= 1) {
+      setMessages([
+        {
+          id: "greeting",
+          role: "assistant",
+          content: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой.",
+        },
+      ]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t.demo.assistant_name]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, typing]);
+  }, [messages, isLoading]);
 
-  const sendMessage = (text: string) => {
-    if (!text.trim() || typing) return;
-    const userMsg: Message = { role: "user", text: text.trim() };
-    setMessages((prev) => [...prev, userMsg]);
-    setInput("");
-    setTyping(true);
-
-    setTimeout(() => {
-      const answers = t.demo.answers as Record<string, string>;
-      const answer = answers[text.trim()] ?? t.demo.default_answer;
-      setTyping(false);
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", text: answer },
-      ]);
-    }, 1200 + Math.random() * 600);
+  const sendPreset = (text: string) => {
+    if (isLoading) return;
+    append({ role: "user", content: text });
   };
 
   return (
@@ -116,9 +111,9 @@ export function ChatDemoSection() {
 
           {/* Messages */}
           <div className="h-72 overflow-y-auto p-5 space-y-4 scroll-smooth">
-            {messages.map((msg, i) => (
+            {messages.map((msg) => (
               <div
-                key={i}
+                key={msg.id}
                 className={`flex items-start gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
               >
                 {/* Avatar */}
@@ -144,12 +139,12 @@ export function ChatDemoSection() {
                       : "bg-gradient-to-br from-emerald-500/20 to-cyan-500/15 border border-emerald-500/20 text-[#e2e8f0] rounded-tr-sm"
                   }`}
                 >
-                  {msg.text}
+                  {msg.content}
                 </div>
               </div>
             ))}
 
-            {typing && (
+            {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
                   <Bot size={14} />
@@ -168,8 +163,8 @@ export function ChatDemoSection() {
             {t.demo.preset_questions.map((q) => (
               <button
                 key={q}
-                onClick={() => sendMessage(q)}
-                disabled={typing}
+                onClick={() => sendPreset(q)}
+                disabled={isLoading}
                 className="text-xs px-3 py-1.5 rounded-full border border-[#1e2d40] text-[#64748b] hover:border-emerald-500/30 hover:text-emerald-400 hover:bg-emerald-500/5 transition-all duration-200 disabled:opacity-40 cursor-pointer"
               >
                 {q}
@@ -177,25 +172,27 @@ export function ChatDemoSection() {
             ))}
           </div>
 
-          {/* Input */}
-          <div className="flex items-center gap-3 px-5 py-4 border-t border-[#1e2d40]">
+          {/* Input Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center gap-3 px-5 py-4 border-t border-[#1e2d40]"
+          >
             <input
               type="text"
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
+              onChange={handleInputChange}
               placeholder={t.demo.placeholder}
-              disabled={typing}
+              disabled={isLoading}
               className="flex-1 bg-[#111827] border border-[#1e2d40] rounded-xl px-4 py-2.5 text-sm text-[#e2e8f0] placeholder-[#334155] focus:outline-none focus:border-emerald-500/40 transition-colors disabled:opacity-40"
             />
             <button
-              onClick={() => sendMessage(input)}
-              disabled={typing || !input.trim()}
-              className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:shadow-lg hover:shadow-emerald-500/20 disabled:opacity-30 transition-all duration-200 cursor-pointer"
+              type="submit"
+              disabled={isLoading || !input.trim()}
+              className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:shadow-lg hover:shadow-emerald-500/20 disabled:opacity-30 transition-all duration-200 cursor-pointer flex-shrink-0"
             >
               <Send size={16} />
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
