@@ -56,7 +56,14 @@ export async function POST(req: Request) {
       maxOutputTokens: 500,
     });
 
-    return result.toTextStreamResponse();
+    // useChat's default transport expects the UI message stream protocol,
+    // not a plain text stream
+    return result.toUIMessageStreamResponse({
+      onError: (error) => {
+        console.error("[chat] Stream error:", error);
+        return error instanceof Error ? error.message : "Произошла ошибка, попробуйте ещё раз.";
+      },
+    });
   } catch (error) {
     console.error("[chat] Unexpected error:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });

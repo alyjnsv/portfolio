@@ -38,6 +38,7 @@ export function ChatDemoSection() {
     sendMessage,
     setMessages,
     status,
+    error,
   } = useChat({
     messages: [greetingMessage(t.demo.assistant_name)],
   });
@@ -138,6 +139,14 @@ export function ChatDemoSection() {
                 </div>
               </div>
             ))}
+
+            {error && (
+              <div className="flex justify-center">
+                <div className="text-sm text-[#EF4444] bg-[#FEF2F2] border border-[#FECACA] rounded-2xl px-4 py-2">
+                  Не удалось получить ответ. Попробуйте ещё раз чуть позже.
+                </div>
+              </div>
+            )}
 
             {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
               <div className="flex items-start gap-4">
