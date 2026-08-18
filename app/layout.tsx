@@ -19,6 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alyjnsv.pro"),
   title: "Алий Джансуев — AI Automation Engineer",
   description:
     "Строю production-ready AI-системы: от архитектуры до деплоя. RAG, n8n, LLM-агенты, MCP. Реальные решения, измеримые результаты.",

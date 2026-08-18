@@ -36,9 +36,12 @@ export function HeroSection() {
           </p>
 
           <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} pointer-events-auto`}>
-            <a href="#contact" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-[#0D0E25] text-white hover:bg-[#4B6BFF] transition-all duration-300">
+            <a href="#about-detail" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-[#0D0E25] text-white hover:bg-[#4B6BFF] transition-all duration-300">
               {t.hero.cta_projects}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm border border-[#0D0E25]/20 text-[#0D0E25] hover:border-[#4B6BFF] hover:text-[#4B6BFF] transition-all duration-300 bg-white/60 backdrop-blur-sm">
+              {t.hero.cta_contact}
             </a>
           </div>
         </div>

@@ -28,7 +28,7 @@ export function WhatIDoSection() {
                 </h2>
                 <div className="w-16 h-1.5 bg-[#F73489] rounded-full mb-8"></div>
                 <p className="text-[#6B7280] text-lg leading-relaxed">
-                  Turning complex AI capabilities into reliable, production-ready systems that scale.
+                  {t.whatido.subtitle}
                 </p>
               </div>
             </div>

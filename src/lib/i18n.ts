@@ -27,6 +27,8 @@ export const translations = {
     whatido: {
       tag: "/ Экспертиза",
       title: "Что я делаю лучше большинства",
+      subtitle:
+        "Превращаю возможности AI в надёжные production-системы, которые масштабируются.",
       items: [
         {
           id: "production",
@@ -254,6 +256,8 @@ export const translations = {
     whatido: {
       tag: "/ Expertise",
       title: "What I do better than most",
+      subtitle:
+        "Turning complex AI capabilities into reliable, production-ready systems that scale.",
       items: [
         {
           id: "production",
