@@ -20,27 +20,27 @@ function Tooltip({
     >
       {children}
       {visible && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 pointer-events-none">
-          <div className="glass text-xs text-[#cbd5e1] px-3 py-1.5 rounded-lg whitespace-nowrap shadow-xl border border-[#1e2d40]">
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-50 pointer-events-none">
+          <div className="bg-[#0D0E25] text-white text-xs px-4 py-2 rounded-xl whitespace-nowrap shadow-xl font-medium">
             {content}
           </div>
-          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-[#1e2d40]" />
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-transparent border-t-[#0D0E25]" />
         </div>
       )}
     </div>
   );
 }
 
-const CATEGORY_COLORS: Record<string, string> = {
-  "AI / LLM": "from-emerald-500/20 to-emerald-600/10 border-emerald-500/30 text-emerald-300 hover:border-emerald-400/60",
-  "Техники": "from-cyan-500/20 to-cyan-600/10 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60",
-  Techniques: "from-cyan-500/20 to-cyan-600/10 border-cyan-500/30 text-cyan-300 hover:border-cyan-400/60",
-  Backend: "from-violet-500/20 to-violet-600/10 border-violet-500/30 text-violet-300 hover:border-violet-400/60",
-  "Автоматизация": "from-orange-500/20 to-orange-600/10 border-orange-500/30 text-orange-300 hover:border-orange-400/60",
-  Automation: "from-orange-500/20 to-orange-600/10 border-orange-500/30 text-orange-300 hover:border-orange-400/60",
-  "Инфраструктура": "from-blue-500/20 to-blue-600/10 border-blue-500/30 text-blue-300 hover:border-blue-400/60",
-  Infrastructure: "from-blue-500/20 to-blue-600/10 border-blue-500/30 text-blue-300 hover:border-blue-400/60",
-  Frontend: "from-pink-500/20 to-pink-600/10 border-pink-500/30 text-pink-300 hover:border-pink-400/60",
+const CATEGORY_STYLES: Record<string, string> = {
+  "AI / LLM": "bg-[#E8F2FF] border-[#4B6BFF]/20 text-[#4B6BFF] hover:border-[#4B6BFF]",
+  "Техники": "bg-[#F5E8FF] border-[#B25EE2]/20 text-[#B25EE2] hover:border-[#B25EE2]",
+  Techniques: "bg-[#F5E8FF] border-[#B25EE2]/20 text-[#B25EE2] hover:border-[#B25EE2]",
+  Backend: "bg-[#E6F8F0] border-[#2CB67D]/20 text-[#2CB67D] hover:border-[#2CB67D]",
+  "Автоматизация": "bg-[#FFF0E6] border-[#F57B36]/20 text-[#F57B36] hover:border-[#F57B36]",
+  Automation: "bg-[#FFF0E6] border-[#F57B36]/20 text-[#F57B36] hover:border-[#F57B36]",
+  "Инфраструктура": "bg-[#F3F4F6] border-[#6B7280]/20 text-[#4B5563] hover:border-[#6B7280]",
+  Infrastructure: "bg-[#F3F4F6] border-[#6B7280]/20 text-[#4B5563] hover:border-[#6B7280]",
+  Frontend: "bg-[#FFE8F0] border-[#F73489]/20 text-[#F73489] hover:border-[#F73489]",
 };
 
 export function StackSection() {
@@ -52,31 +52,29 @@ export function StackSection() {
   const allLabels = categories.map((c) => c.label);
 
   return (
-    <section id="stack" className="section bg-[#0b0f19]">
+    <section id="stack" className="section bg-white border-b border-[#D1D5DB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
-          className={`mb-10 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`mb-12 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-widest mono mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#2CB67D] uppercase tracking-widest mb-4">
             {t.stack.tag}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#e2e8f0]">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#0D0E25] tracking-tight">
             {t.stack.title}
           </h2>
         </div>
 
-        {/* Category filter pills */}
         <div
-          className={`flex flex-wrap gap-2 mb-8 transition-all duration-700 delay-100 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          className={`flex flex-wrap gap-2 mb-10 transition-all duration-700 delay-100 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 cursor-pointer ${
+            className={`px-5 py-2.5 rounded-full text-sm font-bold border transition-all duration-300 cursor-pointer ${
               activeCategory === null
-                ? "bg-emerald-500/20 border-emerald-500/40 text-emerald-300"
-                : "border-[#1e2d40] text-[#64748b] hover:text-[#94a3b8]"
+                ? "bg-[#0D0E25] border-[#0D0E25] text-white"
+                : "bg-white border-[#E5E7EB] text-[#6B7280] hover:border-[#0D0E25] hover:text-[#0D0E25]"
             }`}
           >
             All
@@ -87,10 +85,10 @@ export function StackSection() {
               onClick={() =>
                 setActiveCategory(activeCategory === label ? null : label)
               }
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-sm font-bold border transition-all duration-300 cursor-pointer ${
                 activeCategory === label
-                  ? "bg-emerald-500/20 border-emerald-500/40 text-emerald-300"
-                  : "border-[#1e2d40] text-[#64748b] hover:text-[#94a3b8]"
+                  ? "bg-[#0D0E25] border-[#0D0E25] text-white"
+                  : "bg-white border-[#E5E7EB] text-[#6B7280] hover:border-[#0D0E25] hover:text-[#0D0E25]"
               }`}
             >
               {label}
@@ -98,28 +96,27 @@ export function StackSection() {
           ))}
         </div>
 
-        {/* Tech cloud */}
-        <div className="space-y-6">
+        <div className="space-y-10">
           {categories
             .filter((c) => !activeCategory || c.label === activeCategory)
             .map((cat, ci) => {
               const color =
-                CATEGORY_COLORS[cat.label] ||
-                "from-slate-500/20 to-slate-600/10 border-slate-500/30 text-slate-300 hover:border-slate-400/60";
+                CATEGORY_STYLES[cat.label] ||
+                "bg-[#F3F4F6] border-[#6B7280]/20 text-[#4B5563] hover:border-[#6B7280]";
               return (
                 <div
                   key={cat.label}
-                  className={`transition-all duration-500 ${inView ? "opacity-100" : "opacity-0"}`}
-                  style={{ transitionDelay: inView ? `${ci * 80}ms` : "0ms" }}
+                  className={`transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
+                  style={{ transitionDelay: inView ? `${ci * 100}ms` : "0ms" }}
                 >
-                  <div className="text-[10px] mono text-[#334155] uppercase tracking-widest mb-3">
+                  <div className="text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-4">
                     {cat.label}
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-3">
                     {cat.items.map((item) => (
                       <Tooltip key={item.name} content={item.desc}>
                         <span
-                          className={`inline-flex px-3.5 py-1.5 rounded-full text-xs font-semibold border bg-gradient-to-br transition-all duration-200 cursor-default ${color}`}
+                          className={`inline-flex px-4 py-2 rounded-full text-sm font-bold border transition-all duration-300 cursor-default ${color}`}
                         >
                           {item.name}
                         </span>

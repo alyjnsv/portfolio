@@ -16,7 +16,6 @@ function AnimatedValue({
 
   useEffect(() => {
     if (!started) return;
-    // Extract numeric part
     const match = value.match(/[\d.]+/);
     if (!match) {
       setDisplay(value);
@@ -31,7 +30,6 @@ function AnimatedValue({
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // easeOutExpo
       const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       const current = Math.round(eased * target * 10) / 10;
       const formatted = Number.isInteger(target)
@@ -58,43 +56,36 @@ export function StatsSection() {
   }, [inView, started]);
 
   return (
-    <section id="stats" className="section relative overflow-hidden">
-      {/* Subtle gradient bg */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1525] via-[#0b0f19] to-[#0d1525] pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section id="stats" className="section bg-[#E8F2FF] border-y border-[#D1D5DB]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
-          className={`mb-14 text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`mb-16 text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-widest mono mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#4B6BFF] uppercase tracking-widest mb-4">
             {t.stats.tag}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#e2e8f0]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#0D0E25] tracking-tight">
             {t.stats.title}
           </h2>
         </div>
 
-        {/* Dashboard grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {t.stats.items.map((item, i) => (
             <div
               key={item.label}
-              className={`glass rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-700 hover:border-emerald-500/30 hover:neon-emerald group ${
-                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`bg-white rounded-3xl p-6 sm:p-8 flex flex-col items-center justify-center text-center border border-[#D1D5DB] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#4B6BFF]/50 group ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
-              style={{ transitionDelay: inView ? `${i * 60}ms` : "0ms" }}
+              style={{ transitionDelay: inView ? `${i * 100}ms` : "0ms" }}
             >
-              {/* Terminal-style label */}
-              <div className="text-[10px] mono text-[#334155] mb-2 group-hover:text-emerald-500/40 transition-colors">
-                metric_{String(i + 1).padStart(2, "0")}
+              <div className="text-[10px] font-bold uppercase tracking-widest text-[#B25EE2] mb-3 group-hover:text-[#F73489] transition-colors">
+                metric_0{i + 1}
               </div>
-              <div className="mono text-2xl sm:text-3xl font-black grad-text mb-1">
+              <div className="text-4xl sm:text-5xl font-black text-[#0D0E25] mb-2">
                 <AnimatedValue value={item.value} started={started} />
               </div>
-              <div className="text-xs text-[#64748b] leading-tight">
+              <div className="text-sm font-medium text-[#6B7280]">
                 {item.label}
               </div>
             </div>

@@ -12,7 +12,7 @@ function TypingIndicator() {
       {[0, 1, 2].map((i) => (
         <div
           key={i}
-          className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-slow"
+          className="w-2 h-2 rounded-full bg-[#4B6BFF] animate-pulse"
           style={{ animationDelay: `${i * 200}ms` }}
         />
       ))}
@@ -41,7 +41,6 @@ export function ChatDemoSection() {
     ] as any[],
   });
 
-  // Reset greeting on language change, but only if the user hasn't started chatting
   useEffect(() => {
     if (messages.length <= 1) {
       setMessages([
@@ -80,75 +79,64 @@ export function ChatDemoSection() {
   };
 
   return (
-    <section id="demo" className="section relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0b0f19] via-[#0d1525] to-[#0b0f19] pointer-events-none" />
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section id="demo" className="section bg-[#F4F5F7] border-y border-[#D1D5DB]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
-          className={`mb-10 text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`mb-12 text-center transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-widest mono mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#4B6BFF] uppercase tracking-widest mb-4">
             {t.demo.tag}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#e2e8f0] mb-3">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#0D0E25] tracking-tight mb-4">
             {t.demo.title}
           </h2>
-          <p className="text-sm text-[#475569] flex items-center justify-center gap-1.5">
-            <Sparkles size={12} className="text-emerald-400/60" />
+          <p className="text-lg text-[#6B7280] flex items-center justify-center gap-2">
+            <Sparkles size={16} className="text-[#4B6BFF]" />
             {t.demo.subtitle}
           </p>
         </div>
 
-        {/* Chat window */}
         <div
-          className={`glass rounded-2xl overflow-hidden border-emerald-500/10 transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`bg-white rounded-3xl overflow-hidden border border-[#D1D5DB] shadow-lg transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          {/* Window bar */}
-          <div className="flex items-center gap-2 px-5 py-3.5 border-b border-[#1e2d40] bg-[#0d1120]">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
+          {/* Header Bar */}
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E5E7EB] bg-[#F9FAFB]">
+            <div className="flex gap-2">
+              <div className="w-3.5 h-3.5 rounded-full bg-[#EF4444]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#F59E0B]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[#10B981]" />
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="flex items-center gap-2 text-xs text-[#475569] mono">
-                <Bot size={12} className="text-emerald-400" />
+              <div className="flex items-center gap-2 text-sm font-bold text-[#0D0E25]">
+                <Bot size={16} className="text-[#4B6BFF]" />
                 {t.demo.assistant_name}
               </div>
             </div>
-            <div className="w-12" />
+            <div className="w-16" />
           </div>
 
-          {/* Messages */}
-          <div ref={scrollRef} className="h-72 overflow-y-auto p-5 space-y-4 scroll-smooth">
+          <div ref={scrollRef} className="h-96 overflow-y-auto p-6 sm:p-8 space-y-6 bg-white">
             {messages.map((msg) => (
               <div
                 key={msg.id}
-                className={`flex items-start gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
+                className={`flex items-start gap-4 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
               >
-                {/* Avatar */}
                 <div
-                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs ${
+                  className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
                     msg.role === "assistant"
-                      ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/20"
-                      : "bg-cyan-500/15 text-cyan-400 border border-cyan-500/20"
+                      ? "bg-[#E8F2FF] text-[#4B6BFF]"
+                      : "bg-[#0D0E25] text-white"
                   }`}
                 >
-                  {msg.role === "assistant" ? (
-                    <Bot size={14} />
-                  ) : (
-                    <User size={14} />
-                  )}
+                  {msg.role === "assistant" ? <Bot size={18} /> : <User size={18} />}
                 </div>
 
-                {/* Bubble */}
                 <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-line ${
+                  className={`max-w-[75%] px-5 py-4 text-base leading-relaxed whitespace-pre-line shadow-sm ${
                     msg.role === "assistant"
-                      ? "bg-[#111827] border border-[#1e2d40] text-[#cbd5e1] rounded-tl-sm"
-                      : "bg-gradient-to-br from-emerald-500/20 to-cyan-500/15 border border-emerald-500/20 text-[#e2e8f0] rounded-tr-sm"
+                      ? "bg-[#F4F5F7] text-[#0D0E25] rounded-3xl rounded-tl-sm"
+                      : "bg-[#0D0E25] text-white rounded-3xl rounded-tr-sm"
                   }`}
                 >
                   {msg.parts?.map((p: any) => (p.type === "text" ? p.text : "")).join("")}
@@ -157,37 +145,35 @@ export function ChatDemoSection() {
             ))}
 
             {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
-                  <Bot size={14} />
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#E8F2FF] text-[#4B6BFF] flex items-center justify-center">
+                  <Bot size={18} />
                 </div>
-                <div className="bg-[#111827] border border-[#1e2d40] rounded-2xl rounded-tl-sm">
+                <div className="bg-[#F4F5F7] rounded-3xl rounded-tl-sm">
                   <TypingIndicator />
                 </div>
               </div>
             )}
-
-
           </div>
 
-          {/* Preset questions */}
-          <div className="px-5 pb-3 flex flex-wrap gap-2">
-            {t.demo.preset_questions.map((q) => (
-              <button
-                key={q}
-                onClick={() => sendPreset(q)}
-                disabled={isLoading}
-                className="text-xs px-3 py-1.5 rounded-full border border-[#1e2d40] text-[#64748b] hover:border-emerald-500/30 hover:text-emerald-400 hover:bg-emerald-500/5 transition-all duration-200 disabled:opacity-40 cursor-pointer"
-              >
-                {q}
-              </button>
-            ))}
+          <div className="px-6 pb-4 bg-white">
+            <div className="flex flex-wrap gap-2">
+              {t.demo.preset_questions.map((q) => (
+                <button
+                  key={q}
+                  onClick={() => sendPreset(q)}
+                  disabled={isLoading}
+                  className="text-sm font-medium px-4 py-2 rounded-full border border-[#D1D5DB] text-[#4B5563] hover:border-[#4B6BFF] hover:text-[#4B6BFF] hover:bg-[#E8F2FF] transition-all duration-200 disabled:opacity-50 cursor-pointer"
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Input Form */}
           <form
             onSubmit={handleFormSubmit}
-            className="flex items-center gap-3 px-5 py-4 border-t border-[#1e2d40]"
+            className="flex items-center gap-3 px-6 py-5 border-t border-[#E5E7EB] bg-[#F9FAFB]"
           >
             <input
               type="text"
@@ -195,14 +181,14 @@ export function ChatDemoSection() {
               onChange={(e) => setInput(e.target.value)}
               placeholder={t.demo.placeholder}
               disabled={isLoading}
-              className="flex-1 bg-[#111827] border border-[#1e2d40] rounded-xl px-4 py-2.5 text-sm text-[#e2e8f0] placeholder-[#334155] focus:outline-none focus:border-emerald-500/40 transition-colors disabled:opacity-40"
+              className="flex-1 bg-white border border-[#D1D5DB] rounded-2xl px-5 py-4 text-base text-[#0D0E25] placeholder-[#9CA3AF] focus:outline-none focus:border-[#4B6BFF] focus:ring-2 focus:ring-[#4B6BFF]/20 transition-all disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:shadow-lg hover:shadow-emerald-500/20 disabled:opacity-30 transition-all duration-200 cursor-pointer flex-shrink-0"
+              className="p-4 rounded-2xl bg-[#0D0E25] text-white hover:bg-[#4B6BFF] disabled:opacity-50 transition-colors duration-300 cursor-pointer flex-shrink-0"
             >
-              <Send size={16} />
+              <Send size={20} />
             </button>
           </form>
         </div>

@@ -9,84 +9,80 @@ export function ExperienceSection() {
   const { ref, inView } = useInView();
 
   return (
-    <section id="experience" className="section relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0b0f19] via-[#0d1120] to-[#0b0f19] pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section id="experience" className="section bg-[#F4F5F7]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
-          className={`mb-14 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`mb-16 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-widest mono mb-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#B25EE2] uppercase tracking-widest mb-4">
             {t.experience.tag}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#e2e8f0]">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#0D0E25] tracking-tight">
             {t.experience.title}
           </h2>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/40 via-[#1e2d40] to-transparent" />
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[#B25EE2] via-[#4B6BFF] to-transparent rounded-full" />
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {t.experience.items.map((item, i) => (
               <div
                 key={item.company}
-                className={`relative pl-12 md:pl-20 transition-all duration-700 ${
-                  inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+                className={`relative pl-12 md:pl-24 transition-all duration-700 ${
+                  inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
                 }`}
-                style={{ transitionDelay: inView ? `${i * 120}ms` : "0ms" }}
+                style={{ transitionDelay: inView ? `${i * 150}ms` : "0ms" }}
               >
                 {/* Dot */}
                 <div
-                  className={`absolute left-2.5 md:left-6 top-6 w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                  className={`absolute left-[10px] md:left-[26px] top-8 w-6 h-6 rounded-full border-4 flex items-center justify-center bg-white ${
                     item.current
-                      ? "border-emerald-500 bg-emerald-500/20"
-                      : "border-[#1e2d40] bg-[#0b0f19]"
+                      ? "border-[#B25EE2]"
+                      : "border-[#D1D5DB]"
                   }`}
                 >
                   {item.current && (
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />
+                    <div className="w-2 h-2 rounded-full bg-[#B25EE2] animate-pulse" />
                   )}
                 </div>
 
                 {/* Card */}
                 <div
-                  className={`glass rounded-2xl p-6 ${item.current ? "border-emerald-500/20 neon-emerald" : ""}`}
+                  className={`bg-white rounded-3xl p-8 border ${item.current ? "border-[#B25EE2]/30 shadow-lg" : "border-[#E5E7EB] shadow-sm"} hover:shadow-xl transition-shadow duration-300`}
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-3 mb-2">
                         {item.current && (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />
+                          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#B25EE2] bg-[#F5E8FF] px-3 py-1 rounded-full">
+                            <span className="w-2 h-2 rounded-full bg-[#B25EE2] animate-pulse" />
                             Current
                           </span>
                         )}
+                        <span className="text-sm font-bold text-[#6B7280] bg-[#F3F4F6] px-3 py-1 rounded-full">
+                          {item.period}
+                        </span>
                       </div>
-                      <h3 className="text-lg font-bold text-[#e2e8f0]">
+                      <h3 className="text-2xl font-black text-[#0D0E25]">
                         {item.company}
                       </h3>
-                      <div className="flex items-center gap-3 mt-1 flex-wrap">
-                        <span className="flex items-center gap-1 text-sm text-emerald-400 font-medium">
-                          <Briefcase size={12} />
+                      <div className="flex flex-wrap items-center gap-4 mt-2">
+                        <span className="flex items-center gap-1.5 text-base text-[#4B6BFF] font-bold">
+                          <Briefcase size={16} />
                           {item.role}
                         </span>
-                        <span className="flex items-center gap-1 text-xs text-[#475569]">
-                          <MapPin size={11} />
+                        <span className="flex items-center gap-1.5 text-sm text-[#6B7280] font-medium">
+                          <MapPin size={14} />
                           {item.location}
                         </span>
                       </div>
                     </div>
-                    <span className="mono text-xs text-[#475569] bg-[#111827] border border-[#1e2d40] px-3 py-1 rounded-full whitespace-nowrap">
-                      {item.period}
-                    </span>
                   </div>
 
-                  <p className="text-sm text-[#94a3b8] mb-4 leading-relaxed">
+                  <p className="text-lg text-[#4B5563] mb-6 leading-relaxed">
                     {item.description}
                   </p>
 
@@ -94,7 +90,7 @@ export function ExperienceSection() {
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-[#1a2236] border border-[#1e2d40] text-[#94a3b8]"
+                        className="text-xs font-bold px-3 py-1.5 rounded-lg bg-[#E8F2FF] text-[#4B6BFF]"
                       >
                         {tag}
                       </span>
