@@ -11,7 +11,6 @@ const NAV_KEYS = [
   { key: "stack" as const, href: "#stack" },
   { key: "experience" as const, href: "#experience" },
   { key: "values" as const, href: "#values" },
-  { key: "demo" as const, href: "#demo" },
   { key: "contact" as const, href: "#contact" },
 ];
 

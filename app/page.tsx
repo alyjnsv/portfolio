@@ -7,7 +7,6 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { StackSection } from "@/components/sections/StackSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ValuesSection } from "@/components/sections/ValuesSection";
-import { ChatDemoSection } from "@/components/sections/ChatDemoSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Page() {
@@ -22,7 +21,6 @@ export default function Page() {
         <StackSection />
         <ExperienceSection />
         <ValuesSection />
-        <ChatDemoSection />
         <ContactSection />
       </main>
       <Footer />

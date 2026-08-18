@@ -8,7 +8,6 @@ export const translations = {
       stack: "Стек",
       experience: "Опыт",
       values: "Подход",
-      demo: "AI Демо",
       contact: "Контакты",
     },
     hero: {
@@ -210,29 +209,6 @@ export const translations = {
         },
       ],
     },
-    demo: {
-      tag: "/ AI Demo",
-      title: "Спроси AI-ассистента",
-      subtitle: "Демо-режим с предустановленными ответами",
-      placeholder: "Напиши свой вопрос...",
-      send: "Отправить",
-      preset_questions: [
-        "Какие AI-проекты ты запускал в production?",
-        "Как ты повысил precision AI-агентов до 73%?",
-        "Расскажи про MCP-инфраструктуру, которую ты настраивал",
-      ],
-      answers: {
-        "Какие AI-проекты ты запускал в production?":
-          "В production у меня работают: система мониторинга инфраструктуры с 4 типами аномалий, 10 AI-агентов с precision 73%, Enterprise RAG с экономией хранилища 97%, и многоагентная система на n8n со 219 нодами. Все системы обрабатывают реальные бизнес-задачи, не демо.",
-        "Как ты повысил precision AI-агентов до 73%?":
-          "За 4 итерации: сначала диагностировал каждого агента отдельно, нашёл баги в Edge Functions. Затем расширил контекст, улучшил промпты с JSON-schema валидацией, добавил retry-логику. Результат: 57% → 73% без переписывания архитектуры — только системная оптимизация.",
-        "Расскажи про MCP-инфраструктуру, которую ты настраивал":
-          "Настроил 4 MCP-сервера: кастомный с интеграцией Jira + Pinecone RAG, Figma MCP для дизайн-токенов, GitHub MCP для кода, и корпоративный с документацией. Разработчик в Cursor получил zero-context-switch доступ ко всему. Onboarding сократился с часов до минут.",
-      },
-      default_answer:
-        "Отличный вопрос! Готов обсудить детали в личной беседе. Напишите мне в Telegram @broplemspb — расскажу про конкретный кейс с цифрами и деталями реализации.",
-      assistant_name: "Алий — AI ассистент",
-    },
     contact: {
       tag: "/ Контакты",
       title: "Готов к сотрудничеству",
@@ -259,7 +235,6 @@ export const translations = {
       stack: "Stack",
       experience: "Experience",
       values: "Values",
-      demo: "AI Demo",
       contact: "Contact",
     },
     hero: {
@@ -460,29 +435,6 @@ export const translations = {
             "Used to imperfect inputs: poorly described process, messy data, limited access — I still deliver a working solution.",
         },
       ],
-    },
-    demo: {
-      tag: "/ AI Demo",
-      title: "Ask the AI assistant",
-      subtitle: "Demo mode with preset answers",
-      placeholder: "Write your question...",
-      send: "Send",
-      preset_questions: [
-        "What AI projects have you shipped to production?",
-        "How did you raise AI agent precision to 73%?",
-        "Tell me about the MCP infrastructure you set up",
-      ],
-      answers: {
-        "What AI projects have you shipped to production?":
-          "In production I have: an infrastructure monitoring system with 4 anomaly types, 10 AI agents with 73% precision, Enterprise RAG with 97% storage savings, and a multi-agent n8n system with 219 nodes. All systems handle real business tasks, not demos.",
-        "How did you raise AI agent precision to 73%?":
-          "Over 4 iterations: first diagnosed each agent individually, found bugs in Edge Functions. Then expanded context, improved prompts with JSON-schema validation, added retry logic. Result: 57% → 73% without rewriting the architecture — only systematic optimization.",
-        "Tell me about the MCP infrastructure you set up":
-          "Set up 4 MCP servers: custom one with Jira + Pinecone RAG integration, Figma MCP for design tokens, GitHub MCP for code, and a corporate one with documentation. Developers in Cursor got zero-context-switch access to everything. Onboarding reduced from hours to minutes.",
-      },
-      default_answer:
-        "Great question! I'm happy to discuss details in a personal conversation. Message me on Telegram @broplemspb — I'll tell you about the specific case with numbers and implementation details.",
-      assistant_name: "Aliy — AI assistant",
     },
     contact: {
       tag: "/ Contact",
