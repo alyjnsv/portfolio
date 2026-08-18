@@ -224,6 +224,18 @@ export const translations = {
       phone_desc: "Позвонить напрямую",
       disclaimer:
         "Все проекты реализованы в production. Готов предоставить технические детали, code review или live-демонстрацию.",
+      form: {
+        title: "Или напишите прямо здесь",
+        subtitle: "Заявка мгновенно придёт мне в Telegram — отвечу в течение дня.",
+        name_placeholder: "Ваше имя",
+        contact_placeholder: "Email или Telegram",
+        message_placeholder: "Коротко о задаче: что автоматизируем, какие сроки?",
+        submit: "Отправить заявку",
+        sending: "Отправляю...",
+        success: "Заявка отправлена! Свяжусь с вами в ближайшее время.",
+        error: "Не получилось отправить. Напишите мне напрямую в Telegram или на почту.",
+        validation: "Заполните все поля (сообщение — от 10 символов).",
+      },
     },
     footer: {
       rights: "Все права защищены",
@@ -453,6 +465,18 @@ export const translations = {
       phone_desc: "Call directly",
       disclaimer:
         "All projects are in production. Happy to provide technical details, code review or live demo.",
+      form: {
+        title: "Or write to me right here",
+        subtitle: "Your message lands straight in my Telegram — I reply within a day.",
+        name_placeholder: "Your name",
+        contact_placeholder: "Email or Telegram",
+        message_placeholder: "Briefly about the task: what do we automate, what's the timeline?",
+        submit: "Send message",
+        sending: "Sending...",
+        success: "Message sent! I'll get back to you shortly.",
+        error: "Couldn't send. Please reach me directly via Telegram or email.",
+        validation: "Please fill in all fields (message — at least 10 characters).",
+      },
     },
     footer: {
       rights: "All rights reserved",

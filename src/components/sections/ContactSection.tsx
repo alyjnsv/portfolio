@@ -1,8 +1,119 @@
 "use client";
 
+import { useState } from "react";
 import { useLang } from "@/lib/lang-context";
 import { useInView } from "@/hooks/useInView";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+
+type FormStatus = "idle" | "sending" | "success" | "error" | "validation";
+
+function ContactForm() {
+  const { t } = useLang();
+  const f = t.contact.form;
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !contact.trim() || message.trim().length < 10) {
+      setStatus("validation");
+      return;
+    }
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, contact, message, website }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus("success");
+      setName("");
+      setContact("");
+      setMessage("");
+    } catch (err) {
+      console.error("[contact-form]", err);
+      setStatus("error");
+    }
+  };
+
+  const inputCls =
+    "w-full bg-white border border-[#D1D5DB] rounded-2xl px-5 py-4 text-base text-[#0D0E25] placeholder-[#9CA3AF] focus:outline-none focus:border-[#4B6BFF] focus:ring-2 focus:ring-[#4B6BFF]/20 transition-all disabled:opacity-50";
+
+  if (status === "success") {
+    return (
+      <div className="flex flex-col items-center text-center gap-4 py-12">
+        <div className="w-16 h-16 rounded-full bg-[#E6F8F0] text-[#2CB67D] flex items-center justify-center">
+          <CheckCircle2 size={32} />
+        </div>
+        <p className="text-lg font-bold text-[#0D0E25]">{f.success}</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder={f.name_placeholder}
+          maxLength={100}
+          disabled={status === "sending"}
+          className={inputCls}
+        />
+        <input
+          type="text"
+          value={contact}
+          onChange={(e) => setContact(e.target.value)}
+          placeholder={f.contact_placeholder}
+          maxLength={200}
+          disabled={status === "sending"}
+          className={inputCls}
+        />
+      </div>
+      <textarea
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        placeholder={f.message_placeholder}
+        maxLength={2000}
+        rows={4}
+        disabled={status === "sending"}
+        className={`${inputCls} resize-none`}
+      />
+      {/* Honeypot: hidden from humans, tempting for bots */}
+      <input
+        type="text"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+
+      {(status === "error" || status === "validation") && (
+        <p className="text-sm font-medium text-[#EF4444]">
+          {status === "error" ? f.error : f.validation}
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-[#0D0E25] text-white hover:bg-[#4B6BFF] disabled:opacity-60 transition-all duration-300 sm:self-start cursor-pointer"
+      >
+        {status === "sending" ? f.sending : f.submit}
+        <Send size={16} className="group-hover:translate-x-1 transition-transform" />
+      </button>
+    </form>
+  );
+}
 
 export function ContactSection() {
   const { t } = useLang();
@@ -109,7 +220,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 flex flex-col gap-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {cards.map((card, i) => (
                 <a
@@ -147,6 +258,18 @@ export function ContactSection() {
                   </div>
                 </a>
               ))}
+            </div>
+
+            <div
+              className={`bg-[#F4F5F7] border border-[#E5E7EB] rounded-3xl p-8 sm:p-10 transition-all duration-700 delay-300 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            >
+              <h3 className="text-2xl font-black text-[#0D0E25] mb-2">
+                {t.contact.form.title}
+              </h3>
+              <p className="text-sm font-medium text-[#6B7280] mb-6">
+                {t.contact.form.subtitle}
+              </p>
+              <ContactForm />
             </div>
           </div>
 
