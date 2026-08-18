@@ -9,6 +9,9 @@ const openrouter = createOpenAI({
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+// Overridable without a redeploy; OpenRouter periodically retires :free models
+const CHAT_MODEL = process.env.OPENROUTER_MODEL || "google/gemma-4-31b-it:free";
+
 type IncomingMessage = {
   role: "system" | "user" | "assistant";
   content?: string;
@@ -50,7 +53,7 @@ export async function POST(req: Request) {
 Отвечай кратко, емко, желательно 1-3 абзацами.`;
 
     const result = streamText({
-      model: openrouter.chat("meta-llama/llama-3.2-3b-instruct:free"),
+      model: openrouter.chat(CHAT_MODEL),
       system: systemPrompt,
       messages: coreMessages,
       maxOutputTokens: 500,
