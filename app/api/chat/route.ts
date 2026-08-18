@@ -52,10 +52,25 @@ export async function POST(req: Request) {
 Если вопрос выходит за рамки профессионального опыта Алия, вежливо верни разговор к его навыкам.
 Отвечай кратко, емко, желательно 1-3 абзацами.`;
 
+    // Google AI Studio (gemma :free) rejects the system role and requires the
+    // conversation to start with a user turn: drop the client-side greeting
+    // and inline the instructions into the first user message.
+    const firstUserIdx = coreMessages.findIndex((m) => m.role === "user");
+    if (firstUserIdx === -1) {
+      return new Response(JSON.stringify({ error: "No user message" }), { status: 400 });
+    }
+    const [firstUser, ...rest] = coreMessages.slice(firstUserIdx);
+    const chatMessages = [
+      {
+        role: "user" as const,
+        content: `${systemPrompt}\n\n---\n\nВопрос посетителя: ${firstUser.content}`,
+      },
+      ...rest,
+    ];
+
     const result = streamText({
       model: openrouter.chat(CHAT_MODEL),
-      system: systemPrompt,
-      messages: coreMessages,
+      messages: chatMessages,
       maxOutputTokens: 500,
     });
 
