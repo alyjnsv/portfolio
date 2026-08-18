@@ -37,20 +37,18 @@ export function AiHeroBackground() {
 
     const camera = new THREE.OrthographicCamera();
 
-    let composer: EffectComposer, rgbShift: ShaderPass, bloom: UnrealBloomPass;
-
     const renderPass = new RenderPass(scene, camera);
-    bloom = new UnrealBloomPass(
+    const bloom = new UnrealBloomPass(
       new THREE.Vector2(container.clientWidth, container.clientHeight),
       0.35,
       0.8,
       0.15
     );
-    rgbShift = new ShaderPass(RGBShiftShader);
+    const rgbShift = new ShaderPass(RGBShiftShader);
     rgbShift.uniforms['amount'].value = 0.0015;
     rgbShift.uniforms['angle'].value = Math.PI / 4;
 
-    composer = new EffectComposer(renderer);
+    const composer = new EffectComposer(renderer);
     composer.addPass(renderPass);
     composer.addPass(bloom);
     composer.addPass(rgbShift);
@@ -74,8 +72,8 @@ export function AiHeroBackground() {
     const basePos = new Float32Array(total * 2);
     const distArr = new Float32Array(total);
 
-    let xOffset = (GRID.cols - 1) * GRID.spacing * 0.5;
-    let yOffset = (GRID.rows - 1) * GRID.spacing * 0.5;
+    const xOffset = (GRID.cols - 1) * GRID.spacing * 0.5;
+    const yOffset = (GRID.rows - 1) * GRID.spacing * 0.5;
 
     let idx = 0;
     const dummy = new THREE.Object3D();

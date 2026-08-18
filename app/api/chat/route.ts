@@ -9,14 +9,20 @@ const openrouter = createOpenAI({
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+type IncomingMessage = {
+  role: "system" | "user" | "assistant";
+  content?: string;
+  parts?: Array<{ type?: string; text?: string }>;
+};
+
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages }: { messages: IncomingMessage[] } = await req.json();
 
     // Normalize UI messages to pure text CoreMessages for OpenRouter compatibility
-    const coreMessages = messages.map((msg: any) => ({
+    const coreMessages = messages.map((msg) => ({
       role: msg.role,
-      content: msg.parts?.map((p: any) => p.text).join("") || msg.content || "",
+      content: msg.parts?.map((p) => p.text ?? "").join("") || msg.content || "",
     }));
 
     // Extract the latest user message

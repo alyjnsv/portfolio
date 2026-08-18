@@ -13,14 +13,12 @@ function AnimatedValue({
 }) {
   const [display, setDisplay] = useState("0");
   const rafRef = useRef<number>(0);
+  const hasNumber = /[\d.]/.test(value);
 
   useEffect(() => {
     if (!started) return;
     const match = value.match(/[\d.]+/);
-    if (!match) {
-      setDisplay(value);
-      return;
-    }
+    if (!match) return;
     const target = parseFloat(match[0]);
     const prefix = value.slice(0, value.indexOf(match[0]));
     const suffix = value.slice(value.indexOf(match[0]) + match[0].length);
@@ -43,17 +41,14 @@ function AnimatedValue({
     return () => cancelAnimationFrame(rafRef.current);
   }, [started, value]);
 
-  return <>{display}</>;
+  // Values without a numeric part have nothing to animate — render as-is
+  return <>{hasNumber ? display : value}</>;
 }
 
 export function StatsSection() {
   const { t } = useLang();
+  // useInView latches on first intersection, so it doubles as the "started" flag
   const { ref, inView } = useInView();
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    if (inView && !started) setStarted(true);
-  }, [inView, started]);
 
   return (
     <section id="stats" className="section bg-[#E8F2FF] border-y border-[#D1D5DB]">
@@ -83,7 +78,7 @@ export function StatsSection() {
                 metric_0{i + 1}
               </div>
               <div className="text-4xl sm:text-5xl font-black text-[#0D0E25] mb-2">
-                <AnimatedValue value={item.value} started={started} />
+                <AnimatedValue value={item.value} started={inView} />
               </div>
               <div className="text-sm font-medium text-[#6B7280]">
                 {item.label}

@@ -2,7 +2,7 @@
 
 import { useLang } from "@/lib/lang-context";
 import { useInView } from "@/hooks/useInView";
-import { Send, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export function ContactSection() {
   const { t } = useLang();

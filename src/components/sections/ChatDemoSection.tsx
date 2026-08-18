@@ -5,6 +5,13 @@ import { useLang } from "@/lib/lang-context";
 import { useInView } from "@/hooks/useInView";
 import { Send, Bot, User, Sparkles } from "lucide-react";
 import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
+
+const greetingMessage = (text: string): UIMessage => ({
+  id: "greeting",
+  role: "assistant",
+  parts: [{ type: "text", text: text + " 👋\n\nВыберите вопрос ниже или напишите свой." }],
+});
 
 function TypingIndicator() {
   return (
@@ -32,24 +39,12 @@ export function ChatDemoSection() {
     setMessages,
     status,
   } = useChat({
-    messages: [
-      {
-        id: "greeting",
-        role: "assistant",
-        parts: [{ type: "text", text: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой." }],
-      },
-    ] as any[],
+    messages: [greetingMessage(t.demo.assistant_name)],
   });
 
   useEffect(() => {
     if (messages.length <= 1) {
-      setMessages([
-        {
-          id: "greeting",
-          role: "assistant",
-          parts: [{ type: "text", text: t.demo.assistant_name + " 👋\n\nВыберите вопрос ниже или напишите свой." }],
-        },
-      ] as any[]);
+      setMessages([greetingMessage(t.demo.assistant_name)]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t.demo.assistant_name]);
@@ -139,7 +134,7 @@ export function ChatDemoSection() {
                       : "bg-[#0D0E25] text-white rounded-3xl rounded-tr-sm"
                   }`}
                 >
-                  {msg.parts?.map((p: any) => (p.type === "text" ? p.text : "")).join("")}
+                  {msg.parts?.map((p) => (p.type === "text" ? p.text : "")).join("")}
                 </div>
               </div>
             ))}
